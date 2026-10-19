@@ -18,7 +18,7 @@ A bilingual course for learners who want to understand models, implement them, a
 | :--- | :--- | :--- |
 | [English learning guide](editions/en/README.md)<br>Follow the prerequisites through 45 chapters | [English workbook](editions/en/workbook/quantweft-workbook-en.pdf)<br>Work independently, then check complete answers | [Notebook guide](editions/en/NOTEBOOK_GUIDE.md)<br>Start with constructed-data examples |
 
-[Curriculum](editions/en/resources/syllabus.md) · [Website preview](docs/SITE.md) · [Chapter texts](course/README.md) · [Repository guide](docs/README.md)
+[Curriculum](editions/en/resources/syllabus.md) · [Online reader and website preview](docs/SITE.md) · [Chapter texts](course/README.md) · [Repository guide](docs/README.md)
 
 ## Choose how to read
 
@@ -27,7 +27,7 @@ A bilingual course for learners who want to understand models, implement them, a
 | **Textbook**: concepts, derivations, and worked examples | [Read the textbook](editions/en/body/quantweft-textbook-en.pdf) | [阅读中文教材](editions/zh/body/quantweft-textbook-zh.pdf) |
 | **Workbook**: active recall, exercises, and complete answers | [Read the workbook](editions/en/workbook/quantweft-workbook-en.pdf) | [阅读中文练习册](editions/zh/workbook/quantweft-workbook-zh.pdf) |
 
-Read the textbook, attempt the workbook independently, then run the Notebooks to check calculations and outputs. Use the PDFs for complete course reading; this repository does not include the editorial workspace's full PDF layout toolchain.
+Read the textbook, attempt the workbook independently, then run the Notebooks to check calculations and outputs. [Build the online reader](site/README.md) for chapter navigation, full-text search, and same-chapter language switching, or download the PDFs for offline reading. This repository does not include the editorial workspace's full PDF layout toolchain.
 
 ## Learning route
 

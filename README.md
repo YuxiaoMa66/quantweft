@@ -18,7 +18,7 @@
 | :--- | :--- | :--- |
 | [中文学习指南](editions/zh/README.md)<br>按先修关系进入 45 章课程 | [中文练习册](editions/zh/workbook/quantweft-workbook-zh.pdf)<br>独立推导，再核对完整答案 | [Notebook 导读](editions/zh/NOTEBOOK_GUIDE.md)<br>从构造数据示例开始 |
 
-[课程大纲](editions/zh/resources/syllabus.md) · [双语网站预览](docs/SITE.md) · [逐章正文](course/README.md) · [仓库导航](docs/README.md)
+[课程大纲](editions/zh/resources/syllabus.md) · [在线教材与网站预览](docs/SITE.md) · [逐章正文](course/README.md) · [仓库导航](docs/README.md)
 
 ## 选择你的阅读方式
 
@@ -27,7 +27,7 @@
 | **正文**：概念、推导与完整示例 | [阅读中文教材](editions/zh/body/quantweft-textbook-zh.pdf) | [Read the textbook](editions/en/body/quantweft-textbook-en.pdf) |
 | **练习册**：主动回忆、练习与完整答案 | [阅读中文练习册](editions/zh/workbook/quantweft-workbook-zh.pdf) | [Read the workbook](editions/en/workbook/quantweft-workbook-en.pdf) |
 
-建议先读正文，独立完成练习册，再运行 Notebook 核对计算与输出。完整教材以 PDF 为阅读入口；仓库不包含原编辑工作区的完整 PDF 排版构建链。
+建议先读正文，独立完成练习册，再运行 Notebook 核对计算与输出。可[构建完整在线教材](site/README.md)，逐章阅读、搜索全文并切换同章语言，也可下载 PDF 离线阅读；仓库不包含原编辑工作区的完整 PDF 排版构建链。
 
 ## 学习路线
 

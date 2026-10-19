@@ -1,16 +1,16 @@
-/* Native editorial layout. One teal accent; 8px interactive radius. Header is the only sticky layer. */
+/* Native editorial layout. Paper and charcoal with an ink-blue accent; 8px interactive radius. Header is the only sticky layer. */
 :root {
   color-scheme: light dark;
-  --bg: #f7f9f8;
-  --surface: #eef3f1;
-  --card: #fcfdfc;
-  --text: #172c2b;
-  --muted: #536663;
-  --line: #ccd9d4;
-  --accent: #17685d;
-  --accent-hover: #105348;
-  --on-accent: #f7fcfa;
-  --code: #e7eeeb;
+  --bg: #f6f2e9;
+  --surface: #eee9df;
+  --card: #faf7f0;
+  --text: #292a2c;
+  --muted: #66645f;
+  --line: #dcd6cb;
+  --accent: #344d67;
+  --accent-hover: #273e56;
+  --on-accent: #f6f2e9;
+  --code: #ede9e1;
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
     "Microsoft YaHei", sans-serif;
@@ -20,30 +20,30 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #101c1b;
-    --surface: #172825;
-    --card: #192c28;
-    --text: #e8f1ed;
-    --muted: #acbfb6;
-    --line: #364d44;
-    --accent: #8ad2b9;
-    --accent-hover: #afe7d2;
-    --on-accent: #102b24;
-    --code: #0d1916;
+    --bg: #202123;
+    --surface: #28292c;
+    --card: #2b2c2f;
+    --text: #e6e2da;
+    --muted: #b5b1a9;
+    --line: #414145;
+    --accent: #b3c5dd;
+    --accent-hover: #d2ddeb;
+    --on-accent: #202123;
+    --code: #252628;
   }
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #101c1b;
-  --surface: #172825;
-  --card: #192c28;
-  --text: #e8f1ed;
-  --muted: #acbfb6;
-  --line: #364d44;
-  --accent: #8ad2b9;
-  --accent-hover: #afe7d2;
-  --on-accent: #102b24;
-  --code: #0d1916;
+  --bg: #202123;
+  --surface: #28292c;
+  --card: #2b2c2f;
+  --text: #e6e2da;
+  --muted: #b5b1a9;
+  --line: #414145;
+  --accent: #b3c5dd;
+  --accent-hover: #d2ddeb;
+  --on-accent: #202123;
+  --code: #252628;
 }
 :root[data-theme="light"] {
   color-scheme: light;

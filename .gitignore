@@ -49,3 +49,6 @@ versions/
 # Maintainer process records stay outside the reader distribution
 /qa/
 /provenance/
+
+# Static reader dependencies and generated HTML
+node_modules/

@@ -21,6 +21,7 @@ Start with reading, practice, or code. Maintenance documents are grouped below; 
 | `data/fixtures/`, `fixtures/`, `figures/`, `print_examples/` | 教学输入与插图；保留现有引用 / Teaching inputs and graphics with stable paths |
 | `workbook/`, `loom/` | 练习册入口与旧 PDF 链接兼容入口 / Workbook entry and compatibility for legacy PDF links |
 | `docs/` | 双语介绍网站、导航、许可与维护说明 / Website, navigation, legal, and maintenance documents |
+| `site/` | 在线教材构建与阅读界面；输出为不提交的 `dist/` / Online reader builder; generated `dist/` is not committed |
 | `.github/` | 贡献、支持与未启用的赞助配置示例 / Contributions, support, and inactive funding example |
 | `third_party/`, `LICENSES/` | 上游声明与许可证全文 / Upstream notices and complete license texts |
 

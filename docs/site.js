@@ -44,6 +44,9 @@
         "https://github.com/YuxiaoMa66/quantweft/blob/main/" +
         a.dataset[language === "en" ? "docEn" : "docZh"];
     });
+    document.querySelectorAll("[data-reader-zh]").forEach((a) => {
+      a.href = a.dataset[language === "en" ? "readerEn" : "readerZh"];
+    });
     code.textContent = code.textContent.replace(
       /editions\/(zh|en)\//g,
       "editions/" + language + "/",

@@ -4,35 +4,38 @@
 
 The static entry is [`index.html`](index.html). It includes Chinese/English switching, light/dark themes, four PDF links, curriculum, six projects, Capstone, and Notebook commands. Language and manual theme preferences are stored locally. Use `?lang=zh` or `?lang=en` to choose a language. Without JavaScript, the Chinese page and document links remain available.
 
-## 本地预览 / Local preview
+## 完整在线教材 / Complete online reader
 
-从仓库根目录运行 / From the repository root:
+推荐从仓库根目录构建并预览完整网站：
+
+Build and preview the complete site from the repository root:
 
 ```sh
-python3 -m http.server 8765 --directory docs --bind 127.0.0.1
+npm ci
+npm run build
+npm run check
+npm run preview
 ```
 
-打开 [中文页面](http://127.0.0.1:8765/?lang=zh)或 [English page](http://127.0.0.1:8765/?lang=en)。按 Ctrl-C 停止服务。无构建步骤，无第三方运行依赖。
+打开 [中文教材](http://127.0.0.1:8765/read/zh/index.html)、[English textbook](http://127.0.0.1:8765/read/en/index.html) 或 [介绍首页](http://127.0.0.1:8765/)。安装要求、内容来源和构建说明见 [site/README.md](../site/README.md)。完整输出位于不提交的 `dist/`，发布时使用整个目录；使用相对路径，支持仓库子路径。
 
-Open either link above. Stop the server with Ctrl-C. No build step or third-party runtime dependencies are required.
+Open either textbook or the introduction above. Requirements and maintenance instructions are in the build guide. The complete output is ignored `dist/`; publish that entire directory. Relative URLs support a repository subpath.
 
-## GitHub Pages
+只预览原介绍页时，也可运行 `python3 -m http.server 8765 --directory docs --bind 127.0.0.1`；此模式不包含生成的教材页面，学习链接指向 GitHub。
 
-本轮未启用 Pages。仓库仍为私有。启用个人账户下的 GitHub Pages 可能使网页公开访问，即使仓库仍为私有；发布前需单独确认站点受众和账户支持范围。后续使用 Pages 时，发布源为 `main` 分支的 `/docs` 目录，入口无需改动。站内资源采用相对路径，可兼容仓库子路径。
+To preview only the original introduction, serve `docs/` with the Python command above. That mode uses GitHub learning links and does not include generated textbook pages.
 
-Pages is not enabled by this change; the repository remains private. Pages for a personal account can expose the website publicly even when its source repository is private. Confirm the intended site audience and account support before enabling it. The prepared publishing source is `/docs` on `main`; relative asset paths support a repository subpath.
+## 托管状态 / Hosting status
 
-PDF、Notebook 和学习文档均指向 GitHub 仓库，仍受仓库访问权限约束；网站目录不复制或分发教材及数据。公开介绍页不自动使教材可公开阅读。
+目前未启用 Pages，仓库保持私有。完整站点应由构建后的 `dist/` 部署，不能仅发布 `/docs`。输出包含正文、四册 PDF 与搜索全文；公开前需完成既有权利核查及发布确认。仅推送构建源码不会自动开放站点。
 
-PDFs, Notebooks, and learning documents link to the GitHub repository and retain its access requirements. The website directory does not copy or distribute the books or data. A public introduction page does not make the course materials public.
-
-官方说明 / Official documentation: [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site), [Pages access control](https://docs.github.com/en/enterprise-cloud@latest/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site).
+Pages remains disabled and the repository private. Deploy the built `dist/` for the complete site; `/docs` alone is only the introduction. The output includes prose, four PDFs, and full-text search data. Complete the existing rights review and release confirmation before publication. Pushing build source does not publish the site.
 
 ## 设计与校验 / Design and checks
 
-延续已有课程封面与青绿色，使用原生 CSS 编辑式布局。页面主题整体切换，支持手机和键盘操作，减少动态偏好下关闭平滑滚动。封面曲面为概念插画，不代表市场实证数据。
+采用纸本学术风格：白天米白、夜晚中性炭黑，少量墨蓝点缀，使用原生 CSS 编辑式布局。页面主题整体切换，支持手机和键盘操作，减少动态偏好下关闭平滑滚动。封面曲面为概念插画，不代表市场实证数据。
 
-The native CSS editorial layout continues the course cover's teal identity. The full page switches themes together, supports mobile and keyboard use, and disables smooth scrolling for reduced motion. The cover surfaces are conceptual artwork, not market evidence.
+The native CSS editorial layout uses paper cream by day, neutral charcoal by night, and restrained ink-blue accents. The full page switches themes together, supports mobile and keyboard use, and disables smooth scrolling for reduced motion. The cover surfaces are conceptual artwork, not market evidence.
 
 页面已检查语言切换、主题、手机显示和复制命令；这不代表重新运行课程或验证研究结果。内部审阅记录不随读者仓库分发。
 
