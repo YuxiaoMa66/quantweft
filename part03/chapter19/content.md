@@ -313,7 +313,7 @@ beta 和 beta 方差分别以 beta、beta 平方计量。\(f_t,y_t\) 是月度�
 
 ### 默认独立运行入口
 
-从[随书读者包](../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md)根目录，按其[环境说明](../../editions/zh/README.md)建立独立环境后运行：
+从随书读者包根目录，按其[环境说明](../../editions/zh/README.md)建立独立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch19_state_space.ipynb
@@ -388,7 +388,7 @@ python /path/to/quant_course/code/ch19_state_space.py \
 
 案例使用 Kenneth R. French Data Library 的月度 10 行业组合和三因子文件。NoDur 是行业组合，不是单只股票。资产输入为 NoDur 月度总收益减 RF；市场输入是已扣 RF 的 Mkt-RF，因此代码没有再次扣减 RF。收益单位为小数，区间为日历月。
 
-冻结下载日期为 2026-10-05，样本覆盖 1926-07 至 2026-08，共 1,202 个月。分析从月序列读取器检查连续月份，并从本地 manifest 核对原始 ZIP、提取 CSV 和处理 CSV 的六个哈希。相关文件见 [French 因子 manifest](../../data/manifests/french_factors_2026-10-05.json) 和 [行业数据 manifest](../../data/manifests/french_industries_2026-10-05.json)。处理后行业 CSV 的 SHA-256 是 3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950，FF3 CSV 的 SHA-256 是 c19770a19a0ac47ad1c29074f57234570aeaa9725212cb4fa8146a2846c52814。
+冻结下载日期为 2026-10-05，样本覆盖 1926-07 至 2026-08，共 1,202 个月。分析从月序列读取器检查连续月份，并从本地 manifest 核对原始 ZIP、提取 CSV 和处理 CSV 的六个哈希。相关文件见 French 因子 manifest 和 行业数据 manifest。处理后行业 CSV 的 SHA-256 是 3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950，FF3 CSV 的 SHA-256 是 c19770a19a0ac47ad1c29074f57234570aeaa9725212cb4fa8146a2846c52814。
 
 所有初始状态、\(P_{-1},Q,R\) 都是教学指定值；程序没有用全样本拟合它们。全样本递推只供描述，不构成点时（point-in-time, PIT）数据回测。图 3 和图 4 只显示 2010-01 以后区间。
 

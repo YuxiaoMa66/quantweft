@@ -16,16 +16,16 @@
 - 时间：signal_time $=D_k$ 收盘；trade_time $=D_{k+1}$ 收盘；label_end $=$ label_available_at $=D_{k+6}$；训练行须 label_available_at $\le$ fit_time。外层扩张窗最少 504 日、每折 63 日、16 折；内层最后 2 个 63 日验证窗、最少 252 日。
 - 模型与网格：见配置。梯度提升为 `HistGradientBoostingRegressor(early_stopping=False)`，轮数（上限 300）与参数一起在内层日期折上按平均验证 MSE 选择，再在外层全部训练行重拟合。冻结 v1 产生 zero、train_mean、OLS、Ridge、Lasso、Elastic Net 六条序列；v2 加单树、RF、HGB 与 PCA+Ridge 四条，共 10 条。主比较图表只列 8 个拟合模型，略去 zero 与 train_mean；PCA+Ridge 是线性降维模型，不是树。
 - 组合：截面去均值、毛暴露 1、每 5 个信号日调仓、次日收盘成交、单边 0/10/20 个基点（第29章账本）；初始资金 100 万；借券、融资、冲击、容量未建模。
-- 实现：[`src/p06_trees.py`](../src/p06_trees.py)；CLI [`run_project06_v2.py`](../run_project06_v2.py)（`--data real` 退出码 3、不写文件）；核心逻辑 `quant_course.tree_models` 与只读复用的 `quant_course.ml_pipeline`。
+- 实现：`src/p06_trees.py`；CLI `run_project06_v2.py`（`--data real` 退出码 3、不写文件）；核心逻辑 `quant_course.tree_models` 与只读复用的 `quant_course.ml_pipeline`。
 - 基线核对：v1 的六个模型用未修改的 v1 代码重跑，与 A8-A c3 摘要逐值相同（每个情景 209 个数值，最大相对差 0.0）。
 
 ## 3. 结果
 
-数字来自作者 QA 运行 `qa_r1`（持久证据 `qa/a8/ch40_ch41_batch/evidence/qa_r1/`），摘要副本 [`v2_summary_base.json`](v2_summary_base.json)、[`v2_summary_regime.json`](v2_summary_regime.json)。$R^2_{\text{OS}}$ 相对训练均值；IC 为各模型自身有 IC 日期上的逐日 Spearman IC 均值（括号 NW $t$，滞后 4 个交易日，只对日期连续的序列报告）；ΔIC 为与 Ridge 在共同日期上的逐日差的均值。
+数字来自作者 QA 运行 `qa_r1`（持久证据 `qa/a8/ch40_ch41_batch/evidence/qa_r1/`），摘要副本 `v2_summary_base.json`、`v2_summary_regime.json`。$R^2_{\text{OS}}$ 相对训练均值；IC 为各模型自身有 IC 日期上的逐日 Spearman IC 均值（括号 NW $t$，滞后 4 个交易日，只对日期连续的序列报告）；ΔIC 为与 Ridge 在共同日期上的逐日差的均值。
 
 报告主表的 8 行不等于运行序列总数；zero 与 train_mean 是另两条空仓基线。两者的 1,008 个组合日总收益均为 0、换手均为 0，IC 均值是未定义 NaN。
 
-**日期基数（2026-10-11 返修 R01 补充）。** 有成熟标签的测试日为 1002 个；IC 均值在各模型**自身有 IC 的日期**上计算，ΔIC 在模型与 Ridge **都有 IC 的共同日期**上计算。OLS、Ridge、PCA+Ridge 与三种树模型在全部 1002 日都有 IC，日期连续，括号中的 $t$ 是四个交易日带宽的 NW。Lasso 与 Elastic Net 在部分日期预测为常数，截面相关无定义：基础情景 630 日、882 日，反号情景 567 日、819 日。它们的冻结摘要 $t$ 值是删除缺失日后把剩余有效日当作相邻观测做 NW(4) 的诊断值，不是交易日 HAC，表中以 —$^{\mathrm a}$ 表示不报告。配对口径：基础 Lasso 630 日上自身 0.0179、Ridge 0.0161、差 +0.0017；Elastic Net 882 日上 0.0309 对 0.0206、差 +0.0103；反号 Lasso 567 日上 0.0010 对 0.0031、差 −0.0021；Elastic Net 819 日上 0.0152 对 0.0091、差 +0.0061。由冻结预测与标签 CSV 独立复算，见 [`v2_ic_date_bases.json`](v2_ic_date_bases.json)（新文件；冻结摘要不变）。
+**日期基数（2026-10-11 返修 R01 补充）。** 有成熟标签的测试日为 1002 个；IC 均值在各模型**自身有 IC 的日期**上计算，ΔIC 在模型与 Ridge **都有 IC 的共同日期**上计算。OLS、Ridge、PCA+Ridge 与三种树模型在全部 1002 日都有 IC，日期连续，括号中的 $t$ 是四个交易日带宽的 NW。Lasso 与 Elastic Net 在部分日期预测为常数，截面相关无定义：基础情景 630 日、882 日，反号情景 567 日、819 日。它们的冻结摘要 $t$ 值是删除缺失日后把剩余有效日当作相邻观测做 NW(4) 的诊断值，不是交易日 HAC，表中以 —$^{\mathrm a}$ 表示不报告。配对口径：基础 Lasso 630 日上自身 0.0179、Ridge 0.0161、差 +0.0017；Elastic Net 882 日上 0.0309 对 0.0206、差 +0.0103；反号 Lasso 567 日上 0.0010 对 0.0031、差 −0.0021；Elastic Net 819 日上 0.0152 对 0.0091、差 +0.0061。由冻结预测与标签 CSV 独立复算，见 `v2_ic_date_bases.json`（新文件；冻结摘要不变）。
 
 ### 3.1 基础情景（1002 个测试日）
 

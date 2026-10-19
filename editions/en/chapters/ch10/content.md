@@ -206,7 +206,7 @@ Separate the call example by time and state. Opening premium paid is $4\times100
 
 ### Default entry in the reader edition
 
-From the [accepted I3 reader package](../../../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md) root, prepare an independent environment following its [environment instructions](../../README.md), then run:
+From the accepted I3 reader package root, prepare an independent environment following its [environment instructions](../../README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch10_markets.ipynb
@@ -548,4 +548,4 @@ FX assertions reject missing/ambiguous direction; futures require matching contr
 
 See [source_notes.md](../../../../part02/chapter10/source_notes.md) for URLs, actual reading scope, boundaries and dates. Main sources are official SEC/Investor.gov, DTCC, CME, OCC, CFTC, ECB, BIS and MIT OCW materials. Original constructed inputs illustrate arithmetic, separate from source quotes or observations. US T+1, CME multipliers and margin statements support only the named rules/contracts and are not generalized to other markets/products.
 
-The C5 sensitivity bridge uses original derivations and constructed cash flows. The October 13, 2026 supplemental source read covered MIT Part IV transcript 17:05–19:32 on local approximations and risk use. See the [batch source review](../../../../qa/a10/teaching_revision/C5/SOURCE_REVIEW.md) for that scope and inherited evidence.
+The C5 sensitivity bridge uses original derivations and constructed cash flows. The October 13, 2026 supplemental source read covered MIT Part IV transcript 17:05–19:32 on local approximations and risk use. See the batch source review for that scope and inherited evidence.

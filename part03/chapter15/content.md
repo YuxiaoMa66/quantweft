@@ -454,7 +454,7 @@ d与v_corr均为月收益平方；相关情形的月波动为 \(\sqrt{v_{corr}}\
 
 ### 本读者版的默认运行入口
 
-从[接受I3读者包](../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md)根目录，按其[环境说明](../../editions/zh/README.md)建立环境后运行：
+从接受I3读者包根目录，按其[环境说明](../../editions/zh/README.md)建立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch15_factor_models.ipynb
@@ -470,7 +470,7 @@ d与v_corr均为月收益平方；相关情形的月波动为 \(\sqrt{v_{corr}}\
 
 ### 9.1 输入契约先于拟合
 
-实际数据入口为 [ch15_factor_models.py](../../code/ch15_factor_models.py)，教学 Notebook 为 [ch15_factor_models.ipynb](../../notebooks/ch15_factor_models.ipynb)。从课程目录运行 `.venv/bin/python code/ch15_factor_models.py`；输出 [系数CSV](../../outputs/ch15_factor_model_coefficients.csv) 和 [带来源哈希的摘要JSON](../../qa/a4/ch15_artifacts_summary.json)。这些是实验输出，不能作为替代输入重新回归。
+实际数据入口为 [ch15_factor_models.py](../../code/ch15_factor_models.py)，教学 Notebook 为 [ch15_factor_models.ipynb](../../notebooks/ch15_factor_models.ipynb)。从课程目录运行 `.venv/bin/python code/ch15_factor_models.py`；输出 系数CSV 和 带来源哈希的摘要JSON。这些是实验输出，不能作为替代输入重新回归。
 
 核心函数为 [factor_models.py](../../src/quant_course/factor_models.py) 中的 `fit_monthly_factor_model()`。资产输入是 `Series`，因子输入是 `DataFrame`；双方使用连续、唯一、递增的月频 `PeriodIndex`，月份必须完全相同。原始 French 文件以百分数发布；课程处理快照已转换成小数，不在这里再次除以100。NaN、无穷、布尔、复数、断月与秩亏都拒绝，不用补零把失败藏起来。
 
@@ -544,7 +544,7 @@ print(fit.coefficient_table["estimate"])
 - `c19770a19a0ac47ad1c29074f57234570aeaa9725212cb4fa8146a2846c52814`
 - `833bd925b49651428781c789c13a6ac7454d4676449e6d119782050046a57eea`
 
-[行业清单](../../data/manifests/french_industries_2026-10-05.json)与[因子清单](../../data/manifests/french_factors_2026-10-05.json)记录来源、原始和处理文件及哈希。哈希固定当前输入，不能证明这些修订值在2010年的同一个月已经可得。当前快照不是历史点时数据（Point-in-Time Data, PIT）。官方 RF 序列从2024-06起换用另一现金代理来源，主窗口结束于2019，不跨该切换，但长期扩展实验必须记录这一方法边界。
+行业清单与因子清单记录来源、原始和处理文件及哈希。哈希固定当前输入，不能证明这些修订值在2010年的同一个月已经可得。当前快照不是历史点时数据（Point-in-Time Data, PIT）。官方 RF 序列从2024-06起换用另一现金代理来源，主窗口结束于2019，不跨该切换，但长期扩展实验必须记录这一方法边界。
 
 ### 11.2 实测结果怎样解释
 
@@ -845,4 +845,4 @@ for col, difference in {"Mkt-RF": 0.0003, "SMB": 0.0137, "HML": 0.0, "RF": 0.0}.
 - Kenneth R. French Data Library：[三因子](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_factors.html)，[五因子](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_5_factors_2x3.html)。方法页与快照版本分开核验。
 - statsmodels：[稳健协方差 API](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.RegressionResults.get_robustcov_results.html)。软件参数支持可复算性，不替代统计假设。
 
-完整来源读取边界见 [source_notes.md](source_notes.md)。本轮修订前版本的正文、代码、Notebook、图和同章答案接受范围见 [历史根验收记录](../../qa/a4/ch15_root_acceptance.md)；C7新增教学内容待原主独立验收。
+完整来源读取边界见 [source_notes.md](source_notes.md)。本轮修订前版本的正文、代码、Notebook、图和同章答案接受范围见 历史根验收记录；C7新增教学内容待原主独立验收。

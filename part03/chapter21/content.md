@@ -770,7 +770,7 @@ C = \begin{bmatrix} 1.0 & 0.8 & 0.0 & 0.0 \\ 0.8 & 1.0 & 0.0 & 0.0 \\ 0.0 & 0.0 
 
 ### 默认独立运行入口
 
-在[随书读者包](../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md)根目录，按包内环境说明建立独立环境后运行：
+在随书读者包根目录，按包内环境说明建立独立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch21_portfolio_construction.ipynb
@@ -868,7 +868,7 @@ assert np.isclose(turnover_val, 0.10, atol=1e-12)
 - 原始文件哈希：`industry_raw_zip` SHA-256 为 `ebd937a4b995d821867aeb956a96f09a666386f38fa82516b7d1767ee4a49ae5`；
 - 数据性质声明：French 数据为当前学术修订版本，非实时点（Point-in-Time, PIT）历史快照。月度数据发布有滞后，历史值可能修订，本地 manifest 未保存历史版本。滞后 0 个月的设定属于理想化月边界决策测试。
 
-在 2010-01 至 2019-12 的 120 个月区间内，基于 Ledoit–Wolf 协方差估计量，四种典型策略的具体实测表现记录于 [outputs/ch21/ch21_results.json](../../outputs/ch21/ch21_results.json)：
+在 2010-01 至 2019-12 的 120 个月区间内，基于 Ledoit–Wolf 协方差估计量，四种典型策略的具体实测表现记录于 outputs/ch21/ch21_results.json：
 
 | 策略组合 | 月度波动率 | 最大权重行业与比例 | 最小权重行业与比例 | 风险分散特征 |
 |---|---|---|---|---|
@@ -960,7 +960,7 @@ except OptimizationError as exc:
 
 ### 13.2 评测结果与统计推断
 
-基于 [projects/project03/outputs/summary.json](../../projects/project03/outputs/summary.json) 与 [sensitivity.csv](../../projects/project03/outputs/sensitivity.csv)，440 个月的核心业绩统计如下：
+基于 projects/project03/outputs/summary.json 与 sensitivity.csv，440 个月的核心业绩统计如下：
 
 | 评估指标 | 等权组合（1/N） | 最小方差（Min Var） | 最大 Sharpe（Max Sharpe） | 等风险贡献（ERC） |
 |---|---|---|---|---|

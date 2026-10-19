@@ -436,7 +436,7 @@ MC在Q下求期望来算价格；离散对冲实验在P下设定含股息μ=.08�
 
 ## 8. Numerical Example：冻结的欧式定价与对冲实验
 
-全部为SIMULATED / CONSTRUCTED，每份支付对应一股；输入\(S_0\)=K=100、T=1年、r=.05、q=.02、σ=.20。首轮运行前固定[协议](../../qa/a9/ch44_batch/INTERFACE_AND_PROTOCOL.md)，历史输出原位于`build/batches/A9-A/r1/runs/experiment_output_02`，现已归档；原运行身份见[归档索引](../../qa/storage_cleanup_20261014/06_A9A_revision_runs/INVENTORY.json)。下面沿用历史根独立运行并已接受的数值；现存独立根结果见[results.json](../../build/batches/A9-A/root_acceptance_20261012/experiment/results.json)。现存根结果与归档作者运行保留各自身份，本双语批次未重新运行或提取归档。所有金额为每股同币种教学金额。
+全部为SIMULATED / CONSTRUCTED，每份支付对应一股；输入\(S_0\)=K=100、T=1年、r=.05、q=.02、σ=.20。首轮运行前固定协议，历史输出原位于`build/batches/A9-A/r1/runs/experiment_output_02`，现已归档；原运行身份见归档索引。下面沿用历史根独立运行并已接受的数值；现存独立根结果见results.json。现存根结果与归档作者运行保留各自身份，本双语批次未重新运行或提取归档。所有金额为每股同币种教学金额。
 
 ### 8.1 手算与解析价格的中间值
 
@@ -559,7 +559,7 @@ seed4404，256条共同3276步Brownian细路径，聚合12/52/252步；P股价�
 
 ### 8.8 一条完整账本的现金与股数核对
 
-路径0，12步、fee=.001，时间i/12年。以下表分开列旧头寸现金流与当前换仓，现存独立根运行的未舍入值见[ledger_n12_cost0.001.json](../../build/batches/A9-A/root_acceptance_20261012/experiment/ledger_n12_cost0.001.json)，归档作者载荷另按上述索引查阅；读者用第18节代码对实际浮点值对账，不用六位显示精度要求1e−10。
+路径0，12步、fee=.001，时间i/12年。以下表分开列旧头寸现金流与当前换仓，现存独立根运行的未舍入值见ledger_n12_cost0.001.json，归档作者载荷另按上述索引查阅；读者用第18节代码对实际浮点值对账，不用六位显示精度要求1e−10。
 
 | i | S | 新股数 | 区间利息 | 区间股息 | 换仓价款 |
 |---|---|---|---|---|---|

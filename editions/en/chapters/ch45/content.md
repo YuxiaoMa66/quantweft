@@ -5,7 +5,7 @@
 
 > Learning thread: use the same offline constructed trades to connect five gates: data, timing, execution, reconciliation, and recovery. Check engineering facts, research design, and real-market evidence separately.
 > Core thread: build a deterministic offline production quant system with strict point-in-time isolation, idempotent reruns, local transactional event accounting, residual reconciliation, and fault recovery.
-> Prerequisites: [Chapter 3](../../../../part01/chapter03/plan.md), [Chapter 29](../../../../part05/chapter29/plan.md), [Chapter 33](../../../../part05/chapter33/plan.md), [Chapter 35](../../../../part06/chapter35/plan.md), and [Chapter 38](../../../../part07/chapter38/plan.md). After completing this chapter, you should be able to design a five-gate architecture, write a deterministic offline production pipeline with restart recovery and discrete reconciliation, and verify a causal timeline without look-ahead as well as ledger conservation.
+> Prerequisites: Chapter 3, Chapter 29, Chapter 33, Chapter 35, and Chapter 38. After completing this chapter, you should be able to design a five-gate architecture, write a deterministic offline production pipeline with restart recovery and discrete reconciliation, and verify a causal timeline without look-ahead as well as ledger conservation.
 
 ## 1. Learning objectives
 
@@ -1260,7 +1260,7 @@ reconcile_handcalc()
 \color{qink}
 
 
-The complete reference implementation is the fragment in Section 9.1. First catch the controlled `after_first_fill` exception and immediately query SQLite to prove that only one fill was committed. After recovery, assert two fills and the target positions/NAV. If the injected fault does not trigger, the `else` branch fails, preventing a normal run from being reported as successful recovery. This tests recovery after an in-process exception; it does not prove physical power-loss durability. Stronger `before_publish`, `after_publish_before_complete`, and actual rename-failure tests are in the [chapter test source](../../../../tests/test_production_pipeline.py); failed staging directories are preserved.
+The complete reference implementation is the fragment in Section 9.1. First catch the controlled `after_first_fill` exception and immediately query SQLite to prove that only one fill was committed. After recovery, assert two fills and the target positions/NAV. If the injected fault does not trigger, the `else` branch fails, preventing a normal run from being reported as successful recovery. This tests recovery after an in-process exception; it does not prove physical power-loss durability. Stronger `before_publish`, `after_publish_before_complete`, and actual rename-failure tests are in the chapter test source; failed staging directories are preserved.
 
 ### 45-C01 Reference answer
 

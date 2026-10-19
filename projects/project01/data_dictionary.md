@@ -2,7 +2,7 @@
 
 本字典的French来源与哈希链说明属于原2026-10-05快照；当前离线Notebook使用Seed101构造的180个月面板，列名/小数单位相同，数据来源不同。构造RF固定为0.001，不是实际国库券观测。运行步骤见[读者导读](READER_GUIDE.md)。
 
-项目读取 [French 10 行业月度表](../../data/processed/french_10_industries_monthly.csv) 与 [French 3 因子月度表](../../data/processed/french_factors_3_monthly.csv) 的冻结处理快照。运行时先按 [项目数据清单](data_manifest.json) 对照课程来源清单，再由共享 `load_monthly_snapshot` 核验处理文件 SHA-256、字段、有限数值、月份顺序、唯一性与连续性。哈希校验确认的是被消费的处理文件字节；原 ZIP 与解压 CSV 的哈希用于追溯转换链。
+项目读取 French 10 行业月度表 与 French 3 因子月度表 的冻结处理快照。运行时先按 [项目数据清单](data_manifest.json) 对照课程来源清单，再由共享 `load_monthly_snapshot` 核验处理文件 SHA-256、字段、有限数值、月份顺序、唯一性与连续性。哈希校验确认的是被消费的处理文件字节；原 ZIP 与解压 CSV 的哈希用于追溯转换链。
 
 ## 字段
 

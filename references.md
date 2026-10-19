@@ -309,7 +309,7 @@ sources.json保存键、标题、URL、类别、核验日期及边界。search_*
 
 ## 第22–33章实际读取索引（2026-10-07合并）
 
-作者逐章读取范围与版本以source_notes为准；全局增补不等于本轮逐篇阅读全文。第33章列出的页段由Codex根代理重新读取，记录见[核读范围](qa/a6/codex_resume/source_reading.json)。无原始直接URL的BAB与PSR稿件保留本地记录，不猜链接。
+作者逐章读取范围与版本以source_notes为准；全局增补不等于本轮逐篇阅读全文。第33章列出的页段由Codex根代理重新读取，记录见核读范围。无原始直接URL的BAB与PSR稿件保留本地记录，不猜链接。
 
 | 章节 | 来源键与来源 | 实际读取日志所记范围 | 保留的证据边界 |
 |---|---|---|---|
@@ -345,7 +345,7 @@ sources.json保存键、标题、URL、类别、核验日期及边界。search_*
 
 ## A7-B 第35–36章增补来源
 
-- **HUBERMAN_STANZL_2004** — Huberman, G. & Stanzl, W., “Price Manipulation and Quasi-Arbitrage,” *Econometrica*, 72(4), 1247–1275 (2004), [Wiley publisher record](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2004.00531.x), DOI 10.1111/j.1468-0262.2004.00531.x. 来源核读范围与条件边界见[第35章 source_notes](part06/chapter35/source_notes.md)、[第36章 source_notes](part06/chapter36/source_notes.md)及[批次核读记录](qa/a7/ch35_ch36_batch/sources/extracted/huberman_stanzl_reading_record.md)。
+- **HUBERMAN_STANZL_2004** — Huberman, G. & Stanzl, W., “Price Manipulation and Quasi-Arbitrage,” *Econometrica*, 72(4), 1247–1275 (2004), [Wiley publisher record](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2004.00531.x), DOI 10.1111/j.1468-0262.2004.00531.x. 来源核读范围与条件边界见[第35章 source_notes](part06/chapter35/source_notes.md)、[第36章 source_notes](part06/chapter36/source_notes.md)及批次核读记录。
 
 ## A8-A 第37–39章增补来源
 

@@ -287,7 +287,7 @@ EWMA 便于解释，快速、少参数，但边界 \(\alpha +\beta =1\) 造成�
 
 ### 默认独立运行入口
 
-从[随书读者包](../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md)根目录，按其[环境说明](../../editions/zh/README.md)建立独立环境后运行：
+从随书读者包根目录，按其[环境说明](../../editions/zh/README.md)建立独立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch18_volatility.ipynb

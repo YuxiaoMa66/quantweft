@@ -494,7 +494,7 @@ P=\begin{pmatrix}0.9&0.1\\0.3&0.7\end{pmatrix}
 
 ### 本读者版的默认运行入口
 
-从[接受I3读者包](../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md)的根目录，按其[README](../../editions/zh/README.md)建立独立环境后运行：
+从接受I3读者包的根目录，按其[README](../../editions/zh/README.md)建立独立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch06_probability.ipynb

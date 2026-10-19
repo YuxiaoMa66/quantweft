@@ -48,7 +48,7 @@ OLS 与四个月手算例见[第15章§6及§8](../../../part03/chapter15/conten
 
 ## 全样本九组实证结果
 
-Alpha 和置信区间为百分点 / 月；Beta 无量纲，括号内为 HAC6 95% 区间。破折号表示该模型未纳入该因子，不是估计值为零。精确结果、t 值及每个系数的 p 值见 [HAC6 系数 CSV](../outputs/coefficients_hac6.csv)。
+Alpha 和置信区间为百分点 / 月；Beta 无量纲，括号内为 HAC6 95% 区间。破折号表示该模型未纳入该因子，不是估计值为零。精确结果、t 值及每个系数的 p 值见 HAC6 系数 CSV。
 
 ### NoDur：非耐用品
 
@@ -78,7 +78,7 @@ HiTec 的市场 Beta 大于 1；三个资产的市场 Beta 都为正。其他载
 
 ## HAC 带宽敏感性
 
-下表是九个 Alpha 在各带宽的 95% 区间，单位百分点 / 月。HAC 3/6/12 下全部 Alpha、Beta 的点估计、标准误、t、p、区间在[完整敏感性 CSV](../outputs/hac_sensitivity_3_6_12.csv)。
+下表是九个 Alpha 在各带宽的 95% 区间，单位百分点 / 月。HAC 3/6/12 下全部 Alpha、Beta 的点估计、标准误、t、p、区间在完整敏感性 CSV。
 
 | 资产 | 模型 | HAC 3 | HAC 6 | HAC 12 |
 |---|---|---:|---:|---:|
@@ -96,7 +96,7 @@ HiTec 的市场 Beta 大于 1；三个资产的市场 Beta 都为正。其他载
 
 ## 拟合度、残差与风险分解
 
-残差指标单位均为百分点 / 月；Lag-1 是相邻月样本相关。均值接近零是含截距 OLS 的样本内性质。逐月目标、拟合值、残差在[残差 CSV](../outputs/monthly_residuals.csv)。
+残差指标单位均为百分点 / 月；Lag-1 是相邻月样本相关。均值接近零是含截距 OLS 的样本内性质。逐月目标、拟合值、残差在残差 CSV。
 
 | 资产 | 模型 | R² | 拟合方差份额 | 残差方差份额 | 残差 SD | RMSE | MAE | 最大绝对值 | Lag-1 |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -162,7 +162,7 @@ R² 与拟合方差份额对应，说明的是样本内方差会计。不能据�
 | Enrgy | FF3 | −0.242 | 3.660 | 2.994 | 9.773 |
 | Enrgy | FF5 | −0.335 | 3.832 | 3.135 | 10.537 |
 
-此固定切分没有预注册。2015–2019 的因子在各评价月实现后才知道，因此它只是时间顺序的系数稳定性和同月归因误差，不是 PIT、事前预测、策略收益或真实留出收益。逐月误差见[归因误差 CSV](../outputs/chronological_attribution_errors.csv)，所有系数差见[稳定性 CSV](../outputs/coefficient_stability.csv)。
+此固定切分没有预注册。2015–2019 的因子在各评价月实现后才知道，因此它只是时间顺序的系数稳定性和同月归因误差，不是 PIT、事前预测、策略收益或真实留出收益。逐月误差见归因误差 CSV，所有系数差见稳定性 CSV。
 
 ## 成本、限制和后续数据
 
@@ -175,9 +175,9 @@ R² 与拟合方差份额对应，说明的是样本内方差会计。不能据�
 ## 交付物与复现
 
 运行 CLI 会生成：
-- [HAC6 系数](../outputs/coefficients_hac6.csv)：所有 Alpha/Beta、区间、p 值与 R²。
-- [HAC 敏感性](../outputs/hac_sensitivity_3_6_12.csv)：全部系数在 3/6/12 月滞后的推断。
-- [月度残差](../outputs/monthly_residuals.csv)、[时间顺序归因误差](../outputs/chronological_attribution_errors.csv)、[系数稳定性](../outputs/coefficient_stability.csv)和[JSON 摘要](../outputs/summary.json)。
+- HAC6 系数：所有 Alpha/Beta、区间、p 值与 R²。
+- HAC 敏感性：全部系数在 3/6/12 月滞后的推断。
+- 月度残差、时间顺序归因误差、系数稳定性和[JSON 摘要](../outputs/summary.json)。
 - 五张 project02 图写至课程根目录的 figures/projects/。
 
 在课程根目录运行：

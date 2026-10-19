@@ -537,7 +537,7 @@ print(result.center, result.explained_variance, result.explained_variance_ratio)
 
 第2章已读取Kenneth French真实10行业月度组合收益缓存。本章可以把该文件组织成“月份×行业”的矩阵，检查共同样本协方差与PCA。这里研究的是发布的行业组合收益方向，不是逐股风险模型，也不是可成交行业组合策略。源日期代表收益月份，不能被解释成数据在月末收盘已可用于当场交易。
 
-下面程序以2010年1月至2019年12月的共同完整月份为训练窗口；它打印行数与实际解释方差。实际执行的前三方差份额为71.6043%、7.5198%、7.1064%，见[运行记录](../../qa/a2/ch05_snippet_runs.json)。这些比例只描述当前快照和固定窗口，不构成经济因子命名或未来能力证据。2020年及以后没有进入拟合；即便如此，当前下载版本可能含历史修订，不能因此称作当年的时点可得（Point-in-Time, PIT）研究。这个区别来自第3章的版本时间契约。
+下面程序以2010年1月至2019年12月的共同完整月份为训练窗口；它打印行数与实际解释方差。实际执行的前三方差份额为71.6043%、7.5198%、7.1064%，见运行记录。这些比例只描述当前快照和固定窗口，不构成经济因子命名或未来能力证据。2020年及以后没有进入拟合；即便如此，当前下载版本可能含历史修订，不能因此称作当年的时点可得（Point-in-Time, PIT）研究。这个区别来自第3章的版本时间契约。
 
 ```python
 from pathlib import Path
@@ -889,4 +889,4 @@ assert np.allclose((returns * weights).sum(axis=0), [-0.006, 0.012])
 - **NP_EIGH**：[numpy.linalg.eigh](https://numpy.org/doc/stable/reference/generated/numpy.linalg.eigh.html)。核对实对称输入、列方向、升序特征值与三角部分约定。
 - **NP_SOLVE / NP_COND**：[numpy.linalg.solve](https://numpy.org/doc/stable/reference/generated/numpy.linalg.solve.html)、[numpy.linalg.cond](https://numpy.org/doc/stable/reference/generated/numpy.linalg.cond.html)。核对线性系统、满秩方阵条件、异常与二范数条件数。
 - **SK_PCA**：[scikit-learn PCA API](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html)。核对中心化及尺度、成分与方差属性；本章共享实现使用显式SVD，没有声称依赖在线文档所示版本的全部默认行为。
-- **FRENCH_10**：[Detail for 10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html)。真实缓存来源与hash见[data manifest](../../data/manifests/french_industries_2026-10-05.json)。行业组合收益不等于逐股行情或实际可成交组合。
+- **FRENCH_10**：[Detail for 10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html)。真实缓存来源与hash见data manifest。行业组合收益不等于逐股行情或实际可成交组合。

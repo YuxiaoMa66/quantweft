@@ -313,7 +313,7 @@ Return beta, price-regression coefficients, and share counts also need separate 
 
 ### Default standalone entry point
 
-From the root of the [bundled reader package](../../../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md), create a separate environment using its [environment instructions](../../README.md), then run:
+From the root of the bundled reader package, create a separate environment using its [environment instructions](../../README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch19_state_space.ipynb
@@ -388,7 +388,7 @@ Figure 4 covers months from 2010-01 through 2026-08. The top panel’s vertical 
 
 The example uses monthly returns for the 10 industry portfolios and the three-factor file from the Kenneth R. French Data Library. NoDur is an industry portfolio, not an individual stock. The asset input is the NoDur monthly total return minus RF; the market input is Mkt-RF, which already subtracts RF, so the code does not subtract RF again. Returns are in decimals over calendar months.
 
-The frozen download date is 2026-10-05, and the sample runs from 1926-07 through 2026-08, for 1,202 months. The analysis checks monthly continuity with the monthly-series reader and verifies six hashes in the local manifests for the raw ZIPs, extracted CSVs, and processed CSVs. See the [French factor manifest](../../../../data/manifests/french_factors_2026-10-05.json) and [industry-data manifest](../../../../data/manifests/french_industries_2026-10-05.json). The processed industry CSV has SHA-256 3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950; the FF3 CSV has SHA-256 c19770a19a0ac47ad1c29074f57234570aeaa9725212cb4fa8146a2846c52814.
+The frozen download date is 2026-10-05, and the sample runs from 1926-07 through 2026-08, for 1,202 months. The analysis checks monthly continuity with the monthly-series reader and verifies six hashes in the local manifests for the raw ZIPs, extracted CSVs, and processed CSVs. See the French factor manifest and industry-data manifest. The processed industry CSV has SHA-256 3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950; the FF3 CSV has SHA-256 c19770a19a0ac47ad1c29074f57234570aeaa9725212cb4fa8146a2846c52814.
 
 All initial states and \(P_{-1},Q,R\) are teaching values; the program does not fit them on the full sample. The full-sample recursion is descriptive only and is not a point-in-time (PIT) backtest. Figures 3 and 4 show only the period from 2010-01 onward.
 

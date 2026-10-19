@@ -1,6 +1,6 @@
 # Chapter 12 source notes
 
-核验日期：2026-10-06。联网读取通过 agent-reach 的 Tavily Extract（advanced）和其网页读取路径 curl https://r.jina.ai/<official-URL> 完成。写作只采用本章相关的来源计划第 11–15 组；第 1–10 组主要服务第 10 章的市场工具与结算，不拿来支持会计定义。没有下载行情、构造真实市场价格、做回测或把公司事实整理成完整历史 PIT 面板。源计划原文见 [qa/a3/ch10_ch12_source_plan.md](../../qa/a3/ch10_ch12_source_plan.md)。
+核验日期：2026-10-06。联网读取通过 agent-reach 的 Tavily Extract（advanced）和其网页读取路径 curl https://r.jina.ai/<official-URL> 完成。写作只采用本章相关的来源计划第 11–15 组；第 1–10 组主要服务第 10 章的市场工具与结算，不拿来支持会计定义。没有下载行情、构造真实市场价格、做回测或把公司事实整理成完整历史 PIT 面板。源计划原文见 qa/a3/ch10_ch12_source_plan.md。
 
 ## 本章采用的官方来源和读取范围
 

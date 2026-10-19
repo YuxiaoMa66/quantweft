@@ -25,7 +25,7 @@
 
 ## French 行业收益数据
 
-- [Kenneth R. French Data Library：10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html)。数据身份和转换记录按本地清单 [`french_industries_2026-10-05.json`](../../data/manifests/french_industries_2026-10-05.json) 核对：原始 ZIP 下载于 2026-10-05，SHA-256 `ebd937a4b995d821867aeb956a96f09a666386f38fa82516b7d1767ee4a49ae5`；选取 `Average Value Weighted Returns -- Monthly` 区块，将源百分数除以 100，处理后 CSV SHA-256 `3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950`。缓存有 1,202 个月，区间 1926-07 至 2026-08；本章取 NoDur 月简单收益作描述统计。
+- [Kenneth R. French Data Library：10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html)。数据身份和转换记录按本地清单 `french_industries_2026-10-05.json` 核对：原始 ZIP 下载于 2026-10-05，SHA-256 `ebd937a4b995d821867aeb956a96f09a666386f38fa82516b7d1767ee4a49ae5`；选取 `Average Value Weighted Returns -- Monthly` 区块，将源百分数除以 100，处理后 CSV SHA-256 `3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950`。缓存有 1,202 个月，区间 1926-07 至 2026-08；本章取 NoDur 月简单收益作描述统计。
 - 该文件是当前发布快照，不含逐月历史版本、历史公开时间或数据入库时间；因此不能据此声称 PIT 预测、策略表现、因果关系或可交易净收益。公开下载也不等同于任意再分发许可。
 
 

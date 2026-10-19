@@ -390,7 +390,7 @@ Finally, prior Beta(2,2) and 6 wins/4 losses give posterior Beta(8,6), with succ
 
 ### Default entry point in the accepted reader package
 
-From the [accepted I3 reader package](../../../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md) root, create the isolated environment described in its [README](../../README.md), then run:
+From the accepted I3 reader package root, create the isolated environment described in its [README](../../README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch07_statistics.ipynb
@@ -534,9 +534,9 @@ print("IID Gaussian reference interval; assumptions unverified", reference)
 print("lag-one sample correlation, diagnostic only", float(series.autocorr(lag=1)))
 ```
 
-No automatic `.dropna()` occurs; missing data fail the checks. Monthly labels identify published portfolios’ return months, not proof that data were public at that month-end. The recorded snapshot calculation gave monthly mean about 1.009917%, an IID-reference 95% interval about [0.428369%,1.591465%], and lag-one sample correlation about −0.188911; see the [snippet record](../../../../qa/a2/ch07_snippet_runs.json). These are window-specific calculations, not independence evidence. Near-zero sample lag correlation does not prove independence, and volatility clustering can retain dependence elsewhere. Chapters 16–18 examine serial and volatility structure; Chapter 8 introduces HAC inference.
+No automatic `.dropna()` occurs; missing data fail the checks. Monthly labels identify published portfolios’ return months, not proof that data were public at that month-end. The recorded snapshot calculation gave monthly mean about 1.009917%, an IID-reference 95% interval about [0.428369%,1.591465%], and lag-one sample correlation about −0.188911; see the snippet record. These are window-specific calculations, not independence evidence. Near-zero sample lag correlation does not prove independence, and volatility clustering can retain dependence elsewhere. Chapters 16–18 examine serial and volatility structure; Chapter 8 introduces HAC inference.
 
-Industry-portfolio return is not active-strategy excess return, and these data do not subtract the tutorial’s actual trading costs. Record the outputs as descriptive statistics and reference-model calculations for that window, rather than claiming future monthly means will lie between the endpoints. The downloaded version can revise history; point-in-time (PIT) conditions remain unmet. [Cache notes](../../../../data/README.md) record provenance and hashes.
+Industry-portfolio return is not active-strategy excess return, and these data do not subtract the tutorial’s actual trading costs. Record the outputs as descriptive statistics and reference-model calculations for that window, rather than claiming future monthly means will lie between the endpoints. The downloaded version can revise history; point-in-time (PIT) conditions remain unmet. Cache notes record provenance and hashes.
 
 ## 12. Common Mistakes
 

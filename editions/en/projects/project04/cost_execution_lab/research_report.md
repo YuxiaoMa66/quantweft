@@ -121,7 +121,7 @@ The old rev2 export had 3,816 financing intervals and no separate mark-event fil
 
 ## 10. Current-signal refresh (2026-10-14) and I3 Notebook default behavior
 
-The current-signal refresh summary is at `build/batches/INTEGRATION-PREP/p04_cost_refresh_20261014/runs/current_signal_01/cli/summary_results.json`, relative to the repository root. The I3 reader candidate carries the same bytes at `outputs/quant_course_reader_candidate_20261014/fixtures/projects/project04/summary_results_current_signal_20261014.json`. This is a constructed engineering-consumer refresh based on the accepted current signal layer. The old A7-B R2R6 output and Notebook identities were not rewritten. The current summary also uses the cost configuration’s 97 input months, 96 return months, and 60/36 split, but it must be cited as its own result identity rather than merged with old R2R6 results.
+The current-signal refresh summary is at `build/batches/INTEGRATION-PREP/p04_cost_refresh_20261014/runs/current_signal_01/cli/summary_results.json`, relative to the repository root. The I3 reader candidate carries the same bytes at `fixtures/projects/project04/summary_results_current_signal_20261014.json`. This is a constructed engineering-consumer refresh based on the accepted current signal layer. The old A7-B R2R6 output and Notebook identities were not rewritten. The current summary also uses the cost configuration’s 97 input months, 96 return months, and 60/36 split, but it must be cited as its own result identity rather than merged with old R2R6 results.
 
 Each cell below is CAGR / annualized Sharpe:
 
@@ -162,7 +162,7 @@ The current summary’s 24-month ablation is:
 
 The current sensitivity summary contains both positive and negative values. The 0.5x target-scale row is positive, but no strategy or parameter winner was selected. Scaling changes requested turnover and gross exposure together, so it remains a joint scenario.
 
-The I3 reader Notebook is at `outputs/quant_course_reader_candidate_20261014/projects/project04/cost_execution_lab/cost_execution_lab.ipynb`. Its default run recomputes the frozen U-shaped profile, the 10,000-share fixed-parent comparison, and the 5,000-share liquidity-stress example, then checks their corresponding values against the saved current summary. It replays the 96-month walk-forward results, high-friction scenario, sensitivities, ablation, and ledger audits from that saved summary; it does not rerun those longer studies by default. Running the Notebook creates a unique run directory at repository-root `runs/` and writes images. These are not new experiments or market-data verification in this author batch.
+The I3 reader Notebook is at `projects/project04/cost_execution_lab/cost_execution_lab.ipynb`. Its default run recomputes the frozen U-shaped profile, the 10,000-share fixed-parent comparison, and the 5,000-share liquidity-stress example, then checks their corresponding values against the saved current summary. It replays the 96-month walk-forward results, high-friction scenario, sensitivities, ablation, and ledger audits from that saved summary; it does not rerun those longer studies by default. Running the Notebook creates a unique run directory at repository-root `runs/` and writes images. These are not new experiments or market-data verification in this author batch.
 
 ## 11. Reproduction and handoff boundary
 

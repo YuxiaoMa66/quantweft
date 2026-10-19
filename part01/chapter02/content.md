@@ -331,7 +331,7 @@ print(final_wealth(100.0, [0.10, -0.10]))
 
 import 绑定可复用模块。常见写法是 import numpy as np、import pandas as pd，或从模块导入单个函数。避免把本地脚本命名为 pandas.py、scipy.py 或 statistics.py，否则导入可能加载错误文件。把入口写在 if __name__ == "__main__": 下，可让脚本既能命令行运行，也能被 Notebook 导入。
 
-建立隔离环境可减少不同项目依赖冲突。本课程的解释器和依赖版本已锁定，正式分析按 [ENVIRONMENT.md](../../editions/zh/README.md) 中的项目环境安装；从课程根目录执行：
+建立隔离环境可减少不同项目依赖冲突。本课程的解释器和依赖版本已锁定，正式分析按 [环境安装说明](../../editions/zh/README.md) 中的项目环境安装；从课程根目录执行：
 
 ```bash
 python3 -m venv .venv
@@ -524,7 +524,7 @@ brentq 要求括区间两端的函数值异号，并在区间中寻找根。这�
 
 Kenneth R. French Data Library 提供按月或按日发布的研究组合收益数据。本章快照选择 10 Industry Portfolios 的月度平均市值加权收益（Average Value Weighted Returns -- Monthly）区块。官方说明给出月度样本为 1926 年 7 月至 2026 年 8 月；本地整理文件含 1202 个月和 10 个行业列。原始 CSV 的 YYYYMM 行以百分数记录，整理文件已将百分数除以 100，月份仍保留 YYYYMM 字符串。该原始文件还含年度、等权等其它区块，不能把它们混入月度市值加权序列。日度收益由官方另列的数据文件提供，不在本章选择的文件中。
 
-本地处理结果为 [月度行业收益 CSV](../../data/processed/french_10_industries_monthly.csv)，对应 [数据 manifest](../../data/manifests/french_industries_2026-10-05.json)。下载 UTC 时间为 2026-10-05 19:18:24；压缩快照 SHA-256 为 ebd937a4b995d821867aeb956a96f09a666386f38fa82516b7d1767ee4a49ae5，整理文件 SHA-256 为 3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950。来源页说明历史收益会随 CRSP 修订而改变；分析应保留快照、下载日期和哈希。版权归 Fama 与 French；可公开下载不等于可无限制再分发，发布衍生数据前应核对使用条件。
+本地处理结果为 月度行业收益 CSV，对应 数据 manifest。下载 UTC 时间为 2026-10-05 19:18:24；压缩快照 SHA-256 为 ebd937a4b995d821867aeb956a96f09a666386f38fa82516b7d1767ee4a49ae5，整理文件 SHA-256 为 3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950。来源页说明历史收益会随 CRSP 修订而改变；分析应保留快照、下载日期和哈希。版权归 Fama 与 French；可公开下载不等于可无限制再分发，发布衍生数据前应核对使用条件。
 
 原始文件的 monthly 区块从文件第 12 行附近开始，区块标题为“Average Value Weighted Returns -- Monthly”。原始缺失码为 -99.99 和 -999。处理者只选该月度表，将缺失码标记为 NaN，按 YYYYMM 生成月度 PeriodIndex，把百分数除以 100；manifest 保存原始压缩、解压文本和处理后 CSV 的哈希。整理文件第一行 192607 中 NoDur 为 0.0144，Durbl 为 0.1558。
 

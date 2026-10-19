@@ -4,7 +4,7 @@ This project connects Chapter 21's stable estimation, long-only constraints, ris
 
 ## Default entry point and inputs
 
-From the root of the [reader package](../../../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md), create an isolated environment using the package instructions, then run:
+From the root of the reader package, create an isolated environment using the package instructions, then run:
 
 ```bash
 .venv/bin/python run_notebook.py projects/project03/notebooks/project03_portfolio_oos.ipynb

@@ -15,13 +15,13 @@
 
 7. statsmodels 0.15.0，[OLS 文档](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html) 与 [稳健协方差结果文档](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLSResults.get_robustcov_results.html)。核对 OLS 输入、截距处理和 HAC 可选参数。月度回归显式加入截距，设置 Bartlett 核、固定 5 个月观测滞后及软件小样本修正。API 说明只支持软件调用细节；它不证明固定带宽适当、时间序列满足弱依赖假设，也不把 p 值变成 CAPM 或收益策略的有效性证书。
 8. Kenneth R. French Data Library 的 [10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html) 与 [Fama/French Factors](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_factors.html)。前者是来源页；本章选择发布的月度价值加权 NoDur 行业组合总收益。后者说明 Mkt-RF 是市场收益减一个月国库券代理收益；本章同样月度使用 RF。来源页没有把 NoDur 说成单一证券，也不构成个人投资者可无成本取得相同 RF 的承诺。
-9. 冻结数据、样本和单位记录来自 [french_industries_2026-10-05.json](../../data/manifests/french_industries_2026-10-05.json) 与 [french_factors_2026-10-05.json](../../data/manifests/french_factors_2026-10-05.json)。实际估计期固定为 2010-01 至 2019-12，共 120 个连续月度区间；处理数据已是十进制简单月收益/价差，不能再次除以 100。原始文件是 2026 当前下载快照，FF 源头声明 CRSP 数据库月份 202608；这不是 2010–2019 各时点可得的 PIT 数据。CIZ/FIZ 转换、RF 来源切换等版本背景只作为来源边界，不据此推测单个历史行曾被哪一项变化影响。
+9. 冻结数据、样本和单位记录来自 french_industries_2026-10-05.json 与 french_factors_2026-10-05.json。实际估计期固定为 2010-01 至 2019-12，共 120 个连续月度区间；处理数据已是十进制简单月收益/价差，不能再次除以 100。原始文件是 2026 当前下载快照，FF 源头声明 CRSP 数据库月份 202608；这不是 2010–2019 各时点可得的 PIT 数据。CIZ/FIZ 转换、RF 来源切换等版本背景只作为来源边界，不据此推测单个历史行曾被哪一项变化影响。
 10. 月度估计复用根代理新增的 [factor_models.py](../../src/quant_course/factor_models.py) 中 fit_monthly_factor_model。其连续 PeriodIndex('M') 将相邻月份视为相邻离散观测行；HAC lag=5 的单位是月，不是固定纳秒间隔。月末相隔天数会变化，因此不会把 PeriodIndex 转成虚构的等长 DatetimeIndex 来通过第8章的等秒间隔检查。共享模块的源代码 docstring 记录其满秩、缺失和 HAC 输入契约；本章没有重写月频回归引擎。
 
 ## 自编数值与结果边界
 
 - 四行双资产样例和 SML/CML 图中的 2% RF、8% 市场期望收益、四行市场超额收益、残差和资产值均为本章明确构造；不代表真实资产、概率分布或收益预测。
-- 月度 NoDur 回归的系数、R²、残差、HAC 标准误及区间由 code/ch14_asset_pricing.py 从通过 SHA-256 校验的本地发布快照计算。具体数字与哈希写入 [ch14_french_capm_2010_2019.json](../../qa/a4/ch14_french_capm_2010_2019.json)，示意样例的可手算核对写入 [ch14_constructed_checks.json](../../qa/a4/ch14_constructed_checks.json)。
+- 月度 NoDur 回归的系数、R²、残差、HAC 标准误及区间由 code/ch14_asset_pricing.py 从通过 SHA-256 校验的本地发布快照计算。具体数字与哈希写入 ch14_french_capm_2010_2019.json，示意样例的可手算核对写入 ch14_constructed_checks.json。
 - NoDur 同期收益对 Mkt-RF 的回归是条件关联/指定样本内风险归因；月份列是收益区间标签，没有建立公告可得时间、信号时间、成交时间或收益外推。它不是 CAPM 的完整横截面市场组合检验，也不是策略收益、点时回测、CAPM 拒绝后的套利证明或交易机会。
 - 估计截距是该样本、该市场代理和该模型的月频 OLS 截距；它不等于不可观测总体的期望 alpha，也不等于下一期实际收益。HAC 参考检验本身不识别偏差来源，不包含多重检验、成本、冲击、借券、融资、容量和执行。
 

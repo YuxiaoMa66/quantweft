@@ -63,3 +63,10 @@ The Capstone supplies accepted research questions, timing contracts, protocol, d
 The project is now **QuantWeft**, a bilingual course in quantitative finance and systematic research. The four PDF filenames use the new brand; accepted PDF content, page numbers, and legacy internal terminology are unchanged.
 
 [License scope](../../LICENSE.md): original software MIT; original educational content CC BY-SA 4.0. See [third-party exceptions](../../THIRD_PARTY_NOTICES.md) and the [public-release review](../../RIGHTS_REVIEW.md). [Voluntary support](../../SUPPORT.md) is not required; payment channels are inactive.
+
+
+## Repository paths and historical references
+
+Run commands from the cloned `quantweft/` repository root; do not run `cd quantweft` again if already there. The original I3 reader and this repository share the implementation: `outputs/quant_course_reader_candidate_20261014/` identifies the source package, not a subdirectory in this checkout. This page is the setup entry; see the [optional data contract](OPTIONAL_DATA.md) for optional inputs. Historical QA, omitted market inputs and outputs generated only after execution retain their original status. References to files not bundled here remain textual records rather than clickable repository-file links.
+
+Some bundled project TeX files are layout fragments without the complete historical input chain. Use the complete workbook PDF linked on this page for the exercises and their answers.

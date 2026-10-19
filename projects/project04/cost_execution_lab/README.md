@@ -27,7 +27,7 @@ projects/project04/cost_execution_lab/
 └── cost_execution_lab.ipynb
 src/quant_course/execution_costs.py
 build/batches/INTEGRATION-PREP/p04_cost_refresh_20261014/runs/current_signal_01/cli/summary_results.json
-outputs/quant_course_reader_candidate_20261014/fixtures/projects/project04/summary_results_current_signal_20261014.json
+fixtures/projects/project04/summary_results_current_signal_20261014.json
 qa/a7/ch35_ch36_batch/independent_acceptance/rev2/r2r6/candidate/projects/project04/cost_execution_lab/outputs/a7b_rev2r6_20261009/summary_results.json
 ```
 
@@ -57,7 +57,7 @@ VWAP预测曲线在首个子单发送前冻结；POV只使用发送时已经可�
 
 先读本目录的[数据字典](data_dictionary.md)、[研究报告](research_report.md)和[六题完整答案](solutions.md)，再对照上述仓库根目录中的接口代码、配置和带版本标识的结果摘要。构造成交量曲线使用60条来自声明U形数据生成过程（data-generating process, DGP）的合成训练样本，并非实测市场成交量。
 
-I3读者候选中的Notebook位于 `outputs/quant_course_reader_candidate_20261014/projects/project04/cost_execution_lab/cost_execution_lab.ipynb`。它从项目配置加载成本与槽数，重新计算冻结成交量曲线、10,000股固定父单买卖比较和5,000股成交压力例，并将小例与当前信号摘要核对。其余96个月走步结果、高摩擦情景、敏感度、消融与账本审计是从已保存的当前摘要重放；Notebook不默认重跑完整走步研究。Notebook执行会在仓库根目录创建唯一 `runs/cost_execution_lab_<随机标识>/` 子目录并写入图像，因此需要完整仓库及其运行依赖；本候选文档没有携带这些运行文件。
+I3读者候选中的Notebook位于 `projects/project04/cost_execution_lab/cost_execution_lab.ipynb`。它从项目配置加载成本与槽数，重新计算冻结成交量曲线、10,000股固定父单买卖比较和5,000股成交压力例，并将小例与当前信号摘要核对。其余96个月走步结果、高摩擦情景、敏感度、消融与账本审计是从已保存的当前摘要重放；Notebook不默认重跑完整走步研究。Notebook执行会在仓库根目录创建唯一 `runs/cost_execution_lab_<随机标识>/` 子目录并写入图像，因此需要完整仓库及其运行依赖；本候选文档没有携带这些运行文件。
 
 成本配置明确输入97个月（2013-12起），首月为预热，形成2014-01至2021-12的96个月收益，其中60个月训练（2014-01至2018-12）、36个月测试（2019-01至2021-12）。请勿把函数默认的96个月信号输入与成本CLI配置的97个月输入混为同一序列。
 

@@ -275,7 +275,7 @@ assert np.allclose(z_t2, [0.88, -0.18])
 
 ### 本读者版的默认运行入口
 
-从[接受I3读者包](../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md)根目录，按其[环境说明](../../editions/zh/README.md)建立独立环境后运行：
+从接受I3读者包根目录，按其[环境说明](../../editions/zh/README.md)建立独立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch17_time_series_ii.ipynb
@@ -325,7 +325,7 @@ Notebook显示`fixtures/figures/a4/ch17_cointegration_simulation.png`随包既�
 
 ## 11. Real Market Example
 
-本章沿用 [Kenneth R. French Data Library 的 10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html) 当前缓存：2026-10-05 下载的 ZIP，选择 `Average Value Weighted Returns -- Monthly` 月区块，源单位百分比除以 100。原始 ZIP SHA-256 为 `ebd937a4b995d821867aeb956a96f09a666386f38fa82516b7d1767ee4a49ae5`；处理后 CSV SHA-256 为 `3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950`；缓存 1,202 个月，1926-07—2026-08。来源转换细节见 [`source_notes.md`](source_notes.md) 与 [数据清单](../../data/manifests/french_industries_2026-10-05.json)。公开可下载不等于可任意再分发许可。
+本章沿用 [Kenneth R. French Data Library 的 10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html) 当前缓存：2026-10-05 下载的 ZIP，选择 `Average Value Weighted Returns -- Monthly` 月区块，源单位百分比除以 100。原始 ZIP SHA-256 为 `ebd937a4b995d821867aeb956a96f09a666386f38fa82516b7d1767ee4a49ae5`；处理后 CSV SHA-256 为 `3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950`；缓存 1,202 个月，1926-07—2026-08。来源转换细节见 [`source_notes.md`](source_notes.md) 与 数据清单。公开可下载不等于可任意再分发许可。
 
 把每个行业已发布的小数简单收益复利成教学用 `TR Index proxy`，在 1926-07 至 2000-12 训练区间对全部 $\binom{10}{2}=45$ 对使用常数项 Engle–Granger 检验，之后不根据测试结果挑选交易对。脚本实际记录：最小名义 p 值 $3.85848\times10^{-9}$，中位数 0.0516444，45 对中 22 对名义 p<0.05，Benjamini–Hochberg（BH）调整后 15 对 q<0.05。错误发现率（false discovery rate, FDR）是被拒绝假设中错误发现比例的期望；BH step-up 方法旨在控制 FDR，不是家族错误率（family-wise error rate, FWER，即至少出现一个假阳性的概率）控制。其 FDR 控制保证通常要求检验独立，或满足正回归依赖于真零假设子集（positive regression dependence on a subset, PRDS）等适用条件。这里配对共享行业序列，依赖结构及 PRDS 条件未验证；所以 15 个 BH 调整后小于 0.05 的结果只是探索性校正统计，不代表已保证该家族的 FDR。小 p 值不验证未来稳定，也不代表可获利；各单条 I(1) 阶数、关系跨制度稳定性、数据实时可得性和交易成本均未被这一步确证，因此这些数字不作协整成立或交易结论。
 

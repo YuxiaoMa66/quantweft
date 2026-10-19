@@ -235,7 +235,7 @@ R_B-R_f=5\%+1.5(R_m-R_f-6\%)+\varepsilon.
 
 ### 本读者版的默认运行入口
 
-从[接受I3读者包](../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md)根目录，按其[环境说明](../../editions/zh/README.md)建立环境后运行：
+从接受I3读者包根目录，按其[环境说明](../../editions/zh/README.md)建立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch14_asset_pricing.ipynb
@@ -277,11 +277,11 @@ R_B-R_f=5\%+1.5(R_m-R_f-6\%)+\varepsilon.
 
 ## 11. Real Market Example
 
-真实案例只估单因子市场回归，不提前讨论 FF3/FF5。NoDur 是 French 月度十行业组合中的非耐用品行业价值加权组合总收益；Mkt-RF 是发布的市场超额收益；RF 是同频一个月国库券代理收益。样本固定为 2010-01 至 2019-12 的连续 120 个月，计算前由已处理十进制月收益文件 SHA 校验。快照见 [`french_industries_2026-10-05.json`](../../data/manifests/french_industries_2026-10-05.json) 和 [`french_factors_2026-10-05.json`](../../data/manifests/french_factors_2026-10-05.json)：行业文件 SHA-256 `3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950`；因子文件 SHA-256 `c19770a19a0ac47ad1c29074f57234570aeaa9725212cb4fa8146a2846c52814`。FF 数据来源声明 CRSP 数据库版本月份为 202608；二者均是 2026 年当前发布快照，而不是各历史月当时可见的点时（point-in-time，PIT）数据。
+真实案例只估单因子市场回归，不提前讨论 FF3/FF5。NoDur 是 French 月度十行业组合中的非耐用品行业价值加权组合总收益；Mkt-RF 是发布的市场超额收益；RF 是同频一个月国库券代理收益。样本固定为 2010-01 至 2019-12 的连续 120 个月，计算前由已处理十进制月收益文件 SHA 校验。快照见 `french_industries_2026-10-05.json` 和 `french_factors_2026-10-05.json`：行业文件 SHA-256 `3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950`；因子文件 SHA-256 `c19770a19a0ac47ad1c29074f57234570aeaa9725212cb4fa8146a2846c52814`。FF 数据来源声明 CRSP 数据库版本月份为 202608；二者均是 2026 年当前发布快照，而不是各历史月当时可见的点时（point-in-time，PIT）数据。
 
 估计式是 \(NoDur_t-RF_t=\alpha+\beta(Mkt-RF)_t+\varepsilon_t\)，单位均为月度十进制简单收益，beta 无量纲。估计的月 beta 为 0.6456，样本 \(R^2=0.5608\)；月截距为 0.2603%，Bartlett HAC 标准误为 0.1926%，参考 95% 区间为 [−0.1210%, 0.6417%]，参考双侧 \(p=0.179\)。固定 HAC maxlags=5，单位为连续月度行。这里的区间和 p 值是给定估计设定下的近似推断，不构成 beta 或 alpha 的确定性判决。
 
-结果记录在 [`ch14_french_capm_2010_2019.json`](../../qa/a4/ch14_french_capm_2010_2019.json)。NoDur 超额收益与市场超额收益的样本内回归描述共同变化；它不是市场全部财富的完整组合检验，也没有无风险融资、费用、冲击、容量或成交时点。虽然截距参考区间包含零，不能据此证明 CAPM 正确；即使不包含零，也不能仅凭本回归断言存在可交易机会。对真实总收益，NoDur 月平均为 1.0099%，RF 为 0.0427%，月超额均值为 0.9673%；这些都是该固定样本的描述统计，不是下一月预期。
+结果记录在 `ch14_french_capm_2010_2019.json`。NoDur 超额收益与市场超额收益的样本内回归描述共同变化；它不是市场全部财富的完整组合检验，也没有无风险融资、费用、冲击、容量或成交时点。虽然截距参考区间包含零，不能据此证明 CAPM 正确；即使不包含零，也不能仅凭本回归断言存在可交易机会。对真实总收益，NoDur 月平均为 1.0099%，RF 为 0.0427%，月超额均值为 0.9673%；这些都是该固定样本的描述统计，不是下一月预期。
 
 ## 12. Common Mistakes
 
@@ -380,7 +380,7 @@ beta 是系统性线性共变暴露，不是总风险或未来收益保证。SML
 
 **14-P03｜月度共享估计。** 对月度 `PeriodIndex('M')` 上生成的 60 期数据构造 \(y_t=0.001+1.2x_t+e_t\)，通过 `fit_monthly_factor_model` 用一列因子估计。要求 RF 全零、因子表含 RF 列，使用 HAC maxlags=5。断言样本数为 60、beta 接近 1.2、残差均值近零，并打印滞后单位“月度行”。
 
-**14-P04｜真实数据审计。** 运行本章脚本并读取 [`ch14_french_capm_2010_2019.json`](../../qa/a4/ch14_french_capm_2010_2019.json)。自动核对样本起止、120 行、月频、两个文件哈希和 CAPM 单因子标签；报告不能把其 `alpha_monthly` 改名为“策略净收益”。
+**14-P04｜真实数据审计。** 运行本章脚本并读取 `ch14_french_capm_2010_2019.json`。自动核对样本起止、120 行、月频、两个文件哈希和 CAPM 单因子标签；报告不能把其 `alpha_monthly` 改名为“策略净收益”。
 
 ## 17. Challenge Problems
 

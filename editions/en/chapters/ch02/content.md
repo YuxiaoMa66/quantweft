@@ -330,7 +330,7 @@ This teaching function rejects non-real inputs, booleans, NaN, infinity and retu
 
 Imports bind reusable modules, commonly `import numpy as np` and `import pandas as pd`, or one imported function. Avoid local files called pandas.py, scipy.py or statistics.py that may shadow the intended module. An entry under `if __name__ == "__main__":` lets a script run directly and also be imported by a Notebook.
 
-An isolated environment reduces dependency conflicts. The course interpreter and dependency versions are locked in [ENVIRONMENT.md](../../README.md). From the course root:
+An isolated environment reduces dependency conflicts. The course interpreter and dependency versions are locked in [Environment setup](../../README.md). From the course root:
 
 ```bash
 python3 -m venv .venv
@@ -525,7 +525,7 @@ A caption must identify simulated data, daily observations and UTC closing label
 
 Kenneth R. French Data Library publishes research-portfolio returns at monthly or daily frequencies. This chapter's snapshot selects the **Average Value Weighted Returns -- Monthly** block of 10 Industry Portfolios. The inherited official description covers July 1926 through August 2026; the local processed file contains 1,202 months and ten industry columns. The original YYYYMM rows contain percentages. Processing divided them by 100 and retained YYYYMM month strings. Annual and equal-weighted blocks in the same source file must not enter this monthly value-weighted series. Daily returns come from a separate official file.
 
-The [processed monthly industry CSV](../../../../data/processed/french_10_industries_monthly.csv) has a [data manifest](../../../../data/manifests/french_industries_2026-10-05.json). Download time: 2026-10-05 19:18:24 UTC. ZIP SHA-256: ebd937a4b995d821867aeb956a96f09a666386f38fa82516b7d1767ee4a49ae5. Processed SHA-256: 3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950. Historical returns can change with CRSP revisions; preserve snapshot, download date and hashes. Fama and French retain copyright. Public download does not imply unrestricted redistribution; check terms before releasing derived data.
+The processed monthly industry CSV has a data manifest. Download time: 2026-10-05 19:18:24 UTC. ZIP SHA-256: ebd937a4b995d821867aeb956a96f09a666386f38fa82516b7d1767ee4a49ae5. Processed SHA-256: 3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950. Historical returns can change with CRSP revisions; preserve snapshot, download date and hashes. Fama and French retain copyright. Public download does not imply unrestricted redistribution; check terms before releasing derived data.
 
 The monthly block begins near line 12 of the original file. Missing codes are −99.99 and −999. Processing selects that block, maps those codes to NaN, constructs a monthly PeriodIndex from YYYYMM and divides percentages by 100. The manifest records compressed, extracted and processed hashes. In the first month, 192607, NoDur is 0.0144 and Durbl is 0.1558.
 

@@ -337,7 +337,7 @@ Under this defined formula, FCF happens to be unchanged: the 12,685 downward CFO
 
 ### Default Entry Point for This Reader Edition
 
-From the [accepted I3 reader package](../../../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md) root, set up the environment using its [instructions](../../README.md), then run:
+From the accepted I3 reader package root, set up the environment using its [instructions](../../README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch12_statements.ipynb
@@ -347,7 +347,7 @@ The Notebook calls the packaged shared implementation. Chapter 12 recalculates f
 
 ### Historical Working-Course Root and Original Implementation
 
-Core metric and version functions are in [statement_metrics.py](../../../../src/quant_course/statement_metrics.py); CLI and plotting entry points are in [ch12_statements.py](../../../../code/ch12_statements.py); program tests are in [test_ch12_statements.py](../../../../tests/test_ch12_statements.py); and the teaching Notebook is [ch12_statements.ipynb](../../../../notebooks/ch12_statements.ipynb). The core module records each FinancialFact's entity, period, currency, unit, accession, revision status, and source. FCF requires CFO and the PP&E expenditure line from the same version and rejects positive “outflow” inputs. Feature functions also check unit/version mismatches, nonfinite values, basic statement reconciliations, and CapEx signs.
+Core metric and version functions are in [statement_metrics.py](../../../../src/quant_course/statement_metrics.py); CLI and plotting entry points are in [ch12_statements.py](../../../../code/ch12_statements.py); program tests are in test_ch12_statements.py; and the teaching Notebook is [ch12_statements.ipynb](../../../../notebooks/ch12_statements.ipynb). The core module records each FinancialFact's entity, period, currency, unit, accession, revision status, and source. FCF requires CFO and the PP&E expenditure line from the same version and rejects positive “outflow” inputs. Feature functions also check unit/version mismatches, nonfinite values, basic statement reconciliations, and CapEx signs.
 
 Run from the project root:
 

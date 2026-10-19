@@ -273,7 +273,7 @@ WACC=\frac{480(10\%)+40(10\%)+20(7\%)+260(6\%)(1-25\%)}{800}
 
 ### 本读者版的默认运行入口
 
-从[接受I3读者包](../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md)根目录，按其[环境说明](../../editions/zh/README.md)建立环境后运行：
+从接受I3读者包根目录，按其[环境说明](../../editions/zh/README.md)建立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch13_valuation.ipynb
@@ -283,7 +283,7 @@ Notebook调用随包共享实现。第13章Orion/Lyra、预测现金流、资本
 
 ### 历史课程工作根与原实现
 
-核心函数在 [valuation.py](../../src/quant_course/valuation.py)，入口和图表在 [ch13_valuation.py](../../code/ch13_valuation.py)，测试在 [test_ch13_valuation.py](../../tests/test_ch13_valuation.py)，教学 Notebook 在 [ch13_valuation.ipynb](../../notebooks/ch13_valuation.ipynb)。模块不下载数据。金额类要求显式币种与单位；倍数函数对非正分母返回 `None`；FCF yield 对现金流保留正负号，并检查索取权是否匹配；PIT 选择同时检查 `available_at` 和 `ingested_at`。
+核心函数在 [valuation.py](../../src/quant_course/valuation.py)，入口和图表在 [ch13_valuation.py](../../code/ch13_valuation.py)，测试在 test_ch13_valuation.py，教学 Notebook 在 [ch13_valuation.ipynb](../../notebooks/ch13_valuation.ipynb)。模块不下载数据。金额类要求显式币种与单位；倍数函数对非正分母返回 `None`；FCF yield 对现金流保留正负号，并检查索取权是否匹配；PIT 选择同时检查 `available_at` 和 `ingested_at`。
 
 构造案例由相同的核心接口计算，示范如何从价格与百万股数得到市值，再完成 EV 桥和倍数。可以在项目目录运行：
 

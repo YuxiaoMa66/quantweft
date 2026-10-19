@@ -369,7 +369,7 @@ assert np.isclose(forecast_may, 0.01375)
 
 ### 本读者版的默认运行入口
 
-从[接受I3读者包](../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md)根目录，按其[环境说明](../../editions/zh/README.md)建立独立环境后运行：
+从接受I3读者包根目录，按其[环境说明](../../editions/zh/README.md)建立独立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch16_time_series.ipynb
@@ -436,7 +436,7 @@ assert np.isfinite(prediction.to_numpy()).all()
 
 ## 11. Real Market Example
 
-本地真实样本是 French 10 行业组合的当前月度价值加权收益缓存 [月度行业收益CSV](../../data/processed/french_10_industries_monthly.csv)，对应原始来源见 [数据详情页](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html) 和 [保存的数据清单](../../data/manifests/french_industries_2026-10-05.json)。缓存由 2026-10-05 下载的 ZIP 解析，选择“Average Value Weighted Returns — Monthly”区块，将源文件百分数除以 100；样本 1,202 个月，从 1926-07 到 2026-08。它是行业组合的发布收益，不是逐股 OHLCV 价格或基金成交回报。
+本地真实样本是 French 10 行业组合的当前月度价值加权收益缓存 月度行业收益CSV，对应原始来源见 [数据详情页](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html) 和 保存的数据清单。缓存由 2026-10-05 下载的 ZIP 解析，选择“Average Value Weighted Returns — Monthly”区块，将源文件百分数除以 100；样本 1,202 个月，从 1926-07 到 2026-08。它是行业组合的发布收益，不是逐股 OHLCV 价格或基金成交回报。
 
 脚本实际读取 NoDur（消费耐用品以外的非耐用品行业）列，得到均值 0.009411、样本标准差 0.045564、样本 ACF(1)=0.094385、ACF(12)=0.034820。数字用于确认字段、单位和描述性算法确实运行；它们不表示显著性、稳定性、可预测收益或策略有效。月收益并非同方差 IID 的定理样本，A1 清单还说明这份缓存是当前发布版本，不能回建每月当时可见版本，故不能用它宣称真实历史滚动预测。
 

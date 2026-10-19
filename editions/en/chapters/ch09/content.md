@@ -312,7 +312,7 @@ No feasible production plan exceeds 160, which the intersection attains, proving
 
 ### Default entry in the accepted reader package
 
-From the [accepted I3 reader-package](../../../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md) root, create the isolated environment described in its [README](../../README.md), then run:
+From the accepted I3 reader-package root, create the isolated environment described in its [README](../../README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch09_optimization.ipynb

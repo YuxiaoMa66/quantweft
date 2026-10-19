@@ -233,18 +233,18 @@ Choosing weights 0.6/0.2 after observing A 2%/B −1% and applying them to that 
 
 ### Default accepted-reader entry point
 
-Use the shared I3 reader at `outputs/quant_course_reader_candidate_20261014/`. Set up its environment under README.md, then run from that reader root:
+Use the shared I3 reader at the cloned repository root (`quantweft/`). Set up its environment under README.md, then run from that reader root:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch01_lifecycle.ipynb
 ```
 
-The constructed notebook does not read omitted French files or download data. Each run writes to a unique `runs/` subdirectory. The historical CLI and test/data paths below refer to the course root. French calculations require authorized local inputs and manifests and were not rerun for this batch. The portable I3 CLI defaults to a fresh UUID run and rejects overwriting. When already at the reader root, do not run `cd quant_course` again. README.md and OPTIONAL_DATA.md describe setup and optional inputs. A constructed check does not revalidate market calculations.
+The constructed notebook does not read omitted French files or download data. Each run writes to a unique `runs/` subdirectory. The historical CLI and test/data paths below refer to the course root. French calculations require authorized local inputs and manifests and were not rerun for this batch. The portable I3 CLI defaults to a fresh UUID run and rejects overwriting. When already at the reader root, do not run `cd quantweft` again. README.md and OPTIONAL_DATA.md describe setup and optional inputs. A constructed check does not revalidate market calculations.
 
 The chapter script is `code/ch01_lifecycle.py`, with `notebooks/ch01_lifecycle.ipynb`; the run environment and steps are described in the [environment notes](../../README.md). The script records the teaching construction and capital convention and sends no trading instructions. The original course-root command is:
 
 ```bash
-cd quant_course
+cd quantweft
 .venv/bin/python code/ch01_lifecycle.py
 ```
 

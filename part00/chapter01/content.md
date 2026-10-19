@@ -265,19 +265,19 @@ Beta说明对风险源的共同敏感度。假设组合的市场Beta为1.5，市
 
 ### 本读者版的默认运行入口
 
-本样章共享I3已接受读者包的实现。从`outputs/quant_course_reader_candidate_20261014/`读者包根建立环境，再运行：
+本样章共享I3已接受读者包的实现。从克隆后的仓库根目录（`quantweft/`）建立环境，再运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch01_lifecycle.ipynb
 ```
 
-默认构造Notebook不读取未随包提供的French数据、不下载数据；新输出写入唯一`runs/`子目录。以下历史CLI、测试和数据路径以课程根为工作目录；其中French路线须自备符合授权与manifest契约的输入，本批未运行。I3可搬移CLI默认写入新UUID的runs目录、拒绝覆盖；已位于读者根时不再执行`cd quant_course`。安装与可选数据说明见[接受读者安装入口](../../editions/zh/README.md)和[可选数据契约](../../editions/zh/OPTIONAL_DATA.md)。构造检查通过不代表真实市场计算已重新执行。
+默认构造Notebook不读取未随包提供的French数据、不下载数据；新输出写入唯一`runs/`子目录。以下历史CLI、测试和数据路径以课程根为工作目录；其中French路线须自备符合授权与manifest契约的输入，本批未运行。I3可搬移CLI默认写入新UUID的runs目录、拒绝覆盖；已位于读者根时不再执行`cd quantweft`。安装与可选数据说明见[接受读者安装入口](../../editions/zh/README.md)和[可选数据契约](../../editions/zh/OPTIONAL_DATA.md)。构造检查通过不代表真实市场计算已重新执行。
 
 
 本章脚本为[code/ch01_lifecycle.py](../../code/ch01_lifecycle.py)，Notebook为[ch01_lifecycle.ipynb](../../notebooks/ch01_lifecycle.ipynb)。运行环境和步骤见[环境说明](../../editions/zh/README.md)。脚本明确记录教学构造与资金口径，不发出交易指令。
 
 ```bash
-cd quant_course
+cd quantweft
 .venv/bin/python code/ch01_lifecycle.py
 ```
 
@@ -347,7 +347,7 @@ print(stock_end, cash_end, ending_nav, pnl_currency)
 
 ## 11. Real Market Example
 
-Kenneth French 数据库公开提供行业组合和因子收益。课程保存了真实的10个行业组合数据快照，来源为[10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html)，下载与哈希见[data manifest](../../data/manifests/french_industries_2026-10-05.json)。
+Kenneth French 数据库公开提供行业组合和因子收益。课程保存了真实的10个行业组合数据快照，来源为[10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html)，下载与哈希见data manifest。
 
 官方说明在每年6月底按标准行业分类（Standard Industrial Classification, SIC）分配股票，随后计算7月到次年6月的组合收益。你现在看到的是**已构造组合的收益序列**，不是一份可直接下单的逐股持仓，也不是开盘/最高/最低/收盘价和成交量（Open, High, Low, Close, Volume, OHLCV）记录。这使它适合练习收益面板和后续回归，但不能证明你能复制所有历史股票的成交。
 

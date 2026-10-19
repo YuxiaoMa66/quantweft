@@ -24,7 +24,7 @@ From the configured I3 package root, run an execution copy through the outer run
 .venv/bin/python run_notebook.py projects/project05/notebooks/p05_pairs.ipynb
 ```
 
-The Notebook writes new outputs to a unique `RUN_DIR` under package-root `runs/`. The runner separately preserves the executed Notebook and `execution.json` in a unique `runs/execution_...` directory, including failures. The [package reader contract](../../NOTEBOOK_GUIDE.md) describes supplied inputs and output boundaries; repository readers enter the package at `outputs/quant_course_reader_candidate_20261014`. `notebooks/build_notebook.py` rewrites the source Notebook and is a maintenance tool, not the ordinary reader entrypoint. Historical CLI/test commands below identify evidence; their presence does not mean they were rerun for this translation. Real data still require permission, field, PIT, and execution-authorization gates.
+The Notebook writes new outputs to a unique `RUN_DIR` under package-root `runs/`. The runner separately preserves the executed Notebook and `execution.json` in a unique `runs/execution_...` directory, including failures. The [package reader contract](../../NOTEBOOK_GUIDE.md) describes supplied inputs and output boundaries; repository readers enter the package at `quantweft/`. `notebooks/build_notebook.py` rewrites the source Notebook and is a maintenance tool, not the ordinary reader entrypoint. Historical CLI/test commands below identify evidence; their presence does not mean they were rerun for this translation. Real data still require permission, field, PIT, and execution-authorization gates.
 
 Research status: the real-market project remains planned. The following task contract is retained; constructed methods and results have their own acceptance identities.
 
@@ -66,15 +66,15 @@ Report data limits and retain all zero and negative results. Tests, scripts, and
 
 > The A6 constructed accounting interface has historical limited acceptance: [backtest_preparation/README.md](backtest_preparation/README.md). It demonstrates frozen training rules, two-leg execution, and reconciliation on explicitly constructed tradable prices. It does not use French industry portfolios as pairs-trading PnL; the real-market project remains planned.
 
-Historical interface evidence: [A6 acceptance](../../../../qa/a6/codex_resume/acceptance.md). Its scope is constructed prices and self-financing accounting, not the complete project.
+Historical interface evidence: A6 acceptance. Its scope is constructed prices and self-financing accounting, not the complete project.
 
 ## A7-C historical constructed method, 2026-10-10
 
 c5 has limited acceptance; real research remains incomplete.
 
-- **Real-price empirical research is blocked.** The 2026-10-10 source decision recorded licensing gaps in the options then checked; no applicable institutional authorization was obtained. This is neither a fresh review of current terms nor a universal claim about every free source. See the [source decision](../../../../qa/a7/project05_batch/DATA_SOURCE_DECISION.md). `data_manifest.json` remains blocked; `--data real` rejects execution with exit code 3.
+- **Real-price empirical research is blocked.** The 2026-10-10 source decision recorded licensing gaps in the options then checked; no applicable institutional authorization was obtained. This is neither a fresh review of current terms nor a universal claim about every free source. See the source decision. `data_manifest.json` remains blocked; `--data real` rejects execution with exit code 3.
 - [Preregistration v1](../../../../projects/project05/configs/preregistration_v1.json): eight pairs, 2010–2025, rolling 504/126 windows, EG $p<0.05$, $|z|$ thresholds 2/0.5/4, and cost/borrow scenarios; frozen before any price download.
-- [Implementation](../../../../projects/project05/src/p05_pairs.py): validation, forward total returns, formation and EG, signals, two-leg accounting, financing/borrow/dividends/splits, partial fills, IS, and walk-forward evaluation. [Constructed panel](../../../../projects/project05/src/p05_constructed.py); [CLI](../../../../projects/project05/run_project05.py); [figures](../../../../projects/project05/make_figures.py); [tests](../../../../projects/project05/tests/test_p05_pairs.py).
+- [Implementation](../../../../projects/project05/src/p05_pairs.py): validation, forward total returns, formation and EG, signals, two-leg accounting, financing/borrow/dividends/splits, partial fills, IS, and walk-forward evaluation. [Constructed panel](../../../../projects/project05/src/p05_constructed.py); [CLI](../../../../projects/project05/run_project05.py); figures; tests.
 - [Report](research_report/report.md), [exercises](exercises.md), [solutions](solutions.md), [reference code](../../../../projects/project05/solutions_code.py), historical source [Notebook](../../../../projects/project05/notebooks/p05_pairs.ipynb) (readers execute the I3 package copy above), [active practice](loom/main_p05.tex), and [dictionary](data_dictionary.md).
 - Constructed results demonstrate the method and implementation: cash residuals around $10^{-9}$ USD, equality of decomposed and direct IS, and formation estimates unchanged by future perturbations. The old positive screened Sharpe came from a false-positive selection and changed sign with a 252-day formation window. Even these constructed results do not satisfy the rule for supporting the strategy.
 

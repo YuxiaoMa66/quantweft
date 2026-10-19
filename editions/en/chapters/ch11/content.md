@@ -274,7 +274,7 @@ A later genuine holding interval with wealth 100 at both endpoints has a 0% retu
 
 ### Default execution entry point for this reader edition
 
-From the [accepted I3 reader package](../../../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md) root, create a separate environment using its [environment instructions](../../README.md), then run:
+From the accepted I3 reader package root, create a separate environment using its [environment instructions](../../README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch11_returns.ipynb
@@ -549,6 +549,6 @@ Set \(z=\sqrt{1+r}>0\) and multiply by \(z^2\) to obtain \(100z^2+90z-220=0\). T
 
 ## 20. References
 
-The actual external-source reading scope is recorded in [source_notes.md](../../../../part02/chapter11/source_notes.md) and the [source/metric preparation contract](../../../../qa/a3/ch11_source_and_metric_contract.md). The compounding source is MIT's official course. The risk aggregation formula is independently derived here by covariance expansion, not attributed equation by equation to an unread Lo full text.
+The actual external-source reading scope is recorded in [source_notes.md](../../../../part02/chapter11/source_notes.md) and the source/metric preparation contract. The compounding source is MIT's official course. The risk aggregation formula is independently derived here by covariance expansion, not attributed equation by equation to an unread Lo full text.
 
-Data versions, download times, units, and SHA-256 values are recorded in the [industry manifest](../../../../data/manifests/french_industries_2026-10-05.json) and [FF3/FF5 manifest](../../../../data/manifests/french_factors_2026-10-05.json). Checkable values are in the [actual metric output](../../../../qa/a3/ch11_actual_metrics.json). Wealth and charts are original calculations, not copied source figures. Public download availability was not treated as permission to redistribute all data.
+Data versions, download times, units, and SHA-256 values are recorded in the industry manifest and FF3/FF5 manifest. Checkable values are in the actual metric output. Wealth and charts are original calculations, not copied source figures. Public download availability was not treated as permission to redistribute all data.

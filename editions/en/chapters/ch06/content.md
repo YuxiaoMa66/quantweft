@@ -494,7 +494,7 @@ to describe one-step probabilities between states \(A,B\); each row sums to 1. F
 
 ### Default entry point in the accepted reader package
 
-From the [accepted I3 reader package](../../../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md) root, create the isolated environment described in its [README](../../README.md), then run:
+From the accepted I3 reader package root, create the isolated environment described in its [README](../../README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch06_probability.ipynb

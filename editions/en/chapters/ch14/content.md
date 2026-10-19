@@ -235,7 +235,7 @@ If constructed \(R_f=2\%\) and expected simple market total return \(\mathbb E[R
 
 ### Default Entry Point for This Reader Edition
 
-From the [accepted I3 reader package](../../../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md) root, establish the [documented environment](../../README.md), then run:
+From the accepted I3 reader package root, establish the [documented environment](../../README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch14_asset_pricing.ipynb
@@ -277,11 +277,11 @@ Left: Mkt-RF (% per month) horizontally and NoDur−RF (% per month) vertically;
 
 ## 11. Real Market Example
 
-The historical case estimates only a single market factor. NoDur is the value-weighted nondurables industry total return from French's monthly ten-industry portfolios; Mkt-RF is published market excess return; RF is the same-frequency one-month Treasury-bill proxy. The fixed window has 120 consecutive months, 2010-01 through 2019-12, with decimal processed-file hashes checked before calculation. See [`french_industries_2026-10-05.json`](../../../../data/manifests/french_industries_2026-10-05.json) and [`french_factors_2026-10-05.json`](../../../../data/manifests/french_factors_2026-10-05.json): industry SHA-256 `3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950`; factor SHA-256 `c19770a19a0ac47ad1c29074f57234570aeaa9725212cb4fa8146a2846c52814`. The FF source declares CRSP database vintage month 202608. Both are current published snapshots from 2026, rather than point-in-time (PIT) data available in each historical month.
+The historical case estimates only a single market factor. NoDur is the value-weighted nondurables industry total return from French's monthly ten-industry portfolios; Mkt-RF is published market excess return; RF is the same-frequency one-month Treasury-bill proxy. The fixed window has 120 consecutive months, 2010-01 through 2019-12, with decimal processed-file hashes checked before calculation. See `french_industries_2026-10-05.json` and `french_factors_2026-10-05.json`: industry SHA-256 `3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950`; factor SHA-256 `c19770a19a0ac47ad1c29074f57234570aeaa9725212cb4fa8146a2846c52814`. The FF source declares CRSP database vintage month 202608. Both are current published snapshots from 2026, rather than point-in-time (PIT) data available in each historical month.
 
 The equation is \(NoDur_t-RF_t=\alpha+\beta(Mkt-RF)_t+\varepsilon_t\), using monthly decimal simple returns and dimensionless beta. Estimated monthly beta is 0.6456, with sample \(R^2=0.5608\). Monthly intercept is 0.2603%, Bartlett HAC standard error 0.1926%, reference 95% interval [−0.1210%, 0.6417%], and reference two-sided \(p=0.179\). HAC maxlags=5 counts consecutive monthly rows. Intervals and p-values are approximate under this estimation setup, rather than definitive judgments of beta or alpha.
 
-Results are recorded in [`ch14_french_capm_2010_2019.json`](../../../../qa/a4/ch14_french_capm_2010_2019.json). This in-sample regression describes NoDur–market excess-return comovement. It does not test the complete aggregate-wealth market or include risk-free financing, costs, impact, capacity, or execution times. An intercept interval containing zero does not prove CAPM; an interval excluding zero would not alone establish a trading opportunity. Mean monthly NoDur total return is 1.0099%, RF 0.0427%, and excess return 0.9673%. These describe the fixed sample rather than next month's expectation.
+Results are recorded in `ch14_french_capm_2010_2019.json`. This in-sample regression describes NoDur–market excess-return comovement. It does not test the complete aggregate-wealth market or include risk-free financing, costs, impact, capacity, or execution times. An intercept interval containing zero does not prove CAPM; an interval excluding zero would not alone establish a trading opportunity. Mean monthly NoDur total return is 1.0099%, RF 0.0427%, and excess return 0.9673%. These describe the fixed sample rather than next month's expectation.
 
 ## 12. Common Mistakes
 
@@ -380,7 +380,7 @@ Full answers appear in Section 18. Variables are same-interval simple returns, i
 
 **14-P03 | Shared monthly estimation.** Construct \(y_t=0.001+1.2x_t+e_t\) from 60 observations on a monthly `PeriodIndex('M')` and estimate one factor with `fit_monthly_factor_model`. RF must be zero and present in the factor table; use HAC maxlags=5. Assert 60 observations, beta near 1.2, and residual mean near zero; print that the lag unit is monthly rows.
 
-**14-P04 | Historical data audit.** Run the chapter script and read [`ch14_french_capm_2010_2019.json`](../../../../qa/a4/ch14_french_capm_2010_2019.json). Automatically check endpoints, 120 rows, monthly frequency, both file hashes, and the single-factor CAPM label. Do not relabel `alpha_monthly` as net strategy return.
+**14-P04 | Historical data audit.** Run the chapter script and read `ch14_french_capm_2010_2019.json`. Automatically check endpoints, 120 rows, monthly frequency, both file hashes, and the single-factor CAPM label. Do not relabel `alpha_monthly` as net strategy return.
 
 ## 17. Challenge Problems
 

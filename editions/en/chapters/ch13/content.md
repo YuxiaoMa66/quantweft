@@ -273,7 +273,7 @@ A separate constructed DCF uses year-end FCFF of 40, 45, 50, 55, and 60 USD mill
 
 ### Default Entry Point for This Reader Edition
 
-From the [accepted I3 reader package](../../../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md) root, set up its [environment](../../README.md), then run:
+From the accepted I3 reader package root, set up its [environment](../../README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch13_valuation.ipynb
@@ -283,7 +283,7 @@ The Notebook calls the packaged shared implementation. Orion/Lyra, forecasts, ca
 
 ### Historical Working-Course Root and Original Implementation
 
-Core functions are in [valuation.py](../../../../src/quant_course/valuation.py), entry points and plots in [ch13_valuation.py](../../../../code/ch13_valuation.py), tests in [test_ch13_valuation.py](../../../../tests/test_ch13_valuation.py), and the teaching Notebook in [ch13_valuation.ipynb](../../../../notebooks/ch13_valuation.ipynb). The module downloads no data. Amounts require explicit currency/unit; multiple functions return `None` for nonpositive denominators; FCF yield preserves cash-flow signs and checks claims; PIT selection checks both `available_at` and `ingested_at`.
+Core functions are in [valuation.py](../../../../src/quant_course/valuation.py), entry points and plots in [ch13_valuation.py](../../../../code/ch13_valuation.py), tests in test_ch13_valuation.py, and the teaching Notebook in [ch13_valuation.ipynb](../../../../notebooks/ch13_valuation.ipynb). The module downloads no data. Amounts require explicit currency/unit; multiple functions return `None` for nonpositive denominators; FCF yield preserves cash-flow signs and checks claims; PIT selection checks both `available_at` and `ingested_at`.
 
 The same core interfaces calculate the constructed cases, from price and million-share counts through market capitalization, EV, and multiples. From the project directory, run:
 

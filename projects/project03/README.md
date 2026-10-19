@@ -41,7 +41,7 @@
 
 - 数据：French 10 行业价值加权月收益与 FF3 RF，2026-10-05 冻结快照（当前修订历史，非 PIT，行业组合不可直接交易）。[data_manifest.json](data_manifest.json)、[data_dictionary.md](data_dictionary.md)。
 - 冻结配置：[configs/project03.json](configs/project03.json)。主规格 W=60、Ledoit–Wolf、10 bp/单位换手、最小方差/最大Sharpe上限 40%（ERC无上限）、滞后 0；评价 1990-01..2026-08（440 个月）；敏感性 W∈{36,60,120} × {sample, LW} × 滞后{0,1} × 成本{0,10,25,50} bp。
-- 代码：[src/project03_backtest.py](src/project03_backtest.py)（账本、回退、指标、块自助法）复用 src/quant_course/portfolio_construction.py、optimization_tools.py、performance.py、statistics_tools.py；入口 [run_project03.py](run_project03.py)；测试 tests/test_project03_backtest.py。
+- 代码：[src/project03_backtest.py](src/project03_backtest.py)（账本、回退、指标、块自助法）复用 src/quant_course/portfolio_construction.py、optimization_tools.py、performance.py、statistics_tools.py；入口 run_project03.py；测试 tests/test_project03_backtest.py。
 - 时点：持有月 t 的权重在 t−1 月末用 [t−W, t−1]（滞后 1 时 [t−W−1, t−2]）估计并成交；漂移后的交易前权重计算换手；净收益 = (1−成本)(1+毛收益)−1。
 - 结果：[研究报告](research_report/report.md)。三种估计矩的组合在成本后都没有可信地优于等权；最小方差相对等权的年化平均净收益差的未校正单项区间低于零（年化约 −2.0%，块自助法 95% 区间不含 0），波动与回撤更低；最大 Sharpe 换手最高、对成本和窗口最敏感；ERC 与等权 Sharpe 差区间跨 0。所有负结果与零结果保留。
 - 图：figures/projects/project03_net_wealth.png、project03_weights.png、project03_cost_window_sensitivity.png、project03_bootstrap_difference.png。

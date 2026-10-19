@@ -1,7 +1,7 @@
 # 第42章 深度学习基础与量化应用 (Deep Learning Foundations & Quantitative Applications)
 
 > 本章沿用冻结的构造结果，未重新训练。主线：网络架构的本质是函数空间的结构归纳偏置（Structural Inductive Bias），在金融低信噪比与时间序列环境中，增加参数量不会自动带来交易优势，严格的时间边界净化（Boundary Purging）与明确费用假设的交易账本是评估复杂深度模型有效性的核心准则。
-> 先修：[第4章](../../part01/chapter04/plan.md) 链式法则、[第5章](../../part01/chapter05/plan.md) 矩阵维度、[第8章](../../part01/chapter08/plan.md) / [第39章](../../part07/chapter39/plan.md) 岭回归、[第29章](../../part05/chapter29/plan.md) 撮合账本、[第31章](../../part05/chapter31/plan.md) / [第38章](../../part07/chapter38/plan.md) 时间因果验证、[第40章](../../part07/chapter40/plan.md) 早停机制。完成后你能：手算并以纯 NumPy 实现多层感知机（MLP）前向与反向传播；实现 CNN 局部互相关、RNN 状态递推与梯度积、现代 LSTM 恒定误差回路与 Transformer 严格因果掩码；检查特征、标签与预处理的时间边界后执行模型对比，并评估构造信号在假设费用下的表现。
+> 先修：第4章 链式法则、第5章 矩阵维度、第8章 / 第39章 岭回归、第29章 撮合账本、第31章 / 第38章 时间因果验证、第40章 早停机制。完成后你能：手算并以纯 NumPy 实现多层感知机（MLP）前向与反向传播；实现 CNN 局部互相关、RNN 状态递推与梯度积、现代 LSTM 恒定误差回路与 Transformer 严格因果掩码；检查特征、标签与预处理的时间边界后执行模型对比，并评估构造信号在假设费用下的表现。
 
 ---
 

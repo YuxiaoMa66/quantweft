@@ -274,7 +274,7 @@ g_{p,t}=\log\left(1+\sum_iw_iR_{i,t}\right).
 
 ### 本读者版的默认运行入口
 
-从[接受I3读者包](../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md)根目录，按其[环境说明](../../editions/zh/README.md)建立独立环境后运行：
+从接受I3读者包根目录，按其[环境说明](../../editions/zh/README.md)建立独立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch11_returns.ipynb
@@ -549,6 +549,6 @@ print(result)
 
 ## 20. References
 
-外部来源实际读取范围见 [source_notes.md](source_notes.md) 与 [来源/度量准备契约](../../qa/a3/ch11_source_and_metric_contract.md)。复利来源为MIT官方课程，风险聚合式由本章协方差展开独立推导，不假称从未读的Lo全文逐式引用。
+外部来源实际读取范围见 [source_notes.md](source_notes.md) 与 来源/度量准备契约。复利来源为MIT官方课程，风险聚合式由本章协方差展开独立推导，不假称从未读的Lo全文逐式引用。
 
-真实数据版本、下载时间、单位与SHA-256分别见 [行业manifest](../../data/manifests/french_industries_2026-10-05.json)、[FF3/FF5 manifest](../../data/manifests/french_factors_2026-10-05.json)；可复核数值为 [实际指标输出](../../qa/a3/ch11_actual_metrics.json)。财富及图是原创计算，未复制来源图表，未凭公开可下载推断所有数据的外部分发许可。
+真实数据版本、下载时间、单位与SHA-256分别见 行业manifest、FF3/FF5 manifest；可复核数值为 实际指标输出。财富及图是原创计算，未复制来源图表，未凭公开可下载推断所有数据的外部分发许可。

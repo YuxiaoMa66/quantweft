@@ -772,7 +772,7 @@ Calibrate the view covariance using the He–Litterman proportion: \(\Omega = \t
 
 ### Default Standalone Run Entry Point
 
-From the root of the [companion reader package](../../../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md), create an isolated environment following the package instructions and run:
+From the root of the companion reader package, create an isolated environment following the package instructions and run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch21_portfolio_construction.ipynb
@@ -870,7 +870,7 @@ The empirical example uses a frozen snapshot from the Kenneth R. French Data Lib
 - **Raw-file hash**: SHA-256 for `industry_raw_zip`: `ebd937a4b995d821867aeb956a96f09a666386f38fa82516b7d1767ee4a49ae5`;
 - **Data status**: The French data are a currently revised academic version, not a point-in-time (PIT) historical snapshot. Monthly data are published with a lag, historical values may be revised, and the local manifest does not preserve historical versions. A zero-month lag is an idealized month-boundary decision test.
 
-For the 120-month period from 2010-01 to 2019-12, the observed performance of four representative strategies using the Ledoit–Wolf covariance estimator is recorded in [outputs/ch21/ch21_results.json](../../../../outputs/ch21/ch21_results.json):
+For the 120-month period from 2010-01 to 2019-12, the observed performance of four representative strategies using the Ledoit–Wolf covariance estimator is recorded in outputs/ch21/ch21_results.json:
 
 | Portfolio strategy | Monthly volatility | Highest-weight industries and weights | Lowest-weight industries and weights | Risk-diversification characteristics |
 |---|---|---|---|---|
@@ -962,7 +962,7 @@ As an end-to-end engineering check of quantitative portfolio construction, [proj
 
 ### 13.2 Evaluation Results and Statistical Inference
 
-Based on [projects/project03/outputs/summary.json](../../../../projects/project03/outputs/summary.json) and [sensitivity.csv](../../../../projects/project03/outputs/sensitivity.csv), the core performance statistics over 440 months are:
+Based on projects/project03/outputs/summary.json and sensitivity.csv, the core performance statistics over 440 months are:
 
 | Evaluation metric | Equal weight (1/N) | Minimum variance (Min Var) | Maximum Sharpe (Max Sharpe) | Equal risk contribution (ERC) |
 |---|---|---|---|---|

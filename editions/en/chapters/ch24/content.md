@@ -188,7 +188,7 @@ Value traps make this chain concrete: falling prices mechanically raise B/M, but
 
 ## 8. Numerical Worked Examples: Calculate Each Step
 
-All figures are produced by hand_examples() and independently checked in [ch24_recompute.py](../../../../qa/a5/claude/recompute/ch24_recompute.py) using a different implementation. The companies are teaching constructions (Orion and Lyra come from Chapter 13; the others are constructed for this chapter), not real companies.
+All figures are produced by hand_examples() and independently checked in ch24_recompute.py using a different implementation. The companies are teaching constructions (Orion and Lyra come from Chapter 13; the others are constructed for this chapter), not real companies.
 
 ### 8.1 Four Definitions for Two Companies in the Same Industry (Orion and Lyra)
 
@@ -533,7 +533,7 @@ print(naive.round(2).to_dict(), fixed.round(2).to_dict())
 
 The current signal_contract.json is p04-prep-0.2; the general preprocessing rules are in frozen_rules.json, version p04-prep-0.1. The files have different responsibilities. The seven fields are three value measures (book_to_market, earnings_yield, ev_to_ebitda_cheapness), one momentum measure (mom_12_1), and three quality measures (gp_a, neg_accrual, roe_avg). FCF Yield is a teaching variable in this chapter and is not implemented among the current seven fields. OP is not a signal at this layer either.
 
-For the constructed universe, EV is only market_cap + debt - cash. The contract explicitly sets noncontrolling interests, preferred equity, and nonoperating assets to zero. This is a construction assumption; missing fields for a real company must not be treated as zero. Real use requires complete point-in-time bridge items in consistent currencies and scales, with the full bridge checked. The clarification of the old machine-readable contract is closed; see [acceptance.md](../../../../qa/a5/codex_followup_fixes/acceptance.md). This chapter only explains that already-closed boundary.
+For the constructed universe, EV is only market_cap + debt - cash. The contract explicitly sets noncontrolling interests, preferred equity, and nonoperating assets to zero. This is a construction assumption; missing fields for a real company must not be treated as zero. Real use requires complete point-in-time bridge items in consistent currencies and scales, with the full bridge checked. The clarification of the old machine-readable contract is closed; see acceptance.md. This chapter only explains that already-closed boundary.
 
 The three chapters share the following interface table. Signal-layer neutralization and portfolio-layer projection are separate: the former changes signals, the latter changes weights. Signal neutralization does not guarantee that the resulting portfolio is tradable or neutral.
 
@@ -702,4 +702,4 @@ Citation keys and reading scope are listed in [source_notes.md](../../../../part
 - CH24_AMP2013: Asness, C. S., Moskowitz, T. J., and Pedersen, L. H. (2013). “Value and Momentum Everywhere.” *Journal of Finance* 68(3), printed pages 936–937.
 - CH24_FF2015: Fama, E. F., and French, K. R. (2015). “A five-factor asset pricing model.” *Journal of Financial Economics* 116(1), abstract, Section 7 (pages 12–13), and Table 8 note (page 14).
 - CH24_SEC_FSDS: SEC DERA Financial Statement Data Sets page and documentation; SEC Accessing EDGAR Data; SEC website information policy.
-- FRENCH: Frozen snapshot of French three-factor data ([french_factors_2026-10-05.json](../../../../data/manifests/french_factors_2026-10-05.json)).
+- FRENCH: Frozen snapshot of French three-factor data (french_factors_2026-10-05.json).

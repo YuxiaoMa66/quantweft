@@ -36,4 +36,4 @@ JSON 报告训练估计（β 训练值与真值 1.5 的差别）、订单与成�
 
 两只（或多只）真实证券的未复权成交价、公司行动、可借券数量与费用、开盘/VWAP 执行价、双腿冲击；训练段内的筛选搜索次数（沿用 A5 账本）与多重检验；滚动 walk-forward 与协整破裂监测。
 
-根代理最终复跑：[当前JSON](../../../qa/a6/codex_resume/project_interfaces/results_root_final/p04_p05_backtest_interfaces.json)。作者历史默认输出拒绝覆盖，复跑须指定新输出目录。
+根代理最终复跑：当前JSON。作者历史默认输出拒绝覆盖，复跑须指定新输出目录。

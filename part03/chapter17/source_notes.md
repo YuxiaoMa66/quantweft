@@ -47,7 +47,7 @@
 
 ## French 行业回报缓存
 
-- 来源：[Kenneth R. French Data Library 10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html)。缓存下载于 2026-10-05，清单为 [`data/manifests/french_industries_2026-10-05.json`](../../data/manifests/french_industries_2026-10-05.json)。
+- 来源：[Kenneth R. French Data Library 10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html)。缓存下载于 2026-10-05，清单为 `data/manifests/french_industries_2026-10-05.json`。
 - 原始 URL：<https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/10_Industry_Portfolios_CSV.zip>；原始 ZIP SHA-256 `ebd937a4b995d821867aeb956a96f09a666386f38fa82516b7d1767ee4a49ae5`。选择首个 `Average Value Weighted Returns -- Monthly` 区块，不读年频和等权区块；源单位为百分数，解析后除以 100。缓存 CSV SHA-256 `3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950`，1,202 行，1926-07 至 2026-08。
 - 本章由这些已发布行业简单收益复利构造 `TR Index proxy`，后再为图表显示重基准。它不是股票、基金、可成交报价或历史 PIT 快照，也不说明每个月的实时可得时间。不能用该缓存宣称真实交易可执行性。下载可见不构成课程外再分发许可。
 - 本章脚本固定训练截止月 2000-12，报告 45 对 EG 探索性检验及 BH 调整 p 值（常称 q 值）。BH 的 FDR 控制适用条件见上方论文范围记录；共享行业序列造成的依赖条件未验证，所以章节不声称 FDR 控制成立。统计只复述本地代码输出；没有挑 p 最小或回报最高的 pair，没有使用后续样本挑选训练关系，也未做任何策略收益测试。所有行业 I(1) 阶数、结构稳定性、点时可见性与可成交性仍未确证。

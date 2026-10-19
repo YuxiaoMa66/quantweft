@@ -27,7 +27,7 @@ projects/project04/cost_execution_lab/
 └── cost_execution_lab.ipynb
 src/quant_course/execution_costs.py
 build/batches/INTEGRATION-PREP/p04_cost_refresh_20261014/runs/current_signal_01/cli/summary_results.json
-outputs/quant_course_reader_candidate_20261014/fixtures/projects/project04/summary_results_current_signal_20261014.json
+fixtures/projects/project04/summary_results_current_signal_20261014.json
 qa/a7/ch35_ch36_batch/independent_acceptance/rev2/r2r6/candidate/projects/project04/cost_execution_lab/outputs/a7b_rev2r6_20261009/summary_results.json
 ```
 
@@ -57,7 +57,7 @@ Portfolio returns are month-end to month-end, with initial NAV as the first inte
 
 Read the [data dictionary](data_dictionary.md), [research report](research_report.md), and [complete answers to all six exercises](solutions.md), then compare them with the interface code, configuration, and versioned result summaries at the repository-root paths above. The constructed volume curve is estimated from 60 samples from a declared U-shaped DGP, not from observed market volume.
 
-The I3 reader candidate Notebook is at `outputs/quant_course_reader_candidate_20261014/projects/project04/cost_execution_lab/cost_execution_lab.ipynb`. It loads the project configuration, recomputes the frozen volume curve, the 10,000-share fixed-parent buy/sell comparison, and a 5,000-share liquidity-stress example, and checks the small examples against the saved current-signal summary. Its longer-run 96-month walk-forward results, high-friction scenario, sensitivities, ablation, and ledger audits are replayed from the saved current summary; the Notebook does not rerun the full walk-forward study by default. Running it creates a unique `runs/cost_execution_lab_<random-id>/` directory at the repository root and writes images there, so it needs the full repository and its runtime dependencies. This documentation candidate does not include those run files.
+The I3 reader candidate Notebook is at `projects/project04/cost_execution_lab/cost_execution_lab.ipynb`. It loads the project configuration, recomputes the frozen volume curve, the 10,000-share fixed-parent buy/sell comparison, and a 5,000-share liquidity-stress example, and checks the small examples against the saved current-signal summary. Its longer-run 96-month walk-forward results, high-friction scenario, sensitivities, ablation, and ledger audits are replayed from the saved current summary; the Notebook does not rerun the full walk-forward study by default. Running it creates a unique `runs/cost_execution_lab_<random-id>/` directory at the repository root and writes images there, so it needs the full repository and its runtime dependencies. This documentation candidate does not include those run files.
 
 The cost configuration explicitly requests 97 input months starting in 2013-12. The first month is warm-up, producing 96 return months from 2014-01 through 2021-12: 60 training months (2014-01 through 2018-12) and 36 test months (2019-01 through 2021-12). Do not treat a signal function’s 96-month default input as the same sequence as the cost CLI’s 97-month configured input.
 

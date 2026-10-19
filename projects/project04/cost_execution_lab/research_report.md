@@ -123,7 +123,7 @@ R2R6把两位小数性能表复现为与R2R5一致；这些表也与R2R4一致�
 
 ## 10. 当前信号刷新（2026-10-14）与I3 Notebook默认行为
 
-当前信号刷新摘要位于仓库根目录 `build/batches/INTEGRATION-PREP/p04_cost_refresh_20261014/runs/current_signal_01/cli/summary_results.json`；I3读者候选携带相同字节的副本 `outputs/quant_course_reader_candidate_20261014/fixtures/projects/project04/summary_results_current_signal_20261014.json`。这是沿用已接受当前信号层产生的构造工程消费者刷新。旧A7-B R2R6结果和Notebook身份均未被重写。当前摘要也使用成本配置的97个月输入、96个月收益与60/36切分，但应按当前摘要单独引用，不把结果合并成旧R2R6历史。
+当前信号刷新摘要位于仓库根目录 `build/batches/INTEGRATION-PREP/p04_cost_refresh_20261014/runs/current_signal_01/cli/summary_results.json`；I3读者候选携带相同字节的副本 `fixtures/projects/project04/summary_results_current_signal_20261014.json`。这是沿用已接受当前信号层产生的构造工程消费者刷新。旧A7-B R2R6结果和Notebook身份均未被重写。当前摘要也使用成本配置的97个月输入、96个月收益与60/36切分，但应按当前摘要单独引用，不把结果合并成旧R2R6历史。
 
 各单元格为复合年化增长率（Compound Annual Growth Rate, CAGR）/年化夏普比率：
 
@@ -164,7 +164,7 @@ R2R6把两位小数性能表复现为与R2R5一致；这些表也与R2R4一致�
 
 当前摘要中的敏感度既有正值也有负值；0.5x目标缩放为正值，但没有据此选定策略或参数赢家。缩放同时改变请求换手和总敞口，仍是联合情景。
 
-I3读者Notebook路径为 `outputs/quant_course_reader_candidate_20261014/projects/project04/cost_execution_lab/cost_execution_lab.ipynb`。默认执行会新建冻结U形预测曲线、重算10,000股固定父单比较和5,000股流动性压力例，并检查它们与当前已保存摘要的对应数值。96个月走步结果、高摩擦情景、敏感度、消融与账本审计从当前摘要重放；Notebook不会默认重跑这些长期内容。执行Notebook还会在仓库根目录下创建唯一运行目录并写出图像。以上不是本次作者工作的新实验或市场数据复核。
+I3读者Notebook路径为 `projects/project04/cost_execution_lab/cost_execution_lab.ipynb`。默认执行会新建冻结U形预测曲线、重算10,000股固定父单比较和5,000股流动性压力例，并检查它们与当前已保存摘要的对应数值。96个月走步结果、高摩擦情景、敏感度、消融与账本审计从当前摘要重放；Notebook不会默认重跑这些长期内容。执行Notebook还会在仓库根目录下创建唯一运行目录并写出图像。以上不是本次作者工作的新实验或市场数据复核。
 
 ## 11. 复现与交接边界
 

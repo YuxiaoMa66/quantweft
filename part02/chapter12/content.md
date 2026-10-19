@@ -337,7 +337,7 @@ Spire 2025 年 Form 10-K/A（accession 0000950170-25-030856）把同一 FY2023 �
 
 ### 本读者版的默认运行入口
 
-从[接受I3读者包](../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md)根目录，按其[环境说明](../../editions/zh/README.md)建立环境后运行：
+从接受I3读者包根目录，按其[环境说明](../../editions/zh/README.md)建立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch12_statements.ipynb
@@ -347,7 +347,7 @@ Notebook调用随包共享实现。第12章复算固定转录的Apple/Spire报�
 
 ### 历史课程工作根与原实现
 
-核心指标与版本函数在 [statement_metrics.py](../../src/quant_course/statement_metrics.py)，CLI 和绘图入口在 [ch12_statements.py](../../code/ch12_statements.py)，程序测试在 [test_ch12_statements.py](../../tests/test_ch12_statements.py)，教学 Notebook 在 [ch12_statements.ipynb](../../notebooks/ch12_statements.ipynb)。核心模块封装每项 FinancialFact 的实体、报告期间、币种、单位、accession、修订状态和来源；FCF 函数要求 CFO 与 PP&E 支出行属于相同版本，且拒绝正值的“现金流出”行。特征函数也会检查单位/版本错配、非有限值、财报基本勾稽和 CapEx 符号。
+核心指标与版本函数在 [statement_metrics.py](../../src/quant_course/statement_metrics.py)，CLI 和绘图入口在 [ch12_statements.py](../../code/ch12_statements.py)，程序测试在 test_ch12_statements.py，教学 Notebook 在 [ch12_statements.ipynb](../../notebooks/ch12_statements.ipynb)。核心模块封装每项 FinancialFact 的实体、报告期间、币种、单位、accession、修订状态和来源；FCF 函数要求 CFO 与 PP&E 支出行属于相同版本，且拒绝正值的“现金流出”行。特征函数也会检查单位/版本错配、非有限值、财报基本勾稽和 CapEx 符号。
 
 从项目根目录运行：
 

@@ -457,7 +457,7 @@ The right panel shows component index against training variance share. The first
 
 Chapter 2 already read the Kenneth R. French ten-industry monthly portfolio-return cache. Arranging it as months by industries lets you inspect common-sample covariance and PCA. These are published portfolio-return directions, not individual-stock risk models or executable industry strategies. A return-month label does not establish data availability at that month's closing auction.
 
-The code uses complete common months from January 2010 through December 2019. The inherited executed first-three EVRs are 71.6043%, 7.5198% and 7.1064%; see the [run record](../../../../qa/a2/ch05_snippet_runs.json). They describe this recorded snapshot, fixed window and unstandardized convention. No 2020-or-later rows entered that fit. Nonetheless, the downloaded version may contain historical revisions and is insufficient to establish historical point-in-time (PIT) availability. Chapter 3 explains that version-time distinction.
+The code uses complete common months from January 2010 through December 2019. The inherited executed first-three EVRs are 71.6043%, 7.5198% and 7.1064%; see the run record. They describe this recorded snapshot, fixed window and unstandardized convention. No 2020-or-later rows entered that fit. Nonetheless, the downloaded version may contain historical revisions and is insufficient to establish historical point-in-time (PIT) availability. Chapter 3 explains that version-time distinction.
 
 ```python
 from pathlib import Path

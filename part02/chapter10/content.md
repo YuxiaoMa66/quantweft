@@ -206,7 +206,7 @@ P(y)=\sum_i CF_i(1+y)^{-t_i}.
 
 ### 本读者版的默认运行入口
 
-从[接受I3读者包](../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md)根目录，按其[环境说明](../../editions/zh/README.md)建立独立环境后运行：
+从接受I3读者包根目录，按其[环境说明](../../editions/zh/README.md)建立独立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch10_markets.ipynb
@@ -548,4 +548,4 @@ FX 断言会拒绝缺失或含糊的报价方向；期货只接受“合约 × U
 
 详细 URL、实际读取范围、使用边界及检查日期见 [source_notes.md](source_notes.md)。本章主要引用 SEC/Investor.gov、DTCC、CME Group、OCC、CFTC、ECB、BIS 与 MIT OpenCourseWare 的官方页面。构造数据由本章原创，用来演示算术；它们不是来源页面中的报价或真实观测。特别是美国 T+1、CME 乘数和期货保证金表述，只支持本章点名的规则与合约范围，不应外推至别的市场或产品。
 
-C5新增敏感度桥接使用原创推导和构造现金流；新增读取MIT Part IV课堂转录17:05–19:32的局部近似和风险用途段落（2026-10-13），读取范围与沿用来源证据见[本批来源复核](../../qa/a10/teaching_revision/C5/SOURCE_REVIEW.md)。
+C5新增敏感度桥接使用原创推导和构造现金流；新增读取MIT Part IV课堂转录17:05–19:32的局部近似和风险用途段落（2026-10-13），读取范围与沿用来源证据见本批来源复核。

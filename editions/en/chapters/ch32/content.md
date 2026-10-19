@@ -1,7 +1,7 @@
 # Chapter 32 — Performance Statistics & Inference
 
 > **Thread:** First describe the returns the account has realized. Then interpret the performance evidence in light of sample length, moment conditions, and the complete search record. Finally, use relative out-of-sample ranks to diagnose selection.
-> **Prerequisites:** [Chapter 7](../../../../part01/chapter07/plan.md), [Chapter 11](../../../../part02/chapter11/plan.md), [Chapter 22](../../../../part04/chapter22/plan.md), [Chapter 29](../../../../part05/chapter29/plan.md), and [Chapter 31](../../../../part05/chapter31/plan.md). After this chapter, you will be able to calculate and interpret all 11 descriptive measures; conduct PSR and DSR significance tests and a CSCV probability-of-backtest-overfitting diagnosis; recognize multiple-testing traps; and produce a traceable performance-inference report containing byte hashes and a trial ledger. A hash is not an external timestamp or tamper-proof certification.
+> **Prerequisites:** Chapter 7, Chapter 11, Chapter 22, Chapter 29, and Chapter 31. After this chapter, you will be able to calculate and interpret all 11 descriptive measures; conduct PSR and DSR significance tests and a CSCV probability-of-backtest-overfitting diagnosis; recognize multiple-testing traps; and produce a traceable performance-inference report containing byte hashes and a trial ledger. A hash is not an external timestamp or tamper-proof certification.
 
 ---
 

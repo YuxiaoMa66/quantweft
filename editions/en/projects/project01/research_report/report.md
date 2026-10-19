@@ -120,7 +120,7 @@ Recalculating the same measures over predetermined segments checks whether ranki
 | 2020–2024 | HiTec | 22.04% | 21.84% | 0.920 | 33.60% |
 | 2020–2024 | Enrgy | 12.44% | 37.50% | 0.435 | 51.16% |
 
-NoDur has the highest CAGR in the first five years; HiTec leads in both later segments. Energy has cumulative return of −8.88% and Sharpe of −0.033 in 2015–2019, then positive cumulative return in 2020–2024. In that later period it also has the highest annualized volatility, 37.50%, and maximum drawdown, 51.16%. Rankings, excess returns and path risk therefore change with the interval; the main window does not identify a permanent winner. All windows are retrospective analyses of the downloaded vintage, supplying neither transferable next-period robustness nor out-of-sample evidence. Complete machine-readable means and peak/trough months are in the [window-results CSV](../../../../../projects/project01/qa/metrics_by_window.csv).
+NoDur has the highest CAGR in the first five years; HiTec leads in both later segments. Energy has cumulative return of −8.88% and Sharpe of −0.033 in 2015–2019, then positive cumulative return in 2020–2024. In that later period it also has the highest annualized volatility, 37.50%, and maximum drawdown, 51.16%. Rankings, excess returns and path risk therefore change with the interval; the main window does not identify a permanent winner. All windows are retrospective analyses of the downloaded vintage, supplying neither transferable next-period robustness nor out-of-sample evidence. Complete machine-readable means and peak/trough months are in the window-results CSV.
 
 ## Figures: Read Coordinates without Turning Returns into Prices
 

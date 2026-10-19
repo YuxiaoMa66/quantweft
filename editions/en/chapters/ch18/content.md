@@ -287,7 +287,7 @@ A final percent-unit check: \(h=0.0004\) corresponds to \(\sigma=0.02=2\%\), and
 
 ### Default Standalone Entry Point
 
-From the root directory of the [bundled reader package](../../../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md), create an independent environment following its [environment instructions](../../README.md), then run:
+From the root directory of the bundled reader package, create an independent environment following its [environment instructions](../../README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch18_volatility.ipynb

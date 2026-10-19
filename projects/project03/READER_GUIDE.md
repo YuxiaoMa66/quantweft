@@ -4,7 +4,7 @@
 
 ## 默认入口与输入
 
-在[随书读者包](../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md)根目录，按包内环境说明建立独立环境后运行：
+在随书读者包根目录，按包内环境说明建立独立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py projects/project03/notebooks/project03_portfolio_oos.ipynb

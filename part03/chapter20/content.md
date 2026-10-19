@@ -373,13 +373,13 @@ CAL 上波动 10% 的组合：持有 \(0.10/0.15129=66.1\%\) 的切点基金和 
 
 ### 本读者版的默认运行入口
 
-本样章共享I3已接受读者包的实现。从`outputs/quant_course_reader_candidate_20261014/`读者包根建立环境，再运行：
+本样章共享I3已接受读者包的实现。从克隆后的仓库根目录（`quantweft/`）建立环境，再运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch20_portfolio_theory.ipynb
 ```
 
-默认构造Notebook不读取未随包提供的French数据、不下载数据；新输出写入唯一`runs/`子目录。以下历史CLI、测试和数据路径以课程根为工作目录；其中French路线须自备符合授权与manifest契约的输入，本批未运行。I3可搬移CLI默认写入新UUID的runs目录、拒绝覆盖；已位于读者根时不再执行`cd quant_course`。安装与可选数据说明见[接受读者安装入口](../../editions/zh/README.md)和[可选数据契约](../../editions/zh/OPTIONAL_DATA.md)。构造检查通过不代表真实市场计算已重新执行。
+默认构造Notebook不读取未随包提供的French数据、不下载数据；新输出写入唯一`runs/`子目录。以下历史CLI、测试和数据路径以课程根为工作目录；其中French路线须自备符合授权与manifest契约的输入，本批未运行。I3可搬移CLI默认写入新UUID的runs目录、拒绝覆盖；已位于读者根时不再执行`cd quantweft`。安装与可选数据说明见[接受读者安装入口](../../editions/zh/README.md)和[可选数据契约](../../editions/zh/OPTIONAL_DATA.md)。构造检查通过不代表真实市场计算已重新执行。
 
 
 解析计算由 [src/quant_course/portfolio_theory.py](../../src/quant_course/portfolio_theory.py) 提供四个函数：
@@ -397,7 +397,7 @@ CAL 上波动 10% 的组合：持有 \(0.10/0.15129=66.1\%\) 的切点基金和 
 .venv/bin/python code/ch20_portfolio_theory.py --output-dir /tmp/ch20-out --figure-dir /tmp/ch20-fig
 ```
 
-Notebook [notebooks/ch20_portfolio_theory.ipynb](../../notebooks/ch20_portfolio_theory.ipynb) 调用同一组函数并逐项断言。测试见 [tests/test_ch20_portfolio_theory.py](../../tests/test_ch20_portfolio_theory.py)（解析核心）与 [tests/test_ch20_workflow.py](../../tests/test_ch20_workflow.py)（CLI 与图）。
+Notebook [notebooks/ch20_portfolio_theory.ipynb](../../notebooks/ch20_portfolio_theory.ipynb) 调用同一组函数并逐项断言。测试见 tests/test_ch20_portfolio_theory.py（解析核心）与 tests/test_ch20_workflow.py（CLI 与图）。
 
 下面的代码复算第 8 节全部数字，单位为年化小数：
 

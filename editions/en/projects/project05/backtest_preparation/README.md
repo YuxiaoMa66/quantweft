@@ -34,4 +34,4 @@ The JSON reports the training estimate (the difference between the estimated bet
 
 Unadjusted execution prices for two or more real securities, corporate actions, borrowable quantity and fees, open/VWAP execution prices, and two-leg impact; the number of screening searches within the training segment (using the A5 ledger) and multiple testing; rolling walk-forward and cointegration-breakdown monitoring.
 
-Root agent's final rerun: [current JSON](../../../../../qa/a6/codex_resume/project_interfaces/results_root_final/p04_p05_backtest_interfaces.json). The author's historical default output refuses to overwrite; reruns must specify a new output directory.
+Root agent's final rerun: current JSON. The author's historical default output refuses to overwrite; reruns must specify a new output directory.

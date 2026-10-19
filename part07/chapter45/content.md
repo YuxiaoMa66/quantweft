@@ -5,7 +5,7 @@
 
 > 学习主线：以同一组离线构造交易贯穿数据、时点、执行、对账与恢复五道闸。工程事实、研究设计与真实市场证据分开核对。
 > 主线：构建满足严格点时隔离、幂等重跑、本地事务事件记账、残差对账与故障自愈的确定性离线生产量化系统。
-> 先修：[Chapter 3](../../part01/chapter03/plan.md), [Chapter 29](../../part05/chapter29/plan.md), [Chapter 33](../../part05/chapter33/plan.md), [Chapter 35](../../part06/chapter35/plan.md), [Chapter 38](../../part07/chapter38/plan.md)；完成后你能：设计五重门禁架构，编写具备断点自愈与离散对账能力的确定性离线生产流水线，核验无前视因果时间轴与账本守恒性。
+> 先修：Chapter 3, Chapter 29, Chapter 33, Chapter 35, Chapter 38；完成后你能：设计五重门禁架构，编写具备断点自愈与离散对账能力的确定性离线生产流水线，核验无前视因果时间轴与账本守恒性。
 
 ## 1. 本章目标
 
@@ -1264,7 +1264,7 @@ reconcile_handcalc()
 \color{qink}
 
 
-第9.1节的完整片段就是参考实现。先捕获after_first_fill的受控异常，并立即读取SQLite证明只提交1笔；恢复后断言2笔和目标持仓/NAV。若注入未触发，else分支会失败，避免把正常执行误写成恢复通过。这测试进程内异常后的恢复，不证明实际断电持久性。更强的before_publish、after_publish_before_complete及真实rename失败测试见[本章测试源](../../tests/test_production_pipeline.py)，失败暂存目录保留。
+第9.1节的完整片段就是参考实现。先捕获after_first_fill的受控异常，并立即读取SQLite证明只提交1笔；恢复后断言2笔和目标持仓/NAV。若注入未触发，else分支会失败，避免把正常执行误写成恢复通过。这测试进程内异常后的恢复，不证明实际断电持久性。更强的before_publish、after_publish_before_complete及真实rename失败测试见本章测试源，失败暂存目录保留。
 
 
 ### 45-C01 参考解答

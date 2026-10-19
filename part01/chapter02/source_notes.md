@@ -71,7 +71,7 @@
   核验范围：官方列出 10 Industry Portfolios、原始下载入口、历史版本可能随 CRSP 修订变化，以及缺失码 -99.99 和 -999。支持第 11 节。页面也说明自 2025 年起美国研究收益从 CRSP FIZ 切换为 CIZ，且月收益构造口径变化；本章只报告当前下载文件的自身说明，不把不同历史版本合并为同一口径。
 - [Detail for 10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html)  
   核验范围：月度收益样本期、日/年频率、行业组合形成方法。支持第 11 节。细节以核验日期网页显示为准。
-- 本地数据快照：[下载清单](../../data/manifests/french_industries_2026-10-05.json)、[压缩原文件](../../data/raw/french/2026-10-05/10_Industry_Portfolios_CSV.zip)、[解压原表](../../data/raw/french/2026-10-05/extracted/10_Industry_Portfolios.csv)、[处理后月表](../../data/processed/french_10_industries_monthly.csv)。  
+- 本地数据快照：下载清单、压缩原文件、解压原表、处理后月表。  
   manifest 记录下载时间、频率、原始单位、转换步骤及 SHA-256。核对内容：处理表含 1202 行，范围 192607–202608，10 个行业列，单位为小数简单组合收益；首行 NoDur=0.0144、Durbl=0.1558。压缩文件哈希为 ebd937a4b995d821867aeb956a96f09a666386f38fa82516b7d1767ee4a49ae5；处理文件哈希为 3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950。此处核对了文件元数据、首尾记录、列名和两个首值，未对全部 1202 行作金融经济解释或统计推断。公开可下载不等于可无限制再分发；教学中链接并保存本地快照，公开发布前需重查许可及来源页面。
 
 ## 核验边界与交付校准

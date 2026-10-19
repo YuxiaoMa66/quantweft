@@ -24,7 +24,7 @@
 .venv/bin/python run_notebook.py projects/project05/notebooks/p05_pairs.ipynb
 ```
 
-Notebook把新结果写入包根 `runs/` 的唯一 `RUN_DIR`；runner另在唯一 `runs/execution_...` 目录保留执行副本和 `execution.json`，失败记录也保留。包内[项目读者契约](../../editions/zh/NOTEBOOK_GUIDE.md)解释自备数据与输出边界；仓库读者可从 `outputs/quant_course_reader_candidate_20261014` 进入该包。`notebooks/build_notebook.py` 是改写源Notebook的维护脚本，不是普通读者入口。下面历史CLI/测试命令用于定位历史证据，不是本版教学翻译已重跑的声明。真实数据分支仍须权限、字段、PIT与执行授权闸门。
+Notebook把新结果写入包根 `runs/` 的唯一 `RUN_DIR`；runner另在唯一 `runs/execution_...` 目录保留执行副本和 `execution.json`，失败记录也保留。包内[项目读者契约](../../editions/zh/NOTEBOOK_GUIDE.md)解释自备数据与输出边界；仓库读者可从 `quantweft/` 进入该包。`notebooks/build_notebook.py` 是改写源Notebook的维护脚本，不是普通读者入口。下面历史CLI/测试命令用于定位历史证据，不是本版教学翻译已重跑的声明。真实数据分支仍须权限、字段、PIT与执行授权闸门。
 
 
 研究状态：真实市场项目仍planned；以下保留原任务契约，已有构造方法与结果按各自接受身份阅读。
@@ -67,15 +67,15 @@ Correlation != Cointegration；残差检验用对应临界值；同一测试段�
 
 > A6 回测接口状态（约定构造账本接口经Codex验收；完整项目仍planned）：[backtest_preparation/README.md](backtest_preparation/README.md)。在明确标注的构造可交易配对上演示训练段冻结规则、双腿成交与对账；不使用 French 行业组合做配对 PnL；本项目仍为 planned，完成条件不变。
 
-当前接口复跑证据：[A6验收](../../qa/a6/codex_resume/acceptance.md)。范围仅限构造价格与自融资账本，不等于完整项目。
+当前接口复跑证据：A6验收。范围仅限构造价格与自融资账本，不等于完整项目。
 
 ## A7-C历史构造方法（2026-10-10，c5已限定接受）
 
 本节保留A7-C构造方法的历史身份；c5已限定接受，真实研究仍未完成。
 
-- **真实价格实证：blocked。** 2026-10-10来源决定记录了当时所查方案的许可缺口，未获得适用的机构授权；这不是本版新核验的现行条款或对全部免费源的普遍判断，见 [数据来源决定](../../qa/a7/project05_batch/DATA_SOURCE_DECISION.md)；`data_manifest.json` status=blocked，`--data real` 以退出码3拒绝运行。
+- **真实价格实证：blocked。** 2026-10-10来源决定记录了当时所查方案的许可缺口，未获得适用的机构授权；这不是本版新核验的现行条款或对全部免费源的普遍判断，见 数据来源决定；`data_manifest.json` status=blocked，`--data real` 以退出码3拒绝运行。
 - 预注册：[configs/preregistration_v1.json](configs/preregistration_v1.json)（8对、2010–2025、504/126滚动、EG \(p<0.05\)、\(|z|\) 2/0.5/4、成本与借券为情景），冻结于任何价格下载之前。
-- 代码：[src/p05_pairs.py](src/p05_pairs.py)（数据校验、前向TR、形成与EG、信号、双腿账本、融资/借券/股息/拆股、部分成交、IS、walk-forward）；[src/p05_constructed.py](src/p05_constructed.py)（标注的教学构造面板）；CLI [run_project05.py](run_project05.py)；图 [make_figures.py](make_figures.py)；测试 [tests/test_p05_pairs.py](tests/test_p05_pairs.py)。
+- 代码：[src/p05_pairs.py](src/p05_pairs.py)（数据校验、前向TR、形成与EG、信号、双腿账本、融资/借券/股息/拆股、部分成交、IS、walk-forward）；[src/p05_constructed.py](src/p05_constructed.py)（标注的教学构造面板）；CLI [run_project05.py](run_project05.py)；图 make_figures.py；测试 tests/test_p05_pairs.py。
 - 报告：[research_report/report.md](research_report/report.md)；练习与解答：[exercises.md](exercises.md)、[solutions.md](solutions.md)、[solutions_code.py](solutions_code.py)；历史源Notebook：[notebooks/p05_pairs.ipynb](notebooks/p05_pairs.ipynb)（读者执行上述I3包副本）；主动练习：[loom/main_p05.tex](loom/main_p05.tex)；数据字典：[data_dictionary.md](data_dictionary.md)。
 - 构造面板上的结果只证明实现与方法：账本现金残差约1e−9美元、IS分解与直接金额法一致、未来扰动不改形成期估计；screened组合的正Sharpe来自一次假阳性入选、在252日形成窗下变号；按预注册规则，即使在构造数据上也不能写“支持”。
 

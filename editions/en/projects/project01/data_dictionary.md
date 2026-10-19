@@ -2,7 +2,7 @@
 
 The French source and hash-chain description in this dictionary belongs to the original October 5, 2026 snapshot. The current offline Notebook uses a Seed101 constructed panel of 180 months: column names and decimal units match, but provenance differs. Constructed RF is fixed at 0.001, separate from observed Treasury-bill returns. See the [reader guide](READER_GUIDE.md) for execution.
 
-The historical project reads frozen processed snapshots of the [French 10-industry monthly table](../../../../data/processed/french_10_industries_monthly.csv) and [French three-factor monthly table](../../../../data/processed/french_factors_3_monthly.csv). During historical execution, the [project manifest](../../../../projects/project01/data_manifest.json) is checked against the course source manifests, and shared `load_monthly_snapshot` verifies processed-file SHA-256, fields, finite values, month order, uniqueness and continuity. Hash checks identify the consumed processed bytes; original ZIP and extracted-CSV hashes trace the conversion chain.
+The historical project reads frozen processed snapshots of the French 10-industry monthly table and French three-factor monthly table. During historical execution, the [project manifest](../../../../projects/project01/data_manifest.json) is checked against the course source manifests, and shared `load_monthly_snapshot` verifies processed-file SHA-256, fields, finite values, month order, uniqueness and continuity. Hash checks identify the consumed processed bytes; original ZIP and extracted-CSV hashes trace the conversion chain.
 
 ## Fields
 

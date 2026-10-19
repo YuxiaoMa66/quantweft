@@ -454,7 +454,7 @@ Finally, y's centered sum of squares is 0.001284 and residual sum of squares 0.0
 
 ### Default Entry Point for This Reader Edition
 
-From the [accepted I 3 reader package](../../../../qa/a10/ACCEPTED_COMPLETE_LOCAL_READER_I3.md) root, establish its [documented environment](../../README.md), then run:
+From the accepted I 3 reader package root, establish its [documented environment](../../README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch15_factor_models.ipynb
@@ -470,7 +470,7 @@ I 3 Chapter 15 Notebook cells 4 and 18 still describe differences between offici
 
 ### 9.1 Input Contracts Before Fitting
 
-The historical entry is [ch15_factor_models.py](../../../../code/ch15_factor_models.py), with teaching [ch15_factor_models.ipynb](../../../../notebooks/ch15_factor_models.ipynb). From the course directory run `.venv/bin/python code/ch15_factor_models.py`; it writes a [coefficient CSV](../../../../outputs/ch15_factor_model_coefficients.csv) and [summary JSON with source hashes](../../../../qa/a4/ch15_artifacts_summary.json). These are experiment outputs, not replacement inputs for another regression.
+The historical entry is [ch15_factor_models.py](../../../../code/ch15_factor_models.py), with teaching [ch15_factor_models.ipynb](../../../../notebooks/ch15_factor_models.ipynb). From the course directory run `.venv/bin/python code/ch15_factor_models.py`; it writes a coefficient CSV and summary JSON with source hashes. These are experiment outputs, not replacement inputs for another regression.
 
 The core is `fit_monthly_factor_model()` in [factor_models.py](../../../../src/quant_course/factor_models.py). Asset input is a `Series` and factor input a `DataFrame`, both indexed by identical consecutive, unique, increasing monthly `PeriodIndex` labels. Original French percentages have already been converted to decimals in processed snapshots; do not divide by 100 again. NaN, infinity, booleans, complex values, missing months, and rank deficiency are rejected rather than hidden by zero filling.
 
@@ -544,7 +544,7 @@ SHA-256 hashes of processed industry, FF3, and FF5 files respectively are:
 - `c19770a19a0ac47ad1c29074f57234570aeaa9725212cb4fa8146a2846c52814`
 - `833bd925b49651428781c789c13a6ac7454d4676449e6d119782050046a57eea`
 
-The [industry manifest](../../../../data/manifests/french_industries_2026-10-05.json) and [factor manifest](../../../../data/manifests/french_factors_2026-10-05.json) identify sources, raw and processed files, and hashes. Hashes fix current inputs without proving availability in the corresponding 2010 month. Current snapshots are not historical point-in-time (PIT) data. The official RF source changes from 2024-06; this window ends in 2019 and avoids that switch, but longer experiments must record the boundary.
+The industry manifest and factor manifest identify sources, raw and processed files, and hashes. Hashes fix current inputs without proving availability in the corresponding 2010 month. Current snapshots are not historical point-in-time (PIT) data. The official RF source changes from 2024-06; this window ends in 2019 and avoids that switch, but longer experiments must record the boundary.
 
 ### 11.2 Interpreting Historical Estimates
 
@@ -845,4 +845,4 @@ For deeper risk models, consult classic portfolio-management texts on factor and
 - Kenneth R. French Data Library: [three factors](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_factors.html), [five factors](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_5_factors_2x3.html). Method pages and snapshot vintages are checked separately.
 - statsmodels: [robust covariance API](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.RegressionResults.get_robustcov_results.html). Parameters support reproducibility without replacing statistical assumptions.
 
-Full source-reading limits appear in [source_notes.md](../../../../part03/chapter15/source_notes.md). The [historical root acceptance](../../../../qa/a4/ch15_root_acceptance.md) identifies the prior revision's body, code, Notebook, figures, and same-chapter answers. C7 teaching additions remain subject to independent review by the original lead.
+Full source-reading limits appear in [source_notes.md](../../../../part03/chapter15/source_notes.md). The historical root acceptance identifies the prior revision's body, code, Notebook, figures, and same-chapter answers. C7 teaching additions remain subject to independent review by the original lead.
