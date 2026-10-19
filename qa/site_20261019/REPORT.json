@@ -137,7 +137,8 @@
       }
     },
     "subpath_and_keyboard": "PASS: /quant_course/ loads HTML, CSS, JS and illustration; English initialization; keyboard skip link reaches #main",
-    "design_preflight": "PASS: single teal accent, consistent interactive radius, single theme per page, one hero eyebrow, two-line desktop headline, one-line desktop navigation, responsive layout, no decorative status dots/em dashes/fake results, no framework dependencies. Forms, testimonials, asynchronous content and scroll animations are not part of this static site."
+    "design_preflight": "PASS: single teal accent, consistent interactive radius, single theme per page, one hero eyebrow, two-line desktop headline, one-line desktop navigation, responsive layout, no decorative status dots/em dashes/fake results, no framework dependencies. Forms, testimonials, asynchronous content and scroll animations are not part of this static site.",
+    "source_format": "HTML/CSS/JavaScript formatted for maintenance; browser smoke checks passed again after formatting."
   },
   "retries": [
     "Initial artwork crop exposed cover text; replaced with dedicated text-free illustration",
@@ -155,9 +156,9 @@
     "intended_source": "main:/docs"
   },
   "assets": {
-    "docs/index.html": "cea05417a8b0e83f626070a5d67304666e0f856e3d49b6a13fd8d194c7ddc8b9",
-    "docs/styles.css": "28b62a4a39ee70c62522f40f27d15bccaa6e78c8877d06e11883f57f2e6392fd",
-    "docs/site.js": "cddea2fcb9c07c9993ef9079ed27d8bd6c86b275da1347d17a06ab70c11e1add",
+    "docs/index.html": "fcb23267f86427aa9f502fab515f454d8b25fa387277f9721ae3d3547d874a0c",
+    "docs/styles.css": "7f1713e60c43d16ae4f0c5602138cd19c3de05ccf9cd2f672c1b43aafa865b82",
+    "docs/site.js": "c396b48eb982737fd4a38fcb324e9e2edc8e47919fa34775161a0d0062a2a448",
     "docs/assets/research-surfaces.png": "bbda1073d11b4c35c829dda9ce91dc0a9692877526b57227daae429749df44e3"
   }
 }
