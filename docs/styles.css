@@ -770,3 +770,19 @@ summary {
       transform 0.15s;
   }
 }
+
+.exercise-credit {
+  max-width: 75ch;
+  margin-bottom: 36px;
+}
+.exercise-credit h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.exercise-credit p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.exercise-credit > a {
+  font-size: 14px;
+}

@@ -1,8 +1,8 @@
 # Quantitative finance and systematic research: English entry
 
-Local formal edition (2026-10-19): the complete English body and Loom PDFs for Chapters 1–45, Projects 1–6, and the Capstone have been independently accepted; the shared code, runner, and dependencies sit at this package root and were cold-started in an isolated directory with the commands on this page (scope in [Validation scope](LOCAL_VALIDATION.md)). This is the authorized local formal edition; it has not been published externally, and real-market research has not been run.
+Local formal edition (2026-10-19): the complete English body and workbook PDFs for Chapters 1–45, Projects 1–6, and the Capstone have been independently accepted; the shared code, runner, and dependencies sit at this package root and were cold-started in an isolated directory with the commands on this page (scope in [Validation scope](LOCAL_VALIDATION.md)). This is the authorized local formal edition; it has not been published externally, and real-market research has not been run.
 
-[Full body PDF](body/main.pdf) · [Full Loom PDF](loom/main.pdf)
+[Full body PDF](body/main.pdf) · [Full workbook PDF](workbook/quant-course-workbook-en.pdf)
 
 [Learning route](resources/learning_roadmap.md) · [45-chapter curriculum](resources/syllabus.md) · [45 nodes/120 required edges and 3 background edges](resources/dependency_graph.md)
 
@@ -29,9 +29,9 @@ Local formal edition (2026-10-19): the complete English body and Loom PDFs for C
 | [Project 6: Machine-learning alpha](projects/project06/README.md) | 31, 35, 37–40, 43 | Split by date, fit transforms inside training and compare baselines, net returns and stability. |
 | [Capstone](capstone/README.md) | Methods from all six projects, 33, 45 | 18 report items and reproducible workflow; negative results can pass. Market execution has separate gates. |
 
-## Body, Loom and code
+## Body, workbook and code
 
-The body explains concepts, derivations and choices; Loom provides active recall, exercises and complete same-chapter answers; Notebooks expose actual inputs, steps and outputs. Read the body, attempt Loom independently, then use the Notebook guide. Printed code is not a universal copy-and-run interface: prefer supplied source and Notebooks. There are 45 chapter and nine project Notebooks; Chapters 35–36 are explicit constructed execution and IS examples.
+The body explains concepts, derivations and choices; The workbook provides active recall, exercises and complete same-chapter answers; Notebooks expose actual inputs, steps and outputs. Read the body, attempt the workbook independently, then use the Notebook guide. Printed code is not a universal copy-and-run interface: prefer supplied source and Notebooks. There are 45 chapter and nine project Notebooks; Chapters 35–36 are explicit constructed execution and IS examples.
 
 ## Shared environment and execution
 
@@ -57,3 +57,5 @@ Historical acceptance of Projects 1–3 binds its original version and scope, no
 The Capstone supplies accepted research questions, timing contracts, protocol, dictionary and 18 report guides, plus fixed two-asset offline engineering. Its French monthly configuration is parameter teaching only; the market adapter is unimplemented and target market research/results have not been produced. Engineering PASS does not answer the target net-mean hypothesis. Exposed history cannot become a blind holdout again; historical availability, ingestion and revision clocks remain unknown.
 
 [Optional input contracts](OPTIONAL_DATA.md) · [Validation scope](LOCAL_VALIDATION.md) · [Remaining work](REMAINING_ITEMS.md) · [Actual file structure](FILE_TREE.md)
+
+[Exercise design credit](../../ACKNOWLEDGEMENTS.md): selected design and layout ideas draw on loom-notes, adapted to the course rather than using the template in full.

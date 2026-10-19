@@ -1,6 +1,6 @@
 # Package File Structure
 
-Local formal edition (2026-10-19). The package root holds 842 files; the table counts them by directory. Code, data, configuration, and the runner at the root are shared by both languages; `editions/zh` and `editions/en` hold only each language’s entry documents, reader resources, Notebook language views, and complete PDFs. Chinese project and Capstone documents sit in the root directories; English documents use the same paths under `editions/en/`. Chapter teaching sources (Chinese `part0*/`, English `editions/en/chapters/`) are included; the PDFs are the reader route. Per-file origins and SHA-256 are in the batch manifest.
+Local formal edition (2026-10-19). The original accepted payload holds 842 files; the table counts them by directory. Code, data, configuration, and the runner at the root are shared by both languages; `editions/zh` and `editions/en` hold only each language’s entry documents, reader resources, Notebook language views, and complete PDFs. Chinese project and Capstone documents sit in the root directories; English documents use the same paths under `editions/en/`. Chapter teaching sources (Chinese `part0*/`, English `editions/en/chapters/`) are included; the PDFs are the reader route. Per-file origins and SHA-256 are in the batch manifest.
 
 ```text
   ENVIRONMENT.json                                1
@@ -13,12 +13,12 @@ Local formal edition (2026-10-19). The package root holds 842 files; the table c
   editions/en/capstone                           10
   editions/en/chapters                           45
   editions/en/figures                             1
-  editions/en/loom                                1
+  editions/en/workbook                                1
   editions/en/notebooks                          45
   editions/en/projects                           63
   editions/en/resources                           9
   editions/zh/body                                1
-  editions/zh/loom                                1
+  editions/zh/workbook                                1
   editions/zh/notebooks                          45
   editions/zh/projects                            9
   editions/zh/resources                           9
@@ -51,3 +51,5 @@ Local formal edition (2026-10-19). The package root holds 842 files; the table c
 ```
 
 [Entry](README.md)
+
+The workbook directories use the current name; 842 is the dated accepted-payload count and excludes the added naming and attribution notes.

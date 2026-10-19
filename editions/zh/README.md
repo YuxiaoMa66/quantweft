@@ -1,8 +1,8 @@
 # 量化金融与系统化研究：中文入口
 
-本地正式版（2026-10-19）：45章、项目1–6与Capstone的中文正文与Loom完整PDF已独立接受；共用代码、运行器与依赖在本包根，已在隔离目录按本页命令冷启动核验，范围见[本地验证说明](LOCAL_VALIDATION.md)。本版已获授权作为本地正式版，尚未对外发布；真实市场研究仍未执行。
+本地正式版（2026-10-19）：45章、项目1–6与Capstone的中文正文与练习册完整PDF已独立接受；共用代码、运行器与依赖在本包根，已在隔离目录按本页命令冷启动核验，范围见[本地验证说明](LOCAL_VALIDATION.md)。本版已获授权作为本地正式版，尚未对外发布；真实市场研究仍未执行。
 
-[完整正文PDF](body/main.pdf) · [完整Loom PDF](loom/main.pdf)
+[完整正文PDF](body/main.pdf) · [完整练习册 PDF](workbook/quant-course-workbook-zh.pdf)
 
 [学习路线](resources/learning_roadmap.md) · [45章大纲](resources/syllabus.md) · [45节点/120必须边与3背景边](resources/dependency_graph.md)
 
@@ -29,9 +29,9 @@
 | [Project 6: 机器学习Alpha](../../projects/project06/README.md) | 31, 35, 37–40, 43 | 按日期切分，训练内拟合变换，比较基准、净收益与稳定性。 |
 | [Capstone](../../capstone/README.md) | 六项目方法、33、45 | 18项报告与可复现流程，负结果可通过；市场执行另受许可。 |
 
-## 正文、Loom与代码
+## 正文、练习册与代码
 
-正文解释概念、推导和选择，Loom安排主动回忆、练习与同章完整答案，Notebook展示真实输入、步骤和输出。先读正文，再独立做Loom，最后按导读运行与核对Notebook。章内示例并非全部可从印刷文本直接复制执行；优先配套源码与Notebook。共有45本章节和9本项目Notebook，35–36章为明确构造的执行与IS小例。
+正文解释概念、推导和选择，练习册安排主动回忆、练习与同章完整答案，Notebook展示真实输入、步骤和输出。先读正文，再独立做练习册，最后按导读运行与核对Notebook。章内示例并非全部可从印刷文本直接复制执行；优先配套源码与Notebook。共有45本章节和9本项目Notebook，35–36章为明确构造的执行与IS小例。
 
 ## 共用环境与执行
 
@@ -46,7 +46,7 @@ python3 -m venv .venv
 .venv/bin/python run_notebook.py editions/zh/notebooks/ch35_execution_ledger_constructed.ipynb
 ```
 
-正文与Loom中印出的`run_notebook.py notebooks/chNN_*.ipynb`和`projects/<项目>/notebooks/*.ipynb`命令运行包根的已接受I3 Notebook副本，原样可用；同一Notebook的中文语言视图在`editions/zh/notebooks/`与`editions/zh/projects/`，英文视图在`editions/en/`下同名路径，代码单元相同。项目Notebook的默认路线不读取未分发的French数据。
+正文与练习册中印出的`run_notebook.py notebooks/chNN_*.ipynb`和`projects/<项目>/notebooks/*.ipynb`命令运行包根的已接受I3 Notebook副本，原样可用；同一Notebook的中文语言视图在`editions/zh/notebooks/`与`editions/zh/projects/`，英文视图在`editions/en/`下同名路径，代码单元相同。项目Notebook的默认路线不读取未分发的French数据。
 
 ## 数据与研究结果
 
@@ -57,3 +57,5 @@ Project 1–3的历史接受绑定原版本与范围，不升级为股票级PIT�
 Capstone提供已接受的研究问题、时间契约、完整协议、字典和18项报告导读，以及固定两资产离线构造工程。French月收益配置只作参数教学，市场adapter未实现，目标市场研究与结果尚未产出。工程PASS不回答目标净均值优势。已曝光历史不能恢复为盲holdout，历史available/ingested/revision时钟仍unknown。
 
 [可选输入契约](OPTIONAL_DATA.md) · [本轮验证范围](LOCAL_VALIDATION.md) · [后续事项](REMAINING_ITEMS.md) · [实际文件结构](FILE_TREE.md)
+
+[练习设计来源与致谢](../../ACKNOWLEDGEMENTS.md)：部分设计借鉴 loom-notes 模板，并按本课程需要调整，并非完整套用。

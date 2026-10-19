@@ -37,8 +37,8 @@
         : "量化金融与系统化研究 | Yuxiao Ma";
     document.querySelector('meta[name="description"]').content =
       language === "en"
-        ? "A bilingual quantitative finance course: 45 chapters, six projects, a Capstone, complete textbooks, Loom workbooks, and shared Notebooks."
-        : "量化金融与系统化研究：45章、六个项目与Capstone，中英文教材、Loom练习册与共享Notebook。";
+        ? "A bilingual quantitative finance course: 45 chapters, six projects, a Capstone, complete textbooks, workbooks, and shared Notebooks."
+        : "量化金融与系统化研究：45章、六个项目与Capstone，中英文教材、练习册与共享Notebook。";
     document.querySelectorAll("[data-doc-zh]").forEach((a) => {
       a.href =
         "https://github.com/YuxiaoMa66/quant_course/blob/main/" +

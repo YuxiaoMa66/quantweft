@@ -98,7 +98,7 @@ Real-data work remains blocked; the `data/PIT` state and A10-B are unverified. D
 
 ## Research practice: dates, permutations, coordinates, and cash
 
-These four new teaching exercises connect reading a report with independently checking a research process. They are not new project runs. Their stable IDs are P6-T01–P6-T04; complete answers are in this project's `solutions.md`, with calculation, proof, and code-diagnosis scaffolds in the Loom notes.
+These four new teaching exercises connect reading a report with independently checking a research process. They are not new project runs. Their stable IDs are P6-T01–P6-T04; complete answers are in this project's `solutions.md`, with calculation, proof, and code-diagnosis scaffolds in the workbook notes.
 
 **P6-T01 (Label maturity and date groups).** Fitting occurs after the close information for $D_{10}$ has arrived. A label starts at the close after its signal date and matures five close-to-close intervals later. Candidate signal dates are $D_2,D_3,D_4,D_5$, each with 40 assets. Give each date's execution time, label endpoint, and eligibility for this fit. With no other missing values, how many training rows remain? Why does randomly placing half of each day's assets in validation and half in training fail the date-based validation design even if all labels have matured?
 

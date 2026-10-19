@@ -8,7 +8,7 @@
 
 一套面向希望读懂模型、动手实现并审慎评价研究结果的学习者的双语课程。正文、主动练习与 Notebook 相互配合，把概念、推导和代码连成完整学习路径。
 
-**45 章** / **6 个项目** / **1 个 Capstone** / **中英文完整教材与 Loom 练习册**
+**45 章** / **6 个项目** / **1 个 Capstone** / **中英文完整教材与练习册**
 
 [开始学习](editions/zh/README.md) · [Notebook 导读](editions/zh/NOTEBOOK_GUIDE.md) · [课程大纲](editions/zh/resources/syllabus.md) · [双语网站预览](docs/SITE.md)
 
@@ -17,10 +17,10 @@
 | | 中文 | English |
 | :--- | :--- | :--- |
 | **正文**：概念、推导与完整示例 | [阅读中文教材](editions/zh/body/main.pdf) | [Read the textbook](editions/en/body/main.pdf) |
-| **Loom**：主动回忆、练习与完整答案 | [阅读中文练习册](editions/zh/loom/main.pdf) | [Read the workbook](editions/en/loom/main.pdf) |
+| **练习册**：主动回忆、练习与完整答案 | [阅读中文练习册](editions/zh/workbook/quant-course-workbook-zh.pdf) | [Read the workbook](editions/en/workbook/quant-course-workbook-en.pdf) |
 | **学习入口**：先修关系与项目安排 | [中文学习指南](editions/zh/README.md) | [English learning guide](editions/en/README.md) |
 
-建议先读正文，独立完成 Loom，再运行 Notebook 核对计算与输出。完整教材以 PDF 为阅读入口；仓库不包含原编辑工作区的完整 PDF 排版构建链。
+建议先读正文，独立完成练习册，再运行 Notebook 核对计算与输出。完整教材以 PDF 为阅读入口；仓库不包含原编辑工作区的完整 PDF 排版构建链。
 
 ## 这门课如何展开
 
@@ -74,3 +74,7 @@ python3 -m venv .venv
 默认路线使用构造数据，不分发 French 市场数据，也未执行真实市场研究。历史结果与未解决的证据缺口按原记录保留，详见[后续事项](editions/zh/REMAINING_ITEMS.md)与[可选数据契约](editions/zh/OPTIONAL_DATA.md)。
 
 作者：**Yuxiao Ma**。当前为私有仓库，未选定开源许可；仓库访问权限不构成再分发授权。见[仓库范围与来源](REPOSITORY_STATUS.md)。
+
+## 练习设计来源
+
+练习册的部分练习设计与版式借鉴了 [loom-notes](https://github.com/Polaris-Aeterna/loom-notes) 的 LaTeX 模板，并按课程目标选择和调整，并非完整套用。详见[来源与致谢](ACKNOWLEDGEMENTS.md)。

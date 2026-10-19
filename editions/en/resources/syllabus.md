@@ -1,8 +1,8 @@
 # Curriculum: quantitative finance and systematic research
 
-Local formal edition (2026-10-19): the complete English body and Loom PDFs for Chapters 1–45, Projects 1–6, and the Capstone have been independently accepted; the shared code, runner, and dependencies sit at this package root and were cold-started in an isolated directory with the commands on the [entry page](../README.md) (scope in [Validation scope](../LOCAL_VALIDATION.md)). This is the authorized local formal edition; it has not been published externally, and real-market research has not been run.
+Local formal edition (2026-10-19): the complete English body and workbook PDFs for Chapters 1–45, Projects 1–6, and the Capstone have been independently accepted; the shared code, runner, and dependencies sit at this package root and were cold-started in an isolated directory with the commands on the [entry page](../README.md) (scope in [Validation scope](../LOCAL_VALIDATION.md)). This is the authorized local formal edition; it has not been published externally, and real-market research has not been run.
 
-The 45 rows preserve curriculum coverage, outcomes, examples and levels: 33 Must Know, 8 Should Know and 4 Advanced. Optional describes a route choice rather than permission to omit a core definition. Read the body for explanation and derivation, attempt Loom recall and exercises before the complete same-chapter answers, then use each Notebook in its stated mode. Market-research completion is a separate question.
+The 45 rows preserve curriculum coverage, outcomes, examples and levels: 33 Must Know, 8 Should Know and 4 Advanced. Optional describes a route choice rather than permission to omit a core definition. Read the body for explanation and derivation, attempt Workbook recall and exercises before the complete same-chapter answers, then use each Notebook in its stated mode. Market-research completion is a separate question.
 
 
 ## The quant landscape

@@ -2,7 +2,7 @@
 
 Author / 作者：Yuxiao Ma
 
-This private repository starts from the accepted local formal bilingual edition of 2026-10-19 (BIL23B5 PDFs; unchanged C3 execution layer). Start reading at [README.md](README.md). It contains 45 chapters, six projects, a Capstone, both languages of the complete body and Loom PDFs, editable course Markdown, bilingual Notebook views, shared code/tests, and the offline companions.
+This private repository starts from the accepted local formal bilingual edition of 2026-10-19 (BIL23B5 PDFs; unchanged C3 execution layer). Start reading at [README.md](README.md). It contains 45 chapters, six projects, a Capstone, both languages of the complete body and workbook PDFs, editable course Markdown, bilingual Notebook views, shared code/tests, and the offline companions.
 
 本仓库的首个版本逐字节继承已接受的本地正式双语包842文件。四本PDF、Markdown、代码和Notebook保持原字节；新增的仓库说明、忽略规则及来源清单单独记录。教材路线以完整PDF为准；源Markdown与PDF的既有版本说明及历史证据限度沿用原记录。
 
@@ -29,3 +29,15 @@ python3 provenance/verify_snapshot.py
 ```
 
 For later intentional edits, keep the original manifest as a dated baseline; record the change rather than rewriting historical acceptance claims. `runs/`, local environments and optional market data remain ignored.
+
+## 练习册名称与来源修订 / Workbook naming and attribution
+
+2026-10-19：读者入口中的 Loom 改称“练习册 / Workbook”；完整练习册 PDF 迁移至 `editions/zh/workbook/quant-course-workbook-zh.pdf` 与 `editions/en/workbook/quant-course-workbook-en.pdf`，PDF 原字节不变。README、网站与当前学习入口同步更新，练习设计与版式的部分上游借鉴详见 [来源与致谢](ACKNOWLEDGEMENTS.md)。这不是完整采用 Loom 模板，也不改变课程整体的许可范围。
+
+Reader-facing names are now **Workbook**. The two PDFs have descriptive filenames and unchanged bytes. Current navigation and the website use the new paths; [Attribution](ACKNOWLEDGEMENTS.md) explains the selective influence of loom-notes. Technical source paths needed by embedded PDF links, original acceptance records, the original source manifest, and legacy PDF prose remain unchanged.
+
+The original `verify_snapshot.py` checks the initial dated layout and is expected to report intentional changes. To verify the current naming revision, use:
+
+```sh
+python3 provenance/verify_workbook_revision.py
+```

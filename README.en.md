@@ -8,7 +8,7 @@ From mathematical and financial foundations to reproducible systematic research.
 
 A bilingual course for learners who want to understand models, implement them, and evaluate research carefully. The textbook, active exercises, and Notebooks connect concepts, derivations, and code.
 
-**45 chapters** / **6 projects** / **1 Capstone** / **Complete textbooks and Loom workbooks in Chinese and English**
+**45 chapters** / **6 projects** / **1 Capstone** / **Complete textbooks and workbooks in Chinese and English**
 
 [Start learning](editions/en/README.md) · [Notebook guide](editions/en/NOTEBOOK_GUIDE.md) · [Curriculum](editions/en/resources/syllabus.md) · [Website preview](docs/SITE.md)
 
@@ -17,10 +17,10 @@ A bilingual course for learners who want to understand models, implement them, a
 | | English | 中文 |
 | :--- | :--- | :--- |
 | **Textbook**: concepts, derivations, and worked examples | [Read the textbook](editions/en/body/main.pdf) | [阅读中文教材](editions/zh/body/main.pdf) |
-| **Loom**: active recall, exercises, and complete answers | [Read the workbook](editions/en/loom/main.pdf) | [阅读中文练习册](editions/zh/loom/main.pdf) |
+| **Workbook**: active recall, exercises, and complete answers | [Read the workbook](editions/en/workbook/quant-course-workbook-en.pdf) | [阅读中文练习册](editions/zh/workbook/quant-course-workbook-zh.pdf) |
 | **Learning guide**: prerequisites and project sequence | [English learning guide](editions/en/README.md) | [中文学习指南](editions/zh/README.md) |
 
-Read the textbook, attempt Loom independently, then run the Notebooks to check calculations and outputs. Use the PDFs for complete course reading; this repository does not include the editorial workspace's full PDF layout toolchain.
+Read the textbook, attempt the workbook independently, then run the Notebooks to check calculations and outputs. Use the PDFs for complete course reading; this repository does not include the editorial workspace's full PDF layout toolchain.
 
 ## Follow the research process
 
@@ -74,3 +74,7 @@ This repository inherits the accepted local formal bilingual edition of October 
 The default route uses constructed data. French market data are not distributed, and real-market research has not been run. Historical results and unresolved evidence gaps retain their recorded scope; see [Remaining work](editions/en/REMAINING_ITEMS.md) and [Optional data contracts](editions/en/OPTIONAL_DATA.md).
 
 By **Yuxiao Ma**. This repository is currently private and has no selected open-source license. Access does not grant redistribution rights. See [Repository scope and provenance](REPOSITORY_STATUS.md).
+
+## Exercise design credit
+
+Parts of the workbook’s exercise design and layout draw on the [loom-notes](https://github.com/Polaris-Aeterna/loom-notes) LaTeX template, selectively adapted to the course. The template is not used in full. See [Attribution and acknowledgements](ACKNOWLEDGEMENTS.md).

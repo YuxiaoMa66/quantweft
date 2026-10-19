@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-19",
+  "scope": "Reader-facing naming and selective template-design attribution only; not a new teaching or research validation",
+  "baseline_sha256": "7b3ac9416e40dc72ab46e9d47caa444e4c88848a5190d533268aab30c919e2d5",
+  "path_map": {
+    "editions/zh/loom/main.pdf": "editions/zh/workbook/quant-course-workbook-zh.pdf",
+    "editions/en/loom/main.pdf": "editions/en/workbook/quant-course-workbook-en.pdf"
+  },
+  "intentional_document_changes": {
+    "README.md": {
+      "before_sha256": "7c1b1c6930545a575b9443389f56ba5c952c093eac5b601c1ecaca44d542980f",
+      "sha256": "6bf6c786bc94480248ad764cb36a01619c58f3ec38e23b8f3542fcb21fbd0e2c"
+    },
+    "editions/en/FILE_TREE.md": {
+      "before_sha256": "2a124ab613aa19938095d70fef0ae45689c2d57f33d25932c5558bea8b305b72",
+      "sha256": "02b8c832b18488eda788961eff2cbbb8fb6580aaee0c932301971b73cfbda2a8"
+    },
+    "editions/en/LOCAL_VALIDATION.md": {
+      "before_sha256": "506490d4075d47555a70108443f1127fabf2f89718ed01f5670b092193115585",
+      "sha256": "c4c348c43d7dcd7dc24bcae86b6fb252c93d3d138c7185435f0ecb0a4ddbe5b0"
+    },
+    "editions/en/NOTEBOOK_GUIDE.md": {
+      "before_sha256": "666a68ad14b421b8a54ed1855157c6e86c416740d1f17fddd06eeafa4f50963f",
+      "sha256": "2ce169ea364e2eb90e92009da18ccd64cf53f1eb2c4b5ab2849ee02aa5e631cf"
+    },
+    "editions/en/README.md": {
+      "before_sha256": "cd6b5429745c21f50ac067fb2cf9d2e64d02ee6b953ac47f0e6f938c4abd020b",
+      "sha256": "ee83e62853ade4b8c4b47bf4d34c63189cab74bc017ed2c081da832acdc7357a"
+    },
+    "editions/en/projects/project06/README.md": {
+      "before_sha256": "7dd61f840f96a5b60c1b83d09082bcc296bb3bf74952138de43e9594ac4488cb",
+      "sha256": "b75fa81999f2ae927f578f6afa88ad873b1b2940498f93771b42fe7242362cf7"
+    },
+    "editions/en/projects/project06/V2_TREES.md": {
+      "before_sha256": "1bf6be896ac8e3809faaa9274922af81cb4479c8ba108a012ec90350757b53d6",
+      "sha256": "a670e63622a06ad36b6b1e9995ccc12ab48f7ee0b5abbdf1da1dda651969b08f"
+    },
+    "editions/en/projects/project06/solutions.md": {
+      "before_sha256": "0e553107bf73d5c46e97c37684abe1bdf4885c41555fae963153312cdf836215",
+      "sha256": "e127f0515e0129f3dd5655ed3764ac6834d9d845ea135ebe9b513df335e44788"
+    },
+    "editions/en/resources/syllabus.md": {
+      "before_sha256": "366cb535f98b746508fa378d9f0d69065038a23388adaac0f6e1be12a68462e6",
+      "sha256": "6329320d306984317c0dea7ecca54a9eb446de11774a1ec4a94f6f9c84fe9bda"
+    },
+    "editions/zh/FILE_TREE.md": {
+      "before_sha256": "5675f63ec9b1ec2e971b657b5df7cd7129d101630e415aad927d7313a162e2d8",
+      "sha256": "9e0b22e6487f8a9ae8b0de49006dc8fe24d5fe731cb1769a7682aed39a3c64dd"
+    },
+    "editions/zh/LOCAL_VALIDATION.md": {
+      "before_sha256": "cc27b12c3cde0da694ff300829418ad769eef2f18b203a46aba4bcae4d277300",
+      "sha256": "3c586e8a6c769b763c7ed67cfb27690c8fcd6fc9927ad71fad28c30b879eab47"
+    },
+    "editions/zh/NOTEBOOK_GUIDE.md": {
+      "before_sha256": "367a935ae42de93b6aa3ed2628f8b88bd196d01c21d94e317b344c3edf771452",
+      "sha256": "5e6f8551c617516092af2247daff47c814a8e924c50e090235bf45696e863d9f"
+    },
+    "editions/zh/README.md": {
+      "before_sha256": "b6bd1dcf0af4a1fdc44bb4df1d827ac67bb15f63004cacb6ed48c2d7fe65f7d9",
+      "sha256": "58a9f119eb17d932725bc1f6f2dfc04257437468be135ae5373dfbb33f353f96"
+    },
+    "editions/zh/resources/syllabus.md": {
+      "before_sha256": "12130be67076af9ee7c72cf6fc820428ca3cf37462858f939efbdd1e62682766",
+      "sha256": "9a79f339ccbf929598096fbf60676cce63489473e0b824c4f046540e56e0cd5e"
+    },
+    "projects/project06/README.md": {
+      "before_sha256": "2e62f7d474c8cd4d7f83f31be814ba48dfd1c071f18b1c1c460f60d5ff6fc60f",
+      "sha256": "da09f45184c1853ea175031c94dc42bdae925ab77df153da73df2234c02f3b92"
+    },
+    "projects/project06/V2_TREES.md": {
+      "before_sha256": "de6027a448c0dcf765f3f91468e950c3a3dc05c75e8cce5ee722a127b6718988",
+      "sha256": "d83de0b059c9f4b726415101e6aac573005d98912652fc2393894adf47dbcc67"
+    },
+    "projects/project06/solutions.md": {
+      "before_sha256": "8686a51fb9b72c6bb4471b6b635f0993d0fe31166c8c32110c8351a91eceac3c",
+      "sha256": "5c3a7f9a5e0ad910a9b52048739b78aa70ab754771f8dc25666915a12137b6be"
+    }
+  },
+  "additional_current_files": {
+    "ACKNOWLEDGEMENTS.md": "788aaf1753ae8953c9407b5d448779cb6761cfdcfb248e1f4db4e384a0a6eb0c",
+    "workbook/README.md": "f68318e0359be000e2482f481e10d60c6f5290c36efe44853837ab81e36e549b",
+    "loom/README.md": "24015b279bc005bd90df4c48f3eeeb151f672ec81dffeb321f7cd6fd6ee0c022",
+    "third_party/loom-notes/LICENSE": "37749a5538cae7a4b593db42b5c3948387e094ccca77fbf8d09c99eb4e57a9ef",
+    "third_party/loom-notes/ORIGIN.json": "7d2565d750db5f364f0f2e3643f6cc22fc821b538be39503393138613dcf6717",
+    "provenance/verify_workbook_revision.py": "266e77e6c26e89230dca2c0fe09fcd873fbd7b7b4249bfe450414bd5dc0d56a1",
+    "README.en.md": "d8f76e82057b9bd3ff4a88120e64ead5f35daaa49cb595ca971ef76fe2af25dc",
+    "REPOSITORY_STATUS.md": "a15b6f13ffdaf8a8772007f0c5585dd4f2acfb9a8899274a64fd413d1132b49b",
+    "docs/index.html": "0b30c72ffe08ea63735362e9cf9fa007f6c60d3a773e4d99e5b8a7bbe145b3e4",
+    "docs/site.js": "9b9285503e3a5ded1cf1df290978ecaa032941871ea2190d5f15db792f5cea4b",
+    "docs/styles.css": "1a7bab321e87db7d9a0f7cb8386db156d67ffe913371d08faf189ac1bc9cf287"
+  },
+  "pdf_bytes": "All four accepted PDFs unchanged; two filenames and directories changed",
+  "compatibility": "Technical project source paths and PDF internal terminology retained; root loom/README.md is a compatibility pointer",
+  "upstream": "https://github.com/Polaris-Aeterna/loom-notes/tree/290fa4042d33a7dd11f290eb39fba7f5d5b71369"
+}

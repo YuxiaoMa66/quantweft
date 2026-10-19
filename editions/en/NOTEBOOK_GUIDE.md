@@ -1,6 +1,6 @@
 # Notebook guide
 
-Local formal edition (2026-10-19): the complete English body and Loom PDFs for Chapters 1–45, Projects 1–6, and the Capstone have been independently accepted; the shared code, runner, and dependencies sit at this package root and were cold-started in an isolated directory with the commands on this page (scope in [Validation scope](LOCAL_VALIDATION.md)). This is the authorized local formal edition; it has not been published externally, and real-market research has not been run.
+Local formal edition (2026-10-19): the complete English body and workbook PDFs for Chapters 1–45, Projects 1–6, and the Capstone have been independently accepted; the shared code, runner, and dependencies sit at this package root and were cold-started in an isolated directory with the commands on this page (scope in [Validation scope](LOCAL_VALIDATION.md)). This is the authorized local formal edition; it has not been published externally, and real-market research has not been run.
 
 Create one shared environment at the final package root. Language views change Markdown only: 54 logical implementations do not become 108 numerical implementations. The project declares Python≥3.12; its lock binds the historically checked macOS arm64 / CPython 3.14.7 environment, not every 3.12+ platform. Installation may require a network; default teaching execution is offline. The commands on this page were run as written in a fresh environment in an isolated directory; results are in [Validation scope](LOCAL_VALIDATION.md).
 
