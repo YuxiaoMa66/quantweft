@@ -2,7 +2,7 @@
 
 All data are CONSTRUCTED teaching data; nothing here is market evidence.
 
-scikit-learn 1.9.1 objectives (verified from the installed docstrings, see part07/chapter39/source_notes.md):
+scikit-learn 1.9.1 objectives (verified from the installed docstrings, see course/zh/chapters/ch39/source_notes.md):
   Ridge       ||y - Xw||^2 + alpha ||w||_2^2
   Lasso       (1/(2n)) ||y - Xw||^2 + alpha ||w||_1
   ElasticNet  (1/(2n)) ||y - Xw||^2 + alpha*l1_ratio ||w||_1 + 0.5*alpha*(1-l1_ratio) ||w||_2^2

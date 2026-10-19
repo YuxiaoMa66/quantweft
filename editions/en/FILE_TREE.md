@@ -1,6 +1,6 @@
 # Package File Structure
 
-Local formal edition (2026-10-19). The original accepted payload holds 842 files; the table counts them by directory. Code, data, configuration, and the runner at the root are shared by both languages; `editions/zh` and `editions/en` hold only each language’s entry documents, reader resources, Notebook language views, and complete PDFs. Chinese project and Capstone documents sit in the root directories; English documents use the same paths under `editions/en/`. Chapter teaching sources (Chinese `part0*/`, English `editions/en/chapters/`) are included; the PDFs are the reader route. Per-file origins and SHA-256 are in the batch manifest.
+Local formal edition (2026-10-19). The original accepted payload holds 842 files; the table counts them by directory. Code, data, configuration, and the runner at the root are shared by both languages; `editions/zh` and `editions/en` hold only each language’s entry documents, reader resources, Notebook language views, and complete PDFs. Chinese project and Capstone documents sit in the root directories; English documents use the same paths under `editions/en/`. Chapter teaching sources (Chinese `course/zh/chapters/`, English `course/en/chapters/`) are included; the PDFs are the reader route. Per-file origins and SHA-256 are in the batch manifest.
 
 ```text
   docs/maintenance/ENVIRONMENT.json                                1
@@ -11,7 +11,8 @@ Local formal edition (2026-10-19). The original accepted payload holds 842 files
   editions                                       17
   editions/en/body                                1
   editions/en/capstone                           10
-  editions/en/chapters                           45
+  course/zh/chapters                           150
+  course/en/chapters                           45
   editions/en/figures                             1
   editions/en/workbook                                1
   editions/en/notebooks                          45
@@ -25,14 +26,6 @@ Local formal edition (2026-10-19). The original accepted payload holds 842 files
   figures                                       105
   fixtures                                       27
   notebooks                                      45
-  part00                                          2
-  part01                                         16
-  part02                                          8
-  part03                                         16
-  part04                                         14
-  part05                                         10
-  part06                                         13
-  part07                                         71
   print_examples                                  8
   projects                                        2
   projects/project01                             12
@@ -53,3 +46,5 @@ Local formal edition (2026-10-19). The original accepted payload holds 842 files
 [Entry](README.md)
 
 The workbook directories use the current name; 842 is the dated accepted-payload count and excludes the added naming and attribution notes.
+
+See the [bilingual chapter index](../../course/README.md) for current chapter paths. The table groups the original accepted payload; new navigation and maintenance documents are additional repository files.

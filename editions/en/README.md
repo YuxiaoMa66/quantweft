@@ -8,6 +8,8 @@ Local formal edition (2026-10-19): the complete English body and workbook PDFs f
 
 [Full glossary](resources/glossary.md) · [Notation and units](resources/notation.md) · [331 source keys](resources/references.md) · [Notebook guide](NOTEBOOK_GUIDE.md)
 
+[Read chapter Markdown: bilingual chapter index](../../course/README.md)
+
 ## Suggested sequence
 
 1. Chapters 1–3 establish the lifecycle, Python and time-data contracts. Preview return definitions in Chapter 11 and the market structure needed from Chapter 10.

@@ -1,6 +1,6 @@
 """Chapter 40 (Tree-Based Models): hand examples, the constructed running case and the figures.
 
-    .venv/bin/python code/ch40_tree_models.py --out <new dir> [--figures-dir part07/chapter40/figures]
+    .venv/bin/python code/ch40_tree_models.py --out <new dir> [--figures-dir course/zh/chapters/ch40/figures]
 
 Every number is CONSTRUCTED teaching data. Registered before the first run (A8-B DECISION_LOG D08):
 interaction panel = tree_models.simulate_interaction_panel(n_assets=40, n_days=1260, n_noise=20, signal_loading=4e-4,

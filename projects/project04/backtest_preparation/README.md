@@ -4,7 +4,7 @@
 
 ## 阅读顺序
 
-先读[第29章账本](../../../part05/chapter29/content.md)，再看本页与A6接口源码。随后进入[成本与执行实验](../cost_execution_lab/README.md)，并从[中文成本Notebook](../../../editions/zh/projects/project04/cost_execution_lab/cost_execution_lab.ipynb)或[English cost Notebook](../../../editions/en/projects/project04/cost_execution_lab/cost_execution_lab.ipynb)阅读订单切片、部分成交和费用。Notebook只新算固定父单及部分/零成交小例；其余walk-forward、敏感度、消融和账本审计为已接受摘要的展示。
+先读[第29章账本](../../../course/zh/chapters/ch29/content.md)，再看本页与A6接口源码。随后进入[成本与执行实验](../cost_execution_lab/README.md)，并从[中文成本Notebook](../../../editions/zh/projects/project04/cost_execution_lab/cost_execution_lab.ipynb)或[English cost Notebook](../../../editions/en/projects/project04/cost_execution_lab/cost_execution_lab.ipynb)阅读订单切片、部分成交和费用。Notebook只新算固定父单及部分/零成交小例；其余walk-forward、敏感度、消融和账本审计为已接受摘要的展示。
 
 ## A6 的输入、价格和时钟
 

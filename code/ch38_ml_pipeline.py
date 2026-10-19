@@ -5,7 +5,7 @@ nothing here is market evidence. Frequency: trading days. signal_time = close of
 close of D[k+lag]; label_end = label_available_at = close of D[k+lag+h]. NaN policy: see ml_pipeline.
 
 Run:  .venv/bin/python code/ch38_ml_pipeline.py --out build/batches/A8-A/r1/runs/<run-id>/cli
-Writes ch38_results.json to --out (refuses to overwrite) and figures + a JSON copy to part07/chapter38/figures.
+Writes ch38_results.json to --out (refuses to overwrite) and figures + a JSON copy to course/zh/chapters/ch38/figures.
 
 Sections 3 deliberately run *wrong* procedures (shuffled K-fold, full-sample feature selection) to measure
 how much they flatter a model; those code paths are labelled WRONG and never used for model selection.

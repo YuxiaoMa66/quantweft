@@ -1,7 +1,7 @@
 """Chapter 41 (Unsupervised Learning): PCA hand checks, train-only PCA vs full-sample PCA, explained variance vs
 prediction, k-means and HMM state labels, and the regime-timing comparison with lagged execution and costs.
 
-    .venv/bin/python code/ch41_unsupervised.py --out <new dir> [--figures-dir part07/chapter41/figures]
+    .venv/bin/python code/ch41_unsupervised.py --out <new dir> [--figures-dir course/zh/chapters/ch41/figures]
 
 Every number is CONSTRUCTED teaching data. Registered before the first run (A8-B DECISION_LOG D10):
 factor panel = simulate_factor_panel(1000 days, 50 assets, factor_vols=(0.010, 0.005, 0.003), idio_vol=0.015,

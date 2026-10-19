@@ -96,55 +96,55 @@ sources.json保存键、标题、URL、类别、核验日期及边界。search_*
 
 | 键 | 来源 | 对应章 | 阅读范围记录 |
 |---|---|---|---|
-| CH04_DOC_01 | [MIT 18.01SC：Derivative as Rate of Change，Session 3](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-3-derivative-as-rate-of-change/) | 4 | [来源记录](part01/chapter04/source_notes.md) |
-| CH04_DOC_02 | [MIT 18.01SC：Limits and Continuity，Session 4](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-4-limits-and-continuity/) | 4 | [来源记录](part01/chapter04/source_notes.md) |
-| CH04_DOC_03 | [MIT 18.01SC：The Fundamental Theorem of Calculus，Session 48](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/unit-3-the-definite-integral-and-its-applications/part-a-definition-of-the-definite-integral-and-first-fundamental-theorem/session-48-the-fundamental-theorem-of-calculus/) | 4 | [来源记录](part01/chapter04/source_notes.md) |
-| CH04_DOC_04 | [MIT 18.01SC：Taylor’s Formula 视频资源](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-2-taylors-formula/) | 4 | [来源记录](part01/chapter04/source_notes.md) |
-| CH04_DOC_05 | [MIT 18.02SC：Partial Derivatives 课程单元](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/) | 4 | [来源记录](part01/chapter04/source_notes.md) |
-| CH04_DOC_06 | [MIT 18.02SC：Approximation Formula，Session 27](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-a-functions-of-two-variables-tangent-approximation-and-optimization/session-27-approximation-formula/) | 4 | [来源记录](part01/chapter04/source_notes.md) |
-| CH04_DOC_07 | [MIT 18.02SC：Optimization Problems，Session 28](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-a-functions-of-two-variables-tangent-approximation-and-optimization/session-28-optimization-problems/) | 4 | [来源记录](part01/chapter04/source_notes.md) |
-| CH04_DOC_08 | [MIT 18.02SC：Second Derivative Test，Session 30](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-a-functions-of-two-variables-tangent-approximation-and-optimization/session-30-second-derivative-test/) | 4 | [来源记录](part01/chapter04/source_notes.md) |
-| CH04_DOC_09 | [MIT 18.02SC：Chain Rule、Gradient and Directional Derivatives 单元](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-b-chain-rule-gradient-and-directional-derivatives/) | 4 | [来源记录](part01/chapter04/source_notes.md) |
-| CH04_DOC_10 | [MIT 18.02SC：Directional Derivatives，Session 38](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-b-chain-rule-gradient-and-directional-derivatives/session-38-directional-derivatives/) | 4 | [来源记录](part01/chapter04/source_notes.md) |
-| CH04_DOC_11 | [NumPy：numpy.gradient](https://numpy.org/doc/stable/reference/generated/numpy.gradient.html) | 4 | [来源记录](part01/chapter04/source_notes.md) |
-| CH04_DOC_13 | [Boyd 与 Vandenberghe：《Convex Optimization》PDF](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf) | 4 | [来源记录](part01/chapter04/source_notes.md) |
-| CH06_DOC_02 | [Probability Models and Axioms](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l01/) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_03 | [Conditioning and Bayes’ Rule](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l02/) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_04 | [Random Variables](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l05/) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_05 | [Review](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l06/) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_06 | [Continuous Random Variables](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l08/) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_07 | [Bayes Variations and Derived Distributions](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l10/) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_08 | [Conditional Expectations](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l12/) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_09 | [Markov Chains II](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/lecture-17-video-1/) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_10 | [Law of Large Numbers, Convergence](https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/resources/lecture-3-law-of-large-numbers-convergence/) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_11 | [Poisson: The Perfect Arrival Process](https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/resources/lecture-4-poisson-the-perfect-arrival-process/) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_12 | [Poisson Processes](https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/3a19ce0e02d0008877351bfa24f3716a_MIT6_262S11_chap02.pdf) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_13 | [Introduction to Brownian Motion](https://ocw.mit.edu/courses/15-070j-advanced-stochastic-processes-fall-2013/6774cb366bae388320c0c8a251ee8daf_MIT15_070JF13_Lec6.pdf) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_14 | [Stochastic Processes II](https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/resources/lecture-17-stochastic-processes-ii/) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_15 | [Random Generator](https://numpy.org/doc/stable/reference/random/generator.html) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_16 | [Generator.binomial](https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.binomial.html) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_17 | [Generator.normal](https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.normal.html) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_18 | [Generator.poisson](https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.poisson.html) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_19 | [scipy.stats.binom](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binom.html) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_20 | [scipy.stats.norm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_21 | [scipy.stats.lognorm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.lognorm.html) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_22 | [scipy.stats.poisson](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.poisson.html) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH06_DOC_23 | [scipy.stats.t](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html) | 6 | [来源记录](part01/chapter06/source_notes.md) |
-| CH08_DOC_01 | [statsmodels OLS API](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html) | 8 | [来源记录](part01/chapter08/source_notes.md) |
-| CH08_DOC_02 | [statsmodels OLS results](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLSResults.html) | 8 | [来源记录](part01/chapter08/source_notes.md) |
-| CH08_DOC_03 | [statsmodels robust covariance API](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLSResults.get_robustcov_results.html) | 8 | [来源记录](part01/chapter08/source_notes.md) |
-| CH08_DOC_04 | [scikit-learn `StandardScaler`](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html) | 8 | [来源记录](part01/chapter08/source_notes.md) |
-| CH08_DOC_05 | [Pipeline](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html) | 8 | [来源记录](part01/chapter08/source_notes.md) |
-| CH08_DOC_08 | [Ridge](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html) | 8 | [来源记录](part01/chapter08/source_notes.md) |
-| CH08_DOC_09 | [Lasso](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html) | 8 | [来源记录](part01/chapter08/source_notes.md) |
-| CH08_DOC_10 | [ElasticNet guide](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html) | 8 | [来源记录](part01/chapter08/source_notes.md) |
-| CH08_DOC_11 | [White (1980): A Heteroskedasticity-Consistent Covariance Matrix Estimator and a Direct Test for Heteroskedasticity](https://doi.org/10.2307/1912934) | 8 | [来源记录](part01/chapter08/source_notes.md) |
-| CH08_DOC_12 | [MacKinnon and White (1985): Some Heteroskedasticity-Consistent Covariance Matrix Estimators with Improved Finite Sample Properties](https://doi.org/10.1016/0304-4076(85)90158-7) | 8 | [来源记录](part01/chapter08/source_notes.md) |
-| CH08_DOC_13 | [Newey and West (1987): A Simple, Positive Semi-definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix](https://www.nber.org/papers/t0055) | 8 | [来源记录](part01/chapter08/source_notes.md) |
-| CH08_DOC_14 | [Sharpe (1964): Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk](https://doi.org/10.1111/j.1540-6261.1964.tb02865.x) | 8 | [来源记录](part01/chapter08/source_notes.md) |
-| CH08_DOC_15 | [Hoerl and Kennard (1970): Ridge regression — publisher record](https://doi.org/10.1080/00401706.1970.10488634) | 8 | [来源记录](part01/chapter08/source_notes.md) |
-| CH08_DOC_16 | [Tibshirani (1996): Lasso — publisher record](https://doi.org/10.1111/j.2517-6161.1996.tb02080.x) | 8 | [来源记录](part01/chapter08/source_notes.md) |
-| CH08_DOC_17 | [Zou and Hastie (2005): Elastic Net — publisher record](https://doi.org/10.1111/j.1467-9868.2005.00503.x) | 8 | [来源记录](part01/chapter08/source_notes.md) |
+| CH04_DOC_01 | [MIT 18.01SC：Derivative as Rate of Change，Session 3](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-3-derivative-as-rate-of-change/) | 4 | [来源记录](course/zh/chapters/ch04/source_notes.md) |
+| CH04_DOC_02 | [MIT 18.01SC：Limits and Continuity，Session 4](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-4-limits-and-continuity/) | 4 | [来源记录](course/zh/chapters/ch04/source_notes.md) |
+| CH04_DOC_03 | [MIT 18.01SC：The Fundamental Theorem of Calculus，Session 48](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/unit-3-the-definite-integral-and-its-applications/part-a-definition-of-the-definite-integral-and-first-fundamental-theorem/session-48-the-fundamental-theorem-of-calculus/) | 4 | [来源记录](course/zh/chapters/ch04/source_notes.md) |
+| CH04_DOC_04 | [MIT 18.01SC：Taylor’s Formula 视频资源](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-2-taylors-formula/) | 4 | [来源记录](course/zh/chapters/ch04/source_notes.md) |
+| CH04_DOC_05 | [MIT 18.02SC：Partial Derivatives 课程单元](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/) | 4 | [来源记录](course/zh/chapters/ch04/source_notes.md) |
+| CH04_DOC_06 | [MIT 18.02SC：Approximation Formula，Session 27](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-a-functions-of-two-variables-tangent-approximation-and-optimization/session-27-approximation-formula/) | 4 | [来源记录](course/zh/chapters/ch04/source_notes.md) |
+| CH04_DOC_07 | [MIT 18.02SC：Optimization Problems，Session 28](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-a-functions-of-two-variables-tangent-approximation-and-optimization/session-28-optimization-problems/) | 4 | [来源记录](course/zh/chapters/ch04/source_notes.md) |
+| CH04_DOC_08 | [MIT 18.02SC：Second Derivative Test，Session 30](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-a-functions-of-two-variables-tangent-approximation-and-optimization/session-30-second-derivative-test/) | 4 | [来源记录](course/zh/chapters/ch04/source_notes.md) |
+| CH04_DOC_09 | [MIT 18.02SC：Chain Rule、Gradient and Directional Derivatives 单元](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-b-chain-rule-gradient-and-directional-derivatives/) | 4 | [来源记录](course/zh/chapters/ch04/source_notes.md) |
+| CH04_DOC_10 | [MIT 18.02SC：Directional Derivatives，Session 38](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-b-chain-rule-gradient-and-directional-derivatives/session-38-directional-derivatives/) | 4 | [来源记录](course/zh/chapters/ch04/source_notes.md) |
+| CH04_DOC_11 | [NumPy：numpy.gradient](https://numpy.org/doc/stable/reference/generated/numpy.gradient.html) | 4 | [来源记录](course/zh/chapters/ch04/source_notes.md) |
+| CH04_DOC_13 | [Boyd 与 Vandenberghe：《Convex Optimization》PDF](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf) | 4 | [来源记录](course/zh/chapters/ch04/source_notes.md) |
+| CH06_DOC_02 | [Probability Models and Axioms](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l01/) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_03 | [Conditioning and Bayes’ Rule](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l02/) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_04 | [Random Variables](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l05/) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_05 | [Review](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l06/) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_06 | [Continuous Random Variables](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l08/) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_07 | [Bayes Variations and Derived Distributions](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l10/) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_08 | [Conditional Expectations](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l12/) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_09 | [Markov Chains II](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/lecture-17-video-1/) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_10 | [Law of Large Numbers, Convergence](https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/resources/lecture-3-law-of-large-numbers-convergence/) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_11 | [Poisson: The Perfect Arrival Process](https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/resources/lecture-4-poisson-the-perfect-arrival-process/) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_12 | [Poisson Processes](https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/3a19ce0e02d0008877351bfa24f3716a_MIT6_262S11_chap02.pdf) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_13 | [Introduction to Brownian Motion](https://ocw.mit.edu/courses/15-070j-advanced-stochastic-processes-fall-2013/6774cb366bae388320c0c8a251ee8daf_MIT15_070JF13_Lec6.pdf) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_14 | [Stochastic Processes II](https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/resources/lecture-17-stochastic-processes-ii/) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_15 | [Random Generator](https://numpy.org/doc/stable/reference/random/generator.html) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_16 | [Generator.binomial](https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.binomial.html) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_17 | [Generator.normal](https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.normal.html) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_18 | [Generator.poisson](https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.poisson.html) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_19 | [scipy.stats.binom](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binom.html) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_20 | [scipy.stats.norm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_21 | [scipy.stats.lognorm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.lognorm.html) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_22 | [scipy.stats.poisson](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.poisson.html) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH06_DOC_23 | [scipy.stats.t](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html) | 6 | [来源记录](course/zh/chapters/ch06/source_notes.md) |
+| CH08_DOC_01 | [statsmodels OLS API](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html) | 8 | [来源记录](course/zh/chapters/ch08/source_notes.md) |
+| CH08_DOC_02 | [statsmodels OLS results](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLSResults.html) | 8 | [来源记录](course/zh/chapters/ch08/source_notes.md) |
+| CH08_DOC_03 | [statsmodels robust covariance API](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLSResults.get_robustcov_results.html) | 8 | [来源记录](course/zh/chapters/ch08/source_notes.md) |
+| CH08_DOC_04 | [scikit-learn `StandardScaler`](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html) | 8 | [来源记录](course/zh/chapters/ch08/source_notes.md) |
+| CH08_DOC_05 | [Pipeline](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html) | 8 | [来源记录](course/zh/chapters/ch08/source_notes.md) |
+| CH08_DOC_08 | [Ridge](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html) | 8 | [来源记录](course/zh/chapters/ch08/source_notes.md) |
+| CH08_DOC_09 | [Lasso](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html) | 8 | [来源记录](course/zh/chapters/ch08/source_notes.md) |
+| CH08_DOC_10 | [ElasticNet guide](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html) | 8 | [来源记录](course/zh/chapters/ch08/source_notes.md) |
+| CH08_DOC_11 | [White (1980): A Heteroskedasticity-Consistent Covariance Matrix Estimator and a Direct Test for Heteroskedasticity](https://doi.org/10.2307/1912934) | 8 | [来源记录](course/zh/chapters/ch08/source_notes.md) |
+| CH08_DOC_12 | [MacKinnon and White (1985): Some Heteroskedasticity-Consistent Covariance Matrix Estimators with Improved Finite Sample Properties](https://doi.org/10.1016/0304-4076(85)90158-7) | 8 | [来源记录](course/zh/chapters/ch08/source_notes.md) |
+| CH08_DOC_13 | [Newey and West (1987): A Simple, Positive Semi-definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix](https://www.nber.org/papers/t0055) | 8 | [来源记录](course/zh/chapters/ch08/source_notes.md) |
+| CH08_DOC_14 | [Sharpe (1964): Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk](https://doi.org/10.1111/j.1540-6261.1964.tb02865.x) | 8 | [来源记录](course/zh/chapters/ch08/source_notes.md) |
+| CH08_DOC_15 | [Hoerl and Kennard (1970): Ridge regression — publisher record](https://doi.org/10.1080/00401706.1970.10488634) | 8 | [来源记录](course/zh/chapters/ch08/source_notes.md) |
+| CH08_DOC_16 | [Tibshirani (1996): Lasso — publisher record](https://doi.org/10.1111/j.2517-6161.1996.tb02080.x) | 8 | [来源记录](course/zh/chapters/ch08/source_notes.md) |
+| CH08_DOC_17 | [Zou and Hastie (2005): Elastic Net — publisher record](https://doi.org/10.1111/j.1467-9868.2005.00503.x) | 8 | [来源记录](course/zh/chapters/ch08/source_notes.md) |
 
 | CH08_HAC | [statsmodels cov_hac: Newey-West covariance](https://www.statsmodels.org/stable/generated/statsmodels.stats.sandwich_covariance.cov_hac.html) | 8 | 已读取等间距假设；见第8章来源与根验收记录 |
 
@@ -152,11 +152,11 @@ sources.json保存键、标题、URL、类别、核验日期及边界。search_*
 
 | 键 | 官方文档 | 章节 | 实际读取范围 |
 |---|---|---|---|
-| CH09_DOC_01 | [CVXPY DCP guide](https://www.cvxpy.org/tutorial/dcp/) | 9 | [来源记录](part01/chapter09/source_notes.md) |
-| CH09_DOC_02 | [CVXPY Linear program example](https://www.cvxpy.org/examples/basic/linear_program.html) | 9 | [来源记录](part01/chapter09/source_notes.md) |
-| CH09_DOC_03 | [CVXPY Least-squares example](https://www.cvxpy.org/examples/basic/least_squares.html) | 9 | [来源记录](part01/chapter09/source_notes.md) |
-| CH09_DOC_04 | [CVXPY Solver features](https://www.cvxpy.org/tutorial/solvers/index.html) | 9 | [来源记录](part01/chapter09/source_notes.md) |
-| CH09_DOC_05 | [CVXPY Problem status guide](https://www.cvxpy.org/tutorial/intro/index.html) | 9 | [来源记录](part01/chapter09/source_notes.md) |
+| CH09_DOC_01 | [CVXPY DCP guide](https://www.cvxpy.org/tutorial/dcp/) | 9 | [来源记录](course/zh/chapters/ch09/source_notes.md) |
+| CH09_DOC_02 | [CVXPY Linear program example](https://www.cvxpy.org/examples/basic/linear_program.html) | 9 | [来源记录](course/zh/chapters/ch09/source_notes.md) |
+| CH09_DOC_03 | [CVXPY Least-squares example](https://www.cvxpy.org/examples/basic/least_squares.html) | 9 | [来源记录](course/zh/chapters/ch09/source_notes.md) |
+| CH09_DOC_04 | [CVXPY Solver features](https://www.cvxpy.org/tutorial/solvers/index.html) | 9 | [来源记录](course/zh/chapters/ch09/source_notes.md) |
+| CH09_DOC_05 | [CVXPY Problem status guide](https://www.cvxpy.org/tutorial/intro/index.html) | 9 | [来源记录](course/zh/chapters/ch09/source_notes.md) |
 
 ## A3：第11章来源准备
 
@@ -248,20 +248,20 @@ sources.json保存键、标题、URL、类别、核验日期及边界。search_*
 
 ## 第16章核验增量
 
-来源核验由章节作者执行，根复核使用范围；[具体访问与阅读记录](part03/chapter16/source_notes.md)。
+来源核验由章节作者执行，根复核使用范围；[具体访问与阅读记录](course/zh/chapters/ch16/source_notes.md)。
 
-- **CH16_ARIMA** [statsmodels ARIMA](https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima.model.ARIMA.html)：作者已读取0.15官方参数说明；具体范围见part03/chapter16/source_notes.md；不证明金融序列满足假设。
-- **CH16_FORECAST** [statsmodels ARIMAResults.get_forecast](https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima.model.ARIMAResults.get_forecast.html)：作者已读取0.15官方参数说明；具体范围见part03/chapter16/source_notes.md；不证明金融序列满足假设。
-- **CH16_ACF** [statsmodels acf](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.acf.html)：作者已读取0.15官方参数说明；具体范围见part03/chapter16/source_notes.md；不证明金融序列满足假设。
-- **CH16_PACF** [statsmodels pacf](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.pacf.html)：作者已读取0.15官方参数说明；具体范围见part03/chapter16/source_notes.md；不证明金融序列满足假设。
-- **CH16_LB_API** [statsmodels acorr_ljungbox](https://www.statsmodels.org/stable/generated/statsmodels.stats.diagnostic.acorr_ljungbox.html)：作者已读取0.15官方参数说明；具体范围见part03/chapter16/source_notes.md；不证明金融序列满足假设。
-- **CH16_ARMA_PROCESS** [statsmodels ArmaProcess](https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima_process.ArmaProcess.html)：作者已读取0.15官方参数说明；具体范围见part03/chapter16/source_notes.md；不证明金融序列满足假设。
+- **CH16_ARIMA** [statsmodels ARIMA](https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima.model.ARIMA.html)：作者已读取0.15官方参数说明；具体范围见course/zh/chapters/ch16/source_notes.md；不证明金融序列满足假设。
+- **CH16_FORECAST** [statsmodels ARIMAResults.get_forecast](https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima.model.ARIMAResults.get_forecast.html)：作者已读取0.15官方参数说明；具体范围见course/zh/chapters/ch16/source_notes.md；不证明金融序列满足假设。
+- **CH16_ACF** [statsmodels acf](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.acf.html)：作者已读取0.15官方参数说明；具体范围见course/zh/chapters/ch16/source_notes.md；不证明金融序列满足假设。
+- **CH16_PACF** [statsmodels pacf](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.pacf.html)：作者已读取0.15官方参数说明；具体范围见course/zh/chapters/ch16/source_notes.md；不证明金融序列满足假设。
+- **CH16_LB_API** [statsmodels acorr_ljungbox](https://www.statsmodels.org/stable/generated/statsmodels.stats.diagnostic.acorr_ljungbox.html)：作者已读取0.15官方参数说明；具体范围见course/zh/chapters/ch16/source_notes.md；不证明金融序列满足假设。
+- **CH16_ARMA_PROCESS** [statsmodels ArmaProcess](https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima_process.ArmaProcess.html)：作者已读取0.15官方参数说明；具体范围见course/zh/chapters/ch16/source_notes.md；不证明金融序列满足假设。
 - **CH16_MIT_TS1** [MIT OCW 18.S096 Lecture 8 Time Series Analysis 1](https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/1926c83ecd7ea700f7cb63914c6d7c0f_MIT18_S096F13_lecnote8.pdf)：作者读取第3–5/10/17–20/25页覆盖与定义；抽取有OCR错位，公式独立推导而非照录。
 - **CH16_LB1978** [Ljung and Box 1978 On a measure of lack of fit in time series models](https://doi.org/10.1093/biomet/65.2.297)：仅核作者、题名、期刊、卷期、页码、DOI元数据；全文访问受阻，公式依据可读官方实现文档，不声称全文已读。
 
 ## 第17章核验增量
 
-来源读取由作者执行，根审使用边界；详见[来源笔记](part03/chapter17/source_notes.md)。仅摘要来源不冒充全文。
+来源读取由作者执行，根审使用边界；详见[来源笔记](course/zh/chapters/ch17/source_notes.md)。仅摘要来源不冒充全文。
 - **CH17_DF1979** [Dickey and Fuller (1979): Distribution of the Estimators for Autoregressive Time Series with a Unit Root](https://doi.org/10.1080/01621459.1979.10482531)：作者读取印刷427–431页提取文字，单位根非标准分布及确定项范围；根核对source_notes记录，不称根复读全文。
 - **CH17_EG1987** [Engle and Granger (1987): Co-Integration and Error Correction: Representation, Estimation, and Testing](https://www.econometricsociety.org/publications/econometrica/1987/03/01/co-integration-and-error-correction-representation-estimation)：作者视觉读取扫描件251–255及260–269页；根核对章节使用范围，不称全文或OCR已核。
 - **CH17_GRANGER1969** [Granger (1969): Investigating Causal Relations by Econometric Models and Cross-Spectral Methods](https://doi.org/10.2307/1912791)：作者读取§4–5印刷428–432页，预测信息集与方向限制；非结构干预因果。
@@ -276,7 +276,7 @@ sources.json保存键、标题、URL、类别、核验日期及边界。search_*
 
 ## 第18章核验增量
 
-作者的具体阅读范围见[来源笔记](part03/chapter18/source_notes.md)；仅摘要或书目来源保留访问限制。
+作者的具体阅读范围见[来源笔记](course/zh/chapters/ch18/source_notes.md)；仅摘要或书目来源保留访问限制。
 
 - **CH18_BOLLERSLEV1986** [Bollerslev (1986), Generalized autoregressive conditional heteroskedasticity](https://public.econ.duke.edu/~boller/Published_Papers/joe_86.pdf)：作者实际视觉/文字读取PDF物理3–6页、原刊309–312，§2–3有限二阶/高斯四阶矩；未通读。 读取由作者执行，根核对source_notes范围。
 - **CH18_ANDERSEN2003** [Andersen, Bollerslev, Diebold and Labys (2003), Modeling and forecasting realized volatility](https://econ.duke.edu/~boller/Published_Papers/ecta_03.pdf)：作者读取引言及§2开头、物理1–8页；支持过程/采样假设下RV/QV极限，不支持有限网格等于条件方差。 读取由作者执行，根核对source_notes范围。
@@ -290,7 +290,7 @@ sources.json保存键、标题、URL、类别、核验日期及边界。search_*
 
 ## 第19章核验增量
 
-具体访问和读取范围见[来源笔记](part03/chapter19/source_notes.md)。
+具体访问和读取范围见[来源笔记](course/zh/chapters/ch19/source_notes.md)。
 
 - **CH19_KALMAN1960** [Kalman (1960), A New Approach to Linear Filtering and Prediction Problems](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/k/Kalman1960.pdf)：作者提取12页转录镜像，重点核读摘要/引言、Problem I式16–17、Theorem3及式21–32、附录；前11页对应原刊35–45，末页OCR限制。未逐式原刊视觉校勘；本章加性观测误差和Joseph形式由条件正态独立推导，不归原论文。 范围由作者source_notes登记，根复核引用范围。
 - **CH19_STATSMODELS** [statsmodels Time Series Analysis by State Space Methods](https://www.statsmodels.org/stable/statespace.html)：作者读取0.15.0概览/名称维度/AR2/低层Filter与Smoother对象；Jina不完整保留MathJax，未逐项核全部API。本章h/F/R映官方Z/T/H，状态噪声映官方RQR转置。 范围由作者source_notes登记，根复核引用范围。
@@ -313,43 +313,43 @@ sources.json保存键、标题、URL、类别、核验日期及边界。search_*
 
 | 章节 | 来源键与来源 | 实际读取日志所记范围 | 保留的证据边界 |
 |---|---|---|---|
-| 22 | [CH22_HLZ2014 — Harvey, Liu & Zhu (2014), NBER Working Paper 20592](https://www.nber.org/system/files/working_papers/w20592/w20592.pdf) | 摘要、引言、FWER/FDR、Bonferroni 与 Holm 部分步骤及结论段；详见[第22章 source_notes](part04/chapter22/source_notes.md) | NBER 工作稿，不是2016年 RFS 终稿；§5以后的估计、表格、附录及后来评论未读。作者日志有些结论段页码未逐一记录。 |
-| 22 | 复用全局键 **DSR**；Bailey & López de Prado (2014) | 作者日志只记引言、Sharpe 部分式(1)与附录 A.1/A.2；同上[第22章 source_notes](part04/chapter22/source_notes.md) | DSR 本身的定义、偏度峰度修正、非独立试验和数值例未读；不把第22章候选来源扩大成全篇核读。 |
-| 22 | 复用全局键 **PBO**；Bailey et al. (2015) | 作者日志记摘要、Definition 2.1/2.2；同上[第22章 source_notes](part04/chapter22/source_notes.md) | CSCV 算法细节、实验、期刊版均未读；仅支持第22章对“选择过程”概念的预告。 |
-| 22 | [CH22_GELMANLOKEN2013 — Gelman & Loken, unpublished draft](http://www.stat.columbia.edu/~gelman/research/unpublished/forking.pdf) | 摘要、§1.1、§1.2 开头、§4.3 两段；[第22章 source_notes](part04/chapter22/source_notes.md) | 这是未发表工作稿；American Scientist 节略版和其余案例章节未读。 |
-| 22–23、25 | [CH23_JT1993 — Jegadeesh & Titman (1993)](https://www.bauer.uh.edu/rsusmel/phd/jegadeesh-titman93.pdf) | 同一 JSTOR 转存件被不同章局部使用；第22章只用印刷页68–69的 Bonferroni 两句，第23章局部涉及策略构造与校正，第25章读取§I与§II开头的 J/K、重叠持有和形成间隔；见[第23章](part04/chapter23/source_notes.md)及[第25章](part04/chapter25/source_notes.md) | 仅为课程网站托管副本；期刊论文其余部分、表格和附录未读；本书行业组合结果不是该文个股样本复现。 |
-| 23 | [CH23_PETERSEN2005 — Petersen (2005/2006), NBER Working Paper 11280](https://www.nber.org/system/files/working_papers/w11280/w11280.pdf) | 摘要/引言概述及第II节开头式(8)–(9)，印刷页11–12；[第23章 source_notes](part04/chapter23/source_notes.md) | 2009年 RFS 终稿未读；模拟表、聚类标准误推导与应用未读；公式文本层错位，章节说明另有作者推导。 |
-| 23 | **CH23_SCIPY_RANKDATA** — 本机 SciPy 1.18.1 文档字符串 | rankdata 的并列取平均名次、起始名次、轴与 NaN 默认行为；[第23章 source_notes](part04/chapter23/source_notes.md) | 这是安装环境中的本地 API 文档，没有作者记录的外部URL；课程代码自行规定 NaN 处理。 |
-| 24 | 复用全局键 **FRENCH**、**FRENCH_10**、**FF5_DESC**、**FF2015**、**AQR_VM**；章节细节见[第24章 source_notes](part04/chapter24/source_notes.md) | French 说明页、五因子说明页、Asness et al. 价值度量部分、Fama–French 2015表8/第7节选读、SEC财务数据集说明及政策页 | 已发布 French 序列为修订历史，不是逐股 PIT；Fama–French 2015只读列出的表/节；SEC 未读 EDGAR完整申报、taxonomy 或各字段会计含义。作者日志记载 SEC 页面抓取曾把个人邮箱放进 User-Agent，并记录在其返还说明中。 |
-| 24 | [CH24_FF_FACTORS_PAGE — French factor description](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_factors.html) | Construction、Stocks 段；[第24章 source_notes](part04/chapter24/source_notes.md) | 6组合分组断点细节页未读。 |
-| 24–25 | [CH24_AMP2013 — Asness, Moskowitz & Pedersen (2013)](https://pages.stern.nyu.edu/~lpederse/papers/ValMomEverywhere.pdf) | 第24章只读价值度量；第25章只读价值/动量定义和期货收益构造；对应[第24章](part04/chapter24/source_notes.md)与[第25章](part04/chapter25/source_notes.md) | 回归、表格及其余章节未读；不得把作者原文结果说成本章行业组合结果。 |
-| 24 | **CH24_SEC_FSDS**：SEC Financial Statement Data Sets、readme、EDGAR访问说明、隐私政策 | 四个URL均在[第24章 source_notes](part04/chapter24/source_notes.md)中明确记录并逐项列出：数据集页面、[readme PDF](https://www.sec.gov/files/aqfs.pdf)、[EDGAR访问说明](https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data)、[隐私政策](https://www.sec.gov/about/privacy-information) | 官方 as-filed 文件说明不等于已构造完整逐股PIT研究；本章没有下载 SEC 数据，也未读底层申报全文或 taxonomy。 |
-| 24 | **CH24_SEC_FSDS** — SEC Financial Statement Data Sets 页面 | [数据集页面](https://www.sec.gov/dera/data/financial-statement-data-sets.html)；[第24章 source_notes](part04/chapter24/source_notes.md) | 页面副本未保存在本地；本草稿保留读取日志，不表示本轮重新读取或核实当前网页内容。 |
-| 24 | 复用全局键 **FF2015**；作者实际使用的 PDF 副本由[第24章 source_notes](part04/chapter24/source_notes.md)标识 | 作者日志称第三方托管的期刊终稿副本，读取摘要、第7节与表8说明 | 第1–6节、第8节后和附录未读；外链只保留全局来源页，避免添加新的第三方镜像记录。 |
-| 25 | [CH25_MOP2012 — Moskowitz, Ooi & Pedersen (2012)](https://pages.stern.nyu.edu/~lpederse/papers/TimeSeriesMomentum.pdf) | 摘要、波动率估计、第4节及式(5)局部；[第25章 source_notes](part04/chapter25/source_notes.md) | 其他稳健性表与交易者行为章节未读；课程用36个月标准差替代原文日频EW估计，不能称为原文复现。 |
-| 25 | [CH25_DM2014 — Daniel & Moskowitz (2014), NBER Working Paper 20439](https://www.nber.org/system/files/working_papers/w20439/w20439.pdf) | 摘要、印刷页8部分、表3说明；同上[第25章 source_notes](part04/chapter25/source_notes.md) | NBER 工作稿，不是2016年 JFE 终稿；本书10行业结果不是赢家减输家的复现。 |
-| 25 | [CH25_FRENCH_MOM_PAGE — French Monthly Momentum Factor detail](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_mom_factor.html) | Construction 与 Stocks 段；[第25章 source_notes](part04/chapter25/source_notes.md) | 只读方法说明页；本章没有下载 Mom 因子数据。 |
-| 26 | 复用全局键 **FF5_DESC**、**FF2015**；章节局部阅读记录见[第26章 source_notes](part04/chapter26/source_notes.md) | French 五因子页面 Construction/Stocks；Fama–French 2015表8与第7节 | FF2015第1–6节、第8节后及附录回归细节未读；French 5因子序列是聚合修订数据。 |
-| 26 | [CH26_NOVYMARX2012 — Novy-Marx, author manuscript (June 2012)](https://mysimon.rochester.edu/novy-marx/research/OSoV.pdf) | 摘要、引言、数据说明、脚注2、DuPont段落与应计项目相关讨论；[第26章 source_notes](part04/chapter26/source_notes.md) | 2013年 JFE 期刊版未读；回归表格与附录未读；本章构造面板结果不属于论文实证。 |
-| 27 | [CH27_KMPV2013 — Koijen et al., Carry, NBER Working Paper 19325](http://www.nber.org/papers/w19325) | 工作稿局部式(2)–(7)、(9)–(10)、(13)–(15)、(24)–(25)，详见[第27章 source_notes](part04/chapter27/source_notes.md) | 期刊版、实证章节和表格未读；正文不转述论文实证结果。 |
-| 27 | **CH27_FP2013 — Frazzini & Pedersen, Betting Against Beta** | 作者日志称作者主页 PDF，2013-05-10 草稿；摘要、式(14)–(17)及表III前局部，见[第27章 source_notes](part04/chapter27/source_notes.md) | source_notes 没有记录可复制的直接URL；本草稿不补猜链接。期刊版、模型/融资约束检验和多数资产类别章节未读。 |
-| 27 | 复用全局键 **FRENCH_10** | 行业组合说明及冻结行业数据边界，见[第27章 source_notes](part04/chapter27/source_notes.md) | French 数据为修订历史；本章没有外汇远期、期货曲线、收益率曲线或融资利率的真实数据。 |
-| 28 | 复用全局键 **FF5_DESC**、**FRENCH_10**、**FRENCH**；作者推导记录见[第28章 source_notes](part04/chapter28/source_notes.md) | French 五因子说明页；多因子相关、合成、缺失处理与拥挤结论为本章推导或构造数据结果 | 没有真实逐股信号、历史行业标签、市值或实际持仓；没有持仓数据时不作拥挤判断。 |
-| 29 | 复用全局键 **FRENCH_10**；[第29章 source_notes](part05/chapter29/source_notes.md) | 本地账本代码、测试、French frozen CSV 与 manifest；作者明确本章没有外部网络或URL读取 | French 行业数据是修订后聚合序列，非PIT、非个股成交；作者推导不归于外部文献。 |
-| 30 | 复用全局键 **FRENCH_10**；[第30章 source_notes](part05/chapter30/source_notes.md) | 本地代码、数据清单、结果与运行环境；作者明确无外部网络或URL读取 | source_notes 分列 v1 历史快照与 v2 当前稿依据；单次构造样本不是市场效果证据。第30章当前修订与验收见qa/a6/codex_resume。 |
-| 31 | [第31章 source_notes](part05/chapter31/source_notes.md) | 本地计划、章节、代码契约、测试与 French manifest；作者明确无外部网络或URL读取 | Purge/Embargo 数学按章节契约与作者推导；French 序列为修订后的非PIT聚合收益。第31章当前修订与验收见qa/a6/codex_resume。 |
-| 32 | 复用全局键 **PBO**、**DSR**；PSR 本地作者稿见[第32章 source_notes](part05/chapter32/source_notes.md) | PBO、DSR 与 PSR 均有版本标签和局部读取范围；本地复查针对版本标记、指定定义/公式、频率提示、PDF页数与哈希 | PBO期刊版未取得；DSR最终排版版与传递链未独立核实；PSR作者URL和最终期刊版未独立取得。作者报告的全页阅读与复算不等于本轮审阅者逐页复核。French历史数据不是PIT，也没有 fills、费用或容量。 |
-| 33 | [AT2002-v5 — Acerbi & Tasche, On the Coherence of Expected Shortfall](https://arxiv.org/pdf/cond-mat/0104295v5) | 印刷页5–9局部定义、命题和邻近讨论；[第33章 source_notes](part05/chapter33/source_notes.md) | 只读所列页与段落，不声称全文或期刊版复核；章节使用损失为正的符号约定。 |
-| 33 | [KUPIEC1995-FEDS95-24 — Kupiec, Techniques for Verifying the Accuracy of Risk Measurement Models](https://fraser.stlouisfed.org/files/docs/publications/bog_feds/feds_1995-024.pdf) | 印刷页6–8、18–19、23–24；同上[第33章 source_notes](part05/chapter33/source_notes.md) | FEDS预备讨论稿；封面与内页日期不同；仅支持日志所列覆盖检验内容，非监管规则。 |
-| 33 | [SCIPY-T — SciPy 1.18.0 scipy.stats.t](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html) | 分布 API、df、标准化密度、loc/scale、ppf/pdf/rvs 与 survival-function 描述；同上[第33章 source_notes](part05/chapter33/source_notes.md) | SciPy文档只支持API语义，不支持章节ES推导；scale不等于Student-t标准差。 |
+| 22 | [CH22_HLZ2014 — Harvey, Liu & Zhu (2014), NBER Working Paper 20592](https://www.nber.org/system/files/working_papers/w20592/w20592.pdf) | 摘要、引言、FWER/FDR、Bonferroni 与 Holm 部分步骤及结论段；详见[第22章 source_notes](course/zh/chapters/ch22/source_notes.md) | NBER 工作稿，不是2016年 RFS 终稿；§5以后的估计、表格、附录及后来评论未读。作者日志有些结论段页码未逐一记录。 |
+| 22 | 复用全局键 **DSR**；Bailey & López de Prado (2014) | 作者日志只记引言、Sharpe 部分式(1)与附录 A.1/A.2；同上[第22章 source_notes](course/zh/chapters/ch22/source_notes.md) | DSR 本身的定义、偏度峰度修正、非独立试验和数值例未读；不把第22章候选来源扩大成全篇核读。 |
+| 22 | 复用全局键 **PBO**；Bailey et al. (2015) | 作者日志记摘要、Definition 2.1/2.2；同上[第22章 source_notes](course/zh/chapters/ch22/source_notes.md) | CSCV 算法细节、实验、期刊版均未读；仅支持第22章对“选择过程”概念的预告。 |
+| 22 | [CH22_GELMANLOKEN2013 — Gelman & Loken, unpublished draft](http://www.stat.columbia.edu/~gelman/research/unpublished/forking.pdf) | 摘要、§1.1、§1.2 开头、§4.3 两段；[第22章 source_notes](course/zh/chapters/ch22/source_notes.md) | 这是未发表工作稿；American Scientist 节略版和其余案例章节未读。 |
+| 22–23、25 | [CH23_JT1993 — Jegadeesh & Titman (1993)](https://www.bauer.uh.edu/rsusmel/phd/jegadeesh-titman93.pdf) | 同一 JSTOR 转存件被不同章局部使用；第22章只用印刷页68–69的 Bonferroni 两句，第23章局部涉及策略构造与校正，第25章读取§I与§II开头的 J/K、重叠持有和形成间隔；见[第23章](course/zh/chapters/ch23/source_notes.md)及[第25章](course/zh/chapters/ch25/source_notes.md) | 仅为课程网站托管副本；期刊论文其余部分、表格和附录未读；本书行业组合结果不是该文个股样本复现。 |
+| 23 | [CH23_PETERSEN2005 — Petersen (2005/2006), NBER Working Paper 11280](https://www.nber.org/system/files/working_papers/w11280/w11280.pdf) | 摘要/引言概述及第II节开头式(8)–(9)，印刷页11–12；[第23章 source_notes](course/zh/chapters/ch23/source_notes.md) | 2009年 RFS 终稿未读；模拟表、聚类标准误推导与应用未读；公式文本层错位，章节说明另有作者推导。 |
+| 23 | **CH23_SCIPY_RANKDATA** — 本机 SciPy 1.18.1 文档字符串 | rankdata 的并列取平均名次、起始名次、轴与 NaN 默认行为；[第23章 source_notes](course/zh/chapters/ch23/source_notes.md) | 这是安装环境中的本地 API 文档，没有作者记录的外部URL；课程代码自行规定 NaN 处理。 |
+| 24 | 复用全局键 **FRENCH**、**FRENCH_10**、**FF5_DESC**、**FF2015**、**AQR_VM**；章节细节见[第24章 source_notes](course/zh/chapters/ch24/source_notes.md) | French 说明页、五因子说明页、Asness et al. 价值度量部分、Fama–French 2015表8/第7节选读、SEC财务数据集说明及政策页 | 已发布 French 序列为修订历史，不是逐股 PIT；Fama–French 2015只读列出的表/节；SEC 未读 EDGAR完整申报、taxonomy 或各字段会计含义。作者日志记载 SEC 页面抓取曾把个人邮箱放进 User-Agent，并记录在其返还说明中。 |
+| 24 | [CH24_FF_FACTORS_PAGE — French factor description](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_factors.html) | Construction、Stocks 段；[第24章 source_notes](course/zh/chapters/ch24/source_notes.md) | 6组合分组断点细节页未读。 |
+| 24–25 | [CH24_AMP2013 — Asness, Moskowitz & Pedersen (2013)](https://pages.stern.nyu.edu/~lpederse/papers/ValMomEverywhere.pdf) | 第24章只读价值度量；第25章只读价值/动量定义和期货收益构造；对应[第24章](course/zh/chapters/ch24/source_notes.md)与[第25章](course/zh/chapters/ch25/source_notes.md) | 回归、表格及其余章节未读；不得把作者原文结果说成本章行业组合结果。 |
+| 24 | **CH24_SEC_FSDS**：SEC Financial Statement Data Sets、readme、EDGAR访问说明、隐私政策 | 四个URL均在[第24章 source_notes](course/zh/chapters/ch24/source_notes.md)中明确记录并逐项列出：数据集页面、[readme PDF](https://www.sec.gov/files/aqfs.pdf)、[EDGAR访问说明](https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data)、[隐私政策](https://www.sec.gov/about/privacy-information) | 官方 as-filed 文件说明不等于已构造完整逐股PIT研究；本章没有下载 SEC 数据，也未读底层申报全文或 taxonomy。 |
+| 24 | **CH24_SEC_FSDS** — SEC Financial Statement Data Sets 页面 | [数据集页面](https://www.sec.gov/dera/data/financial-statement-data-sets.html)；[第24章 source_notes](course/zh/chapters/ch24/source_notes.md) | 页面副本未保存在本地；本草稿保留读取日志，不表示本轮重新读取或核实当前网页内容。 |
+| 24 | 复用全局键 **FF2015**；作者实际使用的 PDF 副本由[第24章 source_notes](course/zh/chapters/ch24/source_notes.md)标识 | 作者日志称第三方托管的期刊终稿副本，读取摘要、第7节与表8说明 | 第1–6节、第8节后和附录未读；外链只保留全局来源页，避免添加新的第三方镜像记录。 |
+| 25 | [CH25_MOP2012 — Moskowitz, Ooi & Pedersen (2012)](https://pages.stern.nyu.edu/~lpederse/papers/TimeSeriesMomentum.pdf) | 摘要、波动率估计、第4节及式(5)局部；[第25章 source_notes](course/zh/chapters/ch25/source_notes.md) | 其他稳健性表与交易者行为章节未读；课程用36个月标准差替代原文日频EW估计，不能称为原文复现。 |
+| 25 | [CH25_DM2014 — Daniel & Moskowitz (2014), NBER Working Paper 20439](https://www.nber.org/system/files/working_papers/w20439/w20439.pdf) | 摘要、印刷页8部分、表3说明；同上[第25章 source_notes](course/zh/chapters/ch25/source_notes.md) | NBER 工作稿，不是2016年 JFE 终稿；本书10行业结果不是赢家减输家的复现。 |
+| 25 | [CH25_FRENCH_MOM_PAGE — French Monthly Momentum Factor detail](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_mom_factor.html) | Construction 与 Stocks 段；[第25章 source_notes](course/zh/chapters/ch25/source_notes.md) | 只读方法说明页；本章没有下载 Mom 因子数据。 |
+| 26 | 复用全局键 **FF5_DESC**、**FF2015**；章节局部阅读记录见[第26章 source_notes](course/zh/chapters/ch26/source_notes.md) | French 五因子页面 Construction/Stocks；Fama–French 2015表8与第7节 | FF2015第1–6节、第8节后及附录回归细节未读；French 5因子序列是聚合修订数据。 |
+| 26 | [CH26_NOVYMARX2012 — Novy-Marx, author manuscript (June 2012)](https://mysimon.rochester.edu/novy-marx/research/OSoV.pdf) | 摘要、引言、数据说明、脚注2、DuPont段落与应计项目相关讨论；[第26章 source_notes](course/zh/chapters/ch26/source_notes.md) | 2013年 JFE 期刊版未读；回归表格与附录未读；本章构造面板结果不属于论文实证。 |
+| 27 | [CH27_KMPV2013 — Koijen et al., Carry, NBER Working Paper 19325](http://www.nber.org/papers/w19325) | 工作稿局部式(2)–(7)、(9)–(10)、(13)–(15)、(24)–(25)，详见[第27章 source_notes](course/zh/chapters/ch27/source_notes.md) | 期刊版、实证章节和表格未读；正文不转述论文实证结果。 |
+| 27 | **CH27_FP2013 — Frazzini & Pedersen, Betting Against Beta** | 作者日志称作者主页 PDF，2013-05-10 草稿；摘要、式(14)–(17)及表III前局部，见[第27章 source_notes](course/zh/chapters/ch27/source_notes.md) | source_notes 没有记录可复制的直接URL；本草稿不补猜链接。期刊版、模型/融资约束检验和多数资产类别章节未读。 |
+| 27 | 复用全局键 **FRENCH_10** | 行业组合说明及冻结行业数据边界，见[第27章 source_notes](course/zh/chapters/ch27/source_notes.md) | French 数据为修订历史；本章没有外汇远期、期货曲线、收益率曲线或融资利率的真实数据。 |
+| 28 | 复用全局键 **FF5_DESC**、**FRENCH_10**、**FRENCH**；作者推导记录见[第28章 source_notes](course/zh/chapters/ch28/source_notes.md) | French 五因子说明页；多因子相关、合成、缺失处理与拥挤结论为本章推导或构造数据结果 | 没有真实逐股信号、历史行业标签、市值或实际持仓；没有持仓数据时不作拥挤判断。 |
+| 29 | 复用全局键 **FRENCH_10**；[第29章 source_notes](course/zh/chapters/ch29/source_notes.md) | 本地账本代码、测试、French frozen CSV 与 manifest；作者明确本章没有外部网络或URL读取 | French 行业数据是修订后聚合序列，非PIT、非个股成交；作者推导不归于外部文献。 |
+| 30 | 复用全局键 **FRENCH_10**；[第30章 source_notes](course/zh/chapters/ch30/source_notes.md) | 本地代码、数据清单、结果与运行环境；作者明确无外部网络或URL读取 | source_notes 分列 v1 历史快照与 v2 当前稿依据；单次构造样本不是市场效果证据。第30章当前修订与验收见qa/a6/codex_resume。 |
+| 31 | [第31章 source_notes](course/zh/chapters/ch31/source_notes.md) | 本地计划、章节、代码契约、测试与 French manifest；作者明确无外部网络或URL读取 | Purge/Embargo 数学按章节契约与作者推导；French 序列为修订后的非PIT聚合收益。第31章当前修订与验收见qa/a6/codex_resume。 |
+| 32 | 复用全局键 **PBO**、**DSR**；PSR 本地作者稿见[第32章 source_notes](course/zh/chapters/ch32/source_notes.md) | PBO、DSR 与 PSR 均有版本标签和局部读取范围；本地复查针对版本标记、指定定义/公式、频率提示、PDF页数与哈希 | PBO期刊版未取得；DSR最终排版版与传递链未独立核实；PSR作者URL和最终期刊版未独立取得。作者报告的全页阅读与复算不等于本轮审阅者逐页复核。French历史数据不是PIT，也没有 fills、费用或容量。 |
+| 33 | [AT2002-v5 — Acerbi & Tasche, On the Coherence of Expected Shortfall](https://arxiv.org/pdf/cond-mat/0104295v5) | 印刷页5–9局部定义、命题和邻近讨论；[第33章 source_notes](course/zh/chapters/ch33/source_notes.md) | 只读所列页与段落，不声称全文或期刊版复核；章节使用损失为正的符号约定。 |
+| 33 | [KUPIEC1995-FEDS95-24 — Kupiec, Techniques for Verifying the Accuracy of Risk Measurement Models](https://fraser.stlouisfed.org/files/docs/publications/bog_feds/feds_1995-024.pdf) | 印刷页6–8、18–19、23–24；同上[第33章 source_notes](course/zh/chapters/ch33/source_notes.md) | FEDS预备讨论稿；封面与内页日期不同；仅支持日志所列覆盖检验内容，非监管规则。 |
+| 33 | [SCIPY-T — SciPy 1.18.0 scipy.stats.t](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html) | 分布 API、df、标准化密度、loc/scale、ppf/pdf/rvs 与 survival-function 描述；同上[第33章 source_notes](course/zh/chapters/ch33/source_notes.md) | SciPy文档只支持API语义，不支持章节ES推导；scale不等于Student-t标准差。 |
 
 ## A7-B 第35–36章增补来源
 
-- **HUBERMAN_STANZL_2004** — Huberman, G. & Stanzl, W., “Price Manipulation and Quasi-Arbitrage,” *Econometrica*, 72(4), 1247–1275 (2004), [Wiley publisher record](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2004.00531.x), DOI 10.1111/j.1468-0262.2004.00531.x. 来源核读范围与条件边界见[第35章 source_notes](part06/chapter35/source_notes.md)、[第36章 source_notes](part06/chapter36/source_notes.md)及批次核读记录。
+- **HUBERMAN_STANZL_2004** — Huberman, G. & Stanzl, W., “Price Manipulation and Quasi-Arbitrage,” *Econometrica*, 72(4), 1247–1275 (2004), [Wiley publisher record](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2004.00531.x), DOI 10.1111/j.1468-0262.2004.00531.x. 来源核读范围与条件边界见[第35章 source_notes](course/zh/chapters/ch35/source_notes.md)、[第36章 source_notes](course/zh/chapters/ch36/source_notes.md)及批次核读记录。
 
 ## A8-A 第37–39章增补来源
 
-以下条目的实际读取范围（作者核读 / 来源侦察报告 / 仅目录）见各章 source_notes：[第37章](part07/chapter37/source_notes.md)、[第38章](part07/chapter38/source_notes.md)、[第39章](part07/chapter39/source_notes.md)。
+以下条目的实际读取范围（作者核读 / 来源侦察报告 / 仅目录）见各章 source_notes：[第37章](course/zh/chapters/ch37/source_notes.md)、[第38章](course/zh/chapters/ch38/source_notes.md)、[第39章](course/zh/chapters/ch39/source_notes.md)。
 
 - **CH37_GKX2020** — Empirical Asset Pricing via Machine Learning (Gu, Kelly, Xiu 2020, RFS 33(5) 2223-2273)，[原始论文（作者主页全文）](http://dachxiu.chicagobooth.edu/download/ML.pdf)。2026-10-10 作者核读：§1.8 式(19) 第2249页（R2_OS 以零为基准及理由）、表1 第2250页（OLS -3.46%、OLS-3 0.16%、ENet+H 0.11%）、§2.2（NN3 0.40%）、引言（多空夏普1.35/2.45）。月度美国个股、成本前；与本书构造不可比。
 - **CH37_CT2008** — Predicting Excess Stock Returns Out of Sample: Can Anything Beat the Historical Average? (Campbell, Thompson 2008, RFS 21(4) 1509-1531)，[原始论文（NBER 工作论文版本）](https://www.nber.org/system/files/working_papers/w11468/w11468.pdf)。2026-10-10 作者核读工作论文版式(1) 第5页：R2_OS 以截至 t-1 的历史均值为基准；期刊版页码未核。

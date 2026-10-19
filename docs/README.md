@@ -15,7 +15,8 @@ Start with reading, practice, or code. Maintenance documents are grouped below; 
 | 路径 / Path | 用途 / Purpose |
 | --- | --- |
 | `editions/zh/`, `editions/en/` | 双语阅读入口、PDF 与 Notebook / Bilingual guides, PDFs, and Notebooks |
-| `part00/`–`part07/`, `projects/`, `capstone/` | 中文课程与项目文档 / Chinese chapters and project documents |
+| `course/zh/chapters/`, `course/en/chapters/` | 45 章双语正文与章节资源 / 45 bilingual chapter texts and assets |
+| `projects/`, `capstone/` | 项目文档与共享执行层 / Project documents and shared execution layer |
 | `src/quant_course/`, `code/`, `tests/` | 共用运行库、教学算例与测试 / Shared library, examples, and tests |
 | `data/fixtures/`, `fixtures/`, `figures/`, `print_examples/` | 教学输入与插图；保留现有引用 / Teaching inputs and graphics with stable paths |
 | `workbook/`, `loom/` | 练习册入口与旧 PDF 链接兼容入口 / Workbook entry and compatibility for legacy PDF links |
@@ -24,8 +25,8 @@ Start with reading, practice, or code. Maintenance documents are grouped below; 
 | `qa/`, `provenance/` | 有日期的校验与来源记录 / Dated verification and provenance records |
 | `third_party/`, `LICENSES/` | 上游声明与许可证全文 / Upstream notices and complete license texts |
 
-`references.md` 和兼容入口暂留原位，以保持课程与 PDF 的既有链接。迁移章节需要单独核对全部引用；本次只整理说明文件。
-References and compatibility entries retain their existing locations for course and PDF links. Relocating chapters requires a separate dependency check; this change groups explanatory documents only.
+[中英文逐章正文索引](../course/README.md)按相同编号连接两种语言。`references.md`、项目与兼容入口保留路径，供共享运行层及既有链接使用。
+The [bilingual chapter index](../course/README.md) pairs both languages by chapter number. References, projects, and compatibility entries retain their paths for shared execution and existing links.
 
 ## 参与与维护 / Contribute and maintain
 

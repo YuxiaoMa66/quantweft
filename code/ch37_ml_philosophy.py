@@ -10,7 +10,7 @@ charged, the final open position is not liquidated.
 
 Run:  .venv/bin/python code/ch37_ml_philosophy.py --out build/batches/A8-A/r1/runs/<run-id>/cli
 Writes ``ch37_results.json`` to --out (refuses to overwrite) and the three chapter figures plus a copy of the
-JSON into ``part07/chapter37/figures``.
+JSON into ``course/zh/chapters/ch37/figures``.
 """
 from __future__ import annotations
 

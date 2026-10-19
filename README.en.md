@@ -18,7 +18,7 @@ A bilingual course for learners who want to understand models, implement them, a
 | :--- | :--- | :--- |
 | [English learning guide](editions/en/README.md)<br>Follow the prerequisites through 45 chapters | [English workbook](editions/en/workbook/quantweft-workbook-en.pdf)<br>Work independently, then check complete answers | [Notebook guide](editions/en/NOTEBOOK_GUIDE.md)<br>Start with constructed-data examples |
 
-[Curriculum](editions/en/resources/syllabus.md) · [Website preview](docs/SITE.md) · [Repository guide](docs/README.md)
+[Curriculum](editions/en/resources/syllabus.md) · [Website preview](docs/SITE.md) · [Chapter texts](course/README.md) · [Repository guide](docs/README.md)
 
 ## Choose how to read
 

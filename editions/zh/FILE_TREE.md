@@ -1,6 +1,6 @@
 # 包内文件结构
 
-本地正式版（2026-10-19）。原接受载荷共842个文件；下表按目录统计。代码、数据、配置与运行器在包根两语共用；`editions/zh`与`editions/en`只放各语言的入口文档、读者资源、Notebook语言视图和完整PDF。项目与Capstone的中文文档在包根对应目录，英文文档在`editions/en/`下同名路径；章节教学源（中文`part0*/`、英文`editions/en/chapters/`）随包提供，读者路线以PDF为准。逐文件来源与SHA-256见批次清单。
+本地正式版（2026-10-19）。原接受载荷共842个文件；下表按目录统计。代码、数据、配置与运行器在包根两语共用；`editions/zh`与`editions/en`只放各语言的入口文档、读者资源、Notebook语言视图和完整PDF。项目与Capstone的中文文档在包根对应目录，英文文档在`editions/en/`下同名路径；章节教学源（中文`course/zh/chapters/`、英文`course/en/chapters/`）随包提供，读者路线以PDF为准。逐文件来源与SHA-256见批次清单。
 
 ```text
   docs/maintenance/ENVIRONMENT.json                                1
@@ -11,7 +11,8 @@
   editions                                       17
   editions/en/body                                1
   editions/en/capstone                           10
-  editions/en/chapters                           45
+  course/zh/chapters                           150
+  course/en/chapters                           45
   editions/en/figures                             1
   editions/en/workbook                                1
   editions/en/notebooks                          45
@@ -25,14 +26,6 @@
   figures                                       105
   fixtures                                       27
   notebooks                                      45
-  part00                                          2
-  part01                                         16
-  part02                                          8
-  part03                                         16
-  part04                                         14
-  part05                                         10
-  part06                                         13
-  part07                                         71
   print_examples                                  8
   projects                                        2
   projects/project01                             12
@@ -53,3 +46,5 @@
 [入口](README.md)
 
 练习册目录已改为 workbook；原842文件为历史接受载荷统计，新增名称与来源说明不计入该历史统计。
+
+当前章节位置见[中英正文索引](../../course/README.md)；上表保留原接受载荷分类，新增导航与维护文件另列于仓库。

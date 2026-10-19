@@ -190,4 +190,4 @@ q=c\sum_i\left|(1-q)w_i^{target}-w_i^{pre}\right|.
 
 ## 17. 来源与审核范围
 
-滚动窗口与漂移后权重换手依据：[DeMiguel、Garlappi、Uppal 2006会议稿](https://users.nber.org/~confer/2006/si2006/ap/uppal.pdf) §3（印刷10–12页，式10–13）；收益差/年化边界依据：[Sharpe 1994作者网页](https://web.stanford.edu/~wfsharpe/art/sr/sr.htm) Definitions、Time Dependence段。历史审核实际核读上述范围，未称2009期刊终稿已读。协方差/ERC原文作者阅读范围见[第21章来源记录](../../../part03/chapter21/source_notes.md)，数据来源/hash见manifest；本项目指标与区间由本地代码计算，不是引文统计。
+滚动窗口与漂移后权重换手依据：[DeMiguel、Garlappi、Uppal 2006会议稿](https://users.nber.org/~confer/2006/si2006/ap/uppal.pdf) §3（印刷10–12页，式10–13）；收益差/年化边界依据：[Sharpe 1994作者网页](https://web.stanford.edu/~wfsharpe/art/sr/sr.htm) Definitions、Time Dependence段。历史审核实际核读上述范围，未称2009期刊终稿已读。协方差/ERC原文作者阅读范围见[第21章来源记录](../../../course/zh/chapters/ch21/source_notes.md)，数据来源/hash见manifest；本项目指标与区间由本地代码计算，不是引文统计。

@@ -8,6 +8,8 @@
 
 [完整术语定义](resources/glossary.md) · [符号与单位](resources/notation.md) · [331键来源](resources/references.md) · [逐本Notebook导读](NOTEBOOK_GUIDE.md)
 
+[按章阅读 Markdown 正文（中英对照索引）](../../course/README.md)
+
 ## 建议学习顺序
 
 1. 第1–3章建立生命周期、Python与时间数据契约；预读第11章收益定义与第10章必要市场结构。

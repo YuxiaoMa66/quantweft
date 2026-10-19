@@ -1,6 +1,6 @@
 """Chapter 29 teaching ledger: target weights -> lagged orders -> fills -> cash/positions -> NAV.
 
-Market model (frozen A6 contract, see ``part05/chapter29/content.md`` section 5):
+Market model (frozen A6 contract, see ``course/zh/chapters/ch29/content.md`` section 5):
 
 * One currency, no external deposits or withdrawals, discrete dates ``d_0 < d_1 < ...`` that are unique and
   increasing. Each date has a mark (close) price ``P[i,t]`` and an execution price ``E[i,t]`` that occurs

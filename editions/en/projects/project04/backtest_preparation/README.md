@@ -4,7 +4,7 @@ This page explains how the A6 interface sends P4 signal targets to the Chapter 2
 
 ## Reading route
 
-Read the [Chapter 29 ledger](../../../chapters/ch29/content.md), then this guide and the A6 interface source. Continue with the [cost and execution lab](../cost_execution_lab/README.md), and use the [English cost Notebook](../cost_execution_lab/cost_execution_lab.ipynb) or the [Chinese cost Notebook](../../../../zh/projects/project04/cost_execution_lab/cost_execution_lab.ipynb) to study order slicing, partial fills, and costs. The Notebook freshly computes only the fixed-parent-order and partial/zero-fill examples; its walk-forward, sensitivity, ablation, and ledger-audit sections display the accepted summary.
+Read the [Chapter 29 ledger](../../../../../course/en/chapters/ch29/content.md), then this guide and the A6 interface source. Continue with the [cost and execution lab](../cost_execution_lab/README.md), and use the [English cost Notebook](../cost_execution_lab/cost_execution_lab.ipynb) or the [Chinese cost Notebook](../../../../zh/projects/project04/cost_execution_lab/cost_execution_lab.ipynb) to study order slicing, partial fills, and costs. The Notebook freshly computes only the fixed-parent-order and partial/zero-fill examples; its walk-forward, sensitivity, ablation, and ledger-audit sections display the accepted summary.
 
 ## A6 inputs, prices, and clock
 

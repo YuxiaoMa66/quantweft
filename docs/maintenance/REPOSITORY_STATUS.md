@@ -62,3 +62,10 @@ The earlier snapshot and naming entries describe dated actions. The current soft
 The repository layout refresh groups community documents in `.github/`, legal notices in `docs/legal/`, and maintenance records in `docs/maintenance/`. See [Repository guide](../README.md). This is a navigation change, not new course acceptance. The starting commit `fa3da8b` already differed from the older current revision hashes; the layout report records those inherited differences separately. All four PDFs retain their bytes from that starting commit.
 
 本次仅整理读者入口与说明文件，不代表重新验收课程。起始提交与旧校验清单的继承差异另记；本轮四册 PDF 字节保持不变。
+
+
+## Chapter directory structure / 章节目录整理
+
+All 45 chapter pairs now live under `course/{zh,en}/chapters/chNN/`, indexed at [Course chapters](../../course/README.md). Chinese source notes, images, and chapter fixtures move with their chapter. The two body PDFs are rebuilt from the accepted B6 typeset source with path-only adapters, preserving formulas, examples, exercises, and answers. Workbook PDFs, Notebook code cells, data, and executable Python logic retain their bytes or semantics. Shared project and Capstone execution directories stay at their existing paths. This revision applies to the GitHub reader checkout; original editorial source paths and prior accepted packages retain their historical identity. See the current directory revision for file identities and bounded review evidence.
+
+45 章中英正文现已按章配对归入 `course/`；中文来源注记与配图随章迁移。两本正文 PDF 同步更新路径，练习册不重建。项目及 Capstone 仍保留共享执行路径。原编辑源码与既有正式包不按 GitHub 目录强制搬迁；本轮不扩展市场研究、教学结论或公开发布许可。

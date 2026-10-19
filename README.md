@@ -18,7 +18,7 @@
 | :--- | :--- | :--- |
 | [中文学习指南](editions/zh/README.md)<br>按先修关系进入 45 章课程 | [中文练习册](editions/zh/workbook/quantweft-workbook-zh.pdf)<br>独立推导，再核对完整答案 | [Notebook 导读](editions/zh/NOTEBOOK_GUIDE.md)<br>从构造数据示例开始 |
 
-[课程大纲](editions/zh/resources/syllabus.md) · [双语网站预览](docs/SITE.md) · [仓库导航](docs/README.md)
+[课程大纲](editions/zh/resources/syllabus.md) · [双语网站预览](docs/SITE.md) · [逐章正文](course/README.md) · [仓库导航](docs/README.md)
 
 ## 选择你的阅读方式
 

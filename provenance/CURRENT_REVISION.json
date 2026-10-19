@@ -1,24 +1,219 @@
 {
-  "revision": "READER_LAYOUT_20261019",
-  "scope": "Reader navigation and explanatory-document organization; inherited committed identities recorded without extending course acceptance",
+  "revision": "COURSE_STRUCTURE_20261019_R3",
+  "scope": "Bilingual chapter directory and corresponding body PDF path-only revision, independently reviewed within stated limits; MIT/CC-BY-SA scopes unchanged",
   "baseline_sha256": "7b3ac9416e40dc72ab46e9d47caa444e4c88848a5190d533268aab30c919e2d5",
   "path_map": {
     "editions/en/body/main.pdf": "editions/en/body/quantweft-textbook-en.pdf",
     "editions/en/loom/main.pdf": "editions/en/workbook/quantweft-workbook-en.pdf",
     "editions/zh/body/main.pdf": "editions/zh/body/quantweft-textbook-zh.pdf",
     "editions/zh/loom/main.pdf": "editions/zh/workbook/quantweft-workbook-zh.pdf",
-    "ENVIRONMENT.json": "docs/maintenance/ENVIRONMENT.json"
+    "ENVIRONMENT.json": "docs/maintenance/ENVIRONMENT.json",
+    "editions/en/chapters/ch01/content.md": "course/en/chapters/ch01/content.md",
+    "editions/en/chapters/ch02/content.md": "course/en/chapters/ch02/content.md",
+    "editions/en/chapters/ch03/content.md": "course/en/chapters/ch03/content.md",
+    "editions/en/chapters/ch04/content.md": "course/en/chapters/ch04/content.md",
+    "editions/en/chapters/ch05/content.md": "course/en/chapters/ch05/content.md",
+    "editions/en/chapters/ch06/content.md": "course/en/chapters/ch06/content.md",
+    "editions/en/chapters/ch07/content.md": "course/en/chapters/ch07/content.md",
+    "editions/en/chapters/ch08/content.md": "course/en/chapters/ch08/content.md",
+    "editions/en/chapters/ch09/content.md": "course/en/chapters/ch09/content.md",
+    "editions/en/chapters/ch10/content.md": "course/en/chapters/ch10/content.md",
+    "editions/en/chapters/ch11/content.md": "course/en/chapters/ch11/content.md",
+    "editions/en/chapters/ch12/content.md": "course/en/chapters/ch12/content.md",
+    "editions/en/chapters/ch13/content.md": "course/en/chapters/ch13/content.md",
+    "editions/en/chapters/ch14/content.md": "course/en/chapters/ch14/content.md",
+    "editions/en/chapters/ch15/content.md": "course/en/chapters/ch15/content.md",
+    "editions/en/chapters/ch16/content.md": "course/en/chapters/ch16/content.md",
+    "editions/en/chapters/ch17/content.md": "course/en/chapters/ch17/content.md",
+    "editions/en/chapters/ch18/content.md": "course/en/chapters/ch18/content.md",
+    "editions/en/chapters/ch19/content.md": "course/en/chapters/ch19/content.md",
+    "editions/en/chapters/ch20/content.md": "course/en/chapters/ch20/content.md",
+    "editions/en/chapters/ch21/content.md": "course/en/chapters/ch21/content.md",
+    "editions/en/chapters/ch22/content.md": "course/en/chapters/ch22/content.md",
+    "editions/en/chapters/ch23/content.md": "course/en/chapters/ch23/content.md",
+    "editions/en/chapters/ch24/content.md": "course/en/chapters/ch24/content.md",
+    "editions/en/chapters/ch25/content.md": "course/en/chapters/ch25/content.md",
+    "editions/en/chapters/ch26/content.md": "course/en/chapters/ch26/content.md",
+    "editions/en/chapters/ch27/content.md": "course/en/chapters/ch27/content.md",
+    "editions/en/chapters/ch28/content.md": "course/en/chapters/ch28/content.md",
+    "editions/en/chapters/ch29/content.md": "course/en/chapters/ch29/content.md",
+    "editions/en/chapters/ch30/content.md": "course/en/chapters/ch30/content.md",
+    "editions/en/chapters/ch31/content.md": "course/en/chapters/ch31/content.md",
+    "editions/en/chapters/ch32/content.md": "course/en/chapters/ch32/content.md",
+    "editions/en/chapters/ch33/content.md": "course/en/chapters/ch33/content.md",
+    "editions/en/chapters/ch34/content.md": "course/en/chapters/ch34/content.md",
+    "editions/en/chapters/ch35/content.md": "course/en/chapters/ch35/content.md",
+    "editions/en/chapters/ch36/content.md": "course/en/chapters/ch36/content.md",
+    "editions/en/chapters/ch37/content.md": "course/en/chapters/ch37/content.md",
+    "editions/en/chapters/ch38/content.md": "course/en/chapters/ch38/content.md",
+    "editions/en/chapters/ch39/content.md": "course/en/chapters/ch39/content.md",
+    "editions/en/chapters/ch40/content.md": "course/en/chapters/ch40/content.md",
+    "editions/en/chapters/ch41/content.md": "course/en/chapters/ch41/content.md",
+    "editions/en/chapters/ch42/content.md": "course/en/chapters/ch42/content.md",
+    "editions/en/chapters/ch43/content.md": "course/en/chapters/ch43/content.md",
+    "editions/en/chapters/ch44/content.md": "course/en/chapters/ch44/content.md",
+    "editions/en/chapters/ch45/content.md": "course/en/chapters/ch45/content.md",
+    "part00/chapter01/content.md": "course/zh/chapters/ch01/content.md",
+    "part00/chapter01/source_notes.md": "course/zh/chapters/ch01/source_notes.md",
+    "part01/chapter02/content.md": "course/zh/chapters/ch02/content.md",
+    "part01/chapter02/source_notes.md": "course/zh/chapters/ch02/source_notes.md",
+    "part01/chapter03/content.md": "course/zh/chapters/ch03/content.md",
+    "part01/chapter03/source_notes.md": "course/zh/chapters/ch03/source_notes.md",
+    "part01/chapter04/content.md": "course/zh/chapters/ch04/content.md",
+    "part01/chapter04/source_notes.md": "course/zh/chapters/ch04/source_notes.md",
+    "part01/chapter05/content.md": "course/zh/chapters/ch05/content.md",
+    "part01/chapter05/source_notes.md": "course/zh/chapters/ch05/source_notes.md",
+    "part01/chapter06/content.md": "course/zh/chapters/ch06/content.md",
+    "part01/chapter06/source_notes.md": "course/zh/chapters/ch06/source_notes.md",
+    "part01/chapter07/content.md": "course/zh/chapters/ch07/content.md",
+    "part01/chapter07/source_notes.md": "course/zh/chapters/ch07/source_notes.md",
+    "part01/chapter08/content.md": "course/zh/chapters/ch08/content.md",
+    "part01/chapter08/source_notes.md": "course/zh/chapters/ch08/source_notes.md",
+    "part01/chapter09/content.md": "course/zh/chapters/ch09/content.md",
+    "part01/chapter09/source_notes.md": "course/zh/chapters/ch09/source_notes.md",
+    "part02/chapter10/content.md": "course/zh/chapters/ch10/content.md",
+    "part02/chapter10/source_notes.md": "course/zh/chapters/ch10/source_notes.md",
+    "part02/chapter11/content.md": "course/zh/chapters/ch11/content.md",
+    "part02/chapter11/source_notes.md": "course/zh/chapters/ch11/source_notes.md",
+    "part02/chapter12/content.md": "course/zh/chapters/ch12/content.md",
+    "part02/chapter12/source_notes.md": "course/zh/chapters/ch12/source_notes.md",
+    "part02/chapter13/content.md": "course/zh/chapters/ch13/content.md",
+    "part02/chapter13/source_notes.md": "course/zh/chapters/ch13/source_notes.md",
+    "part03/chapter14/content.md": "course/zh/chapters/ch14/content.md",
+    "part03/chapter14/source_notes.md": "course/zh/chapters/ch14/source_notes.md",
+    "part03/chapter15/content.md": "course/zh/chapters/ch15/content.md",
+    "part03/chapter15/source_notes.md": "course/zh/chapters/ch15/source_notes.md",
+    "part03/chapter16/content.md": "course/zh/chapters/ch16/content.md",
+    "part03/chapter16/source_notes.md": "course/zh/chapters/ch16/source_notes.md",
+    "part03/chapter17/content.md": "course/zh/chapters/ch17/content.md",
+    "part03/chapter17/source_notes.md": "course/zh/chapters/ch17/source_notes.md",
+    "part03/chapter18/content.md": "course/zh/chapters/ch18/content.md",
+    "part03/chapter18/source_notes.md": "course/zh/chapters/ch18/source_notes.md",
+    "part03/chapter19/content.md": "course/zh/chapters/ch19/content.md",
+    "part03/chapter19/source_notes.md": "course/zh/chapters/ch19/source_notes.md",
+    "part03/chapter20/content.md": "course/zh/chapters/ch20/content.md",
+    "part03/chapter20/source_notes.md": "course/zh/chapters/ch20/source_notes.md",
+    "part03/chapter21/content.md": "course/zh/chapters/ch21/content.md",
+    "part03/chapter21/source_notes.md": "course/zh/chapters/ch21/source_notes.md",
+    "part04/chapter22/content.md": "course/zh/chapters/ch22/content.md",
+    "part04/chapter22/source_notes.md": "course/zh/chapters/ch22/source_notes.md",
+    "part04/chapter23/content.md": "course/zh/chapters/ch23/content.md",
+    "part04/chapter23/source_notes.md": "course/zh/chapters/ch23/source_notes.md",
+    "part04/chapter24/content.md": "course/zh/chapters/ch24/content.md",
+    "part04/chapter24/source_notes.md": "course/zh/chapters/ch24/source_notes.md",
+    "part04/chapter25/content.md": "course/zh/chapters/ch25/content.md",
+    "part04/chapter25/source_notes.md": "course/zh/chapters/ch25/source_notes.md",
+    "part04/chapter26/content.md": "course/zh/chapters/ch26/content.md",
+    "part04/chapter26/source_notes.md": "course/zh/chapters/ch26/source_notes.md",
+    "part04/chapter27/content.md": "course/zh/chapters/ch27/content.md",
+    "part04/chapter27/source_notes.md": "course/zh/chapters/ch27/source_notes.md",
+    "part04/chapter28/content.md": "course/zh/chapters/ch28/content.md",
+    "part04/chapter28/source_notes.md": "course/zh/chapters/ch28/source_notes.md",
+    "part05/chapter29/content.md": "course/zh/chapters/ch29/content.md",
+    "part05/chapter29/source_notes.md": "course/zh/chapters/ch29/source_notes.md",
+    "part05/chapter30/content.md": "course/zh/chapters/ch30/content.md",
+    "part05/chapter30/source_notes.md": "course/zh/chapters/ch30/source_notes.md",
+    "part05/chapter31/content.md": "course/zh/chapters/ch31/content.md",
+    "part05/chapter31/source_notes.md": "course/zh/chapters/ch31/source_notes.md",
+    "part05/chapter32/content.md": "course/zh/chapters/ch32/content.md",
+    "part05/chapter32/source_notes.md": "course/zh/chapters/ch32/source_notes.md",
+    "part05/chapter33/content.md": "course/zh/chapters/ch33/content.md",
+    "part05/chapter33/source_notes.md": "course/zh/chapters/ch33/source_notes.md",
+    "part06/chapter34/content.md": "course/zh/chapters/ch34/content.md",
+    "part06/chapter34/source_notes.md": "course/zh/chapters/ch34/source_notes.md",
+    "part06/chapter35/content.md": "course/zh/chapters/ch35/content.md",
+    "part06/chapter35/figures/ablation_values.csv": "course/zh/chapters/ch35/figures/ablation_values.csv",
+    "part06/chapter35/figures/capacity_curve.csv": "course/zh/chapters/ch35/figures/capacity_curve.csv",
+    "part06/chapter35/figures/capacity_curve.png": "course/zh/chapters/ch35/figures/capacity_curve.png",
+    "part06/chapter35/figures/cost_ablation.png": "course/zh/chapters/ch35/figures/cost_ablation.png",
+    "part06/chapter35/source_notes.md": "course/zh/chapters/ch35/source_notes.md",
+    "part06/chapter36/content.md": "course/zh/chapters/ch36/content.md",
+    "part06/chapter36/figures/ac_frontier_values.csv": "course/zh/chapters/ch36/figures/ac_frontier_values.csv",
+    "part06/chapter36/figures/almgren_chriss_frontier.png": "course/zh/chapters/ch36/figures/almgren_chriss_frontier.png",
+    "part06/chapter36/figures/execution_trajectory.png": "course/zh/chapters/ch36/figures/execution_trajectory.png",
+    "part06/chapter36/source_notes.md": "course/zh/chapters/ch36/source_notes.md",
+    "part07/chapter37/content.md": "course/zh/chapters/ch37/content.md",
+    "part07/chapter37/figures/ch37_results.json": "course/zh/chapters/ch37/figures/ch37_results.json",
+    "part07/chapter37/figures/fig37_1_decision_case.png": "course/zh/chapters/ch37/figures/fig37_1_decision_case.png",
+    "part07/chapter37/figures/fig37_2_regime_shift.png": "course/zh/chapters/ch37/figures/fig37_2_regime_shift.png",
+    "part07/chapter37/figures/fig37_3_max_sharpe.png": "course/zh/chapters/ch37/figures/fig37_3_max_sharpe.png",
+    "part07/chapter37/source_notes.md": "course/zh/chapters/ch37/source_notes.md",
+    "part07/chapter38/content.md": "course/zh/chapters/ch38/content.md",
+    "part07/chapter38/figures/ch38_results.json": "course/zh/chapters/ch38/figures/ch38_results.json",
+    "part07/chapter38/figures/fig38_1_label_timeline.png": "course/zh/chapters/ch38/figures/fig38_1_label_timeline.png",
+    "part07/chapter38/figures/fig38_2_validation_schemes.png": "course/zh/chapters/ch38/figures/fig38_2_validation_schemes.png",
+    "part07/chapter38/figures/fig38_3_calibration.png": "course/zh/chapters/ch38/figures/fig38_3_calibration.png",
+    "part07/chapter38/source_notes.md": "course/zh/chapters/ch38/source_notes.md",
+    "part07/chapter39/content.md": "course/zh/chapters/ch39/content.md",
+    "part07/chapter39/figures/ch39_results.json": "course/zh/chapters/ch39/figures/ch39_results.json",
+    "part07/chapter39/figures/fig39_1_paths.png": "course/zh/chapters/ch39/figures/fig39_1_paths.png",
+    "part07/chapter39/figures/fig39_2_bias_variance.png": "course/zh/chapters/ch39/figures/fig39_2_bias_variance.png",
+    "part07/chapter39/figures/fig39_3_display_revision.png": "course/zh/chapters/ch39/figures/fig39_3_display_revision.png",
+    "part07/chapter39/figures/fig39_3_model_comparison.png": "course/zh/chapters/ch39/figures/fig39_3_model_comparison.png",
+    "part07/chapter39/source_notes.md": "course/zh/chapters/ch39/source_notes.md",
+    "part07/chapter40/content.md": "course/zh/chapters/ch40/content.md",
+    "part07/chapter40/figures/fig40_1_split_and_forest.png": "course/zh/chapters/ch40/figures/fig40_1_split_and_forest.png",
+    "part07/chapter40/figures/fig40_2_boosting_rounds.png": "course/zh/chapters/ch40/figures/fig40_2_boosting_rounds.png",
+    "part07/chapter40/figures/fig40_3_model_comparison.png": "course/zh/chapters/ch40/figures/fig40_3_model_comparison.png",
+    "part07/chapter40/figures/fig40_4_importance.png": "course/zh/chapters/ch40/figures/fig40_4_importance.png",
+    "part07/chapter40/source_notes.md": "course/zh/chapters/ch40/source_notes.md",
+    "part07/chapter41/content.md": "course/zh/chapters/ch41/content.md",
+    "part07/chapter41/figures/fig41_1_pca_in_vs_out.png": "course/zh/chapters/ch41/figures/fig41_1_pca_in_vs_out.png",
+    "part07/chapter41/figures/fig41_2_filtered_vs_smoothed.png": "course/zh/chapters/ch41/figures/fig41_2_filtered_vs_smoothed.png",
+    "part07/chapter41/figures/fig41_3_regime_rules.png": "course/zh/chapters/ch41/figures/fig41_3_regime_rules.png",
+    "part07/chapter41/source_notes.md": "course/zh/chapters/ch41/source_notes.md",
+    "part07/chapter42/content.md": "course/zh/chapters/ch42/content.md",
+    "part07/chapter42/figures/r1/causal_attention_weights.png": "course/zh/chapters/ch42/figures/r1/causal_attention_weights.png",
+    "part07/chapter42/figures/r1/cumulative_returns.png": "course/zh/chapters/ch42/figures/r1/cumulative_returns.png",
+    "part07/chapter42/figures/r1/daily_ic_timeseries.png": "course/zh/chapters/ch42/figures/r1/daily_ic_timeseries.png",
+    "part07/chapter42/figures/r1/loss_curve.png": "course/zh/chapters/ch42/figures/r1/loss_curve.png",
+    "part07/chapter42/figures/r1/predictions_vs_targets.png": "course/zh/chapters/ch42/figures/r1/predictions_vs_targets.png",
+    "part07/chapter42/figures/root_r2/causal_attention_weights.png": "course/zh/chapters/ch42/figures/root_r2/causal_attention_weights.png",
+    "part07/chapter42/figures/root_r2/cumulative_returns.png": "course/zh/chapters/ch42/figures/root_r2/cumulative_returns.png",
+    "part07/chapter42/figures/root_r2/daily_ic_timeseries.png": "course/zh/chapters/ch42/figures/root_r2/daily_ic_timeseries.png",
+    "part07/chapter42/figures/root_r2/loss_curve.png": "course/zh/chapters/ch42/figures/root_r2/loss_curve.png",
+    "part07/chapter42/figures/root_r2/predictions_vs_targets.png": "course/zh/chapters/ch42/figures/root_r2/predictions_vs_targets.png",
+    "part07/chapter42/source_notes.md": "course/zh/chapters/ch42/source_notes.md",
+    "part07/chapter43/content.md": "course/zh/chapters/ch43/content.md",
+    "part07/chapter43/figures/r1/fig43_1_bayesian_updating.png": "course/zh/chapters/ch43/figures/r1/fig43_1_bayesian_updating.png",
+    "part07/chapter43/figures/r1/fig43_2_causal_simpson.png": "course/zh/chapters/ch43/figures/r1/fig43_2_causal_simpson.png",
+    "part07/chapter43/figures/r1/fig43_3_pit_text_timeline.png": "course/zh/chapters/ch43/figures/r1/fig43_3_pit_text_timeline.png",
+    "part07/chapter43/figures/r1/fig43_4_text_prediction_metrics.png": "course/zh/chapters/ch43/figures/r1/fig43_4_text_prediction_metrics.png",
+    "part07/chapter43/figures/r1/fig43_5_causal_dag.png": "course/zh/chapters/ch43/figures/r1/fig43_5_causal_dag.png",
+    "part07/chapter43/figures/root_r2/fig43_1_bayesian_updating.png": "course/zh/chapters/ch43/figures/root_r2/fig43_1_bayesian_updating.png",
+    "part07/chapter43/figures/root_r2/fig43_2_causal_simpson.png": "course/zh/chapters/ch43/figures/root_r2/fig43_2_causal_simpson.png",
+    "part07/chapter43/figures/root_r2/fig43_3_pit_text_timeline.png": "course/zh/chapters/ch43/figures/root_r2/fig43_3_pit_text_timeline.png",
+    "part07/chapter43/figures/root_r2/fig43_4_text_prediction_metrics.png": "course/zh/chapters/ch43/figures/root_r2/fig43_4_text_prediction_metrics.png",
+    "part07/chapter43/figures/root_r2/fig43_5_causal_dag.png": "course/zh/chapters/ch43/figures/root_r2/fig43_5_causal_dag.png",
+    "part07/chapter43/figures/root_r3/fig43_1_bayesian_updating.png": "course/zh/chapters/ch43/figures/root_r3/fig43_1_bayesian_updating.png",
+    "part07/chapter43/figures/root_r3/fig43_2_causal_simpson.png": "course/zh/chapters/ch43/figures/root_r3/fig43_2_causal_simpson.png",
+    "part07/chapter43/figures/root_r3/fig43_3_pit_text_timeline.png": "course/zh/chapters/ch43/figures/root_r3/fig43_3_pit_text_timeline.png",
+    "part07/chapter43/figures/root_r3/fig43_4_text_prediction_metrics.png": "course/zh/chapters/ch43/figures/root_r3/fig43_4_text_prediction_metrics.png",
+    "part07/chapter43/figures/root_r3/fig43_5_causal_dag.png": "course/zh/chapters/ch43/figures/root_r3/fig43_5_causal_dag.png",
+    "part07/chapter43/source_notes.md": "course/zh/chapters/ch43/source_notes.md",
+    "part07/chapter44/content.md": "course/zh/chapters/ch44/content.md",
+    "part07/chapter44/figures/fig44_brownian.png": "course/zh/chapters/ch44/figures/fig44_brownian.png",
+    "part07/chapter44/figures/fig44_delta.png": "course/zh/chapters/ch44/figures/fig44_delta.png",
+    "part07/chapter44/figures/fig44_euler.png": "course/zh/chapters/ch44/figures/fig44_euler.png",
+    "part07/chapter44/figures/fig44_gbm.png": "course/zh/chapters/ch44/figures/fig44_gbm.png",
+    "part07/chapter44/figures/fig44_hedge.png": "course/zh/chapters/ch44/figures/fig44_hedge.png",
+    "part07/chapter44/figures/fig44_mc.png": "course/zh/chapters/ch44/figures/fig44_mc.png",
+    "part07/chapter44/figures/fig44_qv.png": "course/zh/chapters/ch44/figures/fig44_qv.png",
+    "part07/chapter44/figures/fig44_tree.png": "course/zh/chapters/ch44/figures/fig44_tree.png",
+    "part07/chapter44/source_notes.md": "course/zh/chapters/ch44/source_notes.md",
+    "part07/chapter45/content.md": "course/zh/chapters/ch45/content.md",
+    "part07/chapter45/source_notes.md": "course/zh/chapters/ch45/source_notes.md"
   },
   "intentional_document_changes": {
     "README.md": {
-      "before_sha256": "7bd2a97755e9d9e13555c8fc348b01a863dc35c2b296dd6d60af9c1d7b3bf105",
-      "sha256": "2b8b0c629c20b417172ebce3f34849317919399c7196bee7c52f3e2b26ad7c0e",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+      "before_sha256": "2b8b0c629c20b417172ebce3f34849317919399c7196bee7c52f3e2b26ad7c0e",
+      "sha256": "6304b2e3e808b85a7cf91583db7e2244461e09597c06f8abc3f2309f03c111bf",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
     },
     "editions/en/FILE_TREE.md": {
-      "before_sha256": "02b8c832b18488eda788961eff2cbbb8fb6580aaee0c932301971b73cfbda2a8",
-      "sha256": "7f84249a7049a978c1dd87077fe61b3551814b7f822869e15f718f87341582c7",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+      "before_sha256": "7f84249a7049a978c1dd87077fe61b3551814b7f822869e15f718f87341582c7",
+      "sha256": "28bc39784ce2f0e16474067d0115059a9ff095977f8f876f41654b5f06357193",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
     },
     "editions/en/LOCAL_VALIDATION.md": {
       "before_sha256": "506490d4075d47555a70108443f1127fabf2f89718ed01f5670b092193115585",
@@ -29,9 +224,9 @@
       "sha256": "2ce169ea364e2eb90e92009da18ccd64cf53f1eb2c4b5ab2849ee02aa5e631cf"
     },
     "editions/en/README.md": {
-      "before_sha256": "e19595c879dfe4eefbd0c349af7dbea9b125fc282d5ecf0e1c4b305e8bd8ad18",
-      "sha256": "5f3e1c3c85a97a791bb58426e3b5ae5d29834e92337fa21512e981246ba890b8",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+      "before_sha256": "5f3e1c3c85a97a791bb58426e3b5ae5d29834e92337fa21512e981246ba890b8",
+      "sha256": "4b5348319bb0080d29a7fc44859e4a204b25dec53c24e1c7e6118988661c61e6",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
     },
     "editions/en/projects/project06/README.md": {
       "before_sha256": "7dd61f840f96a5b60c1b83d09082bcc296bb3bf74952138de43e9594ac4488cb",
@@ -46,13 +241,14 @@
       "sha256": "e127f0515e0129f3dd5655ed3764ac6834d9d845ea135ebe9b513df335e44788"
     },
     "editions/en/resources/syllabus.md": {
-      "before_sha256": "366cb535f98b746508fa378d9f0d69065038a23388adaac0f6e1be12a68462e6",
-      "sha256": "6329320d306984317c0dea7ecca54a9eb446de11774a1ec4a94f6f9c84fe9bda"
+      "before_sha256": "6329320d306984317c0dea7ecca54a9eb446de11774a1ec4a94f6f9c84fe9bda",
+      "sha256": "427c37ab94b542571222bb6bd6f16ecaf4e451ab771eefbe9507ceeed2f0dc01",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
     },
     "editions/zh/FILE_TREE.md": {
-      "before_sha256": "9e0b22e6487f8a9ae8b0de49006dc8fe24d5fe731cb1769a7682aed39a3c64dd",
-      "sha256": "8623008ec189829ba307919c6a39a3ee5beecfa9d8f2fa238fea251c6c335269",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+      "before_sha256": "8623008ec189829ba307919c6a39a3ee5beecfa9d8f2fa238fea251c6c335269",
+      "sha256": "c2947e2ece759666e56ab56301152fa631353a4ede1f835509f1e49621e02a0a",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
     },
     "editions/zh/LOCAL_VALIDATION.md": {
       "before_sha256": "cc27b12c3cde0da694ff300829418ad769eef2f18b203a46aba4bcae4d277300",
@@ -63,13 +259,14 @@
       "sha256": "5e6f8551c617516092af2247daff47c814a8e924c50e090235bf45696e863d9f"
     },
     "editions/zh/README.md": {
-      "before_sha256": "34b5d6a86f2c0437e9dc17cec07f726ccc8a5b618ec502857984611095acd2f8",
-      "sha256": "aed90fa44c83002c7f9335c5f9dc592ba46782217998124cfc2c2e1ea644162e",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+      "before_sha256": "aed90fa44c83002c7f9335c5f9dc592ba46782217998124cfc2c2e1ea644162e",
+      "sha256": "9824a6d1d4518d5ce365ee0528333e63a2564236154f863aa5af0e09949f7613",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
     },
     "editions/zh/resources/syllabus.md": {
-      "before_sha256": "12130be67076af9ee7c72cf6fc820428ca3cf37462858f939efbdd1e62682766",
-      "sha256": "9a79f339ccbf929598096fbf60676cce63489473e0b824c4f046540e56e0cd5e"
+      "before_sha256": "9a79f339ccbf929598096fbf60676cce63489473e0b824c4f046540e56e0cd5e",
+      "sha256": "e304105bc464a9e24b14a83427901236a71c9fcf6603291be2a96c1eee1b1656",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
     },
     "projects/project06/README.md": {
       "before_sha256": "2e62f7d474c8cd4d7f83f31be814ba48dfd1c071f18b1c1c460f60d5ff6fc60f",
@@ -88,144 +285,19 @@
       "sha256": "7939311f4db77ab1969be53ee7b2cd7e8902dcbde0956713d00858c8be7b1420"
     },
     "capstone/README.md": {
-      "before_sha256": "adfdc5629298c8a0c232f54cd2220db5b30974d97718dccc3e08d56ca374e19e",
-      "sha256": "064c6e6c829d724dc9861ff06beee27aa0be225ab31a014d0cb51f5ab90800f6",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+      "before_sha256": "064c6e6c829d724dc9861ff06beee27aa0be225ab31a014d0cb51f5ab90800f6",
+      "sha256": "62ceca99874a0cc66b14bf031aa4181525eea3c603f2e026dda6016ff9491922",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
     },
     "editions/en/body/quantweft-textbook-en.pdf": {
-      "before_sha256": "009cc5732e164d2aed71423257c38fb521c1906ccfdcba79f6aaa7e9b4b9598a",
-      "sha256": "ef6794a63f24c4b712c43ebd1335390305dbffbad871d046384c7d4b3392dd5c",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+      "before_sha256": "ef6794a63f24c4b712c43ebd1335390305dbffbad871d046384c7d4b3392dd5c",
+      "sha256": "c368f2fc96f924e553478558e44e1ca7bddda322ca2df3c0cd82a8fd0cfd62b5",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
     },
     "editions/en/capstone/README.md": {
-      "before_sha256": "2bb3aeddc8886d4dde83b2f6f92de5beda0ac812e3b42cfce44b095cf4bd9589",
-      "sha256": "ec9ea01d71602f79edab8dfd38099ee99bf011ecdf666e1bc963497af63e5ce0",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch01/content.md": {
-      "before_sha256": "83a85d79ac0813066c07b8f55843784ae7a105d08931788e1db29cc44441efb3",
-      "sha256": "a16b1e17b03f0b1fb1535a06d5fcdfee03f70eb55d7198c0f6b84df72c686351",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch02/content.md": {
-      "before_sha256": "6847f58a7d7767a22ee022c7fd1b707e47dfbf4d579cba89a8f730cf28809f84",
-      "sha256": "0b73ff32c3fd968ae6a7f37b92e5bce7d0945e1b341c154626943236634cd561",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch05/content.md": {
-      "before_sha256": "9b9db8f2eb016fb819096a0d9b8af4b1aeae9a8d6df309589de860fe0dc13e24",
-      "sha256": "aa2e6d6e04118b7591fb1d0e1c465f7e86a53a69cf823579daa70b7713b0afeb",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch06/content.md": {
-      "before_sha256": "c22b4f9bbe0eff3c83eb79c90719adc037073c33b0fc42991c1470cd67c0eab0",
-      "sha256": "e98ac4d2e011165cc48e7df5837d718f9b810a32464d13ce13f845834bcdd5e2",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch07/content.md": {
-      "before_sha256": "99d5b857f7ae93304e26c23292395227d0fef0c0b9a66f20de475fa6da59de12",
-      "sha256": "44abc4b6ca8a443f77c878387896fb1ea6037f463f84adbaf96fc1d96a5ca1f8",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch08/content.md": {
-      "before_sha256": "ce9bbb708296a1503f7da2c9ed85235b468af54b4fc4ba9cc85a1dda5e27d536",
-      "sha256": "f4da451135b2cecd20403eaec1ab675a9117716b07578d6ee5ae396fa982a7cd",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch09/content.md": {
-      "before_sha256": "06c9784de6a4a08048aa2bf767e6685010bbca9642456f9879431c1aeb98603d",
-      "sha256": "87d6158c8d3d9b117d9ee3a7f6b815e0fcba52bfd82e45b2e264fea1fc6d7087",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch10/content.md": {
-      "before_sha256": "d6d106b8eb3dd8bce5c4ee2381fb90aeb33b32756ad7ecf6399072bf0b2251ce",
-      "sha256": "6f0cc3f01d110d23e745116ca22b560ea699e8a6012a5971b3998ea56c24ec0b",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch11/content.md": {
-      "before_sha256": "cfd7ab515d6a5f00eed2e92241d1c854d309ebd2f666c26148b1cfc41bdbdde0",
-      "sha256": "38c13c6693f80d01388b3f60c04e258de96b360e71f7242c0b8df49caf030faf",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch12/content.md": {
-      "before_sha256": "3c8d996a930460381ca8b3efec1d8fd76759fc1f1a118c2cf9a7c7f1e40d169e",
-      "sha256": "1d98027ee23ce6bee19b6367f82a2e76ca62528f775b09b5a26369c9c3cf567f",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch13/content.md": {
-      "before_sha256": "ad91d238d743284770ce6484bc9893cc6b351601aa1cb37986a1518e5c896e37",
-      "sha256": "216db62746cec73d09d3bcb39d22c7213c80aff9dea481d25b5d03a4f2f5e1dd",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch14/content.md": {
-      "before_sha256": "75ff2c93cdbd9c6245436e87eaf4036701733af052c0fb2c4b4347b1d414d938",
-      "sha256": "35acb6c68955df71412bce475e026d0e729e2730578256052821e79ec363bbef",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch15/content.md": {
-      "before_sha256": "0b03419f0b6c6c82df01a3ec8655f639f055561de67140f18c69044692b61899",
-      "sha256": "6ce593c518b5c335c9321aed7d77feb3653b98648a8565e9a6e5fb2dc1d678d6",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch16/content.md": {
-      "before_sha256": "ca5a776f55d6252efd0126299a289ac8fc63796345306f9ee058e2c91cf50507",
-      "sha256": "3b5fd2892cc9799c01f0653b44e428bc3c9ece0ab8bf41dfb12ff017de10b660",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch17/content.md": {
-      "before_sha256": "f5717a6f76619ff1a519befbc3b32d3efe9b5a0b82b70964ee43560e35953b20",
-      "sha256": "9196ec69f53cd34331ddf7094d962b7575314d861cb35619297df7866f7796aa",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch18/content.md": {
-      "before_sha256": "114378503df745e274bb51ce1235279142941fc167fee360ad1a0129f031e819",
-      "sha256": "bd451b163850e0704931b88a909e8bb62d11d300e043dce4e4af78407d6df220",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch19/content.md": {
-      "before_sha256": "8eed263a82ca0e0a45d0b719e60207727e7f0463571484029d0c5ac576af51ea",
-      "sha256": "a088f4a83911bf1907c39d79ea0d558af2ca960fb06062c47e4a592b448cec5a",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch20/content.md": {
-      "before_sha256": "3c6bb204c447d01e57e81852a9161344c7e9a41018eaa5ec499a42e3425c931f",
-      "sha256": "12f0f73dffb7b28540521805a31c075049e08caec6ccb805141d152ce6835de8",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch21/content.md": {
-      "before_sha256": "ac33abb93b448e6f667caa03666fdcafc343b56883c88211988aa372dc97eb4c",
-      "sha256": "ab310a7d3bf7271d9b44a34f2d37900ddcfbd342be7b63dcafe0cccb4a90d206",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch24/content.md": {
-      "before_sha256": "7d2348b0297f2c72d3aa604ebc2d61c5bf31ec39bb0faac55d663f97cc2a1f6f",
-      "sha256": "efd6ffcfcf5a6cc1fff63dd3fac0ebbb1699a21db5f84f2d4c9490bbe9e2c031",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch32/content.md": {
-      "before_sha256": "67402fe39f76a2d36791ab56c2428e1b3b4aec2f132719d1a1aa94363d1cc7ab",
-      "sha256": "01b51c87d09bdbaf6437914981fe4a6148d4e764feef035f214ff54d8166e71e",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch33/content.md": {
-      "before_sha256": "92878de7d9d1e3e36f3712bda9d7759dfbf8d029e78dd32365a6e76448801e80",
-      "sha256": "ce1dc403ea494973c93b911d61bc4dcdfcded5a44eb8e5ec141103868b77bfe2",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch42/content.md": {
-      "before_sha256": "896ac5a098943b8252434a6bda0a2dbcfc24da3d414882298978ae01eb0d004a",
-      "sha256": "2dd49c20e2e46eeebc9b9b16553b487f1eb1ea766f1dc997531eddb102db3308",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch44/content.md": {
-      "before_sha256": "f85abbb7326bf3b68f1509d70d0740ef60397f545cd15a3d06d2f4e61cc484c6",
-      "sha256": "909c3601defd73b37a526dbdd07fcb61db62b4abd53020cafd962b59478c8a38",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "editions/en/chapters/ch45/content.md": {
-      "before_sha256": "f99b9463261d5ff7b3114c606bd8e9f00f931b69462a9c843145c9f4c79c32ce",
-      "sha256": "62775ae0e3bba6914399a94ed9c5d27e56afa5b8eff6a9772f23a24a75b19933",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+      "before_sha256": "ec9ea01d71602f79edab8dfd38099ee99bf011ecdf666e1bc963497af63e5ce0",
+      "sha256": "be189a86b90099983a4ce5b2fc621394f188a402877931d1416743b9c4cb4542",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
     },
     "editions/en/projects/project01/data_dictionary.md": {
       "before_sha256": "3250f3e0c623f820f2756a7af15a7f72e3832ac4a76c2519d0f427eb64324d0e",
@@ -248,19 +320,19 @@
       "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
     },
     "editions/en/projects/project04/READER_GUIDE.md": {
-      "before_sha256": "0c75923726aba613c5dd7e84e1945003ac68f623f847f6e0d6a740314a1fd163",
-      "sha256": "9a989cd8dcf07c18a25f22ea0a6333fef248dabc4e8996b416aeb2c2444c62d9",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+      "before_sha256": "9a989cd8dcf07c18a25f22ea0a6333fef248dabc4e8996b416aeb2c2444c62d9",
+      "sha256": "f795ad5b71ca4484f1e4e712728e23298f91176e0fdcc9d526330545f9002f9a",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
     },
     "editions/en/projects/project04/README.md": {
-      "before_sha256": "91f0b31f63ccb9dae11d8cb2166f7ef0782ced4cb320b9e6fdfa85a3e4733541",
-      "sha256": "38c8f468738f620f490b8cf79a0b9dcfad58d791a6511c3095ffcbb99541b21f",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+      "before_sha256": "38c8f468738f620f490b8cf79a0b9dcfad58d791a6511c3095ffcbb99541b21f",
+      "sha256": "8113478b392d0884df5104a9a4bc9f0c0efa3455cc9edb6725a80839b7f6fddb",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
     },
     "editions/en/projects/project04/backtest_preparation/README.md": {
-      "before_sha256": "907dc68bb44ce980b57520da5b29619d56da0e66687f1307830b368aa8030efb",
-      "sha256": "19993ef6348ac0799b5085a58010865707b48c747c36a29cb1aa32dd406a1728",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+      "before_sha256": "19993ef6348ac0799b5085a58010865707b48c747c36a29cb1aa32dd406a1728",
+      "sha256": "c121359c5e4619c173fe8e24a66c9cd3f5404518a32d31ad1531d75aa341407f",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
     },
     "editions/en/projects/project04/cost_execution_lab/README.md": {
       "before_sha256": "f6b86f0557b33f96e65fa405f3a62be371d353efd924ce8ff903cd63d7ad0a1e",
@@ -293,184 +365,9 @@
       "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
     },
     "editions/zh/body/quantweft-textbook-zh.pdf": {
-      "before_sha256": "3d2153a37719b430b5acdc6c214b92e774e5257b239ec6a2bf9013838257bf8c",
-      "sha256": "dd77ea8701bb452516eb0b26a6edc6c05a78d3e76c409b9341708e28b37d711e",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part00/chapter01/content.md": {
-      "before_sha256": "657a1a31ec82c39ee0eb5376190b6f93879460c3e7d302555716514628dbcac9",
-      "sha256": "4a6bc4144373bcee5e1502da14634a9c8c32cf080f663dd5d2b4588bf6b0cadf",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part01/chapter02/content.md": {
-      "before_sha256": "fd252bb07af533ef8728e16c0c54af29f583df4c1fb4b6fa1e33868986766dab",
-      "sha256": "fac220906e4157790244fe3ad0eaea3eeccd34b2e2011fa8d2be9bb5544fe5d9",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part01/chapter02/source_notes.md": {
-      "before_sha256": "6b67232deb8db1dcd9701406971c342b2a6ac762774a29dd285f5e112764f347",
-      "sha256": "64dabe6283753a8157311bdf649cc9f54bb1831cd3b0730b7edfb804d6940216",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part01/chapter05/content.md": {
-      "before_sha256": "e38f8fb0f21331e135141b951de1beb1638f7b18ed4e22e96f0d01d9e133c8ad",
-      "sha256": "a543695ed4668dbdec5946a1ec39a156c3e0acee24b190096cbe46c5f002cf27",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part01/chapter06/content.md": {
-      "before_sha256": "94b60573829b6e12f331ffef5bf74b2c20e056a50d378f835eac384227f8ecde",
-      "sha256": "369b32cb9bf2415cfc490d50de0c91a63be6c3c1586f796f68821e6c8e770a66",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part01/chapter07/content.md": {
-      "before_sha256": "331e4bdbdc79c1a39c63c1f2009162bdc2cd5b99769f94c877363ba0df39ea85",
-      "sha256": "f0e0cc601d37fb9c83879d3e5bc97b740efc97f236b297d253df1b67315c8c6a",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part01/chapter08/content.md": {
-      "before_sha256": "94f8e29c2b1a22719008a0807355760df3f92a7cfeef7a3cc7d8bfd6068e4563",
-      "sha256": "72ed98e56c3b421894f8b6d3145e01a736159316f5a71b4a5408d179a3a66875",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part01/chapter08/source_notes.md": {
-      "before_sha256": "654f397423ca8cdf10a95fece485fab52616f7bf4b56b02bc8b46eba801e1371",
-      "sha256": "5fc1280180a88e070d92b9a39ff152a972301653c905463e1a46ecfbd8817ce7",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part01/chapter09/content.md": {
-      "before_sha256": "bd6b99417ecd68d04976d67e0fed4ce9012d1d355d4f09c905075527a1849cf0",
-      "sha256": "128db1f3ac7bf305405c3ccecf356b7d4f8a1dd6494138da2048dd67fd090a03",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part02/chapter10/content.md": {
-      "before_sha256": "9122fcec7097cee78fe1f82be11675e4e854dcc6c2f0c5c5cdf3f05c99468528",
-      "sha256": "d3b76c72c71309969faadb1eca31fc68665d47f2c6244f96d55d48fca1825c8e",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part02/chapter11/content.md": {
-      "before_sha256": "054072114de9acfcbaca841c181689cc89be74cd29fcb38eae4a54578999a5e9",
-      "sha256": "3281848933daccf973da50580ece57637b74f6a005e3811d1cc43a8e143668b4",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part02/chapter12/content.md": {
-      "before_sha256": "21dae0bd57dc8101b30a4ec4bb4580acaa7cd887f8bda206d03d5ac2208fb243",
-      "sha256": "0848926515f284d8aae965ed38bf78bc671b3cb25eb1ad3e23de16f5866b0591",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part02/chapter12/source_notes.md": {
-      "before_sha256": "4e62714dac94dc86201a148b68f528eec2b9be0fde8c7da41beee65896e3df58",
-      "sha256": "5e7f75e8c95dd176f9ae720c3ec595e996c66f5b044cd11fde1feec234df3347",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part02/chapter13/content.md": {
-      "before_sha256": "47cbc49ee728c36723beae2e0e725f357e97d269b6f3f6517182d355c886e987",
-      "sha256": "59e41e2b7b080718c4c0028b4816cd0d183816b1f99b110abd4f2d6f66b0e893",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part03/chapter14/content.md": {
-      "before_sha256": "0a396007a7c6385dd817065303be2d50cc276e798dfdefc828e3c7a727aadb37",
-      "sha256": "2bb995654c0508125a2f13e633bffbea5c3f3ba7024417c17e6e4a709edcc8e2",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part03/chapter14/source_notes.md": {
-      "before_sha256": "d312c77f49f76f175703b90ee6c549f537beba8fbebe83715a4d2ab978f9b625",
-      "sha256": "b7e46b30632d3bd394b19635793b36f11d57ab3a7807a8c7242fa74659ab3171",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part03/chapter15/content.md": {
-      "before_sha256": "23e9169be70791fade4edd8bc0d8f8a313dc5b49a65d4333d6ceff0e7336f2ac",
-      "sha256": "71a25bded82a5ce19724bc05517b76aab175cd4ae7025de33fc1d8f13af85d5f",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part03/chapter15/source_notes.md": {
-      "before_sha256": "3eea05ef70615512c93fbf5ce79d516adee01599c3de83465f28e3fd726709a8",
-      "sha256": "37b0cae03bcd32153989e298a55fcd8527d3e84574918b2a61cf18e31156ca9c",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part03/chapter16/content.md": {
-      "before_sha256": "5666edde77af8c68c3234dbbf0c709041bbc026f7c64dc8edad5d947a2e0bf05",
-      "sha256": "5e31ecc1b5cff2fe09456fb088dda393920c7b18a62ef2cde512261b413c10c8",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part03/chapter16/source_notes.md": {
-      "before_sha256": "39d26dd0570efd2417c49592351e29f4c92d53431947f3268d5f6f3e1c13040a",
-      "sha256": "95db1f5a7612a47b04ae6fc015968c0a6db7b5ad07c5acc64cb4d3794d559100",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part03/chapter17/content.md": {
-      "before_sha256": "5a564c832e995f3e94bffe58c7f2375072dd10615723ff4180473d2605a09596",
-      "sha256": "8837d8c8cd25b4b41cc3717564a2529513e215bbb4f1b925e1fdc7a383ee3959",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part03/chapter17/source_notes.md": {
-      "before_sha256": "b0e80efbea1d139530a6b1ea766353bd84dd450326cf13e206a1d43a8b03edbb",
-      "sha256": "e0c1ec629c375e940cf08a6d2e0f319aef233a55654e1bb9ed9002aad64d720d",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part03/chapter18/content.md": {
-      "before_sha256": "ecd0f0d98d3dd88c4c9b3f7e99c5ae570d844ecff153a50b6908eb7eea2ff427",
-      "sha256": "1f0adc30cc2ca382258534450a0e1035ee1d6f3c0523216d7d7a1e6abdbe76be",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part03/chapter19/content.md": {
-      "before_sha256": "1ab287113f286d2b83b1db90583cd9863f806956c1ce9523152638c0d2f9f5c2",
-      "sha256": "976806c56d1d64a870af5ffa905df0b6267970ace7db46468a10e81bebb2cc0a",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part03/chapter20/content.md": {
-      "before_sha256": "3fdec388f19cab28b37af7e320ebb81c1cc8333c7722ecf8ab62770439118eaa",
-      "sha256": "afd89ec125597395e5155db55bfed18009a2c01c8920431e84336a7900825bcd",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part03/chapter21/content.md": {
-      "before_sha256": "05e98a7ddb032ce72c405682c69a0cd482a3a532cc50729af3ae090b6cd68e75",
-      "sha256": "d49ee1a9f5099ba490aa7580764e8c40311f7e210e998498336db4879a71b6cc",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part04/chapter27/content.md": {
-      "before_sha256": "cd22079b07d1b52886fba2491facf4faa65c371bbf5658138d9cbd6caa467124",
-      "sha256": "5bccc174701c3ca7734102163cbc67e7fc15778fd2ce49f83d981364b7968709",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part04/chapter28/content.md": {
-      "before_sha256": "60cbfbda22afa614d134cc1266243f2bc0953fcab4e136b23bb89303767bfc82",
-      "sha256": "34bb60116b246171f17bc46764bcfb79f876b6d4ed3071e0e90dfe1df3191936",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part05/chapter32/content.md": {
-      "before_sha256": "2bb63f2cf3972ab55ba0633de57121e373ddf1b370f405889105f9894fb77758",
-      "sha256": "009233e13a8ccf0e8d11a5d602951c5b78bed52967d837364e5c9e37ad359ad2",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part05/chapter33/content.md": {
-      "before_sha256": "01e180943dfe3aa1288eb0f5226704b4e7927bfa2435704c757258a7f26c2ce5",
-      "sha256": "d4597e14aa3d0b6e4fe7057e1c10d1a16c7ff855f26f92848870563d76ba32ef",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part07/chapter42/content.md": {
-      "before_sha256": "1479fcc7198310ec491bb6ae42ca566de226f4079fc113295933e572963b38e6",
-      "sha256": "33eaa2fbd969c320e9919d5ea595bd2bf32cff75694945bd2e354c89b9f8e4f2",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part07/chapter43/content.md": {
-      "before_sha256": "c2616a0e3ad2814ec914a871ba4a58af113c971129cd15783d31d05b8004655f",
-      "sha256": "81c3bce3b5c259e5824357dc9effff640189f9c2d07c7a5e3e995edc979352ef",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part07/chapter44/content.md": {
-      "before_sha256": "fd861539784511f043688e078ba91487b4ce736dcad89a73ce7d0d967f460953",
-      "sha256": "6768919260e966d98a0ba8a96e1fafe51f8f6d31d8b38418aabc923750f54f8e",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part07/chapter45/content.md": {
-      "before_sha256": "e7f02937671dc1dfa8eaff8d81f058b0f0dbfe0aa24aabc2446cebcf9b758a92",
-      "sha256": "0986d85b45a58cf9d77f6514ad0bf122e1bf4ff8717b78168a176eb553b3581f",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
-    },
-    "part07/chapter45/source_notes.md": {
-      "before_sha256": "fbb24802c79624e6c33e5bca46c7fd6da5ddf046d7dbc59f22692281f8ad7145",
-      "sha256": "8ed53ba0a0e5223d4583b27edbeb1a3321e13f8ce8fb244a5a091134ed9a3874",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+      "before_sha256": "dd77ea8701bb452516eb0b26a6edc6c05a78d3e76c409b9341708e28b37d711e",
+      "sha256": "9e1b1f3eeb0a383774a5744ce47a2e6ab9a2324b9b34c7d1dd19aa0e8e16c288",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
     },
     "projects/project01/data_dictionary.md": {
       "before_sha256": "6b7d85e398f9f838ea3b35a11d1b370d004eceb5aca0f1cf45de4cb84f6217c3",
@@ -488,9 +385,9 @@
       "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
     },
     "projects/project02/research_report/report.md": {
-      "before_sha256": "3ce9ade98d3238087e7e6e0ebfa45d5db0e626dabe33b63cf443cae821c999b1",
-      "sha256": "0b11b0430427048e2ce928183ca87e849796990bd4e39fac77252138e0002ca9",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+      "before_sha256": "0b11b0430427048e2ce928183ca87e849796990bd4e39fac77252138e0002ca9",
+      "sha256": "55427a24c9249274df8ec0590599c679ddff9be7232707c21a382918b2609109",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
     },
     "projects/project03/READER_GUIDE.md": {
       "before_sha256": "1e1f50ce1d85e9f6d6ae8ee85d961a55416b83d30f885170b76df020637f672c",
@@ -503,9 +400,9 @@
       "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
     },
     "projects/project04/backtest_preparation/README.md": {
-      "before_sha256": "9ec6800248b4cb5610b81579bfd02bac03b55f44439ea3c5d74d743c6d1d5d99",
-      "sha256": "ad9cb24b851361410c3582beaa98f7ce2c9863d08c4fcb591e72d8571ba89d48",
-      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+      "before_sha256": "ad9cb24b851361410c3582beaa98f7ce2c9863d08c4fcb591e72d8571ba89d48",
+      "sha256": "f2e1e4b900d755beee19dbfd65366f216fe879314e47602105428c34b38854f4",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
     },
     "projects/project04/cost_execution_lab/README.md": {
       "before_sha256": "1ff682f4092708793e2ac74e8c026f868943105bb5645cdb196009aaeb29c62a",
@@ -538,9 +435,564 @@
       "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
     },
     "references.md": {
-      "before_sha256": "cca9baede5dca968cd6e4a541c4ad9d64650da56e7760ba2b33a415726b80423",
-      "sha256": "ea68ad7f59086d554e084dec6426f2e7e79254b70cad9c5aad91a5b1d8a84e5a",
+      "before_sha256": "ea68ad7f59086d554e084dec6426f2e7e79254b70cad9c5aad91a5b1d8a84e5a",
+      "sha256": "c5aa945a2969b1fa9dfc141eb53d30bb1a7ffb0409d3a22290f41ba7e17eb649",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch01/content.md": {
+      "before_sha256": "a16b1e17b03f0b1fb1535a06d5fcdfee03f70eb55d7198c0f6b84df72c686351",
+      "sha256": "ea040ab07c31e048fd713dfae758535bc8b184d0e422984a29d895926c0fb908",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch02/content.md": {
+      "before_sha256": "0b73ff32c3fd968ae6a7f37b92e5bce7d0945e1b341c154626943236634cd561",
+      "sha256": "ef0c1ea0364c990a5dec2c4a02ee2456e90993edce8140845c6c41186db3dac1",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch05/content.md": {
+      "before_sha256": "aa2e6d6e04118b7591fb1d0e1c465f7e86a53a69cf823579daa70b7713b0afeb",
+      "sha256": "5655125f2b6ff5652d31150cf15e8e8fc4b450c0881df6a4eb3091f9c0972287",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch06/content.md": {
+      "before_sha256": "e98ac4d2e011165cc48e7df5837d718f9b810a32464d13ce13f845834bcdd5e2",
+      "sha256": "347237a3284deb9348990352e623c2484385b638374229d804147c49df174433",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch07/content.md": {
+      "before_sha256": "44abc4b6ca8a443f77c878387896fb1ea6037f463f84adbaf96fc1d96a5ca1f8",
+      "sha256": "b3b9043935e5952ef308f88188f4a113a74b18f1be4698a8648215f834528864",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch08/content.md": {
+      "before_sha256": "f4da451135b2cecd20403eaec1ab675a9117716b07578d6ee5ae396fa982a7cd",
+      "sha256": "3f45275db5845de6e13cc5b7f675bc5313d0aa0d884a7cbb945ce56b04f398aa",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch09/content.md": {
+      "before_sha256": "87d6158c8d3d9b117d9ee3a7f6b815e0fcba52bfd82e45b2e264fea1fc6d7087",
+      "sha256": "2e0752642309a20d7790835d4d426ffee766f619ebba3dec6bcef1d09594fd42",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch10/content.md": {
+      "before_sha256": "6f0cc3f01d110d23e745116ca22b560ea699e8a6012a5971b3998ea56c24ec0b",
+      "sha256": "90ac8588cae535dedcedd2f27cd85e59db1d86bac1988a1c87d33341a50272fc",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch11/content.md": {
+      "before_sha256": "38c13c6693f80d01388b3f60c04e258de96b360e71f7242c0b8df49caf030faf",
+      "sha256": "aa8dd5116e0e2beeab3443923127858d60c52e773ea3b94378bcd06569366f9c",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch12/content.md": {
+      "before_sha256": "1d98027ee23ce6bee19b6367f82a2e76ca62528f775b09b5a26369c9c3cf567f",
+      "sha256": "8b850110dcf6dae5b9d02bd3db570b99acf60f924a319f21bbef4c6ec69e3498",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch13/content.md": {
+      "before_sha256": "216db62746cec73d09d3bcb39d22c7213c80aff9dea481d25b5d03a4f2f5e1dd",
+      "sha256": "b05c1b2ef832b2a2c05983182ac3a02b9cf2f80a42dd5e68c9acb4dfda8ea961",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch14/content.md": {
+      "before_sha256": "35acb6c68955df71412bce475e026d0e729e2730578256052821e79ec363bbef",
+      "sha256": "c16858a3d8a48d105bd26720079aa72f25019360e2b3c4c480043e06e3653a89",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch15/content.md": {
+      "before_sha256": "6ce593c518b5c335c9321aed7d77feb3653b98648a8565e9a6e5fb2dc1d678d6",
+      "sha256": "e74a346c62b6b49b2cdf29567ee40b2aa0c647ae1e3979003edfd8c402303d6c",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch16/content.md": {
+      "before_sha256": "3b5fd2892cc9799c01f0653b44e428bc3c9ece0ab8bf41dfb12ff017de10b660",
+      "sha256": "af4e42674040a96259d4fe01d458c6adc48d2ac3c1e794374a3503df02b14080",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch17/content.md": {
+      "before_sha256": "9196ec69f53cd34331ddf7094d962b7575314d861cb35619297df7866f7796aa",
+      "sha256": "2e59389da965eb2a345078760401c5ca76fd3dcc16d6d3592110c4452331e0fb",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch18/content.md": {
+      "before_sha256": "bd451b163850e0704931b88a909e8bb62d11d300e043dce4e4af78407d6df220",
+      "sha256": "74c4c5e690ad0c547da474504d3c5105dcd5957807577b7693423965f7abdcba",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch19/content.md": {
+      "before_sha256": "a088f4a83911bf1907c39d79ea0d558af2ca960fb06062c47e4a592b448cec5a",
+      "sha256": "7f4571bcaf4beca8e916455b35ea0111c37595363332fe6cfe42345f9878fa65",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch20/content.md": {
+      "before_sha256": "12f0f73dffb7b28540521805a31c075049e08caec6ccb805141d152ce6835de8",
+      "sha256": "10442751fa57b7d29609ccd4af9b95b6cd59731de30bafab6711765c639fad44",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch21/content.md": {
+      "before_sha256": "ab310a7d3bf7271d9b44a34f2d37900ddcfbd342be7b63dcafe0cccb4a90d206",
+      "sha256": "9eac7b4a0ed2ec18c81d76195bd0c0bcb086addebef917d92b60336665891de4",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch24/content.md": {
+      "before_sha256": "efd6ffcfcf5a6cc1fff63dd3fac0ebbb1699a21db5f84f2d4c9490bbe9e2c031",
+      "sha256": "05debdfb5e37ad22e1c08908e4f3e689e4caf10e34196e98c23245618f9f7668",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch32/content.md": {
+      "before_sha256": "67402fe39f76a2d36791ab56c2428e1b3b4aec2f132719d1a1aa94363d1cc7ab",
+      "sha256": "01b51c87d09bdbaf6437914981fe4a6148d4e764feef035f214ff54d8166e71e",
       "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "course/en/chapters/ch33/content.md": {
+      "before_sha256": "ce1dc403ea494973c93b911d61bc4dcdfcded5a44eb8e5ec141103868b77bfe2",
+      "sha256": "54704325ef921788b58f3c175606595a8dae2948d486eb9ecf4e9cd84299a057",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch42/content.md": {
+      "before_sha256": "2dd49c20e2e46eeebc9b9b16553b487f1eb1ea766f1dc997531eddb102db3308",
+      "sha256": "85835f0967e3997260a12bf4636e36ff541d499ac1dedd3381c59f942e82373d",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch44/content.md": {
+      "before_sha256": "909c3601defd73b37a526dbdd07fcb61db62b4abd53020cafd962b59478c8a38",
+      "sha256": "0b5c62690d8e72a0e7b481a744d52a17e44b4ddebc83d65630980ae0099621e0",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch45/content.md": {
+      "before_sha256": "f99b9463261d5ff7b3114c606bd8e9f00f931b69462a9c843145c9f4c79c32ce",
+      "sha256": "62775ae0e3bba6914399a94ed9c5d27e56afa5b8eff6a9772f23a24a75b19933",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "course/zh/chapters/ch01/content.md": {
+      "before_sha256": "4a6bc4144373bcee5e1502da14634a9c8c32cf080f663dd5d2b4588bf6b0cadf",
+      "sha256": "2c0ca0a0b2a10a38578aa13d2f4ebd72a04d9eb0eeeab997d3a92bdfdd8c21e6",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch02/content.md": {
+      "before_sha256": "fac220906e4157790244fe3ad0eaea3eeccd34b2e2011fa8d2be9bb5544fe5d9",
+      "sha256": "720bf5b54d0163f395650b68242381250862f5d114094f6f669587580c7c9d69",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch02/source_notes.md": {
+      "before_sha256": "64dabe6283753a8157311bdf649cc9f54bb1831cd3b0730b7edfb804d6940216",
+      "sha256": "a7a7c1d70f42c7f03a503ceb6bc46b66320adeab5625ab7574b5ff555c90607e",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch05/content.md": {
+      "before_sha256": "a543695ed4668dbdec5946a1ec39a156c3e0acee24b190096cbe46c5f002cf27",
+      "sha256": "d87d454b223a2eae07ad411eca56769514e24f10e9888fcbe4782988db583d70",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch06/content.md": {
+      "before_sha256": "369b32cb9bf2415cfc490d50de0c91a63be6c3c1586f796f68821e6c8e770a66",
+      "sha256": "8c279f003cfb922c9231297b2e72efe9f37d95e147c63018570b4f752622334e",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch07/content.md": {
+      "before_sha256": "f0e0cc601d37fb9c83879d3e5bc97b740efc97f236b297d253df1b67315c8c6a",
+      "sha256": "e3fe78d53ef7c96b07227be9c978850019859a8ae8c61611894485b56b8adfb3",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch08/content.md": {
+      "before_sha256": "72ed98e56c3b421894f8b6d3145e01a736159316f5a71b4a5408d179a3a66875",
+      "sha256": "32d7261db39ab3b0c72651ab3ba62a2922efb3d46b478590cc8278af38ca68b3",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch08/source_notes.md": {
+      "before_sha256": "5fc1280180a88e070d92b9a39ff152a972301653c905463e1a46ecfbd8817ce7",
+      "sha256": "c6ce8d4e6d96675b09e91103c45c1cf97ba1c44a0084f499921e595027630e93",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch09/content.md": {
+      "before_sha256": "128db1f3ac7bf305405c3ccecf356b7d4f8a1dd6494138da2048dd67fd090a03",
+      "sha256": "ce3284fcdca1df23a6f60a4fa947deae844af24c8ca78b730807a010875a8b6f",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch10/content.md": {
+      "before_sha256": "d3b76c72c71309969faadb1eca31fc68665d47f2c6244f96d55d48fca1825c8e",
+      "sha256": "0e4dc99813c8d4212fc4320ad7cefe57558581286a1b69921003efbc471f3803",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch11/content.md": {
+      "before_sha256": "3281848933daccf973da50580ece57637b74f6a005e3811d1cc43a8e143668b4",
+      "sha256": "26b8f7bfcc2c450656a8dc7b7119ee4278726f6e7384ad24082f40ef73e3d103",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch12/content.md": {
+      "before_sha256": "0848926515f284d8aae965ed38bf78bc671b3cb25eb1ad3e23de16f5866b0591",
+      "sha256": "fdc8324096b745e54947d9b1385b4e761c226dc92e4c88246e64e0b2f8f4323f",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch12/source_notes.md": {
+      "before_sha256": "4e62714dac94dc86201a148b68f528eec2b9be0fde8c7da41beee65896e3df58",
+      "sha256": "5e7f75e8c95dd176f9ae720c3ec595e996c66f5b044cd11fde1feec234df3347",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "course/zh/chapters/ch13/content.md": {
+      "before_sha256": "59e41e2b7b080718c4c0028b4816cd0d183816b1f99b110abd4f2d6f66b0e893",
+      "sha256": "030e2d0d219eecd4edcf0929eaea361a5f8cb430a6cec0db85663a4e74b760ed",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch14/content.md": {
+      "before_sha256": "2bb995654c0508125a2f13e633bffbea5c3f3ba7024417c17e6e4a709edcc8e2",
+      "sha256": "a73b97738eeeeccb3cdce4e56bbf21f5f3a27e030643b553ac58e787d37da991",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch14/source_notes.md": {
+      "before_sha256": "b7e46b30632d3bd394b19635793b36f11d57ab3a7807a8c7242fa74659ab3171",
+      "sha256": "b46543d49291622b9fcbc8ac771f76a0bc76589557977697e48f600b274cee98",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch15/content.md": {
+      "before_sha256": "71a25bded82a5ce19724bc05517b76aab175cd4ae7025de33fc1d8f13af85d5f",
+      "sha256": "0e41c73f3e922f01e4893d277181a679728984d519bb10f8db088b02ecf99cf5",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch15/source_notes.md": {
+      "before_sha256": "3eea05ef70615512c93fbf5ce79d516adee01599c3de83465f28e3fd726709a8",
+      "sha256": "37b0cae03bcd32153989e298a55fcd8527d3e84574918b2a61cf18e31156ca9c",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "course/zh/chapters/ch16/content.md": {
+      "before_sha256": "5e31ecc1b5cff2fe09456fb088dda393920c7b18a62ef2cde512261b413c10c8",
+      "sha256": "0f8ed8586ca5d43d4918cf567b37289d9325721b4f80c83f905abc33c873a689",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch16/source_notes.md": {
+      "before_sha256": "39d26dd0570efd2417c49592351e29f4c92d53431947f3268d5f6f3e1c13040a",
+      "sha256": "95db1f5a7612a47b04ae6fc015968c0a6db7b5ad07c5acc64cb4d3794d559100",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "course/zh/chapters/ch17/content.md": {
+      "before_sha256": "8837d8c8cd25b4b41cc3717564a2529513e215bbb4f1b925e1fdc7a383ee3959",
+      "sha256": "5f8a01a14edaff61d0ce927a7c5149eb15d7dd88208c0f218fbecb04fd11faa5",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch17/source_notes.md": {
+      "before_sha256": "b0e80efbea1d139530a6b1ea766353bd84dd450326cf13e206a1d43a8b03edbb",
+      "sha256": "e0c1ec629c375e940cf08a6d2e0f319aef233a55654e1bb9ed9002aad64d720d",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "course/zh/chapters/ch18/content.md": {
+      "before_sha256": "1f0adc30cc2ca382258534450a0e1035ee1d6f3c0523216d7d7a1e6abdbe76be",
+      "sha256": "c804ce02f2eea37e6387784a8755f81023e19d6d50fc4b18d93b5ed945b45ce1",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch19/content.md": {
+      "before_sha256": "976806c56d1d64a870af5ffa905df0b6267970ace7db46468a10e81bebb2cc0a",
+      "sha256": "0bf03952e4f1f8a1810aefe7996c56d6c6adaf56844df378d925326ea780ad10",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch20/content.md": {
+      "before_sha256": "afd89ec125597395e5155db55bfed18009a2c01c8920431e84336a7900825bcd",
+      "sha256": "fe4f18d0bdaac8b5f41fc429119f30b8b1ecfa182dabbe958904d6dff1873bcd",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch21/content.md": {
+      "before_sha256": "d49ee1a9f5099ba490aa7580764e8c40311f7e210e998498336db4879a71b6cc",
+      "sha256": "4f89ed987dae96bbdd5cf94cc7065430bfdc26fe3069aa84abb065659c401974",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch27/content.md": {
+      "before_sha256": "5bccc174701c3ca7734102163cbc67e7fc15778fd2ce49f83d981364b7968709",
+      "sha256": "64615e4a5567097bcb58720434277c6e6439b8633783e5445dc5d2553d9d51d2",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch28/content.md": {
+      "before_sha256": "34bb60116b246171f17bc46764bcfb79f876b6d4ed3071e0e90dfe1df3191936",
+      "sha256": "1460378a3b805c0b5de77a9001ab79d14094189f26029abda904e8dd3fad2584",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch32/content.md": {
+      "before_sha256": "009233e13a8ccf0e8d11a5d602951c5b78bed52967d837364e5c9e37ad359ad2",
+      "sha256": "8dc459c55e241cb9e3c7bad38aa6105e8a64475ca13412ecf6c2d4d684e50976",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch33/content.md": {
+      "before_sha256": "d4597e14aa3d0b6e4fe7057e1c10d1a16c7ff855f26f92848870563d76ba32ef",
+      "sha256": "629d26dcce1a1a36244520d93db5adc9c64516ab5e3e309e7eba94d0b4ce8cd6",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch42/content.md": {
+      "before_sha256": "33eaa2fbd969c320e9919d5ea595bd2bf32cff75694945bd2e354c89b9f8e4f2",
+      "sha256": "98be12c1a4654aaed75119e582ee01894991c545d781460ef8e1ad04c71a1450",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch43/content.md": {
+      "before_sha256": "81c3bce3b5c259e5824357dc9effff640189f9c2d07c7a5e3e995edc979352ef",
+      "sha256": "32f95efc79f16c1cebabdb32ab9bcdcad9c8f7e76ef208e1173bcf7ab1bcf93e",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch44/content.md": {
+      "before_sha256": "6768919260e966d98a0ba8a96e1fafe51f8f6d31d8b38418aabc923750f54f8e",
+      "sha256": "95595e841e5619b240346984a228ff9421b07dbe14fcc1962b5f073f1042191d",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch45/content.md": {
+      "before_sha256": "0986d85b45a58cf9d77f6514ad0bf122e1bf4ff8717b78168a176eb553b3581f",
+      "sha256": "a1daec573df65585ccc528d2dbcee30f76c5a26dfed05081a7b825980930eab9",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch45/source_notes.md": {
+      "before_sha256": "fbb24802c79624e6c33e5bca46c7fd6da5ddf046d7dbc59f22692281f8ad7145",
+      "sha256": "8ed53ba0a0e5223d4583b27edbeb1a3321e13f8ce8fb244a5a091134ed9a3874",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "capstone/PROTOCOL.md": {
+      "before_sha256": "ee1fb0c89c9f89b7c7cd44d0cbe0c6093366d99ac593e6a72c943f7d197e2d86",
+      "sha256": "0ac9c8de869c6ad709c2d893a1d7dd757eeabf0e71e48a3842e3b38d84de323d",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "code/ch37_ml_philosophy.py": {
+      "before_sha256": "f36f5d2b61b688c37ba766e3c8a5b61fa30970c0f0a548ec7a47a04787122e1b",
+      "sha256": "b5fd16a17df99dc4ea24fd9084b44c195afcd74fc161006333a5ca0c35efbbdc",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "code/ch38_ml_pipeline.py": {
+      "before_sha256": "2b471f0de165839e51387ca6f43949b953146dcfd15f07779928b07b03ed751e",
+      "sha256": "32e351dceeeb8fc1d9085e7f88ce6faafe128a07b65279f1b6f6ed498bb9f7aa",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "code/ch39_regularized_models.py": {
+      "before_sha256": "168a7c2e7a8623d0f669d160d25401cab6fb5b824cd1ee4bf71c0fd47cd396c3",
+      "sha256": "5c655f9354baa6a720c0c8c24aeed5abd8a234dc4570066335389624424e8cf7",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "code/ch40_tree_models.py": {
+      "before_sha256": "b1df331213d06b9b05525c3ed801b2b4a491f5da3e99aea549940e8022e7e873",
+      "sha256": "5a23c4f14c70d5719a931ba096df3eb43ffe787f9c64eded0fdc6ec3bfe95078",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "code/ch41_unsupervised.py": {
+      "before_sha256": "0c4760a863edd0f3cc42a9e79d419fe35bcd96da234022e812a4e65372ca72ae",
+      "sha256": "2d3dcee09decf1e64d13d8858f877484316cbf8e681574d4e0538e100a3ed87c",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "editions/en/capstone/PROTOCOL.md": {
+      "before_sha256": "1a5bc394987634c660789676570a7f2f671d7e2b46fd9e169971384c7d4a41f3",
+      "sha256": "5bd9672b6e18f23cedd635ff1b8467324bfa0e0b180eeb7f574fc2c91d4c4a86",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch03/content.md": {
+      "before_sha256": "bffedeb7633f1c65a8f85c1d8b7db5a173884e567c6c939f786e7a0f12266aa4",
+      "sha256": "dc1ea6e8b324dc27dbfb94fc10f396137762cd4774eddf4a4cfe2e88ef0767db",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch04/content.md": {
+      "before_sha256": "7fc1a3c67fb4cc51ae5668deb16a6b0f88ee39ceddfbe7347fca838e068849d0",
+      "sha256": "7d3cde6f8d08ea8770f1432a714bcf7af1f0d509de22c80b570dc9fa45d58905",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch22/content.md": {
+      "before_sha256": "ec549868242b938090367f685cbb5c2475f439de42f39ff054234b30af04a089",
+      "sha256": "88ca68e3d8d65aea3a8b1d173ae63962a4b569723328f78596358e885e6888f7",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch23/content.md": {
+      "before_sha256": "3e718ead64b186a973bf26fc8c16534eecb8c27adbee2b9caf2fde2aec4fb21c",
+      "sha256": "815e5d0353ae9cd493696ea5cafd8c8d86596dd78e66d46931079d592a888c75",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch25/content.md": {
+      "before_sha256": "4971ce70706cf1c574abbb9b67f19d460b5c6f01378f065afaeff3508eb47452",
+      "sha256": "947422cd8e76936518a08d605d7e77a715026c8ba2e5ed8ca86089099e5e9b3c",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch26/content.md": {
+      "before_sha256": "0cc19f927577753e76df3aeec97c83e5d0096c9af9e75db05dcd2dcdb2aace5a",
+      "sha256": "f55aeca3940acf8335aa53096beeb5ff141e3e984967729edbe2d0a04b067136",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch27/content.md": {
+      "before_sha256": "d3b7a78ba1c00f9ea2d226f7a2a9abf8e4ecda50dbfe19fea9072ea72e4f732e",
+      "sha256": "d58c9329bfdf2f9ffbe79ae76a125a34f5911e7e515adf51d120a5c56c0bb9a0",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch28/content.md": {
+      "before_sha256": "0632d91ac545741919c4d6ac25068512d467f610cca85cf59b0dc4921935bc95",
+      "sha256": "2d4a2d4d3eafea27bba18d457f5b3a7b7d71203f79563121ab02b15a0a02d021",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch34/content.md": {
+      "before_sha256": "60616050d65b2e2bd0a415dd42aa1718a942475a05f224e625de24b6a016b96b",
+      "sha256": "37d1abe1ec581a3ff9a36d1535d196f63b37b72a96a9e7abc86045d5c2f28c89",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch35/content.md": {
+      "before_sha256": "10bf8eebb00dc1abf9f606943c48d22b0f53780c53626288a1445014bce50a08",
+      "sha256": "19f834bb82947dbf68602789411b4932bb29dcea198cae1f147cbc9961578b1d",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch36/content.md": {
+      "before_sha256": "c1499bd1720bdaf36bd0c32f13005863eacc79e7a6ec56fc63cb1195cd96e19c",
+      "sha256": "1d2d01e09ae1292007cefe16b3bd7ed5d47217e37cc269b8089bf7a64ece93ee",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch37/content.md": {
+      "before_sha256": "850b2df05194c49f2f1906a7aaa40bb78f48814742efe7f4801aa22a7990eead",
+      "sha256": "6d7ca0a3c511225ee97d6d8d897758f17d4d69a68e858c7485a50d12a0cebe75",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch38/content.md": {
+      "before_sha256": "6cf5769ef62d0dee3b389425c4278820c79e64755f9c2f54633f14bfcd700d09",
+      "sha256": "830fceb511227841bcaaf33e4eee42d05ea93979b52de62b3d55cb0de83caa51",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch39/content.md": {
+      "before_sha256": "8eea017fa4e6ea06f3ec08895e917fe361520daa96492820981a5a7730ec85bd",
+      "sha256": "b95e4392740493f587a23de0ebf5a6379bc7f1e8fe8a400c0a62c8712a1d46aa",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch40/content.md": {
+      "before_sha256": "8dc59f11422b8956f2e5768d8196bccd5197cd1fd167cea86d4b4f941ce9ddc3",
+      "sha256": "955fb5345f78d470234711d4cc25538992bdb32e4bbf120d04ab115a7201b884",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch41/content.md": {
+      "before_sha256": "621a71a047a419f06516eb02c4a7fa4bd4e0112881ad06611084049646497f12",
+      "sha256": "771a758fc20be7aaf3e97e8fb510160c578a9b8d7224dd53bef31560d72a1a52",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/en/chapters/ch43/content.md": {
+      "before_sha256": "737d661bc78ca875ceecfd514550f2002011ae812fdc67cf19536f8891476c2a",
+      "sha256": "57d367e823fef9c9234652f5599727e6d27207b5ecfc233bb6e354837934e67d",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "editions/en/projects/project03/research_report/report.md": {
+      "before_sha256": "45f05477a37918198339598f2dc717633272b30ac4456347458e7e36b631fa93",
+      "sha256": "d46cf7a524cd52f15f02a53fca62df6c91c5a439b3fc6a23cc46cd6fabc3263c",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch03/content.md": {
+      "before_sha256": "b091fe514d14498fbdced2f5ccdddd427e68bcfee9f822207bb1fa387f0ea7e3",
+      "sha256": "e29cd0d54fc9385856dc381ae5128a46cc058730ce379b3efd33f4e44e6b58c2",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch04/content.md": {
+      "before_sha256": "44a9cf0e96ab82eb5c914ff663657504b459f169fc6d47707bc74fa4e462c63f",
+      "sha256": "5c51f56162041501bf95bc675f2de903201fa53b89e3558067ee5b21487e9b38",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch04/source_notes.md": {
+      "before_sha256": "fffe3837060923c2c14805292069684c3a41fdee07998f4fa090e9bc900eecaf",
+      "sha256": "4907e97f356f166084af5380b2f73b59a7b7f4abd442f30fdb0be1c29948f732",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch09/source_notes.md": {
+      "before_sha256": "a76ec987efc187b0563866f6a0177e7f8e2a02a10d0ec6d1a314442875d8edc3",
+      "sha256": "acc852ba95171f7fdae7f9baffa3bbac33e6c2d8709372b7e2924c21971ac213",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch22/content.md": {
+      "before_sha256": "77f465b4a317c94d571b122429fb47d5dd2bdacc6e194efbcfde986f695e365a",
+      "sha256": "9a580947480f1ab81d3843a565f0fd47e012fa625d093f0d96f5c5e31b6cc5b5",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch23/content.md": {
+      "before_sha256": "3a818cac529970d2a2b4279b685ab9f2ed3917f1357f0890ea11de313eee8909",
+      "sha256": "296c3d2d6aa9a66523630386ce118c194dea9f8af06300a0177e117f27a9ee21",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch24/content.md": {
+      "before_sha256": "57d0b215fc1cf7cb82ecb052e46edb96be98e36db65210268173eb2414aa4e07",
+      "sha256": "9cae968ff6c59a00e9fa08b4cbdaca54c428f36ded32e5d816675bea83ffede6",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch25/content.md": {
+      "before_sha256": "540ee2dcbe301c6913041ad6732944e0f4251197d5e1cc83dd28d33fa9d34c63",
+      "sha256": "26445fc6f4553272fb9778188d181bc83b5c7db88c6f7ec86772565e21e998fb",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch26/content.md": {
+      "before_sha256": "bc3b5bd35f04fccc5f0b143003ba0276b877c7cd8d0a9993fcd45a91ea61f873",
+      "sha256": "83d13313e0539d5d3032ce6e1fb6456ccc78d4df7fe5e052c837852c09660aea",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch29/content.md": {
+      "before_sha256": "a52f64a0cb5886641501a88800194b1c350433d91665fd1d221e9444c60ff1a7",
+      "sha256": "43d0f703bb1623510f28a6e6fd9ae9a540047bd83aaa17bf0abe6444e2dd5de5",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch29/source_notes.md": {
+      "before_sha256": "3871fc34ba0589a73955cb24efe8263472cfc15686e83997c0d5831839ca3544",
+      "sha256": "ff11e3ab0facf3f6a0fb7352484dc64cff21417b79259f7aa3e24a597c8a0c5a",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch30/content.md": {
+      "before_sha256": "eb0645794d43dc8e1fde418deb9ec6b531e5f9efdfe79f3fe60a97f5c5861edf",
+      "sha256": "ef0728ba86c147f562cb076454aebe144683e316725d51f7b7cefa740da4ddb4",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch30/source_notes.md": {
+      "before_sha256": "ebb44a0aefbbbab6c93373838fb0da9689e9c54762dd899046c8cc8bf8ba3346",
+      "sha256": "93048b1022a8c9e6a1b29da957a85a347f06ce7cacf154dc4c2a2fa08f0cdd10",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch31/content.md": {
+      "before_sha256": "828559c144cdaa406a88070084b7a27e8ea13dc041b1e74b2df4f31e4a05472d",
+      "sha256": "701a36edb004ec5d5df0872e37fee7db6d80bb801837436ef667b1ca7d88ea0e",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch31/source_notes.md": {
+      "before_sha256": "5cfceb7775ea59785d17b5c41dd91cf410d3b8dbca17a5ddb5310890e51dfaf2",
+      "sha256": "23ac59736fa72b56256aad6e9051c8a2fe08d84bb280e5146ca8ab242392f417",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch33/source_notes.md": {
+      "before_sha256": "a770fb234571a39e911f91f4a124e13826f25d998943a754592fb4174395f570",
+      "sha256": "f72fd44b4d91c38328c3f8fc33be416e5f843eb5685f2d64a8c9d4ea34fedd17",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch34/content.md": {
+      "before_sha256": "72bd03467d7be4535d0f80110a74004a958105c812972bcbef0448ec2a5a30fb",
+      "sha256": "1bb68c16460f7fad6193a86e7db7ffd7fa64221815440db10a12795ae630cd54",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch37/content.md": {
+      "before_sha256": "3c1ec608fe223a0404b5b71a6c25c48613202d3707aeb2bdb8f6d555010a835a",
+      "sha256": "be5706c5824c786ebb677fc80e03b227d024ac7d4d30518325cc12feac9587b6",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch38/content.md": {
+      "before_sha256": "7fd856e301a9a572fdb82d6a81d93bf69dce2c9010a492191ca312f2ece74c3c",
+      "sha256": "9c30264898baaee3297f4c96e50db098f28a25de2a415f3e814c7ff90fbfc726",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch39/content.md": {
+      "before_sha256": "5e3eae1e3ffd2b37b86ac53d375c2151c384ad7256e006400f669399f2890a7b",
+      "sha256": "8c675f8899a4a7e66af1d22112abf79cc0c61cb93e6a5f39be42eee53ee14a70",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch40/content.md": {
+      "before_sha256": "269b1ebb6e72480ddeeef9b4437cd2b93ab1d808e3c089b5a8fb075af0c96a64",
+      "sha256": "22a81a3e9e4399c31cf2b82b936504aa717a99b299fdc88018ea5076bc38a1c5",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "course/zh/chapters/ch41/content.md": {
+      "before_sha256": "49af32dc8cb6a519ed909a3dbbe01c5d029cbfbfb949846d6391a5473f100397",
+      "sha256": "ae6ead9b6e6e47726eb8e8e4707300da9cdc15f280bb799c6dc477e83b55ebe7",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "projects/project03/research_report/report.md": {
+      "before_sha256": "ba4e76222b77cce330702002f6f219bbf168279feb91d93a1f1484cf4d97aa52",
+      "sha256": "a8170de0631da828269e31172dab133f5b0dd23fe132c475496871e22be24e06",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "projects/project04/READER_GUIDE.md": {
+      "before_sha256": "5380db8c7d35b7f98a70bbab5c3b82d47cd20ec88ead361115bcf195bbded5c3",
+      "sha256": "3e023fd9782d7ed82de61423798ac3bc22f41ef91d2f2e501f3518ef171f1a8c",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "projects/project04/README.md": {
+      "before_sha256": "41d4ffbe3ca0a7e2e270909663cbe727f0cec9aa147d3a1839e9ec5e2bf20ca7",
+      "sha256": "2798be667c6f96facb35b985ed6eb8deefc56f1426476c30d199d66d4fd96a29",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
+    },
+    "src/quant_course/backtest.py": {
+      "before_sha256": "4f0c63aef9ad59221b3fd1f80aab34e919c817d0f6141d528745bea85dafcb7d",
+      "sha256": "5aa22929ab1795c62e4c9d0255a9f6b41c14b6224f0fea6879a7c082208d563a",
+      "scope": "Reviewed path-only directory/body-PDF adaptation; see COURSE_STRUCTURE_20261019 and layout report"
     }
   },
   "additional_current_files": {
@@ -550,7 +1002,7 @@
     "LICENSE.md": "980cd17f2c6053e14c2d55f631d609f4f90d60027fcd8b893a9625e0f1f18279",
     "LICENSES/CC-BY-SA-4.0.txt": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
     "LICENSES/MIT.txt": "c5b4c3c368372efa1c04460cab54e900934832891613271d4afdde9aeb2b412a",
-    "README.en.md": "90c765c721c01d3086f02e932d7d0f6457ed8f0f95d1fdaf974232241bc77eee",
+    "README.en.md": "1d55cd6a2ec5d690dc2c977cd620783ebde03ee5b575349dea5b2bc7abebd77b",
     "docs/.nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "docs/HOMEPAGE_DESIGN.json": "34598e42ab2cfa5557b40eb526f65b49639b4fd987a6e97e987f4b359d776581",
     "docs/SITE.md": "46f7d7cbe622b0f26b899e030e84fc1bf37351cbaad79b11e70a8ff01b880ff3",
@@ -558,7 +1010,7 @@
     "docs/assets/course-cover.png": "415fe3fb88f5e7ae06797546551a4aef675b2f3ef9facdeacb2d818a1ddbdfc3",
     "docs/assets/quantweft-cover.png": "aa90a4f5c2bc4657296a03737525dca2a687e6fbe83a511df2679e9d6b565c04",
     "docs/assets/research-surfaces.png": "bbda1073d11b4c35c829dda9ce91dc0a9692877526b57227daae429749df44e3",
-    "docs/index.html": "fb85344acf95bae4dce866864481f0a6d121a44b686a32973d0070e53527660c",
+    "docs/index.html": "9f066253e7aff72f6f2f3b2baad3b3ce4aa159614eeb4438e724d3599e695c14",
     "docs/site.js": "cb4182a131ad7b76ebdf802d9ab24ea164fad0fac09a9a1177dd5b35318bc319",
     "docs/styles.css": "1a7bab321e87db7d9a0f7cb8386db156d67ffe913371d08faf189ac1bc9cf287",
     "loom/README.md": "24015b279bc005bd90df4c48f3eeeb151f672ec81dffeb321f7cd6fd6ee0c022",
@@ -579,21 +1031,25 @@
     "workbook/README.md": "3c3004d2984f178ea664943ea29818395ccc285afddf664c67f955aaf00d76df",
     "docs/legal/ACKNOWLEDGEMENTS.md": "66cbd1900e15c417135ea2caa1e74b44604b6773b0ab3ce5e69874a953aeac23",
     ".github/CONTRIBUTING.md": "8c695923df6bf24f6c6e24868af0ecadb9d8f59b79677493bbe0df436e3ca6da",
-    "docs/maintenance/REPOSITORY_STATUS.md": "0b99777269290f1c6c6f46108d43a80b358acafe2babd74a30888bd0e04bec0b",
-    "docs/legal/RIGHTS_REVIEW.md": "71eb941b930d69a928958061732cafdd54de5393b66e986fc72b2658ea16a1a0",
+    "docs/maintenance/REPOSITORY_STATUS.md": "9afb2351c9d8ebd2ddf9a8aa10971c17465033da5362b05a1006e71b8b269517",
+    "docs/legal/RIGHTS_REVIEW.md": "9c971e96982c0e404ed532d0b11b76e3153c141f7d30b587103aed2be6ad16dc",
     ".github/SUPPORT.md": "df1dac6595a421a0060ad76991684089b0a7ec73ab1f549b76e2fabeb97ccd99",
-    "docs/legal/THIRD_PARTY_NOTICES.md": "dbbf22867741b9d9669489df8940e36a627f29b87834611ab575fa719b1da6a8",
-    "docs/README.md": "3c1ce6bc68f5fdc9603bc865229e4d2394fc9bce85c3fe280f5f224bb959ac1a",
-    "qa/repository_layout_20261019/REPORT.json": "944123239745c3712eaad0c3da4e0fa98cd6882c1d1006a852b73226e2feca94"
+    "docs/legal/THIRD_PARTY_NOTICES.md": "eea8ea2ad9f6278d21cc674c4b6e033ff369b92aeffcf3793c7dd1a5e5f974d4",
+    "docs/README.md": "760cb0e1ea3932f5411fbf6e83bdac2e9ae3883e7e01d52f8adefbee58292691",
+    "qa/repository_layout_20261019/REPORT.json": "944123239745c3712eaad0c3da4e0fa98cd6882c1d1006a852b73226e2feca94",
+    "course/README.md": "f7dab238c20c5671b8b0d4c516d03d9c32fe9e6e20d647b041ee9ac5bca35ad5",
+    "provenance/COURSE_STRUCTURE_20261019.json": "be99cb2b6fafee2615e687e640b2f33a931cd0a32a96175b6f6a5c29e44fd5b2",
+    "qa/course_structure_20261019/REPORT.json": "c6fe6c4557052a79d2f50467721cfb5d162428a50c6fa015b4039afca9c11917"
   },
   "previous_revision": "provenance/BRAND_REVISION.json",
-  "PDF_bytes": "All four PDFs unchanged by layout refresh from fa3da8b; inherited prior PDF differences recorded in layout report",
-  "execution": "No course/notebook/research run; no PDF build",
+  "PDF_bytes": "Two body PDFs rebuilt from accepted B6 typeset inputs with reviewed path-only adapters and spacing repair; two workbooks unchanged from5863cbf",
+  "execution": "No course, Notebook, training or market research run; only body PDF compilation and static/browser/layout verification",
   "rights_clearance": "pending; not established by manifests or scans",
   "inherited_committed_revision": {
     "commit": "fa3da8b",
     "report": "qa/repository_layout_20261019/REPORT.json",
     "status": "Identity reconciliation only; not a new course acceptance"
   },
-  "before_sha256_semantics": "Previously recorded expected identity from the earlier revision, not necessarily the actual bytes at starting commit fa3da8b; inherited differences are listed in the layout report."
+  "before_sha256_semantics": "Previously recorded expected identity from the earlier revision, not necessarily the actual bytes at starting commit fa3da8b; inherited differences are listed in the layout report.",
+  "directory_revision": "provenance/COURSE_STRUCTURE_20261019.json"
 }
