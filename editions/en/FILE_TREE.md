@@ -3,7 +3,7 @@
 Local formal edition (2026-10-19). The original accepted payload holds 842 files; the table counts them by directory. Code, data, configuration, and the runner at the root are shared by both languages; `editions/zh` and `editions/en` hold only each language’s entry documents, reader resources, Notebook language views, and complete PDFs. Chinese project and Capstone documents sit in the root directories; English documents use the same paths under `editions/en/`. Chapter teaching sources (Chinese `part0*/`, English `editions/en/chapters/`) are included; the PDFs are the reader route. Per-file origins and SHA-256 are in the batch manifest.
 
 ```text
-  ENVIRONMENT.json                                1
+  docs/maintenance/ENVIRONMENT.json                                1
   README.md                                       1
   capstone                                       15
   code                                           42

@@ -1,4 +1,4 @@
-"""Verify the current QuantWeft licensing reader revision against its dated accepted baseline."""
+"""Verify the current QuantWeft reader revision against its dated accepted baseline."""
 from pathlib import Path
 import hashlib
 import json
@@ -25,4 +25,4 @@ for current, expected in revision['additional_current_files'].items():
 if errors:
     raise SystemExit('\n'.join(errors))
 print(f"PASS: {len(manifest['rows'])} original payload identities accounted for; "
-      'four PDFs unchanged; current license/navigation metadata matches its revision manifest.')
+      'recorded current identities match; identity verification does not establish course acceptance.')

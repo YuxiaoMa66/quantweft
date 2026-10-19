@@ -1,21 +1,24 @@
 {
-  "revision": "OPEN_LICENSE_PREPARATION_20261019",
-  "scope": "MIT original code; CC-BY-SA-4.0 original content; third-party exceptions; no public release; funding inactive",
+  "revision": "READER_LAYOUT_20261019",
+  "scope": "Reader navigation and explanatory-document organization; inherited committed identities recorded without extending course acceptance",
   "baseline_sha256": "7b3ac9416e40dc72ab46e9d47caa444e4c88848a5190d533268aab30c919e2d5",
   "path_map": {
     "editions/en/body/main.pdf": "editions/en/body/quantweft-textbook-en.pdf",
     "editions/en/loom/main.pdf": "editions/en/workbook/quantweft-workbook-en.pdf",
     "editions/zh/body/main.pdf": "editions/zh/body/quantweft-textbook-zh.pdf",
-    "editions/zh/loom/main.pdf": "editions/zh/workbook/quantweft-workbook-zh.pdf"
+    "editions/zh/loom/main.pdf": "editions/zh/workbook/quantweft-workbook-zh.pdf",
+    "ENVIRONMENT.json": "docs/maintenance/ENVIRONMENT.json"
   },
   "intentional_document_changes": {
     "README.md": {
-      "before_sha256": "7c1b1c6930545a575b9443389f56ba5c952c093eac5b601c1ecaca44d542980f",
-      "sha256": "7bd2a97755e9d9e13555c8fc348b01a863dc35c2b296dd6d60af9c1d7b3bf105"
+      "before_sha256": "7bd2a97755e9d9e13555c8fc348b01a863dc35c2b296dd6d60af9c1d7b3bf105",
+      "sha256": "2b8b0c629c20b417172ebce3f34849317919399c7196bee7c52f3e2b26ad7c0e",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
     },
     "editions/en/FILE_TREE.md": {
-      "before_sha256": "2a124ab613aa19938095d70fef0ae45689c2d57f33d25932c5558bea8b305b72",
-      "sha256": "02b8c832b18488eda788961eff2cbbb8fb6580aaee0c932301971b73cfbda2a8"
+      "before_sha256": "02b8c832b18488eda788961eff2cbbb8fb6580aaee0c932301971b73cfbda2a8",
+      "sha256": "7f84249a7049a978c1dd87077fe61b3551814b7f822869e15f718f87341582c7",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
     },
     "editions/en/LOCAL_VALIDATION.md": {
       "before_sha256": "506490d4075d47555a70108443f1127fabf2f89718ed01f5670b092193115585",
@@ -26,8 +29,9 @@
       "sha256": "2ce169ea364e2eb90e92009da18ccd64cf53f1eb2c4b5ab2849ee02aa5e631cf"
     },
     "editions/en/README.md": {
-      "before_sha256": "cd6b5429745c21f50ac067fb2cf9d2e64d02ee6b953ac47f0e6f938c4abd020b",
-      "sha256": "e19595c879dfe4eefbd0c349af7dbea9b125fc282d5ecf0e1c4b305e8bd8ad18"
+      "before_sha256": "e19595c879dfe4eefbd0c349af7dbea9b125fc282d5ecf0e1c4b305e8bd8ad18",
+      "sha256": "5f3e1c3c85a97a791bb58426e3b5ae5d29834e92337fa21512e981246ba890b8",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
     },
     "editions/en/projects/project06/README.md": {
       "before_sha256": "7dd61f840f96a5b60c1b83d09082bcc296bb3bf74952138de43e9594ac4488cb",
@@ -46,8 +50,9 @@
       "sha256": "6329320d306984317c0dea7ecca54a9eb446de11774a1ec4a94f6f9c84fe9bda"
     },
     "editions/zh/FILE_TREE.md": {
-      "before_sha256": "5675f63ec9b1ec2e971b657b5df7cd7129d101630e415aad927d7313a162e2d8",
-      "sha256": "9e0b22e6487f8a9ae8b0de49006dc8fe24d5fe731cb1769a7682aed39a3c64dd"
+      "before_sha256": "9e0b22e6487f8a9ae8b0de49006dc8fe24d5fe731cb1769a7682aed39a3c64dd",
+      "sha256": "8623008ec189829ba307919c6a39a3ee5beecfa9d8f2fa238fea251c6c335269",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
     },
     "editions/zh/LOCAL_VALIDATION.md": {
       "before_sha256": "cc27b12c3cde0da694ff300829418ad769eef2f18b203a46aba4bcae4d277300",
@@ -58,8 +63,9 @@
       "sha256": "5e6f8551c617516092af2247daff47c814a8e924c50e090235bf45696e863d9f"
     },
     "editions/zh/README.md": {
-      "before_sha256": "b6bd1dcf0af4a1fdc44bb4df1d827ac67bb15f63004cacb6ed48c2d7fe65f7d9",
-      "sha256": "34b5d6a86f2c0437e9dc17cec07f726ccc8a5b618ec502857984611095acd2f8"
+      "before_sha256": "34b5d6a86f2c0437e9dc17cec07f726ccc8a5b618ec502857984611095acd2f8",
+      "sha256": "aed90fa44c83002c7f9335c5f9dc592ba46782217998124cfc2c2e1ea644162e",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
     },
     "editions/zh/resources/syllabus.md": {
       "before_sha256": "12130be67076af9ee7c72cf6fc820428ca3cf37462858f939efbdd1e62682766",
@@ -80,30 +86,479 @@
     "pyproject.toml": {
       "before_sha256": "287e989009c889f793aad294a75c68777480d524498fb4e7dc3fbdd8a5632e73",
       "sha256": "7939311f4db77ab1969be53ee7b2cd7e8902dcbde0956713d00858c8be7b1420"
+    },
+    "capstone/README.md": {
+      "before_sha256": "adfdc5629298c8a0c232f54cd2220db5b30974d97718dccc3e08d56ca374e19e",
+      "sha256": "064c6e6c829d724dc9861ff06beee27aa0be225ab31a014d0cb51f5ab90800f6",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/body/quantweft-textbook-en.pdf": {
+      "before_sha256": "009cc5732e164d2aed71423257c38fb521c1906ccfdcba79f6aaa7e9b4b9598a",
+      "sha256": "ef6794a63f24c4b712c43ebd1335390305dbffbad871d046384c7d4b3392dd5c",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/capstone/README.md": {
+      "before_sha256": "2bb3aeddc8886d4dde83b2f6f92de5beda0ac812e3b42cfce44b095cf4bd9589",
+      "sha256": "ec9ea01d71602f79edab8dfd38099ee99bf011ecdf666e1bc963497af63e5ce0",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch01/content.md": {
+      "before_sha256": "83a85d79ac0813066c07b8f55843784ae7a105d08931788e1db29cc44441efb3",
+      "sha256": "a16b1e17b03f0b1fb1535a06d5fcdfee03f70eb55d7198c0f6b84df72c686351",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch02/content.md": {
+      "before_sha256": "6847f58a7d7767a22ee022c7fd1b707e47dfbf4d579cba89a8f730cf28809f84",
+      "sha256": "0b73ff32c3fd968ae6a7f37b92e5bce7d0945e1b341c154626943236634cd561",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch05/content.md": {
+      "before_sha256": "9b9db8f2eb016fb819096a0d9b8af4b1aeae9a8d6df309589de860fe0dc13e24",
+      "sha256": "aa2e6d6e04118b7591fb1d0e1c465f7e86a53a69cf823579daa70b7713b0afeb",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch06/content.md": {
+      "before_sha256": "c22b4f9bbe0eff3c83eb79c90719adc037073c33b0fc42991c1470cd67c0eab0",
+      "sha256": "e98ac4d2e011165cc48e7df5837d718f9b810a32464d13ce13f845834bcdd5e2",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch07/content.md": {
+      "before_sha256": "99d5b857f7ae93304e26c23292395227d0fef0c0b9a66f20de475fa6da59de12",
+      "sha256": "44abc4b6ca8a443f77c878387896fb1ea6037f463f84adbaf96fc1d96a5ca1f8",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch08/content.md": {
+      "before_sha256": "ce9bbb708296a1503f7da2c9ed85235b468af54b4fc4ba9cc85a1dda5e27d536",
+      "sha256": "f4da451135b2cecd20403eaec1ab675a9117716b07578d6ee5ae396fa982a7cd",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch09/content.md": {
+      "before_sha256": "06c9784de6a4a08048aa2bf767e6685010bbca9642456f9879431c1aeb98603d",
+      "sha256": "87d6158c8d3d9b117d9ee3a7f6b815e0fcba52bfd82e45b2e264fea1fc6d7087",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch10/content.md": {
+      "before_sha256": "d6d106b8eb3dd8bce5c4ee2381fb90aeb33b32756ad7ecf6399072bf0b2251ce",
+      "sha256": "6f0cc3f01d110d23e745116ca22b560ea699e8a6012a5971b3998ea56c24ec0b",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch11/content.md": {
+      "before_sha256": "cfd7ab515d6a5f00eed2e92241d1c854d309ebd2f666c26148b1cfc41bdbdde0",
+      "sha256": "38c13c6693f80d01388b3f60c04e258de96b360e71f7242c0b8df49caf030faf",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch12/content.md": {
+      "before_sha256": "3c8d996a930460381ca8b3efec1d8fd76759fc1f1a118c2cf9a7c7f1e40d169e",
+      "sha256": "1d98027ee23ce6bee19b6367f82a2e76ca62528f775b09b5a26369c9c3cf567f",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch13/content.md": {
+      "before_sha256": "ad91d238d743284770ce6484bc9893cc6b351601aa1cb37986a1518e5c896e37",
+      "sha256": "216db62746cec73d09d3bcb39d22c7213c80aff9dea481d25b5d03a4f2f5e1dd",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch14/content.md": {
+      "before_sha256": "75ff2c93cdbd9c6245436e87eaf4036701733af052c0fb2c4b4347b1d414d938",
+      "sha256": "35acb6c68955df71412bce475e026d0e729e2730578256052821e79ec363bbef",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch15/content.md": {
+      "before_sha256": "0b03419f0b6c6c82df01a3ec8655f639f055561de67140f18c69044692b61899",
+      "sha256": "6ce593c518b5c335c9321aed7d77feb3653b98648a8565e9a6e5fb2dc1d678d6",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch16/content.md": {
+      "before_sha256": "ca5a776f55d6252efd0126299a289ac8fc63796345306f9ee058e2c91cf50507",
+      "sha256": "3b5fd2892cc9799c01f0653b44e428bc3c9ece0ab8bf41dfb12ff017de10b660",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch17/content.md": {
+      "before_sha256": "f5717a6f76619ff1a519befbc3b32d3efe9b5a0b82b70964ee43560e35953b20",
+      "sha256": "9196ec69f53cd34331ddf7094d962b7575314d861cb35619297df7866f7796aa",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch18/content.md": {
+      "before_sha256": "114378503df745e274bb51ce1235279142941fc167fee360ad1a0129f031e819",
+      "sha256": "bd451b163850e0704931b88a909e8bb62d11d300e043dce4e4af78407d6df220",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch19/content.md": {
+      "before_sha256": "8eed263a82ca0e0a45d0b719e60207727e7f0463571484029d0c5ac576af51ea",
+      "sha256": "a088f4a83911bf1907c39d79ea0d558af2ca960fb06062c47e4a592b448cec5a",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch20/content.md": {
+      "before_sha256": "3c6bb204c447d01e57e81852a9161344c7e9a41018eaa5ec499a42e3425c931f",
+      "sha256": "12f0f73dffb7b28540521805a31c075049e08caec6ccb805141d152ce6835de8",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch21/content.md": {
+      "before_sha256": "ac33abb93b448e6f667caa03666fdcafc343b56883c88211988aa372dc97eb4c",
+      "sha256": "ab310a7d3bf7271d9b44a34f2d37900ddcfbd342be7b63dcafe0cccb4a90d206",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch24/content.md": {
+      "before_sha256": "7d2348b0297f2c72d3aa604ebc2d61c5bf31ec39bb0faac55d663f97cc2a1f6f",
+      "sha256": "efd6ffcfcf5a6cc1fff63dd3fac0ebbb1699a21db5f84f2d4c9490bbe9e2c031",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch32/content.md": {
+      "before_sha256": "67402fe39f76a2d36791ab56c2428e1b3b4aec2f132719d1a1aa94363d1cc7ab",
+      "sha256": "01b51c87d09bdbaf6437914981fe4a6148d4e764feef035f214ff54d8166e71e",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch33/content.md": {
+      "before_sha256": "92878de7d9d1e3e36f3712bda9d7759dfbf8d029e78dd32365a6e76448801e80",
+      "sha256": "ce1dc403ea494973c93b911d61bc4dcdfcded5a44eb8e5ec141103868b77bfe2",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch42/content.md": {
+      "before_sha256": "896ac5a098943b8252434a6bda0a2dbcfc24da3d414882298978ae01eb0d004a",
+      "sha256": "2dd49c20e2e46eeebc9b9b16553b487f1eb1ea766f1dc997531eddb102db3308",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch44/content.md": {
+      "before_sha256": "f85abbb7326bf3b68f1509d70d0740ef60397f545cd15a3d06d2f4e61cc484c6",
+      "sha256": "909c3601defd73b37a526dbdd07fcb61db62b4abd53020cafd962b59478c8a38",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/chapters/ch45/content.md": {
+      "before_sha256": "f99b9463261d5ff7b3114c606bd8e9f00f931b69462a9c843145c9f4c79c32ce",
+      "sha256": "62775ae0e3bba6914399a94ed9c5d27e56afa5b8eff6a9772f23a24a75b19933",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/projects/project01/data_dictionary.md": {
+      "before_sha256": "3250f3e0c623f820f2756a7af15a7f72e3832ac4a76c2519d0f427eb64324d0e",
+      "sha256": "9ce15aa07cbbde79e2225234d8e2de87e4ae354ee5d9cb4bba20160b641a5fb5",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/projects/project01/research_report/report.md": {
+      "before_sha256": "3ab99a484757e5fae5aa279f79a3f4cbd0be16ecfbec332371e41be27445cf8e",
+      "sha256": "102213aef55bc8d4de74a1f801bd2c02ba12f588cf2d7bd2aaa9f0644c35113f",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/projects/project03/READER_GUIDE.md": {
+      "before_sha256": "c94ada9f322397f6ecc2d59967a2a3153166edc3e1fcf2c3a24f88867af1021c",
+      "sha256": "1a9694ba658194cb5ddaf7c83efabf0da058eb6323fdbc7fe9ca4c65afc88394",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/projects/project03/README.md": {
+      "before_sha256": "ea412f72a61eebeb2f8ed64fb4afe3b3719a435759eab6a5816716b9e3772b2c",
+      "sha256": "cd56963aa10579184e8d495b97e6b5015e56261b053cbc031cde560b4d91ecde",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/projects/project04/READER_GUIDE.md": {
+      "before_sha256": "0c75923726aba613c5dd7e84e1945003ac68f623f847f6e0d6a740314a1fd163",
+      "sha256": "9a989cd8dcf07c18a25f22ea0a6333fef248dabc4e8996b416aeb2c2444c62d9",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/projects/project04/README.md": {
+      "before_sha256": "91f0b31f63ccb9dae11d8cb2166f7ef0782ced4cb320b9e6fdfa85a3e4733541",
+      "sha256": "38c8f468738f620f490b8cf79a0b9dcfad58d791a6511c3095ffcbb99541b21f",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/projects/project04/backtest_preparation/README.md": {
+      "before_sha256": "907dc68bb44ce980b57520da5b29619d56da0e66687f1307830b368aa8030efb",
+      "sha256": "19993ef6348ac0799b5085a58010865707b48c747c36a29cb1aa32dd406a1728",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/projects/project04/cost_execution_lab/README.md": {
+      "before_sha256": "f6b86f0557b33f96e65fa405f3a62be371d353efd924ce8ff903cd63d7ad0a1e",
+      "sha256": "6ba175c7f04e5c51d2e588cd7d452ebc405da9de2871213d3cff5c30c267263d",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/projects/project04/cost_execution_lab/research_report.md": {
+      "before_sha256": "80f17b42fbd441751b889cd309230fca0b1aa892487ce27c417845c0a575724c",
+      "sha256": "ee777dc4a805ef1edd71ed70c89b18bcda3cfe1e63f2e0c4b129f515b06334c8",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/projects/project05/README.md": {
+      "before_sha256": "147de3077fc8bbad9020c2917815bb627641720a264cbb86ed1bff3192d643c3",
+      "sha256": "b199302b559a8ada828b7263238dd45c9d4ef0d9304eeeac63f764fc92b59447",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/projects/project05/backtest_preparation/README.md": {
+      "before_sha256": "0c0cf6bcc9f352e128bd7568476ae639e9e9838abdaf01e50106f94e2432caf1",
+      "sha256": "878c6a30d87cd54cd892e3ef5aef5da0d95fc56c22c9b651270db6a89749b1b0",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/projects/project05/research_report/report.md": {
+      "before_sha256": "47279d638f663d18908cdae4b66a11df1786fa1e0880ea8613787cf06113bf19",
+      "sha256": "e0d47b010b136d7e3f0b95923ec4d4949f8fa31722d602085227248e6f6a8905",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/en/projects/project06/research_report/v2_trees.md": {
+      "before_sha256": "b552f50be891f8839cb3c737805d8b2ba189aaaa2941abcf74b715f180ea5e38",
+      "sha256": "4345bdd7c3696c8b52d079e3a2a4106a038c34248c958cb1d4c712b9f50f6f63",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "editions/zh/body/quantweft-textbook-zh.pdf": {
+      "before_sha256": "3d2153a37719b430b5acdc6c214b92e774e5257b239ec6a2bf9013838257bf8c",
+      "sha256": "dd77ea8701bb452516eb0b26a6edc6c05a78d3e76c409b9341708e28b37d711e",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part00/chapter01/content.md": {
+      "before_sha256": "657a1a31ec82c39ee0eb5376190b6f93879460c3e7d302555716514628dbcac9",
+      "sha256": "4a6bc4144373bcee5e1502da14634a9c8c32cf080f663dd5d2b4588bf6b0cadf",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part01/chapter02/content.md": {
+      "before_sha256": "fd252bb07af533ef8728e16c0c54af29f583df4c1fb4b6fa1e33868986766dab",
+      "sha256": "fac220906e4157790244fe3ad0eaea3eeccd34b2e2011fa8d2be9bb5544fe5d9",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part01/chapter02/source_notes.md": {
+      "before_sha256": "6b67232deb8db1dcd9701406971c342b2a6ac762774a29dd285f5e112764f347",
+      "sha256": "64dabe6283753a8157311bdf649cc9f54bb1831cd3b0730b7edfb804d6940216",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part01/chapter05/content.md": {
+      "before_sha256": "e38f8fb0f21331e135141b951de1beb1638f7b18ed4e22e96f0d01d9e133c8ad",
+      "sha256": "a543695ed4668dbdec5946a1ec39a156c3e0acee24b190096cbe46c5f002cf27",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part01/chapter06/content.md": {
+      "before_sha256": "94b60573829b6e12f331ffef5bf74b2c20e056a50d378f835eac384227f8ecde",
+      "sha256": "369b32cb9bf2415cfc490d50de0c91a63be6c3c1586f796f68821e6c8e770a66",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part01/chapter07/content.md": {
+      "before_sha256": "331e4bdbdc79c1a39c63c1f2009162bdc2cd5b99769f94c877363ba0df39ea85",
+      "sha256": "f0e0cc601d37fb9c83879d3e5bc97b740efc97f236b297d253df1b67315c8c6a",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part01/chapter08/content.md": {
+      "before_sha256": "94f8e29c2b1a22719008a0807355760df3f92a7cfeef7a3cc7d8bfd6068e4563",
+      "sha256": "72ed98e56c3b421894f8b6d3145e01a736159316f5a71b4a5408d179a3a66875",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part01/chapter08/source_notes.md": {
+      "before_sha256": "654f397423ca8cdf10a95fece485fab52616f7bf4b56b02bc8b46eba801e1371",
+      "sha256": "5fc1280180a88e070d92b9a39ff152a972301653c905463e1a46ecfbd8817ce7",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part01/chapter09/content.md": {
+      "before_sha256": "bd6b99417ecd68d04976d67e0fed4ce9012d1d355d4f09c905075527a1849cf0",
+      "sha256": "128db1f3ac7bf305405c3ccecf356b7d4f8a1dd6494138da2048dd67fd090a03",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part02/chapter10/content.md": {
+      "before_sha256": "9122fcec7097cee78fe1f82be11675e4e854dcc6c2f0c5c5cdf3f05c99468528",
+      "sha256": "d3b76c72c71309969faadb1eca31fc68665d47f2c6244f96d55d48fca1825c8e",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part02/chapter11/content.md": {
+      "before_sha256": "054072114de9acfcbaca841c181689cc89be74cd29fcb38eae4a54578999a5e9",
+      "sha256": "3281848933daccf973da50580ece57637b74f6a005e3811d1cc43a8e143668b4",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part02/chapter12/content.md": {
+      "before_sha256": "21dae0bd57dc8101b30a4ec4bb4580acaa7cd887f8bda206d03d5ac2208fb243",
+      "sha256": "0848926515f284d8aae965ed38bf78bc671b3cb25eb1ad3e23de16f5866b0591",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part02/chapter12/source_notes.md": {
+      "before_sha256": "4e62714dac94dc86201a148b68f528eec2b9be0fde8c7da41beee65896e3df58",
+      "sha256": "5e7f75e8c95dd176f9ae720c3ec595e996c66f5b044cd11fde1feec234df3347",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part02/chapter13/content.md": {
+      "before_sha256": "47cbc49ee728c36723beae2e0e725f357e97d269b6f3f6517182d355c886e987",
+      "sha256": "59e41e2b7b080718c4c0028b4816cd0d183816b1f99b110abd4f2d6f66b0e893",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part03/chapter14/content.md": {
+      "before_sha256": "0a396007a7c6385dd817065303be2d50cc276e798dfdefc828e3c7a727aadb37",
+      "sha256": "2bb995654c0508125a2f13e633bffbea5c3f3ba7024417c17e6e4a709edcc8e2",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part03/chapter14/source_notes.md": {
+      "before_sha256": "d312c77f49f76f175703b90ee6c549f537beba8fbebe83715a4d2ab978f9b625",
+      "sha256": "b7e46b30632d3bd394b19635793b36f11d57ab3a7807a8c7242fa74659ab3171",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part03/chapter15/content.md": {
+      "before_sha256": "23e9169be70791fade4edd8bc0d8f8a313dc5b49a65d4333d6ceff0e7336f2ac",
+      "sha256": "71a25bded82a5ce19724bc05517b76aab175cd4ae7025de33fc1d8f13af85d5f",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part03/chapter15/source_notes.md": {
+      "before_sha256": "3eea05ef70615512c93fbf5ce79d516adee01599c3de83465f28e3fd726709a8",
+      "sha256": "37b0cae03bcd32153989e298a55fcd8527d3e84574918b2a61cf18e31156ca9c",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part03/chapter16/content.md": {
+      "before_sha256": "5666edde77af8c68c3234dbbf0c709041bbc026f7c64dc8edad5d947a2e0bf05",
+      "sha256": "5e31ecc1b5cff2fe09456fb088dda393920c7b18a62ef2cde512261b413c10c8",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part03/chapter16/source_notes.md": {
+      "before_sha256": "39d26dd0570efd2417c49592351e29f4c92d53431947f3268d5f6f3e1c13040a",
+      "sha256": "95db1f5a7612a47b04ae6fc015968c0a6db7b5ad07c5acc64cb4d3794d559100",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part03/chapter17/content.md": {
+      "before_sha256": "5a564c832e995f3e94bffe58c7f2375072dd10615723ff4180473d2605a09596",
+      "sha256": "8837d8c8cd25b4b41cc3717564a2529513e215bbb4f1b925e1fdc7a383ee3959",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part03/chapter17/source_notes.md": {
+      "before_sha256": "b0e80efbea1d139530a6b1ea766353bd84dd450326cf13e206a1d43a8b03edbb",
+      "sha256": "e0c1ec629c375e940cf08a6d2e0f319aef233a55654e1bb9ed9002aad64d720d",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part03/chapter18/content.md": {
+      "before_sha256": "ecd0f0d98d3dd88c4c9b3f7e99c5ae570d844ecff153a50b6908eb7eea2ff427",
+      "sha256": "1f0adc30cc2ca382258534450a0e1035ee1d6f3c0523216d7d7a1e6abdbe76be",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part03/chapter19/content.md": {
+      "before_sha256": "1ab287113f286d2b83b1db90583cd9863f806956c1ce9523152638c0d2f9f5c2",
+      "sha256": "976806c56d1d64a870af5ffa905df0b6267970ace7db46468a10e81bebb2cc0a",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part03/chapter20/content.md": {
+      "before_sha256": "3fdec388f19cab28b37af7e320ebb81c1cc8333c7722ecf8ab62770439118eaa",
+      "sha256": "afd89ec125597395e5155db55bfed18009a2c01c8920431e84336a7900825bcd",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part03/chapter21/content.md": {
+      "before_sha256": "05e98a7ddb032ce72c405682c69a0cd482a3a532cc50729af3ae090b6cd68e75",
+      "sha256": "d49ee1a9f5099ba490aa7580764e8c40311f7e210e998498336db4879a71b6cc",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part04/chapter27/content.md": {
+      "before_sha256": "cd22079b07d1b52886fba2491facf4faa65c371bbf5658138d9cbd6caa467124",
+      "sha256": "5bccc174701c3ca7734102163cbc67e7fc15778fd2ce49f83d981364b7968709",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part04/chapter28/content.md": {
+      "before_sha256": "60cbfbda22afa614d134cc1266243f2bc0953fcab4e136b23bb89303767bfc82",
+      "sha256": "34bb60116b246171f17bc46764bcfb79f876b6d4ed3071e0e90dfe1df3191936",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part05/chapter32/content.md": {
+      "before_sha256": "2bb63f2cf3972ab55ba0633de57121e373ddf1b370f405889105f9894fb77758",
+      "sha256": "009233e13a8ccf0e8d11a5d602951c5b78bed52967d837364e5c9e37ad359ad2",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part05/chapter33/content.md": {
+      "before_sha256": "01e180943dfe3aa1288eb0f5226704b4e7927bfa2435704c757258a7f26c2ce5",
+      "sha256": "d4597e14aa3d0b6e4fe7057e1c10d1a16c7ff855f26f92848870563d76ba32ef",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part07/chapter42/content.md": {
+      "before_sha256": "1479fcc7198310ec491bb6ae42ca566de226f4079fc113295933e572963b38e6",
+      "sha256": "33eaa2fbd969c320e9919d5ea595bd2bf32cff75694945bd2e354c89b9f8e4f2",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part07/chapter43/content.md": {
+      "before_sha256": "c2616a0e3ad2814ec914a871ba4a58af113c971129cd15783d31d05b8004655f",
+      "sha256": "81c3bce3b5c259e5824357dc9effff640189f9c2d07c7a5e3e995edc979352ef",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part07/chapter44/content.md": {
+      "before_sha256": "fd861539784511f043688e078ba91487b4ce736dcad89a73ce7d0d967f460953",
+      "sha256": "6768919260e966d98a0ba8a96e1fafe51f8f6d31d8b38418aabc923750f54f8e",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part07/chapter45/content.md": {
+      "before_sha256": "e7f02937671dc1dfa8eaff8d81f058b0f0dbfe0aa24aabc2446cebcf9b758a92",
+      "sha256": "0986d85b45a58cf9d77f6514ad0bf122e1bf4ff8717b78168a176eb553b3581f",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "part07/chapter45/source_notes.md": {
+      "before_sha256": "fbb24802c79624e6c33e5bca46c7fd6da5ddf046d7dbc59f22692281f8ad7145",
+      "sha256": "8ed53ba0a0e5223d4583b27edbeb1a3321e13f8ce8fb244a5a091134ed9a3874",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "projects/project01/data_dictionary.md": {
+      "before_sha256": "6b7d85e398f9f838ea3b35a11d1b370d004eceb5aca0f1cf45de4cb84f6217c3",
+      "sha256": "f42d4344dbe4b3dc15576613ff494d7431fa8a7d7d31d952e5ac5e4c1a3aeac6",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "projects/project01/qa/acceptance.md": {
+      "before_sha256": "e5be7a1b2947dc8f6d2e92e15c8b7aa20de84c8acc9fd775b54b3ba97539f30b",
+      "sha256": "793eda0c7ceb8eb8e9afc332594c79226a2c5012d9a9e083b141b3e08adb9c36",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "projects/project01/research_report/report.md": {
+      "before_sha256": "4f1cf46082338d0a39d03276dc484a7b8ebacb46ddcb30db750242841eadefab",
+      "sha256": "c279fb8bd7d3041a2010ae93a316e79133e374abfea17fff55f8c2f04d97464e",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "projects/project02/research_report/report.md": {
+      "before_sha256": "3ce9ade98d3238087e7e6e0ebfa45d5db0e626dabe33b63cf443cae821c999b1",
+      "sha256": "0b11b0430427048e2ce928183ca87e849796990bd4e39fac77252138e0002ca9",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "projects/project03/READER_GUIDE.md": {
+      "before_sha256": "1e1f50ce1d85e9f6d6ae8ee85d961a55416b83d30f885170b76df020637f672c",
+      "sha256": "7ce248e5cb70c82c319724994c3ed988facbfcf0c3b58a33c28edaec5c1be61c",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "projects/project03/README.md": {
+      "before_sha256": "c2d80cf8bd8d70c26d4e1802bcb80df9fd89941111e5935fb11f20669d4753a9",
+      "sha256": "d65bfb596076b95721d3a6be9834370b11f80d819c8b1f745f293324e13a9cfa",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "projects/project04/backtest_preparation/README.md": {
+      "before_sha256": "9ec6800248b4cb5610b81579bfd02bac03b55f44439ea3c5d74d743c6d1d5d99",
+      "sha256": "ad9cb24b851361410c3582beaa98f7ce2c9863d08c4fcb591e72d8571ba89d48",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "projects/project04/cost_execution_lab/README.md": {
+      "before_sha256": "1ff682f4092708793e2ac74e8c026f868943105bb5645cdb196009aaeb29c62a",
+      "sha256": "285ccc7c3b7f89f012f381531f219c1b10f7ce8cadcd525c208be6aabaaefa42",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "projects/project04/cost_execution_lab/research_report.md": {
+      "before_sha256": "a9ce6abb8b0d26ba5d8c505886662cabc25001df700aefde584a548333ef5add",
+      "sha256": "67d86d3f5c2121fa8fc62c5b02f0464c1512fac057f81802d73e8ab6c7c24f52",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "projects/project05/README.md": {
+      "before_sha256": "d9c22039e5fc84ca332e9433c321e423d2e63e4e35bf6f7e9f683bbe89ad82bc",
+      "sha256": "4d6079aab5d795e4a079bd8ff8034a37e3281db9f282a71a22e162c573e8a5f4",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "projects/project05/backtest_preparation/README.md": {
+      "before_sha256": "d2212994a1f6ed2684a8f0efafba4ca383a8308ec43987152183be73e45fcff7",
+      "sha256": "698d30f16cb66cd914a1fe7478a8bddbf3888ab7c5810e9dc0770a50ae2a1da7",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "projects/project05/research_report/report.md": {
+      "before_sha256": "e4d6c06c0a8a59c6ad56099b741e5ae089d0e5ad3e61c4775f678a00d080633c",
+      "sha256": "c7f082472850cb3b52d802b9e16230391c3db0be1b1191489367693044dce3a0",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "projects/project06/research_report/v2_trees.md": {
+      "before_sha256": "7181e4053c842ae666ff4b6a8c08a9a5579fde5435cb7138fb91eb6a6cb01144",
+      "sha256": "8bad44447bb1a3d8ab4ad9d5cb7c33d046477a2d872b348fd1a9efda02923457",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
+    },
+    "references.md": {
+      "before_sha256": "cca9baede5dca968cd6e4a541c4ad9d64650da56e7760ba2b33a415726b80423",
+      "sha256": "ea68ad7f59086d554e084dec6426f2e7e79254b70cad9c5aad91a5b1d8a84e5a",
+      "scope": "Identity recorded from starting committed revision and reader layout; see layout report"
     }
   },
   "additional_current_files": {
     ".gitattributes": "e5cf23814e8dd21c89f7dba99c9a2032cfd9b9465d152ccbe13099a7b89e7594",
     ".github/FUNDING.yml.example": "31b0dfd683a65240573e0a326dd2b40f310ad1beaa55bb5680553dd009ffa62b",
     ".gitignore": "211971b9950474652516b33183df273db6d83542e16e429551a38d2501d7c23c",
-    "ACKNOWLEDGEMENTS.md": "4df3e4071d069381cce4535fa2f62da55867074702bc68b862dd1a4c911bf80e",
-    "CONTRIBUTING.md": "f0473ae12426149f447ff51e484630aca229357ebf91199782a582de99525351",
-    "LICENSE.md": "a238675d00217d03e873502f4a85fdcd8b516188678ca6fbcdcf672a2fe2b74e",
+    "LICENSE.md": "980cd17f2c6053e14c2d55f631d609f4f90d60027fcd8b893a9625e0f1f18279",
     "LICENSES/CC-BY-SA-4.0.txt": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
     "LICENSES/MIT.txt": "c5b4c3c368372efa1c04460cab54e900934832891613271d4afdde9aeb2b412a",
-    "README.en.md": "b6bfaa57f9f73fa48aef03283544bed0b19672b5b64598216b94ecabe1eb5436",
-    "REPOSITORY_STATUS.md": "bba749f91be14e50c10fea3c98faa69ff7fdee8839fd6badd67e4fb2ef09b69c",
-    "RIGHTS_REVIEW.md": "c5b0d79a0251c8062d0d92d7688b6bb93dc4ca778cb2656b40362bea76897bd8",
-    "SUPPORT.md": "556e75a24d41a3725169b1f7c491ae6b5fcd8ab85014e5546940700d85dadad2",
-    "THIRD_PARTY_NOTICES.md": "da44f3a0de9b27803abd4499c5b7949e2213b3c67c259719cd9654527be481d8",
+    "README.en.md": "90c765c721c01d3086f02e932d7d0f6457ed8f0f95d1fdaf974232241bc77eee",
     "docs/.nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "docs/HOMEPAGE_DESIGN.json": "34598e42ab2cfa5557b40eb526f65b49639b4fd987a6e97e987f4b359d776581",
-    "docs/SITE.md": "4ed9a8971f5389ddd77b39ea1a597852b846df7b7e449277b5710c37419b219b",
+    "docs/SITE.md": "46f7d7cbe622b0f26b899e030e84fc1bf37351cbaad79b11e70a8ff01b880ff3",
     "docs/assets/ORIGIN.json": "0ce1728de49c45ecddf949b92a7c2e73fbe1c54c9c9a864c37bf63c75a83e808",
     "docs/assets/course-cover.png": "415fe3fb88f5e7ae06797546551a4aef675b2f3ef9facdeacb2d818a1ddbdfc3",
     "docs/assets/quantweft-cover.png": "aa90a4f5c2bc4657296a03737525dca2a687e6fbe83a511df2679e9d6b565c04",
     "docs/assets/research-surfaces.png": "bbda1073d11b4c35c829dda9ce91dc0a9692877526b57227daae429749df44e3",
-    "docs/index.html": "d9b8006e7de03d793672a82700b9d36ff8c72bc82f036a61f1e82e8ec5fcd168",
+    "docs/index.html": "fb85344acf95bae4dce866864481f0a6d121a44b686a32973d0070e53527660c",
     "docs/site.js": "cb4182a131ad7b76ebdf802d9ab24ea164fad0fac09a9a1177dd5b35318bc319",
     "docs/styles.css": "1a7bab321e87db7d9a0f7cb8386db156d67ffe913371d08faf189ac1bc9cf287",
     "loom/README.md": "24015b279bc005bd90df4c48f3eeeb151f672ec81dffeb321f7cd6fd6ee0c022",
@@ -113,7 +568,7 @@
     "provenance/ORIGIN.json": "adaf819b37b115dc6336c6c54032f2ece4fd46b3263203c0a4e41f0638b4c309",
     "provenance/WORKBOOK_REVISION.json": "9e02aa439349e2375e795cdafe6baa8cf1a6475aee510d49f15ba5db18886cc4",
     "provenance/verify_brand_revision.py": "ce24b311a970c987882e9359647903aa738c6c30ab9b25f6243549feff8765f6",
-    "provenance/verify_current_revision.py": "ae8ac756a70a93aec68041c4749509d4ed87b454637f9452f9238ac299b879fc",
+    "provenance/verify_current_revision.py": "23e7a2ab582729f5f2783fe4657bed1a85807686df8731a49910a1dbf4df4b75",
     "provenance/verify_snapshot.py": "15a92e853901e1745e6b5a557c17895ca4aec0b47998c723cd2320ca3177af1f",
     "provenance/verify_workbook_revision.py": "266e77e6c26e89230dca2c0fe09fcd873fbd7b7b4249bfe450414bd5dc0d56a1",
     "qa/quantweft_brand_20261019/REPORT.json": "cbcc8e517d9d7a677125710d68c2646121178e424ca4f1563deabcc5f752d6be",
@@ -121,10 +576,24 @@
     "qa/workbook_naming_20261019/REPORT.json": "e976dc13c75b280c52974c2630641fcae09950538ea28764061d10197efe99e1",
     "third_party/loom-notes/LICENSE": "37749a5538cae7a4b593db42b5c3948387e094ccca77fbf8d09c99eb4e57a9ef",
     "third_party/loom-notes/ORIGIN.json": "7d2565d750db5f364f0f2e3643f6cc22fc821b538be39503393138613dcf6717",
-    "workbook/README.md": "e0b668e648e534159c8d03ff4589698ea83268413bcb8213a6e554ca47d3c2f0"
+    "workbook/README.md": "3c3004d2984f178ea664943ea29818395ccc285afddf664c67f955aaf00d76df",
+    "docs/legal/ACKNOWLEDGEMENTS.md": "66cbd1900e15c417135ea2caa1e74b44604b6773b0ab3ce5e69874a953aeac23",
+    ".github/CONTRIBUTING.md": "8c695923df6bf24f6c6e24868af0ecadb9d8f59b79677493bbe0df436e3ca6da",
+    "docs/maintenance/REPOSITORY_STATUS.md": "0b99777269290f1c6c6f46108d43a80b358acafe2babd74a30888bd0e04bec0b",
+    "docs/legal/RIGHTS_REVIEW.md": "71eb941b930d69a928958061732cafdd54de5393b66e986fc72b2658ea16a1a0",
+    ".github/SUPPORT.md": "df1dac6595a421a0060ad76991684089b0a7ec73ab1f549b76e2fabeb97ccd99",
+    "docs/legal/THIRD_PARTY_NOTICES.md": "dbbf22867741b9d9669489df8940e36a627f29b87834611ab575fa719b1da6a8",
+    "docs/README.md": "3c1ce6bc68f5fdc9603bc865229e4d2394fc9bce85c3fe280f5f224bb959ac1a",
+    "qa/repository_layout_20261019/REPORT.json": "944123239745c3712eaad0c3da4e0fa98cd6882c1d1006a852b73226e2feca94"
   },
   "previous_revision": "provenance/BRAND_REVISION.json",
-  "PDF_bytes": "All four accepted PDFs unchanged",
+  "PDF_bytes": "All four PDFs unchanged by layout refresh from fa3da8b; inherited prior PDF differences recorded in layout report",
   "execution": "No course/notebook/research run; no PDF build",
-  "rights_clearance": "pending; not established by manifests or scans"
+  "rights_clearance": "pending; not established by manifests or scans",
+  "inherited_committed_revision": {
+    "commit": "fa3da8b",
+    "report": "qa/repository_layout_20261019/REPORT.json",
+    "status": "Identity reconciliation only; not a new course acceptance"
+  },
+  "before_sha256_semantics": "Previously recorded expected identity from the earlier revision, not necessarily the actual bytes at starting commit fa3da8b; inherited differences are listed in the layout report."
 }

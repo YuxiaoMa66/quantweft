@@ -28,8 +28,8 @@ Suggested attribution / 建议署名方式：
 
 ## Exceptions and boundaries / 例外与边界
 
-- Third-party software, templates, illustrations, quotations and reproduced material keep their own terms. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md). A source citation is not a redistribution license.
-- Market datasets and data-derived artifacts are not covered by a blanket MIT or CC grant. Constructed numeric examples are not market data; factual numbers may not themselves be copyrightable. See [RIGHTS_REVIEW.md](RIGHTS_REVIEW.md) for current evidence and unresolved items.
+- Third-party software, templates, illustrations, quotations and reproduced material keep their own terms. See [THIRD_PARTY_NOTICES.md](docs/legal/THIRD_PARTY_NOTICES.md) and [ACKNOWLEDGEMENTS.md](docs/legal/ACKNOWLEDGEMENTS.md). A source citation is not a redistribution license.
+- Market datasets and data-derived artifacts are not covered by a blanket MIT or CC grant. Constructed numeric examples are not market data; factual numbers may not themselves be copyrightable. See [RIGHTS_REVIEW.md](docs/legal/RIGHTS_REVIEW.md) for current evidence and unresolved items.
 - AI-generated images are identified in the third-party notices. Where the project owner holds transferable rights in them, those rights are offered under CC BY-SA 4.0; no exclusive copyright or clearance of unrelated third-party rights is promised.
 - The licenses do not grant a right to impersonate the author or suggest endorsement. CC BY-SA does not license trademark rights; references to QuantWeft for attribution and descriptions of lawful forks remain welcome.
 - Nothing here overrides an existing third-party license or restricts public-domain material or rights granted by applicable exceptions. Software warranties are governed by MIT; content warranties by the CC legal code. The course is educational and does not promise investment outcomes.
@@ -38,6 +38,6 @@ Suggested attribution / 建议署名方式：
 
 ## Publication status / 发布状态
 
-The license choices above are effective for project-original rights the owner can grant. They are not certification that every file is cleared for public redistribution. The repository remains private pending the itemized release review in [RIGHTS_REVIEW.md](RIGHTS_REVIEW.md). Historical snapshots and accepted PDFs retain their original bytes and may contain outdated administrative wording; this root scope notice describes the current licensing decision without extending third-party rights.
+The license choices above are effective for project-original rights the owner can grant. They are not certification that every file is cleared for public redistribution. The repository remains private pending the itemized release review in [RIGHTS_REVIEW.md](docs/legal/RIGHTS_REVIEW.md). Historical snapshots and accepted PDFs retain their original bytes and may contain outdated administrative wording; this root scope notice describes the current licensing decision without extending third-party rights.
 
-上述许可决定适用于作者有权授予的原创权利，不代表所有文件已通过公开再分发核查。仓库暂保持私有，具体待办见 [RIGHTS_REVIEW.md](RIGHTS_REVIEW.md)。历史快照和已接受 PDF 保留原字节，可能存在旧的管理状态措辞；当前授权范围以本文件为准，不扩展第三方权利。
+上述许可决定适用于作者有权授予的原创权利，不代表所有文件已通过公开再分发核查。仓库暂保持私有，具体待办见 [RIGHTS_REVIEW.md](docs/legal/RIGHTS_REVIEW.md)。历史快照和已接受 PDF 保留原字节，可能存在旧的管理状态措辞；当前授权范围以本文件为准，不扩展第三方权利。

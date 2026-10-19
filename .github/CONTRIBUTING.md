@@ -1,8 +1,8 @@
 # Contributing to QuantWeft / 参与 QuantWeft
 
-Thank you for helping improve the explanations, exercises, translations, code and reproducibility. Read [LICENSE.md](LICENSE.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) before submitting material.
+Thank you for helping improve the explanations, exercises, translations, code and reproducibility. Read [LICENSE.md](../LICENSE.md) and [THIRD_PARTY_NOTICES.md](../docs/legal/THIRD_PARTY_NOTICES.md) before submitting material.
 
-欢迎改进讲解、练习、翻译、代码和可复现性。提交前请阅读 [许可范围](LICENSE.md) 与 [第三方声明](THIRD_PARTY_NOTICES.md)。
+欢迎改进讲解、练习、翻译、代码和可复现性。提交前请阅读 [许可范围](../LICENSE.md) 与 [第三方声明](../docs/legal/THIRD_PARTY_NOTICES.md)。
 
 ## What to submit / 如何提交
 
@@ -22,6 +22,6 @@ By intentionally submitting a contribution for inclusion, you confirm that you h
 
 ## Review and public release / 审阅与公开
 
-Maintainers review contributions before accepting them. Contributing, sponsorship, and public-release approval are separate decisions. No payment is required for contributions or issue reports. Current public-release blockers are recorded in [RIGHTS_REVIEW.md](RIGHTS_REVIEW.md).
+Maintainers review contributions before accepting them. Contributing, sponsorship, and public-release approval are separate decisions. No payment is required for contributions or issue reports. Current public-release blockers are recorded in [RIGHTS_REVIEW.md](../docs/legal/RIGHTS_REVIEW.md).
 
-维护者审阅后决定收录。贡献接受、赞助和公开发布是不同事项；提问与投稿不要求付费。当前公开前待办见 [RIGHTS_REVIEW.md](RIGHTS_REVIEW.md)。
+维护者审阅后决定收录。贡献接受、赞助和公开发布是不同事项；提问与投稿不要求付费。当前公开前待办见 [RIGHTS_REVIEW.md](../docs/legal/RIGHTS_REVIEW.md)。

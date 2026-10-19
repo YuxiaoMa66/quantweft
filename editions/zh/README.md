@@ -58,11 +58,11 @@ Capstone提供已接受的研究问题、时间契约、完整协议、字典和
 
 [可选输入契约](OPTIONAL_DATA.md) · [本轮验证范围](LOCAL_VALIDATION.md) · [后续事项](REMAINING_ITEMS.md) · [实际文件结构](FILE_TREE.md)
 
-[练习设计来源与致谢](../../ACKNOWLEDGEMENTS.md)：部分设计借鉴 loom-notes 模板，并按本课程需要调整，并非完整套用。
+[练习设计来源与致谢](../../docs/legal/ACKNOWLEDGEMENTS.md)：部分设计借鉴 loom-notes 模板，并按本课程需要调整，并非完整套用。
 
 项目现名为 **QuantWeft · 量化经纬**，副标题为“量化金融与系统化研究双语课程”。四册 PDF 文件名已更新，已接受的 PDF 内容、页码和内部旧称保持原样。
 
-[许可范围](../../LICENSE.md)：原创代码 MIT，原创教学内容 CC BY-SA 4.0；[第三方例外](../../THIRD_PARTY_NOTICES.md)与[公开前核查](../../RIGHTS_REVIEW.md)另列。[参与和自愿赞助](../../SUPPORT.md)，当前未启用收款。
+[许可范围](../../LICENSE.md)：原创代码 MIT，原创教学内容 CC BY-SA 4.0；[第三方例外](../../docs/legal/THIRD_PARTY_NOTICES.md)与[公开前核查](../../docs/legal/RIGHTS_REVIEW.md)另列。[参与和自愿赞助](../../.github/SUPPORT.md)，当前未启用收款。
 
 
 ## 仓库路径与历史引用

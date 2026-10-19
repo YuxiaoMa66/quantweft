@@ -12,7 +12,13 @@ A bilingual course for learners who want to understand models, implement them, a
 
 **45 chapters** / **6 projects** / **1 Capstone** / **Complete textbooks and workbooks in Chinese and English**
 
-[Start learning](editions/en/README.md) · [Notebook guide](editions/en/NOTEBOOK_GUIDE.md) · [Curriculum](editions/en/resources/syllabus.md) · [Website preview](docs/SITE.md)
+## Start here
+
+| Read | Practice | Run code |
+| :--- | :--- | :--- |
+| [English learning guide](editions/en/README.md)<br>Follow the prerequisites through 45 chapters | [English workbook](editions/en/workbook/quantweft-workbook-en.pdf)<br>Work independently, then check complete answers | [Notebook guide](editions/en/NOTEBOOK_GUIDE.md)<br>Start with constructed-data examples |
+
+[Curriculum](editions/en/resources/syllabus.md) · [Website preview](docs/SITE.md) · [Repository guide](docs/README.md)
 
 ## Choose how to read
 
@@ -20,23 +26,14 @@ A bilingual course for learners who want to understand models, implement them, a
 | :--- | :--- | :--- |
 | **Textbook**: concepts, derivations, and worked examples | [Read the textbook](editions/en/body/quantweft-textbook-en.pdf) | [阅读中文教材](editions/zh/body/quantweft-textbook-zh.pdf) |
 | **Workbook**: active recall, exercises, and complete answers | [Read the workbook](editions/en/workbook/quantweft-workbook-en.pdf) | [阅读中文练习册](editions/zh/workbook/quantweft-workbook-zh.pdf) |
-| **Learning guide**: prerequisites and project sequence | [English learning guide](editions/en/README.md) | [中文学习指南](editions/zh/README.md) |
 
 Read the textbook, attempt the workbook independently, then run the Notebooks to check calculations and outputs. Use the PDFs for complete course reading; this repository does not include the editorial workspace's full PDF layout toolchain.
 
-## Follow the research process
+## Learning route
 
-**Build the foundations**
+**Mathematical and financial foundations → Statistical models and asset pricing → Strategy testing and research engineering**
 
-Python, time and data contracts, calculus, linear algebra, probability, statistics, regression, optimization, markets, valuation, and asset pricing.
-
-**Form a research question**
-
-Time series, cointegration, volatility, portfolios, and alpha signals turn intuition into testable hypotheses.
-
-**Test and implement**
-
-Backtest biases, out-of-sample validation, performance, risk, costs, and execution lead into financial machine learning and research engineering.
+Begin with Python, data, and timing contracts. Progress through regression, optimization, time series, and portfolios to out-of-sample validation, risk, costs, execution, and financial machine learning.
 
 See the [learning route](editions/en/resources/learning_roadmap.md) and [chapter dependency graph](editions/en/resources/dependency_graph.md) for prerequisites.
 
@@ -69,18 +66,23 @@ This is Chapter 35's constructed execution-ledger example. Dependency installati
 
 [Glossary](editions/en/resources/glossary.md) · [Notation and units](editions/en/resources/notation.md) · [References](editions/en/resources/references.md) · [File navigation](editions/en/FILE_TREE.md)
 
-### Edition and validation scope
+<details>
+<summary>Edition, validation scope, and publication status</summary>
+
+
 
 This repository inherits the accepted local formal bilingual edition of October 19, 2026. See [Local validation scope](editions/en/LOCAL_VALIDATION.md) for existing textbook and offline engineering evidence. This homepage redesign does not constitute a new course or research run.
 
 The default route uses constructed data. French market data are not distributed, and real-market research has not been run. Historical results and unresolved evidence gaps retain their recorded scope; see [Remaining work](editions/en/REMAINING_ITEMS.md) and [Optional data contracts](editions/en/OPTIONAL_DATA.md).
 
-By **Yuxiao Ma**. Original code uses **MIT**; original educational content uses **CC BY-SA 4.0**, subject to [scope and third-party exceptions](LICENSE.md). The repository remains private pending the [public-release rights review](RIGHTS_REVIEW.md). See [Repository scope and provenance](REPOSITORY_STATUS.md).
+By **Yuxiao Ma**. Original code uses **MIT**; original educational content uses **CC BY-SA 4.0**, subject to [scope and third-party exceptions](LICENSE.md). The repository remains private pending the [public-release rights review](docs/legal/RIGHTS_REVIEW.md). See [Repository scope and provenance](docs/maintenance/REPOSITORY_STATUS.md).
+
+</details>
 
 ## Exercise design credit
 
-Parts of the workbook’s exercise design and layout draw on the [loom-notes](https://github.com/Polaris-Aeterna/loom-notes) LaTeX template, selectively adapted to the course. The template is not used in full. See [Attribution and acknowledgements](ACKNOWLEDGEMENTS.md).
+Parts of the workbook’s exercise design and layout draw on the [loom-notes](https://github.com/Polaris-Aeterna/loom-notes) LaTeX template, selectively adapted to the course. The template is not used in full. See [Attribution and acknowledgements](docs/legal/ACKNOWLEDGEMENTS.md).
 
 ## Contribute and support
 
-[Contributions](CONTRIBUTING.md) are welcome. See the [voluntary support plan](SUPPORT.md); payment channels are not active. Learning and reuse under the licenses do not require sponsorship.
+[Contributions](.github/CONTRIBUTING.md) are welcome. See the [voluntary support plan](.github/SUPPORT.md); payment channels are not active. Learning and reuse under the licenses do not require sponsorship.

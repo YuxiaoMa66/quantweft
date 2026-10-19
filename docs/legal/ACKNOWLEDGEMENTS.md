@@ -12,12 +12,12 @@ Parts of this course’s workbook exercise design and layout draw on the LaTeX t
 
 The course companion is called the **Workbook**. **Loom** identifies the upstream template, not this course’s brand. Technical names such as `loom.cls`, selected legacy source paths, historical records, and terminology inside the unchanged PDFs are retained for traceability and compatibility.
 
-上游代码与 skill 的许可说明见 [保留的上游 LICENSE](third_party/loom-notes/LICENSE)。该许可仅适用于其所覆盖的上游材料，不构成本课程整体的开源许可，也不替代其他来源的权利说明。
+上游代码与 skill 的许可说明见 [保留的上游 LICENSE](../../third_party/loom-notes/LICENSE)。该许可仅适用于其所覆盖的上游材料，不构成本课程整体的开源许可，也不替代其他来源的权利说明。
 
-See the [preserved upstream LICENSE](third_party/loom-notes/LICENSE) for the class and skill. Its scope is the upstream material it covers; it does not license the entire course or replace the rights notices of other sources.
+See the [preserved upstream LICENSE](../../third_party/loom-notes/LICENSE) for the class and skill. Its scope is the upstream material it covers; it does not license the entire course or replace the rights notices of other sources.
 
 核对版本 / Reference revision: [`290fa4042d33a7dd11f290eb39fba7f5d5b71369`](https://github.com/Polaris-Aeterna/loom-notes/tree/290fa4042d33a7dd11f290eb39fba7f5d5b71369).
 
 ## 当前课程许可 / Current course licenses
 
-本课程原创代码采用 MIT，原创教学内容采用 CC BY-SA 4.0，范围与例外见 [LICENSE.md](LICENSE.md)。这不改变上游许可或扩大作者对第三方内容的权利。The project’s own licensing is separate from the upstream Loom license and does not relicense third-party material.
+本课程原创代码采用 MIT，原创教学内容采用 CC BY-SA 4.0，范围与例外见 [LICENSE.md](../../LICENSE.md)。这不改变上游许可或扩大作者对第三方内容的权利。The project’s own licensing is separate from the upstream Loom license and does not relicense third-party material.

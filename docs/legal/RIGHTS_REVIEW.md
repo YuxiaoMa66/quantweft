@@ -1,6 +1,6 @@
 # Public-release rights review / 公开前权利核查
 
-**Status: pending; repository private; GitHub Pages disabled; payment channels inactive.** The selected MIT and CC BY-SA 4.0 licenses apply only to licensable project-original rights as stated in [LICENSE.md](LICENSE.md). This register is not a finding that the items below are infringing; it records evidence still needed for a public release.
+**Status: pending; repository private; GitHub Pages disabled; payment channels inactive.** The selected MIT and CC BY-SA 4.0 licenses apply only to licensable project-original rights as stated in [LICENSE.md](../../LICENSE.md). This register is not a finding that the items below are infringing; it records evidence still needed for a public release.
 
 **当前状态：核查未闭合，仓库私有，Pages 未启用，收款未启用。** 许可已按根说明选定，但不能据此替第三方授权。下列待办不等于认定侵权，而是公开前仍需证据的项目。
 
