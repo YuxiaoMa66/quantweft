@@ -10,7 +10,7 @@ A bilingual course for learners who want to understand models, implement them, a
 
 **45 chapters** / **6 projects** / **1 Capstone** / **Complete textbooks and Loom workbooks in Chinese and English**
 
-[Start learning](editions/en/README.md) · [Notebook guide](editions/en/NOTEBOOK_GUIDE.md) · [Curriculum](editions/en/resources/syllabus.md)
+[Start learning](editions/en/README.md) · [Notebook guide](editions/en/NOTEBOOK_GUIDE.md) · [Curriculum](editions/en/resources/syllabus.md) · [Website preview](docs/SITE.md)
 
 ## Choose how to read
 

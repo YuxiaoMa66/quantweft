@@ -5,7 +5,7 @@
   "intentional_baseline_change": {
     "path": "README.md",
     "before_sha256": "7c1b1c6930545a575b9443389f56ba5c952c093eac5b601c1ecaca44d542980f",
-    "after_sha256": "6c5b8ef30a27ca2540d0a3fd0d7bbb2f3420b7aa8ed0c435f3db0c32c5b176b8"
+    "after_sha256": "f95ab6a03d0025b72a68cf61f0c0f89a9af8dd0e40c5309bee96162f8cb48a96"
   },
   "new_files": [
     "README.en.md",
@@ -36,5 +36,6 @@
     "theme": "native GitHub theme; cover is a fixed light artwork"
   },
   "baseline_verifier_note": "The original verify_snapshot.py should report README.md as changed. This is intentional; the dated manifest and verifier have not been rewritten.",
-  "new_asset_sha256": "415fe3fb88f5e7ae06797546551a4aef675b2f3ef9facdeacb2d818a1ddbdfc3"
+  "new_asset_sha256": "415fe3fb88f5e7ae06797546551a4aef675b2f3ef9facdeacb2d818a1ddbdfc3",
+  "website_navigation_update": "Added docs/SITE.md link on 2026-10-19; homepage content otherwise unchanged."
 }

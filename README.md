@@ -10,7 +10,7 @@
 
 **45 章** / **6 个项目** / **1 个 Capstone** / **中英文完整教材与 Loom 练习册**
 
-[开始学习](editions/zh/README.md) · [Notebook 导读](editions/zh/NOTEBOOK_GUIDE.md) · [课程大纲](editions/zh/resources/syllabus.md)
+[开始学习](editions/zh/README.md) · [Notebook 导读](editions/zh/NOTEBOOK_GUIDE.md) · [课程大纲](editions/zh/resources/syllabus.md) · [双语网站预览](docs/SITE.md)
 
 ## 选择你的阅读方式
 
