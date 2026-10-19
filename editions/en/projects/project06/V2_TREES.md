@@ -81,7 +81,7 @@ Real-data work remains blocked; the `data/PIT` state and A10-B are unverified. D
 - Result identity and frozen values: `projects/project06/research_report/v2_summary_base.json`, `v2_summary_regime.json`, and `v2_ic_date_bases.json`; original QA summaries are under `qa/a8/ch40_ch41_batch/evidence/qa_r1/`.
 - Reports: `projects/project06/research_report/README.md` and `projects/project06/research_report/v2_trees.md`.
 - P6 / Chapter 40 boundary review: `qa/bilingual_revision/BIL19/preparation/ROOT_READER_NOTES.md` and `qa/bilingual_revision/BIL19/PRE_FREEZE_REVIEW_01.md`.
-- Notebook carry-forward and acceptance status: `qa/bilingual_revision/BIL23/preparation/CH40_CH41_P6V2_NOTEBOOK_CARRY_FORWARD.md`; A8-B receipt: `projects/project06/ACCEPTED_VERSION_v2.md` and `qa/bilingual_revision/BIL18/independent_acceptance/ACCEPTANCE_RECEIPT.json`.
+- The Notebook carries forward constructed displays. See the [v2 report](research_report/v2_trees.md) for methods and evidence limits; internal acceptance receipts are not distributed.
 
 ## Exercises: preserve the experiment and metric definition
 

@@ -88,7 +88,7 @@ The A8-R1 display does not report the old IC t statistics. The old `ic_summary` 
 ## 5. Limitations and remaining work
 
 - **Real data:** An authorized daily equity panel that may be retained for internal training is required (see `data_manifest.json` for fields and licensing). No Project 5 universe or purchase candidate is inherited. Real-data work remains blocked.
-- **Tree models, training-only feature importance, stability, and ablation** have a separate A8-B constructed-teaching implementation and limited-scope acceptance entry; see `ACCEPTED_VERSION_v2.md` and `research_report/v2_trees.md`. This base report does not replace the separate results.
+- **Tree models, training-only feature importance, stability, and ablation** have a separate A8-B constructed-teaching implementation and limited-scope acceptance entry; see the [v2 research report](v2_trees.md). This base report does not replace the separate results.
 - **Complete Project 6** remains unverified. BIL19 has author candidates for full bilingual teaching integration, the PCA extension, and the complete answer set; independent review is pending.
 - The cost model includes proportional fees only. Borrowing, financing, market impact, and capacity are not modeled (modules from Chapters 35–36 may be connected in the complete project).
 

@@ -6,9 +6,9 @@
 
 | 范围 | 当前状态 | 说明 |
 |---|---|---|
-| A8-A 基础管线 | 限定范围接受；构造教学验证 | 日期分组 walk-forward、训练内调参、零/训练均值/OLS、Ridge、Lasso 与 Elastic Net、预测到组合权重及成本后账本。见 `ACCEPTED_VERSION.md`。 |
-| A8-R1 展示修订 | 限定范围接受 | 修订了冻结构造结果的显示口径，保留负结果；不构成新训练或新实证。见 `ACCEPTED_DISPLAY_REVISION_v1.md`。 |
-| A8-B 树模型扩展 | 限定范围接受，待正式整合 | 构造数据上的树模型比较、训练内特征重要性、稳定性和登记的消融实现。见 `ACCEPTED_VERSION_v2.md` 与 `research_report/v2_trees.md`。 |
+| A8-A 基础管线 | 限定范围接受；构造教学验证 | 日期分组 walk-forward、训练内调参、零/训练均值/OLS、Ridge、Lasso 与 Elastic Net、预测到组合权重及成本后账本。见 [基础结果与范围](research_report/README.md)。 |
+| A8-R1 展示修订 | 限定范围接受 | 修订了冻结构造结果的显示口径，保留负结果；不构成新训练或新实证。见 [展示口径与缺失边界](research_report/README.md)。 |
+| A8-B 树模型扩展 | 限定范围接受，待正式整合 | 构造数据上的树模型比较、训练内特征重要性、稳定性和登记的消融实现。见 [v2 结果与范围](research_report/v2_trees.md) 与 `research_report/v2_trees.md`。 |
 | 完整 Project 6 | 尚未完成，未 verified | 真实数据仍 blocked；BIL19 的双语树/PCA 教学扩展、完整项目题答与 练习册 现为候选，待独立审阅；不构成完整项目接受。 |
 
 本页、数据字典和基础管线报告说明 A8-A 基础层。它们不替代 A8-B 报告，也不表示完整 Project 6 或真实研究已完成。BIL19 候选入口见 [v2 教学指南](V2_TREES.md)、[v2 研究报告](research_report/v2_trees.md)、[项目答案](solutions.md) 与 [P6 练习册](loom/main_p06.tex)；候选的接受状态仍待当前主控独立审阅。

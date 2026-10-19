@@ -1,50 +1,30 @@
-# Package File Structure
+# File navigation
 
-Local formal edition (2026-10-19). The original accepted payload holds 842 files; the table counts them by directory. Code, data, configuration, and the runner at the root are shared by both languages; `editions/zh` and `editions/en` hold only each language’s entry documents, reader resources, Notebook language views, and complete PDFs. Chinese project and Capstone documents sit in the root directories; English documents use the same paths under `editions/en/`. Chapter teaching sources (Chinese `course/zh/chapters/`, English `course/en/chapters/`) are included; the PDFs are the reader route. Per-file origins and SHA-256 are in the batch manifest.
+The repository groups reading material, executable code, and maintenance information. See the [bilingual chapter index](../../course/README.md) for all chapters.
 
 ```text
-  docs/maintenance/ENVIRONMENT.json                                1
-  README.md                                       1
-  capstone                                       15
-  code                                           42
-  data                                            4
-  editions                                       17
-  editions/en/body                                1
-  editions/en/capstone                           10
-  course/zh/chapters                           150
-  course/en/chapters                           45
-  editions/en/figures                             1
-  editions/en/workbook                                1
-  editions/en/notebooks                          45
-  editions/en/projects                           63
-  editions/en/resources                           9
-  editions/zh/body                                1
-  editions/zh/workbook                                1
-  editions/zh/notebooks                          45
-  editions/zh/projects                            9
-  editions/zh/resources                           9
-  figures                                       105
-  fixtures                                       27
-  notebooks                                      45
-  print_examples                                  8
-  projects                                        2
-  projects/project01                             12
-  projects/project02                             15
-  projects/project03                             15
-  projects/project04                             27
-  projects/project05                             31
-  projects/project06                             26
-  pyproject.toml                                  1
-  qa                                              2
-  references.md                                   1
-  requirements-macos-arm64-py314.lock             1
-  run_notebook.py                                 1
-  src                                            43
-  tests                                          10
+course/
+  zh/chapters/ch01/ ... ch45/
+  en/chapters/ch01/ ... ch45/
+editions/
+  zh/   # guides, resources, Notebooks, textbook and workbook PDFs
+  en/   # guides, resources, Notebooks, textbook and workbook PDFs
+projects/             # project documents and shared execution code
+capstone/             # final research project and protocol
+src/quant_course/     # shared Python library
+code/                 # chapter examples
+notebooks/            # shared original Notebook copies
+tests/                # executable checks
+data/fixtures/        # constructed teaching inputs
+fixtures/             # frozen teaching inputs and summaries
+figures/              # shared teaching illustrations
+print_examples/       # code companions for printed examples
+workbook/             # workbook entry
+loom/                 # compatibility entry for older PDF links
+docs/                 # introduction website, navigation and legal notices
+.github/              # contribution and support guides
+LICENSES/             # full license texts
+third_party/          # retained upstream attribution
 ```
 
-[Entry](README.md)
-
-The workbook directories use the current name; 842 is the dated accepted-payload count and excludes the added naming and attribution notes.
-
-See the [bilingual chapter index](../../course/README.md) for current chapter paths. The table groups the original accepted payload; new navigation and maintenance documents are additional repository files.
+Run code from the repository root. See the [Notebook guide](NOTEBOOK_GUIDE.md) for setup and examples, and [Optional inputs](OPTIONAL_DATA.md) for data availability. Internal build and review records are not part of the reader distribution.

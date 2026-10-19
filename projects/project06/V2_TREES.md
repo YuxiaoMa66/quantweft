@@ -81,7 +81,7 @@ I3 的 P6v2 Notebook 包含 9 个单元格、其中 4 个代码单元格；按�
 - 结果身份与冻结值：`projects/project06/research_report/v2_summary_base.json`、`v2_summary_regime.json`、`v2_ic_date_bases.json`；QA 原始摘要归属 `qa/a8/ch40_ch41_batch/evidence/qa_r1/`。
 - 研究报告：`projects/project06/research_report/README.md`、`projects/project06/research_report/v2_trees.md`。
 - P6 与第40章边界审读：`qa/bilingual_revision/BIL19/preparation/ROOT_READER_NOTES.md`、`qa/bilingual_revision/BIL19/PRE_FREEZE_REVIEW_01.md`。
-- Notebook 来源和接受状态：`qa/bilingual_revision/BIL23/preparation/CH40_CH41_P6V2_NOTEBOOK_CARRY_FORWARD.md`；A8-B 回执位于 `projects/project06/ACCEPTED_VERSION_v2.md` 及 `qa/bilingual_revision/BIL18/independent_acceptance/ACCEPTANCE_RECEIPT.json`。
+- Notebook 沿用已有构造展示，v2 方法与结果边界见[研究报告](research_report/v2_trees.md)；内部接受回执不随读者仓库分发。
 
 ## 练习：保持同一实验、同一指标口径
 

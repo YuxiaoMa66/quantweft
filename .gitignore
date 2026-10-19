@@ -45,3 +45,7 @@ versions/
 *.db
 *.sqlite
 *.sqlite3
+
+# Maintainer process records stay outside the reader distribution
+/qa/
+/provenance/

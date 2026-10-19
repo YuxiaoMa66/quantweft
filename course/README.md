@@ -58,5 +58,5 @@ The 45 chapters use matching numbers in both languages. Shared source notes and 
 `course/zh/chapters/chNN/` 保存中文正文、来源说明与章节配套资源；`course/en/chapters/chNN/` 保存对应英文正文。章节编号和教学顺序不变。
 Chinese chapters, source notes, and chapter assets live under `course/zh/chapters/chNN/`; corresponding English text lives under `course/en/chapters/chNN/`. Chapter numbers and teaching order are unchanged.
 
-项目、Capstone 与共享运行库保持现有路径。所有运行命令仍从仓库根目录执行，`course/` 是阅读文档位置。历史 QA、数据来源与接受收据中的旧路径保留历史身份，当前映射见 [目录修订记录](../provenance/COURSE_STRUCTURE_20261019.json)。
-Projects, the Capstone, and shared execution code retain their paths. Run commands from the repository root. Historical QA and provenance retain their original paths; the linked revision records the current mapping.
+项目、Capstone 与共享运行库保持现有路径。所有运行命令仍从仓库根目录执行，`course/` 是阅读文档位置。
+Projects, the Capstone, and shared execution code retain their paths. Run commands from the repository root.

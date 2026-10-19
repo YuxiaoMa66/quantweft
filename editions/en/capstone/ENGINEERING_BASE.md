@@ -42,7 +42,7 @@ run="runs/capstone_$(.venv/bin/python -c 'from uuid import uuid4; print(uuid4().
 
 To inspect the two fills and reconcile cash read-only, follow the [PATH09 full chain in the read-only I3 reader source](../../../print_examples/PATH09_CHAIN.md), reusing the same state database and task key. The recovery/idempotency check entrypoint `capstone/check_portable.py` is restored byte-for-byte from the accepted read-only I3 source and runs from the package root. This document adaptation does not require rerunning the historical 47 checks.
 
-The original A9-B version placed commands under `build/batches/A9-B/r2/...`. Those fixed directories are **historical audit run locations**, not instructions for the current portable package. The original source and SHA are retained in the [historical acceptance note](ACCEPTED_ENGINEERING_VERSION.md). Other engineering interfaces in this document are carried forward; the original acceptance decision, fixed configuration, and 18-item report template are not changed.
+The original A9-B version placed commands under `build/batches/A9-B/r2/...`. Those fixed directories are **historical audit run locations**, not instructions for the current portable package. The original source and SHA are retained in the [source-identity map](../../../capstone/accepted_source_map.json). Other engineering interfaces in this document are carried forward; the original acceptance decision, fixed configuration, and 18-item report template are not changed.
 
 ---
 

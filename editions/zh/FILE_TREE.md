@@ -1,50 +1,30 @@
-# 包内文件结构
+# 文件导航
 
-本地正式版（2026-10-19）。原接受载荷共842个文件；下表按目录统计。代码、数据、配置与运行器在包根两语共用；`editions/zh`与`editions/en`只放各语言的入口文档、读者资源、Notebook语言视图和完整PDF。项目与Capstone的中文文档在包根对应目录，英文文档在`editions/en/`下同名路径；章节教学源（中文`course/zh/chapters/`、英文`course/en/chapters/`）随包提供，读者路线以PDF为准。逐文件来源与SHA-256见批次清单。
+当前仓库按阅读内容、运行代码和维护说明分区；完整章节见[中英正文索引](../../course/README.md)。
 
 ```text
-  docs/maintenance/ENVIRONMENT.json                                1
-  README.md                                       1
-  capstone                                       15
-  code                                           42
-  data                                            4
-  editions                                       17
-  editions/en/body                                1
-  editions/en/capstone                           10
-  course/zh/chapters                           150
-  course/en/chapters                           45
-  editions/en/figures                             1
-  editions/en/workbook                                1
-  editions/en/notebooks                          45
-  editions/en/projects                           63
-  editions/en/resources                           9
-  editions/zh/body                                1
-  editions/zh/workbook                                1
-  editions/zh/notebooks                          45
-  editions/zh/projects                            9
-  editions/zh/resources                           9
-  figures                                       105
-  fixtures                                       27
-  notebooks                                      45
-  print_examples                                  8
-  projects                                        2
-  projects/project01                             12
-  projects/project02                             15
-  projects/project03                             15
-  projects/project04                             27
-  projects/project05                             31
-  projects/project06                             26
-  pyproject.toml                                  1
-  qa                                              2
-  references.md                                   1
-  requirements-macos-arm64-py314.lock             1
-  run_notebook.py                                 1
-  src                                            43
-  tests                                          10
+course/
+  zh/chapters/ch01/ ... ch45/
+  en/chapters/ch01/ ... ch45/
+editions/
+  zh/   # guides, resources, Notebooks, textbook and workbook PDFs
+  en/   # guides, resources, Notebooks, textbook and workbook PDFs
+projects/             # project documents and shared execution code
+capstone/             # final research project and protocol
+src/quant_course/     # shared Python library
+code/                 # chapter examples
+notebooks/            # shared original Notebook copies
+tests/                # executable checks
+data/fixtures/        # constructed teaching inputs
+fixtures/             # frozen teaching inputs and summaries
+figures/              # shared teaching illustrations
+print_examples/       # code companions for printed examples
+workbook/             # workbook entry
+loom/                 # compatibility entry for older PDF links
+docs/                 # introduction website, navigation and legal notices
+.github/              # contribution and support guides
+LICENSES/             # full license texts
+third_party/          # retained upstream attribution
 ```
 
-[入口](README.md)
-
-练习册目录已改为 workbook；原842文件为历史接受载荷统计，新增名称与来源说明不计入该历史统计。
-
-当前章节位置见[中英正文索引](../../course/README.md)；上表保留原接受载荷分类，新增导航与维护文件另列于仓库。
+从仓库根目录运行代码。环境与示例见 [Notebook 导读](NOTEBOOK_GUIDE.md)；数据可用性见 [可选输入](OPTIONAL_DATA.md)。内部构建和审阅记录不随读者仓库分发。

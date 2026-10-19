@@ -198,7 +198,7 @@ Label alignment gives January 5: \(0.01+\text{missing}=\text{NaN}\); January 6: 
 
 With average ranks, two equal 1% returns have rank 1.5 each and percentile \(1.5/2=0.75\). If only A is valid, its percentile is 1 while B remains NaN. Changing valid counts changes the ranking scale; report coverage.
 
-![Shift and historical windows in the small table](../../../../qa/a10/teaching_revision/C1/candidate/figures/c1/ch02_windows.png)
+![Shift and historical windows in the small table](../../../zh/chapters/ch02/figures/ch02_windows.png)
 
 The horizontal axis contains constructed \(t_0\)–\(t_3\) labels; the vertical axis is quotation currency per unit. The left panel pairs current and preceding prices with no first predecessor. The right panel shows rolling(2) and expanding(1) diverging after \(t_2\). It illustrates operations, without orders or market performance.
 

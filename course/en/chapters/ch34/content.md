@@ -197,7 +197,7 @@ The policy for NaN is rejection: this kernel accepts only finite `Decimal` price
 
 ## 10. Visualization
 
-![Price-level depth in a static single-venue order-book snapshot and a decomposition of hypothetical round-trip costs for 350 shares. Left: displayed shares on the horizontal axis and USD per share on the vertical axis; right: amounts in USD. All data are constructed for teaching.](../../../../qa/a7/ch34/figures/ch34_order_book_sweep.png)
+![Price-level depth in a static single-venue order-book snapshot and a decomposition of hypothetical round-trip costs for 350 shares. Left: displayed shares on the horizontal axis and USD per share on the vertical axis; right: amounts in USD. All data are constructed for teaching.](../../../zh/chapters/ch34/figures/ch34_order_book_sweep.png)
 
 The left panel plots displayed shares at each price level, in USD per share, with a dashed line for the arrival midpoint. The ask book first offers 200 shares at 100.02; a 350-share buy must then move to 100.04 to be fully covered in this static construction. The right panel, in USD, shows each side's half-spread and the round-trip decomposition of book walking alongside hypothetical round-trip PnL. The plotted sample is only a constructed snapshot with two bid levels and two ask levels; it does not represent a historical or live market.
 

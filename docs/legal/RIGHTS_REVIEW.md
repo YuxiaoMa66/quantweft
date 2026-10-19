@@ -28,8 +28,8 @@ For each affected file or source group, record its path and SHA-256, rights hold
 
 每项记录路径与哈希、权利人、来源、许可或授权依据、允许用途、署名要求和处置结果。需要替换时保留私有备份，检查相关链接与 PDF 页面。公开应基于核清后的实际载荷和最终发布确认，而不是仅凭自动扫描。
 
-The implementation and independent review receipts are in `qa/open_license_20261019/`; detailed local triage evidence is retained in the editorial workspace. This public-facing checklist does not expose credentials, identity documents, banking records, or private permissions correspondence.
+Internal review and implementation records remain in the maintainer’s local editorial workspace. This checklist does not expose credentials, identity documents, banking records, or private permissions correspondence.
 
-许可实施与独立审阅记录位于 `qa/open_license_20261019/`，详细清点保留在编辑工作区。本文件不收录认证信息、身份证件、银行卡资料或私有授权往来。
+内部实施与审阅记录保留在维护者本地；本文件不收录认证、身份证件、银行卡或私有授权往来。
 
 The bounded independent inventory identified concrete review targets above and did not establish legal clearance. The 870-file figure is the pre-change GitHub checkout, not the full editorial workspace. / 独立初筛已提供上述具体对象，但未完成法律权利核清；870 文件指改动前 GitHub 副本，不是整个编辑工作区。

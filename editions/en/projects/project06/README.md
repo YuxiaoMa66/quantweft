@@ -6,9 +6,9 @@ The research objective remains planned; the base linear pipeline has a construct
 
 | Scope | Current status | Notes |
 |---|---|---|
-| A8-A base pipeline | Limited-scope accepted; constructed teaching validation | Date-grouped walk-forward validation, training-only tuning, zero and training-mean baselines, OLS, Ridge, Lasso, and Elastic Net, prediction-to-portfolio weights, and a costed ledger. See `ACCEPTED_VERSION.md`. |
-| A8-R1 display revision | Limited-scope accepted | Revised the display of frozen constructed results and retained negative results. It is not a new training run or empirical study. See `ACCEPTED_DISPLAY_REVISION_v1.md`. |
-| A8-B tree-model extension | Limited-scope accepted, pending formal integration | Tree-model comparisons, training-only feature importance, stability, and registered ablation implementation on constructed data. See `ACCEPTED_VERSION_v2.md` and `research_report/v2_trees.md`. |
+| A8-A base pipeline | Limited-scope accepted; constructed teaching validation | Date-grouped walk-forward validation, training-only tuning, zero and training-mean baselines, OLS, Ridge, Lasso, and Elastic Net, prediction-to-portfolio weights, and a costed ledger. See [base results and scope](research_report/README.md). |
+| A8-R1 display revision | Limited-scope accepted | Revised the display of frozen constructed results and retained negative results. It is not a new training run or empirical study. See [display conventions and missing evidence](research_report/README.md). |
+| A8-B tree-model extension | Limited-scope accepted, pending formal integration | Tree-model comparisons, training-only feature importance, stability, and registered ablation implementation on constructed data. See [v2 results and scope](research_report/v2_trees.md) and `research_report/v2_trees.md`. |
 | Complete Project 6 | Not complete; not verified | Real-data work remains blocked. The BIL19 bilingual tree and PCA guide, full project answers, and workbook are now author candidates awaiting independent review; they do not constitute full-project acceptance. |
 
 This page, the data dictionary, and the base-pipeline report describe the A8-A foundation. They do not replace the A8-B report and do not mean that Project 6 or real-data research is complete. The BIL19 candidates are linked in the [v2 teaching guide](V2_TREES.md), [v2 research report](research_report/v2_trees.md), [project answer key](solutions.md), and [P6 workbook](loom/main_p06.tex); their acceptance remains pending independent review.

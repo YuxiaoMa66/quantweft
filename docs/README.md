@@ -22,7 +22,6 @@ Start with reading, practice, or code. Maintenance documents are grouped below; 
 | `workbook/`, `loom/` | 练习册入口与旧 PDF 链接兼容入口 / Workbook entry and compatibility for legacy PDF links |
 | `docs/` | 双语介绍网站、导航、许可与维护说明 / Website, navigation, legal, and maintenance documents |
 | `.github/` | 贡献、支持与未启用的赞助配置示例 / Contributions, support, and inactive funding example |
-| `qa/`, `provenance/` | 有日期的校验与来源记录 / Dated verification and provenance records |
 | `third_party/`, `LICENSES/` | 上游声明与许可证全文 / Upstream notices and complete license texts |
 
 [中英文逐章正文索引](../course/README.md)按相同编号连接两种语言。`references.md`、项目与兼容入口保留路径，供共享运行层及既有链接使用。
@@ -34,7 +33,7 @@ The [bilingual chapter index](../course/README.md) pairs both languages by chapt
 
 [许可范围 / Licenses](../LICENSE.md) · [来源致谢 / Credits](legal/ACKNOWLEDGEMENTS.md) · [第三方声明 / Third-party notices](legal/THIRD_PARTY_NOTICES.md) · [公开前权利核查 / Release review](legal/RIGHTS_REVIEW.md)
 
-[仓库范围与来源 / Repository status](maintenance/REPOSITORY_STATUS.md) · [环境记录 / Environment record](maintenance/ENVIRONMENT.json)
+[仓库范围 / Repository scope](maintenance/REPOSITORY_STATUS.md) · [环境与运行 / Environment and execution](../editions/en/NOTEBOOK_GUIDE.md)
 
 维护及权利核查文档中的代码格式路径均相对于仓库根目录，除非另有说明。原始编辑工作区与历史验收记录不随本次目录整理迁移。
 Code-formatted paths in maintenance and rights documents are relative to the repository root unless stated otherwise. This organization does not relocate the original editorial workspace or historical acceptance records.

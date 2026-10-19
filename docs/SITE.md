@@ -34,9 +34,9 @@ PDFs, Notebooks, and learning documents link to the GitHub repository and retain
 
 The native CSS editorial layout continues the course cover's teal identity. The full page switches themes together, supports mobile and keyboard use, and disables smooth scrolling for reduced motion. The cover surfaces are conceptual artwork, not market evidence.
 
-本次校验记录见 [`../qa/site_20261019/REPORT.json`](../qa/site_20261019/REPORT.json)。课程运行与教材 PDF 未因网站设计而重新核验。
+页面已检查语言切换、主题、手机显示和复制命令；这不代表重新运行课程或验证研究结果。内部审阅记录不随读者仓库分发。
 
-See the report above for this website's checks. Website checks do not rerun or extend the course's PDF or execution validation.
+Language switching, themes, mobile layout, and command copying have been checked. These checks do not rerun the course or validate research results. Internal review logs are not distributed with the reader repository.
 
 ## 许可与赞助 / Licensing and support
 
