@@ -1,0 +1,215 @@
+\clearpage\section{P6 的研究对象：不是把算法放进黑箱}
+\color{inkiron}
+\warmth{0}
+\begin{strand}
+Project 6 的任务不是找一个胜出的算法，而是逐层问清：特征在何时可用？预测是否优于简单基准？排序能否形成可交易组合？成本和状态变化会不会改写结论？每一步都要留住实验身份和负结果。
+\end{strand}
+\trigger{一个模型的平均 IC 为正、\(R^2_{\mathrm{OS}}\) 为负。你会直接说模型有效吗？}
+\begin{definition}[构造面板与时间过程]
+基础面板有 40 只资产、1,512 个交易日和 46 个特征：3 个信号特征、40 个零载荷噪声特征，以及 rev\_5、mom\_60\_5、vol\_20 三个价格特征。收益生成式可概括为
+\[
+r_{i,t+1}=\beta_i m_{t+1}+s_t\,0.0003\sum_{j=1}^{3}0.5^{j-1}q_{j,i,t}+\epsilon_{i,t+1}.
+\]
+这里 \(m\) 是共同市场冲击，\(q_j\) 提供构造信号，\(\epsilon\) 是特异冲击；反号情景在预设日期改变 \(s_t\) 的符号。不同 q 序列和不同 noise 序列按构造彼此独立，但每条序列沿时间是平稳 AR(1)，\(\rho=0.98\)、边际方差为 1。它们不是时间 IID。三项价格特征从收益与价格路径派生，不是另外抽出的独立同方差观测。
+\end{definition}
+\block{边界：P6 与第40章交互实验}
+P6 是 46 特征、1,512 日、16 折的线性生成实验。第40章交互项实验是 26 特征、1,260 日、12 折，含登记的主强度与另行五倍 post hoc 敏感性。它们不是同一数据、配置或分析；不要把第40章参数、数字或阈值并入 P6。冻结配置与实现见本地 projects/project06/configs/、projects/project06/src/，正文报告见 research\_report/。
+
+
+\clearpage\section{时间契约：让每一行数据站在正确的一侧}
+\begin{strand}
+收盘 \(D_k\) 形成信号；标签从 \(D_{k+1}\) 收盘到 \(D_{k+6}\) 收盘，跨 5 个收盘间隔。只有终点收盘后标签才成熟。组合下一交易日收盘执行、每 5 个信号日调仓。标签窗口和组合持有期是不同对象。
+\end{strand}
+\begin{proposition}[外层与内层验证]
+外层按日期分组做扩张窗 walk-forward：初始训练最少 504 日，测试块 63 日，共 16 折。训练折先排除标签未成熟行。同一信号日的 40 个资产行必须留在同一侧。内层使用最后两个 63 日验证窗，最少训练 252 日，按平均验证 MSE 选择参数。外层测试只评价，不调参。
+\end{proposition}
+\block{日历上到底有多少可评价日？}
+外层名义测试日为 \(16\times63=1{,}008\)。每个情景最后 6 日的标签超出样本，所以预测指标有 1,002 个成熟标签日。常数预测的横截面 Spearman IC 未定义；这类日期是 NaN，不是 IC=0。P6 冻结报告要同时注明候选日期数、自身有效日期数和配对共同日期数。
+
+\begin{yourturn}\textbf{P6-L04}\quad P6 的 46 特征、1,512 个交易日和 16 折，能否与第40章交互实验的 26 特征、1,260 日、12 折合并成一组模型比较？说明两组设计和五倍 post hoc 的边界。\workspace[4]\end{yourturn}
+\begin{yourturn}\textbf{P6-L06}\quad q 与 noise 序列的“独立”指什么？它们沿时间是否 IID？价格三列如何生成？由此为什么不能把完整 46 维写成独立同分布、同方差特征？\workspace[4]\end{yourturn}
+
+\clearpage\section{10 条预测序列，8 个拟合模型}
+\begin{strand}
+v1 产生 zero、train\_mean、OLS、Ridge、Lasso、Elastic Net 六条预测序列。v2 增加单树、随机森林、梯度提升和 PCA+Ridge 四条，总计 10 条。报告主表和图只展示 8 个拟合模型，省略两个常数基准。PCA+Ridge 是线性降维后接 Ridge，不属于树模型。
+\end{strand}
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+模型组 & 拟合对象 & 每折训练原则\\
+\midrule
+线性基线 & OLS、Ridge、Lasso、Elastic Net & 内层 MSE 选正则化参数\\
+树模型 & 单树、RF、HGB & 内层日期窗选模型参数\\
+降维模型 & StandardScaler + PCA + Ridge & 标准化、主成分和 Ridge 均在训练折内拟合\\
+空仓基线 & zero、train\_mean & 常数预测；组合总收益与换手为 0\\
+\bottomrule
+\end{tabular}
+\end{center}
+\block{梯度提升与防止偷看}
+梯度提升实际估计器为 HistGradientBoostingRegressor，early\_stopping=False。轮数上限为 300，与其他参数一起按内层两个时间窗的平均 MSE 选择，再用外层全部训练行重拟合。不要用外层表现调整轮数、筛特征或改成本口径。
+
+\begin{yourturn}\textbf{P6-L05}\quad v1 的六条预测序列与 v2 新增的四条分别是什么？为什么报告称“8 个主比较模型”，又说冻结运行有 10 条预测序列？PCA+Ridge 属于哪一类？\workspace[4]\end{yourturn}
+
+\clearpage\section{比较三个预测指标与一个组合结果}
+\begin{definition}[四类结果]
+\[
+R^2_{\mathrm{OS}}=1-\frac{\sum (y-\hat y)^2}{\sum (y-\hat y_{\mathrm{base}})^2};
+\qquad
+IC_t=\operatorname{Spearman}(\hat y_{i,t},y_{i,t}).
+\]
+\(R^2_{\mathrm{OS}}\) 比较逐资产收益水平预测，可分别以零与训练均值作基准。日 IC 衡量同一信号日的横截面排序。组合 Sharpe、净收益、最大回撤和换手则由目标权重、执行时间、账本和费用决定。它们的分子、比较基线和对象不同，出现排名不一致并不矛盾。
+\end{definition}
+\block{own IC 与配对 IC：同一个日期集合才可相减}
+令 \(D_m\) 为模型 \(m\) 的 IC 有定义日期。自身均值为 \(\bar{IC}_m(D_m)\)。与 Ridge 配对时，集合必须是 \(D_m\cap D_R\)，差为
+\[
+\Delta_m=\bar{IC}_m(D_m\cap D_R)-\bar{IC}_R(D_m\cap D_R).
+\]
+不能用 Lasso 自身均值减 Ridge 全样本均值。基础场景 Lasso 自身 630/1,002 日、配对 Ridge 630 日；Elastic Net 是 882/1,002 日。反号场景为 567/1,002 与 819/1,002 日。常数预测日的 IC 是 NaN；缺失不代表零。
+
+\block{时间压缩会改变 HAC 的滞后距离}
+历史 summary 的 sparse IC 先 dropna 再用有效观察索引计算 NW(4)。若真实有效交易日是 0、2、3、5、8，压缩后的四阶滞后连接第 0 日与第 8 日，相距 8 个交易日。它不是四交易日 HAC。修订报告保留该旧值为诊断记录，不把它当交易日推断，也未重算新的 HAC。
+
+\begin{yourturn}\textbf{P6-L01}\quad 基础 Lasso 的 IC 0.01785759 能直接和 Ridge 的 0.01982995 比较并判定更弱吗？\workspace[3]\end{yourturn}
+\begin{yourturn}\textbf{P6-L02}\quad 压缩后的 NW(4) 是否代表四个交易日的 HAC？\workspace[3]\end{yourturn}
+\begin{yourturn}\textbf{P6-L03}\quad 第39章能复用这些 P6 配对结果吗？\workspace[3]\end{yourturn}
+
+\clearpage\section{把预测送进账本：费用和状态变化}
+\begin{strand}
+预测先横截面去均值，再转成毛暴露 1、美元中性的目标权重。以初始资金 100 万计，每 5 个信号日调仓，下一交易日收盘成交；单边费用为 0、10、20 bp。每日账本记录 NAV。比例费用之外的借券费、融资利差、市场冲击、容量和保证金成本均未建模。
+\end{strand}
+\begin{center}\small
+\begin{tabular}{lrrrr}
+\toprule
+冻结模型 / 情景 & \(R^2\) vs 训练均值 & IC & 10 bp Sharpe & 20 bp Sharpe\\
+\midrule
+Elastic Net / 基础 & −0.010\% & 0.0309 & 0.81 & 0.43\\
+单树 / 反号 & −0.604\% & −0.0120 & −1.13 & −1.60\\
+PCA+Ridge / 基础 & −0.008\% & 0.0135 & 0.25 & −0.13\\
+PCA+Ridge / 反号 & −0.053\% & 0.0063 & −0.14 & −0.52\\
+Ridge / 反号 & −0.161\% & 0.0087 & −0.15 & −0.53\\
+\bottomrule
+\end{tabular}
+\end{center}
+基础情景 Elastic Net 在本构造下成本后表现较好，但反号后八个主比较拟合模型的20bp夏普均为负；两空仓基准夏普未定义。单树反号是最差的主比较项之一。每条结论都应附上情景、指标、成本与基准；不能用基础情景的正收益抹掉反号结果。
+
+
+\clearpage\section{PCA、重要性与复杂度的边界}
+\begin{proposition}[全维 PCA+Ridge 与 Ridge 的关系]
+在相同 StandardScaler、相同 Ridge alpha、无 whitening 条件下，保留完整 46 个主成分只是正交旋转。若 \(V^\top V=I\)，坐标变换 \(\theta=V^\top w\) 满足 \(\|\theta\|_2=\|w\|_2\)，平方损失与 Ridge 惩罚都不变，故全维 PCA+Ridge 与标准化空间 Ridge 正交等价。截断主成分相当于限制系数只能落在保留的子空间；可能降低噪声，也可能删掉预测方向，不能保证更好。
+\end{proposition}
+\block{结果不是“PCA 全面更差”}
+相对训练均值的 \(R^2\)：PCA+Ridge 在基础/反号场景为 −0.008\%/−0.053\%，Ridge 为 −0.113\%/−0.161\%，前者略优。反号 10/20 bp Sharpe 分别是 −0.14/−0.52 与 −0.15/−0.53，PCA+Ridge 略高但两者都为负。相反，PCA 的 IC 为 0.0135/0.0063，低于 Ridge 的 0.0198/0.0087。指标不同，所以比较方向不同。PCA 每折选 30 个主成分 10 次、5 个 5 次、15 个 1 次；不能把内层选频率当作跨数据稳定规律。
+
+\block{重要性与稳定性}
+每折在最后一个内层 63 日窗口做 3 次组内行置换；价格组与全部特征组分别记录。RF/HGB 消融包括去价格、只留价格、训练内 top-10；top-10 复用全模型参数，是登记过的简化方案。组重要性近零可能表示可替代信息，不证明该组没有信息。基础和反号中，树模型相邻折重要性排名相关均较低：单树 −0.10/−0.04、RF 0.01/0.01、HGB 0.09/0.10。RF 三种子预测相关 0.962–0.982，10 bp Sharpe 0.44–0.64；HGB 三种子因关闭 early stopping 而完全相同。稳定不等于准确。
+
+\begin{yourturn}\textbf{P6-L07}\quad 用基础和反号两景的 \(R^2\)（相对训练均值）、IC 与 10/20 bp Sharpe，判断 PCA+Ridge 是否全面差于 Ridge。说明为何这些结论可以同时成立。\workspace[4]\end{yourturn}
+
+\clearpage\section{证据强度与研究边界}
+\begin{strand}
+六个树模型主比较（3 种树 × 2 个情景）中，唯一 \(|t|>2\) 的是反号情景单树对 Ridge：\(\Delta IC=-0.0207\)，未校正 NW \(t=-2.19\)，方向为单树更差。近似未校正双侧 \(p=0.029\)，对六项作 Bonferroni 后约 0.17；再考虑消融与种子比较，不应称确证性发现。其他主比较 \(|t|<2\)。
+\end{strand}
+\block{协议文本不能替报告发明门槛}
+v2 配置的 comparison.claims\_rule 只有两条：不从构造数据声称经济或 alpha 结论；保留零与负结果。它没有设立“两个情景都需 \(\Delta IC\) NW t≥2，且 20 bp Sharpe 同时高于 Ridge 与 Elastic Net”的联合门槛。准确表达应说这是一项未校正、描述性的负向比较，而不是达成或未达成冻结的 alpha 判定。
+
+\block{冻结回放与新运行不同}
+I3 的 P6v2 Notebook 为 9 个单元格、4 个代码单元格，回放两份冻结摘要、日期基数及历史消融/稳定性，并从冻结摘要生成 historical\_constructed\_trees\_sharpe.png 写入 RUN\_DIR；fit 标为 SKIPPED，没有重训。A8-B 是 limited-scope accepted pending formal integration；完整 P6 仍未 verified。真实数据和 A10-B 的数据/PIT 状态仍未验证，真实实证保持 blocked。
+
+\begin{yourturn}\textbf{P6-L08}\quad 冻结配置的 claims\_rule 是否规定了“树模型必须在两个情景都达到 \(\Delta IC\) NW t≥2 且 20 bp Sharpe 同时超过 Ridge 与 Elastic Net”的联合门槛？可以怎样描述唯一绝对 t 值超过 2 的主比较？\workspace[5]\end{yourturn}
+
+\clearpage\section{复习卡：带走的研究规则}
+\begin{center}\small
+\begin{tabular}{p{0.28\linewidth}p{0.62\linewidth}}
+\toprule
+看到什么 & 先问什么\\
+\midrule
+正 IC & 自身有效日期还是共同日期？\\
+NaN & 指标未定义还是观测缺失？不要填零。\\
+NW(4) & 滞后按交易日还是压缩后有效观察？\\
+正 Sharpe & 什么费率、情景、回撤与换手？\\
+PCA 结果 & 全维还是截断？是否同一标准化、alpha、whitening？\\
+特征重要性 & 组内替代、窗口长度、重复次数和事后选择？\\
+模型“胜出” & 哪个预先冻结指标？是否多重比较？是否构造数据？\\
+\bottomrule
+\end{tabular}
+\end{center}
+\block{本地读物}
+projects/project06/research\_report/README.md 与 research\_report/v2\_trees.md 保存基础层和 v2 全表；V2\_TREES.md 是延伸指南；solutions.md 收录P6-L01–L08与P6-T01–T04全部答案。相关配置、历史摘要、日期基数 JSON 和实现源均在项目根目录可查。本文不运行训练或 Notebook，也不改变冻结结果。
+
+
+
+\clearpage\section{项目演算：日期、置换、坐标与现金}
+\begin{strand}
+研究可复核的前提，是每一行输入、每一项损失和每一笔现金都站在正确位置。下面不训练模型：先用成熟日筛选行，再用同日联合置换诊断信息，最后把预测坐标与实际头寸分清。
+\end{strand}
+\begin{yourturn}\textbf{P6-T01}\quad 拟合在$D_{10}$收盘信息已到达后，候选信号$D_2,D_3,D_4,D_5$，每日期40资产，滞后1日成交、5日标签。写各标签成熟日与可保留总行数。为什么同日随机分资产不等于日期外验证？\workspace[4]\end{yourturn}
+\begin{definition}[同日联合置换]
+每个日期独立取行顺序，组内所有列共用该顺序。保留的是该日组内联合经验分布；它不保证与其他未置换列的关系仍在支持域内。
+\end{definition}
+\begin{yourturn}\textbf{P6-T02}\quad 两日$q=(1,2,3)$与$(11,12,13)$，$z=2q$，$y=q$，固定$f=q$。标签与预测以百分点为单位；源行号从1编号，顺序分别$(3,1,2)$与$(2,1,3)$。填置换后两日的配对值与全6行MSE增加；写出“每日期配对多重集合不变”的断言。独立乱序两列为什么错？\workspace[4]\end{yourturn}
+\clearpage
+\begin{proposition}[全维正交控制]
+同Scaler、alpha、输入行、截距约定且无whitening，$Z=XV$、$V$全维正交，则两个Ridge问题预测相同。截断PCA不享有这个保证。
+\end{proposition}
+\begin{proof}
+置$\beta=Vb$，预测$X\beta=$\fillin[2cm]，正交性给惩罚范数\fillin[2.2cm]。\TODO{说明坐标变换一一对应；再指出whitening为何改变同alpha的惩罚意义。}
+\end{proof}
+\begin{yourturn}\textbf{P6-T03}\quad $X^\top X=\operatorname{diag}(2,8)$、$X^\top y=(2,4)^\top$、$\alpha=2$，$V=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$。求$\hat\beta,\hat b,V\hat b$；只保留V第一列会删掉什么？\workspace[4]\end{yourturn}
+\clearpage
+\begin{strand}
+组合目标是指令，实际权重是持仓市值除以当前NAV。价格漂移与费用都改变分母或分子。逐事件核现金，才能分清预测误差和交易实现。
+\end{strand}
+\begin{yourturn}\textbf{P6-T04}\quad 现金1000，A/B价100，买5股A、卖空5股B，单边10bp费用另扣现金、不回调目标金额。次日价格110/90。填首次费用后现金/NAV、次日成交前NAV与实际权重；再以成交前NAV重设正负0.5权重，求总交易金额、费用及成交后NAV。允许分数股，无融资/分红/冲击。\workspace[6]\end{yourturn}
+
+\clearpage\section*{项目六：题目答案与复算}
+\color{inkiron}
+\block{P6-L01 · own IC 与共同日期}
+题目：基础 Lasso 的 IC 0.01785759 能直接和 Ridge 的 0.01982995 比较并判定更弱吗？\\
+答案：不能。前者来自 Lasso 自身有 IC 的 630 日，后者是 Ridge 全部 1,002 日均值；日期集不同。共同 630 日上，Lasso 为 0.01785759，Ridge 为 0.01613330，差为 +0.00172429。这只是描述量，没有本次展示支持的有效推断 t 值。常数预测日 IC 是 NaN，不是零。
+
+\clearpage
+\block{P6-L02 · 压缩 NW(4)}
+题目：压缩后的 NW(4) 是否代表四个交易日的 HAC？\\
+答案：不是。有效交易日为 0、2、3、5、8 时，删除缺失后压缩的第 4 阶滞后连接 0 与 8，相距 8 个交易日。历史压缩值仅作诊断留档，不等于四交易日 HAC；本次未重算 HAC。
+
+\clearpage
+\block{P6-L03 · P6 与第39章}
+题目：第39章能复用这些 P6 配对结果吗？\\
+答案：不能。第39章缺少用于重建其历史共同日期配对量的冻结逐行预测。P6 是不同配置与运行身份，不能替换缺口；新训练也不能创造历史实际预测。应保留第39章配对量无法复算的状态。
+
+\clearpage
+\block{P6-L04 · P6 与第40章}
+题目：P6 的 46 特征、1,512 个交易日和 16 折，能否与第40章交互实验的 26 特征、1,260 日、12 折合并成一组模型比较？说明两组设计和五倍 post hoc 的边界。\\
+答案：不能。两者是不同生成过程、样本和划分；第40章交互项和五倍 post hoc 教学比较只属于章节实验，不能成为 P6 的特征、结果或阈值。可以并列教学方法，但必须保留各自实验身份。
+
+\clearpage
+\block{P6-L05 · 预测序列与主表模型数}
+题目：v1 的六条预测序列与 v2 新增的四条分别是什么？为什么报告称“8 个主比较模型”，又说冻结运行有 10 条预测序列？PCA+Ridge 属于哪一类？\\
+答案：v1 是 zero、train\_mean、OLS、Ridge、Lasso、Elastic Net；v2 新加单树、随机森林、HGB、PCA+Ridge，共 10 条。主表与图列 8 个拟合模型，省略 zero 和 train\_mean 两个常数空仓基准。PCA+Ridge 是标准化、PCA 后接 Ridge 的降维线性模型，不是树。
+
+\clearpage
+\block{P6-L06 · 特征过程与独立性}
+题目：q 与 noise 序列的“独立”指什么？它们沿时间是否 IID？价格三列如何生成？由此为什么不能把完整 46 维写成独立同分布、同方差特征？\\
+答案：不同构造 q/noise 序列之间按生成机制独立，但每条沿时间都是 AR(1)，\(\rho=0.98\)、边际方差 1，因此不是 IID。价格特征 rev\_5、mom\_60\_5、vol\_20 从含共同市场冲击、q 信号和特异冲击的收益/价格路径派生。43 个特征序列与 3 个价格列结构不同，不能把 46 列概括成独立同分布、同方差抽样。
+
+\clearpage
+\block{P6-L07 · PCA 与 Ridge}
+题目：用基础和反号两景的 \(R^2\)（相对训练均值）、IC 与 10/20 bp Sharpe，判断 PCA+Ridge 是否全面差于 Ridge。说明为何这些结论可以同时成立。\\
+答案：不是。相对训练均值 \(R^2\)，PCA+Ridge 在基础/反号为 −0.008\%/−0.053\%，Ridge 为 −0.113\%/−0.161\%；PCA+Ridge 略优。反号下 10/20 bp Sharpe 是 −0.14/−0.52，对比 Ridge −0.15/−0.53，也略高但都为负。PCA IC 为 0.0135/0.0063，低于 Ridge 的 0.0198/0.0087。水平误差、排序与账本收益衡量不同对象，排名可不同。
+
+\clearpage
+\block{P6-L08 · 协议与多重比较}
+题目：冻结配置的 claims\_rule 是否规定了“树模型必须在两个情景都达到 \(\Delta IC\) NW t≥2 且 20 bp Sharpe 同时超过 Ridge 与 Elastic Net”的联合门槛？可以怎样描述唯一绝对 t 值超过 2 的主比较？\\
+答案：没有。claims\_rule 只禁止从构造数据提出经济或 alpha 结论，并要求保留零与负结果。六项树模型主比较中，唯一 \(|t|>2\) 的是反号单树对 Ridge：\(\Delta IC=-0.0207\)，未校正 NW \(t=-2.19\)，方向为单树更差；近似未校正 \(p=0.029\)，仅对六项作 Bonferroni 后约为 0.17。由于还登记了消融和种子比较，应将它表述为构造数据中的未校正描述性结果，不称确认性显著发现。
+
+
+\clearpage\section*{项目演算完整答案}
+\block{P6-T01}
+$D_2,D_3,D_4,D_5$分别在$D_3,D_4,D_5,D_6$成交，在$D_8,D_9,D_{10},D_{11}$成熟。前三个日期可用，最后一个未成熟，保留$3\times40=120$行。等号要求相关收盘信息已实际到达。同日随机拆资产共享冲击，既不是之后日期验证，也不能替代每个内层fit时点重新筛成熟标签。
+\block{P6-T02}
+第一日$(3,6),(1,2),(2,4)$；第二日$(12,24),(11,22),(13,26)$。标签顺序不变，误差$(2,-1,-1,1,-1,0)$，SSE8，MSE增加$4/3$平方百分点。按日期直接检查\texttt{Counter(permuted[d]) == Counter(original[d])}及每列多重集合与$z=2q$，见同项目solutions标准库代码。全局跨日期或各列独立顺序都改变不应改变的结构；固定模型不读取的列重要性精确零，有限样本训练模型不保证。
+\clearpage
+\block{P6-T03}
+$X\beta=XVb=Zb$且$\|\beta\|^2=\|b\|^2$；全维正交保证变换可逆，因此平方损失和同alpha惩罚完全相同。whitening额外缩放方向，破坏此同惩罚对照。$\hat\beta=(0.5,0.4)^\top$，$\hat b=(0.4,-0.5)^\top$，$V\hat b=\hat\beta$。仅留V第一列限制$\beta_1=0$，解$(0,0.4)^\top$；可能少估噪声，也可能失去信号，须训练内选择和独立测试，不能由方差大小作保证。这不是新增P6训练。
+\block{P6-T04}
+初次费用$1000\times0.001=1$，现金/NAV999。次日头寸550与−450，现金999，所以NAV1099；实际权重$550/1099$与$-450/1099$约0.500455与−0.409463。目标重设为$+549.5,-549.5$，卖A0.5美元、再卖空B99.5美元，总成交100、费0.1，现金$999+0.5+99.5-0.1=1098.9$，头寸净值0、NAV1098.9。扣费后绝对权重$549.5/1098.9\approx0.500046$，不是精确0.5。现金逐事件更新与市值漂移决定再平衡量，第41章固定权重费用代理不能替代这组恒等式。

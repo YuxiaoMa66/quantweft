@@ -1,0 +1,13 @@
+{
+  "schema": "p05-data-manifest.v1",
+  "status": "blocked",
+  "status_reason": "No real-price source checked on 2026-10-10 permits scripted download for internal corporate training use free of charge; see qa/a7/project05_batch/DATA_SOURCE_DECISION.md. The CLI refuses --data real until status is 'frozen' and every file below hashes correctly.",
+  "preregistration": {"path": "projects/project05/configs/preregistration_v2.json", "sha256": "9af9dc8436b756bfe22053cfbae2d6d339334bac67e5c9148334f998a31587c3", "supersedes": {"path": "projects/project05/configs/preregistration_v1.json", "sha256": "92e5f20ccfce77563d18394a4a34c3b1e2529e250f527c7fd0758a4ec4526b22"}},
+  "required_files": [
+    {"role": "panel", "path": "data/processed/p05/p05_daily_panel.csv", "columns": ["date", "ticker", "open", "close", "volume", "split_ratio", "dividend"], "rows_expected": "16 tickers x every NYSE trading day 2010-01-04..2025-12-31", "units": "USD/share unadjusted; shares unadjusted; split_ratio new shares per old on ex-date (1 if none); dividend cash per post-event share on ex-date (0 if none)"},
+    {"role": "rates", "path": "data/processed/p05/fred_dff.csv", "columns": ["date", "rate"], "units": "annual decimal; FRED DFF observation date", "source": "FRED series DFF (public data; download pending — only needed once the price panel is licensed)"},
+    {"role": "vendor_adjusted_close_crosscheck", "path": "data/processed/p05/vendor_adjclose.csv", "optional": true}
+  ],
+  "files": [],
+  "license": {"status": "not obtained", "required": "written or plan-level permission for scripted download, persistent storage, internal corporate training use, and distribution of derived statistics/figures in course deliverables; raw series redistribution only if separately licensed"}
+}

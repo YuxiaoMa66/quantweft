@@ -1,0 +1,33 @@
+# 项目4读者总导读：从字段到信号，再到执行
+
+## 先回答什么问题
+
+价值、动量与质量字段的量纲和覆盖不同。先判断“信号时是否已知”，再按同日政策预处理和合成，最后指定允许持仓的支持集。信号target、执行过滤后的target与实际持仓是三个对象；一个target中性不保证实际成交后仍中性。
+
+按顺序读 [项目目标](README.md)、[信号方法](preparation/README.md)、[事件图](preparation/pit_event_graph.md)、[七字段契约](preparation/field_contract.md)、[字典](preparation/data_dictionary.md)、[固定规则](preparation/rules.md)、[真实输入缺口](preparation/gap_table.md) 和 [来源可行性](preparation/source_feasibility.md)。第24–26章给经济定义，第28章给残差、尺度、合成和约束推导；第27章的carry/BAB尚未加入当前七字段合同。完成信号层后，继续读 [第29章](../../part05/chapter29/content.md)、[账本接口说明](backtest_preparation/README.md) 和 [成本实验](cost_execution_lab/README.md)，再按需查阅其[字段字典](cost_execution_lab/data_dictionary.md)、[研究报告](cost_execution_lab/research_report.md) 与[六题完整答案](cost_execution_lab/solutions.md)。成本实验 Exercise 1–6 及答案继续单独编号；本批BIL15B另增构造型 P4-Txx 整合练习与完整答案。
+
+## 默认运行和自备输入
+
+运行契约以I3的 [共享项目读者说明](../../editions/zh/NOTEBOOK_GUIDE.md) 为权威：reader kernel、干净kernel、包根定位和新RUN_DIR。此说明完整继承其离线/自备输入边界；公开可得不等于获准下载、使用或再分发，任何真实分支另需权限与执行授权。
+
+信号Notebook的 [中文Markdown投影](../../editions/zh/projects/project04/preparation/notebooks/p04_signal_layer.ipynb) 与 [英文Markdown投影](../../editions/en/projects/project04/preparation/notebooks/p04_signal_layer.ipynb) 都沿用I3的19格、9代码格、代码/输出/元数据身份。其当前逻辑位置用于语言校对；最终独立读者包将把所选语言放回默认项目路径，包根和相对链接须在装配时重绑，当前教学阅读接受不声称已完成独立包冷启动。
+
+默认seed20261210，240家公司（40银行）、96个月，没有真实逐股数据。首格创建 `runs/p04_signal_layer_<uuid>/`，新图写在其中的 `figures/a5/p04_signal_layer.png`；runner另存execution副本/状态。默认信号路径不使用French，不运行历史CLI/pytest。Markdown中的历史结果说明不意味着新生成这些表。
+
+## 当前信号方法的检查顺序
+
+1. 用当时已知的上市状态选支持集，至少60名；财报同时满足公开与入库截止，整份版本取值。
+2. 七字段保持经济方向；非正分母/银行不适用为缺失，不能补零。
+3. 同日1%/99%缩尾至少30值；行业/规模OLS用同一完整配对集合，至少2残差自由度；样本z至少10值。
+4. 风格内至少1个非零权重可得字段，跨风格至少2种；可得项重归一，门槛不足保持缺失。
+5. alpha有效集只决定原五分位排序。可选行业投影在全部listed支持集上做，允许无alpha的上市名字对冲；支持集外严格零。
+6. 齐次行业/net零约束投影非零时，统一正比例恢复gross2；无多空方向或退化明确现金。非零约束目标不可照搬缩放。
+7. 行业/net/gross、支持集残差、覆盖与缺失分别报告。执行后的信息只作账本和诊断，不回写信号。
+
+## 三类结果分开读
+
+A5/A6历史构造结果保留旧全列投影与负结果；C13当前方法纠正支持集/gross/60门槛，见 [当前协议](SIGNAL_PORTFOLIO_PROTOCOL_ALIGNMENT.md)；默认Notebook运行当前构造方法，不能把旧表称为此次新跑。三者都不证明真实市场alpha、无泄漏或可交易容量。
+
+成本材料还区分历史R2R6与2026-10-14当前信号摘要。 [中文成本Notebook](../../editions/zh/projects/project04/cost_execution_lab/cost_execution_lab.ipynb) 与 [English cost Notebook](../../editions/en/projects/project04/cost_execution_lab/cost_execution_lab.ipynb) 以I3冻结版本为底稿：固定父单和部分/零成交例子会新算，其余walk-forward、敏感度、消融和账本审计展示接受摘要，不是本次重跑。基础 `run_backtest` 对执行日已退市的非零目标报错；A6 wrapper在执行目标副本中按资格置零，不回写原信号，也不重缩其他名字。成本walk-forward则使用当时上市状态逐期判断，并先结算已有退市持仓。它们是不同执行消费者。完整成本/执行/回测双语教学接第29–31章，消费者复核接第35–36章；当前P4完整教学还待BIL15B验证依赖接受，真实研究仍未完成。
+
+真实PIT财报、总回报、历史成分、市值、行业版本、交易日历、融资借券与容量缺口继续保留。本批BIL15B候选新增 [P4整合练习](exercises.md) 与 [完整答案](solutions.md)，以独立 P4-Txx 编号收束 [信号层](preparation/README.md) → [第29章账本](../../part05/chapter29/content.md) → [成本实验](cost_execution_lab/README.md) → [第30章偏差](../../part05/chapter30/content.md) → [第31章验证](../../part05/chapter31/content.md) 的阅读链。原成本 Exercise 1–6 继续独立编号。候选须经根独立接受后才计入P4完整教学。BIL17消费者复核及BIL23英文Notebook、便携装配、冷启动和全局链接检查仍待完成；真实市场研究继续planned，PIT数据及使用权、借券、交易日历和容量证据仍缺。

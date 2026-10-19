@@ -1,0 +1,204 @@
+\clearpage\section{The Research Object}
+\color{inkiron}
+\warmth{0}
+\begin{strand}
+Project 6 is not a contest to find a winning algorithm. It asks when features are available, whether forecasts beat simple baselines, whether rankings form a tradable portfolio, and whether costs or a changing state alter the conclusion. Keep experiment identity explicit and retain negative results.
+\end{strand}
+\trigger{A model has positive mean IC and negative \(R^2_{\mathrm{OS}}\). Can you immediately call it effective?}
+\begin{definition}[Constructed panel and time process]
+The base panel has 40 assets, 1,512 dates, and 46 features: 3 signal features, 40 zero-loading noise features, and three derived price features: rev\_5, mom\_60\_5, and vol\_20. A simplified return equation is
+\[
+r_{i,t+1}=\beta_i m_{t+1}+s_t\,0.0003\sum_{j=1}^{3}0.5^{j-1}q_{j,i,t}+\epsilon_{i,t+1}.
+\]
+Here \(m\) is a common market shock, \(q_j\) carries the constructed signal, and \(\epsilon\) is idiosyncratic noise. The reversal scenario changes \(s_t\)'s sign on a preset date. Different q sequences and different noise sequences are independent by construction. Each sequence is a stationary AR(1) over time with \(\rho=0.98\) and marginal variance 1; they are not IID over time. The three price features come from the return/price path, not from an additional independent, equal-variance draw.
+\end{definition}
+\block{P6 and the Chapter 40 interaction experiment}
+P6 has 46 features, 1,512 dates, and 16 folds. Chapter 40 is separate, with 26 features, 1,260 dates, and 12 folds, a registered primary strength, and a separate fivefold post hoc sensitivity. Do not move its settings, results, or thresholds into P6.
+\begin{yourturn}\textbf{P6-L04}\quad Can the P6 experiment with 46 features, 1,512 dates, and 16 folds be merged into the Chapter 40 interaction experiment with 26 features, 1,260 dates, and 12 folds? Explain the design difference and the boundary around the fivefold post hoc comparison.\workspace[4]\end{yourturn}
+\begin{yourturn}\textbf{P6-L06}\quad What does independence mean for the q and noise sequences? Are they IID over time? How are the three price columns generated? Why can the complete 46-dimensional feature set not be described as independent, identically distributed, and homoskedastic?\workspace[4]\end{yourturn}
+
+\clearpage\section{The Timing Contract}
+\begin{strand}
+The signal forms at the close on \(D_k\). The label spans the close on \(D_{k+1}\) through the close on \(D_{k+6}\), five close-to-close intervals, and matures only after the endpoint close. Execute at the next trading day's close and rebalance every five signal dates. An asset’s five-day label is not a daily portfolio holding return.
+\end{strand}
+\begin{proposition}[Outer and inner folds]
+Outer validation is date-grouped expanding-window walk-forward: minimum training 504 dates, test blocks of 63 dates, 16 folds. Exclude rows whose labels have not matured at fit time; keep all assets on a signal date on the same side. The inner loop uses its final two 63-date windows and at least 252 training dates, selecting parameters by mean validation MSE. The outer test set is for evaluation only.
+\end{proposition}
+\block{The evaluated-date count}
+The test windows contain \(16\times63=1,008\) nominal signal dates. The last six labels extend beyond the sample, leaving 1,002 mature-label dates per scenario. A constant forecast has undefined cross-sectional Spearman IC; that date is NaN, not zero.
+
+\clearpage\section{Ten Prediction Sequences, Eight Main Models}
+\begin{strand}
+Version 1 produces zero, train\_mean, OLS, Ridge, Lasso, and Elastic Net. Version 2 adds a single tree, random forest, gradient boosting, and PCA + Ridge, for 10 prediction sequences. The main table and figures show eight fitted models and omit the two constant baselines. PCA + Ridge is a dimension-reduced linear model, not a tree.
+\end{strand}
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+Model group & Models & Fold-level rule\\
+\midrule
+Linear & OLS, Ridge, Lasso, Elastic Net & Select regularization by inner MSE\\
+Trees & Single tree, RF, HGB & Select parameters on inner date windows\\
+Dimension reduction & StandardScaler + PCA + Ridge & Fit all preprocessing within training folds\\
+Flat baselines & zero, train\_mean & Constant forecast; zero return and turnover\\
+\bottomrule
+\end{tabular}
+\end{center}
+\block{Gradient boosting}
+The fitted estimator is HistGradientBoostingRegressor with early\_stopping=False. Its iteration cap is 300; select it with other parameters by mean MSE on the two inner time windows, then refit on all outer-training rows. Never tune on outer-test performance.
+\begin{yourturn}\textbf{P6-L05}\quad What are the six v1 prediction sequences and the four additions in v2? Why does the report say “8 main comparison models” while the frozen run has 10 prediction sequences? Which type of model is PCA + Ridge?\workspace[4]\end{yourturn}
+
+\clearpage\section{Forecast Metrics and Portfolio Outcomes}
+\begin{definition}[Three prediction/portfolio views]
+\[
+R^2_{\mathrm{OS}}=1-\frac{\sum (y-\hat y)^2}{\sum (y-\hat y_{\mathrm{base}})^2};
+\qquad
+IC_t=\operatorname{Spearman}(\hat y_{i,t},y_{i,t}).
+\]
+\(R^2_{\mathrm{OS}}\) compares asset-level forecast error to a zero or training-mean baseline. Daily IC measures cross-sectional ranking on a signal date. Portfolio Sharpe, net return, drawdown, and turnover depend on weights, execution time, ledger, and cost. Different rankings can all be correct.
+\end{definition}
+\block{Own-date IC versus paired IC}
+Let \(D_m\) be the dates when model \(m\)'s IC is defined. Its own-date mean is \(\bar{IC}_m(D_m)\). To compare with Ridge, use the common set \(D_m\cap D_R\):
+\[
+\Delta_m=\bar{IC}_m(D_m\cap D_R)-\bar{IC}_R(D_m\cap D_R).
+\]
+Base Lasso/Elastic Net have 630/882 valid dates of 1,002; reversal Lasso/Elastic Net have 567/819. Common-date means and differences use exactly those date counts. Never subtract a sparse model's own mean from Ridge's 1,002-date mean. NaN is undefined, not zero.
+\block{Compressed NW(4) is not four-day HAC}
+The historical summary dropped missing IC dates and indexed the valid observations consecutively. If actual dates are 0, 2, 3, 5, 8, the fourth lag after compression connects days 0 and 8. It is not a four-trading-day lag. The revised report retains the old diagnostic but does not present it as trading-day inference or compute a new HAC.
+\begin{yourturn}\textbf{P6-L01}\quad Can the base Lasso IC of 0.01785759 be compared directly with Ridge's 0.01982995 to conclude that Lasso is weaker?\workspace[3]\end{yourturn}
+\begin{yourturn}\textbf{P6-L02}\quad Does compressed NW(4) represent a four-trading-day HAC?\workspace[3]\end{yourturn}
+\begin{yourturn}\textbf{P6-L03}\quad Can Chapter 39 reuse these P6 paired results?\workspace[3]\end{yourturn}
+
+\clearpage\section{Portfolio Costs and State Changes}
+\begin{strand}
+Demean each signal-date forecast across assets and convert it to dollar-neutral target weights with gross exposure 1. Start with 1 million, rebalance every five signal dates, execute at the next close, and charge one-way fees of 0/10/20 bp. Mark NAV daily. Borrow fees, financing spreads, market impact, capacity, and margin costs are not modeled.
+\end{strand}
+\begin{center}\small
+\begin{tabular}{lrrrr}
+\toprule
+Model / scenario & \(R^2\) vs mean & IC & Sharpe 10 bp & Sharpe 20 bp\\
+\midrule
+Elastic Net / base & −0.010\% & 0.0309 & 0.81 & 0.43\\
+Tree / reversal & −0.604\% & −0.0120 & −1.13 & −1.60\\
+PCA + Ridge / base & −0.008\% & 0.0135 & 0.25 & −0.13\\
+PCA + Ridge / reversal & −0.053\% & 0.0063 & −0.14 & −0.52\\
+Ridge / reversal & −0.161\% & 0.0087 & −0.15 & −0.53\\
+\bottomrule
+\end{tabular}
+\end{center}
+Elastic Net has good after-cost results in the base construction, but all eight main fitted models have negative 20 bp Sharpe after reversal; the flat baselines have undefined Sharpe. A positive base result cannot erase the reversal outcome.
+
+\clearpage\section{PCA, Importance, and Stability}
+\begin{proposition}[Full-component PCA + Ridge]
+With the same StandardScaler, the same Ridge alpha, and whitening off, retaining all 46 principal components is an orthogonal rotation. If \(V^\top V=I\), the coordinate change \(\theta=V^\top w\) preserves the coefficient norm, \(\|\theta\|_2=\|w\|_2\). Squared error and Ridge penalty remain unchanged, so the full-component pipeline is orthogonally equivalent to Ridge in standardized coordinates. Truncation restricts coefficients to a smaller subspace; it may reduce noise or remove a predictive direction, and is not guaranteed to help.
+\end{proposition}
+\block{PCA is not uniformly worse}
+Relative to the training mean, PCA + Ridge \(R^2\) is −0.008\%/−0.053\% in base/reversal, better than Ridge at −0.113\%/−0.161\%. Reversal 10/20 bp Sharpe is −0.14/−0.52 for PCA + Ridge, slightly above Ridge's −0.15/−0.53, although both are negative. Its IC is 0.0135/0.0063, below Ridge at 0.0198/0.0087. The metrics measure different objects. PCA selected 30 components in 10 folds, 5 in 5, and 15 in 1; this does not establish a stable choice across datasets.
+\block{Importance and stability}
+Grouped permutation is measured on the final 63-date inner-validation window in each fold, with three repeats. Permute the price and all-characteristics groups separately. RF/HGB ablations remove prices, use prices only, or use an inner-loop top 10; the top-10 ablation reuses full-model parameters. Near-zero grouped importance can reflect substitute features, not absence of information. Adjacent-fold rank correlations are low: tree −0.10/−0.04, RF 0.01/0.01, and HGB 0.09/0.10 in base/reversal. RF's three-seed prediction correlations are 0.962–0.982, with 10 bp Sharpe 0.44–0.64. HGB is identical across three seeds with early stopping disabled. Stability is not accuracy.
+\begin{yourturn}\textbf{P6-L07}\quad Using \(R^2\) relative to the training mean, IC, and 10/20 bp Sharpe in both scenarios, determine whether PCA + Ridge is uniformly worse than Ridge. Explain why these findings can coexist.\workspace[4]\end{yourturn}
+
+\clearpage\section{Evidence Strength and Scope}
+\begin{strand}
+Across the six main tree comparisons (three tree types × two scenarios), the only \(|t|>2\) is the reversal single tree against Ridge: \(\Delta IC=-0.0207\), unadjusted historical NW \(t=-2.19\), in the direction of worse performance for the tree. Approximate unadjusted two-sided \(p=0.029\), about 0.17 after Bonferroni over six comparisons; ablations and seeds add more comparisons. This is not confirmatory. All other main comparisons have \(|t|<2\).
+\end{strand}
+\block{Do not invent a protocol threshold}
+The frozen comparison.claims\_rule says to make no economic or alpha claim from constructed data and to retain zero and negative results. It does not define a joint threshold requiring \(\Delta IC\) NW t≥2 in both scenarios and 20 bp Sharpe above Ridge and Elastic Net. Describe the single-tree result as an unadjusted, descriptive negative result, not a frozen alpha test.
+\block{Frozen notebook replay}
+The I3 P6v2 notebook has 9 cells, 4 code cells. It replays two frozen summaries, date bases, and historical ablation/stability displays, and generates historical\_constructed\_trees\_sharpe.png from frozen summaries into RUN\_DIR. Fit is marked SKIPPED; it does not retrain. A8-B is limited-scope accepted pending formal integration; full P6 remains unverified. Real-data work and A10-B data/PIT status remain unverified; empirical research is blocked.
+\begin{yourturn}\textbf{P6-L08}\quad Does the frozen configuration's claims\_rule specify a joint threshold requiring “tree-model \(\Delta IC\) NW t ≥ 2 in both scenarios and 20 bp Sharpe above both Ridge and Elastic Net”? How should the only main comparison with an absolute t statistic above 2 be described?\workspace[5]\end{yourturn}
+
+\clearpage\section{Recall Card}
+\begin{center}\small
+\begin{tabular}{p{0.28\linewidth}p{0.62\linewidth}}
+\toprule
+Observation & Ask first\\
+\midrule
+Positive IC & Own valid dates or common paired dates?\\
+NaN & Undefined metric, not zero.\\
+NW(4) & Trading days or compressed observations?\\
+Positive Sharpe & Which fee, scenario, drawdown, turnover?\\
+PCA & Full or truncated? Same scaling, alpha, and whitening?\\
+Importance & Substitutes, window length, repeats, post hoc choice?\\
+“Winning” model & Which frozen metric? Multiple tests? Constructed data?\\
+\bottomrule
+\end{tabular}
+\end{center}
+\block{Local reading}
+The base report and full v2 results are in projects/project06/research\_report/README.md and research\_report/v2\_trees.md. V2\_TREES.md is the companion guide; solutions.md holds complete answers for P6-L01–L08 and P6-T01–T04. Configurations, summaries, date-basis JSON, and implementation are available locally. These study notes do not execute models or notebooks or change frozen results.
+
+
+\clearpage\section{Project calculations: dates, permutations, coordinates, and cash}
+\begin{strand}
+A reproducible study puts each input row, loss, and cash movement in the right place. No model is trained here: screen by maturity, diagnose information with joint within-date permutation, then distinguish prediction coordinates from actual holdings.
+\end{strand}
+\begin{yourturn}\textbf{P6-T01}\quad Fit after the close information for $D_{10}$ arrives. Candidate signals are $D_2,D_3,D_4,D_5$, each with 40 assets, next-close execution and a five-day label. Give each maturity date and the retained row count. Why is randomly splitting assets within a date different from validation on later dates?\workspace[4]\end{yourturn}
+\begin{definition}[Joint within-date permutation]
+Draw a separate row order for each date and share it across all group columns. This preserves that date's joint empirical distribution within the group, but may move its relationship with unpermuted columns outside the observed support.
+\end{definition}
+\begin{yourturn}\textbf{P6-T02}\quad Two dates have $q=(1,2,3)$ and $(11,12,13)$, $z=2q $, $y=q $, and fixed $f=q $. Labels and predictions are in percentage points; source row indices start at 1. Source orders are $(3,1,2)$ and $(2,1,3)$. Give the permuted pairs and MSE increase across six rows; write a same-date paired-multiset assertion. Why do separate orders for the two columns fail?\workspace[4]\end{yourturn}
+\clearpage
+\begin{proposition}[The full-dimensional orthogonal control]
+With the same Scaler, alpha, input rows, and intercept convention, without whitening, $Z=XV $ with full-dimensional orthogonal $V $ gives identical Ridge predictions. Truncated PCA has no such guarantee.
+\end{proposition}
+\begin{proof}
+Set $\beta=Vb $. Predictions satisfy $X\beta=$\fillin[2cm]; orthogonality gives the penalty norm\fillin[2.2cm].\TODO{Explain why the coordinate map is one-to-one and why whitening changes the meaning of the same alpha.}
+\end{proof}
+\begin{yourturn}\textbf{P6-T03}\quad $X^\top X=\operatorname{diag}(2,8)$, $X^\top y=(2,4)^\top $, $\alpha=2$, and $V=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$. Find $\hat\beta,\hat b,V\hat b $. What is removed if only the first column of $V $ is retained?\workspace[4]\end{yourturn}
+\clearpage
+\begin{strand}
+A target is an instruction. Actual weights divide marked position values by current NAV. Price drift and fees change the numerator or denominator. Following cash event by event separates predictive error from implementation.
+\end{strand}
+\begin{yourturn}\textbf{P6-T04}\quad Start with 1,000 cash and A/B prices of 100. Buy five A shares and short five B shares, paying 10 bp one-sided fees from cash without resizing dollar targets. Next prices are 110/90. Find first post-fee cash/NAV, next pre-trade NAV and actual weights. Reset targets to positive/negative 0.5 of pre-trade NAV; calculate total traded notional, fee, and post-trade NAV. Allow fractional shares; omit financing, dividends, and impact.\workspace[6]\end{yourturn}
+
+\clearpage\section*{Project 6: Questions and Complete Answers}
+\color{inkiron}
+\block{P6-L01 · Own-date IC and common-date pairing}
+Question: Can the base Lasso IC of 0.01785759 be compared directly with Ridge's 0.01982995 to conclude that Lasso is weaker?\\
+Answer: No. Lasso's mean is over 630 dates with defined IC; Ridge's mean is over all 1,002. On the common 630 dates, Lasso is 0.01785759, Ridge is 0.01613330, and the difference is +0.00172429. It is descriptive and has no valid inferential t statistic in this display. NaN is undefined, not zero.
+
+\clearpage
+\block{P6-L02 · Compressed NW(4)}
+Question: Does compressed NW(4) represent a four-trading-day HAC?\\
+Answer: No. With actual valid dates 0, 2, 3, 5, 8, compression makes the fourth lag connect dates 0 and 8, eight trading days apart. It is not a four-trading-day HAC. No new HAC was calculated.
+
+\clearpage
+\block{P6-L03 · P6 and Chapter 39}
+Question: Can Chapter 39 reuse these P6 paired results?\\
+Answer: No. The row-level forecasts required for Chapter 39 are unavailable. P6 has a different configuration and run identity, so it cannot fill the gap. New training cannot create historical predictions. Keep the Chapter 39 paired quantity marked as unrecomputable.
+
+\clearpage
+\block{P6-L04 · P6 and Chapter 40}
+Question: Can the P6 experiment with 46 features, 1,512 dates, and 16 folds be merged into the Chapter 40 interaction experiment with 26 features, 1,260 dates, and 12 folds? Explain the design difference and the boundary around the fivefold post hoc comparison.\\
+Answer: No. The generating process, sample, and split differ. Chapter 40 has a registered primary strength and a separate fivefold post hoc sensitivity; both belong to its experiment. Neither the interaction structure nor the post hoc result becomes a P6 feature, result, or threshold. Methods may be taught side by side only if experiment identity remains explicit.
+
+\clearpage
+\block{P6-L05 · Prediction sequences and main-table model count}
+Question: What are the six v1 prediction sequences and the four additions in v2? Why does the report say “8 main comparison models” while the frozen run has 10 prediction sequences? Which type of model is PCA + Ridge?\\
+Answer: Version 1 has zero, train\_mean, OLS, Ridge, Lasso, and Elastic Net. Version 2 adds a single tree, RF, HGB, and PCA + Ridge, for 10 sequences. The table shows eight fitted models and leaves out the two constant flat-portfolio baselines. PCA + Ridge standardizes, applies PCA, then fits Ridge; it is a dimension-reduced linear model, not a tree.
+
+\clearpage
+\block{P6-L06 · Feature process and independence}
+Question: What does independence mean for the q and noise sequences? Are they IID over time? How are the three price columns generated? Why can the complete 46-dimensional feature set not be described as independent, identically distributed, and homoskedastic?\\
+Answer: Different constructed q/noise sequences are independent by the generator, but each is an AR(1) over time with \(\rho=0.98\) and marginal variance 1, so they are not IID. The price columns rev\_5, mom\_60\_5, and vol\_20 derive from the return/price path with common market, q-signal, and idiosyncratic shocks. The 43 characteristic sequences and three derived price features have different structures; the 46 columns are not draws from one independent, identically distributed, equal-variance population.
+
+\clearpage
+\block{P6-L07 · PCA and Ridge}
+Question: Using \(R^2\) relative to the training mean, IC, and 10/20 bp Sharpe in both scenarios, determine whether PCA + Ridge is uniformly worse than Ridge. Explain why these findings can coexist.\\
+Answer: No. PCA + Ridge \(R^2\) versus the training mean is −0.008\%/−0.053\% in base/reversal, slightly better than Ridge at −0.113\%/−0.161\%. In reversal its 10/20 bp Sharpe is −0.14/−0.52, slightly higher than Ridge's −0.15/−0.53, though both are negative. Its IC is 0.0135/0.0063, lower than Ridge's 0.0198/0.0087. Forecast error, rank correlation, and portfolio results measure different objects.
+
+\clearpage
+\block{P6-L08 · Protocol and multiple comparisons}
+Question: Does the frozen configuration's claims\_rule specify a joint threshold requiring “tree-model \(\Delta IC\) NW t ≥ 2 in both scenarios and 20 bp Sharpe above both Ridge and Elastic Net”? How should the only main comparison with an absolute t statistic above 2 be described?\\
+Answer: No. claims\_rule prohibits economic or alpha claims from constructed data and requires retaining zero and negative results. The only \(|t|>2\) among the six main comparisons is the reversal single tree against Ridge: \(\Delta IC=-0.0207\), unadjusted NW \(t=-2.19\), in the direction of worse tree performance. Approximate unadjusted \(p=0.029\), about 0.17 after Bonferroni over six. Since ablations and seeds add comparisons, describe this as an unadjusted descriptive result from constructed data, not a confirmatory significant finding.
+
+
+\clearpage\section*{Complete answers to the project calculations}
+\block{P6-T01}
+Signals $D_2,D_3,D_4,D_5$ execute on $D_3,D_4,D_5,D_6$ and mature on $D_8,D_9,D_{10},D_{11}$. The first three dates are eligible: keep $3\times40=120$ rows. Equality requires the close information to have arrived. Splitting assets within a date shares the daily shock and is not validation on later dates; recheck maturity at each inner fitting time.
+\block{P6-T02}
+First date: $(3,6),(1,2),(2,4)$; second: $(12,24),(11,22),(13,26)$. With labels unchanged, errors are $(2,-1,-1,1,-1,0)$, SSE is 8, and MSE increases by $4/3$ squared percentage points. Directly check \texttt{Counter(permuted[d]) == Counter(original[d])}, each column's multiset, and $z=2q $; see the standard-library code in this project's solutions. Global cross-date orders and separate column orders change the wrong structure. A fixed model's unused column has exactly zero importance; a fitted finite-sample model need not.
+\clearpage
+\block{P6-T03}
+$X\beta=XVb=Zb $ and $\|\beta\|^2=\|b\|^2$. Full orthogonality makes the map invertible, preserving squared loss and the same-alpha penalty. Whitening adds directional rescaling and breaks this control. $\hat\beta=(0.5,0.4)^\top $, $\hat b=(0.4,-0.5)^\top $, and $V\hat b=\hat\beta $. Retaining only the first column sets $\beta_1=0$, giving $(0,0.4)^\top $. This may reduce noise or lose signal; use in-training selection and independent testing rather than a variance guarantee. No P6 training was added.
+\block{P6-T04}
+First fee: $1000\times0.001=1$, giving cash/NAV 999. Next positions are 550 and −450 with cash 999, so NAV is 1099 and weights are $550/1099$ and $-450/1099$, approximately 0.500455 and −0.409463. Targets become $+549.5,-549.5$: sell 0.5 dollars of A and short another 99.5 dollars of B. Total notional 100, fee 0.1, cash $999+0.5+99.5-0.1=1098.9$, net position value 0, and NAV 1098.9. Absolute post-fee weights are $549.5/1098.9\approx0.500046$, not exactly 0.5. Event-by-event cash updates and position-value drift determine rebalancing notional; Chapter 41's fixed-weight cost proxy cannot replace these identities.

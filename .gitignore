@@ -1,0 +1,47 @@
+# Local environments and execution results
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+runs/
+/outputs/
+**/outputs/*
+!/projects/project02/outputs/summary.json
+versions/
+.DS_Store
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.synctex.gz
+*.aux
+*.log
+*.out
+*.toc
+*.xdv
+*.fls
+*.fdb_latexmk
+# Never ingest optional market-data files. Only four constructed fixtures are included.
+/data/*
+!/data/fixtures/
+/data/fixtures/*
+!/data/fixtures/a1_prices.csv
+!/data/fixtures/a1_corporate_actions.csv
+!/data/fixtures/a1_pit_signals.csv
+!/data/fixtures/a1_pit_versions.csv
+
+# Large local archives and runtime state
+*.7z
+*.zip
+*.tar
+*.tar.gz
+*.db
+*.sqlite
+*.sqlite3

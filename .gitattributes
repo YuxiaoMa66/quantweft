@@ -1,0 +1,6 @@
+# Preserve the accepted snapshot bytes on every platform.
+* -text
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary

@@ -1,0 +1,14 @@
+{
+  "version": "p05-prep-0.1",
+  "status": "preparation layer only; a local file hash is not a pre-registration",
+  "alpha": 0.05,
+  "bh_q": 0.10,
+  "engle_granger": {"trend": "c", "note": "statsmodels coint with MacKinnon critical values; ordinary ADF critical values are not applied to estimated residuals"},
+  "windows": [
+    {"name": "train_1926_1963_test_1963_1999", "train_end": "1963-06", "test_end": "1999-12"},
+    {"name": "train_1926_1999_test_2000_2026", "train_end": "1999-12", "test_end": "2026-08"}
+  ],
+  "null_calibration": {"seed": 20261201, "reps": 200, "n_series": 10, "months": 444},
+  "selection_effect": {"seed": 20261202, "reps": 200, "n_series": 10, "train_months": 360, "test_months": 120},
+  "not_included": ["entry/exit rules", "two-leg transaction costs", "borrow or financing", "position sizing", "backtest"]
+}

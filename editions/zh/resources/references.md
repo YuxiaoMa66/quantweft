@@ -1,0 +1,3461 @@
+# 来源索引与核读说明
+
+来源索引保留331个键（317基础+14读者整合项）。核读主体、日期和全文/摘要范围沿历史记录，不是本轮新核源。reader_chapter_associations只表示导航；别名不新增独立来源。PSR本地2012年7月作者稿无已核公开URL，不补造DOI或分发全文。共享原始元数据保持。
+
+### ORFE
+
+[Princeton ORFE Undergraduate Program](https://orfe.princeton.edu/undergraduate)
+
+相关章节: 1,4–9
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取课程概述；用于体系映射
+
+### MIT_FIN
+
+[MIT OCW 15.401 Finance Theory I (Fall 2008)](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/)
+
+相关章节: 10–15,20,44
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取课程概述；未逐份核验讲义
+
+### FRENCH
+
+[Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html)
+
+相关章节: 3,11,15,23–27,14
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取库页面；10行业及FF3/FF5月收益快照已下载并保留manifest；未获取逐股PIT或全部库数据
+
+### FF5_DESC
+
+[Description of Fama/French 5 Factors (2x3)](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_5_factors_2x3.html)
+
+相关章节: 15,26
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取因子构造说明
+
+### FF1993
+
+[Common risk factors in the returns on stocks and bonds](https://www.sciencedirect.com/science/article/pii/0304405X93900235)
+
+相关章节: 14,15,24
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取出版页/摘要；不声称核验全文
+
+### FF2015
+
+[A five-factor asset pricing model](https://www.sciencedirect.com/science/article/pii/S0304405X14002323)
+
+相关章节: 15,26
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取出版页/节选；不声称核验全文
+
+### PBO
+
+[The probability of backtest overfitting](https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf)
+
+相关章节: 7,22,30–32
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已取得作者PDF文本；公式排版需正文时逐式核验
+
+### DSR
+
+[The Deflated Sharpe Ratio: Correcting for Selection Bias, Backtest Overfitting and Non-Normality](https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf)
+
+相关章节: 22,30,32
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已取得作者PDF文本；公式排版需正文时逐式核验
+
+### BOYD
+
+[Convex Optimization — Boyd and Vandenberghe](https://web.stanford.edu/~boyd/cvxbook/)
+
+相关章节: 4,5,9,20,21,36
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取作者页；正文按具体章节核验
+
+### NUMPY
+
+[NumPy documentation](https://numpy.org/doc/stable/)
+
+相关章节: 2,5,6,11,41
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取官方入口；API按冻结环境版本复核
+
+### PANDAS
+
+[pandas documentation](https://pandas.pydata.org/docs/)
+
+相关章节: 2,3,23,29,45
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取官方入口；API按冻结环境版本复核
+
+### POLARS
+
+[Polars User Guide](https://docs.pola.rs/)
+
+相关章节: 2,3
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取官方入口；API按冻结环境版本复核
+
+### SCIPY
+
+[SciPy documentation](https://docs.scipy.org/doc/scipy/)
+
+相关章节: 2,7,18,33,44
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取官方入口；API按冻结环境版本复核
+
+### STATSMODELS
+
+[statsmodels Linear Regression](https://www.statsmodels.org/stable/regression.html)
+
+相关章节: 8,15–19
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取回归文档；时间序列专属API待补
+
+### CVXPY
+
+[CVXPY Quadratic program](https://www.cvxpy.org/examples/basic/quadratic_program.html)
+
+相关章节: 9,20,21
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取优化问题及金融示例
+
+### SK_TSS
+
+[scikit-learn TimeSeriesSplit](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html)
+
+相关章节: 31,38
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取gap和训练窗口说明；不等同Purged CV
+
+### SK_PITFALLS
+
+[scikit-learn Common pitfalls and recommended practices](https://scikit-learn.org/stable/common_pitfalls.html)
+
+相关章节: 8,28,37–43,45
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取train-only preprocessing与leakage说明
+
+### AQR_VM
+
+[Value and Momentum Everywhere](https://www.aqr.com/Insights/Research/Journal-Article/Value-and-Momentum-Everywhere)
+
+相关章节: 24,25,28
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取研究页；数据与全文方法待逐项核验
+
+### AQR_COST
+
+[Trading Costs of Asset Pricing Anomalies](https://www.aqr.com/Insights/Research/Working-Paper/Trading-Costs-of-Asset-Pricing-Anomalies)
+
+相关章节: 29,34–36
+
+历史核读日期: 2026-10-09
+
+历史核读范围: 2026-10-09：Tavily Search/Extract及AQR官方页核对；2012工作论文摘要称样本覆盖1998–2011、19个发达市场、近1万亿美元机构实盘交易；成本估计不迁移为本教学构造参数。
+
+### AQR_STYLE
+
+[Investing with Style](https://www.aqr.com/-/media/AQR/Documents/Insights/Journal-Article/JOIM-Investing-With-Style.pdf)
+
+相关章节: 27
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 搜索命中官方PDF；全文未读取
+
+### SEC_ALGO
+
+[Staff Report on Algorithmic Trading in U.S. Capital Markets](https://www.sec.gov/files/algo_trading_report_2020.pdf)
+
+相关章节: 1,34–36
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 读取官方PDF有关算法投资/交易决策用途；不转述未核验统计数字
+
+### FRENCH_10
+
+[Detail for 10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html)
+
+相关章节: 1–3,15
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 官方构造页已读取；真实ZIP下载、Keka测试/解包、1202月价值加权收益块解析与哈希记录
+
+### MIT_CALC
+
+[MIT OCW Single Variable Calculus](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/)
+
+相关章节: 4
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取官方页面；支持边界见章节内部阅读记录（未随包提供）及阅读记录
+
+### MIT_LA
+
+[MIT OCW Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/)
+
+相关章节: 5
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取官方页面；支持边界见章节内部阅读记录（未随包提供）及阅读记录
+
+### MIT_PROB
+
+[MIT OCW Applied Probability](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取官方页面；支持边界见章节内部阅读记录（未随包提供）及阅读记录
+
+### SEC_API
+
+[EDGAR Application Programming Interfaces](https://www.sec.gov/edgar/sec-api-documentation)
+
+相关章节: 3
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取官方页面；支持边界见章节内部阅读记录（未随包提供）及阅读记录
+
+### NYSE_CAL
+
+[NYSE Holidays and Trading Hours](https://www.nyse.com/markets/hours-calendars)
+
+相关章节: 3
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取官方页面；支持边界见章节内部阅读记录（未随包提供）及阅读记录
+
+### PY_ZONEINFO
+
+[Python zoneinfo](https://docs.python.org/3/library/zoneinfo.html)
+
+相关章节: 3
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取官方页面；支持边界见章节内部阅读记录（未随包提供）及阅读记录
+
+### PANDAS_ASOF
+
+[pandas merge_asof](https://pandas.pydata.org/docs/reference/api/pandas.merge_asof.html)
+
+相关章节: 3
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取官方页面；支持边界见章节内部阅读记录（未随包提供）及阅读记录
+
+### FRENCH_LIBRARY
+
+[Kenneth French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library.html)
+
+相关章节: 3
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取官方页面；支持边界见章节内部阅读记录（未随包提供）及阅读记录
+
+### CH2_DOC_01
+
+[Python Tutorial: Control Flow Tools](https://docs.python.org/3/tutorial/controlflow.html)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_02
+
+[Python Tutorial: Errors and Exceptions](https://docs.python.org/3/tutorial/errors.html)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_03
+
+[Python Tutorial: Modules](https://docs.python.org/3/tutorial/modules.html)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_04
+
+[Python typing module](https://docs.python.org/3/library/typing.html)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_05
+
+[Python venv](https://docs.python.org/3/library/venv.html)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_06
+
+[Python Floating-Point Arithmetic](https://docs.python.org/3/tutorial/floatingpoint.html)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_07
+
+[NumPy Broadcasting](https://numpy.org/doc/stable/user/basics.broadcasting.html)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_08
+
+[NumPy: The Absolute Basics for Beginners](https://numpy.org/doc/stable/user/absolute_beginners.html)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_09
+
+[NumPy Copies and Views](https://numpy.org/doc/stable/user/basics.copies.html)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_10
+
+[Indexing and Selecting Data](https://pandas.pydata.org/docs/user_guide/indexing.html)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_11
+
+[Time Series / Date Functionality](https://pandas.pydata.org/docs/user_guide/timeseries.html)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_12
+
+[Windowing Operations](https://pandas.pydata.org/docs/user_guide/window.html)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_13
+
+[GroupBy: Split-Apply-Combine](https://pandas.pydata.org/docs/user_guide/groupby.html)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_14
+
+[Copy-on-Write](https://pandas.pydata.org/docs/user_guide/copy_on_write.html)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_15
+
+[pandas resample API](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.resample.html)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_16
+
+[Polars Lazy API](https://docs.pola.rs/user-guide/concepts/lazy-api/)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_17
+
+[Polars Lazy API Usage](https://docs.pola.rs/user-guide/lazy/using/)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_18
+
+[Polars CSV Read and Write](https://docs.pola.rs/user-guide/io/csv/)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_19
+
+[SciPy User Guide](https://docs.scipy.org/doc/scipy/tutorial/)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_20
+
+[SciPy Optimization Tutorial](https://docs.scipy.org/doc/scipy/tutorial/optimize.html)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_21
+
+[Matplotlib Quick Start](https://matplotlib.org/stable/users/explain/quick_start.html)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_22
+
+[Project Jupyter Documentation](https://docs.jupyter.org/en/latest/)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_23
+
+[Pro Git: What is Git?](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git.html)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### CH2_DOC_24
+
+[Pro Git: Recording Changes to the Repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
+
+相关章节: 2
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### MIT_LA_SYLL
+
+[MIT OCW 18.06 Syllabus](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/pages/syllabus/)
+
+相关章节: 5
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### NP_SVD
+
+[NumPy linalg.svd](https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html)
+
+相关章节: 5
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### NP_EIGH
+
+[NumPy linalg.eigh](https://numpy.org/doc/stable/reference/generated/numpy.linalg.eigh.html)
+
+相关章节: 5
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### NP_SOLVE
+
+[NumPy linalg.solve](https://numpy.org/doc/stable/reference/generated/numpy.linalg.solve.html)
+
+相关章节: 5
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### NP_COND
+
+[NumPy linalg.cond](https://numpy.org/doc/stable/reference/generated/numpy.linalg.cond.html)
+
+相关章节: 5
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### SK_PCA
+
+[scikit-learn PCA](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html)
+
+相关章节: 5
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### MIT_STAT_INDEX
+
+[MIT 18.05 Statistics reading index](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/pages/classes-reading-and-in-class-materials/)
+
+相关章节: 7
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### MIT_STAT_MLE
+
+[Orloff and Bloom: Maximum Likelihood Estimates](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_class10-prep-b.pdf)
+
+相关章节: 7
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### MIT_STAT_CI
+
+[Orloff and Bloom: Confidence Intervals Based on Normal Data](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_class22-prep.pdf)
+
+相关章节: 7
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### MIT_STAT_BETA
+
+[Orloff and Bloom: Conjugate Priors, Beta and Normal](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_class15-prep.pdf)
+
+相关章节: 7
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### MIT_STAT_BOOT
+
+[MIT 18.05 Bootstrap Confidence Intervals](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/mit18_05_s22_class24-prep.pdf)
+
+相关章节: 7
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### SCIPY_TTEST
+
+[SciPy ttest_1samp](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_1samp.html)
+
+相关章节: 7
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### SCIPY_BETA
+
+[SciPy beta distribution](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.beta.html)
+
+相关章节: 7
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### SCIPY_BOOT
+
+[SciPy bootstrap](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html)
+
+相关章节: 7
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取；范围见内部阅读记录（未随包提供）
+
+### KUNSCH1989
+
+[Kunsch (1989): The Jackknife and the Bootstrap for General Stationary Observations](https://projecteuclid.org/journals/annals-of-statistics/volume-17/issue-3/The-Jackknife-and-the-Bootstrap-for-General-Stationary-Observations/10.1214/aos/1176347265.full)
+
+相关章节: 7
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 出版社摘要及作者目录已核对；未读全文
+
+### CH04_DOC_01
+
+[MIT 18.01SC：Derivative as Rate of Change，Session 3](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-3-derivative-as-rate-of-change/)
+
+相关章节: 4
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH04_DOC_02
+
+[MIT 18.01SC：Limits and Continuity，Session 4](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/session-4-limits-and-continuity/)
+
+相关章节: 4
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH04_DOC_03
+
+[MIT 18.01SC：The Fundamental Theorem of Calculus，Session 48](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/unit-3-the-definite-integral-and-its-applications/part-a-definition-of-the-definite-integral-and-first-fundamental-theorem/session-48-the-fundamental-theorem-of-calculus/)
+
+相关章节: 4
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH04_DOC_04
+
+[MIT 18.01SC：Taylor’s Formula 视频资源](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/resources/clip-2-taylors-formula/)
+
+相关章节: 4
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH04_DOC_05
+
+[MIT 18.02SC：Partial Derivatives 课程单元](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/)
+
+相关章节: 4
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH04_DOC_06
+
+[MIT 18.02SC：Approximation Formula，Session 27](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-a-functions-of-two-variables-tangent-approximation-and-optimization/session-27-approximation-formula/)
+
+相关章节: 4
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH04_DOC_07
+
+[MIT 18.02SC：Optimization Problems，Session 28](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-a-functions-of-two-variables-tangent-approximation-and-optimization/session-28-optimization-problems/)
+
+相关章节: 4
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH04_DOC_08
+
+[MIT 18.02SC：Second Derivative Test，Session 30](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-a-functions-of-two-variables-tangent-approximation-and-optimization/session-30-second-derivative-test/)
+
+相关章节: 4
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH04_DOC_09
+
+[MIT 18.02SC：Chain Rule、Gradient and Directional Derivatives 单元](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-b-chain-rule-gradient-and-directional-derivatives/)
+
+相关章节: 4
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH04_DOC_10
+
+[MIT 18.02SC：Directional Derivatives，Session 38](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-b-chain-rule-gradient-and-directional-derivatives/session-38-directional-derivatives/)
+
+相关章节: 4
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH04_DOC_11
+
+[NumPy：numpy.gradient](https://numpy.org/doc/stable/reference/generated/numpy.gradient.html)
+
+相关章节: 4
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH04_DOC_13
+
+[Boyd 与 Vandenberghe：《Convex Optimization》PDF](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+
+相关章节: 4
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_02
+
+[Probability Models and Axioms](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l01/)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_03
+
+[Conditioning and Bayes’ Rule](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l02/)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_04
+
+[Random Variables](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l05/)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_05
+
+[Review](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l06/)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_06
+
+[Continuous Random Variables](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l08/)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_07
+
+[Bayes Variations and Derived Distributions](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l10/)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_08
+
+[Conditional Expectations](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/mit6_041scf13_l12/)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_09
+
+[Markov Chains II](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/resources/lecture-17-video-1/)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_10
+
+[Law of Large Numbers, Convergence](https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/resources/lecture-3-law-of-large-numbers-convergence/)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_11
+
+[Poisson: The Perfect Arrival Process](https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/resources/lecture-4-poisson-the-perfect-arrival-process/)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_12
+
+[Poisson Processes](https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/3a19ce0e02d0008877351bfa24f3716a_MIT6_262S11_chap02.pdf)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_13
+
+[Introduction to Brownian Motion](https://ocw.mit.edu/courses/15-070j-advanced-stochastic-processes-fall-2013/6774cb366bae388320c0c8a251ee8daf_MIT15_070JF13_Lec6.pdf)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_14
+
+[Stochastic Processes II](https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/resources/lecture-17-stochastic-processes-ii/)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_15
+
+[Random Generator](https://numpy.org/doc/stable/reference/random/generator.html)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_16
+
+[Generator.binomial](https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.binomial.html)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_17
+
+[Generator.normal](https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.normal.html)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_18
+
+[Generator.poisson](https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.poisson.html)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_19
+
+[scipy.stats.binom](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binom.html)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_20
+
+[scipy.stats.norm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_21
+
+[scipy.stats.lognorm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.lognorm.html)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_22
+
+[scipy.stats.poisson](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.poisson.html)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH06_DOC_23
+
+[scipy.stats.t](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html)
+
+相关章节: 6
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH08_DOC_01
+
+[statsmodels OLS API](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html)
+
+相关章节: 8
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH08_DOC_02
+
+[statsmodels OLS results](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLSResults.html)
+
+相关章节: 8
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH08_DOC_03
+
+[statsmodels robust covariance API](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLSResults.get_robustcov_results.html)
+
+相关章节: 8
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH08_DOC_04
+
+[scikit-learn `StandardScaler`](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html)
+
+相关章节: 8
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH08_DOC_05
+
+[Pipeline](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html)
+
+相关章节: 8
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH08_DOC_08
+
+[Ridge](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html)
+
+相关章节: 8
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH08_DOC_09
+
+[Lasso](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html)
+
+相关章节: 8
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH08_DOC_10
+
+[ElasticNet guide](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html)
+
+相关章节: 8
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH08_DOC_11
+
+[White (1980): A Heteroskedasticity-Consistent Covariance Matrix Estimator and a Direct Test for Heteroskedasticity](https://doi.org/10.2307/1912934)
+
+相关章节: 8
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH08_DOC_12
+
+[MacKinnon and White (1985): Some Heteroskedasticity-Consistent Covariance Matrix Estimators with Improved Finite Sample Properties](https://doi.org/10.1016/0304-4076(85)90158-7)
+
+相关章节: 8
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH08_DOC_13
+
+[Newey and West (1987): A Simple, Positive Semi-definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix](https://www.nber.org/papers/t0055)
+
+相关章节: 8
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH08_DOC_14
+
+[Sharpe (1964): Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk](https://doi.org/10.1111/j.1540-6261.1964.tb02865.x)
+
+相关章节: 8,14
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH08_DOC_15
+
+[Hoerl and Kennard (1970): Ridge regression — publisher record](https://doi.org/10.1080/00401706.1970.10488634)
+
+相关章节: 8
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH08_DOC_16
+
+[Tibshirani (1996): Lasso — publisher record](https://doi.org/10.1111/j.2517-6161.1996.tb02080.x)
+
+相关章节: 8
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH08_DOC_17
+
+[Zou and Hastie (2005): Elastic Net — publisher record](https://doi.org/10.1111/j.1467-9868.2005.00503.x)
+
+相关章节: 8
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已核验；实际读取范围、全文/摘要区别及支持限制见 内部阅读记录（未随包提供）
+
+### CH08_HAC
+
+[statsmodels cov_hac: Newey-West covariance](https://www.statsmodels.org/stable/generated/statsmodels.stats.sandwich_covariance.cov_hac.html)
+
+相关章节: 8
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 已读取HAC参数及等间距观测假设；代码契约与拒绝测试见第8章根验收记录
+
+### CH09_DOC_01
+
+[CVXPY DCP guide](https://www.cvxpy.org/tutorial/dcp/)
+
+相关章节: 9
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 实际读取范围及软件/经济结论边界见 内部阅读记录（未随包提供）
+
+### CH09_DOC_02
+
+[CVXPY Linear program example](https://www.cvxpy.org/examples/basic/linear_program.html)
+
+相关章节: 9
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 实际读取范围及软件/经济结论边界见 内部阅读记录（未随包提供）
+
+### CH09_DOC_03
+
+[CVXPY Least-squares example](https://www.cvxpy.org/examples/basic/least_squares.html)
+
+相关章节: 9
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 实际读取范围及软件/经济结论边界见 内部阅读记录（未随包提供）
+
+### CH09_DOC_04
+
+[CVXPY Solver features](https://www.cvxpy.org/tutorial/solvers/index.html)
+
+相关章节: 9
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 实际读取范围及软件/经济结论边界见 内部阅读记录（未随包提供）
+
+### CH09_DOC_05
+
+[CVXPY Problem status guide](https://www.cvxpy.org/tutorial/intro/index.html)
+
+相关章节: 9
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 实际读取范围及软件/经济结论边界见 内部阅读记录（未随包提供）
+
+### CH11_MIT_PV
+
+[MIT OCW 15.401: Present Value Relations](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/73c95059e657c8a7acb042ea33a21940_MIT15_401F08_lec02.pdf)
+
+相关章节: 11,13
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 实际读取slide28–29复利、30–34实际/名义及限定；旧课仅支持数学教学
+
+### LO_SR_META
+
+[Andrew W. Lo: The Statistics of Sharpe Ratios — author publication record](https://alo.mit.edu/publications/page/18/)
+
+相关章节: 11,32
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 仅核验作者发表列表与摘要、元数据；未取得全文，公式须独立推导或全文复核
+
+### CH10_SRC_001
+
+[MIT 15.401 Finance Theory I course summary](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/55322b0a932baa9a97c5603eeab0d766_MIT15_401F08_summary.pdf)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 课程总结的主题框架，固定收益页面和 recitation 中债券、收益率敏感度及久期教学材料；课程年份为 2008。；第 2、7、19 节的学习路径和久期/凸性局部近似。
+
+### CH10_SRC_002
+
+[Fixed Income Securities, Part I](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/resources/part-i-of-fixed-income-securities)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 课程总结的主题框架，固定收益页面和 recitation 中债券、收益率敏感度及久期教学材料；课程年份为 2008。；第 2、7、19 节的学习路径和久期/凸性局部近似。
+
+### CH10_SRC_003
+
+[Part IV](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/resources/part-iv-of-fixed-income-securities)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 课程总结的主题框架，固定收益页面和 recitation 中债券、收益率敏感度及久期教学材料；课程年份为 2008。；第 2、7、19 节的学习路径和久期/凸性局部近似。
+
+### CH10_SRC_004
+
+[Recitation 2](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/7437599950b0d45bfa3a4c4a3af00a3f_MIT15_401F08_rec02.pdf)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 课程总结的主题框架，固定收益页面和 recitation 中债券、收益率敏感度及久期教学材料；课程年份为 2008。；第 2、7、19 节的学习路径和久期/凸性局部近似。
+
+### CH10_SRC_005
+
+[MIT Terms](https://ocw.mit.edu/pages/privacy-and-terms-of-use)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 课程总结的主题框架，固定收益页面和 recitation 中债券、收益率敏感度及久期教学材料；课程年份为 2008。；第 2、7、19 节的学习路径和久期/凸性局部近似。
+
+### CH10_SRC_006
+
+[Investor.gov: Stocks](https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 投资者教育页面中股票权益、债券合同现金流、ETF 盘中市场价格与 NAV 的概述。未据此提取完整产品规则。；第 5、7 节股票/ETF/债券入门定义。；美国投资者教育材料，不替代招募说明书、契约或其他法域规则；ETF 创建赎回细节不在本章外推。
+
+### CH10_SRC_007
+
+[Bonds](https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 投资者教育页面中股票权益、债券合同现金流、ETF 盘中市场价格与 NAV 的概述。未据此提取完整产品规则。；第 5、7 节股票/ETF/债券入门定义。；美国投资者教育材料，不替代招募说明书、契约或其他法域规则；ETF 创建赎回细节不在本章外推。
+
+### CH10_SRC_008
+
+[ETF Investor Bulletin](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-24)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 投资者教育页面中股票权益、债券合同现金流、ETF 盘中市场价格与 NAV 的概述。未据此提取完整产品规则。；第 5、7 节股票/ETF/债券入门定义。；美国投资者教育材料，不替代招募说明书、契约或其他法域规则；ETF 创建赎回细节不在本章外推。
+
+### CH10_SRC_009
+
+[Investor.gov: Margin Accounts](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-29)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 美国零售证券保证金账户和借券卖空的投资者说明，读取借款、抵押、维持要求、借入出售和潜在义务段落。；第 5、7、12 节 securities margin loan、卖空和追保风险。；只解释美国证券账户入门机制；不代表期货保证金、场外衍生品抵押或所有卖空法域规则。
+
+### CH10_SRC_010
+
+[Short Sales](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-51)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 美国零售证券保证金账户和借券卖空的投资者说明，读取借款、抵押、维持要求、借入出售和潜在义务段落。；第 5、7、12 节 securities margin loan、卖空和追保风险。；只解释美国证券账户入门机制；不代表期货保证金、场外衍生品抵押或所有卖空法域规则。
+
+### CH10_SRC_011
+
+[Investor.gov: Executing an Order](https://www.investor.gov/introduction-investing/investing-basics/how-stock-markets-work/executing-order)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 订单可能路由至交易所、其他交易场所或做市商的说明。；第 5、7 节 broker、dealer、market maker 和场所角色。；仅为概览；订单路由、最佳执行、披露和订单类型须查适用监管规则与经纪协议。
+
+### CH10_SRC_012
+
+[SEC T+1 FAQ](https://www.sec.gov/exams/educationhelpguidesfaqs/t1-faq)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 2026-10-06 检查 SEC FAQ 中规则合规日、covered transactions/证券及例外、允许某些交易明确延长交收的问答；投资者说明和风险警示用于核对 2024-05-28 生效背景。FAQ 明确其答复是 SEC staff views，不是规则本身，也不具有修改法律的效力；未把规则全文或适用法律意见当作已读。；第 11、12、18 节的美国相关证券交易 T+1 示例及限界。；只用于规则文本覆盖的美国证券交易和适用经纪商；需逐笔核实证券范围、豁免、合同安排、时区和营业日历。T+1 不外推至所有债券、FX、期货、repo 或跨境交易。
+
+### CH10_SRC_013
+
+[SEC Investor Bulletin: New T+1 Settlement Cycle](https://www.sec.gov/oiea/investor-alerts-and-bulletins/new-t1-settlement-cycle-what-investors-need-know-investor)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 2026-10-06 检查 SEC FAQ 中规则合规日、covered transactions/证券及例外、允许某些交易明确延长交收的问答；投资者说明和风险警示用于核对 2024-05-28 生效背景。FAQ 明确其答复是 SEC staff views，不是规则本身，也不具有修改法律的效力；未把规则全文或适用法律意见当作已读。；第 11、12、18 节的美国相关证券交易 T+1 示例及限界。；只用于规则文本覆盖的美国证券交易和适用经纪商；需逐笔核实证券范围、豁免、合同安排、时区和营业日历。T+1 不外推至所有债券、FX、期货、repo 或跨境交易。
+
+### CH10_SRC_014
+
+[SEC Risk Alert](https://www.sec.gov/compliance/risk-alerts/shortening-securities-transaction-settlement-cycle)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 2026-10-06 检查 SEC FAQ 中规则合规日、covered transactions/证券及例外、允许某些交易明确延长交收的问答；投资者说明和风险警示用于核对 2024-05-28 生效背景。FAQ 明确其答复是 SEC staff views，不是规则本身，也不具有修改法律的效力；未把规则全文或适用法律意见当作已读。；第 11、12、18 节的美国相关证券交易 T+1 示例及限界。；只用于规则文本覆盖的美国证券交易和适用经纪商；需逐笔核实证券范围、豁免、合同安排、时区和营业日历。T+1 不外推至所有债券、FX、期货、repo 或跨境交易。
+
+### CH10_SRC_015
+
+[DTCC CNS](https://www.dtcc.com/products-and-services/clearing-settlement-services/equities-clearing/cns)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: DTCC 对 NSCC 连续净额结算（CNS）、中央净额机制及 DTC 证券/现金簿记转移的概览。；第 5、11 节 clearing 与 settlement 的美国基础设施示例。；DTCC 服务的美国市场架构，不是所有市场都采用同一机构或清算拓扑；未据此说明法律最终性细节。
+
+### CH10_SRC_016
+
+[DTCC Settlement Overview](https://www.dtcc.com/understanding-settlement/index.html)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: DTCC 对 NSCC 连续净额结算（CNS）、中央净额机制及 DTC 证券/现金簿记转移的概览。；第 5、11 节 clearing 与 settlement 的美国基础设施示例。；DTCC 服务的美国市场架构，不是所有市场都采用同一机构或清算拓扑；未据此说明法律最终性细节。
+
+### CH10_SRC_017
+
+[CME S&P 500 futures product page](https://www.cmegroup.com/markets/equities/sp/sandp-futures.html)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 2026-10-06 查产品页的 ES、MES 每指数点美元乘数；教育页中 futures performance bond 与证券保证金借款的差别、初始/维持保证金和可能追保。没有抄录页面动态保证金报价或tick数值。；第 5–8、11–12 节乘数、每日变动现金流、保证金非最大损失。；乘数是指定 CME 合约规格；交易时需复核对应月份、合约版本、交易时段与现行规则。教学页不替代清算会员/经纪商当期要求。
+
+### CH10_SRC_018
+
+[CME futures margin education](https://www.cmegroup.com/education/courses/understanding-the-benefits-of-futures/the-benefits-of-futures-margins)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 2026-10-06 查产品页的 ES、MES 每指数点美元乘数；教育页中 futures performance bond 与证券保证金借款的差别、初始/维持保证金和可能追保。没有抄录页面动态保证金报价或tick数值。；第 5–8、11–12 节乘数、每日变动现金流、保证金非最大损失。；乘数是指定 CME 合约规格；交易时需复核对应月份、合约版本、交易时段与现行规则。教学页不替代清算会员/经纪商当期要求。
+
+### CH10_SRC_019
+
+[OCC Options Disclosure Document](https://www.theocc.com/company-information/documents-and-archives/options-disclosure-document)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: ODD 介绍页与 PDF 可检索的风险、行权/指派及清算片段；未逐页审阅整份披露文件。；第 5、7、8、12、19 节期权权利义务、到期 payoff 与风险边界。；各期权产品的到期日、行权方式、乘数和结算资产要以合约规格为准。仅链接和原创释义，不复制长段风险披露。
+
+### CH10_SRC_020
+
+[Risks of Standardized Options PDF](https://www.theocc.com/getcontentasset/a151a9ae-d784-4a15-bdeb-23a029f50b70/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/riskstoc.pdf)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: ODD 介绍页与 PDF 可检索的风险、行权/指派及清算片段；未逐页审阅整份披露文件。；第 5、7、8、12、19 节期权权利义务、到期 payoff 与风险边界。；各期权产品的到期日、行权方式、乘数和结算资产要以合约规格为准。仅链接和原创释义，不复制长段风险披露。
+
+### CH10_SRC_021
+
+[CFTC Interest Rate Swap final rule](https://www.cftc.gov/LawRegulation/FederalRegister/finalrules/2016-23983.html)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 规则文件中互换和名义金额现金流的相关部分；报告说明中已清算交易通过 CCP 形成替代交易关系的统计口径说明。未审阅全套 CFTC swap rulebook。；第 5、7、19 节名义金额、现金流交换和中央清算概览。；报告解释仅说明其统计口径；不构成所有 swap 的统一定义、法规适用或破产净额法律意见。
+
+### CH10_SRC_022
+
+[CFTC Swaps Report explanatory notes](https://www.cftc.gov/MarketReports/SwapsReports/ExplanatoryNotes/index.htm)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 规则文件中互换和名义金额现金流的相关部分；报告说明中已清算交易通过 CCP 形成替代交易关系的统计口径说明。未审阅全套 CFTC swap rulebook。；第 5、7、19 节名义金额、现金流交换和中央清算概览。；报告解释仅说明其统计口径；不构成所有 swap 的统一定义、法规适用或破产净额法律意见。
+
+### CH10_SRC_023
+
+[ECB, “The repo market,” Monthly Bulletin (2002)](https://www.ecb.europa.eu/pub/pdf/other/pp55_68_mb200210en.pdf)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 机制部分对 repo/逆回购、折扣、担保品估值与追加担保风险的说明。；第 5、8、12、17–18 节 repo 和 haircut 教学关系。；2002 年材料只用于基础机制，不引用当期市场规模、惯例或现行法规。折扣关系是简化算术。
+
+### CH10_SRC_024
+
+[BIS Quarterly Review: Sizing up global foreign exchange markets](https://www.bis.org/publications/qr-201912/sizing-global-foreign-exchange-markets)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 2019 年文中外汇掉期近端/远端两腿及期限融资性质、远期点与利差的解释片段。；第 5–6、19 节FX合约背景和覆盖利率平价直觉。；不是当前交易统计或套利报价。正文远期式另明确采用同到期、简单利率、无摩擦的构造假设，不宣称实盘套利。
+
+### CH10_SRC_025
+
+[Article PDF](https://www.bis.org/publ/qtrpdf/r_qt1912f.htm)
+
+相关章节: 10
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 2019 年文中外汇掉期近端/远端两腿及期限融资性质、远期点与利差的解释片段。；第 5–6、19 节FX合约背景和覆盖利率平价直觉。；不是当前交易统计或套利报价。正文远期式另明确采用同到期、简单利率、无摩擦的构造假设，不宣称实盘套利。
+
+### CH12_SRC_026
+
+[SEC, How to Read a 10-K](https://www.sec.gov/files/reada10k.pdf)
+
+相关章节: 12
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 三张报表与 10-K 阅读路径；2026-10-06 读取 SEC 投资者指南中资产负债表、利润表、现金流量表的功能描述；现金流量表经营、投资、筹资活动的入门说明；10-K 的项目组织概览。；只作美国申报文件的入门导航。未把指南当作 GAAP 原文或具体公司的科目定义。
+
+### CH12_SRC_027
+
+[SEC, Beginners’ Guide to Financial Statements](https://www.sec.gov/reportspubs/investor-publications/investorpubsbegfinstmtguide)
+
+相关章节: 12
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 三张报表与 10-K 阅读路径；2026-10-06 读取 SEC 投资者指南中资产负债表、利润表、现金流量表的功能描述；现金流量表经营、投资、筹资活动的入门说明；10-K 的项目组织概览。；只作美国申报文件的入门导航。未把指南当作 GAAP 原文或具体公司的科目定义。
+
+### CH12_SRC_028
+
+[Apple 2024 Form 10-K, accession 0000320193-24-000123](https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm)
+
+相关章节: 12
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Apple FY2024 原始申报；2026-10-06 读取合并经营报表、资产负债表、现金流量表及经营现金流调节行。核对财政期截至 2024-09-28 与 2023-09-30、报表 USD millions、FY2024/FY2023 net sales 391,035/383,285、gross profit 180,683/169,148、operating income 123,216/114,301、D&A 11,445/11,519、net income 93,736/96,995、CFO 118,254/110,543、购置 PP&E 的现金流行 −9,447/−10,959。另读取资产 364,980/352,583、负债 308,030/290,437、股东权益 56,950/62,146、现金 29,943/29,965、commercial paper 9,967/5,985、current term debt 10,912/9,822、non-current term debt 85,750/95,281，以及所选营运科目。；这些是指定 accession 报告的有限报表事实。Apple 文件未报告本章统一定义的 FCF；本章的 FCF 是 CFO − CapEx 教学口径。未将 marketable securities 当现金，也未将 lease liabilities 纳入代码里的 debt。
+
+### CH12_SRC_029
+
+[Apple 10-K SEC accession headers](https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/0000320193-24-000123-index-headers.html)
+
+相关章节: 12
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Apple EDGAR 头信息；2026-10-06 读取原始字段：CONFORMED PERIOD OF REPORT 20240928、FILED AS OF DATE 20241101、ACCESSION 0000320193-24-000123、原样 <ACCEPTANCE-DATETIME>20241101060136。；保存 timestamp 原串，不推断或转换时区，不由 acceptance 字段单独推断数据供应商入库时间或最早可交易时点。
+
+### CH12_SRC_030
+
+[Apple, reports fourth quarter results, 2024-10-31](https://www.apple.com/newsroom/2024/10/apple-reports-fourth-quarter-results/)
+
+相关章节: 12
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Apple 首次公开结果；2026-10-06 读取公司新闻稿页面的发布日期（日期级）和随附未经审计合并报表。PDF 标示 In millions，并列出 FY2024 与 FY2023 sales、net income、cash flow 等摘要数。；页面可确认 2024-10-31 公告日期，但本次未核到精确公开时分与时区。新闻稿日期早于 10-K filing date；本章不把 10-K acceptance 字段冒作新闻稿时刻。图表数据引用审计 10-K，不混用两个版本。
+
+### CH12_SRC_031
+
+[consolidated financial statements PDF](https://www.apple.com/newsroom/pdfs/fy2024-q4/FY24_Q4_Consolidated_Financial_Statements.pdf)
+
+相关章节: 12
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Apple 首次公开结果；2026-10-06 读取公司新闻稿页面的发布日期（日期级）和随附未经审计合并报表。PDF 标示 In millions，并列出 FY2024 与 FY2023 sales、net income、cash flow 等摘要数。；页面可确认 2024-10-31 公告日期，但本次未核到精确公开时分与时区。新闻稿日期早于 10-K filing date；本章不把 10-K acceptance 字段冒作新闻稿时刻。图表数据引用审计 10-K，不混用两个版本。
+
+### CH12_SRC_032
+
+[Spire original FY2023 Form 10-K, accession 0000950170-24-027164](https://www.sec.gov/Archives/edgar/data/1816017/000095017024027164/spir-20231231.htm)
+
+相关章节: 12
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Spire FY2023 原始申报；2026-10-06 读取 audited consolidated statement of cash flows 与 MD&A cash flow discussion。核对 fiscal year ended 2023-12-31、USD thousands、Net loss −63,956、net cash used in operating activities −23,622、purchase of property and equipment −30,037。；仅转录原版 FY2023 的相关行。原始版随后被公司明确要求投资者不再依赖；不能把该版作为修订后的最终事实。
+
+### CH12_SRC_033
+
+[Spire original 10-K accession headers](https://www.sec.gov/Archives/edgar/data/1816017/000095017024027164/0000950170-24-027164-index-headers.html)
+
+相关章节: 12
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Spire 原版 SEC 头信息；2026-10-06 核对 period 20231231、filed 20240306、form 10-K、raw acceptance 20240306162002。；timestamp 保持 raw string；本章不声明其时区或转成 UTC。
+
+### CH12_SRC_034
+
+[Spire 2024 Form 8-K, accession 0000950170-24-101007](https://www.sec.gov/Archives/edgar/data/1816017/000095017024101007/spir-20240821.htm)
+
+相关章节: 12
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Spire 更正通知；2026-10-06 读取 8-K Item 4.02、签署页和头信息。Form 8-K 的 report date 是 2024-08-21，SEC filed date 为 2024-08-27，raw acceptance 为 20240827161154。内容称审计委员会认定受影响财报不应再依赖；公司说明部分 pre-space-mission 活动收入应跨数据交付期确认，并称当时影响年度收入的估计范围等。；“Date of Report”、SEC filed date、网页新闻发布时间与数据源 ingestion 是不同字段。本章只按可核日期列事件，不将 8-K 头的 accepted raw time 当已核实时区的公开时间。公司在评估中的估计不是最后重述表数字。
+
+### CH12_SRC_035
+
+[对应 SEC headers](https://www.sec.gov/Archives/edgar/data/1816017/000095017024101007/0000950170-24-101007-index-headers.html)
+
+相关章节: 12
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Spire 更正通知；2026-10-06 读取 8-K Item 4.02、签署页和头信息。Form 8-K 的 report date 是 2024-08-21，SEC filed date 为 2024-08-27，raw acceptance 为 20240827161154。内容称审计委员会认定受影响财报不应再依赖；公司说明部分 pre-space-mission 活动收入应跨数据交付期确认，并称当时影响年度收入的估计范围等。；“Date of Report”、SEC filed date、网页新闻发布时间与数据源 ingestion 是不同字段。本章只按可核日期列事件，不将 8-K 头的 accepted raw time 当已核实时区的公开时间。公司在评估中的估计不是最后重述表数字。
+
+### CH12_SRC_036
+
+[Spire IR update](https://ir.spire.com/news-events/press-releases/detail/232/spire-global-provides-update-on-new-contracts-and-revenue)
+
+相关章节: 12
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Spire 更正通知；2026-10-06 读取 8-K Item 4.02、签署页和头信息。Form 8-K 的 report date 是 2024-08-21，SEC filed date 为 2024-08-27，raw acceptance 为 20240827161154。内容称审计委员会认定受影响财报不应再依赖；公司说明部分 pre-space-mission 活动收入应跨数据交付期确认，并称当时影响年度收入的估计范围等。；“Date of Report”、SEC filed date、网页新闻发布时间与数据源 ingestion 是不同字段。本章只按可核日期列事件，不将 8-K 头的 accepted raw time 当已核实时区的公开时间。公司在评估中的估计不是最后重述表数字。
+
+### CH12_SRC_037
+
+[Spire amended FY2023 Form 10-K/A, accession 0000950170-25-030856](https://www.sec.gov/Archives/edgar/data/1816017/000095017025030856/spir-20231231.htm)
+
+相关章节: 12
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Spire FY2023 重述申报；2026-10-06 读取 explanatory note、Restatement Background、合并现金流报表和 MD&A。核对文件明确 restates 2023/2022 年度及多个中期期间；FY2023 net loss −77,558、CFO −36,307、购置 PP&E −17,352，单位均为 USD thousands；头信息 filed 20250303、raw acceptance 20250303161307。重述说明涉及 Space-as-a-Service 合同的嵌入租赁与收入/成本确认、R&D 服务收入转移模式、成本列报、客户票据预期信用损失等；影响多个利润表、资产负债表与现金流量项目。；只用 10-K/A 列出的重述版本。修订数据不回填到 2024-03 原始 10-K 信号。公司报告了特定受影响期间与具体错误，不能从这件事推断所有 restatement 的方向。
+
+### CH12_SRC_038
+
+[对应 SEC headers](https://www.sec.gov/Archives/edgar/data/1816017/000095017025030856/0000950170-25-030856-index-headers.html)
+
+相关章节: 12
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Spire FY2023 重述申报；2026-10-06 读取 explanatory note、Restatement Background、合并现金流报表和 MD&A。核对文件明确 restates 2023/2022 年度及多个中期期间；FY2023 net loss −77,558、CFO −36,307、购置 PP&E −17,352，单位均为 USD thousands；头信息 filed 20250303、raw acceptance 20250303161307。重述说明涉及 Space-as-a-Service 合同的嵌入租赁与收入/成本确认、R&D 服务收入转移模式、成本列报、客户票据预期信用损失等；影响多个利润表、资产负债表与现金流量项目。；只用 10-K/A 列出的重述版本。修订数据不回填到 2024-03 原始 10-K 信号。公司报告了特定受影响期间与具体错误，不能从这件事推断所有 restatement 的方向。
+
+### CH12_SRC_039
+
+[Spire FY2023 results IR page](https://ir.spire.com/news-events/press-releases/detail/215/spire-global-announces-strong-fourth-quarter-and-full-year)
+
+相关章节: 12
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Spire 2023 业绩新闻稿；2026-10-06 读取新闻稿的结果说明及其对 non-GAAP 调节的链接。网页内容显示公司宣布截至 2023-12-31 年度业绩；配合源计划留存的 IR 页面日期线索，识别 2024-03-05 为公告日期。；页面本次提取未显示可复核的公开时分/时区。旧计划记录过页面时间 06:45，但时区未经核实；教材不使用该日内时间。新闻稿摘要与原始 audited 10-K 不是同一个版本。
+
+### CH12_SRC_040
+
+[SEC Non-GAAP Financial Measures C&DIs, Question 102.07](https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/non-gaap-financial-measures)
+
+相关章节: 12
+
+历史核读日期: 2026-10-06
+
+历史核读范围: FCF 非标准口径；2026-10-06 读取 Question 102.07 与答复。SEC staff 解释常见 FCF 口径为 GAAP CFO 减资本开支，同时强调定义不标准化、应解释公司计算方式；不能暗示这是所有债务服务及其他非裁量支出之后的可自由支配现金，也不得按每股呈列。；这是 staff guidance，不是 FCF 唯一公式。本章标注 CFO−CapEx 为教学定义，不写成 Apple/Spire 的公司披露指标或统一 GAAP 项目。
+
+### CH12_SRC_041
+
+[IAS 7 public 2026 HTML](https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2026/issued/ias7.html)
+
+相关章节: 12
+
+历史核读日期: 2026-10-06
+
+历史核读范围: IFRS 列报差异；2026-10-06 读取 IAS 7.11 的经营/投资/筹资活动分类及 IAS 7.28 的汇率变动对现金调节列示；读取 IAS 1.81A、106(a) 关于综合收益与利润归属母公司所有者及 NCI 的列示要求。；只作版本年份与段落范围明确的差异提示。没有复制标准文本，不声称读完 IFRS 全文或对所有辖区的适用性作判断。
+
+### CH12_SRC_042
+
+[IAS 1 public 2024 HTML](https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ias1.html)
+
+相关章节: 12
+
+历史核读日期: 2026-10-06
+
+历史核读范围: IFRS 列报差异；2026-10-06 读取 IAS 7.11 的经营/投资/筹资活动分类及 IAS 7.28 的汇率变动对现金调节列示；读取 IAS 1.81A、106(a) 关于综合收益与利润归属母公司所有者及 NCI 的列示要求。；只作版本年份与段落范围明确的差异提示。没有复制标准文本，不声称读完 IFRS 全文或对所有辖区的适用性作判断。
+
+### CH13_SRC_001
+
+[MIT OCW Finance Theory I — Present Value Relations](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/pages/video-lectures-and-slides/present-value-relations/)
+
+相关章节: 13
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 2026-10-06 打开 MIT OCW 官方课程页。核对 Present Value Relations I 对资产为现金流序列、时间/确定性/现值算子的说明；II 对净现值、年金、永续年金和复利约定的说明；III 关于通胀、实际与名义收益率。；作为现值、现金流时序和名义/实际一致性的基础教学来源。没有把页面摘要说成企业 EV 估值、会计或 WACC 的专门论据。未下载录像和课件文件。
+
+### CH13_SRC_002
+
+[MIT OCW Finance Theory I — Equities](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/pages/video-lectures-and-slides/equities/)
+
+相关章节: 13
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 2026-10-06 打开 MIT OCW 官方页面，核对其对股权定价和股息折现的描述，以及课件第 10–23 页涉及 DDM、EPS、P/E 与成长股案例的说明。；支持将股权估值与盈利/股价关系放在课程脉络中学习。具体比率边界仍按章节显式定义；未声称阅读了未下载的全部课件细节。
+
+### CH13_SRC_003
+
+[Aswath Damodaran, Valuation](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/lectures/val.html)
+
+相关章节: 13
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 2026-10-06 打开 NYU Stern 作者公开讲义页面。读取 Equity Valuation 与 Firm Valuation 对股东和全体资本提供者现金流的区别；FCFE、FCFF、WACC、Firm/Equity valuation、两者一致条件及案例输入的相关段落。；支持现金流索取权与贴现率匹配、EV 到 Equity 的概念桥，以及 firm valuation 的 DCF 结构。公式仍按本章逐项定义；讲义内 1995 年公司案例仅作历史教学材料，未当作当前市场数据。
+
+### CH13_SRC_004
+
+[Aswath Damodaran, An Introduction to Valuation](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/background/valintro.htm)
+
+相关章节: 13
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 2026-10-06 打开作者公开讲义。读取 DCF、equity-versus-firm valuation、FCFE/FCFF、非股权索取权 bridge、discount rate、relative valuation 和 comparables 段落。；支持全体资本索取权与普通股索取权区分，以及相对估值需有经济可比性。该讲义不是 GAAP/IFRS 准则，也不保证市场可比公司被正确定价。
+
+### CH13_SRC_005
+
+[Aswath Damodaran, Terminal Value](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/littlebook/terminalvalue.htm)
+
+相关章节: 13
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 2026-10-06 打开作者公开的 Little Book of Valuation 章节。读取清算价值与持续经营终值分类，稳定增长永续模型、现金流/增长/贴现率一致性、稳定增长约束和敏感性提示。；支持稳定增长模型的含义、单位/增长限制和终值对输入的敏感性；本章另外证明 (r>g) 的几何级数收敛条件。此条件本身不能证明业务预测或模型合理。
+
+### CH13_SRC_006
+
+[SEC Non-GAAP Financial Measures C&DIs, Question 102.07](https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/non-gaap-financial-measures)
+
+相关章节: 13
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 2026-10-06 打开 SEC staff guidance。读取 Question 102.07 及答复：CFO 减资本开支是常见 FCF 算法，没有统一定义，使用时要解释，不能暗示已经扣除所有债务服务和非裁量开支。；属美国 SEC staff 的披露解释；不是 GAAP/IFRS 现金流定义，也不证明 CFO−CapEx 等于 FCFF 或 FCFE。本章将其称为常见代理并与 FCFF/FCFE 区分。
+
+### CH13_SRC_007
+
+[Apple FY2024 Form 10-K, accession 0000320193-24-000123](https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm)
+
+相关章节: 13
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 2026-10-06 打开 SEC 原始申报。读取合并经营报表：FY2024 期间截至 2024-09-28、USD millions、operating income 123,216、net income 93,736、diluted EPS USD 6.08、weighted-average diluted shares 15,408,095 thousand；读取资产负债表股本行显示的期末发行在外股数及同页单位说明。；只支持 SEC 原申报所列报的期间、字段名、单位和报表事实。FY2024 diluted EPS 与 net income/share count 是财报测量；本章未据此推算真实 P/E。没有核验过信号日价格、历史市值、所有股类的市场价、ADR 映射或本地行情 ingestion。
+
+### CH14_SRC_01_01
+
+[Sharpe (1964), Capital Asset Prices — Wiley 原文页与 DOI](https://doi.org/10.1111/j.1540-6261.1964.tb02865.x)
+
+相关章节: 14
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 1. William F. Sharpe (1964), “Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk,” The Journal of Finance 19(3), 425–442，[Wiley 原文页与 DOI](https://doi.org/10.1111/j.1540-6261.1964.tb02865.x)。实际读取出版页与正文相关段落：投资者只以均值和标准差评价投资的简化假设；无风险资产与借贷组合；共同无风险利率和同质预期；资产和有效组合的局部组合关系；总风险中可分散的部分和随有效组合共同变化的系统风险；价格调整如何形成预期收益—风险关系。使用范围是经典单期均值—方差 CAPM 的理论动机和假设，不将作者的模型陈述作经验事实，也不把单因子关系解释为交易指令。
+
+### CH14_SRC_02_01
+
+[Markowitz (1952), Portfolio Selection metadata — Wiley 出版元数据](https://doi.org/10.1111/j.1540-6261.1952.tb01525.x)
+
+相关章节: 14
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 2. Harry Markowitz (1952), “Portfolio Selection,” The Journal of Finance 7(1), 77–91，[Wiley 出版元数据](https://doi.org/10.1111/j.1540-6261.1952.tb01525.x)。核对作者、期刊、卷期、页码、日期和 DOI 元数据；本次未逐页读取论文全文。正文关于均值—方差组合的历史归属不声称逐式转述 Markowitz 原文；CAPM 推导以 Sharpe 1964 已读取的论述和本章独立代数为基础。
+
+### CH14_SRC_03_01
+
+[Princeton FIN501, Lecture 02 One-Period Pricing — Lecture 02 PDF](https://swh.princeton.edu/~markus/teaching/Fin501/02Lecture.pdf)
+
+相关章节: 14
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 3. Princeton FIN501 one-period asset pricing slides，[Lecture 02 PDF](https://swh.princeton.edu/~markus/teaching/Fin501/02Lecture.pdf)。实际读取 slide 43–66：无套利与正状态价格表示、一般 payoff 的随机贴现因子定价、无风险收益率与 SDF 均值关系、超额收益与 SDF 协方差关系，以及从一般定价因子回到 beta 定价所需的进一步限制。这个来源支持“无套利给出一般估值约束，均衡 CAPM 还需要关于市场组合与投资者选择的限制”这一层次区分；没有据此展开完整资产定价基本定理的技术条件。
+
+### CH14_SRC_04_01
+
+[MIT 15.401, The CAPM and APT — MIT 官方 PDF](https://live.ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/411d7d9df37d4d0440b18e17e8cea3a9_MIT15_401F08_lec15.pdf)
+
+相关章节: 14
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 4. Andrew W. Lo, MIT OCW 15.401, Lectures 15–17, The CAPM and APT，[MIT 官方 PDF](https://live.ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/411d7d9df37d4d0440b18e17e8cea3a9_MIT15_401F08_lec15.pdf)。实际读取 slide 3–10、15–16、18–27：组合协方差与分散化、切点组合/市场组合关系、SML 和 beta、回归估计、CAPM 与仅要求无套利的 APT 在理论假设上的差别，以及 CAPM 实证问题的课程摘要。本文只将它作为官方课程教学来源，公式按本章符号和单位重写。
+
+### CH14_SRC_05_01
+
+[Roll (1977), asset-pricing testability metadata and abstract — DOI](https://doi.org/10.1016/0304-405X(77)90009-5)
+
+相关章节: 14
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 5. Richard Roll (1977), “A Critique of the Asset Pricing Theory’s Tests Part I: On Past and Potential Testability of the Theory,” Journal of Financial Economics 4(2), 129–176，[DOI](https://doi.org/10.1016/0304-405X(77)90009-5)；[UCLA Anderson 托管原文扫描](https://www.anderson.ucla.edu/documents/areas/fac/finance/1977-2.pdf)。核对出版元数据，并读取 UCLA 原文扫描首页摘要。摘要的核心论点是：线性收益—beta 关系与所用市场组合的均值—方差有效性在数学上相连，因而检验需要对完整市场组合有定义；采用不完整代理时，检验也针对代理组合。正文只把这点用作代理变量和联合检验限制，不以一个显著回归截距概括 Roll，也不把其结论扩大为“所有经验 CAPM 检验均无效”。
+
+### CH14_SRC_05_02
+
+[Roll (1977), asset-pricing testability metadata and abstract — UCLA Anderson 托管原文扫描](https://www.anderson.ucla.edu/documents/areas/fac/finance/1977-2.pdf)
+
+相关章节: 14
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 5. Richard Roll (1977), “A Critique of the Asset Pricing Theory’s Tests Part I: On Past and Potential Testability of the Theory,” Journal of Financial Economics 4(2), 129–176，[DOI](https://doi.org/10.1016/0304-405X(77)90009-5)；[UCLA Anderson 托管原文扫描](https://www.anderson.ucla.edu/documents/areas/fac/finance/1977-2.pdf)。核对出版元数据，并读取 UCLA 原文扫描首页摘要。摘要的核心论点是：线性收益—beta 关系与所用市场组合的均值—方差有效性在数学上相连，因而检验需要对完整市场组合有定义；采用不完整代理时，检验也针对代理组合。正文只把这点用作代理变量和联合检验限制，不以一个显著回归截距概括 Roll，也不把其结论扩大为“所有经验 CAPM 检验均无效”。
+
+### CH14_SRC_06_01
+
+[Fama and French (2004), CAPM theory and evidence abstract — AEA 官方页面和摘要](https://www.aeaweb.org/articles?id=10.1257/0895330042162430)
+
+相关章节: 14
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 6. Eugene F. Fama and Kenneth R. French (2004), “The Capital Asset Pricing Model: Theory and Evidence,” Journal of Economic Perspectives 18(3), 25–46，[AEA 官方页面和摘要](https://www.aeaweb.org/articles?id=10.1257/0895330042162430)。本次读取官方元数据和摘要，不声称通读全文。该摘要支持把市场组合代理问题和模型经验记录列为实证限制；本章不在第14章重做其经验综述。
+
+### CH14_SRC_07_01
+
+[statsmodels OLS and robust covariance documentation — OLS 文档](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html)
+
+相关章节: 14
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 7. statsmodels 0.15.0，[OLS 文档](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html) 与 [稳健协方差结果文档](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLSResults.get_robustcov_results.html)。核对 OLS 输入、截距处理和 HAC 可选参数。月度回归显式加入截距，设置 Bartlett 核、固定 5 个月观测滞后及软件小样本修正。API 说明只支持软件调用细节；它不证明固定带宽适当、时间序列满足弱依赖假设，也不把 p 值变成 CAPM 或收益策略的有效性证书。
+
+### CH14_SRC_07_02
+
+[statsmodels OLS and robust covariance documentation — 稳健协方差结果文档](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLSResults.get_robustcov_results.html)
+
+相关章节: 14
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 7. statsmodels 0.15.0，[OLS 文档](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html) 与 [稳健协方差结果文档](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLSResults.get_robustcov_results.html)。核对 OLS 输入、截距处理和 HAC 可选参数。月度回归显式加入截距，设置 Bartlett 核、固定 5 个月观测滞后及软件小样本修正。API 说明只支持软件调用细节；它不证明固定带宽适当、时间序列满足弱依赖假设，也不把 p 值变成 CAPM 或收益策略的有效性证书。
+
+### CH14_SRC_08_01
+
+[French industry and market factor methods — 10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html)
+
+相关章节: 14
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 8. Kenneth R. French Data Library 的 [10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html) 与 [Fama/French Factors](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_factors.html)。前者是来源页；本章选择发布的月度价值加权 NoDur 行业组合总收益。后者说明 Mkt-RF 是市场收益减一个月国库券代理收益；本章同样月度使用 RF。来源页没有把 NoDur 说成单一证券，也不构成个人投资者可无成本取得相同 RF 的承诺。
+
+### CH14_SRC_08_02
+
+[French industry and market factor methods — Fama/French Factors](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_factors.html)
+
+相关章节: 14
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 8. Kenneth R. French Data Library 的 [10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html) 与 [Fama/French Factors](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_factors.html)。前者是来源页；本章选择发布的月度价值加权 NoDur 行业组合总收益。后者说明 Mkt-RF 是市场收益减一个月国库券代理收益；本章同样月度使用 RF。来源页没有把 NoDur 说成单一证券，也不构成个人投资者可无成本取得相同 RF 的承诺。
+
+### CH15_FF1993_TEXT
+
+[Fama and French (1993), original journal PDF teaching mirror](https://www.bauer.uh.edu/rsusmel/phd/Fama-French_JFE93.pdf)
+
+相关章节: 15
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 读取引言与§2.1.2部分文字；并非通读或原刊逐式视觉核验；1993股票加债券因子与2015股票五因子分开
+
+### CH15_FF2015_TEXT
+
+[Fama and French (2015), original journal PDF teaching mirror](https://tevgeniou.github.io/EquityRiskFactors/bibliography/FiveFactor.pdf)
+
+相关章节: 15
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 读取引言与§7若干文字；HML冗余限制为原文样本；并非通读或逐式视觉核验
+
+### CH15_FF3_METHOD
+
+[French three-factor construction](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_factors.html)
+
+相关章节: 15
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 核对规模/价值分组构造和市场/RF；快照版本独立核验，未逐股复制
+
+### CH15_HAC_API
+
+[statsmodels RegressionResults robust covariance API](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.RegressionResults.get_robustcov_results.html)
+
+相关章节: 15
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 读取HAC maxlags、Bartlett、use_correction和use_t；软件参数不证明统计假设
+
+### CH16_ARIMA
+
+[statsmodels ARIMA](https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima.model.ARIMA.html)
+
+相关章节: 16
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者已读取0.15官方参数说明；具体范围见内部阅读记录（未随包提供）；不证明金融序列满足假设
+
+### CH16_FORECAST
+
+[statsmodels ARIMAResults.get_forecast](https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima.model.ARIMAResults.get_forecast.html)
+
+相关章节: 16
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者已读取0.15官方参数说明；具体范围见内部阅读记录（未随包提供）；不证明金融序列满足假设
+
+### CH16_ACF
+
+[statsmodels acf](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.acf.html)
+
+相关章节: 16
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者已读取0.15官方参数说明；具体范围见内部阅读记录（未随包提供）；不证明金融序列满足假设
+
+### CH16_PACF
+
+[statsmodels pacf](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.pacf.html)
+
+相关章节: 16
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者已读取0.15官方参数说明；具体范围见内部阅读记录（未随包提供）；不证明金融序列满足假设
+
+### CH16_LB_API
+
+[statsmodels acorr_ljungbox](https://www.statsmodels.org/stable/generated/statsmodels.stats.diagnostic.acorr_ljungbox.html)
+
+相关章节: 16
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者已读取0.15官方参数说明；具体范围见内部阅读记录（未随包提供）；不证明金融序列满足假设
+
+### CH16_ARMA_PROCESS
+
+[statsmodels ArmaProcess](https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima_process.ArmaProcess.html)
+
+相关章节: 16
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者已读取0.15官方参数说明；具体范围见内部阅读记录（未随包提供）；不证明金融序列满足假设
+
+### CH16_MIT_TS1
+
+[MIT OCW 18.S096 Lecture 8 Time Series Analysis 1](https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/1926c83ecd7ea700f7cb63914c6d7c0f_MIT18_S096F13_lecnote8.pdf)
+
+相关章节: 16
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者读取第3–5/10/17–20/25页覆盖与定义；抽取有OCR错位，公式独立推导而非照录
+
+### CH16_LB1978
+
+[Ljung and Box 1978 On a measure of lack of fit in time series models](https://doi.org/10.1093/biomet/65.2.297)
+
+相关章节: 16
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 仅核作者、题名、期刊、卷期、页码、DOI元数据；全文访问受阻，公式依据可读官方实现文档，不声称全文已读
+
+### CH17_DF1979
+
+[Dickey and Fuller (1979): Distribution of the Estimators for Autoregressive Time Series with a Unit Root](https://doi.org/10.1080/01621459.1979.10482531)
+
+相关章节: 17
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者读取印刷427–431页提取文字，单位根非标准分布及确定项范围；根核对内部阅读记录（未随包提供）记录，不称根复读全文
+
+### CH17_EG1987
+
+[Engle and Granger (1987): Co-Integration and Error Correction: Representation, Estimation, and Testing](https://www.econometricsociety.org/publications/econometrica/1987/03/01/co-integration-and-error-correction-representation-estimation)
+
+相关章节: 17
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者视觉读取扫描件251–255及260–269页；根核对章节使用范围，不称全文或OCR已核
+
+### CH17_GRANGER1969
+
+[Granger (1969): Investigating Causal Relations by Econometric Models and Cross-Spectral Methods](https://doi.org/10.2307/1912791)
+
+相关章节: 17
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者读取§4–5印刷428–432页，预测信息集与方向限制；非结构干预因果
+
+### CH17_MACKINNON2010
+
+[MacKinnon (2010): Critical Values for Cointegration Tests](https://www.econ.queensu.ca/sites/econ.queensu.ca/files/qed_wp_1227.pdf)
+
+相关章节: 17
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者读取印刷1–15页及2010 appendix，确定项/变量数/样本专用分布；软件实现单独核对
+
+### CH17_BH1995
+
+[Benjamini and Hochberg (1995): Controlling the False Discovery Rate](https://doi.org/10.1111/j.2517-6161.1995.tb02031.x)
+
+相关章节: 17
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者仅核出版商元数据与摘要，独立统计量下FDR；全文未读，不承担证明细节
+
+### CH17_BY2001
+
+[Benjamini and Yekutieli (2001): The Control of the False Discovery Rate in Multiple Testing under Dependency](https://doi.org/10.1214/aos/1013699998)
+
+相关章节: 17
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者仅核Project Euclid页面/摘要与PRDS适用条件；全文反机器人阻断，不声称该配对家族满足PRDS
+
+### CH17_SAID1984
+
+[Said and Dickey (1984): Testing for unit roots in autoregressive-moving average models of unknown order](https://doi.org/10.1093/biomet/71.3.599)
+
+相关章节: 17
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者仅核元数据与摘要；全文未获取，进阶阅读，不承担章内推导
+
+### CH17_ADF
+
+[statsmodels adfuller](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.adfuller.html)
+
+相关章节: 17
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者读取0.15参数/原假设/方向/返回值；核心及边界测试独立运行，文档不证明金融假设
+
+### CH17_COINT
+
+[statsmodels coint](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.coint.html)
+
+相关章节: 17
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者读取0.15参数/原假设/方向/返回值；核心及边界测试独立运行，文档不证明金融假设
+
+### CH17_GRANGER_API
+
+[statsmodels grangercausalitytests](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.grangercausalitytests.html)
+
+相关章节: 17
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者读取0.15参数/原假设/方向/返回值；核心及边界测试独立运行，文档不证明金融假设
+
+### CH17_VAR
+
+[statsmodels Vector Autoregressions](https://www.statsmodels.org/stable/vector_ar.html)
+
+相关章节: 17
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者读取VAR估计与forecast接口，平稳模型适用性需单独判断
+
+### CH18_BOLLERSLEV1986
+
+[Bollerslev (1986), Generalized autoregressive conditional heteroskedasticity](https://public.econ.duke.edu/~boller/Published_Papers/joe_86.pdf)
+
+相关章节: 18
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者实际视觉/文字读取PDF物理3–6页、原刊309–312，§2–3有限二阶/高斯四阶矩；未通读。 读取由作者执行，根核对内部阅读记录（未随包提供）范围。
+
+### CH18_ANDERSEN2003
+
+[Andersen, Bollerslev, Diebold and Labys (2003), Modeling and forecasting realized volatility](https://econ.duke.edu/~boller/Published_Papers/ecta_03.pdf)
+
+相关章节: 18
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者读取引言及§2开头、物理1–8页；支持过程/采样假设下RV/QV极限，不支持有限网格等于条件方差。 读取由作者执行，根核对内部阅读记录（未随包提供）范围。
+
+### CH18_HANSEN_LUNDE2006
+
+[Hansen and Lunde (2006), Realized variance and market microstructure noise](https://doi.org/10.1198/073500106000000071)
+
+相关章节: 18
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者读取原刊引言、理论框架、实证及结论；频率结论限于论文DJIA样本/噪声模型，不给普遍最佳频率。 读取由作者执行，根核对内部阅读记录（未随包提供）范围。
+
+### CH18_PATTON2011
+
+[Patton (2011), Volatility forecast comparison using imperfect volatility proxies](https://public.econ.duke.edu/~ap172/Patton_vol_proxies_JoE_2011.pdf)
+
+相关章节: 18
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者读取§2命题及结论；QLIKE代理稳健排序需条件无偏/正则条件，本章NoDur未证明。 读取由作者执行，根核对内部阅读记录（未随包提供）范围。
+
+### CH18_ENGLE1982
+
+[Engle (1982), Autoregressive conditional heteroscedasticity with estimates of the variance of United Kingdom inflation](https://pages.stern.nyu.edu/~rengle/main.htm)
+
+相关章节: 18
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 仅作者官方书目核对，全文受阻；不声称全文/定理证明已读。 读取由作者执行，根核对内部阅读记录（未随包提供）范围。
+
+### CH18_BOUGEROL_PICARD1992
+
+[Bougerol and Picard (1992), Stationarity of GARCH processes and of some nonnegative time series](https://doi.org/10.1016/0304-4076(92)90067-2)
+
+相关章节: 18
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 仅出版商摘要，全文未取得；章内标量随机递推条件不作已核页内定理引文。 读取由作者执行，根核对内部阅读记录（未随包提供）范围。
+
+### CH18_SCIPY_SLSQP
+
+[SciPy SLSQP constrained minimization documentation](https://docs.scipy.org/doc/scipy/reference/optimize.minimize-slsqp.html)
+
+相关章节: 18
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者读取官方停止条件/约束API；求解成功不等于全局最优。 读取由作者执行，根核对内部阅读记录（未随包提供）范围。
+
+### CH18_ARCH_FORECAST
+
+[arch forecasting documentation](https://arch.readthedocs.io/en/stable/univariate/forecasting.html)
+
+相关章节: 18
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者读取定义/一多步方差对齐；未安装或调用arch估计器。 读取由作者执行，根核对内部阅读记录（未随包提供）范围。
+
+### CH18_ARCH_EWMA
+
+[arch EWMAVariance documentation](https://arch.readthedocs.io/en/stable/univariate/generated/arch.univariate.EWMAVariance.html)
+
+相关章节: 18
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者读取EWMA定义和对齐；未安装或调用arch估计器。 读取由作者执行，根核对内部阅读记录（未随包提供）范围。
+
+### CH19_KALMAN1960
+
+[Kalman (1960), A New Approach to Linear Filtering and Prediction Problems](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/k/Kalman1960.pdf)
+
+相关章节: 19
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者提取12页转录镜像，重点核读摘要/引言、Problem I式16–17、Theorem3及式21–32、附录；前11页对应原刊35–45，末页OCR限制。未逐式原刊视觉校勘；本章加性观测误差和Joseph形式由条件正态独立推导，不归原论文。 范围由作者内部阅读记录（未随包提供）登记，根复核引用范围。
+
+### CH19_STATSMODELS
+
+[statsmodels Time Series Analysis by State Space Methods](https://www.statsmodels.org/stable/statespace.html)
+
+相关章节: 19
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者读取0.15.0概览/名称维度/AR2/低层Filter与Smoother对象；Jina不完整保留MathJax，未逐项核全部API。本章h/F/R映官方Z/T/H，状态噪声映官方RQR转置。 范围由作者内部阅读记录（未随包提供）登记，根复核引用范围。
+
+### CH20_MARKOWITZ1952
+
+[Markowitz (1952), Portfolio Selection](https://traders.berkeley.edu/papers/Markowitz.pdf)
+
+相关章节: 20
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者核读印刷77–80动机，根委派独立审阅核读E–V和加权方差；n资产闭式推导由教材给出，不归原文。
+
+### CH20_MOSEK_COOKBOOK
+
+[MOSEK Portfolio Optimization Cookbook — Markowitz portfolio optimization](https://docs.mosek.com/portfolio-cookbook/markowitz.html)
+
+相关章节: 20,21
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者及独立审阅读取§2.1–2.3，未运行§2.4。
+
+### SHARPE1994
+
+[Sharpe (1994), The Sharpe Ratio](https://web.stanford.edu/~wfsharpe/art/sr/sr.htm)
+
+相关章节: 20,21
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者、独立审阅及根代理读取定义、差额收益和Time Dependence；平方根年化是附条件报告约定。
+
+### CH21_LEDOITWOLF2004
+
+[Ledoit and Wolf (2004), A well-conditioned estimator for large-dimensional covariance matrices](http://www.ledoit.net/ole1a.pdf)
+
+相关章节: 21
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者读取2001工作稿§2.1、§3和§4.1；未逐行附录、未读期刊终稿；根核对内部阅读记录（未随包提供）并修正有限样本中心化有偏和条件正定。 本轮独立审阅另行实际读取上述原始工作稿/扫描关键范围；见内部阅读记录（未随包提供）。
+
+### CH21_MRT2009
+
+[Maillard, Roncalli and Teiletche, On the properties of equally-weighted risk contributions portfolios](http://www.thierry-roncalli.com/download/erc.pdf)
+
+相关章节: 21
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者读取2009工作稿§1–3.4；2010期刊版未逐字核读；Newton实现由教材推导。 本轮独立审阅另行实际读取上述原始工作稿/扫描关键范围；见内部阅读记录（未随包提供）。
+
+### CH21_HELITTERMAN1999
+
+[He and Litterman (1999), The Intuition Behind Black-Litterman Model Portfolios](https://people.duke.edu/~charvey/Teaching/BA453_2006/GS_The_intuition_behind.pdf)
+
+相关章节: 21
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者读取Appendix B及误差假定、观点校准；根打开原稿核对超额收益约定，数学独立核对增益更新需可逆条件；不是Black–Litterman1992全文阅读。 本轮独立审阅另行实际读取上述原始工作稿/扫描关键范围；见内部阅读记录（未随包提供）。
+
+### CH21_KELLY1956
+
+[Kelly (1956), A New Interpretation of Information Rate](https://archive.org/details/bstj35-4-917)
+
+相关章节: 21
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者目读扫描印刷919–920；一般赔率及二次代理由本章推导，根修正均值平方遗漏和高斯简单收益破产边界。 本轮独立审阅另行实际读取上述原始工作稿/扫描关键范围；见内部阅读记录（未随包提供）。
+
+### CH21_DGU2009
+
+[DeMiguel, Garlappi and Uppal (2009), Optimal versus naive diversification: How inefficient is the 1/N portfolio strategy?](https://users.nber.org/~confer/2006/si2006/ap/uppal.pdf)
+
+相关章节: 21
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 读取2006年6月会议工作稿；根核读§3印刷10–12式10–13：滚动样本外与漂移换手；未读2009期刊终稿，Project3数值不是论文复现。
+
+### LESNIEWSKI2019
+
+[Lesniewski, Optimization Techniques in Finance — Convex optimization II](https://mfe.baruch.cuny.edu/wp-content/uploads/2014/12/Opt_Lecture5_2019.pdf)
+
+相关章节: 21
+
+历史核读日期: 2026-10-06
+
+历史核读范围: 作者经Tavily Extract读取Maximizing the Sharpe ratio节选；没有逐页全文阅读。
+
+### CH22_HLZ2014
+
+[Harvey, Liu and Zhu, ... and the Cross-Section of Expected Returns, NBER Working Paper 20592 (2014)](https://www.nber.org/system/files/working_papers/w20592/w20592.pdf)
+
+相关章节: 22
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Author log records selected abstract, introduction, FWER/FDR, Bonferroni/Holm material and conclusion passage. RFS 2016 final version, later revisions/comments, §5 onward, tables and appendix were not read. This draft transcribes the log only.
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH22_GELMANLOKEN2013
+
+[Gelman and Loken, The garden of forking paths, unpublished draft (2013)](http://www.stat.columbia.edu/~gelman/research/unpublished/forking.pdf)
+
+相关章节: 22
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Author log records abstract, §1.1, opening of §1.2, and two paragraphs in §4.3. The American Scientist abridged version and remaining case-analysis sections were not read.
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH23_JT1993
+
+[Jegadeesh and Titman, Returns to Buying Winners and Selling Losers (1993), course-hosted JSTOR copy](https://www.bauer.uh.edu/rsusmel/phd/jegadeesh-titman93.pdf)
+
+相关章节: 22,23,25
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Local chapter logs record only selected material: Ch22 printed pp.68-69 on Bonferroni; Ch23 formation/holding construction and cited passages; Ch25 §I and opening §II on J/K strategies and overlapping holdings. Remaining sections, tables and appendices were not read. Course-hosted copy; book results are not a replication of the paper's US stock sample.
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH23_PETERSEN2005
+
+[Petersen, Estimating Standard Errors in Finance Panel Data Sets, NBER Working Paper 11280 (2005/2006)](https://www.nber.org/system/files/working_papers/w11280/w11280.pdf)
+
+相关章节: 23
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Author log records abstract/introduction and opening of Section II, printed pp.11-12, equations (8)-(9). RFS 2009 final, simulation tables, cluster derivation and application were not read. Formula text extraction was imperfect; chapter also uses its own derivation.
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH24_FF_FACTORS_PAGE
+
+[Description of Fama/French Factors](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_factors.html)
+
+相关章节: 24
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Author log records the Construction and Stocks passages. Detailed portfolio breakpoint page was not obtained. Frozen aggregate returns are revised history, not individual-stock PIT vintages.
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH24_AMP2013
+
+[Asness, Moskowitz and Pedersen, Value and Momentum Everywhere (2013), author-hosted copy](https://pages.stern.nyu.edu/~lpederse/papers/ValMomEverywhere.pdf)
+
+相关章节: 24,25
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Chapter logs record selected value and momentum measurement passages and a futures-return construction section. Regressions, tables and remaining sections were not read. Use global AQR_VM key where appropriate; this local copy records the specific text actually read.
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH24_SEC_FSDS
+
+[SEC Financial Statement Data Sets page](https://www.sec.gov/dera/data/financial-statement-data-sets.html)
+
+相关章节: 24
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Author log records the page scope and dataset coverage. The chapter did not download SEC data or read complete EDGAR filings or taxonomy. Page copy was not preserved locally; current-page content is not independently confirmed by this draft.
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH24_SEC_FSDS_README
+
+[SEC Financial Statement Data Sets readme](https://www.sec.gov/files/aqfs.pdf)
+
+相关章节: 24
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Author log records the sub-table fields period, fye, fp, filed, accepted and prevrpt, plus as-filed and data-quality caveats. No underlying filing or taxonomy review is claimed.
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH24_SEC_EDGAR_ACCESS
+
+[SEC Accessing EDGAR Data](https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data)
+
+相关章节: 24
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Author log records fair-access guidance and the then-current request-rate/User-Agent instructions. The page copy was not preserved locally; this draft does not refresh current terms.
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH24_SEC_PRIVACY
+
+[SEC Privacy and Website Policies](https://www.sec.gov/about/privacy-information)
+
+相关章节: 24
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Author log records the public-information/copying statement. The page copy was not preserved locally; this draft does not refresh current policy text.
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH25_MOP2012
+
+[Moskowitz, Ooi and Pedersen, Time Series Momentum (2012)](https://pages.stern.nyu.edu/~lpederse/papers/TimeSeriesMomentum.pdf)
+
+相关章节: 25
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Author log records abstract, ex ante volatility estimate and selected Section 4 material including equation (5). Remaining robustness tables and trader-behavior analysis were not read. Course volatility estimate is a teaching substitute, not the paper estimator.
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH25_DM2014
+
+[Daniel and Moskowitz, Momentum Crashes, NBER Working Paper 20439 (2014)](https://www.nber.org/system/files/working_papers/w20439/w20439.pdf)
+
+相关章节: 25
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Author log records abstract, selected printed p.8 passage and Table 3 note. JFE 2016 final version, theory, dynamic strategy, international and other-asset results were not read. Course industry results are not a replication of the paper's winner-minus-loser stock portfolio.
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH25_FRENCH_MOM_PAGE
+
+[Detail for Monthly Momentum Factor (Mom)](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_mom_factor.html)
+
+相关章节: 25
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Author log records Construction and Stocks passages. The chapter did not download the Mom factor data.
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH26_NOVYMARX2012
+
+[Novy-Marx, The Other Side of Value: The Gross Profitability Premium, author manuscript (June 2012)](https://mysimon.rochester.edu/novy-marx/research/OSoV.pdf)
+
+相关章节: 26
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Author log records abstract, introduction, data description, footnote 2, DuPont discussion and selected accrual discussion. JFE 2013 version, regression tables and appendix were not read; constructed panel results are not paper evidence.
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH27_KMPV2013
+
+[Koijen, Moskowitz, Pedersen and Vrugt, Carry, NBER Working Paper 19325 (2013)](http://www.nber.org/papers/w19325)
+
+相关章节: 27
+
+历史核读日期: 2026-10-06
+
+历史核读范围: Author log records selected equations/passages for futures, FX, commodity, bond carry and portfolio carry. Journal version, empirical sections, tables and appendices were not read; no paper empirical result is used.
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### AT2002-v5
+
+[Acerbi and Tasche, On the Coherence of Expected Shortfall, arXiv version 5 (2002)](https://arxiv.org/pdf/cond-mat/0104295v5)
+
+相关章节: 33
+
+历史核读日期: 2026-10-07
+
+历史核读范围: Chapter author log records printed pp.5-9: Definition 2.6, Proposition 3.2/Eq.3.3, Proposition 4.1 and adjacent discussion. Only listed pages were read; no claim of full-paper or journal-version review. Formulas in chapter use loss-positive sign convention.；Codex根代理已重读内部阅读记录（未随包提供）列出的局部范围，非全文。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### KUPIEC1995-FEDS95-24
+
+[Kupiec, Techniques for Verifying the Accuracy of Risk Measurement Models, FEDS 95-24](https://fraser.stlouisfed.org/files/docs/publications/bog_feds/feds_1995-024.pdf)
+
+相关章节: 33
+
+历史核读日期: 2026-10-07
+
+历史核读范围: Chapter author log records printed pp.6-8, 18-19 and 23-24. Preliminary FEDS paper, not a journal article; cover and interior title-page dates differ. Only listed pages were read; asymptotic non-rejection is not proof of accuracy.；Codex根代理已重读内部阅读记录（未随包提供）列出的局部范围，非全文。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### SCIPY-T
+
+[SciPy 1.18.0 scipy.stats.t documentation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html)
+
+相关章节: 33
+
+历史核读日期: 2026-10-07
+
+历史核读范围: Chapter author log records the distribution API, df, standardized density, loc/scale and selected method descriptions. Supports API semantics only, not the chapter ES derivation; SciPy scale is not the Student-t standard deviation.；Codex根代理已重读内部阅读记录（未随包提供）列出的局部范围，非全文。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### MSTR_SEC_LIMIT_ORDERS
+
+[U.S. SEC Investor.gov: Limit Orders](https://www.sec.gov/answers/limit.htm)
+
+相关章节: 34
+
+历史核读日期: 2026-10-09
+
+历史核读范围: 已核读买入/卖出限价边界及不保证成交说明；页面未显示可依赖的发布日期；访问日期2026-10-09；用于基本订单性质，不替代场所规则或经纪协议。
+
+### MSTR_NYSE_EQUITIES
+
+[NYSE: Equities](https://www.nyse.com/trade/equities)
+
+相关章节: 34
+
+历史核读日期: 2026-10-09
+
+历史核读范围: 已核读NYSE集团多个股票场所/市场模型概述；访问日期2026-10-09；仅用于说明不同场所的市场模型不同，不外推为全部优先规则。
+
+### MSTR_NASDAQ_EQ4_4757
+
+[Nasdaq Equity 4 Rulebook, Rule 4757](https://listingcenter.nasdaq.com/rulebook/nasdaq/rules/Nasdaq%20Equity%204)
+
+相关章节: 34
+
+历史核读日期: 2026-10-09
+
+历史核读范围: 已核读Rule 4757页面对指定订单类别价格、显示状态与时间优先的规则说明；访问日期2026-10-09；适用市场、证券、版本和生效时间需按交易重新确认。
+
+### MSTR_NASDAQ_ITCH_50
+
+[Nasdaq TotalView-ITCH 5.0 Technical Specification](https://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NQTVITCHSpecification.pdf)
+
+相关章节: 34
+
+历史核读日期: 2026-10-09
+
+历史核读范围: 已定向提取目录/修订说明中的订单新增、执行、取消、删除消息类型；未获取或解析真实feed记录，未核验完整字段语义；访问日期2026-10-09。
+
+### MSTR_GLOSTEN_MILGROM_1985
+
+[Glosten and Milgrom (1985), Bid, ask and transaction prices in a specialist market with heterogeneously informed traders](https://www.sciencedirect.com/science/article/pii/0304405X85900443)
+
+相关章节: 34
+
+历史核读日期: 2026-10-09
+
+历史核读范围: 已读取出版社元数据和摘要，核对题名、作者、期刊卷期页码与DOI；未获取或核读全文；正文只采用摘要层级的异质信息机制描述。
+
+### MSTR_SEC_EXECUTING_ORDER
+
+[U.S. SEC Investor.gov: Executing an Order](https://www.investor.gov/introduction-investing/investing-basics/how-stock-markets-work/executing-order)
+
+相关章节: 34
+
+历史核读日期: 2026-10-09
+
+历史核读范围: 已定向提取经纪商可能将订单路由到交易所、其他场所、做市商或ECN的说明；访问日期2026-10-09；不代表某笔订单的实际路由或最佳执行评价。
+
+### ALMGREN_CHRISS_2000
+
+[Optimal execution of portfolio transactions](https://www.risk.net/journal-risk/2161150/optimal-execution-portfolio-transactions)
+
+相关章节: 35–36
+
+历史核读日期: 2026-10-09
+
+历史核读范围: 2026-10-09：Tavily Extract读取出版社书目、DOI和摘要；可访问论文副本用于核对线性冲击/风险模型章节。引用限于模型假设和教学推导，不把模型参数当作市场校准。
+
+### BUSSETI_BOYD_VWAP
+
+[Volume Weighted Average Price Optimal Execution](https://web.stanford.edu/~boyd/papers/vwap_opt_exec.html)
+
+相关章节: 36
+
+历史核读日期: 2026-10-09
+
+历史核读范围: 2026-10-09：Tavily Extract读取作者页和论文；区分开盘前静态调度与利用盘中信息的动态方法，原文讨论总市场量不确定。原文交易成本/NYSE实证不转作本批构造结果。
+
+### SEC_IS_2003
+
+[Request for Comments on Measures To Improve Disclosure of Mutual Fund Transaction Costs](https://www.sec.gov/rules-regulations/2003/12/request-comments-measures-improve-disclosure-mutual-fund-transaction-costs)
+
+相关章节: 35–36
+
+历史核读日期: 2026-10-09
+
+历史核读范围: 2026-10-09：Tavily Extract读取官方文件；用于说明实施差额与纸面组合、未成交机会成本及计算口径并无唯一公认标准。该征求意见文件不是当前法律意见或强制计算标准。
+
+### CESARI_MARZO_ZAGAGLIA_2012
+
+[Effective Trade Execution](https://arxiv.org/abs/1206.5324)
+
+相关章节: 35–36
+
+历史核读日期: 2026-10-09
+
+历史核读范围: 2026-10-09：Tavily Search/Extract读取arXiv全文与元数据；用于术语/背景交叉检查。该工作论文不单独证明行业算法的统一实现。
+
+### HUBERMAN_STANZL_2004
+
+[Price Manipulation and Quasi-Arbitrage](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2004.00531.x)
+
+相关章节: 35–36
+
+历史核读日期: 2026-10-09
+
+历史核读范围: 2026-10-09: Tavily Search plus Wiley publisher page and Columbia author-hosted PDF. Checked title/metadata, abstract, introduction, time-independent price-update discussion, and conclusion; not a full-page review. Used only for the theorem scope and its distinction between permanent update and temporary impact.
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### PEROLD_1988
+
+[The Implementation Shortfall: Paper vs. Reality](https://jpm.pm-research.com/content/14/3/4)
+
+相关章节: 35–36
+
+历史核读日期: 2026-10-09
+
+历史核读范围: 2026-10-09：HBS作者页与JPM出版社记录核对题名、作者、Journal of Portfolio Management 14(3), 4–9及1988年春季出版信息；仅核验书目元数据，未核读全文。正文不把Perold称作概念首创者，SEC 2003材料将早期来源追溯至Treynor 1981。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH37_GKX2020
+
+[Empirical Asset Pricing via Machine Learning (Gu, Kelly, Xiu 2020, RFS 33(5) 2223-2273)](http://dachxiu.chicagobooth.edu/download/ML.pdf)
+
+相关章节: 37,39
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 作者核读：§1.8 式(19) 第2249页（R2_OS 以零为基准及理由）、表1 第2250页（OLS -3.46%、OLS-3 0.16%、ENet+H 0.11%）、§2.2（NN3 0.40%）、引言（多空夏普1.35/2.45）。月度美国个股、成本前；与本书构造不可比。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH37_CT2008
+
+[Predicting Excess Stock Returns Out of Sample: Can Anything Beat the Historical Average? (Campbell, Thompson 2008, RFS 21(4) 1509-1531)](https://www.nber.org/system/files/working_papers/w11468/w11468.pdf)
+
+相关章节: 37
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 作者核读工作论文版式(1) 第5页：R2_OS 以截至 t-1 的历史均值为基准；期刊版页码未核。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH37_AHM2019
+
+[A Backtesting Protocol in the Era of Machine Learning (Arnott, Harvey, Markowitz 2019, JFDS 1(1) 64-74)](https://people.duke.edu/~charvey/Research/Published_Papers/G138_A_backtesting_protocol.pdf)
+
+相关章节: 37
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 AMC 来源侦察报告读全文（引言、交易成本一节）；作者未重读；仅作延伸阅读，正文不引其具体结论。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH38_CT2010
+
+[On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation (Cawley, Talbot 2010, JMLR 11 2079-2107)](https://www.jmlr.org/papers/volume11/cawley10a/cawley10a.pdf)
+
+相关章节: 38
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 AMC 来源侦察报告读摘要、§5、§9；作者未重读；支持“调参与评价分开”。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH38_PRADO2018
+
+[Advances in Financial Machine Learning (López de Prado 2018, Wiley), Chapter 7](https://www.wiley.com/en-us/Advances+in+Financial+Machine+Learning-p-9781119482086)
+
+相关章节: 38
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 侦察报告仅读出版商目录（第7章 7.1–7.5）；正文未读，只作延伸阅读。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### SK_PIPE_DOC
+
+[scikit-learn: Pipelines and composite estimators (1.9.1)](https://scikit-learn.org/stable/modules/compose.html)
+
+相关章节: 38
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 侦察报告读 §6.1.1 与 Pipeline docstring；行为另由 tests/test_ml_pipeline.py 训练内标准化测试验证。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### SK_GRID_DOC
+
+[scikit-learn: Tuning the hyper-parameters of an estimator (1.9.1)](https://scikit-learn.org/stable/modules/grid_search.html)
+
+相关章节: 38
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 侦察报告读 §3.2；本书管线未使用 GridSearchCV。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### SK_CALIBRATION
+
+[scikit-learn: Probability calibration (1.9.1)](https://scikit-learn.org/stable/modules/calibration.html)
+
+相关章节: 38
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 侦察报告读 §1.16–1.16.2；只支持分类可靠性图，回归校准斜率为本书定义。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### ESL_2ND_ED
+
+[The Elements of Statistical Learning, 2nd ed. (Hastie, Tibshirani, Friedman 2009), §3.4](https://hastie.su.domains/ElemStatLearn/)
+
+相关章节: 39
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 侦察报告读 §3.4 式(3.41)(3.44)(3.47)、表3.4、图3.11；作者打开下载页需浏览器交互未重读；第39章推导自洽并由代码核对。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH39_FHT2010
+
+[Regularization Paths for Generalized Linear Models via Coordinate Descent (Friedman, Hastie, Tibshirani 2010, JSS 33(1) 1-22)](https://www.jstatsoft.org/index.php/jss/article/view/v033i01/v33i01.pdf)
+
+相关章节: 39
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 侦察报告读摘要、§1–2；作者未重读；支持正则化路径与热启动定义。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH40_BREIMAN2001
+
+[Random Forests (Breiman 2001, Machine Learning 45, 5-32)](https://doi.org/10.1023/A:1010933404324)
+
+相关章节: 40
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 AMC 侦察报告（R）读定理1.2、2.3、11.2；作者未重读；仅支持延伸阅读与强度—相关表述。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH40_FRIEDMAN2001
+
+[Greedy Function Approximation: A Gradient Boosting Machine (Friedman 2001, Annals of Statistics 29(5), 1189-1232)](https://doi.org/10.1214/aos/1013203451)
+
+相关章节: 40
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 侦察报告（R）读 §3 算法1、§5 收缩；作者未重读，正文推导独立写出。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH40_STROBL2007
+
+[Bias in random forest variable importance measures (Strobl et al. 2007, BMC Bioinformatics 8:25)](https://doi.org/10.1186/1471-2105-8-25)
+
+相关章节: 40
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 侦察报告（R）；作者未读全文。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH40_STROBL2008
+
+[Conditional variable importance for random forests (Strobl et al. 2008, BMC Bioinformatics 9:307)](https://doi.org/10.1186/1471-2105-9-307)
+
+相关章节: 40
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 侦察报告（R）；作者未读全文；正文只引用'为相关特征外推问题提出条件重要性'。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH40_LL2017
+
+[A Unified Approach to Interpreting Model Predictions (Lundberg & Lee 2017, NeurIPS)](https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html)
+
+相关章节: 40
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 侦察报告（R）；Shapley 性质；正文推导独立写出。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH40_LUNDBERG2020
+
+[From local explanations to global understanding with explainable AI for trees (Lundberg et al. 2020, Nature Machine Intelligence 2, 56-67)](https://doi.org/10.1038/s42256-019-0138-9)
+
+相关章节: 40
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 侦察报告（R）；本环境未安装 shap，未运行 TreeSHAP。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH40_AJL2021
+
+[Explaining individual predictions when features are dependent (Aas, Jullum, Løland 2021, Artificial Intelligence 298, 103502)](https://doi.org/10.1016/j.artint.2021.103502)
+
+相关章节: 40
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 侦察报告（R）；条件式与干预式 Shapley 的取舍。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### SK_TREE_SRC
+
+[scikit-learn 1.9.1 source: tree/_classes.py, ensemble/_forest.py, ensemble/_hist_gradient_boosting (gradient_boosting.py, splitting.pyx, grower.py)](https://github.com/scikit-learn/scikit-learn/tree/1.9.1/sklearn)
+
+相关章节: 40
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 作者在 .venv 中读源：HGB early_stopping='auto' 与 train_test_split（gradient_boosting.py 533-581）、compute_node_value、shrinkage、MDI 警告、RF max_features 默认 1.0。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### SK_PERMIMP_DOC
+
+[scikit-learn: Permutation feature importance (1.9.1)](https://scikit-learn.org/stable/modules/permutation_importance.html)
+
+相关章节: 40
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 侦察报告（R）读 §5.2；作者核对本机 MDI 文档串警告。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH41_JC2016
+
+[Principal component analysis: a review and recent developments (Jolliffe & Cadima 2016, Phil. Trans. R. Soc. A 374, 20150202)](https://doi.org/10.1098/rsta.2015.0202)
+
+相关章节: 41
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 侦察报告（R）读 §2(c)；作者未重读。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH41_LCBP1999
+
+[Noise dressing of financial correlation matrices (Laloux, Cizeau, Bouchaud, Potters 1999, PRL 83, 1467-1470)](https://arxiv.org/abs/cond-mat/9810255)
+
+相关章节: 41
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 作者核读 arXiv v1：式(3) 上下界、Q=T/N≥1、S&P500 N=406 T=1309；最大特征值 25 倍（正文）/30 倍（图注）不一致已记录。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH41_HAMILTON1989
+
+[A New Approach to the Economic Analysis of Nonstationary Time Series and the Business Cycle (Hamilton 1989, Econometrica 57(2), 357-384)](https://doi.org/10.2307/1912559)
+
+相关章节: 41
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 侦察报告（R）读 §3–4；作者未读全文，滤波递推独立推出并由测试验证。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH41_AT2012
+
+[Regime Changes and Financial Markets (Ang & Timmermann 2012, Annual Review of Financial Economics 4, 313-337)](https://doi.org/10.1146/annurev-financial-110310-134302)
+
+相关章节: 41
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 侦察报告（R）；仅延伸阅读。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH41_CK1986
+
+[Performance measurement with the arbitrage pricing theory: A new framework for analysis (Connor & Korajczyk 1986, JFE 15(3), 373-394)](https://doi.org/10.1016/0304-405X(86)90027-9)
+
+相关章节: 41
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 侦察报告（摘要级）；仅延伸阅读。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH41_VL2010
+
+[Clustering stability: an overview (von Luxburg 2010, Foundations and Trends in Machine Learning 2(3), 235-274)](https://arxiv.org/abs/1007.1075)
+
+相关章节: 41
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 侦察报告（R）；作者未读全文。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### SK_KMEANS_DOC
+
+[scikit-learn 1.9.1: KMeans and adjusted_rand_score](https://scikit-learn.org/stable/modules/clustering.html)
+
+相关章节: 41
+
+历史核读日期: 2026-10-10
+
+历史核读范围: 2026-10-10 作者核对本机文档串；侦察报告（R）。
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH42_DLBOOK
+
+[Goodfellow, Bengio & Courville: Deep Learning (2016)](https://www.deeplearningbook.org/)
+
+相关章节: 42
+
+历史核读日期: 2026-10-11
+
+历史核读范围: 根限定核读第6/8/9/10章所列小节，见来源台账；未读全书
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH42_GERS2000
+
+[Gers, Schmidhuber & Cummins: Learning to Forget: Continual Prediction with LSTM (2000)](https://sferics.idsia.ch/pub/juergen/FgGates-NC.pdf)
+
+相关章节: 42
+
+历史核读日期: 2026-10-11
+
+历史核读范围: 标题作者摘要视觉核读；Type3抽取乱码，未登记方程全文核读
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH42_PYTORCH_LSTM
+
+[PyTorch 2.14: torch.nn.LSTM](https://docs.pytorch.org/docs/2.14/generated/torch.nn.LSTM.html)
+
+相关章节: 42
+
+历史核读日期: 2026-10-11
+
+历史核读范围: 现代六个门/状态公式；未安装或运行PyTorch
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH42_VASWANI2017
+
+[Vaswani et al.: Attention Is All You Need (2017, arXiv v7)](https://arxiv.org/pdf/1706.03762)
+
+相关章节: 42
+
+历史核读日期: 2026-10-11
+
+历史核读范围: 根核读Eq1、decoder mask、位置编码；不代表整体研究无泄漏
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### BDA3
+
+[Gelman et al.: Bayesian Data Analysis, 3rd edition (2013; corrected PDF 2025-02-20)](https://users.aalto.fi/~ave/BDA3.pdf)
+
+相关章节: 43
+
+历史核读日期: 2026-10-11
+
+历史核读范围: 根限定核读印刷34–35、39–42、115–116页；已知超参数案例
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### STAN_UG
+
+[Stan User’s Guide 2.40: hierarchical regression and posterior prediction](https://mc-stan.org/docs/stan-users-guide/regression.html#hierarchical-regression)
+
+相关章节: 43
+
+历史核读日期: 2026-10-11
+
+历史核读范围: 根核读当前标题与后验预测积分；未运行Stan
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### HERNAN_ROBINS_2020
+
+[Hernán & Robins: Causal Inference: What If (2020; author update 2026-08-19)](https://miguelhernan.org/whatifbook)
+
+相关章节: 43
+
+历史核读日期: 2026-10-11
+
+历史核读范围: 根限定核读标准化、识别、正值性、一致性、对撞与后门；非全文
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH43_SK_TEXT
+
+[scikit-learn: Text feature extraction](https://scikit-learn.org/stable/modules/feature_extraction.html)
+
+相关章节: 43
+
+历史核读日期: 2026-10-11
+
+历史核读范围: 侦察与本机对照平滑IDF/L2；自写tokenizer与默认设置不同
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### LLM_LOOKAHEAD_GLASSERMAN_LIN
+
+[Glasserman & Lin: Assessing Look-Ahead Bias in Stock Return Predictions Generated By GPT Sentiment Analysis (2023)](https://arxiv.org/abs/2309.17322)
+
+相关章节: 43
+
+历史核读日期: 2026-10-11
+
+历史核读范围: 根摘要与元数据核对，未读全文或复现实验
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### OPENAI_HALLUCINATION_2025
+
+[OpenAI: Why language models hallucinate (2025-09-05)](https://openai.com/index/why-language-models-hallucinate/)
+
+相关章节: 43
+
+历史核读日期: 2026-10-11
+
+历史核读范围: 根官方研究解读核读；台账哈希方案是本章自定，未调用模型
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### SEC_EDGAR_API
+
+[U.S. SEC: EDGAR Application Programming Interfaces (APIs), 2024-06-06; updated2025-04-08](https://www.sec.gov/search-filings/edgar-application-programming-interfaces)
+
+相关章节: 43
+
+历史核读日期: 2026-10-11
+
+历史核读范围: 2026-10-11根核读通用submissions/XBRL接口、处理延迟与访问政策链接；未核验单个申报/电话会原文、许可、时区或实际可用时点；不是真实文本PIT证据
+
+记录获取说明: 内部阅读记录未随本读者资源提供
+
+### CH44_BS1973
+
+[Black & Scholes (1973), The Pricing of Options and Corporate Liabilities](https://www.cs.princeton.edu/courses/archive/fall02/cs323/links/blackscholes.pdf)
+
+相关章节: 44
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 原始论文扫描大学托管；重点假设/复制，实际范围见内部阅读记录（未随包提供）；内部阅读记录（未随包提供）
+
+### CH44_MERTON1973
+
+[Merton (1973), Theory of Rational Option Pricing](http://polymer.bu.edu/hes/merton73py538.pdf)
+
+相关章节: 44
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 原始论文大学托管；§7印刷170–171式42–44/footnote62，HTTP限制见内部阅读记录（未随包提供）；内部阅读记录（未随包提供）
+
+### CH44_MIT_ITO
+
+[MIT6.265/15.070J Fall2013 Lecture14–17,19](https://ocw.mit.edu/courses/15-070j-advanced-stochastic-processes-fall-2013/pages/lecture-notes/)
+
+相关章节: 44
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 官方公开大学讲义；实际读取范围及一般证明限制见内部阅读记录（未随包提供）；内部阅读记录（未随包提供）
+
+### CH44_CMU_RNM
+
+[CMU2016-17 Risk Neutral Measures Chapter4](https://www.math.cmu.edu/~gautam/sj/teaching/2016-17/944-scalc-finance1/pdfs/ch4-rnm.pdf)
+
+相关章节: 44
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 公开大学讲义；Theorem1.6/Remark1.9用于符号与Novikov，具体范围见内部阅读记录（未随包提供）；内部阅读记录（未随包提供）
+
+### CH44_HIGHAM2001
+
+[Higham (2001), An Algorithmic Introduction to Numerical Simulation of Stochastic Differential Equations](https://www.caam.rice.edu/~cox/stoch/dhigham.pdf)
+
+相关章节: 44
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 原始论文大学托管；§3–5核读，原文L1强实验与本章L2 RMSE不混；内部阅读记录（未随包提供）
+
+### CH44_NUMPY_NORMAL
+
+[NumPy v2.5 Generator.normal](https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.normal.html)
+
+相关章节: 44
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 官方文档loc/scale/size，本机2.5.3；未用于金融理论；内部阅读记录（未随包提供）
+
+### CH44_SCIPY_NORM
+
+[SciPy norm stable documentation (linked v1.18.0 source)](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html)
+
+相关章节: 44
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 官方CDF/PDF接口，本机1.18.1；未用于BS理论或MC覆盖证明；内部阅读记录（未随包提供）
+
+### CH45_PYPA_PACKAGING
+
+[Python Packaging Authority. *Packaging Python Projects*.](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 根限定段落核读；范围/失败记录见内部阅读记录（未随包提供），不代表整页或运行验证
+
+### CH45_PY_LOGGING
+
+[Python Software Foundation. *Logging HOWTO (Python 3 Documentation)*.](https://docs.python.org/3/howto/logging.html)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 根限定段落核读；范围/失败记录见内部阅读记录（未随包提供），不代表整页或运行验证
+
+### CH45_PARQUET_OVERVIEW
+
+[Apache Software Foundation. *Apache Parquet Documentation: Overview*.](https://parquet.apache.org/docs/overview/)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 根限定段落核读；范围/失败记录见内部阅读记录（未随包提供），不代表整页或运行验证
+
+### CH45_DOCKERFILE
+
+[Docker Inc. *Dockerfile reference and concepts*.](https://docs.docker.com/build/concepts/dockerfile/)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 根限定段落核读；范围/失败记录见内部阅读记录（未随包提供），不代表整页或运行验证
+
+### CH45_DUCKDB_PARQUET
+
+[DuckDB Foundation. *DuckDB Parquet Overview and Partial Reading*.](https://duckdb.org/docs/current/data/parquet/overview)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 根限定段落核读；范围/失败记录见内部阅读记录（未随包提供），不代表整页或运行验证
+
+### CH45_PY314_SQLITE
+
+[Python Software Foundation. *sqlite3 — DB-API 2.0 interface for SQLite databases (Python 3.14 Documentation)*.](https://docs.python.org/3.14/library/sqlite3.html)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 根限定段落核读；范围/失败记录见内部阅读记录（未随包提供），不代表整页或运行验证
+
+### CH45_PY314_OS_REPLACE
+
+[Python Software Foundation. *os.replace (Python 3.14 Documentation)*.](https://docs.python.org/3.14/library/os.html)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 根限定段落核读；范围/失败记录见内部阅读记录（未随包提供），不代表整页或运行验证
+
+### CH45_12FACTOR_CONFIG
+
+[Adam Wiggins. *The Twelve-Factor App: III. Config*.](https://12factor.net/config)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 根限定段落核读；范围/失败记录见内部阅读记录（未随包提供），不代表整页或运行验证
+
+### CH45_PYTEST_DOCS
+
+[Holger Krekel et al. *pytest: Simple powerful testing with Python*.](https://docs.pytest.org/en/stable/)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 根限定段落核读；范围/失败记录见内部阅读记录（未随包提供），不代表整页或运行验证
+
+### CH45_SQLITE_TRANSACTIONS
+
+[D. Richard Hipp et al. *SQLite Language: Transaction Control*.](https://www.sqlite.org/lang_transaction.html)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 根限定段落核读；范围/失败记录见内部阅读记录（未随包提供），不代表整页或运行验证
+
+### CH45_AIRFLOW_DAGRUN
+
+[Apache Software Foundation. *Apache Airflow: DAG Runs*.](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dag-run.html)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 根限定段落核读；范围/失败记录见内部阅读记录（未随包提供），不代表整页或运行验证
+
+### CH45_PROMETHEUS_METRICS
+
+[Prometheus Authors. *Prometheus Metric Types*.](https://prometheus.io/docs/concepts/metric_types/)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 根限定段落核读；范围/失败记录见内部阅读记录（未随包提供），不代表整页或运行验证
+
+### CH45_MLFLOW_TRACKING
+
+[MLflow Documentation. *Tracking APIs*.](https://mlflow.org/docs/latest/ml/tracking/tracking-api/)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 根限定段落核读；范围/失败记录见内部阅读记录（未随包提供），不代表整页或运行验证
+
+### CH45_SEC_KNIGHT_CAPITAL
+
+[U.S. Securities and Exchange Commission. *In the Matter of Knight Capital Americas LLC (Release No. 34-70694)*.](https://www.sec.gov/litigation/admin/2013/34-70694.pdf)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 根限定段落核读；范围/失败记录见内部阅读记录（未随包提供），不代表整页或运行验证
+
+### CH45_PYPA_SRC_LAYOUT
+
+[Discussions: src-layout vs flat-layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 承接本章已接受来源记录的限定根核读范围；本轮仅做键/元数据整合，未重新读取网页，不宣称运行所述工具。
+
+补充范围: 限定阅读 PyPA src-layout 讨论；支持项目文件与可导入源码包分离、测试入口需明确路径。范围沿用已接受章节记录，本次仅做键/元数据整合，未重读网页或运行打包工具。
+
+### CH45_PY314_LOGGING_COOKBOOK
+
+[Logging Cookbook (Python 3.14 Documentation)](https://docs.python.org/3.14/howto/logging-cookbook.html)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 承接本章已接受来源记录的限定根核读范围；本轮仅做键/元数据整合，未重新读取网页，不宣称运行所述工具。
+
+补充范围: 限定阅读 Logging to a single file from multiple processes 主题；普通 FileHandler 不是多进程共享文件的串行化机制。教学案例为单进程、各 run 独立日志，不外推为分布式日志平台。本次仅做键/元数据整合，未重读网页或运行工具。
+
+### CH45_DOCKER_SECRETS
+
+[Docker Build Secrets](https://docs.docker.com/build/building/secrets/)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 承接本章已接受来源记录的限定根核读范围；本轮仅做键/元数据整合，未重新读取网页，不宣称运行所述工具。
+
+补充范围: 限定阅读 Build secrets 开头及 Secret mounts；构建 ARG/ENV 会进入镜像，不应传递构建秘密，临时 secret mount 有独立生命周期。章节未配置 secret；构建与运行时凭据应分开。本次仅做键/元数据整合，未重读网页或运行 Docker。
+
+### CH45_PY314_SCHED
+
+[sched — Event scheduler (Python 3.14 Documentation)](https://docs.python.org/3.14/library/sched.html)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 承接本章已接受来源记录的限定根核读范围；本轮仅做键/元数据整合，未重新读取网页，不宣称运行所述工具。
+
+补充范围: 限定阅读 Python sched 说明；其为进程内事件调度器，调用 run 才执行队列，不提供系统服务、持久任务、交易日历、重试或幂等机制。本批未注册任务；本次仅做键/元数据整合，未重读网页或运行工具。
+
+### CH45_PY314_URLLIB
+
+[urllib.request — Extensible library for opening URLs (Python 3.14 Documentation)](https://docs.python.org/3.14/library/urllib.request.html)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 承接本章已接受来源记录的限定根核读范围；本轮仅做键/元数据整合，未重新读取网页，不宣称运行所述工具。
+
+补充范围: 限定阅读 urllib.request 概要；HTTP 请求构成外部 I/O 边界，URL/响应可用不等于数据契约、许可或历史 PIT。章节交易案例不发 API 请求。本次仅做键/元数据整合，未重读网页或运行工具。
+
+### CH45_GOOGLE_ML_RULES
+
+[Rules of Machine Learning: Best Practices for ML Engineering](https://developers.google.com/machine-learning/guides/rules-of-ml)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 承接本章已接受来源记录的限定根核读范围；本轮仅做键/元数据整合，未重新读取网页，不宣称运行所述工具。
+
+补充范围: 限定阅读 Monitoring Rule 8/9 与 Training-Serving Skew Rule 29/31/32/37；监控新鲜度、记录推理特征、复用变换和检查表版本可减少偏移。这是一般 ML 实践建议，不是金融 Alpha 实证或自动重训授权。本次仅做键/元数据整合，未重读网页。
+
+### CH45_R2_KS
+
+[ks_2samp](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks_2samp.html)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 承接本章已接受来源记录的限定根核读范围；本轮仅做键/元数据整合，未重新读取网页，不宣称运行所述工具。
+
+补充范围: 限定阅读 ks_2samp 的 statistic 与 Notes（双侧最大 ECDF 差、独立连续样本假设）；只手算 D，不对四行离散或自相关数据报告经典 p 值；网页 1.18.0 不证明本地版本。本次仅做键/元数据整合，未重读网页或运行 SciPy。
+
+### CH45_R2_PSI
+
+[risk.validation.populationStabilityIndex](https://www.mathworks.com/help/risk/risk.validation.populationstabilityindex.html)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 承接本章已接受来源记录的限定根核读范围；本轮仅做键/元数据整合，未重新读取网页，不宣称运行所述工具。
+
+补充范围: 限定阅读 MathWorks More About 的公式和 Frequency 输入说明；页面为 R2026b，未运行 MATLAB，经验阈值不作普适保证。本次仅做键/元数据整合，未重读网页。
+
+### CH45_R2_PH
+
+[PageHinkley](https://riverml.xyz/dev/api/drift/PageHinkley/)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 承接本章已接受来源记录的限定根核读范围；本轮仅做键/元数据整合，未重新读取网页，不宣称运行所述工具。
+
+补充范围: 限定阅读 River PageHinkley 定义、参数和 update；未运行 River。固定基线单侧教学规则不同于运行均值、遗忘和双侧更新；Page (1954) 原论文未亲读。本次仅做键/元数据整合，未重读网页。
+
+### CH45_R2_SRC
+
+[src layout vs flat layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 承接本章已接受来源记录的限定根核读范围；本轮仅做键/元数据整合，未重新读取网页，不宣称运行所述工具。
+
+补充范围: 限定复核布局/安装关系、包发现及源 CLI 显式路径；未构建 wheel 或新安装。本次仅做键/元数据整合，未重读网页或运行打包工具。
+
+### CH45_R2_PEP517
+
+[PEP 517](https://peps.python.org/pep-0517/)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 承接本章已接受来源记录的限定根核读范围；本轮仅做键/元数据整合，未重新读取网页，不宣称运行所述工具。
+
+补充范围: 限定阅读 PEP 517 Abstract、Source trees 与 backend hooks；目录约定不是 PEP 强制布局。本次仅做键/元数据整合，未重读网页或构建包。
+
+### CH45_R2_PEP518
+
+[PEP 518](https://peps.python.org/pep-0518/)
+
+相关章节: 45
+
+历史核读日期: 2026-10-12
+
+历史核读范围: 承接本章已接受来源记录的限定根核读范围；本轮仅做键/元数据整合，未重新读取网页，不宣称运行所述工具。
+
+补充范围: 限定阅读 PEP 518 Abstract 与 build-system 声明；本批未构建或安装包。本次仅做键/元数据整合，未重读网页。
+
+### PSR
+
+The Sharpe Ratio Efficient Frontier — 未核定公开URL
+
+作者: David H. Bailey and Marcos López de Prado
+
+年份: 2012
+
+相关章节: 32
+
+历史核读日期: None
+
+历史核读范围: 承接本地2012年7月作者稿相关范围的历史核读记录；本轮未重读PDF，公开来源URL未独立核定，不新编DOI或URL，不随读者包分发论文全文。
+
+补充范围: 本地2012年7月作者稿；历史阅读记录载明相关范围为§2.4–§4，后续仅对本地版本标记、式(11)和观测频率提示作定向核对。未逐页重读，未独立取得或比对最终期刊版；无经核定的公开URL。全文不随读者资源提供。
+
+元数据限制: 期刊卷期页码沿用当前第32章引文；未独立匹配期刊版元数据。
+
+### KENNETH_FRENCH
+
+[Detail for 10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html)
+
+相关章节: 32
+
+历史核读日期: 2026-10-05
+
+历史核读范围: 原主根据第32章明确10行业组合对象及其数据来源笔记，映射为已有FRENCH_10的章内别名；继承该记录核读范围，无新下载/数据权利推定。
+
+补充范围: 继承 FRENCH_10 的既有范围：官方构造页已读取；真实 ZIP 下载、Keka 测试/解包、1202 个月价值加权收益块解析与哈希记录。此别名只映射第32章键，不新下载，也不推定数据再分发权。

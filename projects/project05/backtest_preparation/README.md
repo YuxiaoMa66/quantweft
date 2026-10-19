@@ -1,0 +1,39 @@
+# Project 5 — A6 回测接口准备层（构造配对，不是完成的项目）
+
+状态：A6历史构造接口已限定接受；这层本身没有真实配对/历史借券融资或完整P5研究。后来的c5/ALIGN已实现另一构造面板的walk-forward与报告，第34–36章也已接受；不能把A6旧缺项当成当前整份P5缺源码。真实市场项目仍planned/blocked。
+
+## 运行
+
+以下是A6历史维护/复核入口，不是当前I3默认P5 Notebook；新读者从[当前项目导读](../README.md)按唯一RUN_DIR运行。A6结果不可与A5或c5拼接成同一实验，本批没有复跑。
+
+与 Project 4 共用一个 CLI：
+
+```bash
+.venv/bin/python projects/project04/backtest_preparation/backtest_interfaces.py
+```
+
+结果在同一 JSON 的 `p05` 键下（`qa/a6/claude/results/p04_p05/p04_p05_backtest_interfaces.json`），图在 `figures/a6/p04_p05_backtest_interfaces.png` 右栏。测试：`tests/test_ch29_project_interfaces.py`。
+
+## 为什么不用 A5 的 French 行业配对
+
+A5 筛选层（`preparation/screening_layer.py`，只读）用的是 French 10 行业价值加权组合的总回报水平：聚合、已修订、非 PIT、不可直接交易。把那里的筛选结果变成“配对 PnL”会把描述性诊断说成可交易收益，契约禁止。本层改用**明确标注的构造可交易价格**：两只构造资产 Y、X，log X 为随机游走，log Y = a + 1.5·log X + u，u 为 AR(1)（φ = 0.95），种子 20261207；开盘价 = 上一收盘 × 小幅随机跳空。
+
+## 接口契约（P5）
+
+| 环节 | 本层做法 | 时间 |
+|---|---|---|
+| 训练 | 前 500 个交易日：log Y 对 [1, log X] 做 OLS 得 α、β；训练段价差均值与标准差；入场 \|z\| > 2、出场 \|z\| < 0.5 冻结 | 只用训练段（测试段价格扰动不改变这些估计——测试已证） |
+| 信号 | 从最后一个训练收盘起，每日收盘按 z 更新状态（空仓 / 做多价差 / 做空价差）；只有状态改变才下单 | signal_time = 收盘 t |
+| 资金权重 | 对 log 价差，X 的美元暴露 = β × Y 的美元暴露；按总暴露 1 缩放：做多价差时 w_Y = 1/(1+β)、w_X = −β/(1+β)。β 是 log 单位的比率，**不是**资金权重，也不是股数比（股数比 = β·P_Y/P_X，JSON 给出首次入场时的值） | — |
+| 成交 | 第29章 `run_backtest`，lag = 1，执行价 = 构造开盘价；两条腿各自计费（0 / 10 bps） | trade_time = t+1 开盘 |
+| 做空 | `allow_short=True`；借券费与回扣未建模（构造假设） | — |
+
+## 结果的含义
+
+JSON 报告训练估计（β 训练值与真值 1.5 的差别）、订单与成交笔数、两档费率下测试段收益、总费用与对账残差。构造世界里协整由设计保证，所以盈利只说明规则与账本能运行，不说明真实配对会盈利；也没有估计协整破裂、失配或借券约束的影响。
+
+## 真实数据缺项
+
+两只（或多只）真实证券的未复权成交价、公司行动、可借券数量与费用、开盘/VWAP 执行价、双腿冲击；训练段内的筛选搜索次数（沿用 A5 账本）与多重检验；滚动 walk-forward 与协整破裂监测。
+
+根代理最终复跑：[当前JSON](../../../qa/a6/codex_resume/project_interfaces/results_root_final/p04_p05_backtest_interfaces.json)。作者历史默认输出拒绝覆盖，复跑须指定新输出目录。

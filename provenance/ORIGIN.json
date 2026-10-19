@@ -1,0 +1,15 @@
+{
+ "created_utc": "2026-10-19T15:40:51.145609+00:00",
+ "author": "Yuxiao Ma",
+ "visibility_required": "private",
+ "source": "accepted local formal edition 2026.10.19",
+ "revision": "BIL23B5 r1_20261019",
+ "source_manifest_sha256": "7b3ac9416e40dc72ab46e9d47caa444e4c88848a5190d533268aab30c919e2d5",
+ "accepted_files": 842,
+ "accepted_bytes": 111693734,
+ "repository": "YuxiaoMa66/quant_course",
+ "scope": "formal bilingual reader/code snapshot; not full editorial archive",
+ "formal_publication": false,
+ "market_execution": false,
+ "new_license_selected": false
+}

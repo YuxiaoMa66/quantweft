@@ -1,0 +1,77 @@
+{
+  "project": "Project 1 — Financial Data Analysis",
+  "snapshot_date": "2026-10-05",
+  "consumed_data_are_frozen_processed_snapshots": true,
+  "source_manifests_are_authoritative_for_download_metadata": true,
+  "inputs": {
+    "industry_returns": {
+      "course_manifest": "data/manifests/french_industries_2026-10-05.json",
+      "processed_path": "data/processed/french_10_industries_monthly.csv",
+      "processed_sha256": "3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950",
+      "source_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/10_Industry_Portfolios_CSV.zip",
+      "source_details_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html",
+      "downloaded_at_utc": "2026-10-05T19:18:24.585420+00:00",
+      "raw_archive_path": "data/raw/french/2026-10-05/10_Industry_Portfolios_CSV.zip",
+      "raw_archive_sha256": "ebd937a4b995d821867aeb956a96f09a666386f38fa82516b7d1767ee4a49ae5",
+      "extracted_source_path": "data/raw/french/2026-10-05/extracted/10_Industry_Portfolios.csv",
+      "extracted_source_sha256": "18ed376fc42e2327ceaf3d65a02521a6512e7f9e3001007c4da69d7db108aa82",
+      "source_frequency": "monthly; source also contains other frequency blocks",
+      "source_unit": "percent per month",
+      "processed_unit": "decimal simple portfolio return per month",
+      "selected_source_block": "Average Value Weighted Returns — Monthly",
+      "return_variant": "standard 10 Industry Portfolios dataset; not the separately published ex. Dividends variant",
+      "processed_rows": 1202,
+      "processed_start_month": "1926-07",
+      "processed_end_month": "2026-08",
+      "transformations": [
+        "The monthly value-weighted table was parsed from the frozen source CSV.",
+        "Percent values were divided by 100 exactly once.",
+        "Source missing sentinels -99.99 and -999 became empty fields in the processed CSV."
+      ],
+      "redistribution": "Public download availability is not a blanket redistribution license. Attribute Fama and French and check current terms before external redistribution."
+    },
+    "monthly_risk_free": {
+      "course_manifest": "data/manifests/french_factors_2026-10-05.json",
+      "dataset_key": "ff3",
+      "processed_path": "data/processed/french_factors_3_monthly.csv",
+      "processed_sha256": "c19770a19a0ac47ad1c29074f57234570aeaa9725212cb4fa8146a2846c52814",
+      "source_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip",
+      "source_details_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_factors.html",
+      "downloaded_at_utc": "2026-10-05T21:11:10.296518+00:00",
+      "raw_archive_path": "data/raw/french_factors_3_monthly.zip",
+      "raw_archive_sha256": "593f4fbef03181bc0b22ff6292f217689dd1fb79355049ca905d95b262040a66",
+      "extracted_source_path": "data/raw/french_factors_3_monthly.csv",
+      "extracted_source_sha256": "d7d7fe37b150b5b15c9c069b3ba101dfe1af568c6d7b5db6e73cd0a6c0c9e5e5",
+      "source_frequency": "monthly rows; source values are published as percent per month",
+      "source_unit": "percent per month",
+      "processed_unit": "decimal per month",
+      "source_file_declared_crsp_vintage": "202608",
+      "processed_rows": 1202,
+      "processed_start_month": "1926-07",
+      "processed_end_month": "2026-08",
+      "selected_field": "RF",
+      "transformations": [
+        "The first YYYYMM monthly block was selected; later annual blocks were excluded.",
+        "Source percent values were divided by 100 exactly once.",
+        "Source missing sentinels -99.99 and -999 became empty fields."
+      ],
+      "methodology_change": "The source states that the one-month Treasury-bill series uses Ibbotson Associates through May 2024 and ICE BofA US 1-Month Treasury Bill Index from June 2024.",
+      "redistribution": "Public download availability is not a blanket redistribution license. Attribute Fama and French and check current terms before external redistribution."
+    }
+  },
+  "run_validation": {
+    "verify_full_hash_chain": ["raw archive", "extracted source CSV", "processed monthly snapshot"],
+    "use_shared_loader": "src/quant_course/market_data.py::load_monthly_snapshot",
+    "join_rule": "exactly identical monthly PeriodIndex; one-to-one month join",
+    "missing_rule": "no fill or row drop; loader rejects non-finite selected values and monthly gaps"
+  },
+  "time_scope": {
+    "frequency": "monthly",
+    "month_label": "period label for a published monthly return interval; not an intramonth timestamp",
+    "available_at": "historical per-month publication/ingestion times are not supplied; only the current snapshot download times above are known",
+    "signal_time": "not applicable; no signal is formed",
+    "trade_time": "not applicable; no order or trade is simulated",
+    "return_interval": "calendar month represented by YYYYMM",
+    "label_interval": "same calendar month; there is no forecast target in this descriptive project"
+  }
+}

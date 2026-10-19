@@ -1,0 +1,82 @@
+{
+  "project": "Project 3 - rolling out-of-sample portfolio construction on French 10 industries",
+  "status": "historical A4 technical acceptance 2026-10-06; C10 teaching/interface limited-scope acceptance 2026-10-14; historical results reused",
+  "frozen_before_results": true,
+  "data": {
+    "returns": "data/processed/french_10_industries_monthly.csv",
+    "returns_sha256": "3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950",
+    "risk_free": "data/processed/french_factors_3_monthly.csv column RF",
+    "risk_free_sha256": "c19770a19a0ac47ad1c29074f57234570aeaa9725212cb4fa8146a2846c52814",
+    "unit": "decimal simple return per calendar month",
+    "point_in_time": false
+  },
+  "evaluation": {
+    "start": "1990-01",
+    "end": "2026-08"
+  },
+  "subperiods": [
+    [
+      "1990-01",
+      "2007-12"
+    ],
+    [
+      "2008-01",
+      "2026-08"
+    ]
+  ],
+  "strategies": [
+    "equal_weight",
+    "min_variance",
+    "max_sharpe",
+    "erc"
+  ],
+  "primary": {
+    "window_months": 60,
+    "covariance": "ledoit_wolf",
+    "mean_estimator": "training-window sample mean of industry minus RF (max_sharpe only)",
+    "cost_bps_per_unit_traded": 10,
+    "max_weight": 0.4,
+    "implementation_lag_months": 0,
+    "long_only": true,
+    "fully_invested": true,
+    "rebalance": "every month end",
+    "max_weight_applies_to": [
+      "min_variance",
+      "max_sharpe"
+    ],
+    "erc_weight_cap": null,
+    "cost_model": "linear haircut based on normalized weight turnover proxy, not exact self-financing traded notional"
+  },
+  "sensitivity": {
+    "window_months": [
+      36,
+      60,
+      120
+    ],
+    "covariance": [
+      "sample",
+      "ledoit_wolf"
+    ],
+    "cost_bps_per_unit_traded": [
+      0,
+      10,
+      25,
+      50
+    ],
+    "implementation_lag_months": [
+      0,
+      1
+    ]
+  },
+  "fallback": "equal_weight; every fallback is logged with month and reason",
+  "bootstrap": {
+    "statistic": "mean monthly net return difference, and paired annualized net Sharpe difference, versus equal_weight",
+    "method": "circular moving block",
+    "block_length": 12,
+    "resamples": 5000,
+    "seed": 20261006,
+    "confidence": 0.95
+  },
+  "selection_rule": "primary specification above is fixed before viewing any out-of-sample result; sensitivity rows are reported in full and are not used to choose a winner",
+  "pre_registration_evidence": "author declaration and local revision log; no external preregistration timestamp; retrospective historical study"
+}

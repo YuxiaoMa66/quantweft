@@ -1,0 +1,43 @@
+{
+  "currency": "USD",
+  "execution": {
+    "borrow_rate_annual": 0.0,
+    "cash_rate_annual": 0.0,
+    "commission_per_share": 0.0,
+    "commission_rate": 0.001,
+    "day_count_basis": 360,
+    "half_spread_bps": 10.0,
+    "max_participation": 1.0,
+    "perm_impact_coef": 0.0,
+    "temp_impact_coef": 0.0
+  },
+  "gates": {
+    "allowed_data_kinds": [
+      "CONSTRUCTED_TEACHING_DATA"
+    ],
+    "allowed_price_units": [
+      "USD/share"
+    ],
+    "allowed_quantity_units": [
+      "share"
+    ],
+    "allowed_schema_versions": [
+      "1.0.0"
+    ],
+    "stale_threshold_seconds": 3600.0
+  },
+  "initial_cash": 10000.0,
+  "pipeline_version": "1.0.0",
+  "risk": {
+    "max_gross_leverage": 0.5,
+    "stress_loss_limit": 1000.0,
+    "stress_return_shock": -0.1
+  },
+  "strategy": {
+    "fixed_quantities": {
+      "AssetA": 10.0,
+      "AssetB": 20.0
+    },
+    "name": "one_period_momentum_fixed_shares"
+  }
+}

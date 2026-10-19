@@ -1,0 +1,183 @@
+{
+  "project": "Project 2 — CAPM and Fama-French Factor Attribution",
+  "status": "verified",
+  "snapshot_date": "2026-10-05",
+  "source_manifest_policy": "The frozen course manifests are authoritative for download metadata. This project records the exact input bytes it consumes and checks paths, hashes, source vintages, and ZIP member bytes against those manifests; it never downloads or regenerates production data.",
+  "inputs": {
+    "industry_returns": {
+      "course_manifest": "data/manifests/french_industries_2026-10-05.json",
+      "source_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/10_Industry_Portfolios_CSV.zip",
+      "method_page": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html",
+      "downloaded_at_utc": "2026-10-05T19:18:24.585420+00:00",
+      "archive_member": "10_Industry_Portfolios.csv",
+      "raw_archive": {
+        "path": "data/raw/french/2026-10-05/10_Industry_Portfolios_CSV.zip",
+        "sha256": "ebd937a4b995d821867aeb956a96f09a666386f38fa82516b7d1767ee4a49ae5",
+        "size_bytes": 118996
+      },
+      "extracted_source_csv": {
+        "path": "data/raw/french/2026-10-05/extracted/10_Industry_Portfolios.csv",
+        "sha256": "18ed376fc42e2327ceaf3d65a02521a6512e7f9e3001007c4da69d7db108aa82"
+      },
+      "processed_csv": {
+        "path": "data/processed/french_10_industries_monthly.csv",
+        "sha256": "3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950",
+        "unit": "decimal simple portfolio returns"
+      },
+      "selected_table": "Average Value Weighted Returns -- Monthly",
+      "return_variant": "standard 10 Industry Portfolios; value-weighted; includes dividends; not OHLCV or individual securities",
+      "source_unit": "percent in source",
+      "processed_rows": 1202,
+      "first_month": "192607",
+      "last_month": "202608",
+      "columns": [
+        "month",
+        "NoDur",
+        "HiTec",
+        "Enrgy"
+      ],
+      "missing_sentinels": [
+        "-99.99",
+        "-999"
+      ],
+      "keka_validation": "passed; Keka 7z archive test reported Everything is Ok"
+    },
+    "ff3": {
+      "course_manifest": "data/manifests/french_factors_2026-10-05.json",
+      "dataset_key": "ff3",
+      "name": "Fama/French 3 Factors",
+      "source_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip",
+      "method_page": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_factors.html",
+      "downloaded_at_utc": "2026-10-05T21:11:10.296518+00:00",
+      "http_response": {
+        "status": 200,
+        "final_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip",
+        "content_type": "application/x-zip-compressed",
+        "content_length_header": "13065",
+        "last_modified": "Fri, 25 Sep 2026 21:55:02 GMT",
+        "etag": "\"28842b84384ddd1:0\"",
+        "downloaded_at_utc": "2026-10-05T21:11:10.296518+00:00"
+      },
+      "crsp_database_month": "202608",
+      "archive_member": "F-F_Research_Data_Factors.csv",
+      "raw_archive": {
+        "path": "data/raw/french_factors_3_monthly.zip",
+        "sha256": "593f4fbef03181bc0b22ff6292f217689dd1fb79355049ca905d95b262040a66",
+        "size_bytes": 13065
+      },
+      "extracted_source_csv": {
+        "path": "data/raw/french_factors_3_monthly.csv",
+        "sha256": "d7d7fe37b150b5b15c9c069b3ba101dfe1af568c6d7b5db6e73cd0a6c0c9e5e5",
+        "size_bytes": 52493
+      },
+      "processed_csv": {
+        "path": "data/processed/french_factors_3_monthly.csv",
+        "sha256": "c19770a19a0ac47ad1c29074f57234570aeaa9725212cb4fa8146a2846c52814",
+        "unit": "decimal per month; source percentage values divided by 100"
+      },
+      "source_unit": "percent per month (simple returns / factor spreads, as published)",
+      "selected_monthly_rows": 1202,
+      "first_month": "192607",
+      "last_month": "202608",
+      "columns": [
+        "month",
+        "Mkt-RF",
+        "SMB",
+        "HML",
+        "RF"
+      ],
+      "missing_sentinels": [
+        "-99.99",
+        "-999"
+      ],
+      "keka_validation": "passed; Keka 7z archive test reported Everything is Ok"
+    },
+    "ff5": {
+      "course_manifest": "data/manifests/french_factors_2026-10-05.json",
+      "dataset_key": "ff5",
+      "name": "Fama/French 5 Factors (2x3)",
+      "source_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_5_Factors_2x3_CSV.zip",
+      "method_page": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_5_factors_2x3.html",
+      "downloaded_at_utc": "2026-10-05T21:11:11.100764+00:00",
+      "http_response": {
+        "status": 200,
+        "final_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_5_Factors_2x3_CSV.zip",
+        "content_type": "application/x-zip-compressed",
+        "content_length_header": "11964",
+        "last_modified": "Fri, 25 Sep 2026 21:55:02 GMT",
+        "etag": "\"8d335b84384ddd1:0\"",
+        "downloaded_at_utc": "2026-10-05T21:11:11.100764+00:00"
+      },
+      "crsp_database_month": "202608",
+      "archive_member": "F-F_Research_Data_5_Factors_2x3.csv",
+      "raw_archive": {
+        "path": "data/raw/french_factors_5_monthly.zip",
+        "sha256": "36756c5c2559648519ac4b22913d860c6afd865cfebce920e3e8927f8e2d10b7",
+        "size_bytes": 11964
+      },
+      "extracted_source_csv": {
+        "path": "data/raw/french_factors_5_monthly.csv",
+        "sha256": "c4915afc1e2a1fce6fbba415f574d825a3e1b800c8d1aa31c72351789851eb22",
+        "size_bytes": 51309
+      },
+      "processed_csv": {
+        "path": "data/processed/french_factors_5_monthly.csv",
+        "sha256": "833bd925b49651428781c789c13a6ac7454d4676449e6d119782050046a57eea",
+        "unit": "decimal per month; source percentage values divided by 100"
+      },
+      "source_unit": "percent per month (simple returns / factor spreads, as published)",
+      "selected_monthly_rows": 758,
+      "first_month": "196307",
+      "last_month": "202608",
+      "columns": [
+        "month",
+        "Mkt-RF",
+        "SMB",
+        "HML",
+        "RMW",
+        "CMA",
+        "RF"
+      ],
+      "missing_sentinels": [
+        "-99.99",
+        "-999"
+      ],
+      "keka_validation": "passed; Keka 7z archive test reported Everything is Ok"
+    }
+  },
+  "selected_sample": {
+    "assets": [
+      "NoDur",
+      "HiTec",
+      "Enrgy"
+    ],
+    "start_month": "2010-01",
+    "end_month": "2019-12",
+    "monthly_rows_per_asset": 120,
+    "index": "consecutive pandas.PeriodIndex with monthly frequency; month labels refer to return intervals",
+    "model_factor_sources": {
+      "capm": "ff3 Mkt-RF and RF",
+      "ff3": "published FF3 Mkt-RF, SMB, HML, and RF",
+      "ff5": "published FF5 Mkt-RF, SMB, HML, RMW, CMA, and RF"
+    },
+    "join_rule": "Exact monthly labels; no inner-join row loss, filling, or shifting",
+    "conversion": "Published percentages divided by 100 once in the frozen processing step. The project reads the processed decimal files without further conversion.",
+    "excess_return_rule": "Each asset total return minus the same-month RF exactly once; published factor spreads are passed unchanged."
+  },
+  "time_fields": {
+    "event_time": "Historical within-month events are not supplied; YYYYMM labels identify monthly return intervals.",
+    "available_at": "Historical publication/ingestion times are unavailable. Only current snapshot download times are recorded above.",
+    "signal_time": "Not applicable; no signal is constructed.",
+    "trade_time": "Not applicable; no order or trade is simulated.",
+    "return_interval": "Calendar month represented by YYYYMM.",
+    "label_interval": "Same calendar month; this is a descriptive attribution target, not a future forecast label."
+  },
+  "source_method_notes": {
+    "factor_vintage": "Both FF3 and FF5 source CSVs declare the 202608 CRSP database vintage.",
+    "factor_construction_change": "The official source notes a move from legacy FIZ to CRSP CIZ Flat File Format 2.0 beginning with the January 2025 release; monthly dividend reinvestment timing differs.",
+    "risk_free_method_change": "The official factor notes describe the one-month Treasury-bill proxy source as Ibbotson Associates through May 2024 and ICE BofA US 1-Month Treasury Bill Index beginning June 2024.",
+    "point_in_time": "These are single current revised snapshots and are not a historical point-in-time archive."
+  },
+  "redistribution": "Public download availability is not a blanket redistribution license. Attribute Kenneth R. French and confirm current terms before external redistribution.",
+  "trading_and_costs": "No transaction-cost, financing, borrow, order, turnover, or execution ledger exists. Costs are not applicable to this descriptive regression; no net strategy return or cost-adjusted alpha is estimated."
+}

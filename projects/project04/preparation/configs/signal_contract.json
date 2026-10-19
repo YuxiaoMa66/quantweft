@@ -1,0 +1,19 @@
+{
+  "version": "p04-prep-0.2",
+  "note": "field contract for the signal layer; every input row carries period_end, available_at, ingested_at; ratios come from ONE filing version",
+  "inputs": {
+    "filing_version": {"key": ["security_id", "period_end", "available_at"], "time_fields": ["period_end", "available_at", "ingested_at"], "same_version_columns": ["revenue", "cogs", "sga", "interest", "net_income", "cfo", "assets", "assets_prev", "equity", "equity_prev", "debt", "cash", "ebitda"], "units": "reporting currency, same scale", "financial_firms": "cogs is NaN"},
+    "price": {"key": ["security_id", "month"], "columns": ["total_return", "market_cap"], "units": ["decimal monthly simple return", "currency"], "time_fields": ["month (return interval)", "available_at not recorded in the constructed layer"]},
+    "membership": {"key": ["security_id", "month"], "columns": ["listed"], "rule": "as-of: includes names that are later delisted"},
+    "industry": {"key": ["security_id"], "columns": ["industry"], "rule": "label known at signal_time; the constructed layer uses a static label"}
+  },
+  "signals": {
+    "book_to_market": {"style": "value", "formula": "equity / market_cap", "direction": "larger = cheaper", "requires_positive": ["equity", "market_cap"], "module": "factor_signals.book_to_market"},
+    "earnings_yield": {"style": "value", "formula": "net_income / market_cap", "direction": "larger = cheaper; negative earnings keep their sign", "requires_positive": ["market_cap"], "module": "factor_signals.yield_ratio"},
+    "ev_to_ebitda_cheapness": {"style": "value", "formula": "-percentile(EV / EBITDA), EV = market_cap + debt - cash", "direction": "larger = cheaper", "requires_positive": ["EV", "EBITDA"], "financial_firms": "NaN", "module": "factor_signals.ev_to_ebitda + cheapness_percentile", "bridge_scope": "constructed universe only", "assumed_zero": ["minority_interest", "preferred_equity", "non_operating_assets"], "full_bridge_formula": "market_cap + debt + minority_interest + preferred_equity - cash - non_operating_assets", "before_real_company_use": "obtain point-in-time bridge fields with consistent units, reconcile the complete EV bridge, and use the complete bridge in calculation; missing fields must not be treated as zero"},
+    "mom_12_1": {"style": "momentum", "formula": "prod(1+r) - 1 over months s-11..s-1", "direction": "larger = stronger", "module": "factor_signals.formation_return(window=11, skip=1)"},
+    "gp_a": {"style": "quality", "formula": "(revenue - cogs) / average assets", "direction": "larger = better", "financial_firms": "NaN", "module": "quality.gross_profit_to_assets"},
+    "neg_accrual": {"style": "quality", "formula": "-(net_income - cfo) / average assets", "direction": "larger = better (more cash backing)", "module": "quality.accrual_ratio"},
+    "roe_avg": {"style": "quality", "formula": "net_income / average equity, both year-end equities positive, equity above 5% of average assets", "direction": "larger = better", "module": "quality.average_balance + guarded_ratio"}
+  }
+}

@@ -1,0 +1,64 @@
+\documentclass[cjk]{loom}
+\runningthread{项目五：配对交易}
+% Cover reused from loom/main_a6.tex (course design by Yuxiao Ma); content: Project 5 active practice (A7-C candidate).
+\definecolor{qpaper}{HTML}{F4F1E9}
+\definecolor{qink}{HTML}{142D36}
+\definecolor{qteal}{HTML}{247F82}
+\definecolor{qgold}{HTML}{CF8951}
+\newcommand{\coursecover}[2]{%
+\hypersetup{pageanchor=false}
+\begin{titlepage}\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\begin{scope}[shift={(current page.south west)},x=1cm,y=1cm]
+\fill[qpaper] (0,0) rectangle (21,29.7);
+\fill[qink] (0,27.5) rectangle (21,29.7);
+\node[anchor=west,text=white,font=\sffamily\small] at (2,28.6) {QUANTITATIVE FINANCE / RESEARCH / SYSTEMATIC TRADING};
+\node[anchor=north west,text=qink,align=left,font=\bfseries\fontsize{34}{46}\selectfont] at (1.95,25.1) {量化金融\\与系统化研究};
+\node[anchor=west,text=qteal,font=\fontsize{18}{24}\selectfont] at (2,20.5) {中文系统教程};
+\draw[qteal,line width=1.6pt] (2,19.6)--(6.4,19.6);
+\node[anchor=west,text=qink,font=\large] at (2,18.5) {从数据与假设，到可验证的研究结论};
+\node[anchor=north west,text=qink!70,align=left,font=\sffamily\small] at (2,15.7) {THEORY\\[6pt] MATHEMATICS\\[6pt] DATA\\[6pt] CODE\\[6pt] EVIDENCE};
+\begin{scope}[shift={(13,11)}]
+\foreach \r in {1,2,3,4}{\draw[qteal!30,line width=0.6pt] (0,0) circle (\r cm);}
+\draw[qink!25] (-4.6,-3.6)--(-4.6,4.2); \draw[qink!25] (-4.6,-3.6)--(4.4,-3.6);
+\draw[qteal,line width=1.4pt,domain=-2.6:3.4,samples=60,variable=\y] plot ({-2.9+0.45*sqrt(1+(\y-0.2)*(\y-0.2)/0.55)*2.2},{\y});
+\draw[qgold,line width=1.2pt] (-4.6,-1.2)--(3.6,4.0);
+\fill[qgold] (-1.36,0.86) circle (4pt);
+\foreach \x/\y in {-1.0/-1.9,0.2/-0.6,1.1/0.4,-0.3/0.9,1.9/1.6,2.6/-1.0,0.8/2.4}{\fill[qink!75] (\x,\y) circle (2.2pt);}
+\end{scope}
+\draw[qink!20] (2,5.9)--(19,5.9);
+\node[anchor=west,text=qink,font=\sffamily\fontsize{22}{28}\selectfont] at (2,4.7) {Yuxiao Ma};
+\node[anchor=west,text=qink!65,font=\small] at (2,3.55) {#1};
+\node[anchor=west,text=qink!55,font=\sffamily\small] at (2,2.65) {#2};
+\node[anchor=east,text=qteal,font=\sffamily\bfseries\fontsize{46}{46}\selectfont] at (19,3.75) {Q};
+\end{scope}
+\end{tikzpicture}
+\null\vfill
+\end{titlepage}
+\pagenumbering{roman}\hypersetup{pageanchor=true}\color{inkiron}}
+
+\begin{document}
+\color{inkiron}
+\coursecover{Project 5 · 配对交易：五道闸 · 填空笔记与同册答案（BIL17B双语教学候选）}{2026年10月16日}
+\begin{strand}一笔配对交易要连过五道闸才算数：筛选问价差会不会回来，对冲把 $\beta$ 翻译成美元和股数，信号只用当时已知的信息，账本让两条腿各付各的钱，评价把没赚钱的也摆出来。本册按这五道闸组织，约七成阅读、三成填写。真实价格实证因数据许可目前 blocked；所有数字来自题设手算或标注的教学构造面板，只演示方法，不是市场证据。\end{strand}
+\section*{主线：五道闸}
+\begin{tabularx}{\linewidth}{@{}l l L@{}}
+\toprule
+闸 & 要回答的问题 & \multicolumn{1}{l}{\color{indigo}你要带走的一句话（空白处自己补）}\\
+\midrule
+筛选 & 价差会回来吗 & \fillin[1.2cm]只看同步；协整看\fillin[2.2cm]；残差检验用\fillin[1.8cm]临界值\\
+对冲 & 买卖多少 & 对数 $\beta$ 是\fillin[1.0cm]；美元比 $\beta$，绝对股数比\fillin[2.0cm]\\
+信号 & 何时动手 & 参数只用\fillin[1.6cm]估计并冻结；收盘信号最早\fillin[2.2cm]成交\\
+账本 & 钱怎么走 & 点差冲击在\fillin[1.2cm]里，现金只另扣\fillin[1.0cm]；利息借券按区间\fillin[1.0cm]时的余额与标记；\fillin[2.6cm]\\
+评价 & 能说什么 & 对照\fillin[1.4cm]，报告\fillin[2.6cm]，按预注册规则下结论\\
+\bottomrule
+\end{tabularx}
+\par\smallskip{\small 题号对应 \texttt{projects/project05/exercises.md}：L01–L04 即 P5-01–P5-04，L05 即 P5-07，L06 即 P5-08，L07 即 P5-09，L08 即 P5-10，L09 即 P5-05，L10 即 P5-06。先修：第16、17、29、31、35、36章。}
+\begin{yourturn}遮住正文，按五道闸各写一句：这一闸的输入是什么、输出交给下一闸什么。\workspace[5]\end{yourturn}
+\input{sections/p05_s1_screen}
+\input{sections/p05_s2_hedge}
+\input{sections/p05_s3_signal}
+\input{sections/p05_s4_ledger}
+\input{sections/p05_s5_evaluate}
+\input{sections/p05_answers}
+\end{document}

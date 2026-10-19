@@ -1,0 +1,25 @@
+{
+ "schema": "p06-data-manifest.v1",
+ "updated": "2026-10-10",
+ "real_data": {
+  "status": "blocked",
+  "reason": "No licensed daily equity price panel is available for internal bank training use. A7-C verified that Yahoo (OTOS), Alpha Vantage (personal non-commercial), Tiingo (organizations need a Commercial plan; free tier forbids persistent storage) and Stooq (bot wall, not bypassed) do not satisfy the use; see qa/a7/project05_batch/DATA_SOURCE_DECISION.md. Project 6 does not inherit Project 5's 16 tickers or its Sharadar purchase candidate.",
+  "request_to_user": {
+   "fields": ["date", "asset_id (permanent)", "unadjusted open/close", "volume", "split ratio and ex-date", "cash dividend per share and ex-date", "delisting date and delisting return/cash", "index membership by date (for a frozen universe)"],
+   "frequency": "daily trading days",
+   "minimum_span": "at least 8 years so that 2 years of initial training plus 6 years of walk-forward tests exist",
+   "license_scope": "written permission for internal teaching/research use, persistent local storage, and derived statistics in internal training material",
+   "preferred_sources": "an institutional export (e.g. Wind, Bloomberg, WRDS/CRSP) under the bank's existing licence"
+  },
+  "sha256": null,
+  "download_date": null
+ },
+ "constructed_data": {
+  "status": "constructed",
+  "data_class": "CONSTRUCTED",
+  "generator": "quant_course.ml_pipeline.simulate_return_panel",
+  "config": "projects/project06/configs/p06_base_v1.json",
+  "purpose": "verify label timing, date-grouped validation, train-only preprocessing/tuning, prediction-to-position rule, lagged execution and cost ledger",
+  "not_evidence_of": "any real predictability, profitability, cost level or capacity"
+ }
+}

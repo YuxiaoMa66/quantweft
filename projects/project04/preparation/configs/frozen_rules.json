@@ -1,0 +1,33 @@
+{
+  "version": "p04-prep-0.1",
+  "status": "preparation layer only; a local file hash is not a pre-registration",
+  "time": {
+    "frequency": "monthly",
+    "signal_time": "last instant of calendar month t (UTC)",
+    "known_rule": "a fundamentals version is known for signal month t when available_at and ingested_at are strictly before the first instant of month t+1 (UTC)",
+    "trade_time": "first tradable price after signal_time (next month); the monthly layer approximates it by the month t+1 return and therefore cannot respect 'execute at the next tradable time' to the day (see gap_table)",
+    "return_interval": "calendar month t+1",
+    "label_interval": "calendar month t+1 (diagnostics only; labels never enter a signal, a transform or a parameter)"
+  },
+  "universe": {"rule": "listed at signal_time (as-of membership including later-delisted names)", "min_names_per_date": 60},
+  "fields": {
+    "value": ["book_to_market", "earnings_yield", "ev_to_ebitda_cheapness"],
+    "momentum": ["mom_12_1"],
+    "quality": ["gp_a", "neg_accrual", "roe_avg"]
+  },
+  "exclusions": {"financial_firms_missing_for": ["gp_a", "ev_to_ebitda_cheapness"], "non_positive_denominator": "NaN, never zero or inf"},
+  "preprocessing": {
+    "order": ["winsorize", "neutralize", "zscore"],
+    "winsorize": {"lower": 0.01, "upper": 0.99, "min_names": 30, "scope": "same-date cross-section"},
+    "neutralize": {"groups": "industry (static label known at signal_time)", "controls": ["log_market_cap"], "scope": "same-date cross-section"},
+    "zscore": {"ddof": 1, "min_names": 10, "scope": "same-date cross-section"}
+  },
+  "combination": {
+    "within_style": {"weights": "equal", "missing": "reweight", "min_factors": 1},
+    "across_styles": {"weights": {"value": 1.0, "momentum": 1.0, "quality": 1.0}, "missing": "reweight", "min_factors": 2},
+    "weights_fixed_before_labels": true
+  },
+  "portfolio": {"construction": "quantile long-short", "n_buckets": 5, "gross": 2.0, "industry_neutral": {"method": "project_to_constraints on industry indicator rows", "optional": true},
+                "costs": "NOT INCLUDED in this layer", "borrow_financing": "NOT INCLUDED", "capacity": "NOT INCLUDED"},
+  "trial_ledger": "every variant evaluated is recorded in qa/a5/claude/results/p04 (counts in the results file)"
+}

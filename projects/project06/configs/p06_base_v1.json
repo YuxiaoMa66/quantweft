@@ -1,0 +1,42 @@
+{
+ "schema": "p06-config.v1",
+ "frozen_at": "2026-10-10T13:10:00Z",
+ "frozen_by": "Claude (A8-A host), before any Project 6 run",
+ "status": "frozen; any change creates p06_base_v2 and keeps this file",
+ "seen_before_freeze": [
+  "Chapter 38 constructed runs (seeds 3801-3803): validation-scheme comparison, selection leakage, Ridge panel case",
+  "Chapter 39 constructed runs (seed 3904): six-model comparison; Ridge grid widened to 1e7 after it hit 1e6; Lasso grid top 3e-3 gives all-zero folds",
+  "No Project 6 seed (6061) result and no real data were seen"
+ ],
+ "data": {
+  "source": "constructed",
+  "generator": "quant_course.ml_pipeline.simulate_return_panel",
+  "params": {"n_assets": 40, "n_days": 1512, "n_signal": 3, "n_noise": 40, "signal_loading": 0.0003,
+             "char_rho": 0.98, "idio_vol": 0.02, "market_vol": 0.01, "regime_break": null,
+             "start": "2015-01-02", "seed": 6061},
+  "scenarios": {"regime_flip_at_75pct": {"regime_break": 0.75}}
+ },
+ "features": {"price": ["rev_5", "mom_60_5", "vol_20"], "characteristics": "all q_* and noise_* columns"},
+ "labels": {"horizon": 5, "execution_lag": 1, "return": "simple, close[label_end]/close[label_start]-1"},
+ "validation": {"scheme": "date-grouped expanding walk-forward", "min_train_dates": 504, "test_dates": 63,
+                "inner_val_dates": 63, "inner_folds": 2, "inner_min_train_dates": 252,
+                "shuffled_kfold": "forbidden"},
+ "models": {
+  "zero": [{}], "train_mean": [{}], "ols": [{}],
+  "ridge": [{"alpha": 1e2}, {"alpha": 1e3}, {"alpha": 1e4}, {"alpha": 1e5}, {"alpha": 1e6}, {"alpha": 1e7}],
+  "lasso": [{"alpha": 3e-3}, {"alpha": 1e-3}, {"alpha": 3e-4}, {"alpha": 1e-4}, {"alpha": 3e-5}],
+  "elasticnet": [{"alpha": 3e-3, "l1_ratio": 0.2}, {"alpha": 3e-3, "l1_ratio": 0.5}, {"alpha": 3e-3, "l1_ratio": 0.8},
+                 {"alpha": 1e-3, "l1_ratio": 0.2}, {"alpha": 1e-3, "l1_ratio": 0.5}, {"alpha": 1e-3, "l1_ratio": 0.8},
+                 {"alpha": 3e-4, "l1_ratio": 0.2}, {"alpha": 3e-4, "l1_ratio": 0.5}, {"alpha": 3e-4, "l1_ratio": 0.8},
+                 {"alpha": 1e-4, "l1_ratio": 0.2}, {"alpha": 1e-4, "l1_ratio": 0.5}, {"alpha": 1e-4, "l1_ratio": 0.8}]
+ },
+ "selection_rule": "minimum mean inner-validation MSE; ties -> earlier grid entry",
+ "portfolio": {"rule": "cross-sectional demeaned predictions, sum|w| = 1, dollar neutral; flat if fewer than 2 finite predictions or zero dispersion",
+               "rebalance_every_signal_dates": 5, "execution": "next trading-day close (lag 1)",
+               "fee_rates_one_way": [0.0, 0.001, 0.002], "initial_cash": 1000000.0,
+               "not_modelled": ["borrow fees", "financing spread", "market impact", "capacity", "margin"]},
+ "evaluation": {"prediction": ["R2_OS vs zero", "R2_OS vs train mean", "daily Spearman IC mean", "IC Newey-West t (lags h-1)", "hit rate"],
+                "portfolio": ["total return", "annualised mean and vol", "Sharpe (rf=0)", "max drawdown", "annual turnover", "total fees"],
+                "pass_gate_for_teaching_pipeline": "mechanics only; no economic claim is made from constructed data"},
+ "out_of_scope_until_chapter_40": ["tree models", "feature importance", "ablation", "full empirical report"]
+}

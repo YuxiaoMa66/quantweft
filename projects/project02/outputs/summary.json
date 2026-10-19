@@ -1,0 +1,2228 @@
+{
+  "project": "Project 2 — CAPM and Fama-French Factor Attribution",
+  "status": "verified",
+  "scope": "descriptive regression on the frozen current published snapshot; not causal, point-in-time, ex-ante prediction, or cost-adjusted trading alpha",
+  "sample": {
+    "start_month": "2010-01",
+    "end_month": "2019-12",
+    "frequency": "monthly PeriodIndex intervals",
+    "n_months_per_asset": 120,
+    "assets": [
+      {
+        "column": "NoDur",
+        "label_zh": "非耐用品"
+      },
+      {
+        "column": "HiTec",
+        "label_zh": "高科技"
+      },
+      {
+        "column": "Enrgy",
+        "label_zh": "能源"
+      }
+    ],
+    "return_type": "published value-weighted industry total return including dividends",
+    "currency_convention": "USD return series as described by the frozen source preparation"
+  },
+  "units_and_timing": {
+    "asset_return": "decimal simple monthly total return",
+    "target": "asset total return minus same-month RF exactly once",
+    "factor_spreads": "published factor series unchanged",
+    "alignment": "identical consecutive 120-month PeriodIndex; no fill, shift, or row dropping",
+    "event_time": "historical within-month event timestamps unavailable",
+    "available_at": "historical month-by-month publication/ingestion timestamps unavailable; only the 2026-10-05 snapshot download time is recorded in the manifest",
+    "signal_time": "not applicable; no signal constructed",
+    "trade_time": "not applicable; no trade simulated",
+    "return_interval": "calendar month represented by YYYYMM",
+    "label_interval": "same calendar month; descriptive attribution target, not a future label"
+  },
+  "source_manifest": "projects/project02/data_manifest.json",
+  "models": {
+    "NoDur": {
+      "capm": {
+        "asset": "NoDur",
+        "asset_label_zh": "非耐用品",
+        "model": "capm",
+        "model_label": "CAPM",
+        "factor_snapshot": "ff3",
+        "factors": [
+          "Mkt-RF"
+        ],
+        "nobs": 120,
+        "condition_number": 26.855896794708855,
+        "r_squared": 0.5607993620708411,
+        "adjusted_r_squared": 0.5570773227663568,
+        "hac": {
+          "kernel": "Bartlett",
+          "maxlags_monthly_rows": 6,
+          "finite_sample_correction": true,
+          "t_reference": true,
+          "interpretation": "HAC standard errors and t-based intervals are approximations; assumptions are not verified here."
+        },
+        "coefficients_hac6": {
+          "const": {
+            "estimate": 0.002603392167217396,
+            "standard_error_hac": 0.0019320971830518998,
+            "t_hac": 1.3474436948896809,
+            "p_hac": 0.18041896560982318,
+            "ci_low_hac": -0.0012226862672787666,
+            "ci_high_hac": 0.006429470601713559,
+            "p_holm_across_nine_alphas": 1.0
+          },
+          "Mkt-RF": {
+            "estimate": 0.6456297586832428,
+            "standard_error_hac": 0.05372401427418343,
+            "t_hac": 12.017526378208377,
+            "p_hac": 3.250735160833491e-22,
+            "ci_low_hac": 0.5392415840965322,
+            "ci_high_hac": 0.7520179332699534
+          }
+        },
+        "sample_variance_decomposition": {
+          "observed_excess_variance_ddof1": 0.001039486380252101,
+          "fitted_excess_variance_ddof1": 0.0005829432989267064,
+          "residual_variance_ddof1": 0.0004565430813253949,
+          "fitted_residual_covariance_ddof1": -2.405288853245153e-19,
+          "fitted_share_of_observed_variance": 0.5607993620708415,
+          "residual_share_of_observed_variance": 0.4392006379291588,
+          "identity_holds_within_tolerance": true
+        },
+        "residual_diagnostics": {
+          "mean": -2.544261098099317e-18,
+          "sample_standard_deviation_ddof1": 0.021366868776809458,
+          "rmse": 0.021277653903748018,
+          "mean_absolute_residual": 0.01686309036094645,
+          "maximum_absolute_residual": 0.072780998439223,
+          "lag1_sample_autocorrelation": -0.06287420305107333
+        },
+        "hac_sensitivity": {
+          "3": {
+            "const": {
+              "estimate": 0.002603392167217396,
+              "standard_error_hac": 0.001958772775977013,
+              "t_hac": 1.3290935013729985,
+              "p_hac": 0.18638126289445356,
+              "ci_low_hac": -0.0012755112036812702,
+              "ci_high_hac": 0.006482295538116063
+            },
+            "Mkt-RF": {
+              "estimate": 0.6456297586832428,
+              "standard_error_hac": 0.054247177166174554,
+              "t_hac": 11.901628663653685,
+              "p_hac": 6.10870989384769e-22,
+              "ci_low_hac": 0.5382055791396728,
+              "ci_high_hac": 0.7530539382268128
+            }
+          },
+          "6": {
+            "const": {
+              "estimate": 0.002603392167217396,
+              "standard_error_hac": 0.0019320971830518998,
+              "t_hac": 1.3474436948896809,
+              "p_hac": 0.18041896560982318,
+              "ci_low_hac": -0.0012226862672787666,
+              "ci_high_hac": 0.006429470601713559
+            },
+            "Mkt-RF": {
+              "estimate": 0.6456297586832428,
+              "standard_error_hac": 0.05372401427418343,
+              "t_hac": 12.017526378208377,
+              "p_hac": 3.250735160833491e-22,
+              "ci_low_hac": 0.5392415840965322,
+              "ci_high_hac": 0.7520179332699534
+            }
+          },
+          "12": {
+            "const": {
+              "estimate": 0.002603392167217396,
+              "standard_error_hac": 0.002088065686685101,
+              "t_hac": 1.246796105993389,
+              "p_hac": 0.21494146857373245,
+              "ci_low_hac": -0.0015315463667842266,
+              "ci_high_hac": 0.006738330701219019
+            },
+            "Mkt-RF": {
+              "estimate": 0.6456297586832428,
+              "standard_error_hac": 0.05489261389117323,
+              "t_hac": 11.761687282067296,
+              "p_hac": 1.3095537397143875e-21,
+              "ci_low_hac": 0.5369274387044962,
+              "ci_high_hac": 0.7543320786619894
+            }
+          }
+        },
+        "chronological_attribution_check": {
+          "estimation_window": [
+            "2010-01",
+            "2014-12"
+          ],
+          "evaluation_window": [
+            "2015-01",
+            "2019-12"
+          ],
+          "estimation_nobs": 60,
+          "evaluation_nobs": 60,
+          "training_coefficients_hac6": {
+            "const": {
+              "estimate": 0.005246380456190844,
+              "standard_error_hac": 0.002231784310006108,
+              "t_hac": 2.3507560442417867,
+              "p_hac": 0.02215652179964761,
+              "ci_low_hac": 0.0007789787820106061,
+              "ci_high_hac": 0.009713782130371083
+            },
+            "Mkt-RF": {
+              "estimate": 0.6513616339883428,
+              "standard_error_hac": 0.058948397812484815,
+              "t_hac": 11.049691902743952,
+              "p_hac": 6.748323320163787e-16,
+              "ci_low_hac": 0.5333635954247432,
+              "ci_high_hac": 0.7693596725519424
+            }
+          },
+          "evaluation_same_month_attribution_error": {
+            "mean": -0.005411495094003082,
+            "sample_standard_deviation_ddof1": 0.023025692432054566,
+            "rmse": 0.0234655154626614,
+            "mean_absolute_residual": 0.01746585812973763,
+            "maximum_absolute_residual": 0.0757025558680243,
+            "lag1_sample_autocorrelation": -0.10381350897303136
+          },
+          "timing_limit": "Evaluation factors are realized during the same month and are only observed after month-end; this is not ex-ante prediction or strategy performance."
+        }
+      },
+      "ff3": {
+        "asset": "NoDur",
+        "asset_label_zh": "非耐用品",
+        "model": "ff3",
+        "model_label": "FF3",
+        "factor_snapshot": "ff3",
+        "factors": [
+          "Mkt-RF",
+          "SMB",
+          "HML"
+        ],
+        "nobs": 120,
+        "condition_number": 50.267821081432956,
+        "r_squared": 0.6449619292529103,
+        "adjusted_r_squared": 0.6357799101818649,
+        "hac": {
+          "kernel": "Bartlett",
+          "maxlags_monthly_rows": 6,
+          "finite_sample_correction": true,
+          "t_reference": true,
+          "interpretation": "HAC standard errors and t-based intervals are approximations; assumptions are not verified here."
+        },
+        "coefficients_hac6": {
+          "const": {
+            "estimate": 0.001194674972166453,
+            "standard_error_hac": 0.0018111311449521992,
+            "t_hac": 0.659629191125187,
+            "p_hac": 0.5107993134002559,
+            "ci_low_hac": -0.0023924984673893757,
+            "ci_high_hac": 0.004781848411722281,
+            "p_holm_across_nine_alphas": 1.0
+          },
+          "Mkt-RF": {
+            "estimate": 0.7468628794875549,
+            "standard_error_hac": 0.050831063974944184,
+            "t_hac": 14.693040457616647,
+            "p_hac": 3.03004765978558e-28,
+            "ci_low_hac": 0.646185552446119,
+            "ci_high_hac": 0.8475402065289909
+          },
+          "SMB": {
+            "estimate": -0.42423887837012686,
+            "standard_error_hac": 0.09439444199118838,
+            "t_hac": -4.494320528000252,
+            "p_hac": 1.6619877965185834e-05,
+            "ci_low_hac": -0.6111989646654907,
+            "ci_high_hac": -0.237278792074763
+          },
+          "HML": {
+            "estimate": -0.11715785573291197,
+            "standard_error_hac": 0.09440572446726814,
+            "t_hac": -1.2410037250816537,
+            "p_hac": 0.21710824415632313,
+            "ci_low_hac": -0.30414028839377155,
+            "ci_high_hac": 0.0698245769279476
+          }
+        },
+        "sample_variance_decomposition": {
+          "observed_excess_variance_ddof1": 0.001039486380252101,
+          "fitted_excess_variance_ddof1": 0.0006704291412395192,
+          "residual_variance_ddof1": 0.00036905723901258165,
+          "fitted_residual_covariance_ddof1": 2.5510639352600104e-20,
+          "fitted_share_of_observed_variance": 0.6449619292529102,
+          "residual_share_of_observed_variance": 0.35503807074708976,
+          "identity_holds_within_tolerance": true
+        },
+        "residual_diagnostics": {
+          "mean": -2.312964634635743e-19,
+          "sample_standard_deviation_ddof1": 0.019210862526513005,
+          "rmse": 0.019130649806548918,
+          "mean_absolute_residual": 0.014547604596217869,
+          "maximum_absolute_residual": 0.05695660353490767,
+          "lag1_sample_autocorrelation": -0.07245854166723341
+        },
+        "hac_sensitivity": {
+          "3": {
+            "const": {
+              "estimate": 0.001194674972166453,
+              "standard_error_hac": 0.0017566638959071108,
+              "t_hac": 0.6800817019977197,
+              "p_hac": 0.497807765701106,
+              "ci_low_hac": -0.0022846192176482587,
+              "ci_high_hac": 0.004673969161981165
+            },
+            "Mkt-RF": {
+              "estimate": 0.7468628794875549,
+              "standard_error_hac": 0.052210133160608664,
+              "t_hac": 14.304941096205548,
+              "p_hac": 2.261761453138066e-27,
+              "ci_low_hac": 0.6434541321578018,
+              "ci_high_hac": 0.8502716268173081
+            },
+            "SMB": {
+              "estimate": -0.42423887837012686,
+              "standard_error_hac": 0.09192652665146621,
+              "t_hac": -4.614977785232793,
+              "p_hac": 1.0216683521025965e-05,
+              "ci_low_hac": -0.6063109473717694,
+              "ci_high_hac": -0.24216680936848436
+            },
+            "HML": {
+              "estimate": -0.11715785573291197,
+              "standard_error_hac": 0.09093220151034807,
+              "t_hac": -1.288408878119809,
+              "p_hac": 0.20016757285795383,
+              "ci_low_hac": -0.2972605385051571,
+              "ci_high_hac": 0.06294482703933314
+            }
+          },
+          "6": {
+            "const": {
+              "estimate": 0.001194674972166453,
+              "standard_error_hac": 0.0018111311449521992,
+              "t_hac": 0.659629191125187,
+              "p_hac": 0.5107993134002559,
+              "ci_low_hac": -0.0023924984673893757,
+              "ci_high_hac": 0.004781848411722281
+            },
+            "Mkt-RF": {
+              "estimate": 0.7468628794875549,
+              "standard_error_hac": 0.050831063974944184,
+              "t_hac": 14.693040457616647,
+              "p_hac": 3.03004765978558e-28,
+              "ci_low_hac": 0.646185552446119,
+              "ci_high_hac": 0.8475402065289909
+            },
+            "SMB": {
+              "estimate": -0.42423887837012686,
+              "standard_error_hac": 0.09439444199118838,
+              "t_hac": -4.494320528000252,
+              "p_hac": 1.6619877965185834e-05,
+              "ci_low_hac": -0.6111989646654907,
+              "ci_high_hac": -0.237278792074763
+            },
+            "HML": {
+              "estimate": -0.11715785573291197,
+              "standard_error_hac": 0.09440572446726814,
+              "t_hac": -1.2410037250816537,
+              "p_hac": 0.21710824415632313,
+              "ci_low_hac": -0.30414028839377155,
+              "ci_high_hac": 0.0698245769279476
+            }
+          },
+          "12": {
+            "const": {
+              "estimate": 0.001194674972166453,
+              "standard_error_hac": 0.002035288738706264,
+              "t_hac": 0.5869805838585099,
+              "p_hac": 0.5583574430934136,
+              "ci_low_hac": -0.002836470826227337,
+              "ci_high_hac": 0.005225820770560243
+            },
+            "Mkt-RF": {
+              "estimate": 0.7468628794875549,
+              "standard_error_hac": 0.05197919471811953,
+              "t_hac": 14.368496540543838,
+              "p_hac": 1.6255857820492954e-27,
+              "ci_low_hac": 0.6439115348419632,
+              "ci_high_hac": 0.8498142241331467
+            },
+            "SMB": {
+              "estimate": -0.42423887837012686,
+              "standard_error_hac": 0.08865554836246443,
+              "t_hac": -4.785249047647241,
+              "p_hac": 5.073497865643495e-06,
+              "ci_low_hac": -0.5998323627190933,
+              "ci_high_hac": -0.24864539402116043
+            },
+            "HML": {
+              "estimate": -0.11715785573291197,
+              "standard_error_hac": 0.09606145643819303,
+              "t_hac": -1.2196135690311192,
+              "p_hac": 0.22508536757028236,
+              "ci_low_hac": -0.3074196741884882,
+              "ci_high_hac": 0.07310396272266427
+            }
+          }
+        },
+        "chronological_attribution_check": {
+          "estimation_window": [
+            "2010-01",
+            "2014-12"
+          ],
+          "evaluation_window": [
+            "2015-01",
+            "2019-12"
+          ],
+          "estimation_nobs": 60,
+          "evaluation_nobs": 60,
+          "training_coefficients_hac6": {
+            "const": {
+              "estimate": 0.0037897300639198046,
+              "standard_error_hac": 0.0019168113435338865,
+              "t_hac": 1.9771012294475225,
+              "p_hac": 0.052961241764776575,
+              "ci_low_hac": -5.010446979677313e-05,
+              "ci_high_hac": 0.007629564597636382
+            },
+            "Mkt-RF": {
+              "estimate": 0.7848974874116086,
+              "standard_error_hac": 0.0661156062960283,
+              "t_hac": 11.871591767566668,
+              "p_hac": 6.366109383364527e-17,
+              "ci_low_hac": 0.65245201272809,
+              "ci_high_hac": 0.9173429620951272
+            },
+            "SMB": {
+              "estimate": -0.3791295279323814,
+              "standard_error_hac": 0.15801963078413622,
+              "t_hac": -2.3992558775832977,
+              "p_hac": 0.019781286634465323,
+              "ci_low_hac": -0.6956808866964698,
+              "ci_high_hac": -0.06257816916829306
+            },
+            "HML": {
+              "estimate": -0.28390700590831086,
+              "standard_error_hac": 0.15687196501744852,
+              "t_hac": -1.8098007880294769,
+              "p_hac": 0.07569413048017773,
+              "ci_low_hac": -0.5981593138769425,
+              "ci_high_hac": 0.030345302060320878
+            }
+          },
+          "evaluation_same_month_attribution_error": {
+            "mean": -0.006660438081320023,
+            "sample_standard_deviation_ddof1": 0.02120085739837809,
+            "rmse": 0.022053265456337484,
+            "mean_absolute_residual": 0.01656078262243209,
+            "maximum_absolute_residual": 0.05800318972801193,
+            "lag1_sample_autocorrelation": -0.18037364181311402
+          },
+          "timing_limit": "Evaluation factors are realized during the same month and are only observed after month-end; this is not ex-ante prediction or strategy performance."
+        }
+      },
+      "ff5": {
+        "asset": "NoDur",
+        "asset_label_zh": "非耐用品",
+        "model": "ff5",
+        "model_label": "FF5",
+        "factor_snapshot": "ff5",
+        "factors": [
+          "Mkt-RF",
+          "SMB",
+          "HML",
+          "RMW",
+          "CMA"
+        ],
+        "nobs": 120,
+        "condition_number": 99.36738531579286,
+        "r_squared": 0.7265084935780675,
+        "adjusted_r_squared": 0.7145132520683336,
+        "hac": {
+          "kernel": "Bartlett",
+          "maxlags_monthly_rows": 6,
+          "finite_sample_correction": true,
+          "t_reference": true,
+          "interpretation": "HAC standard errors and t-based intervals are approximations; assumptions are not verified here."
+        },
+        "coefficients_hac6": {
+          "const": {
+            "estimate": -0.0004716374176230468,
+            "standard_error_hac": 0.001605832231949237,
+            "t_hac": -0.2937027967426899,
+            "p_hac": 0.7695190552097694,
+            "ci_low_hac": -0.003652778700955865,
+            "ci_high_hac": 0.0027095038657097715,
+            "p_holm_across_nine_alphas": 1.0
+          },
+          "Mkt-RF": {
+            "estimate": 0.8121197458325939,
+            "standard_error_hac": 0.04513303851690565,
+            "t_hac": 17.993908066446608,
+            "p_hac": 4.2528264291873136e-35,
+            "ci_low_hac": 0.7227115441463562,
+            "ci_high_hac": 0.9015279475188317
+          },
+          "SMB": {
+            "estimate": -0.2960902532811702,
+            "standard_error_hac": 0.1136471686128236,
+            "t_hac": -2.605346502647144,
+            "p_hac": 0.010402052278752806,
+            "ci_low_hac": -0.5212244189899373,
+            "ci_high_hac": -0.0709560875724031
+          },
+          "HML": {
+            "estimate": -0.25074713654411956,
+            "standard_error_hac": 0.08104571229825719,
+            "t_hac": -3.0938976218919807,
+            "p_hac": 0.0024850832835516313,
+            "ci_low_hac": -0.41129806839093425,
+            "ci_high_hac": -0.09019620469730488
+          },
+          "RMW": {
+            "estimate": 0.5262654105359437,
+            "standard_error_hac": 0.11893562694392049,
+            "t_hac": 4.424791999323162,
+            "p_hac": 2.220479123449779e-05,
+            "ci_low_hac": 0.29065484960510735,
+            "ci_high_hac": 0.76187597146678
+          },
+          "CMA": {
+            "estimate": 0.4814753548047241,
+            "standard_error_hac": 0.13989370835956388,
+            "t_hac": 3.4417227225630826,
+            "p_hac": 0.0008089040531389451,
+            "ci_low_hac": 0.2043469960091473,
+            "ci_high_hac": 0.7586037136003009
+          }
+        },
+        "sample_variance_decomposition": {
+          "observed_excess_variance_ddof1": 0.001039486380252101,
+          "fitted_excess_variance_ddof1": 0.0007551956842118728,
+          "residual_variance_ddof1": 0.0002842906960402288,
+          "fitted_residual_covariance_ddof1": -3.061276722312012e-19,
+          "fitted_share_of_observed_variance": 0.7265084935780681,
+          "residual_share_of_observed_variance": 0.2734915064219325,
+          "identity_holds_within_tolerance": true
+        },
+        "residual_diagnostics": {
+          "mean": -2.9374650859873934e-17,
+          "sample_standard_deviation_ddof1": 0.016860922158655166,
+          "rmse": 0.016790521341118633,
+          "mean_absolute_residual": 0.012966773590202133,
+          "maximum_absolute_residual": 0.053136454770953134,
+          "lag1_sample_autocorrelation": -0.2001158903495795
+        },
+        "hac_sensitivity": {
+          "3": {
+            "const": {
+              "estimate": -0.0004716374176230468,
+              "standard_error_hac": 0.0015051977152798171,
+              "t_hac": -0.3133391798534381,
+              "p_hac": 0.7545955519741596,
+              "ci_low_hac": -0.0034534224985232217,
+              "ci_high_hac": 0.002510147663277128
+            },
+            "Mkt-RF": {
+              "estimate": 0.8121197458325939,
+              "standard_error_hac": 0.04728530375927132,
+              "t_hac": 17.174886936691404,
+              "p_hac": 2.0835845108991023e-33,
+              "ci_low_hac": 0.7184479232780286,
+              "ci_high_hac": 0.9057915683871592
+            },
+            "SMB": {
+              "estimate": -0.2960902532811702,
+              "standard_error_hac": 0.10676073162692194,
+              "t_hac": -2.7734003764217827,
+              "p_hac": 0.0064827094680017325,
+              "ci_low_hac": -0.50758244036037,
+              "ci_high_hac": -0.08459806620197038
+            },
+            "HML": {
+              "estimate": -0.25074713654411956,
+              "standard_error_hac": 0.077185243574203,
+              "t_hac": -3.2486408662176554,
+              "p_hac": 0.001523881240327195,
+              "ci_low_hac": -0.4036505095820062,
+              "ci_high_hac": -0.09784376350623292
+            },
+            "RMW": {
+              "estimate": 0.5262654105359437,
+              "standard_error_hac": 0.10928291224331248,
+              "t_hac": 4.815623959253962,
+              "p_hac": 4.548849842781931e-06,
+              "ci_low_hac": 0.3097768030815702,
+              "ci_high_hac": 0.7427540179903172
+            },
+            "CMA": {
+              "estimate": 0.4814753548047241,
+              "standard_error_hac": 0.1306792346769551,
+              "t_hac": 3.6844059884108797,
+              "p_hac": 0.0003522333697383051,
+              "ci_low_hac": 0.2226007974042965,
+              "ci_high_hac": 0.7403499122051517
+            }
+          },
+          "6": {
+            "const": {
+              "estimate": -0.0004716374176230468,
+              "standard_error_hac": 0.001605832231949237,
+              "t_hac": -0.2937027967426899,
+              "p_hac": 0.7695190552097694,
+              "ci_low_hac": -0.003652778700955865,
+              "ci_high_hac": 0.0027095038657097715
+            },
+            "Mkt-RF": {
+              "estimate": 0.8121197458325939,
+              "standard_error_hac": 0.04513303851690565,
+              "t_hac": 17.993908066446608,
+              "p_hac": 4.2528264291873136e-35,
+              "ci_low_hac": 0.7227115441463562,
+              "ci_high_hac": 0.9015279475188317
+            },
+            "SMB": {
+              "estimate": -0.2960902532811702,
+              "standard_error_hac": 0.1136471686128236,
+              "t_hac": -2.605346502647144,
+              "p_hac": 0.010402052278752806,
+              "ci_low_hac": -0.5212244189899373,
+              "ci_high_hac": -0.0709560875724031
+            },
+            "HML": {
+              "estimate": -0.25074713654411956,
+              "standard_error_hac": 0.08104571229825719,
+              "t_hac": -3.0938976218919807,
+              "p_hac": 0.0024850832835516313,
+              "ci_low_hac": -0.41129806839093425,
+              "ci_high_hac": -0.09019620469730488
+            },
+            "RMW": {
+              "estimate": 0.5262654105359437,
+              "standard_error_hac": 0.11893562694392049,
+              "t_hac": 4.424791999323162,
+              "p_hac": 2.220479123449779e-05,
+              "ci_low_hac": 0.29065484960510735,
+              "ci_high_hac": 0.76187597146678
+            },
+            "CMA": {
+              "estimate": 0.4814753548047241,
+              "standard_error_hac": 0.13989370835956388,
+              "t_hac": 3.4417227225630826,
+              "p_hac": 0.0008089040531389451,
+              "ci_low_hac": 0.2043469960091473,
+              "ci_high_hac": 0.7586037136003009
+            }
+          },
+          "12": {
+            "const": {
+              "estimate": -0.0004716374176230468,
+              "standard_error_hac": 0.0018438522108657398,
+              "t_hac": -0.25578916512056027,
+              "p_hac": 0.7985746064433168,
+              "ci_low_hac": -0.004124294445953833,
+              "ci_high_hac": 0.0031810196107077394
+            },
+            "Mkt-RF": {
+              "estimate": 0.8121197458325939,
+              "standard_error_hac": 0.044628086494396785,
+              "t_hac": 18.19750317850976,
+              "p_hac": 1.6377907107042e-35,
+              "ci_low_hac": 0.7237118502137936,
+              "ci_high_hac": 0.9005276414513943
+            },
+            "SMB": {
+              "estimate": -0.2960902532811702,
+              "standard_error_hac": 0.11557591590924556,
+              "t_hac": -2.561868110252928,
+              "p_hac": 0.01171566617862937,
+              "ci_low_hac": -0.525045252528891,
+              "ci_high_hac": -0.06713525403344947
+            },
+            "HML": {
+              "estimate": -0.25074713654411956,
+              "standard_error_hac": 0.08386114123319005,
+              "t_hac": -2.990027715540799,
+              "p_hac": 0.003418246774073123,
+              "ci_low_hac": -0.4168754114265346,
+              "ci_high_hac": -0.08461886166170451
+            },
+            "RMW": {
+              "estimate": 0.5262654105359437,
+              "standard_error_hac": 0.13754775806264788,
+              "t_hac": 3.8260558946824084,
+              "p_hac": 0.00021302117339982998,
+              "ci_low_hac": 0.25378436120999165,
+              "ci_high_hac": 0.7987464598618956
+            },
+            "CMA": {
+              "estimate": 0.4814753548047241,
+              "standard_error_hac": 0.1365038871204942,
+              "t_hac": 3.527191532499862,
+              "p_hac": 0.0006062585600856846,
+              "ci_low_hac": 0.2110622057752593,
+              "ci_high_hac": 0.7518885038341889
+            }
+          }
+        },
+        "chronological_attribution_check": {
+          "estimation_window": [
+            "2010-01",
+            "2014-12"
+          ],
+          "evaluation_window": [
+            "2015-01",
+            "2019-12"
+          ],
+          "estimation_nobs": 60,
+          "evaluation_nobs": 60,
+          "training_coefficients_hac6": {
+            "const": {
+              "estimate": 0.0014371735871223515,
+              "standard_error_hac": 0.0014658903379084589,
+              "t_hac": 0.9804100279239983,
+              "p_hac": 0.3312559531404529,
+              "ci_low_hac": -0.0015017595901053089,
+              "ci_high_hac": 0.0043761067643500115
+            },
+            "Mkt-RF": {
+              "estimate": 0.8305425144182816,
+              "standard_error_hac": 0.04092491347972193,
+              "t_hac": 20.29430104549423,
+              "p_hac": 6.183629469030172e-27,
+              "ci_low_hac": 0.7484930030118989,
+              "ci_high_hac": 0.9125920258246644
+            },
+            "SMB": {
+              "estimate": -0.21555013875932652,
+              "standard_error_hac": 0.16965406160082347,
+              "t_hac": -1.270527429319619,
+              "p_hac": 0.20934357220709732,
+              "ci_low_hac": -0.5556860530197981,
+              "ci_high_hac": 0.12458577550114511
+            },
+            "HML": {
+              "estimate": -0.342998253483052,
+              "standard_error_hac": 0.14559316082216173,
+              "t_hac": -2.355867896171411,
+              "p_hac": 0.02213993210832223,
+              "ci_low_hac": -0.6348949661172368,
+              "ci_high_hac": -0.0511015408488672
+            },
+            "RMW": {
+              "estimate": 0.5533880795646635,
+              "standard_error_hac": 0.13001710967448804,
+              "t_hac": 4.256271201152916,
+              "p_hac": 8.333174226554416e-05,
+              "ci_low_hac": 0.29271946926820747,
+              "ci_high_hac": 0.8140566898611196
+            },
+            "CMA": {
+              "estimate": 0.4571789533641618,
+              "standard_error_hac": 0.23528786504463162,
+              "t_hac": 1.9430621858778812,
+              "p_hac": 0.05722939316931973,
+              "ci_low_hac": -0.014544814025806707,
+              "ci_high_hac": 0.9289027207541303
+            }
+          },
+          "evaluation_same_month_attribution_error": {
+            "mean": -0.004587629575275599,
+            "sample_standard_deviation_ddof1": 0.018922711388733724,
+            "rmse": 0.019317027065507978,
+            "mean_absolute_residual": 0.01515525021878395,
+            "maximum_absolute_residual": 0.05293204771430809,
+            "lag1_sample_autocorrelation": -0.2301431791815679
+          },
+          "timing_limit": "Evaluation factors are realized during the same month and are only observed after month-end; this is not ex-ante prediction or strategy performance."
+        }
+      }
+    },
+    "HiTec": {
+      "capm": {
+        "asset": "HiTec",
+        "asset_label_zh": "高科技",
+        "model": "capm",
+        "model_label": "CAPM",
+        "factor_snapshot": "ff3",
+        "factors": [
+          "Mkt-RF"
+        ],
+        "nobs": 120,
+        "condition_number": 26.855896794708855,
+        "r_squared": 0.8287858414627234,
+        "adjusted_r_squared": 0.8273348740174922,
+        "hac": {
+          "kernel": "Bartlett",
+          "maxlags_monthly_rows": 6,
+          "finite_sample_correction": true,
+          "t_reference": true,
+          "interpretation": "HAC standard errors and t-based intervals are approximations; assumptions are not verified here."
+        },
+        "coefficients_hac6": {
+          "const": {
+            "estimate": 0.0014140588139699521,
+            "standard_error_hac": 0.0015058322656984486,
+            "t_hac": 0.9390546651051276,
+            "p_hac": 0.34962090579905075,
+            "ci_low_hac": -0.0015678990338525336,
+            "ci_high_hac": 0.004396016661792438,
+            "p_holm_across_nine_alphas": 1.0
+          },
+          "Mkt-RF": {
+            "estimate": 1.0966686523507159,
+            "standard_error_hac": 0.03769406210126374,
+            "t_hac": 29.09393658355406,
+            "p_hac": 1.1514897895093545e-55,
+            "ci_low_hac": 1.022024147209211,
+            "ci_high_hac": 1.1713131574922206
+          }
+        },
+        "sample_variance_decomposition": {
+          "observed_excess_variance_ddof1": 0.002029400535014006,
+          "fitted_excess_variance_ddof1": 0.0016819384300764842,
+          "residual_variance_ddof1": 0.000347462104937522,
+          "fitted_residual_covariance_ddof1": -2.0772949187117226e-19,
+          "fitted_share_of_observed_variance": 0.8287858414627235,
+          "residual_share_of_observed_variance": 0.17121415853727662,
+          "identity_holds_within_tolerance": true
+        },
+        "residual_diagnostics": {
+          "mean": 1.0408340855860842e-18,
+          "sample_standard_deviation_ddof1": 0.018640335429855385,
+          "rmse": 0.01856250487936302,
+          "mean_absolute_residual": 0.014935792914569512,
+          "maximum_absolute_residual": 0.05360341041559655,
+          "lag1_sample_autocorrelation": -0.14561065207676088
+        },
+        "hac_sensitivity": {
+          "3": {
+            "const": {
+              "estimate": 0.0014140588139699521,
+              "standard_error_hac": 0.00153192404715631,
+              "t_hac": 0.9230606547334057,
+              "p_hac": 0.3578592013346999,
+              "ci_low_hac": -0.0016195678646076315,
+              "ci_high_hac": 0.004447685492547536
+            },
+            "Mkt-RF": {
+              "estimate": 1.0966686523507159,
+              "standard_error_hac": 0.043581017054581894,
+              "t_hac": 25.163906821569174,
+              "p_hac": 2.966299695981081e-49,
+              "ci_low_hac": 1.010366373682435,
+              "ci_high_hac": 1.1829709310189966
+            }
+          },
+          "6": {
+            "const": {
+              "estimate": 0.0014140588139699521,
+              "standard_error_hac": 0.0015058322656984486,
+              "t_hac": 0.9390546651051276,
+              "p_hac": 0.34962090579905075,
+              "ci_low_hac": -0.0015678990338525336,
+              "ci_high_hac": 0.004396016661792438
+            },
+            "Mkt-RF": {
+              "estimate": 1.0966686523507159,
+              "standard_error_hac": 0.03769406210126374,
+              "t_hac": 29.09393658355406,
+              "p_hac": 1.1514897895093545e-55,
+              "ci_low_hac": 1.022024147209211,
+              "ci_high_hac": 1.1713131574922206
+            }
+          },
+          "12": {
+            "const": {
+              "estimate": 0.0014140588139699521,
+              "standard_error_hac": 0.0015945833531741502,
+              "t_hac": 0.8867888976484992,
+              "p_hac": 0.37699636481402216,
+              "ci_low_hac": -0.0017436503494734636,
+              "ci_high_hac": 0.004571767977413368
+            },
+            "Mkt-RF": {
+              "estimate": 1.0966686523507159,
+              "standard_error_hac": 0.035233367845455714,
+              "t_hac": 31.12585368395774,
+              "p_hac": 9.93949537364442e-59,
+              "ci_low_hac": 1.0268969917579331,
+              "ci_high_hac": 1.1664403129434986
+            }
+          }
+        },
+        "chronological_attribution_check": {
+          "estimation_window": [
+            "2010-01",
+            "2014-12"
+          ],
+          "evaluation_window": [
+            "2015-01",
+            "2019-12"
+          ],
+          "estimation_nobs": 60,
+          "evaluation_nobs": 60,
+          "training_coefficients_hac6": {
+            "const": {
+              "estimate": -0.0014688330548538076,
+              "standard_error_hac": 0.002409037078599266,
+              "t_hac": -0.609717910903995,
+              "p_hac": 0.5444300512249733,
+              "ci_low_hac": -0.006291044695040118,
+              "ci_high_hac": 0.0033533785853325036
+            },
+            "Mkt-RF": {
+              "estimate": 1.0854327450943182,
+              "standard_error_hac": 0.06100378206902478,
+              "t_hac": 17.792876249314656,
+              "p_hac": 3.6305274255355073e-25,
+              "ci_low_hac": 0.9633204079277656,
+              "ci_high_hac": 1.2075450822608707
+            }
+          },
+          "evaluation_same_month_attribution_error": {
+            "mean": 0.00601183138005054,
+            "sample_standard_deviation_ddof1": 0.020030339278872857,
+            "rmse": 0.020752582971166212,
+            "mean_absolute_residual": 0.01681837260766545,
+            "maximum_absolute_residual": 0.05061714820001392,
+            "lag1_sample_autocorrelation": -0.2748539263305917
+          },
+          "timing_limit": "Evaluation factors are realized during the same month and are only observed after month-end; this is not ex-ante prediction or strategy performance."
+        }
+      },
+      "ff3": {
+        "asset": "HiTec",
+        "asset_label_zh": "高科技",
+        "model": "ff3",
+        "model_label": "FF3",
+        "factor_snapshot": "ff3",
+        "factors": [
+          "Mkt-RF",
+          "SMB",
+          "HML"
+        ],
+        "nobs": 120,
+        "condition_number": 50.267821081432956,
+        "r_squared": 0.8640710681760932,
+        "adjusted_r_squared": 0.8605556647668543,
+        "hac": {
+          "kernel": "Bartlett",
+          "maxlags_monthly_rows": 6,
+          "finite_sample_correction": true,
+          "t_reference": true,
+          "interpretation": "HAC standard errors and t-based intervals are approximations; assumptions are not verified here."
+        },
+        "coefficients_hac6": {
+          "const": {
+            "estimate": 5.113549484926931e-05,
+            "standard_error_hac": 0.0013604367911423817,
+            "t_hac": 0.037587556571687525,
+            "p_hac": 0.9700811391918537,
+            "ci_low_hac": -0.002643380988389338,
+            "ci_high_hac": 0.0027456519780878763,
+            "p_holm_across_nine_alphas": 1.0
+          },
+          "Mkt-RF": {
+            "estimate": 1.1584864687581304,
+            "standard_error_hac": 0.041976761952048705,
+            "t_hac": 27.598280926992505,
+            "p_hac": 8.404071016626808e-53,
+            "ci_low_hac": 1.0753462025368674,
+            "ci_high_hac": 1.2416267349793935
+          },
+          "SMB": {
+            "estimate": -0.15471356799779448,
+            "standard_error_hac": 0.07622877682879019,
+            "t_hac": -2.0295953107745794,
+            "p_hac": 0.044686134049962654,
+            "ci_low_hac": -0.3056942655205473,
+            "ci_high_hac": -0.003732870475041672
+          },
+          "HML": {
+            "estimate": -0.33738767717216844,
+            "standard_error_hac": 0.07469630695626972,
+            "t_hac": -4.516791939522379,
+            "p_hac": 1.5189194617566762e-05,
+            "ci_low_hac": -0.48533312501742204,
+            "ci_high_hac": -0.18944222932691485
+          }
+        },
+        "sample_variance_decomposition": {
+          "observed_excess_variance_ddof1": 0.002029400535014006,
+          "fitted_excess_variance_ddof1": 0.0017535462880466884,
+          "residual_variance_ddof1": 0.0002758542469673187,
+          "fitted_residual_covariance_ddof1": -7.434529182757744e-19,
+          "fitted_share_of_observed_variance": 0.8640710681760938,
+          "residual_share_of_observed_variance": 0.13592893182390675,
+          "identity_holds_within_tolerance": true
+        },
+        "residual_diagnostics": {
+          "mean": -6.331740687315346e-18,
+          "sample_standard_deviation_ddof1": 0.016608860495751016,
+          "rmse": 0.01653951213234309,
+          "mean_absolute_residual": 0.013641336982903452,
+          "maximum_absolute_residual": 0.04075403332889724,
+          "lag1_sample_autocorrelation": -0.1803573725403348
+        },
+        "hac_sensitivity": {
+          "3": {
+            "const": {
+              "estimate": 5.113549484926931e-05,
+              "standard_error_hac": 0.001462817176604421,
+              "t_hac": 0.03495685972731609,
+              "p_hac": 0.9721742229865128,
+              "ci_low_hac": -0.0028461582419772374,
+              "ci_high_hac": 0.0029484292316757756
+            },
+            "Mkt-RF": {
+              "estimate": 1.1584864687581304,
+              "standard_error_hac": 0.04484272975312537,
+              "t_hac": 25.834432362525572,
+              "p_hac": 6.164198453494397e-50,
+              "ci_low_hac": 1.0696697921878444,
+              "ci_high_hac": 1.2473031453284165
+            },
+            "SMB": {
+              "estimate": -0.15471356799779448,
+              "standard_error_hac": 0.07230981226588612,
+              "t_hac": -2.1395929978203565,
+              "p_hac": 0.03448313974286818,
+              "ci_low_hac": -0.29793226240454374,
+              "ci_high_hac": -0.011494873591045202
+            },
+            "HML": {
+              "estimate": -0.33738767717216844,
+              "standard_error_hac": 0.07141567467510956,
+              "t_hac": -4.72428047073758,
+              "p_hac": 6.530199697741571e-06,
+              "ci_low_hac": -0.4788354194168496,
+              "ci_high_hac": -0.19593993492748732
+            }
+          },
+          "6": {
+            "const": {
+              "estimate": 5.113549484926931e-05,
+              "standard_error_hac": 0.0013604367911423817,
+              "t_hac": 0.037587556571687525,
+              "p_hac": 0.9700811391918537,
+              "ci_low_hac": -0.002643380988389338,
+              "ci_high_hac": 0.0027456519780878763
+            },
+            "Mkt-RF": {
+              "estimate": 1.1584864687581304,
+              "standard_error_hac": 0.041976761952048705,
+              "t_hac": 27.598280926992505,
+              "p_hac": 8.404071016626808e-53,
+              "ci_low_hac": 1.0753462025368674,
+              "ci_high_hac": 1.2416267349793935
+            },
+            "SMB": {
+              "estimate": -0.15471356799779448,
+              "standard_error_hac": 0.07622877682879019,
+              "t_hac": -2.0295953107745794,
+              "p_hac": 0.044686134049962654,
+              "ci_low_hac": -0.3056942655205473,
+              "ci_high_hac": -0.003732870475041672
+            },
+            "HML": {
+              "estimate": -0.33738767717216844,
+              "standard_error_hac": 0.07469630695626972,
+              "t_hac": -4.516791939522379,
+              "p_hac": 1.5189194617566762e-05,
+              "ci_low_hac": -0.48533312501742204,
+              "ci_high_hac": -0.18944222932691485
+            }
+          },
+          "12": {
+            "const": {
+              "estimate": 5.113549484926931e-05,
+              "standard_error_hac": 0.0013329359558730586,
+              "t_hac": 0.038363054596855045,
+              "p_hac": 0.9694641622578876,
+              "ci_low_hac": -0.0025889121189655723,
+              "ci_high_hac": 0.0026911831086641113
+            },
+            "Mkt-RF": {
+              "estimate": 1.1584864687581304,
+              "standard_error_hac": 0.03864051071855126,
+              "t_hac": 29.98113759924872,
+              "p_hac": 1.8257948406310473e-56,
+              "ci_low_hac": 1.0819540684806686,
+              "ci_high_hac": 1.2350188690355923
+            },
+            "SMB": {
+              "estimate": -0.15471356799779448,
+              "standard_error_hac": 0.07401263561516397,
+              "t_hac": -2.090366958450757,
+              "p_hac": 0.03876920116366615,
+              "ci_low_hac": -0.30130491860771796,
+              "ci_high_hac": -0.008122217387871
+            },
+            "HML": {
+              "estimate": -0.33738767717216844,
+              "standard_error_hac": 0.07582516074027175,
+              "t_hac": -4.449547800206342,
+              "p_hac": 1.9868025601700312e-05,
+              "ci_low_hac": -0.4875689621749908,
+              "ci_high_hac": -0.1872063921693461
+            }
+          }
+        },
+        "chronological_attribution_check": {
+          "estimation_window": [
+            "2010-01",
+            "2014-12"
+          ],
+          "evaluation_window": [
+            "2015-01",
+            "2019-12"
+          ],
+          "estimation_nobs": 60,
+          "evaluation_nobs": 60,
+          "training_coefficients_hac6": {
+            "const": {
+              "estimate": -0.0025191435751969566,
+              "standard_error_hac": 0.0019369095520776355,
+              "t_hac": -1.3005994897876285,
+              "p_hac": 0.19872247987997024,
+              "ci_low_hac": -0.006399239658644269,
+              "ci_high_hac": 0.0013609525082503553
+            },
+            "Mkt-RF": {
+              "estimate": 1.1640826164109224,
+              "standard_error_hac": 0.06358836333755188,
+              "t_hac": 18.306535273309628,
+              "p_hac": 2.6455479585342166e-25,
+              "ci_low_hac": 1.0366998177282452,
+              "ci_high_hac": 1.2914654150935996
+            },
+            "SMB": {
+              "estimate": -0.12434098109944627,
+              "standard_error_hac": 0.11937376135502255,
+              "t_hac": -1.041610649509912,
+              "p_hac": 0.30206833944191397,
+              "ci_low_hac": -0.3634753606078559,
+              "ci_high_hac": 0.11479339840896338
+            },
+            "HML": {
+              "estimate": -0.3299148013941886,
+              "standard_error_hac": 0.1044276403231481,
+              "t_hac": -3.1592670328782444,
+              "p_hac": 0.002550089253884323,
+              "ci_low_hac": -0.5391085026627188,
+              "ci_high_hac": -0.12072110012565843
+            }
+          },
+          "evaluation_same_month_attribution_error": {
+            "mean": 0.00505743050389783,
+            "sample_standard_deviation_ddof1": 0.017394938357294637,
+            "rmse": 0.01797549496068472,
+            "mean_absolute_residual": 0.014950615706778263,
+            "maximum_absolute_residual": 0.04223998475090325,
+            "lag1_sample_autocorrelation": -0.3172066933704315
+          },
+          "timing_limit": "Evaluation factors are realized during the same month and are only observed after month-end; this is not ex-ante prediction or strategy performance."
+        }
+      },
+      "ff5": {
+        "asset": "HiTec",
+        "asset_label_zh": "高科技",
+        "model": "ff5",
+        "model_label": "FF5",
+        "factor_snapshot": "ff5",
+        "factors": [
+          "Mkt-RF",
+          "SMB",
+          "HML",
+          "RMW",
+          "CMA"
+        ],
+        "nobs": 120,
+        "condition_number": 99.36738531579286,
+        "r_squared": 0.8927291912961854,
+        "adjusted_r_squared": 0.8880243312653164,
+        "hac": {
+          "kernel": "Bartlett",
+          "maxlags_monthly_rows": 6,
+          "finite_sample_correction": true,
+          "t_reference": true,
+          "interpretation": "HAC standard errors and t-based intervals are approximations; assumptions are not verified here."
+        },
+        "coefficients_hac6": {
+          "const": {
+            "estimate": 0.0010319612360239804,
+            "standard_error_hac": 0.0012709309533314435,
+            "t_hac": 0.8119726986890509,
+            "p_hac": 0.4184995369497403,
+            "ci_low_hac": -0.0014857431937847225,
+            "ci_high_hac": 0.0035496656658326833,
+            "p_holm_across_nine_alphas": 1.0
+          },
+          "Mkt-RF": {
+            "estimate": 1.1257749990413817,
+            "standard_error_hac": 0.053915096296406596,
+            "t_hac": 20.8805154098633,
+            "p_hac": 9.227560119936788e-41,
+            "ci_low_hac": 1.0189696085335735,
+            "ci_high_hac": 1.2325803895491898
+          },
+          "SMB": {
+            "estimate": -0.1584723069664435,
+            "standard_error_hac": 0.08137918350579361,
+            "t_hac": -1.9473322309158019,
+            "p_hac": 0.05395417572539032,
+            "ci_low_hac": -0.3196838427069845,
+            "ci_high_hac": 0.0027392287740975463
+          },
+          "HML": {
+            "estimate": -0.050244635680783994,
+            "standard_error_hac": 0.07522019738759556,
+            "t_hac": -0.667967346880025,
+            "p_hac": 0.5055045307807291,
+            "ci_low_hac": -0.19925526735783447,
+            "ci_high_hac": 0.09876599599626648
+          },
+          "RMW": {
+            "estimate": 0.021157474059750325,
+            "standard_error_hac": 0.14038478261565926,
+            "t_hac": 0.1507105945925389,
+            "p_hac": 0.8804703647859957,
+            "ci_low_hac": -0.2569436990548856,
+            "ci_high_hac": 0.29925864717438627
+          },
+          "CMA": {
+            "estimate": -0.6682314302150054,
+            "standard_error_hac": 0.148491287717359,
+            "t_hac": -4.50013896766071,
+            "p_hac": 1.646218793547744e-05,
+            "ci_low_hac": -0.9623915274996107,
+            "ci_high_hac": -0.37407133293040024
+          }
+        },
+        "sample_variance_decomposition": {
+          "observed_excess_variance_ddof1": 0.002029400535014006,
+          "fitted_excess_variance_ddof1": 0.001811705098439102,
+          "residual_variance_ddof1": 0.0002176954365749063,
+          "fitted_residual_covariance_ddof1": -1.3994407873426343e-18,
+          "fitted_share_of_observed_variance": 0.8927291912961866,
+          "residual_share_of_observed_variance": 0.10727080870381453,
+          "identity_holds_within_tolerance": true
+        },
+        "residual_diagnostics": {
+          "mean": -5.551115123125783e-17,
+          "sample_standard_deviation_ddof1": 0.014754505636411758,
+          "rmse": 0.014692899915836293,
+          "mean_absolute_residual": 0.011970043418822653,
+          "maximum_absolute_residual": 0.03757921218624808,
+          "lag1_sample_autocorrelation": -0.1782310954805068
+        },
+        "hac_sensitivity": {
+          "3": {
+            "const": {
+              "estimate": 0.0010319612360239804,
+              "standard_error_hac": 0.001413292196100373,
+              "t_hac": 0.7301825049847581,
+              "p_hac": 0.46677649441009655,
+              "ci_low_hac": -0.0017677597192402427,
+              "ci_high_hac": 0.0038316821912882035
+            },
+            "Mkt-RF": {
+              "estimate": 1.1257749990413817,
+              "standard_error_hac": 0.052057402913796375,
+              "t_hac": 21.625646613711996,
+              "p_hac": 3.767580345764463e-42,
+              "ci_low_hac": 1.0226496848165252,
+              "ci_high_hac": 1.2289003132662382
+            },
+            "SMB": {
+              "estimate": -0.1584723069664435,
+              "standard_error_hac": 0.07688610498616419,
+              "t_hac": -2.061130642460831,
+              "p_hac": 0.04156529004630772,
+              "ci_low_hac": -0.31078308876539784,
+              "ci_high_hac": -0.006161525167489107
+            },
+            "HML": {
+              "estimate": -0.050244635680783994,
+              "standard_error_hac": 0.07751569814176774,
+              "t_hac": -0.6481865852371225,
+              "p_hac": 0.5181677058793974,
+              "ci_low_hac": -0.20380263667184734,
+              "ci_high_hac": 0.10331336531027935
+            },
+            "RMW": {
+              "estimate": 0.021157474059750325,
+              "standard_error_hac": 0.13063041599437566,
+              "t_hac": 0.16196437788777512,
+              "p_hac": 0.8716206229565076,
+              "ci_low_hac": -0.23762037390649005,
+              "ci_high_hac": 0.2799353220259907
+            },
+            "CMA": {
+              "estimate": -0.6682314302150054,
+              "standard_error_hac": 0.1310925255897107,
+              "t_hac": -5.0974029770882225,
+              "p_hac": 1.381317360157937e-06,
+              "ci_low_hac": -0.9279247137304253,
+              "ci_high_hac": -0.40853814669958555
+            }
+          },
+          "6": {
+            "const": {
+              "estimate": 0.0010319612360239804,
+              "standard_error_hac": 0.0012709309533314435,
+              "t_hac": 0.8119726986890509,
+              "p_hac": 0.4184995369497403,
+              "ci_low_hac": -0.0014857431937847225,
+              "ci_high_hac": 0.0035496656658326833
+            },
+            "Mkt-RF": {
+              "estimate": 1.1257749990413817,
+              "standard_error_hac": 0.053915096296406596,
+              "t_hac": 20.8805154098633,
+              "p_hac": 9.227560119936788e-41,
+              "ci_low_hac": 1.0189696085335735,
+              "ci_high_hac": 1.2325803895491898
+            },
+            "SMB": {
+              "estimate": -0.1584723069664435,
+              "standard_error_hac": 0.08137918350579361,
+              "t_hac": -1.9473322309158019,
+              "p_hac": 0.05395417572539032,
+              "ci_low_hac": -0.3196838427069845,
+              "ci_high_hac": 0.0027392287740975463
+            },
+            "HML": {
+              "estimate": -0.050244635680783994,
+              "standard_error_hac": 0.07522019738759556,
+              "t_hac": -0.667967346880025,
+              "p_hac": 0.5055045307807291,
+              "ci_low_hac": -0.19925526735783447,
+              "ci_high_hac": 0.09876599599626648
+            },
+            "RMW": {
+              "estimate": 0.021157474059750325,
+              "standard_error_hac": 0.14038478261565926,
+              "t_hac": 0.1507105945925389,
+              "p_hac": 0.8804703647859957,
+              "ci_low_hac": -0.2569436990548856,
+              "ci_high_hac": 0.29925864717438627
+            },
+            "CMA": {
+              "estimate": -0.6682314302150054,
+              "standard_error_hac": 0.148491287717359,
+              "t_hac": -4.50013896766071,
+              "p_hac": 1.646218793547744e-05,
+              "ci_low_hac": -0.9623915274996107,
+              "ci_high_hac": -0.37407133293040024
+            }
+          },
+          "12": {
+            "const": {
+              "estimate": 0.0010319612360239804,
+              "standard_error_hac": 0.001252504693803,
+              "t_hac": 0.8239180588542306,
+              "p_hac": 0.4117065455950462,
+              "ci_low_hac": -0.0014492409155783719,
+              "ci_high_hac": 0.0035131633876263326
+            },
+            "Mkt-RF": {
+              "estimate": 1.1257749990413817,
+              "standard_error_hac": 0.06052489883768749,
+              "t_hac": 18.60019629376707,
+              "p_hac": 2.5193924072936826e-36,
+              "ci_low_hac": 1.0058756406081548,
+              "ci_high_hac": 1.2456743574746085
+            },
+            "SMB": {
+              "estimate": -0.1584723069664435,
+              "standard_error_hac": 0.07901408392733168,
+              "t_hac": -2.00562101197286,
+              "p_hac": 0.047265162544392315,
+              "ci_low_hac": -0.31499859865810553,
+              "ci_high_hac": -0.0019460152747814707
+            },
+            "HML": {
+              "estimate": -0.050244635680783994,
+              "standard_error_hac": 0.06285474276705987,
+              "t_hac": -0.799376999552619,
+              "p_hac": 0.4257342774748797,
+              "ci_low_hac": -0.17475939699358328,
+              "ci_high_hac": 0.07427012563201531
+            },
+            "RMW": {
+              "estimate": 0.021157474059750325,
+              "standard_error_hac": 0.13873458518409024,
+              "t_hac": 0.1525032423002236,
+              "p_hac": 0.8790596207021848,
+              "ci_low_hac": -0.25367467065280785,
+              "ci_high_hac": 0.2959896187723085
+            },
+            "CMA": {
+              "estimate": -0.6682314302150054,
+              "standard_error_hac": 0.16237382848741017,
+              "t_hac": -4.115388769482746,
+              "p_hac": 7.335702930828096e-05,
+              "ci_low_hac": -0.9898927338414177,
+              "ci_high_hac": -0.3465701265885931
+            }
+          }
+        },
+        "chronological_attribution_check": {
+          "estimation_window": [
+            "2010-01",
+            "2014-12"
+          ],
+          "evaluation_window": [
+            "2015-01",
+            "2019-12"
+          ],
+          "estimation_nobs": 60,
+          "evaluation_nobs": 60,
+          "training_coefficients_hac6": {
+            "const": {
+              "estimate": -0.0009755465396734703,
+              "standard_error_hac": 0.001737677594802756,
+              "t_hac": -0.5614082512148663,
+              "p_hac": 0.57684184161292,
+              "ci_low_hac": -0.004459380359041954,
+              "ci_high_hac": 0.0025082872796950133
+            },
+            "Mkt-RF": {
+              "estimate": 1.1749963610412475,
+              "standard_error_hac": 0.07246333410764964,
+              "t_hac": 16.215046899383672,
+              "p_hac": 2.0961388080395245e-22,
+              "ci_low_hac": 1.0297161233357697,
+              "ci_high_hac": 1.3202765987467253
+            },
+            "SMB": {
+              "estimate": -0.13019379393320957,
+              "standard_error_hac": 0.16518152553275903,
+              "t_hac": -0.7881861698110383,
+              "p_hac": 0.4340342877133136,
+              "ci_low_hac": -0.4613628132651447,
+              "ci_high_hac": 0.2009752253987256
+            },
+            "HML": {
+              "estimate": -0.06899613400115862,
+              "standard_error_hac": 0.12053053233791593,
+              "t_hac": -0.5724369805961119,
+              "p_hac": 0.569401713153285,
+              "ci_low_hac": -0.310645301879727,
+              "ci_high_hac": 0.17265303387740977
+            },
+            "RMW": {
+              "estimate": 0.040791852913523365,
+              "standard_error_hac": 0.22577681011513737,
+              "t_hac": 0.18067335123000947,
+              "p_hac": 0.8573003552650078,
+              "ci_low_hac": -0.4118633974394832,
+              "ci_high_hac": 0.49344710326652996
+            },
+            "CMA": {
+              "estimate": -0.6239557630431761,
+              "standard_error_hac": 0.22039779879443405,
+              "t_hac": -2.8310435333573465,
+              "p_hac": 0.006504501670403538,
+              "ci_low_hac": -1.0658267450083756,
+              "ci_high_hac": -0.1820847810779767
+            }
+          },
+          "evaluation_same_month_attribution_error": {
+            "mean": 0.0028216362572177443,
+            "sample_standard_deviation_ddof1": 0.015492624927046065,
+            "rmse": 0.01561994562024271,
+            "mean_absolute_residual": 0.012569804994918022,
+            "maximum_absolute_residual": 0.03597446308059942,
+            "lag1_sample_autocorrelation": -0.261579879927247
+          },
+          "timing_limit": "Evaluation factors are realized during the same month and are only observed after month-end; this is not ex-ante prediction or strategy performance."
+        }
+      }
+    },
+    "Enrgy": {
+      "capm": {
+        "asset": "Enrgy",
+        "asset_label_zh": "能源",
+        "model": "capm",
+        "model_label": "CAPM",
+        "factor_snapshot": "ff3",
+        "factors": [
+          "Mkt-RF"
+        ],
+        "nobs": 120,
+        "condition_number": 26.855896794708855,
+        "r_squared": 0.596701729673263,
+        "adjusted_r_squared": 0.5932839477213414,
+        "hac": {
+          "kernel": "Bartlett",
+          "maxlags_monthly_rows": 6,
+          "finite_sample_correction": true,
+          "t_reference": true,
+          "interpretation": "HAC standard errors and t-based intervals are approximations; assumptions are not verified here."
+        },
+        "coefficients_hac6": {
+          "const": {
+            "estimate": -0.009459464689405143,
+            "standard_error_hac": 0.0033870507201063716,
+            "t_hac": -2.7928323107922237,
+            "p_hac": 0.00609776738845998,
+            "ci_low_hac": -0.016166747237311832,
+            "ci_high_hac": -0.0027521821414984524,
+            "p_holm_across_nine_alphas": 0.054879906496139816
+          },
+          "Mkt-RF": {
+            "estimate": 1.1951714458700184,
+            "standard_error_hac": 0.05747029654984996,
+            "t_hac": 20.79633336907044,
+            "p_hac": 2.84068414894057e-41,
+            "ci_low_hac": 1.0813646124548622,
+            "ci_high_hac": 1.3089782792851747
+          }
+        },
+        "sample_variance_decomposition": {
+          "observed_excess_variance_ddof1": 0.0033478219719887954,
+          "fitted_excess_variance_ddof1": 0.001997651161323871,
+          "residual_variance_ddof1": 0.001350170810664927,
+          "fitted_residual_covariance_ddof1": -1.0495805905069757e-18,
+          "fitted_share_of_observed_variance": 0.5967017296732637,
+          "residual_share_of_observed_variance": 0.40329827032673704,
+          "identity_holds_within_tolerance": true
+        },
+        "residual_diagnostics": {
+          "mean": -4.625929269271486e-19,
+          "sample_standard_deviation_ddof1": 0.036744670506958246,
+          "rmse": 0.03659124741304564,
+          "mean_absolute_residual": 0.027943578969052797,
+          "maximum_absolute_residual": 0.11683692432486732,
+          "lag1_sample_autocorrelation": 0.009258193949044355
+        },
+        "hac_sensitivity": {
+          "3": {
+            "const": {
+              "estimate": -0.009459464689405143,
+              "standard_error_hac": 0.0034199124065563626,
+              "t_hac": -2.7659961908001707,
+              "p_hac": 0.006588880059199128,
+              "ci_low_hac": -0.01623182232305306,
+              "ci_high_hac": -0.0026871070557572254
+            },
+            "Mkt-RF": {
+              "estimate": 1.1951714458700184,
+              "standard_error_hac": 0.06339639695421125,
+              "t_hac": 18.852356021640226,
+              "p_hac": 2.1286166761728198e-37,
+              "ci_low_hac": 1.0696293202777003,
+              "ci_high_hac": 1.3207135714623366
+            }
+          },
+          "6": {
+            "const": {
+              "estimate": -0.009459464689405143,
+              "standard_error_hac": 0.0033870507201063716,
+              "t_hac": -2.7928323107922237,
+              "p_hac": 0.00609776738845998,
+              "ci_low_hac": -0.016166747237311832,
+              "ci_high_hac": -0.0027521821414984524
+            },
+            "Mkt-RF": {
+              "estimate": 1.1951714458700184,
+              "standard_error_hac": 0.05747029654984996,
+              "t_hac": 20.79633336907044,
+              "p_hac": 2.84068414894057e-41,
+              "ci_low_hac": 1.0813646124548622,
+              "ci_high_hac": 1.3089782792851747
+            }
+          },
+          "12": {
+            "const": {
+              "estimate": -0.009459464689405143,
+              "standard_error_hac": 0.0033009486127518906,
+              "t_hac": -2.86568068732191,
+              "p_hac": 0.004928225839867962,
+              "ci_low_hac": -0.015996241623513832,
+              "ci_high_hac": -0.002922687755296453
+            },
+            "Mkt-RF": {
+              "estimate": 1.1951714458700184,
+              "standard_error_hac": 0.05725693559008315,
+              "t_hac": 20.873828359005316,
+              "p_hac": 2.0100837690934122e-41,
+              "ci_low_hac": 1.0817871252425666,
+              "ci_high_hac": 1.3085557664974703
+            }
+          }
+        },
+        "chronological_attribution_check": {
+          "estimation_window": [
+            "2010-01",
+            "2014-12"
+          ],
+          "evaluation_window": [
+            "2015-01",
+            "2019-12"
+          ],
+          "estimation_nobs": 60,
+          "evaluation_nobs": 60,
+          "training_coefficients_hac6": {
+            "const": {
+              "estimate": -0.00751687617448942,
+              "standard_error_hac": 0.0049246249916200125,
+              "t_hac": -1.5263854988512855,
+              "p_hac": 0.13234906036451727,
+              "ci_low_hac": -0.017374584123073786,
+              "ci_high_hac": 0.002340831774094944
+            },
+            "Mkt-RF": {
+              "estimate": 1.1861315951434381,
+              "standard_error_hac": 0.07658765153764897,
+              "t_hac": 15.487243326169354,
+              "p_hac": 2.863722656433954e-22,
+              "ci_low_hac": 1.0328247539909035,
+              "ci_high_hac": 1.3394384362959728
+            }
+          },
+          "evaluation_same_month_attribution_error": {
+            "mean": -0.003687219365337213,
+            "sample_standard_deviation_ddof1": 0.04214129503704957,
+            "rmse": 0.041950997464396254,
+            "mean_absolute_residual": 0.03365794080624434,
+            "maximum_absolute_residual": 0.10221432086760214,
+            "lag1_sample_autocorrelation": -0.11578663161511865
+          },
+          "timing_limit": "Evaluation factors are realized during the same month and are only observed after month-end; this is not ex-ante prediction or strategy performance."
+        }
+      },
+      "ff3": {
+        "asset": "Enrgy",
+        "asset_label_zh": "能源",
+        "model": "ff3",
+        "model_label": "FF3",
+        "factor_snapshot": "ff3",
+        "factors": [
+          "Mkt-RF",
+          "SMB",
+          "HML"
+        ],
+        "nobs": 120,
+        "condition_number": 50.267821081432956,
+        "r_squared": 0.6879902965479114,
+        "adjusted_r_squared": 0.679921080079323,
+        "hac": {
+          "kernel": "Bartlett",
+          "maxlags_monthly_rows": 6,
+          "finite_sample_correction": true,
+          "t_reference": true,
+          "interpretation": "HAC standard errors and t-based intervals are approximations; assumptions are not verified here."
+        },
+        "coefficients_hac6": {
+          "const": {
+            "estimate": -0.006629027999577604,
+            "standard_error_hac": 0.003262397208621321,
+            "t_hac": -2.0319499974005346,
+            "p_hac": 0.04444326090588142,
+            "ci_low_hac": -0.013090616741322943,
+            "ci_high_hac": -0.00016743925783226348,
+            "p_holm_across_nine_alphas": 0.3111028263411699
+          },
+          "Mkt-RF": {
+            "estimate": 1.0653478803363405,
+            "standard_error_hac": 0.06552247028931296,
+            "t_hac": 16.259275262857482,
+            "p_hac": 1.0793663120542097e-31,
+            "ci_low_hac": 0.9355723719359741,
+            "ci_high_hac": 1.195123388736707
+          },
+          "SMB": {
+            "estimate": 0.33152268003978924,
+            "standard_error_hac": 0.12801905593671117,
+            "t_hac": 2.5896354071200482,
+            "p_hac": 0.010838453757506973,
+            "ci_low_hac": 0.0779648090412744,
+            "ci_high_hac": 0.5850805510383041
+          },
+          "HML": {
+            "estimate": 0.6917104521116066,
+            "standard_error_hac": 0.15980768059313818,
+            "t_hac": 4.3283930380834725,
+            "p_hac": 3.2024536486401206e-05,
+            "ci_low_hac": 0.3751912045361603,
+            "ci_high_hac": 1.008229699687053
+          }
+        },
+        "sample_variance_decomposition": {
+          "observed_excess_variance_ddof1": 0.0033478219719887954,
+          "fitted_excess_variance_ddof1": 0.0023032690312981864,
+          "residual_variance_ddof1": 0.0010445529406906105,
+          "fitted_residual_covariance_ddof1": -5.831003280594309e-19,
+          "fitted_share_of_observed_variance": 0.6879902965479119,
+          "residual_share_of_observed_variance": 0.3120097034520886,
+          "identity_holds_within_tolerance": true
+        },
+        "residual_diagnostics": {
+          "mean": -4.163336342344337e-18,
+          "sample_standard_deviation_ddof1": 0.032319544252520184,
+          "rmse": 0.03218459775811284,
+          "mean_absolute_residual": 0.02541407972194496,
+          "maximum_absolute_residual": 0.09437292611404427,
+          "lag1_sample_autocorrelation": 0.0428587523985942
+        },
+        "hac_sensitivity": {
+          "3": {
+            "const": {
+              "estimate": -0.006629027999577604,
+              "standard_error_hac": 0.0031913757272119068,
+              "t_hac": -2.0771693984678343,
+              "p_hac": 0.03999346094286137,
+              "ci_low_hac": -0.012949949748510294,
+              "ci_high_hac": -0.0003081062506449144
+            },
+            "Mkt-RF": {
+              "estimate": 1.0653478803363405,
+              "standard_error_hac": 0.06897490682185514,
+              "t_hac": 15.445441384761367,
+              "p_hac": 6.448955765270149e-30,
+              "ci_low_hac": 0.9287343863677814,
+              "ci_high_hac": 1.2019613743048998
+            },
+            "SMB": {
+              "estimate": 0.33152268003978924,
+              "standard_error_hac": 0.13815619216188502,
+              "t_hac": 2.399622303221316,
+              "p_hac": 0.018004026383345917,
+              "ci_low_hac": 0.0578869334432251,
+              "ci_high_hac": 0.6051584266363534
+            },
+            "HML": {
+              "estimate": 0.6917104521116066,
+              "standard_error_hac": 0.143855118287158,
+              "t_hac": 4.808382630716282,
+              "p_hac": 4.607804377101276e-06,
+              "ci_low_hac": 0.40678726424523337,
+              "ci_high_hac": 0.9766336399779799
+            }
+          },
+          "6": {
+            "const": {
+              "estimate": -0.006629027999577604,
+              "standard_error_hac": 0.003262397208621321,
+              "t_hac": -2.0319499974005346,
+              "p_hac": 0.04444326090588142,
+              "ci_low_hac": -0.013090616741322943,
+              "ci_high_hac": -0.00016743925783226348
+            },
+            "Mkt-RF": {
+              "estimate": 1.0653478803363405,
+              "standard_error_hac": 0.06552247028931296,
+              "t_hac": 16.259275262857482,
+              "p_hac": 1.0793663120542097e-31,
+              "ci_low_hac": 0.9355723719359741,
+              "ci_high_hac": 1.195123388736707
+            },
+            "SMB": {
+              "estimate": 0.33152268003978924,
+              "standard_error_hac": 0.12801905593671117,
+              "t_hac": 2.5896354071200482,
+              "p_hac": 0.010838453757506973,
+              "ci_low_hac": 0.0779648090412744,
+              "ci_high_hac": 0.5850805510383041
+            },
+            "HML": {
+              "estimate": 0.6917104521116066,
+              "standard_error_hac": 0.15980768059313818,
+              "t_hac": 4.3283930380834725,
+              "p_hac": 3.2024536486401206e-05,
+              "ci_low_hac": 0.3751912045361603,
+              "ci_high_hac": 1.008229699687053
+            }
+          },
+          "12": {
+            "const": {
+              "estimate": -0.006629027999577604,
+              "standard_error_hac": 0.003294466011104088,
+              "t_hac": -2.0121707060368155,
+              "p_hac": 0.04651887642048827,
+              "ci_low_hac": -0.013154133045388037,
+              "ci_high_hac": -0.00010392295376717049
+            },
+            "Mkt-RF": {
+              "estimate": 1.0653478803363405,
+              "standard_error_hac": 0.0623669395545447,
+              "t_hac": 17.081932959121904,
+              "p_hac": 1.8754190005777495e-33,
+              "ci_low_hac": 0.941822298160815,
+              "ci_high_hac": 1.188873462511866
+            },
+            "SMB": {
+              "estimate": 0.33152268003978924,
+              "standard_error_hac": 0.13953585705952626,
+              "t_hac": 2.375895967001235,
+              "p_hac": 0.01914501725887326,
+              "ci_low_hac": 0.055154333272276757,
+              "ci_high_hac": 0.6078910268073017
+            },
+            "HML": {
+              "estimate": 0.6917104521116066,
+              "standard_error_hac": 0.18112785886406627,
+              "t_hac": 3.818907022087226,
+              "p_hac": 0.00021686387720528012,
+              "ci_low_hac": 0.33296390507569684,
+              "ci_high_hac": 1.0504569991475163
+            }
+          }
+        },
+        "chronological_attribution_check": {
+          "estimation_window": [
+            "2010-01",
+            "2014-12"
+          ],
+          "evaluation_window": [
+            "2015-01",
+            "2019-12"
+          ],
+          "estimation_nobs": 60,
+          "evaluation_nobs": 60,
+          "training_coefficients_hac6": {
+            "const": {
+              "estimate": -0.006165445276464274,
+              "standard_error_hac": 0.004772808054682953,
+              "t_hac": -1.2917857173021867,
+              "p_hac": 0.20173741898696043,
+              "ci_low_hac": -0.015726528714850266,
+              "ci_high_hac": 0.0033956381619217185
+            },
+            "Mkt-RF": {
+              "estimate": 1.0962990706100468,
+              "standard_error_hac": 0.11086591325562334,
+              "t_hac": 9.888513416042603,
+              "p_hac": 6.853218083237596e-14,
+              "ci_low_hac": 0.8742079588441262,
+              "ci_high_hac": 1.3183901823759676
+            },
+            "SMB": {
+              "estimate": 0.06394095212269181,
+              "standard_error_hac": 0.19742954514419703,
+              "t_hac": 0.3238671905767251,
+              "p_hac": 0.7472450865549105,
+              "ci_low_hac": -0.33155795181377784,
+              "ci_high_hac": 0.45943985605916143
+            },
+            "HML": {
+              "estimate": 0.505194307593555,
+              "standard_error_hac": 0.29858303933294605,
+              "t_hac": 1.6919725538402717,
+              "p_hac": 0.09620912461849054,
+              "ci_low_hac": -0.09293939475555824,
+              "ci_high_hac": 1.1033280099426683
+            }
+          },
+          "evaluation_same_month_attribution_error": {
+            "mean": -0.0024244846523032463,
+            "sample_standard_deviation_ddof1": 0.03683035549798695,
+            "rmse": 0.03660253124902088,
+            "mean_absolute_residual": 0.029939536951501193,
+            "maximum_absolute_residual": 0.09773095157743397,
+            "lag1_sample_autocorrelation": -0.08750525659031858
+          },
+          "timing_limit": "Evaluation factors are realized during the same month and are only observed after month-end; this is not ex-ante prediction or strategy performance."
+        }
+      },
+      "ff5": {
+        "asset": "Enrgy",
+        "asset_label_zh": "能源",
+        "model": "ff5",
+        "model_label": "FF5",
+        "factor_snapshot": "ff5",
+        "factors": [
+          "Mkt-RF",
+          "SMB",
+          "HML",
+          "RMW",
+          "CMA"
+        ],
+        "nobs": 120,
+        "condition_number": 99.36738531579286,
+        "r_squared": 0.6959841324113627,
+        "adjusted_r_squared": 0.6826501031311594,
+        "hac": {
+          "kernel": "Bartlett",
+          "maxlags_monthly_rows": 6,
+          "finite_sample_correction": true,
+          "t_reference": true,
+          "interpretation": "HAC standard errors and t-based intervals are approximations; assumptions are not verified here."
+        },
+        "coefficients_hac6": {
+          "const": {
+            "estimate": -0.007323086493147548,
+            "standard_error_hac": 0.003222747210999138,
+            "t_hac": -2.27231179291819,
+            "p_hac": 0.02494262829301323,
+            "ci_low_hac": -0.013707323896460014,
+            "ci_high_hac": -0.0009388490898350815,
+            "p_holm_across_nine_alphas": 0.19954102634410584
+          },
+          "Mkt-RF": {
+            "estimate": 1.0902397674964874,
+            "standard_error_hac": 0.0848213565009644,
+            "t_hac": 12.85336396953392,
+            "p_hac": 6.449697551644616e-24,
+            "ci_low_hac": 0.9222093135642125,
+            "ci_high_hac": 1.2582702214287622
+          },
+          "SMB": {
+            "estimate": 0.2864876469915781,
+            "standard_error_hac": 0.11969597772715099,
+            "t_hac": 2.3934609368798636,
+            "p_hac": 0.018322952214262854,
+            "ci_low_hac": 0.049370837015402264,
+            "ci_high_hac": 0.5236044569677539
+          },
+          "HML": {
+            "estimate": 0.4522871401617908,
+            "standard_error_hac": 0.20495319371703383,
+            "t_hac": 2.206782592450038,
+            "p_hac": 0.029333277744531372,
+            "ci_low_hac": 0.04627644196279296,
+            "ci_high_hac": 0.8582978383607887
+          },
+          "RMW": {
+            "estimate": -0.09120963201787133,
+            "standard_error_hac": 0.23854781705292014,
+            "t_hac": -0.38235366453861586,
+            "p_hac": 0.7029109428693795,
+            "ci_low_hac": -0.5637710202986599,
+            "ci_high_hac": 0.3813517562629173
+          },
+          "CMA": {
+            "estimate": 0.5084061891659893,
+            "standard_error_hac": 0.2895068617249198,
+            "t_hac": 1.7561110162876232,
+            "p_hac": 0.08175500055660777,
+            "ci_low_hac": -0.06510467412223819,
+            "ci_high_hac": 1.0819170524542168
+          }
+        },
+        "sample_variance_decomposition": {
+          "observed_excess_variance_ddof1": 0.0033478219719887954,
+          "fitted_excess_variance_ddof1": 0.0023300309706423233,
+          "residual_variance_ddof1": 0.0010177910013464758,
+          "fitted_residual_covariance_ddof1": -1.8804985579916647e-18,
+          "fitted_share_of_observed_variance": 0.6959841324113639,
+          "residual_share_of_observed_variance": 0.30401586758863713,
+          "identity_holds_within_tolerance": true
+        },
+        "residual_diagnostics": {
+          "mean": -6.938893903907228e-17,
+          "sample_standard_deviation_ddof1": 0.031902836885557305,
+          "rmse": 0.03176963030424793,
+          "mean_absolute_residual": 0.02485623535738791,
+          "maximum_absolute_residual": 0.09482102562904399,
+          "lag1_sample_autocorrelation": 0.07465412890719665
+        },
+        "hac_sensitivity": {
+          "3": {
+            "const": {
+              "estimate": -0.007323086493147548,
+              "standard_error_hac": 0.0032658253770583537,
+              "t_hac": -2.242338657966984,
+              "p_hac": 0.026873819736649082,
+              "ci_low_hac": -0.013792661411634245,
+              "ci_high_hac": -0.0008535115746608505
+            },
+            "Mkt-RF": {
+              "estimate": 1.0902397674964874,
+              "standard_error_hac": 0.08422702791409005,
+              "t_hac": 12.94406076643843,
+              "p_hac": 3.997186831130847e-24,
+              "ci_low_hac": 0.9233866739172776,
+              "ci_high_hac": 1.2570928610756973
+            },
+            "SMB": {
+              "estimate": 0.2864876469915781,
+              "standard_error_hac": 0.1300220188575799,
+              "t_hac": 2.203377931743879,
+              "p_hac": 0.029578769656201813,
+              "ci_low_hac": 0.028915029067440645,
+              "ci_high_hac": 0.5440602649157156
+            },
+            "HML": {
+              "estimate": 0.4522871401617908,
+              "standard_error_hac": 0.18514113003880756,
+              "t_hac": 2.4429317249332256,
+              "p_hac": 0.016102900670704075,
+              "ci_low_hac": 0.08552398751636642,
+              "ci_high_hac": 0.8190502928072152
+            },
+            "RMW": {
+              "estimate": -0.09120963201787133,
+              "standard_error_hac": 0.23343172803574921,
+              "t_hac": -0.39073365384119035,
+              "p_hac": 0.6967233518001971,
+              "ci_low_hac": -0.5536360873598855,
+              "ci_high_hac": 0.37121682332414274
+            },
+            "CMA": {
+              "estimate": 0.5084061891659893,
+              "standard_error_hac": 0.27484943118002564,
+              "t_hac": 1.8497625663012003,
+              "p_hac": 0.06693774071730442,
+              "ci_low_hac": -0.03606841710468678,
+              "ci_high_hac": 1.0528807954366655
+            }
+          },
+          "6": {
+            "const": {
+              "estimate": -0.007323086493147548,
+              "standard_error_hac": 0.003222747210999138,
+              "t_hac": -2.27231179291819,
+              "p_hac": 0.02494262829301323,
+              "ci_low_hac": -0.013707323896460014,
+              "ci_high_hac": -0.0009388490898350815
+            },
+            "Mkt-RF": {
+              "estimate": 1.0902397674964874,
+              "standard_error_hac": 0.0848213565009644,
+              "t_hac": 12.85336396953392,
+              "p_hac": 6.449697551644616e-24,
+              "ci_low_hac": 0.9222093135642125,
+              "ci_high_hac": 1.2582702214287622
+            },
+            "SMB": {
+              "estimate": 0.2864876469915781,
+              "standard_error_hac": 0.11969597772715099,
+              "t_hac": 2.3934609368798636,
+              "p_hac": 0.018322952214262854,
+              "ci_low_hac": 0.049370837015402264,
+              "ci_high_hac": 0.5236044569677539
+            },
+            "HML": {
+              "estimate": 0.4522871401617908,
+              "standard_error_hac": 0.20495319371703383,
+              "t_hac": 2.206782592450038,
+              "p_hac": 0.029333277744531372,
+              "ci_low_hac": 0.04627644196279296,
+              "ci_high_hac": 0.8582978383607887
+            },
+            "RMW": {
+              "estimate": -0.09120963201787133,
+              "standard_error_hac": 0.23854781705292014,
+              "t_hac": -0.38235366453861586,
+              "p_hac": 0.7029109428693795,
+              "ci_low_hac": -0.5637710202986599,
+              "ci_high_hac": 0.3813517562629173
+            },
+            "CMA": {
+              "estimate": 0.5084061891659893,
+              "standard_error_hac": 0.2895068617249198,
+              "t_hac": 1.7561110162876232,
+              "p_hac": 0.08175500055660777,
+              "ci_low_hac": -0.06510467412223819,
+              "ci_high_hac": 1.0819170524542168
+            }
+          },
+          "12": {
+            "const": {
+              "estimate": -0.007323086493147548,
+              "standard_error_hac": 0.003252475768359611,
+              "t_hac": -2.2515422142071646,
+              "p_hac": 0.026267360383481972,
+              "ci_low_hac": -0.013766215939621046,
+              "ci_high_hac": -0.0008799570466740516
+            },
+            "Mkt-RF": {
+              "estimate": 1.0902397674964874,
+              "standard_error_hac": 0.08169935485445119,
+              "t_hac": 13.344533374085614,
+              "p_hac": 4.873920559665781e-25,
+              "ci_low_hac": 0.9283939747802232,
+              "ci_high_hac": 1.2520855602127516
+            },
+            "SMB": {
+              "estimate": 0.2864876469915781,
+              "standard_error_hac": 0.12270989738606496,
+              "t_hac": 2.3346743261486247,
+              "p_hac": 0.021310783994490115,
+              "ci_low_hac": 0.04340028538437565,
+              "ci_high_hac": 0.5295750085987805
+            },
+            "HML": {
+              "estimate": 0.4522871401617908,
+              "standard_error_hac": 0.23995387888906408,
+              "t_hac": 1.884891972806545,
+              "p_hac": 0.061990693660003884,
+              "ci_low_hac": -0.023059645786876748,
+              "ci_high_hac": 0.9276339261104583
+            },
+            "RMW": {
+              "estimate": -0.09120963201787133,
+              "standard_error_hac": 0.235199058008392,
+              "t_hac": -0.3877976076529054,
+              "p_hac": 0.6988889605892189,
+              "ci_low_hac": -0.5571371544236727,
+              "ci_high_hac": 0.37471789038793
+            },
+            "CMA": {
+              "estimate": 0.5084061891659893,
+              "standard_error_hac": 0.3143669234646877,
+              "t_hac": 1.6172381736690493,
+              "p_hac": 0.10859069604309933,
+              "ci_low_hac": -0.11435226495592266,
+              "ci_high_hac": 1.1311646432879012
+            }
+          }
+        },
+        "chronological_attribution_check": {
+          "estimation_window": [
+            "2010-01",
+            "2014-12"
+          ],
+          "evaluation_window": [
+            "2015-01",
+            "2019-12"
+          ],
+          "estimation_nobs": 60,
+          "evaluation_nobs": 60,
+          "training_coefficients_hac6": {
+            "const": {
+              "estimate": -0.0058475016026687514,
+              "standard_error_hac": 0.004181799865390303,
+              "t_hac": -1.398321725308818,
+              "p_hac": 0.1677332226149361,
+              "ci_low_hac": -0.01423150554013737,
+              "ci_high_hac": 0.002536502334799868
+            },
+            "Mkt-RF": {
+              "estimate": 1.1199932513900284,
+              "standard_error_hac": 0.1181574860954113,
+              "t_hac": 9.478817537516345,
+              "p_hac": 4.391504987517992e-13,
+              "ci_low_hac": 0.88310175477297,
+              "ci_high_hac": 1.3568847480070867
+            },
+            "SMB": {
+              "estimate": 0.12009515705052451,
+              "standard_error_hac": 0.1755082521978146,
+              "t_hac": 0.6842707140355188,
+              "p_hac": 0.4967305218321996,
+              "ci_low_hac": -0.23177770268695994,
+              "ci_high_hac": 0.4719680167880089
+            },
+            "HML": {
+              "estimate": 0.655244880669119,
+              "standard_error_hac": 0.4221254850583587,
+              "t_hac": 1.5522514130567873,
+              "p_hac": 0.12644375567520813,
+              "ci_low_hac": -0.19106576134072117,
+              "ci_high_hac": 1.5015555226789592
+            },
+            "RMW": {
+              "estimate": 0.225874621036454,
+              "standard_error_hac": 0.24344129030395523,
+              "t_hac": 0.9278402228086785,
+              "p_hac": 0.3576192485105664,
+              "ci_low_hac": -0.2621957797837217,
+              "ci_high_hac": 0.7139450218566297
+            },
+            "CMA": {
+              "estimate": -0.3202688749439636,
+              "standard_error_hac": 0.4186148144056099,
+              "t_hac": -0.7650681818289508,
+              "p_hac": 0.44756179402949947,
+              "ci_low_hac": -1.159541046074458,
+              "ci_high_hac": 0.5190032961865308
+            }
+          },
+          "evaluation_same_month_attribution_error": {
+            "mean": -0.0033530607708205464,
+            "sample_standard_deviation_ddof1": 0.03849228051159388,
+            "rmse": 0.038317155616420594,
+            "mean_absolute_residual": 0.03134802547088597,
+            "maximum_absolute_residual": 0.10537278882462536,
+            "lag1_sample_autocorrelation": -0.114569587309987
+          },
+          "timing_limit": "Evaluation factors are realized during the same month and are only observed after month-end; this is not ex-ante prediction or strategy performance."
+        }
+      }
+    }
+  },
+  "alpha_multiple_testing": {
+    "family": "the nine intercept tests formed by three fixed assets times three fixed models",
+    "method": "Holm step-down adjusted p-values, reported alongside nominal HAC p-values",
+    "selection_warning": "These intervals and p-values remain approximate and model-conditional; the nine fitted specifications do not represent every possible model a researcher could try."
+  },
+  "ff3_ff5_common_series_differences": {
+    "Mkt-RF": {
+      "max_absolute_difference_decimal": 0.0002999999999999982,
+      "number_of_nonidentical_months": 40
+    },
+    "SMB": {
+      "max_absolute_difference_decimal": 0.013699999999999997,
+      "number_of_nonidentical_months": 119
+    },
+    "HML": {
+      "max_absolute_difference_decimal": 0.0,
+      "number_of_nonidentical_months": 0
+    },
+    "RF": {
+      "max_absolute_difference_decimal": 0.0,
+      "number_of_nonidentical_months": 0
+    }
+  },
+  "model_comparison_limitations": [
+    "FF3 and FF5 use different official SMB constructions (size/book-to-market versus the average of size/book-to-market, size/profitability and size/investment spreads); the monthly differences have not been rebuilt from underlying portfolios. The specific reason for the Mkt-RF file differences remains unverified.",
+    "Because their common-name factor realizations differ, FF3 and FF5 are not treated as strictly nested for an F-test.",
+    "The R-squared difference is not attributed solely to adding RMW and CMA."
+  ],
+  "chronological_attribution_check": {
+    "estimation_window": [
+      "2010-01",
+      "2014-12"
+    ],
+    "evaluation_window": [
+      "2015-01",
+      "2019-12"
+    ],
+    "months_per_window": 60,
+    "purpose": "fixed time-order descriptive coefficient stability and same-month attribution error",
+    "limitations": [
+      "The split was not preregistered.",
+      "The snapshot is not point-in-time; historical inputs may have been revised after each month.",
+      "Evaluation-period factor returns are realized within the evaluated months and are only known after month-end, so this is not a real-time forecast, signal evaluation, or strategy test.",
+      "No costs, financing, borrow, trade, or net return are calculated."
+    ]
+  },
+  "costs_and_execution": {
+    "trading_ledger_available": false,
+    "transaction_costs": "not applicable: no signal, order, turnover, or trade ledger",
+    "financing_and_borrow": "not applicable: no positions or financing/borrow ledger",
+    "net_strategy_return": "not estimated"
+  },
+  "interpretation_limitations": [
+    "Regression coefficients are conditional historical associations, not causal effects.",
+    "Alpha is the fitted intercept relative to the chosen factors and sample; it changes with model specification and is not proof of mispricing, skill, or future performance.",
+    "HAC standard errors and t-based intervals use a declared Bartlett bandwidth and finite-sample correction; the computation does not verify assumptions or guarantee reliable inference in this finite sample.",
+    "An in-sample fitted-versus-residual variance identity is an OLS accounting result, not evidence that future residuals are independent or predictable.",
+    "Correlated factors prevent assigning each factor an independent additive share of explained variance from these marginal betas alone.",
+    "Nominal tests and confidence intervals are exploratory; the nine-alpha Holm adjustment addresses that displayed family but not unreported model search or specification choice."
+  ],
+  "generated_artifacts": {
+    "coefficients_hac6_csv": "projects/project02/outputs/coefficients_hac6.csv",
+    "hac_sensitivity_csv": "projects/project02/outputs/hac_sensitivity_3_6_12.csv",
+    "monthly_residuals_csv": "projects/project02/outputs/monthly_residuals.csv",
+    "chronological_attribution_errors_csv": "projects/project02/outputs/chronological_attribution_errors.csv",
+    "coefficient_stability_csv": "projects/project02/outputs/coefficient_stability.csv",
+    "figures": {
+      "alpha_hac6": "figures/projects/project02_alpha_hac6.png",
+      "factor_loadings_hac6": "figures/projects/project02_factor_loadings_hac6.png",
+      "variance_decomposition": "figures/projects/project02_variance_decomposition.png",
+      "residuals": "figures/projects/project02_residuals.png",
+      "chronological_attribution_error": "figures/projects/project02_chronological_attribution_error.png"
+    }
+  }
+}

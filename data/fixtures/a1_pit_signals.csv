@@ -1,0 +1,7 @@
+signal_id,security_id,fiscal_period,signal_time
+pre_release,SIM-FILING-1,2023Q4,2024-03-15T16:10:00-04:00
+post_ingest,SIM-FILING-1,2023Q4,2024-03-15T16:15:00-04:00
+before_restatement,SIM-FILING-1,2023Q4,2024-04-01T12:00:00-04:00
+restatement_available_only,SIM-FILING-1,2023Q4,2024-04-02T16:06:00-04:00
+after_restatement_ingest,SIM-FILING-1,2023Q4,2024-04-02T16:10:00-04:00
+other_security,SIM-FILING-2,2023Q4,2024-04-02T16:10:00-04:00

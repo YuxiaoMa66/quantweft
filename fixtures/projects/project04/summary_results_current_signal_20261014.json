@@ -1,0 +1,668 @@
+{
+  "lab_metadata": {
+    "name": "Project 4 Cost and Execution Teaching Lab",
+    "version": "1.0.0",
+    "run_timestamp": "2026-10-14T02:15:02.524840+00:00",
+    "data_status": "CONSTRUCTED_TEACHING_DATA",
+    "seed": 20261210,
+    "elapsed_seconds": 287.9
+  },
+  "experiment_1_fixed_parent_comparison": {
+    "BUY": {
+      "TWAP": {
+        "parent_quantity": 10000.0,
+        "filled_quantity": 10000.0,
+        "remainder_quantity": 0.0,
+        "fill_rate": 1.0,
+        "fill_vwap": 105.27215515973187,
+        "arrival_price": 99.85799223342983,
+        "terminal_price": 105.91094962386829,
+        "delay_cost": 499.9999999999716,
+        "realized_execution_cost": 54141.62926302029,
+        "unfilled_opportunity_cost": 0.0,
+        "explicit_fees": 526.3607757986593,
+        "total_is": 55167.99003881892,
+        "total_is_bps": 552.7412064335754,
+        "spread_attr_usd": 257.2489397195143,
+        "impact_attr_usd": 23468.543779542066,
+        "trend_attr_usd": 30415.836543758716,
+        "identity_verified": true
+      },
+      "VWAP": {
+        "parent_quantity": 10000.0,
+        "filled_quantity": 10000.0,
+        "remainder_quantity": 0.0,
+        "fill_rate": 1.0,
+        "fill_vwap": 105.16196700827503,
+        "arrival_price": 99.85799223342983,
+        "terminal_price": 105.76551063786836,
+        "delay_cost": 499.9999999999716,
+        "realized_execution_cost": 53039.747748452006,
+        "unfilled_opportunity_cost": 0.0,
+        "explicit_fees": 525.8098350413751,
+        "total_is": 54065.557583493355,
+        "total_is_bps": 541.695673599419,
+        "spread_attr_usd": 257.0743946660221,
+        "impact_attr_usd": 23065.01702399579,
+        "trend_attr_usd": 29717.656329790203,
+        "identity_verified": true
+      },
+      "POV": {
+        "parent_quantity": 10000.0,
+        "filled_quantity": 10000.0,
+        "remainder_quantity": 0.0,
+        "fill_rate": 1.0,
+        "fill_vwap": 106.18522672599023,
+        "arrival_price": 99.85799223342983,
+        "terminal_price": 105.64449984941584,
+        "delay_cost": 499.9999999999716,
+        "realized_execution_cost": 63272.34492560397,
+        "unfilled_opportunity_cost": 0.0,
+        "explicit_fees": 530.9261336299511,
+        "total_is": 64303.27105923389,
+        "total_is_bps": 644.2697585664495,
+        "spread_attr_usd": 254.3340194998701,
+        "impact_attr_usd": 44261.8552409219,
+        "trend_attr_usd": 18756.155665182196,
+        "identity_verified": true
+      }
+    },
+    "SELL": {
+      "TWAP": {
+        "parent_quantity": -10000.0,
+        "filled_quantity": -10000.0,
+        "remainder_quantity": 0.0,
+        "fill_rate": 1.0,
+        "fill_vwap": 97.38890929324509,
+        "arrival_price": 99.85799223342983,
+        "terminal_price": 98.9700744601924,
+        "delay_cost": 499.9999999999716,
+        "realized_execution_cost": 24690.82940184734,
+        "unfilled_opportunity_cost": -0.0,
+        "explicit_fees": 486.94454646622546,
+        "total_is": 25677.773948313534,
+        "total_is_bps": 257.0142125198428,
+        "spread_attr_usd": 249.21960281429264,
+        "impact_attr_usd": 22740.098721905248,
+        "trend_attr_usd": 1701.5110771278007,
+        "identity_verified": true
+      },
+      "VWAP": {
+        "parent_quantity": -10000.0,
+        "filled_quantity": -10000.0,
+        "remainder_quantity": 0.0,
+        "fill_rate": 1.0,
+        "fill_vwap": 97.4694837573845,
+        "arrival_price": 99.85799223342983,
+        "terminal_price": 99.10711245544822,
+        "delay_cost": 499.9999999999716,
+        "realized_execution_cost": 23885.08476045334,
+        "unfilled_opportunity_cost": -0.0,
+        "explicit_fees": 487.3474187869225,
+        "total_is": 24872.432179240233,
+        "total_is_bps": 248.95337823551782,
+        "spread_attr_usd": 249.32877500323767,
+        "impact_attr_usd": 22370.93366410253,
+        "trend_attr_usd": 1264.82232134758,
+        "identity_verified": true
+      },
+      "POV": {
+        "parent_quantity": -10000.0,
+        "filled_quantity": -10000.0,
+        "remainder_quantity": 0.0,
+        "fill_rate": 1.0,
+        "fill_vwap": 95.42637281166543,
+        "arrival_price": 99.85799223342983,
+        "terminal_price": 99.19973276928081,
+        "delay_cost": 499.9999999999716,
+        "realized_execution_cost": 44316.194217643875,
+        "unfilled_opportunity_cost": -0.0,
+        "explicit_fees": 477.1318640583272,
+        "total_is": 45293.32608170217,
+        "total_is_bps": 453.3503783749019,
+        "spread_attr_usd": 249.4952199388054,
+        "impact_attr_usd": 43467.656418628416,
+        "trend_attr_usd": 599.0425790766275,
+        "identity_verified": true
+      }
+    }
+  },
+  "experiment_2_liquidity_stress": [
+    {
+      "max_participation": 0.25,
+      "parent_quantity": 5000.0,
+      "filled_quantity": 4775.128227898736,
+      "remainder_quantity": 224.87177210126356,
+      "fill_fraction": 0.9550256455797473,
+      "fill_vwap": 114.54869014711205,
+      "unfilled_opportunity_cost": 4392.170530128991,
+      "realized_execution_cost": 69471.86100042691,
+      "explicit_fees": 273.4923418951503,
+      "total_is": 74137.52387245106,
+      "identity_verified": true
+    },
+    {
+      "max_participation": 0.1,
+      "parent_quantity": 5000.0,
+      "filled_quantity": 2002.8316318932032,
+      "remainder_quantity": 2997.168368106797,
+      "fill_fraction": 0.40056632637864065,
+      "fill_vwap": 107.73599964530248,
+      "unfilled_opportunity_cost": 27824.212752534484,
+      "realized_execution_cost": 15493.904793926391,
+      "explicit_fees": 107.88853399162336,
+      "total_is": 43426.0060804525,
+      "identity_verified": true
+    },
+    {
+      "max_participation": 0.05,
+      "parent_quantity": 5000.0,
+      "filled_quantity": 1001.4158159466016,
+      "remainder_quantity": 3998.5841840533985,
+      "fill_fraction": 0.20028316318932032,
+      "fill_vwap": 105.15278238108613,
+      "unfilled_opportunity_cost": 23356.42445047654,
+      "realized_execution_cost": 5160.077772550644,
+      "explicit_fees": 52.6508296836054,
+      "total_is": 28569.15305271079,
+      "identity_verified": true
+    },
+    {
+      "max_participation": 0.01,
+      "parent_quantity": 5000.0,
+      "filled_quantity": 200.2831631893203,
+      "remainder_quantity": 4799.7168368106795,
+      "fill_fraction": 0.04005663263786406,
+      "fill_vwap": 102.62672368713865,
+      "unfilled_opportunity_cost": 15168.423962229928,
+      "realized_execution_cost": 526.0885288844412,
+      "explicit_fees": 10.277202423908237,
+      "total_is": 15704.789693538278,
+      "identity_verified": true
+    },
+    {
+      "max_participation": 0.0,
+      "parent_quantity": 5000.0,
+      "filled_quantity": 0.0,
+      "remainder_quantity": 5000.0,
+      "fill_fraction": 0.0,
+      "fill_vwap": null,
+      "unfilled_opportunity_cost": 12500.0,
+      "realized_execution_cost": 0,
+      "explicit_fees": 0,
+      "total_is": 12500.0,
+      "identity_verified": true
+    }
+  ],
+  "experiment_3_walk_forward_performance": {
+    "GROSS": {
+      "all": {
+        "cagr": -0.002315859511897389,
+        "annual_volatility": 0.048926437721632215,
+        "sharpe_ratio": -0.02315110751788046,
+        "max_drawdown": 0.15498248612139165,
+        "annual_requested_one_sided_risky_turnover": 5.0471625217383345,
+        "annual_requested_total_risky_notional_turnover": 10.094325043476669,
+        "annual_filled_one_sided_risky_turnover": 5.0471625217383345,
+        "annual_filled_total_risky_notional_turnover": 10.094325043476669,
+        "avg_rebalance_is": 0.0
+      },
+      "train": {
+        "cagr": 0.00817606253296388,
+        "annual_volatility": 0.0452660707097405,
+        "sharpe_ratio": 0.20217021709958935,
+        "max_drawdown": 0.08135127494982153,
+        "annual_requested_one_sided_risky_turnover": 4.9059567672060185,
+        "annual_requested_total_risky_notional_turnover": 9.811913534412037,
+        "annual_filled_one_sided_risky_turnover": 4.9059567672060185,
+        "annual_filled_total_risky_notional_turnover": 9.811913534412037,
+        "avg_rebalance_is": 0.0
+      },
+      "test": {
+        "cagr": -0.019560318536990806,
+        "annual_volatility": 0.05480053520610553,
+        "sharpe_ratio": -0.333444836309698,
+        "max_drawdown": 0.15498248612139176,
+        "annual_requested_one_sided_risky_turnover": 5.282505445958859,
+        "annual_requested_total_risky_notional_turnover": 10.565010891917717,
+        "annual_filled_one_sided_risky_turnover": 5.282505445958859,
+        "annual_filled_total_risky_notional_turnover": 10.565010891917717,
+        "avg_rebalance_is": 0.0
+      }
+    },
+    "TWAP": {
+      "all": {
+        "cagr": -0.004592154346145905,
+        "annual_volatility": 0.04934318213122798,
+        "sharpe_ratio": -0.06881518870823722,
+        "max_drawdown": 0.16403169337153523,
+        "annual_requested_one_sided_risky_turnover": 5.048125830593971,
+        "annual_requested_total_risky_notional_turnover": 10.096251661187942,
+        "annual_filled_one_sided_risky_turnover": 5.0479831861522495,
+        "annual_filled_total_risky_notional_turnover": 10.095966372304499,
+        "avg_rebalance_is": 2387.505670936053
+      },
+      "train": {
+        "cagr": 0.00690230175663209,
+        "annual_volatility": 0.045535406342992635,
+        "sharpe_ratio": 0.1734600041594917,
+        "max_drawdown": 0.07794102045540807,
+        "annual_requested_one_sided_risky_turnover": 4.906596785764501,
+        "annual_requested_total_risky_notional_turnover": 9.813193571529002,
+        "annual_filled_one_sided_risky_turnover": 4.9060635529990115,
+        "annual_filled_total_risky_notional_turnover": 9.812127105998023,
+        "avg_rebalance_is": 2350.5930471129363
+      },
+      "test": {
+        "cagr": -0.02345872866695009,
+        "annual_volatility": 0.055359997918359424,
+        "sharpe_ratio": -0.4013568430475872,
+        "max_drawdown": 0.16403169337153556,
+        "annual_requested_one_sided_risky_turnover": 5.2840075719764235,
+        "annual_requested_total_risky_notional_turnover": 10.568015143952847,
+        "annual_filled_one_sided_risky_turnover": 5.284515908074313,
+        "annual_filled_total_risky_notional_turnover": 10.569031816148627,
+        "avg_rebalance_is": 2449.026710641247
+      }
+    },
+    "VWAP": {
+      "all": {
+        "cagr": -0.004333205891712377,
+        "annual_volatility": 0.04929939561281882,
+        "sharpe_ratio": -0.06364644105272284,
+        "max_drawdown": 0.16372287315612377,
+        "annual_requested_one_sided_risky_turnover": 5.048022242469779,
+        "annual_requested_total_risky_notional_turnover": 10.096044484939558,
+        "annual_filled_one_sided_risky_turnover": 5.047894813043991,
+        "annual_filled_total_risky_notional_turnover": 10.095789626087981,
+        "avg_rebalance_is": 2364.248400600952
+      },
+      "train": {
+        "cagr": 0.007240196783652841,
+        "annual_volatility": 0.045495738361103356,
+        "sharpe_ratio": 0.1809506168346908,
+        "max_drawdown": 0.07735147206839188,
+        "annual_requested_one_sided_risky_turnover": 4.906490807321909,
+        "annual_requested_total_risky_notional_turnover": 9.812981614643817,
+        "annual_filled_one_sided_risky_turnover": 4.905965922657547,
+        "annual_filled_total_risky_notional_turnover": 9.811931845315094,
+        "avg_rebalance_is": 2319.3618727262433
+      },
+      "test": {
+        "cagr": -0.023327452650132807,
+        "annual_volatility": 0.05530312877393009,
+        "sharpe_ratio": -0.39940029724950427,
+        "max_drawdown": 0.16372287315612388,
+        "annual_requested_one_sided_risky_turnover": 5.28390796771623,
+        "annual_requested_total_risky_notional_turnover": 10.56781593543246,
+        "annual_filled_one_sided_risky_turnover": 5.2844429636880665,
+        "annual_filled_total_risky_notional_turnover": 10.568885927376133,
+        "avg_rebalance_is": 2439.059280392134
+      }
+    },
+    "POV": {
+      "all": {
+        "cagr": -0.044918946108975066,
+        "annual_volatility": 0.05041116341376163,
+        "sharpe_ratio": -0.8848729648147142,
+        "max_drawdown": 0.33705274218656556,
+        "annual_requested_one_sided_risky_turnover": 5.0611272277119985,
+        "annual_requested_total_risky_notional_turnover": 10.122254455423997,
+        "annual_filled_one_sided_risky_turnover": 5.06126760115843,
+        "annual_filled_total_risky_notional_turnover": 10.12253520231686,
+        "avg_rebalance_is": 4867.731914607956
+      },
+      "train": {
+        "cagr": -0.03531300076946697,
+        "annual_volatility": 0.046723140249870926,
+        "sharpe_ratio": -0.7452765761419735,
+        "max_drawdown": 0.17151403560505285,
+        "annual_requested_one_sided_risky_turnover": 4.918500931181639,
+        "annual_requested_total_risky_notional_turnover": 9.837001862363278,
+        "annual_filled_one_sided_risky_turnover": 4.918417898048221,
+        "annual_filled_total_risky_notional_turnover": 9.836835796096443,
+        "avg_rebalance_is": 5269.3063564015265
+      },
+      "test": {
+        "cagr": -0.06071676587756769,
+        "annual_volatility": 0.05640294465164193,
+        "sharpe_ratio": -1.0800351896882108,
+        "max_drawdown": 0.2132509419789328,
+        "annual_requested_one_sided_risky_turnover": 5.298837721929264,
+        "annual_requested_total_risky_notional_turnover": 10.597675443858527,
+        "annual_filled_one_sided_risky_turnover": 5.299350439675442,
+        "annual_filled_total_risky_notional_turnover": 10.598700879350885,
+        "avg_rebalance_is": 4198.4411782853385
+      }
+    }
+  },
+  "experiment_4_zero_negative_result": {
+    "gross_cagr": -0.002315859511897389,
+    "gross_sharpe": -0.02315110751788046,
+    "net_cagr": -0.07439218243285173,
+    "net_sharpe": -1.5049897226261155,
+    "cagr_decay": -0.07207632292095434,
+    "net_cagr_positive": false,
+    "summary": "Constructed scenario comparison only; it does not establish whether real-market alpha survives costs."
+  },
+  "experiment_5_sensitivity_analysis": {
+    "fee_and_participation": [
+      {
+        "commission_bps": 0.0,
+        "max_participation": 0.001,
+        "net_cagr": -0.019375496939684322,
+        "net_sharpe": -0.34835610606174305,
+        "annual_requested_one_sided_risky_turnover": 4.645753805711206,
+        "annual_requested_total_risky_notional_turnover": 9.291507611422412,
+        "annual_filled_one_sided_risky_turnover": 4.625170832565864,
+        "annual_filled_total_risky_notional_turnover": 9.250341665131728
+      },
+      {
+        "commission_bps": 0.0,
+        "max_participation": 0.0025,
+        "net_cagr": -0.019790753941445804,
+        "net_sharpe": -0.3562805675596516,
+        "annual_requested_one_sided_risky_turnover": 4.636566995025231,
+        "annual_requested_total_risky_notional_turnover": 9.273133990050463,
+        "annual_filled_one_sided_risky_turnover": 4.635164876001961,
+        "annual_filled_total_risky_notional_turnover": 9.270329752003923
+      },
+      {
+        "commission_bps": 0.0,
+        "max_participation": 0.005,
+        "net_cagr": -0.019802358159449085,
+        "net_sharpe": -0.35649020500670864,
+        "annual_requested_one_sided_risky_turnover": 4.636574971158028,
+        "annual_requested_total_risky_notional_turnover": 9.273149942316056,
+        "annual_filled_one_sided_risky_turnover": 4.635169354702593,
+        "annual_filled_total_risky_notional_turnover": 9.270338709405186
+      },
+      {
+        "commission_bps": 0.0,
+        "max_participation": 0.01,
+        "net_cagr": -0.019802358159449085,
+        "net_sharpe": -0.35649020500670864,
+        "annual_requested_one_sided_risky_turnover": 4.636574971158028,
+        "annual_requested_total_risky_notional_turnover": 9.273149942316056,
+        "annual_filled_one_sided_risky_turnover": 4.635169354702593,
+        "annual_filled_total_risky_notional_turnover": 9.270338709405186
+      },
+      {
+        "commission_bps": 2.5,
+        "max_participation": 0.001,
+        "net_cagr": -0.02164854113348058,
+        "net_sharpe": -0.3916842523383303,
+        "annual_requested_one_sided_risky_turnover": 4.646511789155026,
+        "annual_requested_total_risky_notional_turnover": 9.293023578310052,
+        "annual_filled_one_sided_risky_turnover": 4.626026516418382,
+        "annual_filled_total_risky_notional_turnover": 9.252053032836765
+      },
+      {
+        "commission_bps": 2.5,
+        "max_participation": 0.0025,
+        "net_cagr": -0.022064496040568482,
+        "net_sharpe": -0.39961095496829896,
+        "annual_requested_one_sided_risky_turnover": 4.637381598826423,
+        "annual_requested_total_risky_notional_turnover": 9.274763197652845,
+        "annual_filled_one_sided_risky_turnover": 4.635979672064494,
+        "annual_filled_total_risky_notional_turnover": 9.271959344128987
+      },
+      {
+        "commission_bps": 2.5,
+        "max_participation": 0.005,
+        "net_cagr": -0.022075969748364455,
+        "net_sharpe": -0.3998167211138532,
+        "annual_requested_one_sided_risky_turnover": 4.637389522233843,
+        "annual_requested_total_risky_notional_turnover": 9.274779044467685,
+        "annual_filled_one_sided_risky_turnover": 4.635984116212278,
+        "annual_filled_total_risky_notional_turnover": 9.271968232424555
+      },
+      {
+        "commission_bps": 2.5,
+        "max_participation": 0.01,
+        "net_cagr": -0.022075969748364455,
+        "net_sharpe": -0.3998167211138532,
+        "annual_requested_one_sided_risky_turnover": 4.637389522233843,
+        "annual_requested_total_risky_notional_turnover": 9.274779044467685,
+        "annual_filled_one_sided_risky_turnover": 4.635984116212278,
+        "annual_filled_total_risky_notional_turnover": 9.271968232424555
+      },
+      {
+        "commission_bps": 5.0,
+        "max_participation": 0.001,
+        "net_cagr": -0.023917760031821667,
+        "net_sharpe": -0.4348301903436513,
+        "annual_requested_one_sided_risky_turnover": 4.647272375067274,
+        "annual_requested_total_risky_notional_turnover": 9.294544750134548,
+        "annual_filled_one_sided_risky_turnover": 4.626885133044055,
+        "annual_filled_total_risky_notional_turnover": 9.25377026608811
+      },
+      {
+        "commission_bps": 5.0,
+        "max_participation": 0.0025,
+        "net_cagr": -0.024334358481538643,
+        "net_sharpe": -0.44275892532981137,
+        "annual_requested_one_sided_risky_turnover": 4.638198839766489,
+        "annual_requested_total_risky_notional_turnover": 9.276397679532979,
+        "annual_filled_one_sided_risky_turnover": 4.636797097202698,
+        "annual_filled_total_risky_notional_turnover": 9.273594194405396
+      },
+      {
+        "commission_bps": 5.0,
+        "max_participation": 0.005,
+        "net_cagr": -0.024345701458131974,
+        "net_sharpe": -0.4429608788259142,
+        "annual_requested_one_sided_risky_turnover": 4.638206709189026,
+        "annual_requested_total_risky_notional_turnover": 9.276413418378052,
+        "annual_filled_one_sided_risky_turnover": 4.636801505683241,
+        "annual_filled_total_risky_notional_turnover": 9.273603011366482
+      },
+      {
+        "commission_bps": 5.0,
+        "max_participation": 0.01,
+        "net_cagr": -0.024345701458131974,
+        "net_sharpe": -0.4429608788259142,
+        "annual_requested_one_sided_risky_turnover": 4.638206709189026,
+        "annual_requested_total_risky_notional_turnover": 9.276413418378052,
+        "annual_filled_one_sided_risky_turnover": 4.636801505683241,
+        "annual_filled_total_risky_notional_turnover": 9.273603011366482
+      },
+      {
+        "commission_bps": 10.0,
+        "max_participation": 0.001,
+        "net_cagr": -0.028444842785299795,
+        "net_sharpe": -0.520558007613471,
+        "annual_requested_one_sided_risky_turnover": 4.648807549691885,
+        "annual_requested_total_risky_notional_turnover": 9.29761509938377,
+        "annual_filled_one_sided_risky_turnover": 4.628617304567381,
+        "annual_filled_total_risky_notional_turnover": 9.257234609134763
+      },
+      {
+        "commission_bps": 10.0,
+        "max_participation": 0.0025,
+        "net_cagr": -0.028862469973181426,
+        "net_sharpe": -0.528488953726384,
+        "annual_requested_one_sided_risky_turnover": 4.639839977100825,
+        "annual_requested_total_risky_notional_turnover": 9.27967995420165,
+        "annual_filled_one_sided_risky_turnover": 4.638438587065746,
+        "annual_filled_total_risky_notional_turnover": 9.276877174131492
+      },
+      {
+        "commission_bps": 10.0,
+        "max_participation": 0.005,
+        "net_cagr": -0.028873550794514813,
+        "net_sharpe": -0.5286834538956572,
+        "annual_requested_one_sided_risky_turnover": 4.639847737973984,
+        "annual_requested_total_risky_notional_turnover": 9.279695475947968,
+        "annual_filled_one_sided_risky_turnover": 4.638442924059829,
+        "annual_filled_total_risky_notional_turnover": 9.276885848119658
+      },
+      {
+        "commission_bps": 10.0,
+        "max_participation": 0.01,
+        "net_cagr": -0.028873550794514813,
+        "net_sharpe": -0.5286834538956572,
+        "annual_requested_one_sided_risky_turnover": 4.639847737973984,
+        "annual_requested_total_risky_notional_turnover": 9.279695475947968,
+        "annual_filled_one_sided_risky_turnover": 4.638442924059829,
+        "annual_filled_total_risky_notional_turnover": 9.276885848119658
+      },
+      {
+        "commission_bps": 20.0,
+        "max_participation": 0.001,
+        "net_cagr": -0.03745404653501938,
+        "net_sharpe": -0.689630386236341,
+        "annual_requested_one_sided_risky_turnover": 4.652041022473073,
+        "annual_requested_total_risky_notional_turnover": 9.304082044946146,
+        "annual_filled_one_sided_risky_turnover": 4.632212276131062,
+        "annual_filled_total_risky_notional_turnover": 9.264424552262124
+      },
+      {
+        "commission_bps": 20.0,
+        "max_participation": 0.0025,
+        "net_cagr": -0.03787277456691018,
+        "net_sharpe": -0.6975698842383956,
+        "annual_requested_one_sided_risky_turnover": 4.643228967309115,
+        "annual_requested_total_risky_notional_turnover": 9.28645793461823,
+        "annual_filled_one_sided_risky_turnover": 4.641828223648367,
+        "annual_filled_total_risky_notional_turnover": 9.283656447296734
+      },
+      {
+        "commission_bps": 20.0,
+        "max_participation": 0.005,
+        "net_cagr": -0.0378833301005036,
+        "net_sharpe": -0.6977501653432135,
+        "annual_requested_one_sided_risky_turnover": 4.643236529027487,
+        "annual_requested_total_risky_notional_turnover": 9.286473058054973,
+        "annual_filled_one_sided_risky_turnover": 4.641832435915276,
+        "annual_filled_total_risky_notional_turnover": 9.283664871830553
+      },
+      {
+        "commission_bps": 20.0,
+        "max_participation": 0.01,
+        "net_cagr": -0.0378833301005036,
+        "net_sharpe": -0.6977501653432135,
+        "annual_requested_one_sided_risky_turnover": 4.643236529027487,
+        "annual_requested_total_risky_notional_turnover": 9.286473058054973,
+        "annual_filled_one_sided_risky_turnover": 4.641832435915276,
+        "annual_filled_total_risky_notional_turnover": 9.283664871830553
+      }
+    ],
+    "target_weight_scale": [
+      {
+        "target_weight_scale": 0.5,
+        "net_cagr": 0.010916582178620793,
+        "net_sharpe": 0.4286235474477874,
+        "annual_requested_one_sided_risky_turnover": 2.3078414927277677,
+        "annual_requested_total_risky_notional_turnover": 4.6156829854555355,
+        "annual_filled_one_sided_risky_turnover": 2.307155773312027,
+        "annual_filled_total_risky_notional_turnover": 4.614311546624054
+      },
+      {
+        "target_weight_scale": 1.0,
+        "net_cagr": -0.024345701458131974,
+        "net_sharpe": -0.4429608788259142,
+        "annual_requested_one_sided_risky_turnover": 4.638206709189026,
+        "annual_requested_total_risky_notional_turnover": 9.276413418378052,
+        "annual_filled_one_sided_risky_turnover": 4.636801505683241,
+        "annual_filled_total_risky_notional_turnover": 9.273603011366482
+      },
+      {
+        "target_weight_scale": 2.0,
+        "net_cagr": -0.10172393929583712,
+        "net_sharpe": -0.9546494542179347,
+        "annual_requested_one_sided_risky_turnover": 9.41456777030891,
+        "annual_requested_total_risky_notional_turnover": 18.82913554061782,
+        "annual_filled_one_sided_risky_turnover": 9.411690236017677,
+        "annual_filled_total_risky_notional_turnover": 18.823380472035353
+      }
+    ]
+  },
+  "experiment_6_ablation_study": [
+    {
+      "stage": "1_Gross",
+      "cagr": -0.024270529161599552,
+      "sharpe": -0.45308680411201124,
+      "max_drawdown": 0.06936681466844985,
+      "marginal_cagr_drag": 0.0
+    },
+    {
+      "stage": "2_Plus_Spread",
+      "cagr": -0.026540033353096515,
+      "sharpe": -0.4974359956061712,
+      "max_drawdown": 0.07197751614540782,
+      "marginal_cagr_drag": 0.0022695041914969627
+    },
+    {
+      "stage": "3_Plus_Impact",
+      "cagr": -0.044075180304371075,
+      "sharpe": -0.8334480348766113,
+      "max_drawdown": 0.0996258179886721,
+      "marginal_cagr_drag": 0.01753514695127456
+    },
+    {
+      "stage": "4_Plus_Commissions",
+      "cagr": -0.04850942369154965,
+      "sharpe": -0.9178187338798932,
+      "max_drawdown": 0.10681845230295262,
+      "marginal_cagr_drag": 0.004434243387178571
+    },
+    {
+      "stage": "5_Full_Net_With_Cash_Interest_And_Borrow",
+      "cagr": -0.024345701458131974,
+      "sharpe": -0.4429608788259142,
+      "max_drawdown": 0.07091190796687907,
+      "marginal_cagr_drag": -0.024163722233417673
+    }
+  ],
+  "ledger_audits": {
+    "gross": {
+      "initial_cash": 1000000.0,
+      "final_cash": 968478.7949455639,
+      "total_trades_cash_flow": 31521.205054439804,
+      "total_commissions": 0.0,
+      "total_interest": 0.0,
+      "total_borrow_fees": 0.0,
+      "cash_residual": 3.725290298461914e-09,
+      "position_residual_shares": 5.684341886080802e-14,
+      "is_exact": 1.0,
+      "status": 1.0
+    },
+    "twap": {
+      "initial_cash": 1000000.0,
+      "final_cash": 950822.9081019181,
+      "total_trades_cash_flow": 208394.85136211076,
+      "total_commissions": 39635.59473965697,
+      "total_interest": 318415.68674473773,
+      "total_borrow_fees": 119562.33254106424,
+      "cash_residual": 1.234002411365509e-08,
+      "position_residual_shares": 6.821210263296962e-13,
+      "is_exact": 1.0,
+      "status": 1.0
+    },
+    "vwap": {
+      "initial_cash": 1000000.0,
+      "final_cash": 952807.2609711537,
+      "total_trades_cash_flow": 206617.7886707436,
+      "total_commissions": 39685.69791636008,
+      "total_interest": 318822.4877724268,
+      "total_borrow_fees": 119711.74021410906,
+      "cash_residual": 6.030313670635223e-08,
+      "position_residual_shares": 4.547473508864641e-13,
+      "is_exact": 1.0,
+      "status": 1.0
+    },
+    "pov": {
+      "initial_cash": 1000000.0,
+      "final_cash": 682997.3666269975,
+      "total_trades_cash_flow": 451645.4387615684,
+      "total_commissions": 33689.51458762837,
+      "total_interest": 270131.65413793747,
+      "total_borrow_fees": 101799.33416174361,
+      "cash_residual": 3.4924596548080444e-10,
+      "position_residual_shares": 5.684341886080802e-14,
+      "is_exact": 1.0,
+      "status": 1.0
+    }
+  }
+}

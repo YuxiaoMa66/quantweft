@@ -1,0 +1,194 @@
+{
+  "schema": "p05-preregistration.v2",
+  "frozen_at": "2026-10-10",
+  "status": "frozen before any real price data is seen; supersedes v1 for every new run; v1, amendments A1/A2, c1-c4 candidates and all their results are kept unchanged",
+  "universe": {
+    "rule": "8 US-listed pairs fixed a priori by a shared economic driver; no pair may be added, dropped or replaced after data are seen; every pair is tested in every window and reported",
+    "pairs": [
+      {
+        "id": "EWA_EWC",
+        "y": "EWA",
+        "x": "EWC",
+        "rationale": "iShares Australia vs Canada country ETFs; both commodity-exporting developed markets"
+      },
+      {
+        "id": "KO_PEP",
+        "y": "KO",
+        "x": "PEP",
+        "rationale": "US non-alcoholic beverage duopoly"
+      },
+      {
+        "id": "XOM_CVX",
+        "y": "XOM",
+        "x": "CVX",
+        "rationale": "US integrated oil majors"
+      },
+      {
+        "id": "GDX_GLD",
+        "y": "GDX",
+        "x": "GLD",
+        "rationale": "gold miners equity ETF vs physical gold ETF; operating leverage makes the link loose (expected weak)"
+      },
+      {
+        "id": "XOP_XLE",
+        "y": "XOP",
+        "x": "XLE",
+        "rationale": "E&P equal-weight ETF vs cap-weight energy sector ETF"
+      },
+      {
+        "id": "HD_LOW",
+        "y": "HD",
+        "x": "LOW",
+        "rationale": "US home-improvement retail duopoly"
+      },
+      {
+        "id": "V_MA",
+        "y": "V",
+        "x": "MA",
+        "rationale": "card payment networks"
+      },
+      {
+        "id": "IVV_SPY",
+        "y": "IVV",
+        "x": "SPY",
+        "rationale": "control: two ETFs on the same S&P 500 index; cointegration expected by construction of the products, spread expected smaller than costs"
+      }
+    ],
+    "search_count_note": "8 pairs x every walk-forward window are all counted as tests; no other pair was tested on this data. One interface probe (EWA chart request, 2026-10-10) preceded this freeze and is logged; no statistic was computed from it."
+  },
+  "sample": {
+    "first_date": "2010-01-04",
+    "last_date": "2025-12-31",
+    "calendar": "NYSE trading days as the union of dates returned for all 16 tickers; a date missing for any held/traded ticker is a data error, never forward-filled",
+    "source": "Yahoo Finance chart endpoint (see data_manifest.json for terms review and field semantics)"
+  },
+  "prices": {
+    "trade_prices": "split-unadjusted open/close reconstructed from vendor split-adjusted quotes using vendor split events; dividend-unadjusted",
+    "corporate_actions": "splits change share counts on the ex-date; cash dividends (unadjusted per share) are paid to longs / charged to shorts on the ex-date in the ledger",
+    "signal_series": "log of a forward-built total-return index from unadjusted closes, splits and dividends, using only events dated <= t; vendor adjclose used only as a cross-check"
+  },
+  "walk_forward": {
+    "formation_days": 504,
+    "trading_days": 126,
+    "step_days": 126,
+    "mode": "rolling",
+    "first_formation_end_index": 503
+  },
+  "screening": {
+    "test": "Engle-Granger (statsmodels coint, trend c, autolag AIC) on formation-window log TR indices, y on x; MacKinnon residual critical values",
+    "select_if": "pvalue < 0.05 AND beta > 0 within the window (unadjusted p; BH q reported, not used)",
+    "also_report": "Pearson correlation of levels and of daily log returns in formation window; half-life of formation spread",
+    "select_rule": {
+      "pvalue_lt": 0.05,
+      "beta_gt": 0.0
+    }
+  },
+  "signal": {
+    "spread": "s_t = log TR_y - alpha - beta * log TR_x with alpha, beta from formation OLS (frozen for the trading window)",
+    "zscore": "z_t = (s_t - mean_formation) / sd_formation (frozen)",
+    "entry_abs_z": 2.0,
+    "exit_abs_z": 0.5,
+    "stop_abs_z": 4.0,
+    "stop_rule": "after a stop-out no re-entry in the same trading window",
+    "window_end": "a flat signal is forced at the last trading-window close",
+    "signal_time": "16:00 America/New_York close of day t",
+    "trade_time": "09:30 America/New_York open of the next trading day (lag 1)"
+  },
+  "sizing": {
+    "initial_wealth_per_pair_usd": 1000000,
+    "gross_exposure_fraction_of_nav": 1.0,
+    "leg_dollar_weights": "long spread: w_y = 1/(1+|beta|), w_x = -beta/(1+|beta|) (A1); with the v2 selection rule beta > 0 for every traded window; short spread mirrored",
+    "shares": "target shares = weight * NAV_at_signal_close / signal close price, rounded toward zero to whole shares; fixed until exit (no intra-trade rebalancing)",
+    "share_ratio_note": "absolute share ratio |n_x|/|n_y| ~= |beta| P_y/P_x and signed ratio n_x/n_y ~= -beta P_y/P_x before whole-share rounding; after rounding only approximately"
+  },
+  "costs_scenarios_not_calibrated": {
+    "commission_usd_per_share": 0.005,
+    "half_spread_bps": {
+      "ETF": 1.0,
+      "stock": 2.0
+    },
+    "impact": "temporary only: eta * sigma20 * sqrt(shares / ADV20) with eta = 0.1, sigma20 and ADV20 from the 20 days ending at the signal close",
+    "borrow_fee_annual": 0.0025,
+    "cash_credit_spread_below_policy_rate": 0.0025,
+    "cash_debit_spread_above_policy_rate": 0.005,
+    "policy_rate": "FRED DFF (effective federal funds rate), value of the prior available business day, ACT/360",
+    "short_proceeds": "credited to cash and earn the credit rate (rebate modelled through the cash rate)",
+    "partial_fill_policy": "matched: both legs filled at the smaller feasible fraction; the remainder is cancelled and logged",
+    "opening_fill_budget": {
+      "max_fraction_of_adv20": 0.05,
+      "adv20": "mean unadjusted share volume over the 20 trading days ending at the signal close, restated to the fill day's post-split shares",
+      "meaning": "uncalibrated opening-fill scenario; not a realised participation guarantee",
+      "post_close_diagnostic": "fill-day full-day volume and |filled|/volume are recorded after the close and never change the 09:30 fill"
+    },
+    "locate": "every leg with negative target shares needs a locate (A2)"
+  },
+  "robustness_all_reported": {
+    "cost_grid": {
+      "half_spread_multiplier": [
+        0,
+        1,
+        3
+      ],
+      "eta": [
+        0,
+        0.1,
+        0.3
+      ],
+      "borrow_fee_annual": [
+        0.0025,
+        0.01,
+        0.05
+      ]
+    },
+    "threshold_grid": {
+      "entry_abs_z": [
+        1.5,
+        2.0,
+        2.5
+      ],
+      "exit_abs_z": [
+        0.0,
+        0.5
+      ]
+    },
+    "formation_days_alt": [
+      252
+    ],
+    "always_trade_vs_screened": "every pair also run ungated (traded in every window) to expose the selection effect",
+    "partial_fill_stress": "W0 = 1e9 per pair and independent-leg policy; budget still 5% of ADV20",
+    "rule": "grid results are descriptive; the headline uses only the frozen values above"
+  },
+  "evaluation": {
+    "nav": "N+1 daily NAV marks from W0 give N simple returns; annualisation 252",
+    "metrics": [
+      "total and annualised return",
+      "volatility",
+      "Sharpe on excess over credit cash rate",
+      "max drawdown",
+      "turnover",
+      "cost/financing/borrow/dividend attribution",
+      "trade count, hit rate, holding days",
+      "implementation shortfall per order"
+    ],
+    "claim_rule": "a positive headline must survive the cost grid and the selection-effect comparison to be called 'supported'; otherwise the report states that the evidence does not support the strategy",
+    "metrics_definitions": {
+      "turnover": "executed notional only: two-sided = sum |filled x fill_price|; annualised one-sided turnover = 0.5 x two-sided / mean daily NAV x 252 / N returns",
+      "episode": "position-based: starts at the first fill leaving the flat state, ends at the fill returning both legs to zero; an entry order placed while a carried exit remainder is open joins the same episode (counted as a reentry)",
+      "win_rate": "share of closed episodes with trading P&L > 0; trading P&L = fill cash flows - commissions + dividends - borrow while open (cash interest excluded); missing when no closed episode",
+      "holding_days": "trading days from the first fill date to the closing fill date of a closed episode; missing when none",
+      "open_episodes": "counted separately; marked to the last close and excluded from win rate and holding days"
+    }
+  },
+  "supersedes": {
+    "path": "projects/project05/configs/preregistration_v1.json",
+    "sha256": "92e5f20ccfce77563d18394a4a34c3b1e2529e250f527c7fd0758a4ec4526b22",
+    "amendments": "projects/project05/configs/preregistration_v1_amendments.json"
+  },
+  "disclosure": {
+    "constructed_results_seen": true,
+    "real_data_seen": false,
+    "motivation": "design scope (one long, one short relative-value pairs) and timing fixes found by the independent c4 acceptance (R01 opening-fill capacity used full-day volume known only after the close; R02 intraday borrow basis ignored the 09:30 open mark). The beta>0 rule is not adopted because negative beta cannot be hedged: a same-direction position can hedge a negative relation to first order. It narrows the project to the relative-value long/short design the course trains.",
+    "not_changed": "universe, sample dates, formation/trading/step days, EG test and p<0.05 level, z thresholds 2/0.5/4, sizing gross 1.0, all cost/borrow/financing scenario values and robustness grids"
+  },
+  "event_order": "accrue to 09:30 on previous marks -> split -> dividend -> both legs marked at the 09:30 open -> fills -> accrue to 16:00 (borrow basis = open marks of actual holdings) -> close mark"
+}

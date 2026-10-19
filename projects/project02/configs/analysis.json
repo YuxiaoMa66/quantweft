@@ -1,0 +1,82 @@
+{
+  "project": "Project 2 — CAPM and Fama-French Factor Attribution",
+  "status": "verified",
+  "snapshot_date": "2026-10-05",
+  "assets": [
+    {
+      "column": "NoDur",
+      "label_zh": "非耐用品"
+    },
+    {
+      "column": "HiTec",
+      "label_zh": "高科技"
+    },
+    {
+      "column": "Enrgy",
+      "label_zh": "能源"
+    }
+  ],
+  "main_window": {
+    "start": "2010-01",
+    "end": "2019-12",
+    "expected_months": 120
+  },
+  "time_ordered_attribution_check": {
+    "estimation_start": "2010-01",
+    "estimation_end": "2014-12",
+    "evaluation_start": "2015-01",
+    "evaluation_end": "2019-12",
+    "months_per_window": 60,
+    "interpretation": "descriptive coefficient stability and same-month attribution error after factor realizations; not preregistered, point-in-time, ex-ante, or a strategy test"
+  },
+  "models": {
+    "capm": {
+      "factor_snapshot": "ff3",
+      "factors": [
+        "Mkt-RF"
+      ]
+    },
+    "ff3": {
+      "factor_snapshot": "ff3",
+      "factors": [
+        "Mkt-RF",
+        "SMB",
+        "HML"
+      ]
+    },
+    "ff5": {
+      "factor_snapshot": "ff5",
+      "factors": [
+        "Mkt-RF",
+        "SMB",
+        "HML",
+        "RMW",
+        "CMA"
+      ]
+    }
+  },
+  "hac": {
+    "primary_maxlags_months": 6,
+    "sensitivity_maxlags_months": [
+      3,
+      6,
+      12
+    ],
+    "kernel": "Bartlett",
+    "finite_sample_correction": true,
+    "t_reference": true,
+    "confidence_level": 0.95
+  },
+  "units": {
+    "asset_returns": "decimal simple total return per month",
+    "published_factors": "decimal factor spread per month; used unchanged",
+    "risk_free": "decimal monthly Treasury-bill return proxy; subtracted from the asset return exactly once",
+    "coefficient_interpretation": "one-unit monthly factor spread change; for example a 0.01 change in a factor maps to beta times 0.01 in the fitted monthly asset excess return"
+  },
+  "costs_and_execution": {
+    "trading_ledger_available": false,
+    "transaction_costs": "not applicable: no signal, order, turnover, or trade ledger",
+    "financing_and_borrow": "not applicable: no positions or financing/borrow ledger",
+    "net_strategy_return": "not estimated"
+  }
+}

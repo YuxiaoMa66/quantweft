@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "project": "Project 1 — Financial Data Analysis",
+  "industries": [
+    {"column": "NoDur", "label_zh": "非耐用品", "label_en": "Nondurables"},
+    {"column": "HiTec", "label_zh": "高科技", "label_en": "High Technology"},
+    {"column": "Enrgy", "label_zh": "能源", "label_en": "Energy"}
+  ],
+  "risk_free_column": "RF",
+  "main_window": "2010_2019",
+  "windows": [
+    {
+      "id": "2010_2019",
+      "start": "2010-01",
+      "end": "2019-12",
+      "purpose": "main descriptive comparison",
+      "expected_months": 120
+    },
+    {
+      "id": "2010_2014",
+      "start": "2010-01",
+      "end": "2014-12",
+      "purpose": "fixed descriptive segment",
+      "expected_months": 60
+    },
+    {
+      "id": "2015_2019",
+      "start": "2015-01",
+      "end": "2019-12",
+      "purpose": "fixed descriptive segment",
+      "expected_months": 60
+    },
+    {
+      "id": "2020_2024",
+      "start": "2020-01",
+      "end": "2024-12",
+      "purpose": "fixed later descriptive segment; not out-of-sample validation",
+      "expected_months": 60
+    }
+  ],
+  "annualization_periods_per_year": 12,
+  "rolling_volatility_months": 12,
+  "initial_wealth_index": 1.0,
+  "chart_window": {
+    "start": "2010-01",
+    "end": "2024-12"
+  }
+}

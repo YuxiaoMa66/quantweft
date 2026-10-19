@@ -1,0 +1,318 @@
+{
+  "p06_v1": {
+    "base": {
+      "zero": {
+        "eligible_label_dates": 1002,
+        "own_valid_dates": 0,
+        "missing_dates": 1002,
+        "constant_prediction_dates": 1002,
+        "own_mean": null,
+        "paired_ridge_dates": 0,
+        "paired_model_mean": null,
+        "ridge_on_paired_mean": null,
+        "paired_difference_mean": null,
+        "valid_sequence_gap_count": 0,
+        "t_display": "not_reported",
+        "old_t_origin": "retained only in historical frozen summary; no new HAC claim"
+      },
+      "train_mean": {
+        "eligible_label_dates": 1002,
+        "own_valid_dates": 0,
+        "missing_dates": 1002,
+        "constant_prediction_dates": 1002,
+        "own_mean": null,
+        "paired_ridge_dates": 0,
+        "paired_model_mean": null,
+        "ridge_on_paired_mean": null,
+        "paired_difference_mean": null,
+        "valid_sequence_gap_count": 0,
+        "t_display": "not_reported",
+        "old_t_origin": "retained only in historical frozen summary; no new HAC claim"
+      },
+      "ols": {
+        "eligible_label_dates": 1002,
+        "own_valid_dates": 1002,
+        "missing_dates": 0,
+        "constant_prediction_dates": 0,
+        "own_mean": 0.020255548939644166,
+        "paired_ridge_dates": 1002,
+        "paired_model_mean": 0.020255548939644166,
+        "ridge_on_paired_mean": 0.019829946111529287,
+        "paired_difference_mean": 0.0004256028281148776,
+        "valid_sequence_gap_count": 0,
+        "t_display": "not_reported",
+        "old_t_origin": "retained only in historical frozen summary; no new HAC claim"
+      },
+      "ridge": {
+        "eligible_label_dates": 1002,
+        "own_valid_dates": 1002,
+        "missing_dates": 0,
+        "constant_prediction_dates": 0,
+        "own_mean": 0.019829946111529287,
+        "paired_ridge_dates": 1002,
+        "paired_model_mean": 0.019829946111529287,
+        "ridge_on_paired_mean": 0.019829946111529287,
+        "paired_difference_mean": 0.0,
+        "valid_sequence_gap_count": 0,
+        "t_display": "not_reported",
+        "old_t_origin": "retained only in historical frozen summary; no new HAC claim"
+      },
+      "lasso": {
+        "eligible_label_dates": 1002,
+        "own_valid_dates": 630,
+        "missing_dates": 372,
+        "constant_prediction_dates": 372,
+        "own_mean": 0.017857589564906642,
+        "paired_ridge_dates": 630,
+        "paired_model_mean": 0.017857589564906642,
+        "ridge_on_paired_mean": 0.016133297596712233,
+        "paired_difference_mean": 0.0017242919681944079,
+        "valid_sequence_gap_count": 2,
+        "t_display": "not_reported",
+        "old_t_origin": "retained only in historical frozen summary; no new HAC claim"
+      },
+      "elasticnet": {
+        "eligible_label_dates": 1002,
+        "own_valid_dates": 882,
+        "missing_dates": 120,
+        "constant_prediction_dates": 120,
+        "own_mean": 0.03087239899086589,
+        "paired_ridge_dates": 882,
+        "paired_model_mean": 0.03087239899086589,
+        "ridge_on_paired_mean": 0.020602162065576708,
+        "paired_difference_mean": 0.010270236925289193,
+        "valid_sequence_gap_count": 1,
+        "t_display": "not_reported",
+        "old_t_origin": "retained only in historical frozen summary; no new HAC claim"
+      }
+    },
+    "regime": {
+      "zero": {
+        "eligible_label_dates": 1002,
+        "own_valid_dates": 0,
+        "missing_dates": 1002,
+        "constant_prediction_dates": 1002,
+        "own_mean": null,
+        "paired_ridge_dates": 0,
+        "paired_model_mean": null,
+        "ridge_on_paired_mean": null,
+        "paired_difference_mean": null,
+        "valid_sequence_gap_count": 0,
+        "t_display": "not_reported",
+        "old_t_origin": "retained only in historical frozen summary; no new HAC claim"
+      },
+      "train_mean": {
+        "eligible_label_dates": 1002,
+        "own_valid_dates": 0,
+        "missing_dates": 1002,
+        "constant_prediction_dates": 1002,
+        "own_mean": null,
+        "paired_ridge_dates": 0,
+        "paired_model_mean": null,
+        "ridge_on_paired_mean": null,
+        "paired_difference_mean": null,
+        "valid_sequence_gap_count": 0,
+        "t_display": "not_reported",
+        "old_t_origin": "retained only in historical frozen summary; no new HAC claim"
+      },
+      "ols": {
+        "eligible_label_dates": 1002,
+        "own_valid_dates": 1002,
+        "missing_dates": 0,
+        "constant_prediction_dates": 0,
+        "own_mean": 0.00888710384109829,
+        "paired_ridge_dates": 1002,
+        "paired_model_mean": 0.00888710384109829,
+        "ridge_on_paired_mean": 0.008653986585927583,
+        "paired_difference_mean": 0.00023311725517070973,
+        "valid_sequence_gap_count": 0,
+        "t_display": "not_reported",
+        "old_t_origin": "retained only in historical frozen summary; no new HAC claim"
+      },
+      "ridge": {
+        "eligible_label_dates": 1002,
+        "own_valid_dates": 1002,
+        "missing_dates": 0,
+        "constant_prediction_dates": 0,
+        "own_mean": 0.008653986585927583,
+        "paired_ridge_dates": 1002,
+        "paired_model_mean": 0.008653986585927583,
+        "ridge_on_paired_mean": 0.008653986585927583,
+        "paired_difference_mean": 0.0,
+        "valid_sequence_gap_count": 0,
+        "t_display": "not_reported",
+        "old_t_origin": "retained only in historical frozen summary; no new HAC claim"
+      },
+      "lasso": {
+        "eligible_label_dates": 1002,
+        "own_valid_dates": 567,
+        "missing_dates": 435,
+        "constant_prediction_dates": 435,
+        "own_mean": 0.0010036034426278376,
+        "paired_ridge_dates": 567,
+        "paired_model_mean": 0.0010036034426278376,
+        "ridge_on_paired_mean": 0.0030869160950461783,
+        "paired_difference_mean": -0.002083312652418342,
+        "valid_sequence_gap_count": 2,
+        "t_display": "not_reported",
+        "old_t_origin": "retained only in historical frozen summary; no new HAC claim"
+      },
+      "elasticnet": {
+        "eligible_label_dates": 1002,
+        "own_valid_dates": 819,
+        "missing_dates": 183,
+        "constant_prediction_dates": 183,
+        "own_mean": 0.015210284816288566,
+        "paired_ridge_dates": 819,
+        "paired_model_mean": 0.015210284816288566,
+        "ridge_on_paired_mean": 0.009090159371585261,
+        "paired_difference_mean": 0.006120125444703309,
+        "valid_sequence_gap_count": 1,
+        "t_display": "not_reported",
+        "old_t_origin": "retained only in historical frozen summary; no new HAC claim"
+      }
+    }
+  },
+  "chapter39": {
+    "zero": {
+      "own_valid_dates_from_frozen_summary": 0,
+      "own_mean_from_frozen_summary": null,
+      "candidate_label_dates_from_summary": 750,
+      "paired_ridge_dates": null,
+      "paired_means": null,
+      "row_level_missing_cause": "not_evaluated_without_frozen_predictions",
+      "t_display": "not_reported",
+      "own_means_recomputed": false
+    },
+    "train_mean": {
+      "own_valid_dates_from_frozen_summary": 0,
+      "own_mean_from_frozen_summary": null,
+      "candidate_label_dates_from_summary": 750,
+      "paired_ridge_dates": null,
+      "paired_means": null,
+      "row_level_missing_cause": "not_evaluated_without_frozen_predictions",
+      "t_display": "not_reported",
+      "own_means_recomputed": false
+    },
+    "ols": {
+      "own_valid_dates_from_frozen_summary": 750,
+      "own_mean_from_frozen_summary": 0.03163527204502815,
+      "candidate_label_dates_from_summary": 750,
+      "paired_ridge_dates": null,
+      "paired_means": null,
+      "row_level_missing_cause": "not_evaluated_without_frozen_predictions",
+      "t_display": "not_reported",
+      "own_means_recomputed": false
+    },
+    "ridge": {
+      "own_valid_dates_from_frozen_summary": 750,
+      "own_mean_from_frozen_summary": 0.034856785490931824,
+      "candidate_label_dates_from_summary": 750,
+      "paired_ridge_dates": null,
+      "paired_means": null,
+      "row_level_missing_cause": "not_evaluated_without_frozen_predictions",
+      "t_display": "not_reported",
+      "own_means_recomputed": false
+    },
+    "lasso": {
+      "own_valid_dates_from_frozen_summary": 441,
+      "own_mean_from_frozen_summary": 0.03804461121534292,
+      "candidate_label_dates_from_summary": 750,
+      "paired_ridge_dates": null,
+      "paired_means": null,
+      "row_level_missing_cause": "not_evaluated_without_frozen_predictions",
+      "t_display": "not_reported",
+      "own_means_recomputed": false
+    },
+    "elasticnet": {
+      "own_valid_dates_from_frozen_summary": 624,
+      "own_mean_from_frozen_summary": 0.049896569971616886,
+      "candidate_label_dates_from_summary": 750,
+      "paired_ridge_dates": null,
+      "paired_means": null,
+      "row_level_missing_cause": "not_evaluated_without_frozen_predictions",
+      "t_display": "not_reported",
+      "own_means_recomputed": false
+    }
+  },
+  "t43_01": {
+    "events": 120,
+    "unique_templates": 4,
+    "blocks": {
+      "train": {
+        "events": 59,
+        "unique_templates": 4,
+        "template_frequency": {
+          "quarterly revenue grew strongly beating analyst consensus with solid organic momentum": 15,
+          "operating margins contracted sharply amid supply disruptions and persistent revenue decline": 15,
+          "earnings performance did not improve showing no growth despite aggressive restructuring": 15,
+          "management maintained steady guidance while continuing routine capital expenditure programs": 14
+        }
+      },
+      "validation": {
+        "events": 29,
+        "unique_templates": 4,
+        "template_frequency": {
+          "quarterly revenue grew strongly beating analyst consensus with solid organic momentum": 8,
+          "operating margins contracted sharply amid supply disruptions and persistent revenue decline": 7,
+          "earnings performance did not improve showing no growth despite aggressive restructuring": 7,
+          "management maintained steady guidance while continuing routine capital expenditure programs": 7
+        }
+      },
+      "test": {
+        "events": 30,
+        "unique_templates": 4,
+        "template_frequency": {
+          "earnings performance did not improve showing no growth despite aggressive restructuring": 8,
+          "management maintained steady guidance while continuing routine capital expenditure programs": 8,
+          "quarterly revenue grew strongly beating analyst consensus with solid organic momentum": 7,
+          "operating margins contracted sharply amid supply disruptions and persistent revenue decline": 7
+        }
+      }
+    },
+    "generalization_scope": "time-block extrapolation only; new-text generalization not evaluated"
+  },
+  "sources": {
+    "qa/a8/ch42_ch43_batch/history_ch39_readonly/restored_inputs/build/batches/A8-A/r2/runs/rw_qa2/cli/p06_base/predictions.csv": "820c5d4049c117c4554ca522d32f74230978556a3f957ca295108426a0718b09",
+    "qa/a8/ch42_ch43_batch/history_ch39_readonly/restored_inputs/build/batches/A8-A/r2/runs/rw_qa2/cli/p06_base/labels.csv": "164197ab4276f2d605fa9f72691ee19da76e95cb5dcead15dbf6dbe0ddf839e8",
+    "qa/a8/ch37_ch39_batch/rework_r2/evidence/rw_qa2/p06_base/summary.json": "61370a2409987fa28724793ada101a88911f7394ccb26dd7cfe5292c10b4d8d7",
+    "qa/a8/ch42_ch43_batch/history_ch39_readonly/restored_inputs/build/batches/A8-A/r2/runs/rw_qa2/cli/p06_regime/predictions.csv": "9389b510c64f7a4f0e653d23eb919b23589ff6baed10e1c34f583b68bcfa43ef",
+    "qa/a8/ch42_ch43_batch/history_ch39_readonly/restored_inputs/build/batches/A8-A/r2/runs/rw_qa2/cli/p06_regime/labels.csv": "63052e12bb298593cc54bd5a7156ceacb2176f66dc5470f8c13bcd3d1b8c0e2d",
+    "qa/a8/ch37_ch39_batch/rework_r2/evidence/rw_qa2/p06_regime/summary.json": "40d58c4748a55997dd75112feff3a76e518cde3051c69e6c017edc93443d0fbc",
+    "part07/chapter39/figures/ch39_results.json": "328c4a4964cf69f1294d50371134814fb9fa2e0c13f8204031d697ba75afeeee",
+    "qa/a8/ch42_ch43_batch/evidence/root_ch43_01/cli/ch43/constructed_documents.csv": "34e56573f67919a4e72504dcabaf7b457589ad70d346c5c627a949308bcfc040"
+  },
+  "checks": [
+    "base/zero: own count/mean matches frozen summary; pairing finite intersection",
+    "base/train_mean: own count/mean matches frozen summary; pairing finite intersection",
+    "base/ols: own count/mean matches frozen summary; pairing finite intersection",
+    "base/ridge: own count/mean matches frozen summary; pairing finite intersection",
+    "base/lasso: own count/mean matches frozen summary; pairing finite intersection",
+    "base/elasticnet: own count/mean matches frozen summary; pairing finite intersection",
+    "regime/zero: own count/mean matches frozen summary; pairing finite intersection",
+    "regime/train_mean: own count/mean matches frozen summary; pairing finite intersection",
+    "regime/ols: own count/mean matches frozen summary; pairing finite intersection",
+    "regime/ridge: own count/mean matches frozen summary; pairing finite intersection",
+    "regime/lasso: own count/mean matches frozen summary; pairing finite intersection",
+    "regime/elasticnet: own count/mean matches frozen summary; pairing finite intersection",
+    "Ch39 only summary counts750/441/624; no substitution from P06 rows",
+    "120 events / 4 templates; mature59/29/30 each same4",
+    "compressed lag4 may span8 trading dates"
+  ],
+  "scope": "Existing frozen rows only; no tested implementation imports, model fitting, calendar-aware HAC or historical Ch39 row reconstruction.",
+  "nw_counterexample": {
+    "positions": [
+      0,
+      2,
+      3,
+      5,
+      8
+    ],
+    "compressed_lag4_pair": [
+      8,
+      0
+    ],
+    "trading_day_distance": 8,
+    "claim": "four compressed observation lags cannot be relabelled four trading-day lags"
+  }
+}

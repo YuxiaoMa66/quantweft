@@ -1,0 +1,75 @@
+{
+ "schema": "p06-config.v2-trees",
+ "frozen_at": "2026-10-10T21:40:00Z",
+ "frozen_by": "Claude (A8-B host), before any Project 6 v2 run",
+ "status": "frozen; any change creates a new version file and keeps this one and p06_base_v1.json",
+ "not_a_preregistration": "Written after the A8-A v1 constructed results were seen (listed below). It fixes the tree comparison before any v2 result exists; it is not an ex-ante real-market preregistration.",
+ "seen_before_freeze": [
+  "A8-A v1 constructed P06 results (seed 6061), base: R2_OS vs zero ols -1.715%, ridge -0.982%, lasso -0.952%, elasticnet -0.879%, train_mean -0.868%; mean daily IC ols 0.0203, ridge 0.0198, lasso 0.0179, elasticnet 0.0309; net-10bp Sharpe 0.39 / 0.45 / 0.01 / 0.81",
+  "A8-A v1 regime_flip_at_75pct: IC 0.0089 / 0.0087 / 0.0010 / 0.0152; net-10bp Sharpe -0.22 / -0.15 / -0.57 / 0.08",
+  "A8-A chapters 38-39 constructed runs (seeds 3801-3803, 3904)",
+  "A8-B timing probe 2026-10-10: DecisionTree(depth 4, leaf 500), RandomForest(100 trees, leaf 500, with and without max_samples 0.5) and HistGradientBoosting(300 rounds, depth 3) each fitted once on the first 50,000 complete rows of the seed-6061 base panel to measure fit time (0.5 / 1.9 / 1.0 / 0.6 s). No prediction, score or importance was computed or viewed.",
+  "No Chapter 40 interaction-panel result, no v2 result and no real data were seen"
+ ],
+ "inherits_from_v1": {
+  "file": "projects/project06/configs/p06_base_v1.json",
+  "sha256": "62f49e1cab11b6992a9c391180df5d6827f9c5c12bf34f94acde5134ee4c39f7",
+  "sections": ["data", "features", "labels", "validation", "selection_rule", "portfolio", "evaluation"],
+  "note": "Same constructed generator, both registered scenarios (base, regime_flip_at_75pct), same folds, labels, inner validation, portfolio rule, lag and cost ledger. The data generator is unchanged; no tree-favouring scenario is added to Project 6."
+ },
+ "baseline_models_rerun_from_v1": ["zero", "train_mean", "ols", "ridge", "lasso", "elasticnet"],
+ "baseline_rerun_check": "v1 baselines are recomputed with the unchanged ml_pipeline code and must reproduce the A8-A c3 summary numbers (qa/a8/ch37_ch39_batch/rework_r2/evidence/rw_qa2/p06_base and p06_regime summary.json) (prediction metrics and net portfolio metrics) to 1e-12 relative; a mismatch stops the run.",
+ "models": {
+  "tree": [{"max_depth": 2, "min_samples_leaf": 1000}, {"max_depth": 3, "min_samples_leaf": 1000},
+           {"max_depth": 4, "min_samples_leaf": 1000}, {"max_depth": 6, "min_samples_leaf": 1000}],
+  "rf": [{"n_estimators": 200, "max_features": 0.33, "min_samples_leaf": 500, "max_samples": 0.5},
+         {"n_estimators": 200, "max_features": 0.33, "min_samples_leaf": 2000, "max_samples": 0.5}],
+  "gbm": [{"max_iter": 300, "learning_rate": 0.05, "max_depth": 2, "min_samples_leaf": 500},
+          {"max_iter": 300, "learning_rate": 0.05, "max_depth": 3, "min_samples_leaf": 500},
+          {"max_iter": 300, "learning_rate": 0.02, "max_depth": 3, "min_samples_leaf": 500}],
+  "pca_ridge": [{"n_components": 5, "alpha": 1e4}, {"n_components": 5, "alpha": 1e6},
+                {"n_components": 15, "alpha": 1e4}, {"n_components": 15, "alpha": 1e6},
+                {"n_components": 30, "alpha": 1e4}, {"n_components": 30, "alpha": 1e6}]
+ },
+ "model_notes": {
+  "gbm": "HistGradientBoostingRegressor with early_stopping=False; max_iter is an upper bound and the number of rounds is chosen jointly with the other parameters on the inner date-grouped validation folds (staged predictions); refit on all outer training rows with the chosen rounds.",
+  "pca_ridge": "Auxiliary ablation (Chapter 41): scaler + PCA + Ridge fitted on outer training rows only; tests whether the high-variance directions of the features carry the signal.",
+  "missing": "Same as v1: rows with any missing feature or label are dropped from training and counted; test rows with a missing feature get no prediction (flat)."
+ },
+ "seeds": {"primary": 4061, "stability": [4061, 4062, 4063],
+           "note": "Seeds drive bootstrap/feature sampling (rf), tie-breaking (tree) and permutation draws; HistGradientBoosting with early_stopping=False is deterministic given the data."},
+ "importance": {
+  "inner": {"method": "permutation within each signal date (cross-sectional), MSE increase and mean daily Spearman IC drop",
+            "window": "last inner validation fold of each outer fold (63 signal dates inside the outer training rows)",
+            "model": "chosen parameters (and rounds) fitted on that inner fold's training rows",
+            "n_repeats": 3, "units": "single features; groups reported separately",
+            "groups": {"price": ["rev_5", "mom_60_5", "vol_20"], "characteristics": "all q_* and noise_* columns"},
+            "models": ["tree", "rf", "gbm"]},
+  "post_hoc_test": {"method": "same permutation on each outer test window with the final fold model",
+                    "use": "diagnostic only; never fed back into model, parameter or feature choice for that or any test window",
+                    "models": ["rf", "gbm"]},
+  "mdi": {"use": "impurity importance of the final rf model per fold, reported only to show its bias against permutation importance", "models": ["rf"]}
+ },
+ "ablations": {
+  "models": ["rf", "gbm"],
+  "variants": {
+   "full": "all features",
+   "no_price": "drop rev_5, mom_60_5, vol_20",
+   "price_only": "only rev_5, mom_60_5, vol_20",
+   "top10_inner": "per fold keep the 10 features with the largest inner permutation MSE increase; parameters as chosen on the full set (registered simplification)"
+  },
+  "groups_defined_by": "data source (price-derived vs characteristic file), which a researcher knows without seeing the generator; the signal/noise split of q_* vs noise_* is NOT used to define any variant",
+  "scenarios": ["base", "regime_flip_at_75pct"]
+ },
+ "stability": {
+  "fold": ["chosen parameters per fold", "mean daily IC per fold", "inner importance rank correlation between consecutive folds", "top-10 inner-importance frequency across folds"],
+  "seed": {"models": ["rf", "gbm"], "scenario": "base", "report": ["prediction metrics and net-10bp metrics per seed", "pairwise correlation of predictions between seeds"]}
+ },
+ "comparison": {
+  "primary_statistic": "difference in mean daily Spearman IC (model minus ridge) on the common evaluated dates, Newey-West t with lags h-1 = 4",
+  "secondary": ["R2_OS vs train_mean", "net-of-cost Sharpe at 10 bp and 20 bp", "annual turnover", "max drawdown"],
+  "multiplicity": "3 tree models x 2 scenarios plus ablations and seeds; no correction is applied, all comparisons are descriptive; nothing is called significant on this constructed data",
+  "claims_rule": "No economic or alpha claim; accuracy or importance ranks are never read as alpha; every zero and negative result is reported."
+ },
+ "real_data": "blocked (data_manifest.json); --data real exits 3 and writes nothing"
+}

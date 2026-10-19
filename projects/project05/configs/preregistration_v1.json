@@ -1,0 +1,84 @@
+{
+  "schema": "p05-preregistration.v1",
+  "frozen_at": "2026-10-10",
+  "status": "frozen before any universe price download; edits require a new version file and a DECISION_LOG entry",
+  "universe": {
+    "rule": "8 US-listed pairs fixed a priori by a shared economic driver; no pair may be added, dropped or replaced after data are seen; every pair is tested in every window and reported",
+    "pairs": [
+      {"id": "EWA_EWC", "y": "EWA", "x": "EWC", "rationale": "iShares Australia vs Canada country ETFs; both commodity-exporting developed markets"},
+      {"id": "KO_PEP", "y": "KO", "x": "PEP", "rationale": "US non-alcoholic beverage duopoly"},
+      {"id": "XOM_CVX", "y": "XOM", "x": "CVX", "rationale": "US integrated oil majors"},
+      {"id": "GDX_GLD", "y": "GDX", "x": "GLD", "rationale": "gold miners equity ETF vs physical gold ETF; operating leverage makes the link loose (expected weak)"},
+      {"id": "XOP_XLE", "y": "XOP", "x": "XLE", "rationale": "E&P equal-weight ETF vs cap-weight energy sector ETF"},
+      {"id": "HD_LOW", "y": "HD", "x": "LOW", "rationale": "US home-improvement retail duopoly"},
+      {"id": "V_MA", "y": "V", "x": "MA", "rationale": "card payment networks"},
+      {"id": "IVV_SPY", "y": "IVV", "x": "SPY", "rationale": "control: two ETFs on the same S&P 500 index; cointegration expected by construction of the products, spread expected smaller than costs"}
+    ],
+    "search_count_note": "8 pairs x every walk-forward window are all counted as tests; no other pair was tested on this data. One interface probe (EWA chart request, 2026-10-10) preceded this freeze and is logged; no statistic was computed from it."
+  },
+  "sample": {
+    "first_date": "2010-01-04",
+    "last_date": "2025-12-31",
+    "calendar": "NYSE trading days as the union of dates returned for all 16 tickers; a date missing for any held/traded ticker is a data error, never forward-filled",
+    "source": "Yahoo Finance chart endpoint (see data_manifest.json for terms review and field semantics)"
+  },
+  "prices": {
+    "trade_prices": "split-unadjusted open/close reconstructed from vendor split-adjusted quotes using vendor split events; dividend-unadjusted",
+    "corporate_actions": "splits change share counts on the ex-date; cash dividends (unadjusted per share) are paid to longs / charged to shorts on the ex-date in the ledger",
+    "signal_series": "log of a forward-built total-return index from unadjusted closes, splits and dividends, using only events dated <= t; vendor adjclose used only as a cross-check"
+  },
+  "walk_forward": {
+    "formation_days": 504,
+    "trading_days": 126,
+    "step_days": 126,
+    "mode": "rolling",
+    "first_formation_end_index": 503
+  },
+  "screening": {
+    "test": "Engle-Granger (statsmodels coint, trend c, autolag AIC) on formation-window log TR indices, y on x; MacKinnon residual critical values",
+    "select_if": "pvalue < 0.05 within the window (unadjusted); BH q-values reported but not used for selection",
+    "also_report": "Pearson correlation of levels and of daily log returns in formation window; half-life of formation spread"
+  },
+  "signal": {
+    "spread": "s_t = log TR_y - alpha - beta * log TR_x with alpha, beta from formation OLS (frozen for the trading window)",
+    "zscore": "z_t = (s_t - mean_formation) / sd_formation (frozen)",
+    "entry_abs_z": 2.0,
+    "exit_abs_z": 0.5,
+    "stop_abs_z": 4.0,
+    "stop_rule": "after a stop-out no re-entry in the same trading window",
+    "window_end": "a flat signal is forced at the last trading-window close",
+    "signal_time": "16:00 America/New_York close of day t",
+    "trade_time": "09:30 America/New_York open of the next trading day (lag 1)"
+  },
+  "sizing": {
+    "initial_wealth_per_pair_usd": 1000000,
+    "gross_exposure_fraction_of_nav": 1.0,
+    "leg_dollar_weights": "long spread: +1/(1+beta) in y, -beta/(1+beta) in x of target gross; short spread mirrored; beta is a log elasticity, not a share ratio",
+    "shares": "target shares = weight * NAV_at_signal_close / signal close price, rounded toward zero to whole shares; fixed until exit (no intra-trade rebalancing)"
+  },
+  "costs_scenarios_not_calibrated": {
+    "commission_usd_per_share": 0.005,
+    "half_spread_bps": {"ETF": 1.0, "stock": 2.0},
+    "impact": "temporary only: eta * sigma20 * sqrt(shares / ADV20) with eta = 0.1, sigma20 and ADV20 from the 20 days ending at the signal close",
+    "max_participation_of_trade_day_volume": 0.05,
+    "borrow_fee_annual": 0.0025,
+    "cash_credit_spread_below_policy_rate": 0.0025,
+    "cash_debit_spread_above_policy_rate": 0.005,
+    "policy_rate": "FRED DFF (effective federal funds rate), value of the prior available business day, ACT/360",
+    "short_proceeds": "credited to cash and earn the credit rate (rebate modelled through the cash rate)",
+    "partial_fill_policy": "matched: both legs filled at the smaller feasible fraction; the remainder is cancelled and logged"
+  },
+  "robustness_all_reported": {
+    "cost_grid": {"half_spread_multiplier": [0, 1, 3], "eta": [0, 0.1, 0.3], "borrow_fee_annual": [0.0025, 0.01, 0.05]},
+    "threshold_grid": {"entry_abs_z": [1.5, 2.0, 2.5], "exit_abs_z": [0.0, 0.5]},
+    "formation_days_alt": [252],
+    "always_trade_vs_screened": "every pair also run ungated (traded in every window) to expose the selection effect",
+    "partial_fill_stress": "W0 = 1e9 per pair and independent-leg policy to expose legging risk",
+    "rule": "grid results are descriptive; the headline uses only the frozen values above"
+  },
+  "evaluation": {
+    "nav": "N+1 daily NAV marks from W0 give N simple returns; annualisation 252",
+    "metrics": ["total and annualised return", "volatility", "Sharpe on excess over credit cash rate", "max drawdown", "turnover", "cost/financing/borrow/dividend attribution", "trade count, hit rate, holding days", "implementation shortfall per order"],
+    "claim_rule": "a positive headline must survive the cost grid and the selection-effect comparison to be called 'supported'; otherwise the report states that the evidence does not support the strategy"
+  }
+}

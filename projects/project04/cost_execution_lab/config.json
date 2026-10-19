@@ -1,0 +1,65 @@
+{
+  "version": "1.0.0",
+  "name": "Project 4 Cost and Execution Teaching Lab",
+  "generated_at": "2026-10-09T11:00:00Z",
+  "data_status": "CONSTRUCTED_TEACHING_DATA",
+  "is_empirical": false,
+  "universe": {
+    "seed": 20261210,
+    "n_firms": 240,
+    "n_bank": 40,
+    "months": 97,
+    "start_month": "2013-12",
+    "warmup_signal_months": 1,
+    "evaluation_start_month": "2014-01",
+    "evaluation_months": 96
+  },
+  "train_test_split": {
+    "train_months": 60,
+    "test_months": 36,
+    "chronological": true,
+    "train_period": "2014-01 to 2018-12",
+    "test_period": "2019-01 to 2021-12"
+  },
+  "intraday_bridge": {
+    "slots_per_day": 13,
+    "slot_duration_minutes": 30,
+    "market_open_time": "09:30:00",
+    "market_close_time": "16:00:00",
+    "timezone": "UTC",
+    "volume_profile": {
+      "estimation_window": "60_synthetic_training_sessions_only",
+      "frozen": true,
+      "functional_form": "predeclared_U_shape_quadratic_with_lognormal_noise",
+      "empirical_fit": false
+    }
+  },
+  "execution_cost_model": {
+    "commission_rate": 0.0005,
+    "commission_per_share": 0.0,
+    "half_spread_bps": 2.5,
+    "temp_impact_coef": 0.10,
+    "temp_impact_exp": 0.5,
+    "perm_impact_coef": 0.05,
+    "max_participation": 0.20,
+    "participation_denominator": "exclusive",
+    "cash_rate_annual": 0.04,
+    "cash_debit_rate_annual": 0.06,
+    "borrow_rate_annual": 0.015,
+    "day_count_basis": 360
+  },
+  "negative_result_scenario": {
+    "description": "Constructed high-friction scenario for demonstrating a possible sign change in net results",
+    "commission_rate": 0.0020,
+    "half_spread_bps": 10.0,
+    "temp_impact_coef": 0.25,
+    "perm_impact_coef": 0.10,
+    "max_participation": 0.10,
+    "borrow_rate_annual": 0.040
+  },
+  "sensitivities": {
+    "commission_bps_grid": [0.0, 2.5, 5.0, 10.0, 20.0],
+    "max_participation_grid": [0.001, 0.0025, 0.005, 0.01],
+    "target_weight_scale_grid": [0.5, 1.0, 2.0]
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "status": "success",
+  "chapter": 43,
+  "bayes": {
+    "beta_prior": [
+      2.0,
+      2.0
+    ],
+    "beta_posterior": [
+      10.0,
+      4.0
+    ],
+    "posterior_mean": 0.7142857142857143,
+    "posterior_variance": 0.013605442176870748,
+    "joint_two_successes_predictive": 0.5238095238095238,
+    "squared_posterior_mean": 0.5102040816326531,
+    "predictive_covariance": 0.013605442176870763,
+    "normal_partial_pooling": {
+      "prior_mean": 0.0,
+      "prior_sd": 0.02,
+      "observation_sd": 0.04,
+      "prior_precision": 2500.0,
+      "obs_precision": 625.0,
+      "groups": [
+        {
+          "group_id": 0,
+          "n": 4,
+          "sample_mean": 0.03,
+          "sample_var": 0.0004,
+          "shrinkage_weight": 0.5,
+          "posterior_mean": 0.015,
+          "posterior_var": 0.0002,
+          "posterior_sd": 0.01414213562373095,
+          "predictive_var": 0.0018000000000000002,
+          "predictive_sd": 0.042426406871192854
+        },
+        {
+          "group_id": 1,
+          "n": 36,
+          "sample_mean": 0.01,
+          "sample_var": 4.4444444444444447e-05,
+          "shrinkage_weight": 0.9,
+          "posterior_mean": 0.009000000000000001,
+          "posterior_var": 4e-05,
+          "posterior_sd": 0.006324555320336759,
+          "predictive_var": 0.0016400000000000002,
+          "predictive_sd": 0.04049691346263318
+        }
+      ]
+    }
+  },
+  "causal": {
+    "unadjusted_difference": 0.38,
+    "stratum_high_contrast": -0.10000000000000009,
+    "stratum_low_contrast": -0.1,
+    "standardized_ate": -0.10000000000000005,
+    "simpson_reversal": true,
+    "collider_demonstration": {
+      "n_samples": 2000.0,
+      "unconditioned_covariance": -0.004457228614307155,
+      "conditioned_on_collider_covariance": -0.11437274687212838
+    }
+  },
+  "text_nlp": {
+    "n_documents_total": 120,
+    "n_train_eligible": 59,
+    "n_val_eligible": 29,
+    "n_test": 30,
+    "vocab_size": 42,
+    "best_ridge_alpha": 10.0,
+    "train_mean": 0.0011719977092145622,
+    "test_mean_mse": 0.00023273526657144588,
+    "test_ridge_mse": 0.00023602531588526738,
+    "test_r2_vs_mean": -0.014136445078947624,
+    "test_pooled_spearman": 0.07627363534758379,
+    "daily_cross_sectional_ic_status": "UNDEFINED (N=1 asset per date)",
+    "mean_benchmark_rank_ic_status": "UNDEFINED (constant prediction has zero variance)",
+    "downstream_interface_spec": {
+      "mode": "prediction_only",
+      "ledger_compatibility": "Proposed adapter to ml_pipeline.backtest_predictions and Chapter 29 portfolio ledger",
+      "adapter_requirement": "Supply a complete asset-price panel and portfolio policy; convert one_way_fee_bps / 10000 to fee_rate. These proposed fields are not the existing function signature.",
+      "required_schema": [
+        "doc_id",
+        "trade_time",
+        "asset_id",
+        "target_return_pred",
+        "allocated_weight",
+        "execution_price",
+        "one_way_fee_bps"
+      ],
+      "scope_boundary": "Rotating single-asset predictions do not constitute a self-consistent portfolio ledger. Downstream systems must define target portfolio weights, borrow constraints, and liquidity terms."
+    },
+    "negation_example": {
+      "text": "earnings performance did not improve showing no growth despite aggressive restructuring",
+      "naive_unigram_score": 2,
+      "negation_aware_score": -2,
+      "polarities_differ": true
+    },
+    "embedding_similarities": {
+      "cosine_growth_profit": 0.9833923661762944,
+      "cosine_growth_loss": -0.8594959994319389,
+      "cosine_stable_steady": 0.9784971923788137,
+      "cosine_phrase1_phrase2": -0.8836350572535366
+    },
+    "llm_offline_audit": {
+      "prompt_template_version": "v1.2",
+      "sample_input_text": "quarterly revenue grew strongly beating analyst consensus with solid organic momentum",
+      "full_prompt_sha256_hash": "c88768e434d099c4ab3cc4e84ccc6fbe0ca30332b7fdfe4c8f37a4115550e149",
+      "sha256_hash": "c88768e434d099c4ab3cc4e84ccc6fbe0ca30332b7fdfe4c8f37a4115550e149",
+      "model_status": "not_run",
+      "model_slug": "not_run",
+      "declared_model_cutoff": "unknown",
+      "hypothetical_cutoff_scenario": "2023-12-31",
+      "provenance_table": {
+        "source_id": "CONSTRUCTED_CALL_v1",
+        "license": "CONSTRUCTED_TEACHING_CORPUS_OPEN_ACADEMIC_USE",
+        "historical_signal_time": "2022-01-04T14:00:00+00:00",
+        "cutoff_leakage_risk": "Hypothetical cutoff (2023-12) occurs AFTER historical signal (2022-01). Any LLM trained on post-2022 corpus could leak retrospective knowledge."
+      },
+      "reproducibility_limits": [
+        "Temperature=0 and seed do NOT guarantee bitwise determinism across model versions or GPU architectures.",
+        "Pre-training cutoff is not equivalent to a verifiable Point-in-Time historical record.",
+        "LLMs can produce plausible false claims; independently check source text even when references are supplied."
+      ],
+      "hallucination_audit_points": [
+        "Temperature=0 and seed do NOT guarantee bitwise determinism across model versions or GPU architectures.",
+        "Pre-training cutoff is not equivalent to a verifiable Point-in-Time historical record.",
+        "LLMs can produce plausible false claims; independently check source text even when references are supplied."
+      ]
+    }
+  }
+}

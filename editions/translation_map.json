@@ -1,0 +1,4320 @@
+{
+  "revision": "BIL01/r1_20261014",
+  "status": "author_candidate_pending_independent_acceptance",
+  "canonical_written": false,
+  "formal_publication": false,
+  "chapters": [
+    {
+      "chapter": 1,
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch01.tex",
+        "sha256": "74762e9fa6f31a6250b863de7db2dcca97f5d470327c6aa2c27d7d9d7ce7794a"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch01_0.tex",
+        "sha256": "524d52c7644acf80121240192e3bd7e467be1025ed71bffad6d274c4d5a35ca4"
+      },
+      "zh": "part00/chapter01/content.md",
+      "en": "editions/en/chapters/ch01/content.md",
+      "zh_content_sha256": "54eaf8e1387239ddcf608ccb59bffa70f8cf2e4caa258defa8ac80ffb0ca834d",
+      "stable_ids": {
+        "1-B01": "1-B01",
+        "1-C01": "1-C01",
+        "1-C02": "1-C02",
+        "1-E01": "1-E01",
+        "1-E02": "1-E02",
+        "1-E03": "1-E03",
+        "1-E04": "1-E04",
+        "1-E05": "1-E05",
+        "1-E06": "1-E06",
+        "1-E07": "1-E07",
+        "1-N01": "1-N01",
+        "1-N02": "1-N02",
+        "1-N03": "1-N03",
+        "1-N04": "1-N04",
+        "1-N05": "1-N05",
+        "1-P01": "1-P01",
+        "1-P02": "1-P02",
+        "1-P03": "1-P03"
+      },
+      "new_body_ids": [
+        "1-B01"
+      ],
+      "loom_ids": [
+        "1-L01",
+        "1-L02",
+        "1-L03",
+        "1-L04",
+        "1-L05",
+        "1-L06",
+        "1-L07"
+      ],
+      "new_loom_id": "1-L07",
+      "english_prerequisites": "elementary algebra",
+      "en_content_sha256": "6388ed47ff34d112574eadc3fed140249d6192881ef2e94ce978eb450bb51255"
+    },
+    {
+      "chapter": 20,
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch20.tex",
+        "sha256": "a0f58adbd452433992a160671c993ba28deda6f096368436725c19362a72b746"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch20_0.tex",
+        "sha256": "17814fa74ef227eca2c8e22935296fb45804cecd20758354d7806b6e6e822478"
+      },
+      "zh": "part03/chapter20/content.md",
+      "en": "editions/en/chapters/ch20/content.md",
+      "zh_content_sha256": "6379103483349e3cd658e31c177d9b196230ec76028d6213df76ca080b4c9ece",
+      "stable_ids": {
+        "20-B01": "20-B01",
+        "20-C01": "20-C01",
+        "20-C02": "20-C02",
+        "20-E01": "20-E01",
+        "20-E02": "20-E02",
+        "20-E03": "20-E03",
+        "20-E04": "20-E04",
+        "20-E05": "20-E05",
+        "20-E06": "20-E06",
+        "20-E07": "20-E07",
+        "20-E08": "20-E08",
+        "20-P01": "20-P01",
+        "20-P02": "20-P02",
+        "20-P03": "20-P03",
+        "20-R01": "20-R01",
+        "20-R02": "20-R02"
+      },
+      "new_body_ids": [
+        "20-B01"
+      ],
+      "loom_ids": [
+        "20-L01",
+        "20-L02",
+        "20-L03",
+        "20-L04",
+        "20-L05",
+        "20-L06",
+        "20-L07",
+        "20-L08",
+        "20-L09"
+      ],
+      "new_loom_id": "20-L09",
+      "english_prerequisites": "Chinese accepted prerequisites; English pending",
+      "en_content_sha256": "c06791f1d9279e847262978bfcbfa426135e3de92c1416d8b550130e7fc9f8c9"
+    },
+    {
+      "chapter": 2,
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch02.tex",
+        "sha256": "1a68422258c48f5acd639556a93eddf810342c62fabde42a9b536d7a26080603"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch02_0.tex",
+        "sha256": "da5b31c3424a282344a334b3a08d41d648b35d537622eadd9bae5359eff88f0d"
+      },
+      "zh": "part01/chapter02/content.md",
+      "en": "editions/en/chapters/ch02/content.md",
+      "zh_content_sha256": "097d5c4e1d913946cef599d87d7239f951b54cdd906e7646c2437c8cbb4ed385",
+      "en_content_sha256": "bbf3bc46ed56165693a4345fa60d29fd6f990dc176c6728a8b0feca624bbecb7",
+      "stable_ids": {
+        "2-B01": "2-B01",
+        "2-C01": "2-C01",
+        "2-C02": "2-C02",
+        "2-E01": "2-E01",
+        "2-E02": "2-E02",
+        "2-E03": "2-E03",
+        "2-E04": "2-E04",
+        "2-E05": "2-E05",
+        "2-E06": "2-E06",
+        "2-E07": "2-E07",
+        "2-N01": "2-N01",
+        "2-N02": "2-N02",
+        "2-N03": "2-N03",
+        "2-N04": "2-N04",
+        "2-N05": "2-N05",
+        "2-P01": "2-P01",
+        "2-P02": "2-P02",
+        "2-P03": "2-P03"
+      },
+      "new_body_ids": [
+        "2-B01"
+      ],
+      "loom_ids": [
+        "2-L01",
+        "2-L02",
+        "2-L03",
+        "2-L04",
+        "2-L05",
+        "2-L06",
+        "2-L07"
+      ],
+      "new_loom_ids": [
+        "2-L07"
+      ],
+      "revision": "BIL02/r1_20261014",
+      "status": "author_candidate_pending_independent_acceptance",
+      "english_prerequisites": "Accepted BIL01 Chapter 1"
+    },
+    {
+      "chapter": 3,
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch03.tex",
+        "sha256": "4a3bf3de8bb4c797c0d4f7ba94ba91d7e340294c7d854e98d23ea901788ae2e1"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch03_0.tex",
+        "sha256": "d6c095db14129db7ed5d34481b0420766344bbac36925a6ac9adebba906410cf"
+      },
+      "zh": "part01/chapter03/content.md",
+      "en": "editions/en/chapters/ch03/content.md",
+      "zh_content_sha256": "6188a31bd2a2e4856f85dd90e3ba82767794ca7dd2c08634b2da8b879ec30ba8",
+      "en_content_sha256": "864079c29b7090227061a4aaa5ce4d742d2ab05aa92d3ea1a4c5ad236b8a1291",
+      "stable_ids": {
+        "3-C01": "3-C01",
+        "3-C02": "3-C02",
+        "3-E01": "3-E01",
+        "3-E02": "3-E02",
+        "3-E03": "3-E03",
+        "3-E04": "3-E04",
+        "3-E05": "3-E05",
+        "3-E06": "3-E06",
+        "3-E07": "3-E07",
+        "3-N01": "3-N01",
+        "3-N02": "3-N02",
+        "3-N03": "3-N03",
+        "3-N04": "3-N04",
+        "3-N05": "3-N05",
+        "3-P01": "3-P01",
+        "3-P02": "3-P02",
+        "3-P03": "3-P03"
+      },
+      "new_body_ids": [],
+      "loom_ids": [
+        "3-L01",
+        "3-L02",
+        "3-L03",
+        "3-L04",
+        "3-L05",
+        "3-L06"
+      ],
+      "new_loom_ids": [],
+      "revision": "BIL02/r1_20261014",
+      "status": "author_candidate_pending_independent_acceptance",
+      "english_prerequisites": "BIL02 Chapter 2 candidate; later prerequisites remain Chinese pending later translation"
+    },
+    {
+      "chapter": 4,
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch04.tex",
+        "sha256": "5de7e6e606015e771855729fbc3102d71371e8e06e07c002379da5911316170e"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch04_0.tex",
+        "sha256": "95a78d9c313e2b9d0ce5dc11ac629099be896994d1e867d29fcef24de8c2ab8e"
+      },
+      "zh": "part01/chapter04/content.md",
+      "en": "editions/en/chapters/ch04/content.md",
+      "zh_content_sha256": "b87ef08298562fac45d68f71dc9a6a1a8f190dcb3e6218cddf28720a64061ffa",
+      "en_content_sha256": "9afb91a65a703b225cad2ca010e45d29f0b91fa7004ccf499bb199ec9f757670",
+      "stable_ids": {
+        "4-B01": "4-B01",
+        "4-C01": "4-C01",
+        "4-C02": "4-C02",
+        "4-E01": "4-E01",
+        "4-E02": "4-E02",
+        "4-E03": "4-E03",
+        "4-E04": "4-E04",
+        "4-E05": "4-E05",
+        "4-E06": "4-E06",
+        "4-E07": "4-E07",
+        "4-E08": "4-E08",
+        "4-E09": "4-E09",
+        "4-N01": "4-N01",
+        "4-N02": "4-N02",
+        "4-N03": "4-N03",
+        "4-N04": "4-N04",
+        "4-P01": "4-P01",
+        "4-P02": "4-P02",
+        "4-P03": "4-P03"
+      },
+      "loom_ids": [
+        "4-L01",
+        "4-L02",
+        "4-L03",
+        "4-L04",
+        "4-L05",
+        "4-L06",
+        "4-L07",
+        "4-L08",
+        "4-L09"
+      ],
+      "new_body_ids": [
+        "4-B01"
+      ],
+      "new_loom_ids": [
+        "4-L09"
+      ],
+      "new_question_crosswalk": [
+        {
+          "body": "4-B01",
+          "loom": "4-L09",
+          "relation": "same constructed finite-step and feasibility lesson; full body answer, scaffolded Loom question"
+        }
+      ],
+      "revision": "BIL03/r1_20261014",
+      "status": "author_candidate_pending_independent_acceptance",
+      "english_prerequisites": "accepted English chapters2/3; chapter4/5 paired current candidate; Chapter6 probability remains Chinese pending later translation"
+    },
+    {
+      "chapter": 5,
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch05.tex",
+        "sha256": "d6a5bb8b68c4b41a1ffc6db944997d28284d3d20a11bcea54611553c9315b3b1"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch05_0.tex",
+        "sha256": "29188ef2e4ee626af2db567665daf99848b1d47e434d14f26b0db9c0d5e08420"
+      },
+      "zh": "part01/chapter05/content.md",
+      "en": "editions/en/chapters/ch05/content.md",
+      "zh_content_sha256": "606612b53347b629969ab7694559b5a80d93d887bf56a12582dd63927a953478",
+      "en_content_sha256": "3f79a9c02adce75df586220c7f6bcfd3b3491160309d2fcbf1985265576f784e",
+      "stable_ids": {
+        "5-C01": "5-C01",
+        "5-C02": "5-C02",
+        "5-E01": "5-E01",
+        "5-E02": "5-E02",
+        "5-E03": "5-E03",
+        "5-E04": "5-E04",
+        "5-E05": "5-E05",
+        "5-E06": "5-E06",
+        "5-E07": "5-E07",
+        "5-N01": "5-N01",
+        "5-N02": "5-N02",
+        "5-N03": "5-N03",
+        "5-N04": "5-N04",
+        "5-P01": "5-P01",
+        "5-P02": "5-P02",
+        "5-P03": "5-P03"
+      },
+      "loom_ids": [
+        "5-L01",
+        "5-L02",
+        "5-L03",
+        "5-L04",
+        "5-L05",
+        "5-L06",
+        "5-L07"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "new_question_crosswalk": [],
+      "revision": "BIL03/r1_20261014",
+      "status": "author_candidate_pending_independent_acceptance",
+      "english_prerequisites": "accepted English chapters2/3; chapter4/5 paired current candidate; Chapter6 probability remains Chinese pending later translation"
+    },
+    {
+      "chapter": 6,
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch06.tex",
+        "sha256": "10f6dbfe342273b16b921f91ec1bbc1606a46699603a74886310505e48d24322"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch06_0.tex",
+        "sha256": "66eef74a920be2e89dee6a0debe7e1eec059065474575b7989004105dc03cab4"
+      },
+      "zh": "part01/chapter06/content.md",
+      "en": "editions/en/chapters/ch06/content.md",
+      "zh_content_sha256": "311197feda44752054a0473d419bfeceee4afa62ba145dfffea73c8d535e600a",
+      "en_content_sha256": "7ca6bab5b9f7b714dedfa22de07290f2dec7289e9de134e8dd74078df92bf5e5",
+      "stable_ids": {
+        "6-B01": "6-B01",
+        "6-C01": "6-C01",
+        "6-C02": "6-C02",
+        "6-E01": "6-E01",
+        "6-E02": "6-E02",
+        "6-E03": "6-E03",
+        "6-E04": "6-E04",
+        "6-E05": "6-E05",
+        "6-E06": "6-E06",
+        "6-E07": "6-E07",
+        "6-N01": "6-N01",
+        "6-N02": "6-N02",
+        "6-N03": "6-N03",
+        "6-N04": "6-N04",
+        "6-N05": "6-N05",
+        "6-P01": "6-P01",
+        "6-P02": "6-P02",
+        "6-P03": "6-P03"
+      },
+      "loom_ids": [
+        "6-L01",
+        "6-L02",
+        "6-L03",
+        "6-L04",
+        "6-L05",
+        "6-L06",
+        "6-L07",
+        "6-L08",
+        "6-L09",
+        "6-L10"
+      ],
+      "new_body_ids": [
+        "6-B01"
+      ],
+      "new_loom_ids": [
+        "6-L10"
+      ],
+      "new_question_crosswalk": [
+        {
+          "body": "6-B01",
+          "loom": "6-L10",
+          "scope": "same shared random scale, zero autocovariance, square dependence and fixed nonnormal standardized mixture"
+        }
+      ],
+      "revision": "BIL04/r1_20261014",
+      "status": "author_candidate_pending_independent_acceptance",
+      "english_prerequisites": "accepted paired Chapters4/5; Chapter6 paired current candidate for Chapter7",
+      "source_alignment": "all old paragraphs, formulas, examples, Python blocks and complete answers retained; I3 reader-root operations integrated; ch6 adds one dependency counterexample; ch7 clarifies resample counts",
+      "source_notes": "part01/chapter06/source_notes.md"
+    },
+    {
+      "chapter": 7,
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch07.tex",
+        "sha256": "ec00f9094f1ca74d475d262283a4c57a8a775d8baf51f1be1add5035eb4da67e"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch07_0.tex",
+        "sha256": "6334a8b58b61c070130c634c1871caa38ba424c934c593b8b966177f88d28b58"
+      },
+      "zh": "part01/chapter07/content.md",
+      "en": "editions/en/chapters/ch07/content.md",
+      "zh_content_sha256": "1fc083fe123939a8e2a21d92e61532d145803e6311c06c012f387a4bde7b6cdd",
+      "en_content_sha256": "3e7787e930c7cd3bda185793f24b3895f07ddd0bc04bf72e14d2d0a38018498c",
+      "stable_ids": {
+        "7-C01": "7-C01",
+        "7-C02": "7-C02",
+        "7-E01": "7-E01",
+        "7-E02": "7-E02",
+        "7-E03": "7-E03",
+        "7-E04": "7-E04",
+        "7-E05": "7-E05",
+        "7-E06": "7-E06",
+        "7-E07": "7-E07",
+        "7-N01": "7-N01",
+        "7-N02": "7-N02",
+        "7-N03": "7-N03",
+        "7-N04": "7-N04",
+        "7-N05": "7-N05",
+        "7-P01": "7-P01",
+        "7-P02": "7-P02",
+        "7-P03": "7-P03"
+      },
+      "loom_ids": [
+        "7-L01",
+        "7-L02",
+        "7-L03",
+        "7-L04",
+        "7-L05",
+        "7-L06",
+        "7-L07",
+        "7-L08",
+        "7-L09"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "new_question_crosswalk": [],
+      "revision": "BIL04/r1_20261014",
+      "status": "author_candidate_pending_independent_acceptance",
+      "english_prerequisites": "accepted paired Chapters4/5; Chapter6 paired current candidate for Chapter7",
+      "source_alignment": "all old paragraphs, formulas, examples, Python blocks and complete answers retained; I3 reader-root operations integrated; ch6 adds one dependency counterexample; ch7 clarifies resample counts",
+      "source_notes": "part01/chapter07/source_notes.md"
+    },
+    {
+      "chapter": 8,
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch08.tex",
+        "sha256": "9d212234edd8dba3306c4de0da7f9bbbeea5a251524830b7c851581bd28d6121"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch08_0.tex",
+        "sha256": "cdf771fc63dbe4914b5543554ffbd4575f2782d36e7865bd79c891674332cfc8"
+      },
+      "zh": "part01/chapter08/content.md",
+      "en": "editions/en/chapters/ch08/content.md",
+      "zh_content_sha256": "394709db8ea70b89a8cba9408ac8a95398e07fbb7310502e012cc8c6810eb48b",
+      "en_content_sha256": "83ed81c8685a3901b18d6ec98d61df27cee72bc52e8766808fe172f5aad2ffeb",
+      "loom_zh": "loom/sections/a2_ch08.tex",
+      "loom_en": "editions/en/loom/sections/ch08.tex",
+      "loom_zh_sha256": "e3e1bfdd30d5fe32654390d9dae871120df33d704632aae6f623489faa489cc6",
+      "loom_en_sha256": "203e2ec4db9f2de1a6af7dd219f13159498f4608e7577d9fb8957a8c9ff10af5",
+      "stable_ids": {
+        "8-B01": "8-B01",
+        "8-C01": "8-C01",
+        "8-C02": "8-C02",
+        "8-E01": "8-E01",
+        "8-E02": "8-E02",
+        "8-E03": "8-E03",
+        "8-E04": "8-E04",
+        "8-E05": "8-E05",
+        "8-E06": "8-E06",
+        "8-E07": "8-E07",
+        "8-P01": "8-P01",
+        "8-P02": "8-P02",
+        "8-P03": "8-P03",
+        "8-T01": "8-T01",
+        "8-T02": "8-T02",
+        "8-T03": "8-T03",
+        "8-T04": "8-T04",
+        "8-T05": "8-T05"
+      },
+      "loom_ids": [
+        "8-L01",
+        "8-L02",
+        "8-L03",
+        "8-L04",
+        "8-L05"
+      ],
+      "new_body_ids": [
+        "8-B01"
+      ],
+      "new_loom_ids": [
+        "8-L05"
+      ],
+      "new_question_crosswalk": [
+        {
+          "body": "8-B01",
+          "loom": "8-L05",
+          "scope": "same exact HC3/TSS/redundant-restriction formula-domain counterexample"
+        }
+      ],
+      "revision": "BIL05/r1_20261014",
+      "status": "author_candidate_pending_independent_acceptance",
+      "source_notes": "part01/chapter08/source_notes.md",
+      "english_prerequisites": "accepted bilingual Chapters4/5/6/7; current paired Chapter8 for Chapter9",
+      "source_alignment": "all old examples, formulas, Python blocks, stable IDs and complete answers retained; I3 reader-root route integrated; ch8 completion entry and formula domains supplemented",
+      "shared_code_scope": "authorized candidate regression_tools and chapter8 tests only; frozen I3 unchanged"
+    },
+    {
+      "chapter": 9,
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch09.tex",
+        "sha256": "fed30ab6e8827ecdf9744d65637efc2bd3a2eb6f9ea5aa021f9959013d4e7137"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch09_0.tex",
+        "sha256": "41e8525f6f1bcaa43b30e4d9ec4403742e825e62e872e5d9b03206a6a5e0274b"
+      },
+      "zh": "part01/chapter09/content.md",
+      "en": "editions/en/chapters/ch09/content.md",
+      "zh_content_sha256": "b832b561b99faeb346fc4eb47da5407a156ee7ad78d3c977510f000bf39c3e46",
+      "en_content_sha256": "37023f1c697d21b5530d57c2120d8557e21935daf3f23364b55db799321f628f",
+      "loom_zh": "loom/sections/a2_ch09.tex",
+      "loom_en": "editions/en/loom/sections/ch09.tex",
+      "loom_zh_sha256": "afab80e61051f3deb15770246b941377662d80fdc62fef1ca05d811e341952cb",
+      "loom_en_sha256": "3ff1095f95186f10f02185d87ef0bd2fb7d60b9273c5b9cf9aca9e8668f831df",
+      "stable_ids": {
+        "9-C01": "9-C01",
+        "9-C02": "9-C02",
+        "9-E01": "9-E01",
+        "9-E02": "9-E02",
+        "9-E03": "9-E03",
+        "9-E04": "9-E04",
+        "9-E05": "9-E05",
+        "9-E06": "9-E06",
+        "9-E07": "9-E07",
+        "9-P01": "9-P01",
+        "9-P02": "9-P02",
+        "9-P03": "9-P03",
+        "9-T01": "9-T01",
+        "9-T02": "9-T02",
+        "9-T03": "9-T03",
+        "9-T04": "9-T04",
+        "9-T05": "9-T05"
+      },
+      "loom_ids": [
+        "9-L01",
+        "9-L02",
+        "9-L03",
+        "9-L04",
+        "9-L05",
+        "9-L06",
+        "9-L07",
+        "9-L08",
+        "9-L09"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "new_question_crosswalk": [],
+      "revision": "BIL05/r1_20261014",
+      "status": "author_candidate_pending_independent_acceptance",
+      "source_notes": "part01/chapter09/source_notes.md",
+      "english_prerequisites": "accepted bilingual Chapters4/5/6/7; current paired Chapter8 for Chapter9",
+      "source_alignment": "all old examples, formulas, Python blocks, stable IDs and complete answers retained; I3 reader-root route integrated; ch8 completion entry and formula domains supplemented",
+      "shared_code_scope": "optimization code unchanged; no numerical rerun"
+    },
+    {
+      "chapter": 10,
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch10.tex",
+        "sha256": "65dcd00c0d8121aa6d2353fc4dc4a7c724ab0360e4b0282316534b2d69505dc4"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch10_0.tex",
+        "sha256": "d1a91a590e216605f69109223eefe36387f17fa8c0919db591474aac28787269"
+      },
+      "zh": "part02/chapter10/content.md",
+      "en": "editions/en/chapters/ch10/content.md",
+      "zh_content_sha256": "9e9850cc3fc184189de8633253df4cca9c2734bee2ccfe65560e47d5b0280d05",
+      "en_content_sha256": "35c70089122368bd28438c2d292d4f242851cc9b0fd316b2aee3382e0d7bc99a",
+      "loom_zh": "loom/sections/a3_ch10.tex",
+      "loom_en": "editions/en/loom/sections/ch10.tex",
+      "loom_zh_sha256": "2cb40f50c9cda7d5c8cfca0ca376bf50a1b9f4fef0a24ac68a6ad950dd4e322a",
+      "loom_en_sha256": "065d4264aa8eddd6aa0d6b0f1c89be26ff45ccb9fb34100ab3965eed2c3670ed",
+      "stable_ids": {
+        "10-C01": "10-C01",
+        "10-C02": "10-C02",
+        "10-E01": "10-E01",
+        "10-E02": "10-E02",
+        "10-E03": "10-E03",
+        "10-E04": "10-E04",
+        "10-E05": "10-E05",
+        "10-E06": "10-E06",
+        "10-E07": "10-E07",
+        "10-E08": "10-E08",
+        "10-N01": "10-N01",
+        "10-N02": "10-N02",
+        "10-N03": "10-N03",
+        "10-N04": "10-N04",
+        "10-P01": "10-P01",
+        "10-P02": "10-P02",
+        "10-P03": "10-P03",
+        "10-P04": "10-P04",
+        "10-P05": "10-P05"
+      },
+      "loom_ids": [
+        "10-L01",
+        "10-L02",
+        "10-L03",
+        "10-L04",
+        "10-L05",
+        "10-L06",
+        "10-L07",
+        "10-L08",
+        "10-L09",
+        "10-L10",
+        "10-L11",
+        "10-L12"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "revision": "BIL06/r1_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "source_notes": "part02/chapter10/source_notes.md",
+      "English_figure_language_layer": {
+        "status": "pending_BIL23_bitmap_labels",
+        "owner": "BIL23 root final bilingual assembly",
+        "retained_figure": "figures/a3/ch10_cashflow_timeline.png",
+        "scope": "Chapter10 retained PNG has Chinese title/lane/event labels; English caption explains axes, lanes, rights/payment, units and constructed identity. Text extraction does not inspect raster labels. Chapter11 retained plotted labels observed in English. No figure bytes changed."
+      },
+      "english_prerequisites": "accepted bilingual Chapters2/4/5/6/7/8/9; paired Chapter10 for Chapter11",
+      "shared_code_scope": "numerical implementation unchanged; chapter10 P01/P02/P03 source-import bootstrap authorized in both prose code consumers; EN P01 display labels separately translated",
+      "notebook_english_language_layer": {
+        "status": "pending_BIL23_final_assembly",
+        "owner": "BIL23 root final bilingual assembly",
+        "accepted_I3_source": "outputs/quant_course_reader_candidate_20261014/notebooks/ch10_markets.ipynb",
+        "this_batch_did_not_create_or_execute": true
+      }
+    },
+    {
+      "chapter": 11,
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch11.tex",
+        "sha256": "339d966dcf4bad7311e1112e58666fc21677b60142d5c75c136d9304b6a0bbf9"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch11_0.tex",
+        "sha256": "b0b0894cf08de6280978ea89a7e7b87ae8470b77351f6c57adaad8faa63aa3c9"
+      },
+      "zh": "part02/chapter11/content.md",
+      "en": "editions/en/chapters/ch11/content.md",
+      "zh_content_sha256": "4c44ead1295d74f70e39f5d18ca983d357ecf11992943e33f77c002c9ba799b6",
+      "en_content_sha256": "e1f2c8ffd3266af09e157ee1bd716d42ffe154c4386ef2f0ef1195a5e149017e",
+      "loom_zh": "loom/sections/a3_ch11.tex",
+      "loom_en": "editions/en/loom/sections/ch11.tex",
+      "loom_zh_sha256": "b0b0894cf08de6280978ea89a7e7b87ae8470b77351f6c57adaad8faa63aa3c9",
+      "loom_en_sha256": "f5db75a6e92b20d1a14b82a86a6e6ea48bfa22fc0b808b492265b3cfd0812b4f",
+      "stable_ids": {
+        "11-C01": "11-C01",
+        "11-C02": "11-C02",
+        "11-E01": "11-E01",
+        "11-E02": "11-E02",
+        "11-E03": "11-E03",
+        "11-E04": "11-E04",
+        "11-E05": "11-E05",
+        "11-E06": "11-E06",
+        "11-E07": "11-E07",
+        "11-N01": "11-N01",
+        "11-P01": "11-P01",
+        "11-P02": "11-P02",
+        "11-P03": "11-P03"
+      },
+      "loom_ids": [
+        "11-L01",
+        "11-L02",
+        "11-L03",
+        "11-L04",
+        "11-L05",
+        "11-L06",
+        "11-L07",
+        "11-L08"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "revision": "BIL06/r1_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "source_notes": "part02/chapter11/source_notes.md",
+      "English_figure_language_layer": {
+        "status": "existing_English_axes_observed_in_current_render",
+        "owner": "BIL23 root final bilingual assembly",
+        "retained_figure": "figures/a3/ch11_returns_dashboard.png",
+        "scope": "Chapter10 retained PNG has Chinese title/lane/event labels; English caption explains axes, lanes, rights/payment, units and constructed identity. Text extraction does not inspect raster labels. Chapter11 retained plotted labels observed in English. No figure bytes changed."
+      },
+      "english_prerequisites": "accepted bilingual Chapters2/4/5/6/7/8/9; paired Chapter10 for Chapter11",
+      "shared_code_scope": "numerical implementation unchanged; chapter10 P01/P02/P03 source-import bootstrap authorized in both prose code consumers; EN P01 display labels separately translated",
+      "notebook_english_language_layer": {
+        "status": "pending_BIL23_final_assembly",
+        "owner": "BIL23 root final bilingual assembly",
+        "accepted_I3_source": "outputs/quant_course_reader_candidate_20261014/notebooks/ch11_returns.ipynb",
+        "this_batch_did_not_create_or_execute": true
+      }
+    },
+    {
+      "chapter": 12,
+      "revision": "BIL07/r1_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part02/chapter12/content.md",
+      "en": "editions/en/chapters/ch12/content.md",
+      "zh_content_sha256": "61489414b227459f4febfc432d75d46b3bc6391c993a445937bb3d5c2028747c",
+      "en_content_sha256": "e529924643515ff3cd4062811fb6866ed0099d2a60498d5ebc29e14350a04eec",
+      "loom_zh": "loom/sections/a3_ch12.tex",
+      "loom_en": "editions/en/loom/sections/ch12.tex",
+      "loom_zh_sha256": "16d7f1481027d7172215637b3d53d3b231e7c876414706dd31af40f385731334",
+      "loom_en_sha256": "b1ab4e39be8306041d479a5907abf6417ae6d551d7839dbd356e53f75dc62694",
+      "source_notes": "part02/chapter12/source_notes.md",
+      "stable_ids": {
+        "12-C01": "12-C01",
+        "12-C02": "12-C02",
+        "12-E01": "12-E01",
+        "12-E02": "12-E02",
+        "12-E03": "12-E03",
+        "12-E04": "12-E04",
+        "12-E05": "12-E05",
+        "12-E06": "12-E06",
+        "12-E07": "12-E07",
+        "12-E08": "12-E08",
+        "12-E09": "12-E09",
+        "12-P01": "12-P01",
+        "12-P02": "12-P02",
+        "12-P03": "12-P03"
+      },
+      "loom_ids": [
+        "12-L01",
+        "12-L02",
+        "12-L03",
+        "12-L04",
+        "12-L05",
+        "12-L06"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch12.tex",
+        "sha256": "db689858cd17de0378b85d362eef96c351cb15df909125faa093c7411c317e87"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch12_0.tex",
+        "sha256": "81f03f8f18f420bc8c13d65c22cbb7c67f888f439511002a53396aecc0189305"
+      },
+      "English_figure_language_layer": {
+        "status": "retained_original_English_figures_observed_in_current_PDF_renders",
+        "owner": "BIL07 author visual QA; BIL23 final assembly",
+        "retained_figures": [
+          "figures/a3/ch12_apple_cashflow.png",
+          "figures/a3/ch12_spire_revision.png"
+        ],
+        "figure_bytes_changed": false
+      },
+      "notebook_english_language_layer": {
+        "status": "pending_BIL23_final_assembly",
+        "owner": "BIL23 root final bilingual assembly",
+        "accepted_I3_source": "outputs/quant_course_reader_candidate_20261014/notebooks/ch12_statements.ipynb",
+        "this_batch_did_not_create_or_execute": true
+      },
+      "shared_code_scope": "Original Chinese code retained. English only declared display/local constructed-name translations; exact reverse and AST checks. Three original Chinese comment lines translated under root supplemental authorization with exact reverse mapping."
+    },
+    {
+      "chapter": 13,
+      "revision": "BIL07/r1_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part02/chapter13/content.md",
+      "en": "editions/en/chapters/ch13/content.md",
+      "zh_content_sha256": "abc3f9f8bec03675c39d0bd33f0a4037dc533294a69203395815288fd5a6eda0",
+      "en_content_sha256": "56afbc2ee8a3681af7a5b3998158968b952c19a4c8a4e5fc1183b0234c0963f2",
+      "loom_zh": "loom/sections/a3_ch13.tex",
+      "loom_en": "editions/en/loom/sections/ch13.tex",
+      "loom_zh_sha256": "776d6f5e1439ea89122d80a4c476e6857fa2a0b9dfb036e8146faf3194fd9c6b",
+      "loom_en_sha256": "27e4930a1e11ab9903462046525254073fbee76225bb4ba87fd88f2836aafa3c",
+      "source_notes": "part02/chapter13/source_notes.md",
+      "stable_ids": {
+        "13-C01": "13-C01",
+        "13-C02": "13-C02",
+        "13-E01": "13-E01",
+        "13-E02": "13-E02",
+        "13-E03": "13-E03",
+        "13-E04": "13-E04",
+        "13-E05": "13-E05",
+        "13-E06": "13-E06",
+        "13-E07": "13-E07",
+        "13-E08": "13-E08",
+        "13-E09": "13-E09",
+        "13-P01": "13-P01",
+        "13-P02": "13-P02",
+        "13-P03": "13-P03"
+      },
+      "loom_ids": [
+        "13-L01",
+        "13-L02",
+        "13-L03",
+        "13-L04",
+        "13-L05",
+        "13-L06",
+        "13-L07"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch13.tex",
+        "sha256": "5d4272761bf29692513f7752fb9549acf6fd285657b4fcc59af8ec01a7ba8fd0"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch13_0.tex",
+        "sha256": "488f3983d2e21335a7607ea093d1db6a3e4da98186fdf699d3e3659b079be18f"
+      },
+      "English_figure_language_layer": {
+        "status": "retained_original_English_figures_observed_in_current_PDF_renders",
+        "owner": "BIL07 author visual QA; BIL23 final assembly",
+        "retained_figures": [
+          "figures/a3/ch13_ev_bridge.png",
+          "figures/a3/ch13_terminal_sensitivity.png"
+        ],
+        "figure_bytes_changed": false
+      },
+      "notebook_english_language_layer": {
+        "status": "pending_BIL23_final_assembly",
+        "owner": "BIL23 root final bilingual assembly",
+        "accepted_I3_source": "outputs/quant_course_reader_candidate_20261014/notebooks/ch13_valuation.ipynb",
+        "this_batch_did_not_create_or_execute": true
+      },
+      "shared_code_scope": "Original Chinese code retained. English only declared display/local constructed-name translations; exact reverse and AST checks. Three original Chinese comment lines translated under root supplemental authorization with exact reverse mapping."
+    },
+    {
+      "chapter": 14,
+      "revision": "BIL08/r1_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part03/chapter14/content.md",
+      "en": "editions/en/chapters/ch14/content.md",
+      "zh_content_sha256": "d26100bf3736c278b8a24ba27e0b99c3e9a33d85210ae9933f03643b555f03e3",
+      "en_content_sha256": "cfaf51a655b6183b43c22c5891e807b8bc0c38468b5c63909caad18ce5323dcf",
+      "loom_zh": "loom/sections/a4_ch14.tex",
+      "loom_en": "editions/en/loom/sections/ch14.tex",
+      "loom_zh_sha256": "a8d512adb300fefd5e6f8a35a578d2215d13b237ae874dec4c65d96f3c841bfb",
+      "loom_en_sha256": "efb152d58c43cfec97649c81a8ebb05ec6c3737bacb64402c343ae295f2a66e6",
+      "source_notes": "part03/chapter14/source_notes.md",
+      "stable_ids": {
+        "14-C01": "14-C01",
+        "14-C02": "14-C02",
+        "14-C03": "14-C03",
+        "14-C04": "14-C04",
+        "14-E01": "14-E01",
+        "14-E02": "14-E02",
+        "14-E03": "14-E03",
+        "14-E04": "14-E04",
+        "14-E05": "14-E05",
+        "14-E06": "14-E06",
+        "14-P01": "14-P01",
+        "14-P02": "14-P02",
+        "14-P03": "14-P03",
+        "14-P04": "14-P04"
+      },
+      "loom_ids": [
+        "14-L01",
+        "14-L02",
+        "14-L03",
+        "14-L04",
+        "14-L05",
+        "14-L06",
+        "14-L07"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch14.tex",
+        "sha256": "f1acc2fac74d0e94d9dfc70b04d10e4f79a97ec887fa5a3b0c87b2fe3880a8ed",
+        "source_role": "read_only_original"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch14_0.tex",
+        "sha256": "a8d512adb300fefd5e6f8a35a578d2215d13b237ae874dec4c65d96f3c841bfb",
+        "source_role": "read_only_original"
+      },
+      "English_figure_language_layer": {
+        "status": "all_six_chapter_raster_images_actually_viewed_English_labels",
+        "owner": "BIL23 final assembly",
+        "figure_bytes_changed": false
+      },
+      "notebook_english_language_layer": {
+        "status": "pending_BIL23_final_assembly",
+        "owner": "BIL23 root final bilingual assembly",
+        "accepted_I3_source": "outputs/quant_course_reader_candidate_20261014/notebooks/ch14_asset_pricing.ipynb",
+        "this_batch_did_not_create_or_execute": true,
+        "mandatory_narrative_correction": "Describe two newly generated constructed charts; historical French branch skipped."
+      },
+      "shared_code_scope": "Original Chinese programs preserved. English only two declared display-line translations in ch15, single-pass exact inverse and AST equality; no numerical implementation changes."
+    },
+    {
+      "chapter": 15,
+      "revision": "BIL08/r1_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part03/chapter15/content.md",
+      "en": "editions/en/chapters/ch15/content.md",
+      "zh_content_sha256": "7b97acf6c113044189a2f82d18f69377e94c1fb8c1c75d5e088da33bae5beafe",
+      "en_content_sha256": "0dbb48d5c3ee69912e670636853320bc31c93a32a44dc676f94eff26ad9bc982",
+      "loom_zh": "loom/sections/a4_ch15.tex",
+      "loom_en": "editions/en/loom/sections/ch15.tex",
+      "loom_zh_sha256": "e1c95e8a7a55c7bb671a200af821c41685b1628902a175cc543efe9fcb8494f3",
+      "loom_en_sha256": "712da5d79e79cd78d4e419be7d26c256c9fe18936d96adda56f9f5e9869d843b",
+      "source_notes": "part03/chapter15/source_notes.md",
+      "stable_ids": {
+        "15-C01": "15-C01",
+        "15-C02": "15-C02",
+        "15-E01": "15-E01",
+        "15-E02": "15-E02",
+        "15-E03": "15-E03",
+        "15-E04": "15-E04",
+        "15-E05": "15-E05",
+        "15-E06": "15-E06",
+        "15-E07": "15-E07",
+        "15-E08": "15-E08",
+        "15-E09": "15-E09",
+        "15-E10": "15-E10",
+        "15-P01": "15-P01",
+        "15-P02": "15-P02",
+        "15-P03": "15-P03"
+      },
+      "loom_ids": [
+        "15-L01",
+        "15-L02",
+        "15-L03",
+        "15-L04",
+        "15-L05",
+        "15-L06",
+        "15-L07",
+        "15-L08",
+        "15-L09"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch15.tex",
+        "sha256": "3d5892d636b82574d4e32f1d02830f9aad47eecc16d9352151c921cd3d106bb3",
+        "source_role": "read_only_original"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch15_0.tex",
+        "sha256": "e1c95e8a7a55c7bb671a200af821c41685b1628902a175cc543efe9fcb8494f3",
+        "source_role": "read_only_original"
+      },
+      "English_figure_language_layer": {
+        "status": "all_six_chapter_raster_images_actually_viewed_English_labels",
+        "owner": "BIL23 final assembly",
+        "figure_bytes_changed": false
+      },
+      "notebook_english_language_layer": {
+        "status": "pending_BIL23_final_assembly",
+        "owner": "BIL23 root final bilingual assembly",
+        "accepted_I3_source": "outputs/quant_course_reader_candidate_20261014/notebooks/ch15_factor_models.ipynb",
+        "this_batch_did_not_create_or_execute": true,
+        "mandatory_narrative_correction": "Chapter15 cells4/18 historical official-column differences must be scoped to historical French case; current constructed models share old columns and are strictly nested."
+      },
+      "shared_code_scope": "Original Chinese programs preserved. English only two declared display-line translations in ch15, single-pass exact inverse and AST equality; no numerical implementation changes."
+    },
+    {
+      "chapter": 16,
+      "revision": "BIL09/r1_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part03/chapter16/content.md",
+      "en": "editions/en/chapters/ch16/content.md",
+      "zh_content_sha256": "45635a6e27cae0003b204633f18a1fee4dd1d1261dbd35bb67b90ef64215b255",
+      "en_content_sha256": "674ec1e2132f1a75d73904b6d8d1adbcbfac9d946b4d63169ac95ef0efc35be5",
+      "loom_zh": "loom/sections/a4_ch16.tex",
+      "loom_en": "editions/en/loom/sections/ch16.tex",
+      "loom_zh_sha256": "1f0ce1434e6efa03281bcd2f33789ec917bee5e26fcceeb55b957bf4aed930be",
+      "loom_en_sha256": "2330a3947310c6f5b8904bd8360a6bc702214c3f401416ca409eefabd5f4f3a4",
+      "source_notes": "part03/chapter16/source_notes.md",
+      "stable_ids": {
+        "16-C01": "16-C01",
+        "16-C02": "16-C02",
+        "16-E01": "16-E01",
+        "16-E02": "16-E02",
+        "16-E03": "16-E03",
+        "16-E04": "16-E04",
+        "16-E05": "16-E05",
+        "16-E06": "16-E06",
+        "16-E07": "16-E07",
+        "16-E08": "16-E08",
+        "16-E09": "16-E09",
+        "16-E10": "16-E10",
+        "16-N01": "16-N01",
+        "16-N02": "16-N02",
+        "16-N03": "16-N03",
+        "16-P01": "16-P01",
+        "16-P02": "16-P02",
+        "16-P03": "16-P03"
+      },
+      "loom_ids": [
+        "16-L01",
+        "16-L02",
+        "16-L03",
+        "16-L04",
+        "16-N01",
+        "16-N02",
+        "16-N03",
+        "16-N04"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch16.tex",
+        "sha256": "5946fc547f07c35ffeb0251f74ad98d68c6a6ef9ce52562a321d306546fbbe15"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch16_0.tex",
+        "sha256": "d6ae5c74aef6223a16475b11fe9d9f7666acee8c9051d4efe9a5b8c45893c158"
+      },
+      "English_figure_language_layer": {
+        "status": "three_original_rasters_actually_viewed_all_English_titles_axes_legends_shared",
+        "figure_bytes_changed": false,
+        "pending_bitmap_translation": false
+      },
+      "notebook_english_language_layer": {
+        "owner": "BIL23 final bilingual assembly",
+        "status": "pending_Notebook_Markdown_translation_narrative_correction_rebinding_actual_reader_execution",
+        "accepted_I3_source": "outputs/quant_course_reader_candidate_20261014/notebooks/ch16_time_series.ipynb",
+        "this_batch_did_not_create_or_execute": true,
+        "mandatory_narrative_correction": "Cells0/6 historical French reading description must match RUN_FRENCH=False; existing fixture is displayed, not regenerated; RUN_DIR writes no CSV/PNG."
+      },
+      "shared_code_scope": "No computation changed; English17 only two declared code comment translations with exact inverse and AST equality. Chinese code and Loom code byte-identical.",
+      "P5_dependency": "read_only; prereg v2 beta>0 strategy selection only; real-price evidence blocked; constructed negative result unchanged",
+      "default_run": "accepted I3 package root .venv/bin/python run_notebook.py notebooks/ch16_time_series.ipynb; static source audit only"
+    },
+    {
+      "chapter": 17,
+      "revision": "BIL09/r1_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part03/chapter17/content.md",
+      "en": "editions/en/chapters/ch17/content.md",
+      "zh_content_sha256": "174d1f71263f7c5d81bc727a83f3ffb013812640916bb7fced1f6e8d3a4fd739",
+      "en_content_sha256": "641c16188acbafc90d8296b7605e7394fc357997aa5650d07ae648cee3aebfb7",
+      "loom_zh": "loom/sections/a4_ch17.tex",
+      "loom_en": "editions/en/loom/sections/ch17.tex",
+      "loom_zh_sha256": "5342c060516460ec0aa4aa2ed596c0b3e499f1b419054960605da576a186f7e4",
+      "loom_en_sha256": "0cf803a1b65d7620df88ea7e9ff2d87867b17048fc3317d60e9bcc36a498c17e",
+      "source_notes": "part03/chapter17/source_notes.md",
+      "stable_ids": {
+        "17-C01": "17-C01",
+        "17-C02": "17-C02",
+        "17-E01": "17-E01",
+        "17-E02": "17-E02",
+        "17-E03": "17-E03",
+        "17-E04": "17-E04",
+        "17-E05": "17-E05",
+        "17-E06": "17-E06",
+        "17-E07": "17-E07",
+        "17-E08": "17-E08",
+        "17-N01": "17-N01",
+        "17-N02": "17-N02",
+        "17-N03": "17-N03",
+        "17-P01": "17-P01",
+        "17-P02": "17-P02",
+        "17-P03": "17-P03",
+        "17-P04": "17-P04"
+      },
+      "loom_ids": [
+        "17-L01",
+        "17-L02",
+        "17-L03",
+        "17-L04",
+        "17-L05",
+        "17-L06",
+        "17-N01",
+        "17-N02",
+        "17-N03"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch17.tex",
+        "sha256": "a167b875a65bafd611e1cc676661ab6a0f1552a5d144c985cfa681564b4cc0f0"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch17_0.tex",
+        "sha256": "98e8a75ab0347f75c98b73bd809919238c32594172c21772c0e289aec35d35d2"
+      },
+      "English_figure_language_layer": {
+        "status": "three_original_rasters_actually_viewed_all_English_titles_axes_legends_shared",
+        "figure_bytes_changed": false,
+        "pending_bitmap_translation": false
+      },
+      "notebook_english_language_layer": {
+        "owner": "BIL23 final bilingual assembly",
+        "status": "pending_Notebook_Markdown_translation_narrative_correction_rebinding_actual_reader_execution",
+        "accepted_I3_source": "outputs/quant_course_reader_candidate_20261014/notebooks/ch17_time_series_ii.ipynb",
+        "this_batch_did_not_create_or_execute": true,
+        "mandatory_narrative_correction": "Cells0/7/9 historical French screening/twofigure descriptions must match skipped cell8/10 branches; only constructed fixture displayed; no Granger run; RUN_DIR writes no CSV/PNG."
+      },
+      "shared_code_scope": "No computation changed; English17 only two declared code comment translations with exact inverse and AST equality. Chinese code and Loom code byte-identical.",
+      "P5_dependency": "read_only; prereg v2 beta>0 strategy selection only; real-price evidence blocked; constructed negative result unchanged",
+      "default_run": "accepted I3 package root .venv/bin/python run_notebook.py notebooks/ch17_time_series_ii.ipynb; static source audit only"
+    },
+    {
+      "chapter": 18,
+      "revision": "BIL10/r1_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part03/chapter18/content.md",
+      "en": "editions/en/chapters/ch18/content.md",
+      "zh_content_sha256": "9499985b50b11248daa81d6dc92277bd989e686278dc9f519838fda8ebdc70f7",
+      "en_content_sha256": "c9fbd22555954174f4eb3d032036967737b725b9aea5556432eaa9a6ead46025",
+      "loom_zh": "loom/sections/a4_ch18.tex",
+      "loom_en": "editions/en/loom/sections/ch18.tex",
+      "loom_zh_sha256": "6da32661feb58419056496eee3ed48d1fab6f9d923df81511230dba87a87d891",
+      "loom_en_sha256": "98bbb5450c58c10e43aa6ca24ca963cf08b67c1dd2680c970f8dafa3627de871",
+      "source_notes": "part03/chapter18/source_notes.md",
+      "stable_ids": {
+        "18-C01": "18-C01",
+        "18-C02": "18-C02",
+        "18-C03": "18-C03",
+        "18-C04": "18-C04",
+        "18-E01": "18-E01",
+        "18-E02": "18-E02",
+        "18-E03": "18-E03",
+        "18-E04": "18-E04",
+        "18-E05": "18-E05",
+        "18-E06": "18-E06",
+        "18-E07": "18-E07",
+        "18-E08": "18-E08",
+        "18-E09": "18-E09",
+        "18-E10": "18-E10",
+        "18-E11": "18-E11",
+        "18-P01": "18-P01",
+        "18-P02": "18-P02",
+        "18-P03": "18-P03",
+        "18-R01": "18-R01",
+        "18-R02": "18-R02",
+        "18-R03": "18-R03"
+      },
+      "loom_ids": [
+        "18-L01",
+        "18-L02",
+        "18-L03",
+        "18-L04",
+        "18-L05",
+        "18-L06"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch18.tex",
+        "sha256": "8d54accd13fed547932ce291e8f530313cf2b2a6683f150c11ed09c79160f439"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch18_0.tex",
+        "sha256": "2b1364eb47441b36ff9a12afe1a2e93a32e8732c8ec789c7887578c79c363216"
+      },
+      "English_figure_language_layer": {
+        "status": "root_actual_visual_baseline_all8_original_labels_English_shared",
+        "figure_bytes_changed": false,
+        "pending_bitmap_translation": false,
+        "evidence": "qa/bilingual_revision/BIL10/preparation/FIGURE_VISUAL_BASELINE.json"
+      },
+      "notebook_english_language_layer": {
+        "owner": "BIL23 final bilingual assembly",
+        "status": "pending_Notebook_Markdown_translation_narrative_correction_rebinding_actual_reader_execution",
+        "accepted_I3_source": "outputs/quant_course_reader_candidate_20261014/notebooks/ch18_volatility.ipynb",
+        "this_batch_did_not_create_or_execute": true,
+        "mandatory_narrative_correction": "Default only constructed_simulation.csv; no PNG gallery; old intro French/fourfigures and cell6 threehash/204training claims are historical."
+      },
+      "shared_code_scope": "No numerical implementation changed; declared reversible English code comments only; original Chinese and Loom code preserved.",
+      "default_run": "I3 package root .venv/bin/python run_notebook.py notebooks/ch18_volatility.ipynb; static source audit only",
+      "research_gates": "G01/G05/A10-A/A10-A.1/A10-B unchanged; no new real research"
+    },
+    {
+      "chapter": 19,
+      "revision": "BIL10/r1_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part03/chapter19/content.md",
+      "en": "editions/en/chapters/ch19/content.md",
+      "zh_content_sha256": "0b915deb1c85b9b618089ca0740330b243197ffd47078a5f8e666882b1f3c07f",
+      "en_content_sha256": "5da075becaa6ea4a4ddf0582134c68a071a22742346896ae9f5060a79b97e704",
+      "loom_zh": "loom/sections/a4_ch19.tex",
+      "loom_en": "editions/en/loom/sections/ch19.tex",
+      "loom_zh_sha256": "880ed01c5b2844f65ce57c3ee64a4385852f14888ae708f554306ce9630ec8bf",
+      "loom_en_sha256": "c80461ab63e42ee9efcd90c062f7eea7a7e4dd777efd0cc37eab15544a7eef2d",
+      "source_notes": "part03/chapter19/source_notes.md",
+      "stable_ids": {
+        "19-C01": "19-C01",
+        "19-C02": "19-C02",
+        "19-E01": "19-E01",
+        "19-E02": "19-E02",
+        "19-E03": "19-E03",
+        "19-E04": "19-E04",
+        "19-E05": "19-E05",
+        "19-E06": "19-E06",
+        "19-E07": "19-E07",
+        "19-E08": "19-E08",
+        "19-P01": "19-P01",
+        "19-P02": "19-P02",
+        "19-P03": "19-P03",
+        "19-R01": "19-R01",
+        "19-R02": "19-R02",
+        "19-R03": "19-R03"
+      },
+      "loom_ids": [
+        "19-L01",
+        "19-L02",
+        "19-L03",
+        "19-L04",
+        "19-L05",
+        "19-L06",
+        "19-L07"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch19.tex",
+        "sha256": "7fcd767196513e1666384bfab1aa62100a790442a87955d9695a735e940a8eb6"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch19_0.tex",
+        "sha256": "0d18048ccf3d0d63f637b74378b262bb45ebf8e2ce76f06d70b03355b13781a5"
+      },
+      "English_figure_language_layer": {
+        "status": "root_actual_visual_baseline_all8_original_labels_English_shared",
+        "figure_bytes_changed": false,
+        "pending_bitmap_translation": false,
+        "evidence": "qa/bilingual_revision/BIL10/preparation/FIGURE_VISUAL_BASELINE.json"
+      },
+      "notebook_english_language_layer": {
+        "owner": "BIL23 final bilingual assembly",
+        "status": "pending_Notebook_Markdown_translation_narrative_correction_rebinding_actual_reader_execution",
+        "accepted_I3_source": "outputs/quant_course_reader_candidate_20261014/notebooks/ch19_state_space.ipynb",
+        "this_batch_did_not_create_or_execute": true,
+        "mandatory_narrative_correction": "Default two constructed CSVs and displays two existing simulated PNGs; old noCSV claim wrong; French skipped."
+      },
+      "shared_code_scope": "No numerical implementation changed; declared reversible English code comments only; original Chinese and Loom code preserved.",
+      "default_run": "I3 package root .venv/bin/python run_notebook.py notebooks/ch19_state_space.ipynb; static source audit only",
+      "research_gates": "G01/G05/A10-A/A10-A.1/A10-B unchanged; no new real research"
+    },
+    {
+      "chapter": 21,
+      "revision": "BIL11/r1_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part03/chapter21/content.md",
+      "en": "editions/en/chapters/ch21/content.md",
+      "zh_content_sha256": "05e98a7ddb032ce72c405682c69a0cd482a3a532cc50729af3ae090b6cd68e75",
+      "en_content_sha256": "ac33abb93b448e6f667caa03666fdcafc343b56883c88211988aa372dc97eb4c",
+      "loom_zh": "loom/sections/a4_ch21.tex",
+      "loom_en": "editions/en/loom/sections/ch21.tex",
+      "loom_zh_sha256": "b74d4d6c802d409ece7d9b0595ce59c68f1f13eef1a4bba924d29f88f98e5819",
+      "loom_en_sha256": "e41b1bfeb099cbba9631ba2c5635a07f129f2b06cbc5c02ece48b39a6e519024",
+      "source_notes": "part03/chapter21/source_notes.md",
+      "stable_ids": {
+        "21-C01": "21-C01",
+        "21-C02": "21-C02",
+        "21-E01": "21-E01",
+        "21-E02": "21-E02",
+        "21-E03": "21-E03",
+        "21-E04": "21-E04",
+        "21-E05": "21-E05",
+        "21-E06": "21-E06",
+        "21-E07": "21-E07",
+        "21-E08": "21-E08",
+        "21-P01": "21-P01",
+        "21-P02": "21-P02",
+        "21-P03": "21-P03",
+        "21-R01": "21-R01",
+        "21-R02": "21-R02"
+      },
+      "loom_ids": [
+        "21-L01",
+        "21-L02",
+        "21-L03",
+        "21-L04",
+        "21-L05",
+        "21-L06",
+        "21-L07",
+        "21-L08",
+        "21-L09",
+        "21-L10"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch21.tex",
+        "sha256": "337ee94d558043e76fdda12ee86aa9d86ba48efecb74004067f4cb586d4f8bdf"
+      },
+      "English_figure_language_layer": {
+        "status": "root_actual_visual_baseline_all9_original_labels_English_shared",
+        "figure_bytes_changed": false,
+        "pending_bitmap_translation": false,
+        "evidence": "qa/bilingual_revision/BIL11/preparation/FIGURE_VISUAL_BASELINE.json"
+      },
+      "notebook_english_language_layer": {
+        "owner": "BIL23 final bilingual assembly",
+        "status": "pending_Chapter21_Notebook_Markdown_translation_narrative_correction_rebinding_actual_reader_execution",
+        "accepted_I3_source": "outputs/quant_course_reader_candidate_20261014/notebooks/ch21_portfolio_construction.ipynb",
+        "this_batch_did_not_create_or_execute": true,
+        "mandatory_narrative_correction": "Default creates chapter RUN_DIR only, no CSV/PNG, French skipped; old nonimplication prose conflicts with corrected final neutrality cell."
+      },
+      "shared_code_scope": "No numerical implementation change; reversible English code-comment and math-text language mapping only.",
+      "research_gates": "G01/G05/A10-A/A10-A.1/A10-B unchanged; no new real research"
+    },
+    {
+      "chapter": 22,
+      "revision": "BIL12/r1_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part04/chapter22/content.md",
+      "en": "editions/en/chapters/ch22/content.md",
+      "zh_content_sha256": "77f465b4a317c94d571b122429fb47d5dd2bdacc6e194efbcfde986f695e365a",
+      "en_content_sha256": "ec549868242b938090367f685cbb5c2475f439de42f39ff054234b30af04a089",
+      "loom_zh": "loom/sections/a5_ch22.tex",
+      "loom_en": "editions/en/loom/sections/ch22.tex",
+      "loom_zh_sha256": "833a2018edd5c752c7a6dd1eaf2245ab4cfa4b09063a854917f7bde2d954fae3",
+      "loom_en_sha256": "6e32280b664eba7e646fbde10810c4ab5461e2eed620526f93b40bba488876a2",
+      "source_notes": "part04/chapter22/source_notes.md",
+      "stable_ids": {
+        "22-C01": "22-C01",
+        "22-C02": "22-C02",
+        "22-E01": "22-E01",
+        "22-E02": "22-E02",
+        "22-E03": "22-E03",
+        "22-E04": "22-E04",
+        "22-E05": "22-E05",
+        "22-E06": "22-E06",
+        "22-E07": "22-E07",
+        "22-E08": "22-E08",
+        "22-P01": "22-P01",
+        "22-P02": "22-P02",
+        "22-P03": "22-P03",
+        "22-R01": "22-R01"
+      },
+      "loom_ids": [
+        "22-L01",
+        "22-L02",
+        "22-L03",
+        "22-L04",
+        "22-L05",
+        "22-L06"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch22.tex",
+        "sha256": "cf9450315a58e16d1e63e25743a5f246795ba670d5187b451c29a62bd988d05d"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch22_0.tex",
+        "sha256": "64511dddc2269f61a20b8c867b513b84429828d948b93264174c2dc778bd72a8"
+      },
+      "source_authority": "C11 current body/Loom accepted identities; I3 reader navigation/default semantics; local accuracy corrections recorded in BIL12",
+      "English_figure_language_layer": {
+        "status": "all_original7_figures_labels_English_root_baseline_reused",
+        "regenerated": false,
+        "figure_bytes_changed": false,
+        "evidence": "qa/bilingual_revision/BIL12/preparation/FIGURE_VISUAL_BASELINE.json"
+      },
+      "notebook_english_language_layer": {
+        "owner": "BIL23 final bilingual assembly",
+        "status": "pending_translation_default_narrative_rebinding_and_actual_bilingual_reader_execution",
+        "accepted_I3_source": "outputs/quant_course_reader_candidate_20261014/notebooks/ch22_research_methodology.ipynb",
+        "this_batch_did_not_create_or_execute": true,
+        "default": "RUN_FRENCH=False; chapterRUN_DIRonly; noCSVPNG/historygallery; separateexecutioncopy/status; Ch22 60+60 simulations versus500+500history; Ch23 analyticVIF not600simulation"
+      },
+      "shared_code_scope": "No shared implementation change; code listings executable AST identity checked; math text translated",
+      "research_gates": "G01/G05/A10-A/A10-A.1/A10-B unchanged; no new real research",
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false
+    },
+    {
+      "chapter": 23,
+      "revision": "BIL12/r1_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part04/chapter23/content.md",
+      "en": "editions/en/chapters/ch23/content.md",
+      "zh_content_sha256": "3a818cac529970d2a2b4279b685ab9f2ed3917f1357f0890ea11de313eee8909",
+      "en_content_sha256": "3e718ead64b186a973bf26fc8c16534eecb8c27adbee2b9caf2fde2aec4fb21c",
+      "loom_zh": "loom/sections/a5_ch23.tex",
+      "loom_en": "editions/en/loom/sections/ch23.tex",
+      "loom_zh_sha256": "609f3da9949a362c292615fdd33d05b7f7034de2b6c90141e5b74fbecd29207a",
+      "loom_en_sha256": "e92f58e01c4d3caad71f481ab64e6a048b75f46bad428375c08612c656f277bd",
+      "source_notes": "part04/chapter23/source_notes.md",
+      "stable_ids": {
+        "23-C01": "23-C01",
+        "23-C02": "23-C02",
+        "23-E01": "23-E01",
+        "23-E02": "23-E02",
+        "23-E03": "23-E03",
+        "23-E04": "23-E04",
+        "23-E05": "23-E05",
+        "23-E06": "23-E06",
+        "23-E07": "23-E07",
+        "23-E08": "23-E08",
+        "23-E09": "23-E09",
+        "23-P01": "23-P01",
+        "23-P02": "23-P02",
+        "23-P03": "23-P03",
+        "23-R01": "23-R01",
+        "23-R02": "23-R02",
+        "23-R03": "23-R03"
+      },
+      "loom_ids": [
+        "23-L01",
+        "23-L02",
+        "23-L03",
+        "23-L04",
+        "23-L05",
+        "23-L06",
+        "23-L07",
+        "23-L08",
+        "23-L09"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch23.tex",
+        "sha256": "65c48e47376e941796a4efc25e744736a391b26d0de310de0500248d56b8eb92"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch23_0.tex",
+        "sha256": "7ec216ec768ef8534e6e779ba17fd3a1f6e1d0ffd6616584fe27b1a8685573ff"
+      },
+      "source_authority": "C11 current body/Loom accepted identities; I3 reader navigation/default semantics; local accuracy corrections recorded in BIL12",
+      "English_figure_language_layer": {
+        "status": "all_original7_figures_labels_English_root_baseline_reused",
+        "regenerated": false,
+        "figure_bytes_changed": false,
+        "evidence": "qa/bilingual_revision/BIL12/preparation/FIGURE_VISUAL_BASELINE.json"
+      },
+      "notebook_english_language_layer": {
+        "owner": "BIL23 final bilingual assembly",
+        "status": "pending_translation_default_narrative_rebinding_and_actual_bilingual_reader_execution",
+        "accepted_I3_source": "outputs/quant_course_reader_candidate_20261014/notebooks/ch23_cross_sectional_research.ipynb",
+        "this_batch_did_not_create_or_execute": true,
+        "default": "RUN_FRENCH=False; chapterRUN_DIRonly; noCSVPNG/historygallery; separateexecutioncopy/status; Ch22 60+60 simulations versus500+500history; Ch23 analyticVIF not600simulation"
+      },
+      "shared_code_scope": "No shared implementation change; code listings executable AST identity checked; math text translated",
+      "research_gates": "G01/G05/A10-A/A10-A.1/A10-B unchanged; no new real research",
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false
+    },
+    {
+      "chapter": 24,
+      "revision": "BIL13/r2_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part04/chapter24/content.md",
+      "en": "editions/en/chapters/ch24/content.md",
+      "zh_content_sha256": "57d0b215fc1cf7cb82ecb052e46edb96be98e36db65210268173eb2414aa4e07",
+      "en_content_sha256": "7d2348b0297f2c72d3aa604ebc2d61c5bf31ec39bb0faac55d663f97cc2a1f6f",
+      "loom_zh": "loom/sections/a5_ch24.tex",
+      "loom_en": "editions/en/loom/sections/ch24.tex",
+      "loom_zh_sha256": "369de683b744312899f116a5da29bc522a86dc973b023f26b823ec79e371e9bd",
+      "loom_en_sha256": "71ed586c9662d8c908cea20df3dc2422e466ae2d7a67822eed1359592b7b6002",
+      "source_notes": "part04/chapter24/source_notes.md",
+      "stable_ids": {
+        "24-C01": "24-C01",
+        "24-C02": "24-C02",
+        "24-E01": "24-E01",
+        "24-E02": "24-E02",
+        "24-E03": "24-E03",
+        "24-E04": "24-E04",
+        "24-E05": "24-E05",
+        "24-E06": "24-E06",
+        "24-E07": "24-E07",
+        "24-E08": "24-E08",
+        "24-N01": "24-N01",
+        "24-P01": "24-P01",
+        "24-P02": "24-P02",
+        "24-P03": "24-P03"
+      },
+      "loom_ids": [
+        "24-L01",
+        "24-L02",
+        "24-L03",
+        "24-L04",
+        "24-L05",
+        "24-L06",
+        "24-L07"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch24.tex",
+        "sha256": "738bc958194afd4bb3d16529a553f3293f5e939a21008641d9d8071ae93a2bb7"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch24_0.tex",
+        "sha256": "2763a3b43235e9982fb21cdfef95fb8f208f8622bfd8caa54b7edaa7ec2ddee4"
+      },
+      "source_authority": "C12acceptedworkingsources;I3appliedC12E01;BIL13rootpreparationandlocalizedaccuracycorrections;C13currentP4supportreceiptreadonly",
+      "English_figure_language_layer": {
+        "original11_labels_English": true,
+        "shared_candidate_plot_only_repairs": [
+          "figures/a5/ch24_calendar_ic.png"
+        ],
+        "cached_numerics_unchanged": true,
+        "receipt": "build/batches/BIL13/r1_20261015/figure_worker/CORRECTED_FIGURE_RENDER_RECEIPT.json"
+      },
+      "notebook_english_language_layer": {
+        "owner": "BIL23 final bilingual assembly",
+        "status": "pending_translation_and_portable_paths_and_bilingual_execution",
+        "accepted_I3_source": "outputs/quant_course_reader_candidate_20261014/notebooks/ch24_value_factors.ipynb",
+        "created_or_executed_this_batch": false,
+        "default": "RUN_FRENCH=False; chapterRUN_DIRonly; noCSVPNGJSON/historygallery; separateexecutioncopy/status; exactparametersinbody9"
+      },
+      "shared_code_scope": "Codechapter24/25plotlabels_only;nochangednumericalpathorcore;allbodylistingPythonASTpreserved",
+      "research_gates": "G01/G05/A10-A/A10-A.1/A10-B unchanged",
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false
+    },
+    {
+      "chapter": 25,
+      "revision": "BIL13/r1_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part04/chapter25/content.md",
+      "en": "editions/en/chapters/ch25/content.md",
+      "zh_content_sha256": "540ee2dcbe301c6913041ad6732944e0f4251197d5e1cc83dd28d33fa9d34c63",
+      "en_content_sha256": "4971ce70706cf1c574abbb9b67f19d460b5c6f01378f065afaeff3508eb47452",
+      "loom_zh": "loom/sections/a5_ch25.tex",
+      "loom_en": "editions/en/loom/sections/ch25.tex",
+      "loom_zh_sha256": "2252305dffb89e93ae19f3a4d2c339f6e18c3d77c4cadf4037de9919a1814d59",
+      "loom_en_sha256": "4ebd5bc7e12faba279caf5f357deb464872c306d647944b7dcced54b9b489fd1",
+      "source_notes": "part04/chapter25/source_notes.md",
+      "stable_ids": {
+        "25-C01": "25-C01",
+        "25-C02": "25-C02",
+        "25-E01": "25-E01",
+        "25-E02": "25-E02",
+        "25-E03": "25-E03",
+        "25-E04": "25-E04",
+        "25-E05": "25-E05",
+        "25-E06": "25-E06",
+        "25-E07": "25-E07",
+        "25-E08": "25-E08",
+        "25-E09": "25-E09",
+        "25-N01": "25-N01",
+        "25-P01": "25-P01",
+        "25-P02": "25-P02",
+        "25-P03": "25-P03"
+      },
+      "loom_ids": [
+        "25-L01",
+        "25-L02",
+        "25-L03",
+        "25-L04",
+        "25-L05",
+        "25-L06",
+        "25-L07",
+        "25-L08"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch25.tex",
+        "sha256": "78492e17b21fdfefc36bc64d432e833a7f399ba43663c89c42499af438a36488"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch25_0.tex",
+        "sha256": "4e4c34fde296d4a208731076677aa08e667bf23e6c3dfcff670a45d57addb49d"
+      },
+      "source_authority": "C12acceptedworkingsources;I3appliedC12E01;BIL13rootpreparationandlocalizedaccuracycorrections;C13currentP4supportreceiptreadonly",
+      "English_figure_language_layer": {
+        "original11_labels_English": true,
+        "shared_candidate_plot_only_repairs": [
+          "figures/a5/ch25_grid_t.png"
+        ],
+        "cached_numerics_unchanged": true,
+        "receipt": "build/batches/BIL13/r1_20261015/figure_worker/CORRECTED_FIGURE_RENDER_RECEIPT.json"
+      },
+      "notebook_english_language_layer": {
+        "owner": "BIL23 final bilingual assembly",
+        "status": "pending_translation_and_portable_paths_and_bilingual_execution",
+        "accepted_I3_source": "outputs/quant_course_reader_candidate_20261014/notebooks/ch25_momentum.ipynb",
+        "created_or_executed_this_batch": false,
+        "default": "RUN_FRENCH=False; chapterRUN_DIRonly; noCSVPNGJSON/historygallery; separateexecutioncopy/status; exactparametersinbody9"
+      },
+      "shared_code_scope": "Codechapter24/25plotlabels_only;nochangednumericalpathorcore;allbodylistingPythonASTpreserved",
+      "research_gates": "G01/G05/A10-A/A10-A.1/A10-B unchanged",
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false
+    },
+    {
+      "chapter": 26,
+      "revision": "BIL13/r1_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part04/chapter26/content.md",
+      "en": "editions/en/chapters/ch26/content.md",
+      "zh_content_sha256": "bc3b5bd35f04fccc5f0b143003ba0276b877c7cd8d0a9993fcd45a91ea61f873",
+      "en_content_sha256": "0cc19f927577753e76df3aeec97c83e5d0096c9af9e75db05dcd2dcdb2aace5a",
+      "loom_zh": "loom/sections/a5_ch26.tex",
+      "loom_en": "editions/en/loom/sections/ch26.tex",
+      "loom_zh_sha256": "526d5e0928e7144d3c3250e3a3877497d8a9ff8861d35a4efe191234932eb875",
+      "loom_en_sha256": "0fdd4b96c063f1dfc4c246be258031f0f51a9d712fdfb8eb6652d1d17588469f",
+      "source_notes": "part04/chapter26/source_notes.md",
+      "stable_ids": {
+        "26-C01": "26-C01",
+        "26-C02": "26-C02",
+        "26-E01": "26-E01",
+        "26-E02": "26-E02",
+        "26-E03": "26-E03",
+        "26-E04": "26-E04",
+        "26-E05": "26-E05",
+        "26-E06": "26-E06",
+        "26-E07": "26-E07",
+        "26-E08": "26-E08",
+        "26-N01": "26-N01",
+        "26-P01": "26-P01",
+        "26-P02": "26-P02",
+        "26-P03": "26-P03"
+      },
+      "loom_ids": [
+        "26-L01",
+        "26-L02",
+        "26-L03",
+        "26-L04",
+        "26-L05",
+        "26-L06",
+        "26-L07",
+        "26-L08"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch26.tex",
+        "sha256": "2ec0ada91479dd4a15060706cb5605e4442c161301ddd5672886945bd2fc1dee"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch26_0.tex",
+        "sha256": "11fa8901631c9f727de13980224eadf6eaf3f57de76be21485c938dac8e611a0"
+      },
+      "source_authority": "C12acceptedworkingsources;I3appliedC12E01;BIL13rootpreparationandlocalizedaccuracycorrections;C13currentP4supportreceiptreadonly",
+      "English_figure_language_layer": {
+        "original11_labels_English": true,
+        "shared_candidate_plot_only_repairs": [],
+        "cached_numerics_unchanged": true,
+        "receipt": "build/batches/BIL13/r1_20261015/figure_worker/CORRECTED_FIGURE_RENDER_RECEIPT.json"
+      },
+      "notebook_english_language_layer": {
+        "owner": "BIL23 final bilingual assembly",
+        "status": "pending_translation_and_portable_paths_and_bilingual_execution",
+        "accepted_I3_source": "outputs/quant_course_reader_candidate_20261014/notebooks/ch26_quality.ipynb",
+        "created_or_executed_this_batch": false,
+        "default": "RUN_FRENCH=False; chapterRUN_DIRonly; noCSVPNGJSON/historygallery; separateexecutioncopy/status; exactparametersinbody9"
+      },
+      "shared_code_scope": "Codechapter24/25plotlabels_only;nochangednumericalpathorcore;allbodylistingPythonASTpreserved",
+      "research_gates": "G01/G05/A10-A/A10-A.1/A10-B unchanged",
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false
+    },
+    {
+      "chapter": 27,
+      "revision": "BIL14/r2_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part04/chapter27/content.md",
+      "en": "editions/en/chapters/ch27/content.md",
+      "loom_zh": "loom/sections/a5_ch27.tex",
+      "loom_en": "editions/en/loom/sections/ch27.tex",
+      "source_notes": "part04/chapter27/source_notes.md",
+      "zh_content_sha256": "cd22079b07d1b52886fba2491facf4faa65c371bbf5658138d9cbd6caa467124",
+      "en_content_sha256": "d3b7a78ba1c00f9ea2d226f7a2a9abf8e4ecda50dbfe19fea9072ea72e4f732e",
+      "loom_zh_sha256": "730e14fc407c4248ff7cd8032aea75f2b6cc6ce9aead2b4f310ea7e0a60dbce3",
+      "loom_en_sha256": "3974a4695e32c60b8510f0f8521ba104b5b5de90c6e1ed279cbcc06d85c2f5a6",
+      "stable_ids": {
+        "27-C01": "27-C01",
+        "27-C02": "27-C02",
+        "27-E01": "27-E01",
+        "27-E02": "27-E02",
+        "27-E03": "27-E03",
+        "27-E04": "27-E04",
+        "27-E05": "27-E05",
+        "27-E06": "27-E06",
+        "27-E07": "27-E07",
+        "27-E08": "27-E08",
+        "27-N01": "27-N01",
+        "27-P01": "27-P01",
+        "27-P02": "27-P02",
+        "27-P03": "27-P03"
+      },
+      "loom_ids": [
+        "27-L01",
+        "27-L02",
+        "27-L03",
+        "27-L04",
+        "27-L05",
+        "27-L06",
+        "27-L07"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch27.tex",
+        "sha256": "67ebfd8fd357c55485d4da4b1a10c82e8e00c2c66f62c40b0a88a8cb82c77653"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch27_0.tex",
+        "sha256": "38e02f6d50313ac8e7788ea1cc6f40cda4ad8149c8f9f999c4cad88c54183361"
+      },
+      "source_authority": "I3 reader semantics + current accepted C13 sources; 27-L05 applied C13-E01Q/A inherited; BIL14 paired teaching corrections",
+      "shared_figures": "eight existing chapter images byte-exact; captions clarify dynamic collateral, same-month rebounds, single-world recovery and population oracle",
+      "notebook_english_language_layer": {
+        "owner": "BIL23 final bilingual assembly",
+        "status": "pending_translation_and_portable_paths_and_bilingual_execution",
+        "default": "I3 RUN_FRENCH=False; chapterRUN_DIR only; no historical CSVPNGJSON; separate runner copy/status",
+        "executed_this_batch": false
+      },
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false,
+      "r2_overlay": {
+        "previous_revision": "BIL14/r1_20261015",
+        "status": "author_candidate_pending_independent_acceptance",
+        "new_sources": [
+          "zh",
+          "en",
+          "loom_zh",
+          "loom_en"
+        ],
+        "inherited_sources": [
+          "source_notes"
+        ]
+      }
+    },
+    {
+      "chapter": 28,
+      "revision": "BIL14/r2_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part04/chapter28/content.md",
+      "en": "editions/en/chapters/ch28/content.md",
+      "loom_zh": "loom/sections/a5_ch28.tex",
+      "loom_en": "editions/en/loom/sections/ch28.tex",
+      "source_notes": "part04/chapter28/source_notes.md",
+      "zh_content_sha256": "60cbfbda22afa614d134cc1266243f2bc0953fcab4e136b23bb89303767bfc82",
+      "en_content_sha256": "0632d91ac545741919c4d6ac25068512d467f610cca85cf59b0dc4921935bc95",
+      "loom_zh_sha256": "71eab2d190b38600f2a336bf14554a1160ebb8a43f8e55e280c808fa1e156a5d",
+      "loom_en_sha256": "1654bccce06f9f4f2efcadb37b55c76e503270b7fff231bb7cb74036ecdf8269",
+      "stable_ids": {
+        "28-C01": "28-C01",
+        "28-C02": "28-C02",
+        "28-E01": "28-E01",
+        "28-E02": "28-E02",
+        "28-E03": "28-E03",
+        "28-E04": "28-E04",
+        "28-E05": "28-E05",
+        "28-E06": "28-E06",
+        "28-E07": "28-E07",
+        "28-E08": "28-E08",
+        "28-N01": "28-N01",
+        "28-P01": "28-P01",
+        "28-P02": "28-P02",
+        "28-P03": "28-P03"
+      },
+      "loom_ids": [
+        "28-L01",
+        "28-L02",
+        "28-L03",
+        "28-L04",
+        "28-L05",
+        "28-L06",
+        "28-L07"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch28.tex",
+        "sha256": "68414988ff504976a5111340a3b6d275500d191b0ce553b7dbb6b9e4f7aa80f7"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch28_0.tex",
+        "sha256": "59359d12f2ce64138b1e95a16cd2eefc6b3d8d9618e935a6115b6bf53eddb516"
+      },
+      "source_authority": "I3 reader semantics + current accepted C13 sources; 27-L05 applied C13-E01Q/A inherited; BIL14 paired teaching corrections",
+      "shared_figures": "eight existing chapter images byte-exact; captions clarify dynamic collateral, same-month rebounds, single-world recovery and population oracle",
+      "notebook_english_language_layer": {
+        "owner": "BIL23 final bilingual assembly",
+        "status": "pending_translation_and_portable_paths_and_bilingual_execution",
+        "default": "I3 RUN_FRENCH=False; chapterRUN_DIR only; no historical CSVPNGJSON; separate runner copy/status",
+        "executed_this_batch": false
+      },
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false,
+      "r2_overlay": {
+        "previous_revision": "BIL14/r1_20261015",
+        "status": "author_candidate_pending_independent_acceptance",
+        "new_sources": [
+          "zh",
+          "en"
+        ],
+        "inherited_sources": [
+          "source_notes",
+          "loom_zh",
+          "loom_en"
+        ]
+      }
+    },
+    {
+      "chapter": 29,
+      "revision": "BIL15A/r2_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part05/chapter29/content.md",
+      "en": "editions/en/chapters/ch29/content.md",
+      "loom_zh": "loom/sections/a6_ch29.tex",
+      "loom_en": "editions/en/loom/sections/ch29.tex",
+      "source_notes": "part05/chapter29/source_notes.md",
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false,
+      "zh_content_sha256": "ea39219df6bcb21aca25814a9c55838cbb545be731f0f21f672dc9e80d591ed1",
+      "en_content_sha256": "c1d4aee0c68961dde2f4d749506f3e4f6828598b4a323331f7db4ac0b96e4852",
+      "loom_zh_sha256": "5afd3016f9d717566926e7ada632a1201179d0a091c7ff4e4725c400af5101d4",
+      "loom_en_sha256": "d1b82b948063f7c9e24aa9d15f462d7f4a8bcc60f2711b17a4850cb7ea3dc111",
+      "source_notes_sha256": "3871fc34ba0589a73955cb24efe8263472cfc15686e83997c0d5831839ca3544",
+      "stable_ids": {
+        "29-C01": "29-C01",
+        "29-C02": "29-C02",
+        "29-E01": "29-E01",
+        "29-E02": "29-E02",
+        "29-E03": "29-E03",
+        "29-E04": "29-E04",
+        "29-E05": "29-E05",
+        "29-E06": "29-E06",
+        "29-N01": "29-N01",
+        "29-P01": "29-P01",
+        "29-P02": "29-P02",
+        "29-P03": "29-P03",
+        "29-P04": "29-P04"
+      },
+      "loom_ids": [
+        "29-L01",
+        "29-L02",
+        "29-L03",
+        "29-L04",
+        "29-L05",
+        "29-L06"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch29.tex",
+        "sha256": "37112f8579bf61bc2d689cdc5dbce1169234acb74c4b44696703c9266630bb1f"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch29_0.tex",
+        "sha256": "1197a78f8f7a6860996182e712b65e692be30d64dfbc0dd3541616d594439fdb"
+      },
+      "source_authority": "I3 accepted reader semantics + C14-E01/E03 already applied + current C13 P4 support + BIL15A paired teaching repairs; r2 root R01–R08 teaching/route repairs",
+      "shared_figures": "4 original historical PNG byte-identical; complete captions explain clipped cost title and crowded drift legend; no curve regeneration",
+      "notebook_english_language_layer": {
+        "owner": "BIL23 final assembly",
+        "status": "pending chapter29 Notebook translation, portable paths, cold start, global references",
+        "executed_this_batch": false
+      }
+    },
+    {
+      "chapter": 30,
+      "revision": "BIL15B/r2_20261016",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part05/chapter30/content.md",
+      "en": "editions/en/chapters/ch30/content.md",
+      "loom_zh": "loom/sections/a6_ch30.tex",
+      "loom_en": "editions/en/loom/sections/ch30.tex",
+      "source_notes": "part05/chapter30/source_notes.md",
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false,
+      "stable_ids": {
+        "30-C01": "30-C01",
+        "30-C02": "30-C02",
+        "30-C03": "30-C03",
+        "30-E01": "30-E01",
+        "30-E02": "30-E02",
+        "30-E03": "30-E03",
+        "30-E04": "30-E04",
+        "30-E05": "30-E05",
+        "30-P01": "30-P01",
+        "30-P02": "30-P02",
+        "30-P03": "30-P03",
+        "30-P04": "30-P04"
+      },
+      "new_body_ids": [],
+      "loom_ids": [
+        "30-L01",
+        "30-L02",
+        "30-L03",
+        "30-L04",
+        "30-L05"
+      ],
+      "new_loom_ids": [],
+      "english_prerequisites": "Chapters1–29 prose accepted; Notebook language and portable assembly remain BIL23",
+      "source_authority": "accepted I3 + applied C14 including E02 precision guard + root reader notes + bounded paired teaching corrections; source_notes separates historical reading from this batch",
+      "notebook_english_language_layer": {
+        "owner": "BIL23",
+        "executed_this_batch": false,
+        "status": "pending translation, portable paths, assembly and cold start"
+      },
+      "zh_content_sha256": "1437b66583ce4f42aa9cd1555076136770f7013cf5f1cc032f0534eba61419ae",
+      "en_content_sha256": "ab0839050abeee262e70ab05e773b50ebb265c7faaac707b955c8f04a886235e",
+      "loom_zh_sha256": "f1182dcd998ed07038a2fcf6595848cdfbb6495ee38754f1fa5581b03be2464d",
+      "loom_en_sha256": "56fdf86c177e1014f71f0ab55cbc39a037def075029304e663f9d5a83df753da",
+      "source_notes_sha256": "ebb44a0aefbbbab6c93373838fb0da9689e9c54762dd899046c8cc8bf8ba3346",
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch30.tex",
+        "sha256": "4d13f2f45baea42f53ccb3d1b29599c28c95577f2cb5378f0997c2493e3b22f5"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch30_0.tex",
+        "sha256": "d83a0bd858d9c11173946a7557d5998990ea6a81d52f23148b08899d84d93669"
+      },
+      "repair_issues": [
+        "R01"
+      ]
+    },
+    {
+      "chapter": 31,
+      "revision": "BIL15B/r2_20261016",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part05/chapter31/content.md",
+      "en": "editions/en/chapters/ch31/content.md",
+      "loom_zh": "loom/sections/a6_ch31.tex",
+      "loom_en": "editions/en/loom/sections/ch31.tex",
+      "source_notes": "part05/chapter31/source_notes.md",
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false,
+      "stable_ids": {
+        "31-C01": "31-C01",
+        "31-C02": "31-C02",
+        "31-C03": "31-C03",
+        "31-C04": "31-C04",
+        "31-E01": "31-E01",
+        "31-E02": "31-E02",
+        "31-E03": "31-E03",
+        "31-E04": "31-E04",
+        "31-N01": "31-N01",
+        "31-P01": "31-P01",
+        "31-P02": "31-P02",
+        "31-P03": "31-P03",
+        "31-P04": "31-P04"
+      },
+      "new_body_ids": [],
+      "loom_ids": [
+        "31-L01",
+        "31-L02",
+        "31-L03",
+        "31-L04",
+        "31-L05"
+      ],
+      "new_loom_ids": [],
+      "english_prerequisites": "Chapters1–29 prose accepted; Notebook language and portable assembly remain BIL23",
+      "source_authority": "accepted I3 + applied C14 including E02 precision guard + root reader notes + bounded paired teaching corrections; source_notes separates historical reading from this batch",
+      "notebook_english_language_layer": {
+        "owner": "BIL23",
+        "executed_this_batch": false,
+        "status": "pending translation, portable paths, assembly and cold start"
+      },
+      "zh_content_sha256": "828559c144cdaa406a88070084b7a27e8ea13dc041b1e74b2df4f31e4a05472d",
+      "en_content_sha256": "c47c21eb911da8ca1afac2e29c13fce162b7256b4af09cdcc5007df127fe3080",
+      "loom_zh_sha256": "53742a3db05eba259ba7ae17e1686d7120bb64fcfd3891ee04755cd319cfd3a8",
+      "loom_en_sha256": "f0ac3455de66ca060309c65f04606bde9e33b1913b3658e4579d74595f076d12",
+      "source_notes_sha256": "5cfceb7775ea59785d17b5c41dd91cf410d3b8dbca17a5ddb5310890e51dfaf2",
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch31.tex",
+        "sha256": "10980872f985efba275dfe82019a01a525a703c4f22d0d81f54fe1e0209b4786"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch31_0.tex",
+        "sha256": "a2166803ee58782c406e8f158d0d2bb673813a7d6ed0b9fb37d325ddb3bc8e64"
+      },
+      "repair_issues": [
+        "R02"
+      ]
+    },
+    {
+      "chapter": 32,
+      "revision": "BIL16/r2_20261016",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part05/chapter32/content.md",
+      "en": "editions/en/chapters/ch32/content.md",
+      "loom_zh": "loom/sections/a6_ch32.tex",
+      "loom_en": "editions/en/loom/sections/ch32.tex",
+      "source_notes": "part05/chapter32/source_notes.md",
+      "stable_ids": {
+        "32-C01": "32-C01",
+        "32-C02": "32-C02",
+        "32-C03": "32-C03",
+        "32-C04": "32-C04",
+        "32-E01": "32-E01",
+        "32-E02": "32-E02",
+        "32-E03": "32-E03",
+        "32-E04": "32-E04",
+        "32-P01": "32-P01",
+        "32-P02": "32-P02",
+        "32-P03": "32-P03",
+        "32-P04": "32-P04"
+      },
+      "new_body_ids": [],
+      "loom_ids": [
+        "32-L01",
+        "32-L02",
+        "32-L03",
+        "32-L04",
+        "32-L05"
+      ],
+      "new_loom_ids": [],
+      "english_prerequisites": "Chapters 1–31; English Notebooks and portable assembly remain BIL23",
+      "source_authority": "accepted I3 + applied C15-E01/E02 + bounded reader corrections; source_notes preserves historical reading limits",
+      "notebook_english_language_layer": {
+        "owner": "BIL23",
+        "executed_this_batch": false,
+        "status": "pending translation, portable paths, assembly and cold start"
+      },
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false,
+      "zh_content_sha256": "2bb63f2cf3972ab55ba0633de57121e373ddf1b370f405889105f9894fb77758",
+      "en_content_sha256": "67402fe39f76a2d36791ab56c2428e1b3b4aec2f132719d1a1aa94363d1cc7ab",
+      "loom_zh_sha256": "dc13a32351d65cbcf184ab6902db4f42144d9ce9178a9a44683a478f0cde7d70",
+      "loom_en_sha256": "2c235fff4ba5bfde6f59770cff82e04a28b335e801412bf250a7e50e1d76cf16",
+      "source_notes_sha256": "bfa96e7c723eca3539300838d26626760a52643142652db532c51eb0f279677c",
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch32.tex",
+        "sha256": "93a95d8f493c41d839185e908aaa6626fcb760a3f1ce6622155e53f501b1dacc"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch32_0.tex",
+        "sha256": "de74430dc2d6ff745c933a7ee0604982230079a46fe4bd1d2d3d4a9c3865f1e0"
+      },
+      "repair_issues": [
+        "R01"
+      ]
+    },
+    {
+      "chapter": 33,
+      "revision": "BIL16/r2_20261016",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part05/chapter33/content.md",
+      "en": "editions/en/chapters/ch33/content.md",
+      "loom_zh": "loom/sections/a6_ch33.tex",
+      "loom_en": "editions/en/loom/sections/ch33.tex",
+      "source_notes": "part05/chapter33/source_notes.md",
+      "stable_ids": {
+        "33-C01": "33-C01",
+        "33-C02": "33-C02",
+        "33-C03": "33-C03",
+        "33-E01": "33-E01",
+        "33-E02": "33-E02",
+        "33-E03": "33-E03",
+        "33-E04": "33-E04",
+        "33-E05": "33-E05",
+        "33-P01": "33-P01",
+        "33-P02": "33-P02",
+        "33-P03": "33-P03",
+        "33-P04": "33-P04",
+        "33-P05": "33-P05"
+      },
+      "new_body_ids": [],
+      "loom_ids": [
+        "33-L01",
+        "33-L02",
+        "33-L03",
+        "33-L04",
+        "33-L05"
+      ],
+      "new_loom_ids": [],
+      "english_prerequisites": "Chapters 1–31; English Notebooks and portable assembly remain BIL23",
+      "source_authority": "accepted I3 + applied C15-E01/E02 + bounded reader corrections; source_notes preserves historical reading limits",
+      "notebook_english_language_layer": {
+        "owner": "BIL23",
+        "executed_this_batch": false,
+        "status": "pending translation, portable paths, assembly and cold start"
+      },
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false,
+      "zh_content_sha256": "01e180943dfe3aa1288eb0f5226704b4e7927bfa2435704c757258a7f26c2ce5",
+      "en_content_sha256": "92878de7d9d1e3e36f3712bda9d7759dfbf8d029e78dd32365a6e76448801e80",
+      "loom_zh_sha256": "a636c2a3ad1248cf8aefc8396d19a82c5405c467511f2f51af4140bd7ada7b9d",
+      "loom_en_sha256": "23c1520892d7bd6e32c537ea316e12698e993a4c9558eeeb830d4b7b7327a539",
+      "source_notes_sha256": "a770fb234571a39e911f91f4a124e13826f25d998943a754592fb4174395f570",
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch33.tex",
+        "sha256": "fbbe395c9bfe114fec2b4ff008be508a22c735ea6e46ef254ec2a0dd85286e85"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch33_0.tex",
+        "sha256": "d097ba26bf82771c4820761a1a318d12d447fdf2a2725cac46d68400cadd3708"
+      },
+      "repair_issues": [
+        "R02",
+        "R03_local_build_layout"
+      ]
+    },
+    {
+      "chapter": 34,
+      "revision": "BIL17A/r2_20261016",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part06/chapter34/content.md",
+      "en": "editions/en/chapters/ch34/content.md",
+      "loom_zh": "loom/sections/chapter34.tex",
+      "loom_en": "editions/en/loom/sections/ch34.tex",
+      "source_notes": "part06/chapter34/source_notes.md",
+      "stable_ids": {
+        "34-C01": "34-C01",
+        "34-C02": "34-C02",
+        "34-E01": "34-E01",
+        "34-E02": "34-E02",
+        "34-E03": "34-E03",
+        "34-E04": "34-E04",
+        "34-P01": "34-P01",
+        "34-P02": "34-P02"
+      },
+      "new_body_ids": [],
+      "loom_ids": [
+        "34-L01",
+        "34-L02",
+        "34-L03",
+        "34-L04",
+        "34-L05",
+        "34-L06",
+        "34-T01"
+      ],
+      "new_loom_ids": [],
+      "source_authority": "accepted I3 and C16-E01–05 over stale working Markdown; bounded reader corrections; historical reading limits retained",
+      "notebook_english_language_layer": {
+        "owner": "BIL23",
+        "executed_this_batch": false,
+        "status": "pending English language layer, portable assembly and cold start"
+      },
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false,
+      "loom_zh_sha256": "e69584e89a82ee344db83ba0880c22f4fcf5d5476ed5ef559e7e30cf554c6128",
+      "loom_en_sha256": "304a6d20c49eb2d125b732cab00f3319c62dd74047b9402a442e2386428f810f",
+      "source_notes_sha256": "a31348ed1fa7c11841e1aecdc16bd21510ae3fd5c8e5ed596c895db77f69ce9b",
+      "zh_content_sha256": "deed9bd73e5cf4d461e2a552bbd1ed8f11ede357472860a3d6344dfb4c0767bf",
+      "en_content_sha256": "a6b3f52f9fdd75a39c4bf611a0dc06c2ddbf43b3e256d777ebe444c1212edb6d",
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch34.tex",
+        "sha256": "600897156cbc41327a2e2383bab63a5084525a8f44c4994ac4cdf0b1b5cd1c69"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch34_0.tex",
+        "sha256": "b3c798dc148567423b84fc57fa6cd1c7325d088739e0ee965944eff25a87db76"
+      }
+    },
+    {
+      "chapter": 35,
+      "revision": "BIL17A/r2_20261016",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part06/chapter35/content.md",
+      "en": "editions/en/chapters/ch35/content.md",
+      "loom_zh": "loom/sections/chapter35.tex",
+      "loom_en": "editions/en/loom/sections/ch35.tex",
+      "source_notes": "part06/chapter35/source_notes.md",
+      "stable_ids": {
+        "35-C01": "35-C01",
+        "35-C02": "35-C02",
+        "35-E01": "35-E01",
+        "35-E02": "35-E02",
+        "35-E03": "35-E03",
+        "35-E04": "35-E04",
+        "35-P01": "35-P01",
+        "35-P02": "35-P02",
+        "35-P03": "35-P03"
+      },
+      "new_body_ids": [],
+      "loom_ids": [
+        "35-L01",
+        "35-L02",
+        "35-L03",
+        "35-L04",
+        "35-L05",
+        "35-L06",
+        "35-L07",
+        "35-T01"
+      ],
+      "new_loom_ids": [],
+      "source_authority": "accepted I3 and C16-E01–05 over stale working Markdown; bounded reader corrections; historical reading limits retained",
+      "notebook_english_language_layer": {
+        "owner": "BIL23",
+        "executed_this_batch": false,
+        "status": "pending English language layer, portable assembly and cold start"
+      },
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false,
+      "loom_zh_sha256": "066f461edbdb8f493401e7a5f657f3563da74e727ee8bf16df17c022ec7644e5",
+      "loom_en_sha256": "a6a2f9d1366c492a5ea45e265a25d0835e8a6773b1f44f582ebf59a721e06261",
+      "source_notes_sha256": "f1c48d7f8ad6ff7c66d05cec2c934ac367cdb47df66428c57519a8c59bc8c41d",
+      "zh_content_sha256": "bb1bb59bbd529e22c5981f67700befd2f0e33478489a2051162496f2e0ed0d51",
+      "en_content_sha256": "44cdd4fa4e661c91d8b00795f981dcda37a1b3cbff853c80404b2d7526a03f32",
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch35.tex",
+        "sha256": "4aee039bde3c67a0bb10d9fa7d19e6c0c135485e672050de0bccb6ab65e65238"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch35_0.tex",
+        "sha256": "a214242fb214a0e19b86921f841af53c04a626a2cc3ae1a6130dda6b7f502c31"
+      }
+    },
+    {
+      "chapter": 36,
+      "revision": "BIL17A/r2_20261016",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part06/chapter36/content.md",
+      "en": "editions/en/chapters/ch36/content.md",
+      "loom_zh": "loom/sections/chapter36.tex",
+      "loom_en": "editions/en/loom/sections/ch36.tex",
+      "source_notes": "part06/chapter36/source_notes.md",
+      "stable_ids": {
+        "36-C01": "36-C01",
+        "36-C02": "36-C02",
+        "36-E01": "36-E01",
+        "36-E02": "36-E02",
+        "36-E03": "36-E03",
+        "36-E04": "36-E04",
+        "36-E05": "36-E05",
+        "36-P01": "36-P01",
+        "36-P02": "36-P02"
+      },
+      "new_body_ids": [],
+      "loom_ids": [
+        "36-L01",
+        "36-L02",
+        "36-L03",
+        "36-L04",
+        "36-L05",
+        "36-L06",
+        "36-L07",
+        "36-T01"
+      ],
+      "new_loom_ids": [],
+      "source_authority": "accepted I3 and C16-E01–05 over stale working Markdown; bounded reader corrections; historical reading limits retained",
+      "notebook_english_language_layer": {
+        "owner": "BIL23",
+        "executed_this_batch": false,
+        "status": "pending English language layer, portable assembly and cold start"
+      },
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false,
+      "loom_zh_sha256": "6658ea78eb7097cb153c60d0901721aa7dfa201cfe62deed2807be84892daa47",
+      "loom_en_sha256": "70294a9fed2c21440e5d73368ed416787f81faed417bd3a2e7ee5e415330386a",
+      "source_notes_sha256": "60b49dd74a8e9450bc43147223252549480342b5ab40456cac56084cf1c9c786",
+      "zh_content_sha256": "475cda649836ac72bacca54bafe25ab31436e93f48a7f8e7bcbe47acf6def570",
+      "en_content_sha256": "535966f31f0fdc29c424bce49c5b94bf8e934b06d6089655676c1518ccd93f19",
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch36.tex",
+        "sha256": "ce8ae9eea0dd3c8bcb62624f0c39a0546cc27b2fcadb9e2f903718e485fd61e3"
+      },
+      "accepted_I3_loom": {
+        "path": "outputs/quant_course_reader_candidate_20261014/loom/sections/ch36_0.tex",
+        "sha256": "b6b80599bba8598bf6e28e51073f3408448c116da208e5500c2004b1a75de2a6"
+      }
+    },
+    {
+      "chapter": 37,
+      "revision": "BIL18/r2_20261016",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part07/chapter37/content.md",
+      "en": "editions/en/chapters/ch37/content.md",
+      "loom_zh": "loom/sections/chapter37.tex",
+      "loom_en": "editions/en/loom/sections/ch37.tex",
+      "source_notes": "part07/chapter37/source_notes.md",
+      "zh_content_sha256": "0657f310cf09345432e0ef3175e37cd3ffedeed9e4f73ba645f5c8589900545e",
+      "en_content_sha256": "ad0b417ef32a04b3d6c14ea7f565bf7790954f4d4b4001513d3d22cae0f9d892",
+      "loom_zh_sha256": "5c95fa091e4e6815b36c1c68708399fbf728dc59cfc5152879b7443b06b3008b",
+      "loom_en_sha256": "f3c0616c9a3b5a39022dabc1427a2a63da6c43c91dfd4618bf2e70156c660a04",
+      "source_notes_sha256": "2e28e04e8fb644a0960ad00239174235438e7aacd71cf639c195afb780f938e7",
+      "stable_ids": {
+        "37-E01": "37-E01",
+        "37-E02": "37-E02",
+        "37-E03": "37-E03",
+        "37-E04": "37-E04",
+        "37-E05": "37-E05",
+        "37-E06": "37-E06",
+        "37-E07": "37-E07",
+        "37-E08": "37-E08",
+        "37-E09": "37-E09",
+        "37-T01": "37-T01",
+        "37-P01": "37-P01",
+        "37-P02": "37-P02",
+        "37-P03": "37-P03",
+        "37-C01": "37-C01",
+        "37-C02": "37-C02"
+      },
+      "loom_ids": [
+        "37-L01",
+        "37-L02",
+        "37-L03",
+        "37-L04",
+        "37-L05",
+        "37-L06",
+        "37-T01"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch37.tex",
+        "sha256": "21331cb4b700bdb3e551fa03098813dc9be0d71c34d530edb911f2a71d7ccb0a"
+      },
+      "source_authority": "BIL18 root reader notes, applied I3 C17 aftertexts, PRE_FREEZE_REVIEW_01-06 (PF01-PF12), and ROOT_R1_REPAIR_BRIEF.md; historical numeric evidence preserved",
+      "notebook_english_language_layer": {
+        "owner": "BIL23",
+        "executed_this_batch": false,
+        "status": "pending"
+      },
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false
+    },
+    {
+      "chapter": 38,
+      "revision": "BIL18/r2_20261016",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part07/chapter38/content.md",
+      "en": "editions/en/chapters/ch38/content.md",
+      "loom_zh": "loom/sections/chapter38.tex",
+      "loom_en": "editions/en/loom/sections/ch38.tex",
+      "source_notes": "part07/chapter38/source_notes.md",
+      "zh_content_sha256": "3e0283b2ea5801efaf765ad1aeb35f9c398c8f3f73cc18927dc77d37fa3e4471",
+      "en_content_sha256": "a1f6bd81b57dd21091c13cf7d5e52aa77f5f1fd1b9a93a8b2f0c5e71cc1ee3fc",
+      "loom_zh_sha256": "c935dfcad7f67536faf54ded54ccc4b0fd5dcb499034d8cd27c44d865054531a",
+      "loom_en_sha256": "e96a387da123ae94e4ff276597c8d8716c0c8b9f33974785c4126bb1a463b9f2",
+      "source_notes_sha256": "896cb0d90dbd9e9b9e834346b4dd1c2eec2132e755c325fe026e5f0d04bfcccb",
+      "stable_ids": {
+        "38-E01": "38-E01",
+        "38-E02": "38-E02",
+        "38-E03": "38-E03",
+        "38-E04": "38-E04",
+        "38-E05": "38-E05",
+        "38-E06": "38-E06",
+        "38-E07": "38-E07",
+        "38-E08": "38-E08",
+        "38-T01": "38-T01",
+        "38-P01": "38-P01",
+        "38-P02": "38-P02",
+        "38-P03": "38-P03",
+        "38-C01": "38-C01",
+        "38-C02": "38-C02"
+      },
+      "loom_ids": [
+        "38-L01",
+        "38-L02",
+        "38-L03",
+        "38-L04",
+        "38-L05",
+        "38-L06",
+        "38-T01"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch38.tex",
+        "sha256": "f9062848c75c4829a77e4bc3b409100b36ae0a4bafe923cf067f81550251fc8b"
+      },
+      "source_authority": "BIL18 root reader notes, applied I3 C17 aftertexts, PRE_FREEZE_REVIEW_01-06 (PF01-PF12), and ROOT_R1_REPAIR_BRIEF.md; historical numeric evidence preserved",
+      "notebook_english_language_layer": {
+        "owner": "BIL23",
+        "executed_this_batch": false,
+        "status": "pending"
+      },
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false
+    },
+    {
+      "chapter": 39,
+      "revision": "BIL18/r2_20261016",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part07/chapter39/content.md",
+      "en": "editions/en/chapters/ch39/content.md",
+      "loom_zh": "loom/sections/chapter39.tex",
+      "loom_en": "editions/en/loom/sections/ch39.tex",
+      "source_notes": "part07/chapter39/source_notes.md",
+      "zh_content_sha256": "7a263ae7d7ccde7e19e0274d0a43629de6c42352d3d5f48fe62a563e8f6fe8a0",
+      "en_content_sha256": "54657fb53d511845e147124564214adeff1fd4804cea00a19d8bf09402153f52",
+      "loom_zh_sha256": "7cc25622200292c357a5fcf8180284bc742dc6edf5c59dd382c9fa26fde925e3",
+      "loom_en_sha256": "55eec64af330133e07295275425541f8a8418617fd5937fe05addfaae00a16fe",
+      "source_notes_sha256": "ccf0acfc45d3e3d96358e5b2bf10720988ca4621172881adbb4c7531f2e55062",
+      "stable_ids": {
+        "39-E01": "39-E01",
+        "39-E02": "39-E02",
+        "39-E03": "39-E03",
+        "39-E04": "39-E04",
+        "39-E05": "39-E05",
+        "39-E06": "39-E06",
+        "39-E07": "39-E07",
+        "39-E08": "39-E08",
+        "39-T01": "39-T01",
+        "39-T02": "39-T02",
+        "39-P01": "39-P01",
+        "39-P02": "39-P02",
+        "39-C01": "39-C01",
+        "39-C02": "39-C02",
+        "39-C03": "39-C03"
+      },
+      "loom_ids": [
+        "39-L01",
+        "39-L02",
+        "39-L03",
+        "39-L04",
+        "39-L05",
+        "39-L06",
+        "39-T01",
+        "39-T02"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch39.tex",
+        "sha256": "3e300171596295ac6c9e55b8ea9d90a6e9e68c61c643af56a2193faa83551645"
+      },
+      "source_authority": "BIL18 root reader notes, applied I3 C17 aftertexts, PRE_FREEZE_REVIEW_01-06 (PF01-PF12), and ROOT_R1_REPAIR_BRIEF.md; historical numeric evidence preserved",
+      "notebook_english_language_layer": {
+        "owner": "BIL23",
+        "executed_this_batch": false,
+        "status": "pending"
+      },
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false
+    },
+    {
+      "chapter": 40,
+      "revision": "BIL19/r1_20261016",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part07/chapter40/content.md",
+      "en": "editions/en/chapters/ch40/content.md",
+      "loom_zh": "loom/sections/chapter40.tex",
+      "loom_en": "editions/en/loom/sections/ch40.tex",
+      "source_notes": "part07/chapter40/source_notes.md",
+      "zh_content_sha256": "2776891f412360d7c90455fb7b00484dcb9222913dfc1593dc29f7623c2624ec",
+      "en_content_sha256": "d8790d4119d50c088905f05f54d5ba38f2ea81b11dcf8d87d76a41bc5f751160",
+      "loom_zh_sha256": "fabc3d3f4df21f070bf5a06c8f6073229604144aa0925acf3e24f05ffa9d97d9",
+      "loom_en_sha256": "6ab3fc4a1e9a5f14cd7fa2b2342bb580b6dd8448d80e34cfd92807b43cba3da4",
+      "source_notes_sha256": "bcf813c26917e3bc77cc361469728e624160e65e8e2d0d027e70253f878856c9",
+      "stable_ids": {
+        "40-C01": "40-C01",
+        "40-C02": "40-C02",
+        "40-E01": "40-E01",
+        "40-E02": "40-E02",
+        "40-E03": "40-E03",
+        "40-E04": "40-E04",
+        "40-E05": "40-E05",
+        "40-E06": "40-E06",
+        "40-E07": "40-E07",
+        "40-E08": "40-E08",
+        "40-E09": "40-E09",
+        "40-P01": "40-P01",
+        "40-P02": "40-P02",
+        "40-P03": "40-P03"
+      },
+      "loom_ids": [
+        "40-L01",
+        "40-L02",
+        "40-L03",
+        "40-L04",
+        "40-L05",
+        "40-L06"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch40.tex",
+        "bytes": 85967,
+        "sha256": "04783f1991e3936044b1a520299f1a822672563070cc955c5e36c5f762c1ff3b"
+      },
+      "source_authority": "BIL19 adopted scope and 781 bound inputs; C18/A8-B/I3 accepted semantics; ROOT_READER_NOTES, PRE_FREEZE_REVIEW_01-06 and Sol integration; historical runs not repeated",
+      "notebook_english_language_layer": {
+        "owner": "BIL23",
+        "executed_this_batch": false,
+        "status": "pending"
+      },
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false
+    },
+    {
+      "chapter": 41,
+      "revision": "BIL19/r1_20261016",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part07/chapter41/content.md",
+      "en": "editions/en/chapters/ch41/content.md",
+      "loom_zh": "loom/sections/chapter41.tex",
+      "loom_en": "editions/en/loom/sections/ch41.tex",
+      "source_notes": "part07/chapter41/source_notes.md",
+      "zh_content_sha256": "4aa8e304202cc1a72f26a71e41255f005a3079ad62bc5cd1114fd3fb5fe93cef",
+      "en_content_sha256": "28921985afac5c7868ed6bddbedfd5ce40481ee1c861d4a4a77c4e380dcf0411",
+      "loom_zh_sha256": "30bb086e9928a355c92b183b2249404e9650cb074024fc0275eb99afb823d730",
+      "loom_en_sha256": "b35ee22ec85ed5f65d7480f9e27a0d1071e3cc68ffb1de376ddbf7cbc387282e",
+      "source_notes_sha256": "e7b3b314112fdca78039d5c49201ff34bd1e8e10030cd19c794196e1376dfd9f",
+      "stable_ids": {
+        "41-C01": "41-C01",
+        "41-C02": "41-C02",
+        "41-E01": "41-E01",
+        "41-E02": "41-E02",
+        "41-E03": "41-E03",
+        "41-E04": "41-E04",
+        "41-E05": "41-E05",
+        "41-E06": "41-E06",
+        "41-E07": "41-E07",
+        "41-E08": "41-E08",
+        "41-P01": "41-P01",
+        "41-P02": "41-P02",
+        "41-P03": "41-P03"
+      },
+      "loom_ids": [
+        "41-L01",
+        "41-L02",
+        "41-L03",
+        "41-L04",
+        "41-L05",
+        "41-L06"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "accepted_I3_body": {
+        "path": "outputs/quant_course_reader_candidate_20261014/body/sections/ch41.tex",
+        "bytes": 66126,
+        "sha256": "f9312ccdddf9c88a5e9cc54b5c9df1d4ddaf76ef1cb48710c2339a4a741072c0"
+      },
+      "source_authority": "BIL19 adopted scope and 781 bound inputs; C18/A8-B/I3 accepted semantics; ROOT_READER_NOTES, PRE_FREEZE_REVIEW_01-06 and Sol integration; historical runs not repeated",
+      "notebook_english_language_layer": {
+        "owner": "BIL23",
+        "executed_this_batch": false,
+        "status": "pending"
+      },
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false
+    },
+    {
+      "chapter": 42,
+      "title_zh": "第42章 深度学习基础与量化应用 (Deep Learning Foundations & Quantitative Applications)",
+      "title_en": "Chapter 42: Deep Learning Foundations and Quantitative Applications",
+      "revision": "BIL20/r1_20261016",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part07/chapter42/content.md",
+      "en": "editions/en/chapters/ch42/content.md",
+      "loom_zh": "loom/sections/chapter42.tex",
+      "loom_en": "editions/en/loom/sections/ch42.tex",
+      "source_notes": "part07/chapter42/source_notes.md",
+      "zh_content_sha256": "9e514de585964034a0a4efdf1824c1334f1926260b5734e32e4540b569c87928",
+      "en_content_sha256": "f453a009d749c72d93eee7e6da9d49136e7e67cd6e8b60fc6dce0980cd82b6e8",
+      "loom_zh_sha256": "44ac33ec12ea4955458dedbd633b9d7ab0124d6158c94ee1217fd996a7e79e7e",
+      "loom_en_sha256": "cefe5908def4b3ae34ba720925d0274aeb2ed3aa33dbdb034424bb82ca1a646b",
+      "source_notes_sha256": "81ac8dd891350aac065649a2f8fc3e0110a4a6df2eb165e043dbd90402d394f2",
+      "stable_ids": {
+        "42-C01": "42-C01",
+        "42-C02": "42-C02",
+        "42-E01": "42-E01",
+        "42-E02": "42-E02",
+        "42-E03": "42-E03",
+        "42-E04": "42-E04",
+        "42-E05": "42-E05",
+        "42-E06": "42-E06",
+        "42-P01": "42-P01",
+        "42-P02": "42-P02",
+        "42-P03": "42-P03"
+      },
+      "loom_ids": [
+        "42-L01",
+        "42-L02",
+        "42-L03",
+        "42-L04",
+        "42-L05",
+        "42-L06",
+        "42-L07",
+        "42-L08"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "source_authority": "790 main bound inputs plus 2 historical-protocol supplement inputs (792 total); I3/C19 accepted semantics; BIL19 predecessor receipt; preparation notes; applicable root reviews01-05; SOURCE_AUTHORITY_MAPPING.json; full author integration; inherited historical evidence, no course rerun",
+      "notebook_english_language_layer": {
+        "owner": "BIL23",
+        "executed_this_batch": false,
+        "status": "pending"
+      },
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false
+    },
+    {
+      "chapter": 43,
+      "title_zh": "第43章 贝叶斯推断、因果识别与非结构化数据（Bayesian Inference, Causal Identification, and Alternative Text Data）",
+      "title_en": "Chapter 43: Bayesian Inference, Causal Identification, and Alternative Text Data",
+      "revision": "BIL20/r1_20261016",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part07/chapter43/content.md",
+      "en": "editions/en/chapters/ch43/content.md",
+      "loom_zh": "loom/sections/chapter43.tex",
+      "loom_en": "editions/en/loom/sections/ch43.tex",
+      "source_notes": "part07/chapter43/source_notes.md",
+      "zh_content_sha256": "4d32f819a0f2f2093a8fcd14ba24596ce93988bf26ab39d8187b0e2b6f006be7",
+      "en_content_sha256": "4e7a6bb98c280e9ec43a69b54d3294c6bee671c74fc2b072eeb2cff5087f2b53",
+      "loom_zh_sha256": "2c1348d1f3e85256e28179a22731e3a8728a5df5413d342af48353bb7188b19d",
+      "loom_en_sha256": "91ebd0b2bd6019fced70da888268fc621ea3702c58b0bc53e4014e871752d369",
+      "source_notes_sha256": "b1124ca489dba21286a7f045ceded79434dc7116564374faed4dc74f7c186be2",
+      "stable_ids": {
+        "43-C01": "43-C01",
+        "43-C02": "43-C02",
+        "43-C03": "43-C03",
+        "43-E01": "43-E01",
+        "43-E02": "43-E02",
+        "43-E03": "43-E03",
+        "43-E04": "43-E04",
+        "43-E05": "43-E05",
+        "43-E06": "43-E06",
+        "43-P01": "43-P01",
+        "43-P02": "43-P02",
+        "43-P03": "43-P03",
+        "43-P04": "43-P04"
+      },
+      "loom_ids": [
+        "43-L01",
+        "43-L02",
+        "43-L03",
+        "43-L04",
+        "43-L05",
+        "43-L06",
+        "43-L07",
+        "43-L08"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "source_authority": "790 main bound inputs plus 2 historical-protocol supplement inputs (792 total); I3/C19 accepted semantics; BIL19 predecessor receipt; preparation notes; applicable root reviews01-05; SOURCE_AUTHORITY_MAPPING.json; full author integration; inherited historical evidence, no course rerun",
+      "notebook_english_language_layer": {
+        "owner": "BIL23",
+        "executed_this_batch": false,
+        "status": "pending"
+      },
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false
+    },
+    {
+      "chapter": 44,
+      "revision": "BIL21/r1_20261016",
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh": "part07/chapter44/content.md",
+      "en": "editions/en/chapters/ch44/content.md",
+      "loom_zh": "loom/sections/chapter44.tex",
+      "loom_en": "editions/en/loom/sections/ch44.tex",
+      "source_notes": "part07/chapter44/source_notes.md",
+      "zh_content_sha256": "531584e2f77092702f81920959181c795168a30d26cfd0fe66ffb20600223ab5",
+      "en_content_sha256": "be74e3d10af6a28a10b0c91a70770cf4563fd5bfce208bc4a86b5a2740d48b22",
+      "loom_zh_sha256": "f46fd48fdc9b4cf3c239be536dfe1ed62c171ad78bcb5ce1265fc0853f216ae9",
+      "loom_en_sha256": "d9036990085bdd508da276e5fb30332b70cf7cd6caed6071109450379dd9974e",
+      "source_notes_sha256": "5e91b884968ab2bcc6862dc0492ab7b296f365a5bb62942df3971600484156a2",
+      "title_zh": "第44章 — 随机微积分与衍生品（Stochastic Calculus and Derivatives）",
+      "title_en": "Chapter 44 — Stochastic Calculus and Derivatives",
+      "stable_ids": {
+        "44-C01": "44-C01",
+        "44-C02": "44-C02",
+        "44-E01": "44-E01",
+        "44-E02": "44-E02",
+        "44-E03": "44-E03",
+        "44-E04": "44-E04",
+        "44-E05": "44-E05",
+        "44-E06": "44-E06",
+        "44-E07": "44-E07",
+        "44-E08": "44-E08",
+        "44-E09": "44-E09",
+        "44-E10": "44-E10",
+        "44-E11": "44-E11",
+        "44-E12": "44-E12",
+        "44-P01": "44-P01",
+        "44-P02": "44-P02",
+        "44-P03": "44-P03",
+        "44-P04": "44-P04",
+        "44-P05": "44-P05"
+      },
+      "loom_ids": [
+        "44-L01",
+        "44-L02",
+        "44-L03",
+        "44-L04",
+        "44-L05",
+        "44-L06",
+        "44-L07",
+        "44-L08",
+        "44-L09",
+        "44-L10",
+        "44-L11",
+        "44-L12"
+      ],
+      "new_body_ids": [],
+      "new_loom_ids": [],
+      "source_authority": "754 bound inputs; accepted I3/C20 semantics and BIL20 receipt; source notes retained unchanged; SOURCE_AUTHORITY_MAPPING.json",
+      "notebook_english_language_layer": {
+        "owner": "BIL23",
+        "executed_this_batch": false,
+        "status": "pending; fresh 1x12 path is not CLI 256x3276 replay"
+      },
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false
+    },
+    {
+      "chapter": 45,
+      "revision": "BIL22/r1_20261016",
+      "zh": "part07/chapter45/content.md",
+      "en": "editions/en/chapters/ch45/content.md",
+      "loom_zh": [
+        "loom/sections/chapter45.tex",
+        "loom/sections/chapter45_answers.tex"
+      ],
+      "loom_en": [
+        "editions/en/loom/sections/ch45.tex",
+        "editions/en/loom/sections/ch45_answers.tex"
+      ],
+      "stable_body_ids": [
+        "45-E01",
+        "45-E02",
+        "45-E03",
+        "45-E04",
+        "45-E05",
+        "45-E06",
+        "45-P01",
+        "45-P02",
+        "45-P03",
+        "45-P04",
+        "45-C01",
+        "45-C02"
+      ],
+      "stable_loom_ids": [
+        "45-L01",
+        "45-L02",
+        "45-L03",
+        "45-L04",
+        "45-L05",
+        "45-L06",
+        "45-L07",
+        "45-L08",
+        "45-L09",
+        "45-L10",
+        "45-L11",
+        "45-L12",
+        "45-L13",
+        "45-L14",
+        "45-L15",
+        "45-L16",
+        "45-L17",
+        "45-L18"
+      ],
+      "status": "author_candidate_pending_independent_acceptance",
+      "zh_content_sha256": "ca07fcb86598643b89b72c245da092616eb3ac89fdc02d59e32ad363b4549ca0",
+      "en_content_sha256": "a3a687dd63d86172167bf78d9317a61bc408b62c43ebc674bd32a836cc43afd7"
+    }
+  ],
+  "appended_revision": "BIL04/r1_20261014",
+  "BIL05_append": {
+    "revision": "BIL05/r1_20261014",
+    "prior_top_level_fields_preserved": true,
+    "scope_extension": "qa/bilingual_revision/BIL05/r1_20261014/SCOPE_EXTENSION_HC3.json"
+  },
+  "projects": [
+    {
+      "project": "project01",
+      "revision": "BIL06/r1_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "documents": [
+        {
+          "zh": {
+            "path": "projects/project01/README.md",
+            "sha256": "9ed2e4b604c0223af8631c303b76639eaa8072c3925d43c827f59831df5e4115",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project01/README.md",
+            "sha256": "612ae0812e1734c2ea2191bfc0474e523be80b7930740e22b0fc10e070bb5090",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project01/READER_GUIDE.md",
+            "sha256": "2d33072439f3df6842750c66caaf09a7b8a63c609b28cd3e6c9af530189ebdbb",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project01/READER_GUIDE.md",
+            "sha256": "3db101c119f7f6ce13e201ebd694bb2bbd88e934cfda29ca93c688462d5f2175",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project01/data_dictionary.md",
+            "sha256": "6b7d85e398f9f838ea3b35a11d1b370d004eceb5aca0f1cf45de4cb84f6217c3",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project01/data_dictionary.md",
+            "sha256": "3250f3e0c623f820f2756a7af15a7f72e3832ac4a76c2519d0f427eb64324d0e",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project01/research_report/report.md",
+            "sha256": "4f1cf46082338d0a39d03276dc484a7b8ebacb46ddcb30db750242841eadefab",
+            "source_role": "read_only_original"
+          },
+          "en": {
+            "path": "editions/en/projects/project01/research_report/report.md",
+            "sha256": "b61d532d8a82186684612c440c27fb65c36a9a51bf70fca9eeda8a03a83a8ccb",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project01/exercises.md",
+            "sha256": "4190e2f55c41b41439b304e4f07d21f1af81678ecfc63e4d724a5ab131e9a048",
+            "source_role": "read_only_original"
+          },
+          "en": {
+            "path": "editions/en/projects/project01/exercises.md",
+            "sha256": "d47096ae0c30caa78c16f4a40d061ca3e25d7e6774931a86f9996f3964fcd835",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project01/solutions.md",
+            "sha256": "42c6cb9304c4bd882c39e25d76d46fb67a8debdeb82d52b5c3b2016fab7b50d3",
+            "source_role": "read_only_original"
+          },
+          "en": {
+            "path": "editions/en/projects/project01/solutions.md",
+            "sha256": "927dacf59294cad1ec0d1789905a7a909510072811a1dabb835f83e6fd003ed0",
+            "source_role": "candidate"
+          }
+        }
+      ],
+      "notebook_language_projections": {
+        "zh": {
+          "path": "editions/zh/projects/project01/notebooks/project01_financial_data_analysis.ipynb",
+          "sha256": "5daf55d778c5591d80381681513d689b91403780243db1e90744ada763d596de",
+          "source_role": "candidate"
+        },
+        "en": {
+          "path": "editions/en/projects/project01/notebooks/project01_financial_data_analysis.ipynb",
+          "sha256": "d75df2e7a489ab98975fe6c9b3146cbe2e457876f1fdb47c954f79b3f367b231",
+          "source_role": "candidate"
+        },
+        "baseline": {
+          "path": "outputs/quant_course_reader_candidate_20261014/projects/project01/notebooks/project01_financial_data_analysis.ipynb",
+          "sha256": "063e778dbdeb863366bc6c5dc62e0f1417f86af01b426cfb6c8cded1674cb385",
+          "source_role": "read_only_original"
+        },
+        "markdown_cells": 12,
+        "code_cells": 8,
+        "code_outputs_metadata_identical": true,
+        "executed_in_this_batch": false
+      },
+      "historical_figure_language_layer": {
+        "owner": "BIL23 root final bilingual assembly",
+        "status": "retained_original_bitmap_pending_English_label_projection",
+        "source": "figures/projects/project01_dashboard.png",
+        "scope": "historical full report retains original plot; English report/guide explain all four axes, historical data identity and limitations; no plot regenerated"
+      },
+      "shared_numerical_sources": [
+        {
+          "path": "src/quant_course/performance.py",
+          "sha256": "bac21f79acbdd3e05a29b446e81c55aa1b9b1e5f41406c020cb8eb5f30364975",
+          "source_role": "read_only_original"
+        },
+        {
+          "path": "src/quant_course/market_data.py",
+          "sha256": "fe41c0011238777fd4957abf634b1286ff699d5da47776205d32544ba45d00bb",
+          "source_role": "read_only_original"
+        },
+        {
+          "path": "outputs/quant_course_reader_candidate_20261014/projects/project01/project01_analysis.py",
+          "sha256": "cca4b382fe4ab961654132bd52575e28dd3e355abcd58cc9ce97d37471a31cbd",
+          "source_role": "read_only_original"
+        }
+      ],
+      "history": "October5 French snapshot; exercises2/5 use retained full historical report; other exercises use declared own inputs",
+      "default": "Seed101 constructed180-month panel, fixedRF0.001; accepted I3 Notebook; French branch skipped",
+      "final_assembly": {
+        "owner": "BIL23 root final bilingual assembly",
+        "current_default_package_path": "projects/project01/notebooks/project01_financial_data_analysis.ipynb",
+        "projection_sources": [
+          "editions/zh/projects/project01/notebooks/project01_financial_data_analysis.ipynb",
+          "editions/en/projects/project01/notebooks/project01_financial_data_analysis.ipynb"
+        ],
+        "responsibility": "bind selected language projection into final package default path and verify reader execution there; this batch only writes language candidates"
+      }
+    },
+    {
+      "project": "project02",
+      "revision": "BIL08/r1_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "documents": [
+        {
+          "zh": {
+            "path": "projects/project02/README.md",
+            "sha256": "cffa95ef7730c5aa903846e4f8afadcfe277530a76c444af4beed51794567aa9",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project02/README.md",
+            "sha256": "6a8c07191fc9f5099ed800fe5fe46b794b75ed291b4db64f3e75c45f292fff20",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project02/READER_GUIDE.md",
+            "sha256": "1ef06fbe28c88d9561ea785ccca727c5f9b211fae12677212ac15bc53be7d798",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project02/READER_GUIDE.md",
+            "sha256": "57a152bec4fdd51a19c1d6a90d4bc291d7cea7a3766b2ab58f52684555d692a8",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project02/data_dictionary.md",
+            "sha256": "493eb044e6aa123d8545295654c9b53c20192e9b58024fd4dda8809689242a26",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project02/data_dictionary.md",
+            "sha256": "9bdb96c3382649012d078aa29754a44a1f6ea438ba98f1f2511fddf58629158e",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project02/research_report/report.md",
+            "sha256": "3ce9ade98d3238087e7e6e0ebfa45d5db0e626dabe33b63cf443cae821c999b1",
+            "source_role": "read_only_original"
+          },
+          "en": {
+            "path": "editions/en/projects/project02/research_report/report.md",
+            "sha256": "a6d29738b0eff3f487956f060a0b7e806fd31d5c784d86f03735590bba91fb6c",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project02/exercises.md",
+            "sha256": "007460387623ba586e2bc2868f974705861eb4d8aa792a1740cccb25ba958878",
+            "source_role": "read_only_original"
+          },
+          "en": {
+            "path": "editions/en/projects/project02/exercises.md",
+            "sha256": "5c1d7d9913313728efe3760711edcef0106ffdae95405c17b486ee78c0255488",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project02/solutions.md",
+            "sha256": "61ad281c5eecacb8e518e8cf7f707536760f369d235d910689b2158ce5742d98",
+            "source_role": "read_only_original"
+          },
+          "en": {
+            "path": "editions/en/projects/project02/solutions.md",
+            "sha256": "2e01a424e024e5a029a07cd302820432abd6e9db18723fd4a14d5cf1dd6a5fb2",
+            "source_role": "candidate"
+          }
+        }
+      ],
+      "notebook_language_projections": {
+        "zh": {
+          "path": "editions/zh/projects/project02/notebooks/project02_factor_regression.ipynb",
+          "sha256": "8f8abd7eefd6cbc0327f43193c2a5500a32f0fe4d7741d3ed9e24436b3b975fa",
+          "source_role": "candidate"
+        },
+        "en": {
+          "path": "editions/en/projects/project02/notebooks/project02_factor_regression.ipynb",
+          "sha256": "de7c4356c2bdf3122154b357b56ce7b751db79196fc45a7446433fedb25f526b",
+          "source_role": "candidate"
+        },
+        "baseline": {
+          "path": "outputs/quant_course_reader_candidate_20261014/projects/project02/notebooks/project02_factor_regression.ipynb",
+          "sha256": "2445c869d055604531621bd15756ae5531a96d72e2a2de73d3f2d4ec56463b30",
+          "source_role": "read_only_original"
+        },
+        "markdown_cells": 7,
+        "code_cells": 5,
+        "code_outputs_metadata_identical": true,
+        "executed_in_this_batch": false
+      },
+      "historical_figure_language_layer": {
+        "owner": "BIL23 root final bilingual assembly",
+        "status": "retained_original_bitmap_pending_English_panel_titles",
+        "actual_view": "all five retained figures; Chinese factor titles in project02_factor_loadings_hac6.png and Chinese industry titles in project02_residuals.png",
+        "scope": "English guide/report decode every panel, axis and model color; no historical bitmap regenerated"
+      },
+      "default": "Seed102 one CONSTRUCTED asset;120months;three nested common-column modelsHAC6;onlyFF3HAC3/6/12;reconstruction assertion only;threeCSV omit parameter names;one residualPNG ordinal0–119",
+      "history": "All nine original historical regressions, complete intervals/null/negative results/Holm and attribution retained; HiTecFF5 RMSE1.562 and NoDurFF5 RMSE1.932; no market rerun",
+      "final_assembly": {
+        "owner": "BIL23 root final bilingual assembly",
+        "current_default_package_path": "projects/project02/notebooks/project02_factor_regression.ipynb",
+        "projection_sources": [
+          "editions/zh/projects/project02/notebooks/project02_factor_regression.ipynb",
+          "editions/en/projects/project02/notebooks/project02_factor_regression.ipynb"
+        ],
+        "responsibility": "Place selected language projection at default package path and verify actual reader execution and final links; no execution this batch"
+      }
+    },
+    {
+      "project": "project03",
+      "revision": "BIL11/r1_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "documents": [
+        {
+          "zh": {
+            "path": "projects/project03/README.md",
+            "sha256": "c2d80cf8bd8d70c26d4e1802bcb80df9fd89941111e5935fb11f20669d4753a9"
+          },
+          "en": {
+            "path": "editions/en/projects/project03/README.md",
+            "sha256": "ea412f72a61eebeb2f8ed64fb4afe3b3719a435759eab6a5816716b9e3772b2c"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project03/READER_GUIDE.md",
+            "sha256": "1e1f50ce1d85e9f6d6ae8ee85d961a55416b83d30f885170b76df020637f672c"
+          },
+          "en": {
+            "path": "editions/en/projects/project03/READER_GUIDE.md",
+            "sha256": "c94ada9f322397f6ecc2d59967a2a3153166edc3e1fcf2c3a24f88867af1021c"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project03/data_dictionary.md",
+            "sha256": "0af43088e2105257b00da40a62e36da545a2dd6d6c1a7ebdfacc6ab0fd55a8a6"
+          },
+          "en": {
+            "path": "editions/en/projects/project03/data_dictionary.md",
+            "sha256": "f8a45bad519f43f3980de4262de71901600f4a380da24fbf26e1092f87d449ef"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project03/exercises.md",
+            "sha256": "0a972bdea07889a77a2bf93dad891aabf2e162282332a3ba232c528bbabd5900"
+          },
+          "en": {
+            "path": "editions/en/projects/project03/exercises.md",
+            "sha256": "9af80af3a005c8bc189c950379288c61539609615802162607f68d5747aac5ae"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project03/solutions.md",
+            "sha256": "a8621717fa28076e9d0343cc1e7699786b38d76b20b746d6a3ff566b0d04239d"
+          },
+          "en": {
+            "path": "editions/en/projects/project03/solutions.md",
+            "sha256": "ffbb71bfff5f8bee615328d93bfcb6cbb5cdee7665898d27e2f518c8f04613d5"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project03/research_report/report.md",
+            "sha256": "ba4e76222b77cce330702002f6f219bbf168279feb91d93a1f1484cf4d97aa52"
+          },
+          "en": {
+            "path": "editions/en/projects/project03/research_report/report.md",
+            "sha256": "45f05477a37918198339598f2dc717633272b30ac4456347458e7e36b631fa93"
+          }
+        }
+      ],
+      "source_authority": "qa/bilingual_revision/BIL11/preparation/P3_SOURCE_AUTHORITY.json",
+      "notebook_language_projections": {
+        "zh": {
+          "path": "editions/zh/projects/project03/notebooks/project03_portfolio_oos.ipynb",
+          "sha256": "e949acc316780f15081982e3e9d25a11c650b1cbd08fad10239aca4362c57cab"
+        },
+        "en": {
+          "path": "editions/en/projects/project03/notebooks/project03_portfolio_oos.ipynb",
+          "sha256": "6ff96ccc68880a62d6fac17dcd1990f0f9ea42d5eed4b2f26b1857d04f2b5879"
+        },
+        "baseline": {
+          "path": "outputs/quant_course_reader_candidate_20261014/projects/project03/notebooks/project03_portfolio_oos.ipynb",
+          "sha256": "a2fc276a2e14552ab18940649dc7e4c2d3bf23a6498095d82f4f0ab9a44c3cfd"
+        },
+        "markdown_cells": 8,
+        "code_cells": 7,
+        "code_outputs_metadata_identical": true,
+        "executed_in_this_batch": false
+      },
+      "historical_figure_language_layer": {
+        "status": "all4original_bitmap_labelsEnglish_root_actual_view",
+        "no_bitmap_translation_pending": true,
+        "regenerated": false
+      },
+      "default": "seed103;48constructedmonths2000-01;4independentABCDNormal(.005,.03);RF.001;24training/24hold2002-01..2003-12;4strategies96rows;LW/lag0;10bp proxy;6files; noFrench/bootstrap/grid",
+      "history": "440months1760rows/W60/10bp/LW/lag0;allnegativezeroresults;posthocW24 .587/25fallback distinct",
+      "final_assembly": {
+        "owner": "BIL23 root final bilingual assembly",
+        "current_default_package_path": "projects/project03/notebooks/project03_portfolio_oos.ipynb",
+        "projection_sources": [
+          "editions/zh/projects/project03/notebooks/project03_portfolio_oos.ipynb",
+          "editions/en/projects/project03/notebooks/project03_portfolio_oos.ipynb"
+        ],
+        "responsibility": "Bind selected language projection at final package default path, verify all links and actual reader execution; static checks only this batch"
+      }
+    },
+    {
+      "project": "project04",
+      "revision": "BIL15A/r2_20261015",
+      "status": "author_candidate_pending_independent_acceptance",
+      "stage": "ledger_cost",
+      "full_project_teaching_accepted": false,
+      "documents": [
+        {
+          "zh": {
+            "path": "projects/project04/README.md",
+            "sha256": "d80f3f77db8c55e86e5488a55117f90e231efcff6ee459e3538cdbe7ac387254"
+          },
+          "en": {
+            "path": "editions/en/projects/project04/README.md",
+            "sha256": "44f6ebe33e831c2684cd222221d4e3b6f066c735e357184e77a1e990d30ed027"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project04/READER_GUIDE.md",
+            "sha256": "96118e326eaf3da39a0960cbf0369c08c640bd04583b74ab34bc6064034bb42a"
+          },
+          "en": {
+            "path": "editions/en/projects/project04/READER_GUIDE.md",
+            "sha256": "f497b9f2af35dd4ccb532195d7d4cba51c5e049e8003da4113f8bb5fb4fe7ded"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project04/backtest_preparation/README.md",
+            "sha256": "9ec6800248b4cb5610b81579bfd02bac03b55f44439ea3c5d74d743c6d1d5d99"
+          },
+          "en": {
+            "path": "editions/en/projects/project04/backtest_preparation/README.md",
+            "sha256": "907dc68bb44ce980b57520da5b29619d56da0e66687f1307830b368aa8030efb"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project04/cost_execution_lab/README.md",
+            "sha256": "1ff682f4092708793e2ac74e8c026f868943105bb5645cdb196009aaeb29c62a"
+          },
+          "en": {
+            "path": "editions/en/projects/project04/cost_execution_lab/README.md",
+            "sha256": "f6b86f0557b33f96e65fa405f3a62be371d353efd924ce8ff903cd63d7ad0a1e"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project04/cost_execution_lab/data_dictionary.md",
+            "sha256": "b282068f20600c6689c2bb7c351b91370795447e4fc342eec54679f6ce2fd984"
+          },
+          "en": {
+            "path": "editions/en/projects/project04/cost_execution_lab/data_dictionary.md",
+            "sha256": "86d086434d1ac37fd0a74831a22ccff100e6d53e59f9232ebeb5364d2efbb248"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project04/cost_execution_lab/research_report.md",
+            "sha256": "a9ce6abb8b0d26ba5d8c505886662cabc25001df700aefde584a548333ef5add"
+          },
+          "en": {
+            "path": "editions/en/projects/project04/cost_execution_lab/research_report.md",
+            "sha256": "80f17b42fbd441751b889cd309230fca0b1aa892487ce27c417845c0a575724c"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project04/cost_execution_lab/solutions.md",
+            "sha256": "73cdb724bcda4d1aa02fa4290065f592f22170ec67285f5beefdf706c4a680b3"
+          },
+          "en": {
+            "path": "editions/en/projects/project04/cost_execution_lab/solutions.md",
+            "sha256": "47ea035b7ec7a336af03152e0b85822ccecb7f4b1d6e2d03873e1b07e02a4470"
+          }
+        }
+      ],
+      "remaining_dependencies": [
+        "BIL15B chapters30–31 bias/validation",
+        "BIL17 chapters35–36 consumers",
+        "BIL23 portable package/cold start/global links"
+      ],
+      "notebook_language_projections": {
+        "zh": {
+          "path": "editions/zh/projects/project04/cost_execution_lab/cost_execution_lab.ipynb",
+          "sha256": "c28bdb4335abee95fdd67bda47c3f6daf1b246ea0893e662963d06e0c8f89933"
+        },
+        "en": {
+          "path": "editions/en/projects/project04/cost_execution_lab/cost_execution_lab.ipynb",
+          "sha256": "e9faae4447dcd3c13fdb3bcfbc98fa207c3218ad7195792670d78b183da8e759"
+        },
+        "baseline": {
+          "path": "outputs/quant_course_reader_candidate_20261014/projects/project04/cost_execution_lab/cost_execution_lab.ipynb",
+          "sha256": "061829b78d1595fd61cbea37bdbe2cf861b699a1e5e9450330a0029f0c7be783"
+        },
+        "allowed_nonMarkdown_exception": {
+          "zero_based_cell_index": 4,
+          "change": "slot-start tick expression, x-axis explanatory label, affected PNG only",
+          "no_other_economic_code_config_seed_metadata_change": true,
+          "executed": "only minimum cell4 display dependencies, not fullNotebook"
+        }
+      }
+    },
+    {
+      "project": "project05",
+      "revision": "r2_20261016",
+      "status": "author_candidate_pending_independent_acceptance",
+      "documents": [
+        {
+          "zh": {
+            "path": "projects/project05/README.md",
+            "sha256": "2db61f8777b3252274af7aa40fd2a782097ae60ee0a522d56e9b506ce6224ac9",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project05/README.md",
+            "sha256": "1d2bb2c80fe2d06964988193cc41a50b325a76e2829dbba617b8f8ad4b523b9c",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project05/data_dictionary.md",
+            "sha256": "7e63ceaf5e09f801c61a5d6380b3dc936c8bf9566f547348d2d47feab449c9c0",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project05/data_dictionary.md",
+            "sha256": "c52577a27976550ef4fa7f79d8ccc57b8905eb942284934e4c91d2fef7416624",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project05/exercises.md",
+            "sha256": "6c72aa7d035c43c853188f5658e55d7480ad3bdadad65869a135099c52bfb1c1",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project05/exercises.md",
+            "sha256": "d2e56f221fe95463d7cec726e858de0a64b2bc872c975c82e93b2721a7311b88",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project05/solutions.md",
+            "sha256": "1fb95969aa43a1049c00b65690252b3bf613851a0d72e3e9082326afa6308160",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project05/solutions.md",
+            "sha256": "aa1b727a90f006574eae39e0f62b7fc269ac4d618848377aecbba899148adcf5",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project05/research_report/report.md",
+            "sha256": "e4d6c06c0a8a59c6ad56099b741e5ae089d0e5ad3e61c4775f678a00d080633c",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project05/research_report/report.md",
+            "sha256": "47279d638f663d18908cdae4b66a11df1786fa1e0880ea8613787cf06113bf19",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project05/EXECUTION_BOUNDARY.md",
+            "sha256": "f6a0c902c5e6a63a10be63dca5d41f6bbf54af3f10b5a5e28785326f682f00d5",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project05/EXECUTION_BOUNDARY.md",
+            "sha256": "fb61b64640a81e37f1a9a2108730d4c8d3ba740021f094c9696d20e1ffc7d3b1",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project05/preparation/README.md",
+            "sha256": "9b10152f8e0ef7fd01223927fa1badcac5d16e3ec4ca3ced6dcc02964bab86a3",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project05/preparation/README.md",
+            "sha256": "ecdfe4924a94ee83241a9e00363a4f841a4d883339cbad6c24ad39e02e4477cc",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project05/preparation/data_dictionary.md",
+            "sha256": "697e200cb2e0cd8e924f318d22b9e46f8406bf8ee8fb428fb546f043b03c7edf",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project05/preparation/data_dictionary.md",
+            "sha256": "610b53f71464ffa900a370d17c53752310d486890e2f15a5049c3aebfac5e6c6",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project05/preparation/gap_table.md",
+            "sha256": "6b8d1d4698302b83832f91ff3540b5b08c1cae44ce3f147e377cc9d8674ca0d4",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project05/preparation/gap_table.md",
+            "sha256": "5b989c864d7540c0f262e5f80e8ab71085dfc19da3ea2ea2c76ec37ef81cc625",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project05/preparation/source_feasibility.md",
+            "sha256": "ddf01613e55fb3c03cad42bcf421ff246ec2becd0a841a700b10d488242b4253",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project05/preparation/source_feasibility.md",
+            "sha256": "bb63a0d7b5205b3041895ac83a0de5de8a9ec9a0cd49aeb3e45c8bf5a3d5171d",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project05/backtest_preparation/README.md",
+            "sha256": "d2212994a1f6ed2684a8f0efafba4ca383a8308ec43987152183be73e45fcff7",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project05/backtest_preparation/README.md",
+            "sha256": "0c0cf6bcc9f352e128bd7568476ae639e9e9838abdaf01e50106f94e2432caf1",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project05/loom/main_p05.tex",
+            "sha256": "a03fdd0f116cf15d54cdf68db67a792c3de9dcaf6b5501fc7ecefc9a18901676",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project05/loom/main_p05.tex",
+            "sha256": "c993ee72cc4e60ff3de1fefd8750d5f5e38e9e974e08f216a603d5006fb87391",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project05/loom/sections/p05_s1_screen.tex",
+            "sha256": "e74184bebe3f31eaf673da1d60c5930d127b3634f6b85447f24458bcb94b5851",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project05/loom/sections/p05_s1_screen.tex",
+            "sha256": "275810c04360fd48e1fb8fdfe27ca01ec6f548915fac409047864a624bc6382b",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project05/loom/sections/p05_s2_hedge.tex",
+            "sha256": "5fc2ddc41e5bc7eea13790c9745a26cc2433f5967a694d59b831018f33d46434",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project05/loom/sections/p05_s2_hedge.tex",
+            "sha256": "ae6eb61f73ea0acb281116235b6738a12b08858736faf1358b0736bf755ea82e",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project05/loom/sections/p05_s3_signal.tex",
+            "sha256": "0fae07cf842ff571e248101b0b1e1c73a7cce3b15de42857d99478bb044e4baa",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project05/loom/sections/p05_s3_signal.tex",
+            "sha256": "caa452acd1aeaa152e19a5e9cefac566d071f857cfad28d65e8829b1a27f24e1",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project05/loom/sections/p05_s4_ledger.tex",
+            "sha256": "06ab51637856467b9ff96381bd5f4a2729a5e0dd6d98e3ff7a5eccc9df1d8987",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project05/loom/sections/p05_s4_ledger.tex",
+            "sha256": "052fa8e636373ed7e1d44f7ffc0b2d4b77cec07fe41dcc78d6e8b095d914e795",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project05/loom/sections/p05_s5_evaluate.tex",
+            "sha256": "968739e8f83993c84dc432035d74d7e70cdd4336d936f4e73f67d0f09d95d486",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project05/loom/sections/p05_s5_evaluate.tex",
+            "sha256": "dd681c26b89b05917844aca08cb8d2fc6196339d474f60e2fa92e401a22b5e33",
+            "source_role": "candidate"
+          }
+        },
+        {
+          "zh": {
+            "path": "projects/project05/loom/sections/p05_answers.tex",
+            "sha256": "2ac5f1f6a29e0975396514301b9d28b48cd8a0583d47aababa79650bde490451",
+            "source_role": "candidate"
+          },
+          "en": {
+            "path": "editions/en/projects/project05/loom/sections/p05_answers.tex",
+            "sha256": "f74bf90fe6af3361a32cf3d77ee95e49d6c18166e7bdf1012ce9b2df827dc6fe",
+            "source_role": "candidate"
+          }
+        }
+      ],
+      "stable_ids": {
+        "P5-01": "P5-01",
+        "P5-02": "P5-02",
+        "P5-03": "P5-03",
+        "P5-04": "P5-04",
+        "P5-05": "P5-05",
+        "P5-06": "P5-06",
+        "P5-07": "P5-07",
+        "P5-08": "P5-08",
+        "P5-09": "P5-09",
+        "P5-10": "P5-10"
+      },
+      "loom_to_body": {
+        "P5-L01": "P5-01",
+        "P5-L02": "P5-02",
+        "P5-L03": "P5-03",
+        "P5-L04": "P5-04",
+        "P5-L05": "P5-07",
+        "P5-L06": "P5-08",
+        "P5-L07": "P5-09",
+        "P5-L08": "P5-10",
+        "P5-L09": "P5-05",
+        "P5-L10": "P5-06"
+      },
+      "new_question_ids": [],
+      "scope": "complete bilingual teaching only; P5 first full teaching credit only after independent acceptance/sync/closeout; real research planned/blocked",
+      "notebook_language_layer": {
+        "owner": "BIL23",
+        "executed_this_batch": false,
+        "status": "pending English language layer, portable package and cold start"
+      },
+      "source_priority": "accepted I3 semantics, latest whole-share boundary, accepted Chapters34–36; c5/ALIGN historical data retained separately from A5/A6",
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false
+    },
+    {
+      "project": "project06",
+      "revision": "BIL19/r1_20261016",
+      "status": "author_candidate_complete_teaching_pending_independent_acceptance",
+      "full_project_teaching_credit": false,
+      "documents": [
+        {
+          "zh": {
+            "path": "projects/project06/README.md",
+            "bytes": 7137,
+            "sha256": "2e62f7d474c8cd4d7f83f31be814ba48dfd1c071f18b1c1c460f60d5ff6fc60f"
+          },
+          "en": {
+            "path": "editions/en/projects/project06/README.md",
+            "bytes": 8591,
+            "sha256": "7dd61f840f96a5b60c1b83d09082bcc296bb3bf74952138de43e9594ac4488cb"
+          },
+          "candidate_changed": true
+        },
+        {
+          "zh": {
+            "path": "projects/project06/data_dictionary.md",
+            "bytes": 5966,
+            "sha256": "ec1c05b6a8be2cc9ae86f04474dd957100606f0e6e4d1b49b983cde9154c53f1"
+          },
+          "en": {
+            "path": "editions/en/projects/project06/data_dictionary.md",
+            "bytes": 7210,
+            "sha256": "dbee7c357080bda709b6b96004a418a1d809edf956efc311b88581a1b36f876e"
+          },
+          "candidate_changed": false
+        },
+        {
+          "zh": {
+            "path": "projects/project06/research_report/README.md",
+            "bytes": 12204,
+            "sha256": "4e46b0c4191ce78b0f88fec7e727fb27f9e24a8362719d15c0643369b1a7832e"
+          },
+          "en": {
+            "path": "editions/en/projects/project06/research_report/README.md",
+            "bytes": 15091,
+            "sha256": "8f07655feda4118f7197f42d5bc11900942098c4c3019d85f23059844a14d11b"
+          },
+          "candidate_changed": true
+        },
+        {
+          "zh": {
+            "path": "projects/project06/V2_TREES.md",
+            "bytes": 16937,
+            "sha256": "de6027a448c0dcf765f3f91468e950c3a3dc05c75e8cce5ee722a127b6718988"
+          },
+          "en": {
+            "path": "editions/en/projects/project06/V2_TREES.md",
+            "bytes": 20385,
+            "sha256": "1bf6be896ac8e3809faaa9274922af81cb4479c8ba108a012ec90350757b53d6"
+          },
+          "candidate_changed": true
+        },
+        {
+          "zh": {
+            "path": "projects/project06/research_report/v2_trees.md",
+            "bytes": 19469,
+            "sha256": "7181e4053c842ae666ff4b6a8c08a9a5579fde5435cb7138fb91eb6a6cb01144"
+          },
+          "en": {
+            "path": "editions/en/projects/project06/research_report/v2_trees.md",
+            "bytes": 22252,
+            "sha256": "b976a1fb1f9bdc9e606c13848580c8f7660a85a52202ccdaa9d662da0d440443"
+          },
+          "candidate_changed": true
+        },
+        {
+          "zh": {
+            "path": "projects/project06/solutions.md",
+            "bytes": 14809,
+            "sha256": "8686a51fb9b72c6bb4471b6b635f0993d0fe31166c8c32110c8351a91eceac3c"
+          },
+          "en": {
+            "path": "editions/en/projects/project06/solutions.md",
+            "bytes": 17137,
+            "sha256": "0e553107bf73d5c46e97c37684abe1bdf4885c41555fae963153312cdf836215"
+          },
+          "candidate_changed": true
+        },
+        {
+          "zh": {
+            "path": "projects/project06/loom/main_p06.tex",
+            "bytes": 889,
+            "sha256": "fe3e3d9bce1998e6e2f18d5798466500a5d5dc8270b1d206a1c649dcd22a89de"
+          },
+          "en": {
+            "path": "editions/en/projects/project06/loom/main_p06.tex",
+            "bytes": 907,
+            "sha256": "5ac7a5d8d4cbdf2b535e3c6d05541d8b50e8dbd057491139a2920c94b54d85cb"
+          },
+          "candidate_changed": true
+        },
+        {
+          "zh": {
+            "path": "projects/project06/loom/sections/p06.tex",
+            "bytes": 21434,
+            "sha256": "568444768382bec791de13b726a0a64b2cadec83df5965cefd2155b91dd078bd"
+          },
+          "en": {
+            "path": "editions/en/projects/project06/loom/sections/p06.tex",
+            "bytes": 23163,
+            "sha256": "bac8f1d20dfefaa5793d87150d39122f6ebf1972513eb2c55fba51ac0b28bd05"
+          },
+          "candidate_changed": true
+        }
+      ],
+      "full_teaching_owner": "BIL19",
+      "notebook_language_owner": "BIL23",
+      "canonical_written": false,
+      "formal_publication": false,
+      "final_verified": false,
+      "source_authority": "BIL18 foundation receipt, BIL19 bound sources and ROOT/PRE_FREEZE reviews, Sol new teaching derivations only",
+      "credit_condition": "root acceptance of BIL18 foundation plus this extension, full answers and Loom; no real-research completion implied",
+      "foundation_acceptance_receipt": {
+        "path": "qa/bilingual_revision/BIL18/independent_acceptance/ACCEPTANCE_RECEIPT.json",
+        "bytes": 18973,
+        "sha256": "9efcf4d2bc610ea814b98ba80a0f81218279e4d4267124f10fbf4a033fa97241"
+      },
+      "prior_BIL18_foundation_record": {
+        "project": "project06",
+        "revision": "BIL18/r2_20261016",
+        "status": "author_candidate_foundation_only_pending_independent_acceptance",
+        "full_project_teaching_credit": false,
+        "documents": [
+          {
+            "zh": {
+              "path": "projects/project06/README.md",
+              "bytes": 6267,
+              "sha256": "e72c1751e6f6299fa0d8f1c8e409c0749c67b708f627562cfba52b3624f6982a"
+            },
+            "en": {
+              "path": "editions/en/projects/project06/README.md",
+              "bytes": 7583,
+              "sha256": "edfc9543d1c585a6cd0495121a533efa28872594689555a2b869ecf75d4e45ad"
+            }
+          },
+          {
+            "zh": {
+              "path": "projects/project06/data_dictionary.md",
+              "bytes": 5966,
+              "sha256": "ec1c05b6a8be2cc9ae86f04474dd957100606f0e6e4d1b49b983cde9154c53f1"
+            },
+            "en": {
+              "path": "editions/en/projects/project06/data_dictionary.md",
+              "bytes": 7210,
+              "sha256": "dbee7c357080bda709b6b96004a418a1d809edf956efc311b88581a1b36f876e"
+            }
+          },
+          {
+            "zh": {
+              "path": "projects/project06/research_report/README.md",
+              "bytes": 11852,
+              "sha256": "891aee69a4f5723e221873daaefad28efdda9fe28956a33e2a18c5c9e054c074"
+            },
+            "en": {
+              "path": "editions/en/projects/project06/research_report/README.md",
+              "bytes": 14639,
+              "sha256": "db24e2ea5b30b94da0309bfb91ce79196a851db2c3ed7fca594175560b9e48d5"
+            }
+          }
+        ],
+        "full_teaching_owner": "BIL19",
+        "notebook_language_owner": "BIL23",
+        "canonical_written": false,
+        "formal_publication": false,
+        "final_verified": false,
+        "source_authority": "BIL18 root reader notes, applied I3 C17 aftertexts, PRE_FREEZE_REVIEW_01-06 (PF01-PF12), and ROOT_R1_REPAIR_BRIEF.md; historical numeric evidence preserved"
+      },
+      "stable_project_ids": [
+        "P6-L01",
+        "P6-L02",
+        "P6-L03",
+        "P6-L04",
+        "P6-L05",
+        "P6-L06",
+        "P6-L07",
+        "P6-L08",
+        "P6-T01",
+        "P6-T02",
+        "P6-T03",
+        "P6-T04"
+      ],
+      "question_identity": "Original 3 unnumbered base QAs retained as L01-03; L04-08 research-interpretation questions; Sol T01-04 calculation/proof/code/ledger exercises",
+      "real_data": "blocked"
+    }
+  ],
+  "BIL06_append": {
+    "revision": "BIL06/r1_20261015",
+    "prior_top_level_fields_preserved": true,
+    "no_new_question_quota": true,
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL07_append": {
+    "revision": "BIL07/r1_20261015",
+    "prior_12_chapter_entries_and_project1_all_fields_preserved": true,
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL08_append": {
+    "revision": "BIL08/r1_20261015",
+    "prior_14_chapters_project1_all_fields_preserved": true,
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL09_append": {
+    "revision": "BIL09/r1_20261015",
+    "prior_16_chapters_P1_P2_all_fields_preserved": true,
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL10_append": {
+    "revision": "BIL10/r1_20261015",
+    "prior18_chapters_P1_P2_all_fields_preserved": true,
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL11_append": {
+    "revision": "BIL11/r1_20261015",
+    "prior20_chapters_P1_P2_all_fields_preserved": true,
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL12_append": {
+    "revision": "BIL12/r1_20261015",
+    "prior21_chapters_P1_P2_P3_all_fields_preserved": true,
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL13_append": {
+    "revision": "BIL13/r2_20261015",
+    "prior23chapters_P1_P2_P3_all_fields_preserved": true,
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL14_append": {
+    "revision": "BIL14/r1_20261015",
+    "status": "frozen_pending_independent_acceptance",
+    "input_sha256": "2a8505839c502e2cb42f89ed0d45af0bef8bcac0f89118d1b9ea478270526aa5",
+    "chapter_ids": [
+      27,
+      28
+    ],
+    "project4_stage": "complete_overview_and_signal_teaching_only; cost/execution/backtest teaching BIL15; 35/36 consumers BIL17; not full project accepted",
+    "project4_documents": {
+      "zh": "projects/project04",
+      "en": "editions/en/projects/project04",
+      "count_each_language": 9
+    },
+    "notebook_projections": [
+      {
+        "path": "editions/zh/projects/project04/preparation/notebooks/p04_signal_layer.ipynb",
+        "sha256": "45cb6d97d0608000cb565e8f6bde42ceed535ed92b3682150aeaa6eb3d580b48",
+        "baseline": "outputs/quant_course_reader_candidate_20261014/projects/project04/preparation/notebooks/p04_signal_layer.ipynb",
+        "markdown_only": true,
+        "runtime_not_executed": true,
+        "portable_path_rebinding_owner": "BIL23"
+      },
+      {
+        "path": "editions/en/projects/project04/preparation/notebooks/p04_signal_layer.ipynb",
+        "sha256": "a6dc48f2715367689cf0c9e6fcce95d91ed5c244b282038978daaaa9d4a7d656",
+        "baseline": "outputs/quant_course_reader_candidate_20261014/projects/project04/preparation/notebooks/p04_signal_layer.ipynb",
+        "markdown_only": true,
+        "runtime_not_executed": true,
+        "portable_path_rebinding_owner": "BIL23"
+      }
+    ],
+    "terminology_previous_records": 237,
+    "terminology_records": 257,
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL14_r2_append": {
+    "revision": "BIL14/r2_20261015",
+    "status": "frozen_pending_independent_acceptance",
+    "repair_input_sha256": "ae16cd8a8b01bd488cfe2ca387081774969ac1286c4508b3310cbe33e430abb5",
+    "r1_manifest_sha256": "62aecfb553e942860afcd8f392e863f224f210018244a77bbb33cceaf84cefa4",
+    "new_source_count": 7,
+    "inherited_source_count": 25,
+    "inherited_sources_reference": "qa/bilingual_revision/BIL14/r2_20261015/INHERITANCE_MAP.json",
+    "terms257_unchanged": true,
+    "project4_stage": "overview_and_signal_only; BIL15/BIL17/BIL23 responsibilities unchanged; not full project accepted",
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL14_r3_append": {
+    "revision": "BIL14/r3_20261015",
+    "status": "author_candidate_pending_independent_acceptance",
+    "repair_input_sha256": "6dd6e14d07f04423d384971eb3ae17e0f6a32d40b98407efae0ea4165d772317",
+    "new_source_count": 3,
+    "inherited_source_count": 29,
+    "logical_source_count": 32,
+    "terms_before": 257,
+    "terms_after": 258,
+    "terminology_sha256": "58597d90ce2a869796e5f29d487fd006bebd5ea630a27be6856335b1109c32e7",
+    "new_source_paths": [
+      "part04/chapter28/content.md",
+      "editions/terminology.csv",
+      "editions/translation_map.json"
+    ],
+    "inherited_sources_reference": "qa/bilingual_revision/BIL14/r3_20261015/INHERITANCE_MAP.json",
+    "new_pdf": "body_zh",
+    "inherited_pdfs": [
+      "body_en",
+      "loom_zh",
+      "loom_en"
+    ],
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL15A_append": {
+    "revision": "BIL15A/r2_20261015",
+    "status": "author_candidate_pending_independent_acceptance",
+    "chapters": [
+      29
+    ],
+    "project": "project04",
+    "stage": "ledger_cost_teaching_only; BIL15Bvalidation required for fullP4; BIL17consumers; BIL23assembly",
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL15B_append": {
+    "revision": "BIL15B/r2_20261016",
+    "status": "author_candidate_pending_independent_acceptance",
+    "chapters": [
+      30,
+      31
+    ],
+    "project": "project04",
+    "new_project_ids": [
+      "P4-T01",
+      "P4-T02",
+      "P4-T03"
+    ],
+    "new_project_questions_identity": "new constructed integrative teaching extension; cost Exercise1–6 preserved",
+    "project_documents_each_language": [
+      "README.md",
+      "READER_GUIDE.md",
+      "exercises.md",
+      "solutions.md"
+    ],
+    "stage": "fullP4teaching registration only after BIL14+BIL15A+BIL15B root acceptance; BIL17consumers/BIL23assembly remain; real research planned",
+    "terms_before": 272,
+    "terms_after": 287,
+    "terminology_sha256": "799fff0a59a7035ee1c0c1e7c1241a63b574e21a5472a688854eacec6bb5f655",
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false,
+    "repair_issues": [
+      "R01",
+      "R02"
+    ]
+  },
+  "BIL16_append": {
+    "revision": "BIL16/r1_20261016",
+    "status": "author_candidate_pending_independent_acceptance",
+    "chapters": [
+      32,
+      33
+    ],
+    "terms_before": 287,
+    "terms_after": 307,
+    "terminology_sha256": "b17d24c5cd7406db1cf2ea51a30db8b8b0bc9833d9627038c02b0a392da671a1",
+    "minimal_engineering": [
+      {
+        "path": "src/quant_course/inference.py",
+        "sha256": "7d51ee4f5edd0635bc8392db13f1eb368c2f34ee1780bab7bac82dbe4c55812c"
+      },
+      {
+        "path": "tests/test_ch32_inference.py",
+        "sha256": "6a770fb06fec0f54c5112a051729f8b78834669dc6bb4d61d6f3ca5d5a6c501c"
+      },
+      {
+        "path": "code/ch32_performance_statistics.py",
+        "sha256": "bc4be0fea5fee9da2186dd58ed57e7352891a278078ead1e20ae0245862a6197"
+      },
+      {
+        "path": "figures/a6/ch32_hand_cscv_splits.png",
+        "sha256": "822bdfbb47eda97c60db05a60f0a6e4bb1a26015c430f129a323a3b0f43f91d6"
+      }
+    ],
+    "I3_notebooks_executed": false,
+    "BIL17_consumers_pending": true,
+    "BIL23_English_Notebook_assembly_pending": true,
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL16_r2_append": {
+    "revision": "BIL16/r2_20261016",
+    "parent_manifest_sha256": "e21017b5e087ead2e2dd53dab630d6d407517e027e1de397823eb7e32f3a76e3",
+    "issues": [
+      "R01",
+      "R02",
+      "R03"
+    ],
+    "changed_sources": 4,
+    "inherited_sources": 12,
+    "terms307_unchanged": true,
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL17A_append": {
+    "revision": "r2_20261016",
+    "chapters": [
+      34,
+      35,
+      36
+    ],
+    "P4_role": "two existing README reader-route consumers reconciled; no duplicate teaching completion credit",
+    "P5": "BIL17B pending separate dispatch after A acceptance, sync and closeout",
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false,
+    "repairs": [
+      "B17A-R01",
+      "B17A-R02",
+      "B17A-R03",
+      "B17A-R04",
+      "B17A-R05"
+    ],
+    "parent_manifest_sha256": "02d0cbd86b3cee351aca63e604d1527690413bcc8d96a326e9d4d36a9358b5bc"
+  },
+  "BIL17B_append": {
+    "revision": "r2_20261016",
+    "project_teaching_ids": [
+      5
+    ],
+    "previous_project_teaching_ids": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "source_count": 38,
+    "old_targets": 20,
+    "new_targets": 18,
+    "prior_effective_targets": 267,
+    "overlap": 2,
+    "expected_post_sync_union": 303,
+    "not_current_accepted_count": true,
+    "terms_before": 323,
+    "terms_after": 331,
+    "terminology_sha256": "50a5bfa526bc5e8106543a7080ec151497feca571410bb9740e595cd1c6d751f",
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL18_append": {
+    "revision": "r2_20261016",
+    "chapters": [
+      37,
+      38,
+      39
+    ],
+    "partial_project": 6,
+    "full_project_teaching_credit": false,
+    "stable_body_ids": 44,
+    "stable_loom_ids": 22,
+    "candidate_terms": 347,
+    "notebook_language_owner": "BIL23",
+    "status": "author_candidate_pending_independent_acceptance"
+  },
+  "BIL19_append": {
+    "revision": "r1_20261016",
+    "chapters": [
+      40,
+      41
+    ],
+    "project_teaching_ids": [
+      6
+    ],
+    "candidate_teaching_credit_pending_root": true,
+    "stable_body_ids": 27,
+    "stable_loom_ids": 12,
+    "project_ids": [
+      "P6-L01",
+      "P6-L02",
+      "P6-L03",
+      "P6-L04",
+      "P6-L05",
+      "P6-L06",
+      "P6-L07",
+      "P6-L08",
+      "P6-T01",
+      "P6-T02",
+      "P6-T03",
+      "P6-T04"
+    ],
+    "terms_before": 347,
+    "terms_after": 373,
+    "notebook_language_owner": "BIL23",
+    "status": "author_candidate_pending_independent_acceptance",
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL20_append": {
+    "revision": "r1_20261016",
+    "chapters": [
+      42,
+      43
+    ],
+    "stable_body_ids": 24,
+    "stable_loom_ids": 16,
+    "terms_before": 373,
+    "terms_after": 400,
+    "status": "author_candidate_pending_independent_acceptance",
+    "notebook_language_owner": "BIL23",
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL21_append": {
+    "revision": "r1_20261016",
+    "chapters": [
+      44
+    ],
+    "terms_before": 400,
+    "terms_after": 409,
+    "stable_body_ids": 19,
+    "stable_loom_ids": 12,
+    "new_ids": [],
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL22_append": {
+    "revision": "r1_20261016",
+    "chapters": [
+      45
+    ],
+    "capstone_teaching": true,
+    "status": "author_candidate_pending_independent_acceptance",
+    "terms_before": 409,
+    "terms_after": 425,
+    "new_terms": [
+      [
+        "数据闸",
+        "data gate",
+        "",
+        "schema, finite values and explicit units"
+      ],
+      [
+        "时点闸",
+        "timing gate",
+        "",
+        "eligible historical version before signal"
+      ],
+      [
+        "执行闸",
+        "execution gate",
+        "",
+        "risk checks and durable-fill remainder"
+      ],
+      [
+        "对账闸",
+        "reconciliation gate",
+        "",
+        "independent cash/quantity/NAV checks"
+      ],
+      [
+        "恢复闸",
+        "recovery gate",
+        "",
+        "unpublished, valid and corrupt publication branches"
+      ],
+      [
+        "幂等性",
+        "idempotency",
+        "",
+        "fixed input identity and confirmed durable fills"
+      ],
+      [
+        "数据血缘",
+        "data lineage",
+        "",
+        "configuration/input/code identity"
+      ],
+      [
+        "列投影下推",
+        "projection pushdown",
+        "",
+        "read only requested columns"
+      ],
+      [
+        "过滤下推",
+        "filter pushdown",
+        "",
+        "skip eligible row groups using metadata"
+      ],
+      [
+        "全额成交",
+        "full fill",
+        "",
+        "positive real share quantities; no lot restriction"
+      ],
+      [
+        "命名空间原子性",
+        "namespace atomicity",
+        "",
+        "same-filesystem rename; not power-loss durability"
+      ],
+      [
+        "累计均值",
+        "cumulative mean",
+        "",
+        "all observations through current t; no retroactive increments"
+      ],
+      [
+        "协变量偏移",
+        "covariate shift",
+        "",
+        "changed P(X), invariant P(Y|X)"
+      ],
+      [
+        "环形块自助法",
+        "circular block bootstrap",
+        "",
+        "single seeded generator across all replications"
+      ],
+      [
+        "锁定报告",
+        "locked reporting",
+        "",
+        "future access constraint on exposed history; not blind holdout"
+      ],
+      [
+        "费后目标",
+        "post-cost target",
+        "",
+        "target monetary holdings w times post-cost NAV"
+      ]
+    ],
+    "source_language_mapping": [
+      {
+        "accepted_I3": "outputs/quant_course_reader_candidate_20261014/capstone/ENGINEERING_BASE.md",
+        "accepted_I3_sha256": "5a69f703a00e53d49e64e4aaccefd6e80b14bc84b426a1958488baf543289985",
+        "zh": "capstone/ENGINEERING_BASE.md",
+        "en": "editions/en/capstone/ENGINEERING_BASE.md",
+        "zh_sha256": "649deb5940c238d5864cf60b491fc0aad5a1106c1eda3dcd987eb9c82070e265",
+        "en_sha256": "b16421c42ca17ffa4c78121d88d55385acbd3e2336ec1f01c2e6c131c89f6fc0",
+        "history_rewritten": false
+      },
+      {
+        "accepted_I3": "outputs/quant_course_reader_candidate_20261014/capstone/PROTOCOL.md",
+        "accepted_I3_sha256": "8e0873c8b8b9a7c9db3ade4459b7a8ea1800fac088248795d2a93e91937668cf",
+        "zh": "capstone/PROTOCOL.md",
+        "en": "editions/en/capstone/PROTOCOL.md",
+        "zh_sha256": "ee1fb0c89c9f89b7c7cd44d0cbe0c6093366d99ac593e6a72c943f7d197e2d86",
+        "en_sha256": "1a5bc394987634c660789676570a7f2f671d7e2b46fd9e169971384c7d4a41f3",
+        "history_rewritten": false
+      },
+      {
+        "accepted_I3": "outputs/quant_course_reader_candidate_20261014/capstone/README.md",
+        "accepted_I3_sha256": "d4655deb84fe287fb2a13292f30bb7d85b7144a260d12206d5190c4a78a72794",
+        "zh": "capstone/README.md",
+        "en": "editions/en/capstone/README.md",
+        "zh_sha256": "ed6738bf0b56631354899b5cb40332b0c4673358eb34de62f3ffe190e5a5785e",
+        "en_sha256": "7553a9fe9136b6cfbfd071155f94577469981d6e3e3430c6dea359a751aa2d21",
+        "history_rewritten": false
+      },
+      {
+        "accepted_I3": "outputs/quant_course_reader_candidate_20261014/capstone/RESEARCH_DESIGN.md",
+        "accepted_I3_sha256": "0add8e9855ddcd124b437b53c79b462d93388acc57de19b86afa9d698c6ce49a",
+        "zh": "capstone/RESEARCH_DESIGN.md",
+        "en": "editions/en/capstone/RESEARCH_DESIGN.md",
+        "zh_sha256": "46e67831bac2065a381a311bffa8b256319617bfc84ce16e1893f50a0b1e215e",
+        "en_sha256": "766b99aabc97cc49bc46fe7250a2ba88de271e06a5d4e5b7ecbf7354be878d74",
+        "history_rewritten": false
+      },
+      {
+        "accepted_I3": "outputs/quant_course_reader_candidate_20261014/capstone/TIME_CONTRACT.md",
+        "accepted_I3_sha256": "ce56c6d8c1efbe9dccfe01dc45966f500fca6a2f461695db2be12b62926ac3d7",
+        "zh": "capstone/TIME_CONTRACT.md",
+        "en": "editions/en/capstone/TIME_CONTRACT.md",
+        "zh_sha256": "544d5976d2eece068fd9ef4d826fa4bcda98a04bb2743acb0adb33a5ab27f5df",
+        "en_sha256": "7b27477dfe7a9b60605337e6475f12afd82c492435a9b8e67f65c5efd8c8fb05",
+        "history_rewritten": false
+      },
+      {
+        "accepted_I3": "outputs/quant_course_reader_candidate_20261014/capstone/data_dictionary.md",
+        "accepted_I3_sha256": "95c8e63227dc971b02ac93de1d1da175f9f290f345bedd13db72eed4d7c12082",
+        "zh": "capstone/data_dictionary.md",
+        "en": "editions/en/capstone/data_dictionary.md",
+        "zh_sha256": "80431d198d8d636f006d7bbe938a937809cd8582536bc7a55aa3cc92fbf215fb",
+        "en_sha256": "f081165a6b8749a22a1703a34ce42aa4bdb9fc2abe1f66587535b660963c2549",
+        "history_rewritten": false
+      },
+      {
+        "accepted_I3": "outputs/quant_course_reader_candidate_20261014/capstone/data_dictionary_monthly.md",
+        "accepted_I3_sha256": "de4765e0a3fbb1ad430cb6f0435e6f085396bcb80925acdc31922fd603499872",
+        "zh": "capstone/data_dictionary_monthly.md",
+        "en": "editions/en/capstone/data_dictionary_monthly.md",
+        "zh_sha256": "656ff70f9e5e4d8eb05650472fff85c06a9045475c479aa681dca69b2dbd9fe0",
+        "en_sha256": "9d9d055ec36a9a6da6d8b7aa497f72179e5118aa438994c08943faf57233b75e",
+        "history_rewritten": false
+      },
+      {
+        "accepted_I3": "outputs/quant_course_reader_candidate_20261014/capstone/research_report/REPORT_GUIDE.md",
+        "accepted_I3_sha256": "f895975787767dd3e980da9520c1fc1a9e20e90ef0fae578f82a223c6e1ed11f",
+        "zh": "capstone/research_report/REPORT_GUIDE.md",
+        "en": "editions/en/capstone/research_report/REPORT_GUIDE.md",
+        "zh_sha256": "122196e11a0aa3212eff453196b673f720fe6a2d3a2f260cfd37494c3082b8a6",
+        "en_sha256": "74ff24fc1a41b149553258c2a1e31cc9fe5c949348415210cca123318fedaf41",
+        "history_rewritten": false
+      },
+      {
+        "accepted_I3": "outputs/quant_course_reader_candidate_20261014/capstone/research_report/report_template.md",
+        "accepted_I3_sha256": "916c55512fc7d6eb17f6f24f6dd3be0b7eb7e8adfac4eaa685ca1ac73f76e8e3",
+        "zh": "capstone/research_report/report_template.md",
+        "en": "editions/en/capstone/research_report/report_template.md",
+        "zh_sha256": "e242392f731333394310b72e39049ffc31dd9046767651d63e4fdef6b3689487",
+        "en_sha256": "01b8314c9837882396a3badbbb5a3624dc534bf18718dce38257edb92b1b9027",
+        "history_rewritten": false
+      },
+      {
+        "accepted_I3": "outputs/quant_course_reader_candidate_20261014/capstone/ACCEPTED_ENGINEERING_VERSION.md",
+        "accepted_I3_sha256": "80a5b92cad39aeb243f70d93e56c8db3a032e4d669dcc3b001b20bffb82474d0",
+        "zh": "capstone/ACCEPTED_ENGINEERING_VERSION.md",
+        "zh_policy": "immutable historical current working original, no mirror; local PDF uses full I3 historical reader note",
+        "en": "editions/en/capstone/ACCEPTED_ENGINEERING_VERSION.md",
+        "history_rewritten": false,
+        "en_sha256": "69734b969a78473262acb1d19b83df09b66076862d81ec9959479f800755e4c9",
+        "zh_sha256": "e6b4ab5b4a1c9b1fabb2b9e814bcc0a7c61ae3ed9cb32a90d8d3714e11945e06"
+      }
+    ],
+    "capstone_loom": {
+      "zh": "loom/sections/capstone.tex",
+      "en": "editions/en/loom/sections/capstone.tex",
+      "new_stable_ids": [
+        "CAP-L01",
+        "CAP-L02",
+        "CAP-L03",
+        "CAP-L04",
+        "CAP-L05",
+        "CAP-L06",
+        "CAP-L07",
+        "CAP-L08",
+        "CAP-L09",
+        "CAP-L10",
+        "CAP-L11",
+        "CAP-L12",
+        "CAP-L13",
+        "CAP-L14",
+        "CAP-L15"
+      ],
+      "created_in_BIL22": true,
+      "complete_answers_same_component_separate_page": true
+    },
+    "inherited_evidence": [
+      "C21:22 root assertions",
+      "R2:47 engineering checks",
+      "R3:PH fixed/running baseline and label availability",
+      "A10-A.1:Fraction continuous ledger and HAC technical checks"
+    ],
+    "deferred_BIL23": {
+      "resources": [
+        {
+          "logical": "capstone/check_portable.py",
+          "accepted_source": "outputs/quant_course_reader_candidate_20261014/capstone/check_portable.py",
+          "sha256": "3fdd456d1414750cafe82f4e05bc951136a2c3e655fd89509d9f332631965bf1"
+        },
+        {
+          "logical": "capstone/configs/french_protocol_v2.json",
+          "accepted_source": "outputs/quant_course_reader_candidate_20261014/capstone/configs/french_protocol_v2.json",
+          "sha256": "d49ac62cff7d6496e478211921d507fe7216c18b0e4f13b57e48fc893eb12505"
+        }
+      ],
+      "notebook_language": true,
+      "global_navigation": true,
+      "reader_run_paths": "Convert remaining historical A9-B build/batches/r2 examples in Chapter45 §9.1/9.2 and answers to fresh runs/ directories; preserve same task state/key/output for recovery; current source code not rerun. Fixed reader_cli_01 is not an instruction to reuse an old accepted run.",
+      "final_package_navigation": "Replace explicitly labelled read-only I3 source navigation with actual shared resources in complete package; retain historical source identities."
+    },
+    "research_gates": {
+      "G02": "closed_technical",
+      "G04": "closed_technical",
+      "G01": "unknown",
+      "G05": "not_authorized",
+      "PIT": "unknown",
+      "historical_access": "exposed_or_unknown",
+      "monthly_adapter": "not_implemented"
+    },
+    "independent_acceptance": false,
+    "synchronized": false,
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  },
+  "BIL23A_append": {
+    "revision": "r1_20261017",
+    "status": "author_candidate_pending_independent_acceptance",
+    "notebook_identity": "editions/shared/NOTEBOOK_IDENTITY.json",
+    "public_languages": [
+      "editions/zh",
+      "editions/en"
+    ],
+    "new_notebook_views": 98,
+    "repaired_existing_views": 2,
+    "reused_views": 8,
+    "terminology_csv_unchanged": true,
+    "DAG_required_edges": 120,
+    "DAG_background_edges": [
+      [
+        11,
+        12
+      ],
+      [
+        17,
+        18
+      ],
+      [
+        33,
+        34
+      ]
+    ],
+    "B_body_consumers": [
+      "editions/en/chapters/ch12/content.md",
+      "editions/en/chapters/ch15/content.md",
+      "editions/en/chapters/ch18/content.md",
+      "editions/en/chapters/ch26/content.md",
+      "editions/en/chapters/ch34/content.md",
+      "part02/chapter12/content.md",
+      "part03/chapter15/content.md",
+      "part03/chapter18/content.md",
+      "part04/chapter26/content.md",
+      "part06/chapter34/content.md"
+    ],
+    "independent_acceptance": false,
+    "synchronized": false,
+    "canonical_written": false,
+    "formal_publication": false,
+    "final_verified": false
+  }
+}

@@ -1,0 +1,292 @@
+{
+  "schema": "a10-protocol-execution-candidate.v2",
+  "status": "protocol_fields_completed_pending_permissions_and_execution_authorization",
+  "mode": "documentation_and_constructed_validation_only",
+  "route": "french_monthly_industry_momentum",
+  "data_identity": "French_20261005_revised_history_A10A_v1",
+  "assets": [
+    "NoDur",
+    "Durbl",
+    "Manuf",
+    "Enrgy",
+    "HiTec",
+    "Telcm",
+    "Shops",
+    "Hlth",
+    "Utils",
+    "Other"
+  ],
+  "permissions_status": "unknown",
+  "historical_pit": false,
+  "available_history_status": "unknown",
+  "date_window": {
+    "status": "user_confirmed_for_new_protocol_candidate",
+    "warmup_start": "1988-07",
+    "warmup_end": "1989-12",
+    "prewarmup_months": 18,
+    "start": "1990-01",
+    "end": "2026-08",
+    "evaluation_months": 440,
+    "development_start": "1990-01",
+    "development_end": "2004-08",
+    "development_months": 176,
+    "validation_start": "2004-09",
+    "validation_end": "2015-08",
+    "validation_months": 132,
+    "locked_reporting_start": "2015-09",
+    "locked_reporting_end": "2026-08",
+    "locked_reporting_months": 132,
+    "partition_ratios": [
+      0.4,
+      0.3,
+      0.3
+    ],
+    "rule": "development=floor(.4*n), validation=floor(.3*n), reporting=remainder; n=440",
+    "minimum_evaluation_months": 120,
+    "minimum_partition_months": 24
+  },
+  "feature": {
+    "formula": "product(1+R[m])-1",
+    "lookback_months": 11,
+    "skip_months": 1,
+    "months_for_holding_t": "t-12..t-2",
+    "general_window_for_trials": "holding t: t-skip_months-lookback_months .. t-skip_months-1 inclusive"
+  },
+  "signal_cutoff": "B_t - 1 second UTC",
+  "allocation_time": "B_t UTC hypothetical only",
+  "label_interval": "[B_t, B_(t+1))",
+  "label_available_at": "unknown for historical data",
+  "fit": {
+    "model_training": false,
+    "train_only_processing": "no fitted transforms; any new fitted transform needs protocol amendment",
+    "maturity_gap_months": null,
+    "purge_rule": "half-open label intersection with validation interval",
+    "future_side_embargo_months": 0
+  },
+  "portfolio": {
+    "top_k": 3,
+    "selected_weight": "1/3",
+    "baseline": "monthly equal weight 10 industries",
+    "gross": 1,
+    "net": 1,
+    "leverage": 1,
+    "short": false,
+    "negative_cash": false,
+    "ties": "stable sort by score descending then manifest asset index ascending",
+    "missing": "reject month/run; do not drop asset or impute silently",
+    "selected_weight_for_sensitivity": "1/top_k for each trial; main top_k=3 => 1/3"
+  },
+  "cost": {
+    "primary_bps_per_traded_notional": 10,
+    "rate": 0.001,
+    "formula": "Vpost=Vpre-c*sum(abs(w*Vpost-x))",
+    "turnover_definition": "sum abs dollar trades / Vpre; no half-turnover",
+    "spread": "included in abstract all-in linear rate; separate decomposition only constructed demo",
+    "entry_fee": true,
+    "terminal_liquidation_fee": true,
+    "short_borrow": "out_of_scope",
+    "financing": "out_of_scope",
+    "impact": "unknown_not_calibrated",
+    "capacity": "not_estimated",
+    "period_net_formula": "(Vpost_t/Vpre_t)*(1+R_alloc_t)-1; final month additionally multiplies (1-c) before subtracting 1",
+    "initial_pre_fee_nav": 1.0,
+    "initial_post_fee_nav": "1/(1+c)",
+    "terminal_liquidation": "Vterminal=V_end_T*(1-c); include in final monthly return",
+    "telescoping": "product(1+r_net_t)=Vterminal/Vinitial"
+  },
+  "endpoint": {
+    "primary": "mean paired monthly net return difference",
+    "h0": "mu<=0",
+    "h1": "mu>0",
+    "one_sided_alpha": 0.05,
+    "economic_threshold_decimal_monthly": 0.001,
+    "primary_sample": "locked_reporting_only",
+    "primary_sample_start": "2015-09",
+    "primary_sample_end": "2026-08",
+    "primary_n": 132,
+    "descriptive_only_samples": [
+      "development_176",
+      "validation_132",
+      "entire_evaluation_440"
+    ],
+    "paired_net_difference": "M0 net monthly return - EW10 net monthly return from same continuous ledgers; no RF subtraction"
+  },
+  "statistics": {
+    "HAC_lags": 6,
+    "kernel": "Bartlett",
+    "finite_sample_correction": true,
+    "reference": "t approximate",
+    "bootstrap": {
+      "method": "paired circular block",
+      "block_months": 12,
+      "resamples": 5000,
+      "seed": 20261012,
+      "sensitivity_block_months": [
+        6,
+        24
+      ],
+      "ci_type": "percentile",
+      "one_sided_lower_percentile": 5,
+      "two_sided_percentiles": [
+        2.5,
+        97.5
+      ],
+      "quantile_method": "linear interpolation at (B-1)*p",
+      "resampling_rule": "paired monthly d_t; iid uniform circular block start indices; concatenate ceil(n/block) blocks and truncate to n",
+      "rng": "Python random.Random(seed); uniform starts via randrange(n)",
+      "sample": "same 132 paired d rows from locked reporting; no regime reset or primary sample selection",
+      "selection_rule": "fixed inferential sensitivity, no interval-based winner or new statistical selection family"
+    },
+    "attribution": "FF3 descriptive after returns realized, RF once; no model ranking",
+    "primary_n": 132,
+    "constant_regression_parameters": 1,
+    "autocovariance_denominator": "n for every lag; never n-j",
+    "bartlett_weights": "w_j=1-j/(L+1); L=6; j=0..6",
+    "long_run_variance": "Omega=gamma0+2*sum(j=1..6,w_j*gamma_j)",
+    "covariance_correction": "n/(n-k); primary k=1 => n/(n-1)",
+    "mean_variance": "q*Omega/n=Omega/(n-1)",
+    "mean_se": "sqrt(Omega/(n-1)); q applied to covariance only",
+    "primary_df": 131,
+    "one_sided_lower": "mean(d)-t_quantile(.95,131)*SE",
+    "two_sided_interval": "mean(d)+/-t_quantile(.975,131)*SE",
+    "degeneracy_rule": "nonfinite/gapped/insufficient n/SE<=0 => explicit undefined or rejected status, no fake p=0, no silent lag reduction",
+    "statsmodels_mapping": {
+      "design": "single column ones",
+      "cov_type": "HAC",
+      "maxlags": 6,
+      "weights_func": "statsmodels.stats.sandwich_covariance.weights_bartlett",
+      "use_correction": true,
+      "use_t": true
+    },
+    "ff3_attribution": {
+      "parameters_including_intercept": 4,
+      "covariance_correction": "n/(n-4)",
+      "RF": "subtract same-month FF3 RF exactly once from net total return; published factors unchanged",
+      "primary_d_RF_subtraction": false
+    }
+  },
+  "search_budget": {
+    "strategy_paths": 9,
+    "baseline_cost_paths": 4,
+    "total_paths": 13,
+    "target_optimization_trials": 0,
+    "trial_list": [
+      {
+        "id": "M0",
+        "lookback_months": 11,
+        "skip_months": 1,
+        "top_k": 3,
+        "cost_bps_per_traded_notional": 10
+      },
+      {
+        "id": "C0",
+        "lookback_months": 11,
+        "skip_months": 1,
+        "top_k": 3,
+        "cost_bps_per_traded_notional": 0
+      },
+      {
+        "id": "C25",
+        "lookback_months": 11,
+        "skip_months": 1,
+        "top_k": 3,
+        "cost_bps_per_traded_notional": 25
+      },
+      {
+        "id": "C50",
+        "lookback_months": 11,
+        "skip_months": 1,
+        "top_k": 3,
+        "cost_bps_per_traded_notional": 50
+      },
+      {
+        "id": "L5",
+        "lookback_months": 5,
+        "skip_months": 1,
+        "top_k": 3,
+        "cost_bps_per_traded_notional": 10
+      },
+      {
+        "id": "L17",
+        "lookback_months": 17,
+        "skip_months": 1,
+        "top_k": 3,
+        "cost_bps_per_traded_notional": 10
+      },
+      {
+        "id": "K2",
+        "lookback_months": 11,
+        "skip_months": 1,
+        "top_k": 2,
+        "cost_bps_per_traded_notional": 10
+      },
+      {
+        "id": "K4",
+        "lookback_months": 11,
+        "skip_months": 1,
+        "top_k": 4,
+        "cost_bps_per_traded_notional": 10
+      },
+      {
+        "id": "S2",
+        "lookback_months": 11,
+        "skip_months": 2,
+        "top_k": 3,
+        "cost_bps_per_traded_notional": 10
+      }
+    ],
+    "baseline_cost_bps": [
+      0,
+      10,
+      25,
+      50
+    ],
+    "search_rule": "one factor at a time; no Cartesian product; all report, no winner selection"
+  },
+  "holdout": {
+    "historical_exposure": "exposed_or_unknown",
+    "blind": false,
+    "access_trigger": "original Codex acceptance + data gate + separate A10-B authorization",
+    "future_start": null,
+    "future_end": null
+  },
+  "execution_authorized": false,
+  "market_results_exist": false,
+  "protocol_revision": "r2_20261013",
+  "full_preregistration": false,
+  "market_verified": false,
+  "continuous_ledger": {
+    "paths": 13,
+    "start": "1990-01",
+    "end": "2026-08",
+    "initial_state": "cash only, normalized NAV 1",
+    "entry_count_per_path": 1,
+    "terminal_liquidation_count_per_path": 1,
+    "segment_boundary_reset": false,
+    "new_segment_entry_fees": false,
+    "segment_weights": "actual drifted holdings inherited from previous monthly close",
+    "reporting_slice": "132 monthly d rows from continuous paths, includes 2026-08 terminal liquidation",
+    "display_rebase_only": true,
+    "display_rebase_changes_fees": false,
+    "separately_reset_subwindow_path_authorized": false,
+    "warmup_wealth_initialization": false,
+    "gross_accounting": "zero-cost counterfactual bookkeeping attached to existing path; not a new signal/selection path",
+    "primary_mean_is_not_full440_mean": true
+  },
+  "permissions_scope": {
+    "actual_legal_entity": "unknown",
+    "actual_purpose": "unknown",
+    "persistent_cache": "unknown",
+    "internal_computation": "unknown",
+    "actual_derived_output": "unknown",
+    "raw_redistribution": "not_requested; not planned, not granted",
+    "public_download_is_permission": false
+  },
+  "gates": {
+    "G01": "unknown",
+    "G02": "user_confirmed_written_in_new_candidate_only",
+    "G03": "accepted_revised_history_nonPIT_scope",
+    "G04": "completed_candidate_pending_original_main_independent_check",
+    "G05": "execution_not_authorized"
+  }
+}

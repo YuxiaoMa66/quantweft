@@ -1,0 +1,426 @@
+中文,English,缩写,用法
+量化金融,quantitative finance,,领域
+金融工程,financial engineering,,领域
+系统化交易,systematic trading,,明确决策规则
+算法交易,algorithmic trading,,程序执行交易决策
+特征,feature,,已知输入
+信号,signal,,方向或排序
+预测,forecast,,未来条件估计
+目标权重,target weight,,配置决策
+订单,order,,交易请求
+成交,fill,,实际数量价格时点
+持仓,position,,实际数量
+暴露,exposure,,注明资本或敏感度口径
+损益,profit and loss,PnL,货币金额
+净资产值,net asset value,NAV,共同权重分母
+阿尔法,alpha,,模型截距或明确注明主动收益含义
+贝塔,beta,,线性敏感度
+因子,factor,,区分特征和组合收益
+基点,basis points,bps,1bp=0.0001
+协方差,covariance,,同频收益平方
+半正定,positive semidefinite,PSD,合法协方差
+正定,positive definite,PD,逆公式条件
+全局最小方差,global minimum variance,GMV,预算约束最小方差
+最小方差前沿,minimum-variance frontier,,包括无效率下支
+有效前沿,efficient frontier,,上支
+切点组合,tangency portfolio,,正超额预算1基金需存在条件
+资本配置线,capital allocation line,CAL,输入矩优化
+资本市场线,capital market line,CML,额外市场均衡
+仿射组合,affine combination,,系数和为1
+总体矩,population moments,,生成过程参数
+估计矩,estimated moments,,窗口统计量
+样本外,out-of-sample,,未参与选择的评价
+点时,point-in-time,PIT,历史可得版本
+等权,equal weight,EW,不估计矩
+最小方差,minimum variance,MinVar,只估协方差
+最大夏普,maximum Sharpe,MaxSharpe,估计均值与协方差
+等风险贡献,equal risk contribution,ERC,风险份额等分
+标准行业分类,Standard Industrial Classification,SIC,来源行业归类
+开盘最高最低收盘价和成交量,Open High Low Close Volume,OHLCV,区分组合收益文件与行情观测
+美国证券交易委员会,U.S. Securities and Exchange Commission,SEC,首现展开
+数组,array,,同类型值及维度
+形状,shape,,注明时间/资产轴
+广播,broadcasting,,不证明轴语义
+标签对齐,label alignment,,按index label配对
+滚动窗口,rolling window,,端点与min_periods
+扩展窗口,expanding window,,累计历史
+时间重采样,resampling,,日历分箱非真实成交
+查询计划,query plan,,lazy执行与优化
+应用程序接口,application programming interface,API,接口契约
+集成开发环境,integrated development environment,IDE,静态辅助
+永久证券标识,permanent security identifier,,区别发行人与ticker
+点时数据,point-in-time data,PIT,历史可知
+外部可用时间,external availability time,available_at,源版本顺序
+系统入库时间,ingestion time,ingested_at,资格非版本次序
+修订时间,revision time,revision_time,保留历史
+公司行动,corporate action,,权益事件
+拆股调整价格,split-adjusted price,,可比股份单位非实际报价
+总回报,total return,TR,不重复计现金
+退市,delisting,,保留终值未知
+应收款,receivables,,支付为重分类
+双时间数据,bitemporal data,,有效与系统时间轴
+夏令时,daylight saving time,DST,使用IANA时区
+微积分,calculus,,变化率与累积
+全微分,total differential,,局部线性主部
+海森矩阵,Hessian matrix,,二阶偏导
+余项,remainder,,注明光滑条件
+中心差分,central difference,,差分点与步长
+可行方向,feasible direction,,预算及边界
+线性代数,linear algebra,,轴与维度
+张成空间,span,,所有线性组合
+零空间,null space,,Av=0
+奇异值分解,singular value decomposition,SVD,长方矩阵分解
+主成分得分,principal component score,,训练方向坐标
+解释方差比,explained variance ratio,EVR,训练样本几何
+条件数,condition number,,数值敏感性
+样本空间,sample space,,possible outcomes
+事件,event,,measurable outcome set
+概率测度,probability measure,,dimensionless event probability
+条件概率,conditional probability,,state conditioning direction
+概率质量函数,probability mass function,PMF,discrete probabilities sum to1
+概率密度函数,probability density function,PDF,inverse-variable units; integrate for probability
+累积分布函数,cumulative distribution function,CDF,P(X<=x)
+大数定律,law of large numbers,LLN,sample mean convergence under stated assumptions
+强大数定律,strong law of large numbers,SLLN,IID finite absolute first moment sufficient
+中心极限定理,central limit theorem,CLT,standardized mean; specify independence or dependence assumptions
+弱白噪声,weak white noise,WN,zero nonzero-lag covariance does not ensure independence
+共同随机尺度,shared random scale,,one scale held across entire constructed sequence
+混合分布,mixture distribution,,distribution averaged over latent states
+过滤族,filtration,,information available by each time
+总体参数,population parameter,,fixed unknown distribution feature
+估计目标,estimand,,state target population/window/units
+估计量,estimator,,random sample statistic
+估计值,estimate,,realized statistic on observed sample
+抽样分布,sampling distribution,,estimator distribution across repeated samples
+标准误,standard error,SE,estimator variation not return volatility
+均方误差,mean squared error,MSE,variance plus squared bias
+最大似然估计,maximum likelihood estimation,MLE,maximize specified likelihood
+置信区间,confidence interval,,frequentist procedure coverage
+可信区间,credible interval,,posterior mass given model/prior
+显著性水平,significance level,,TypeI error target not pricing alpha
+检验功效,power,,rejection probability under specified alternative
+循环区块自助法,circular block bootstrap,,fixed ordered blocks with wraparound
+有效样本量,effective sample size,,mean-variance approximation; not universal degrees of freedom
+四阶矩,fourth moment,,E[Z^4]; normal variance v gives 3v^2 in the shared-scale teaching counterexample
+普通最小二乘,ordinary least squares,OLS,unique coefficients require full column rank
+条件外生性,conditional exogeneity,,conditional zero-mean errors
+高斯—马尔可夫条件,Gauss–Markov assumptions,,classical linear unbiased variance comparison
+残差平方和,residual sum of squares,RSS,squared response units
+总平方和,total sum of squares,TSS,positive denominator for R squared
+决定系数,coefficient of determination,R²,in-sample fit; not causality or trading return
+调整决定系数,adjusted R squared,,positive residual degrees of freedom
+异方差,heteroskedasticity,,unequal conditional error variance
+自相关,autocorrelation,,cross-period dependence
+多重共线性,multicollinearity,,feature linear dependence
+残差自由度,residual degrees of freedom,,n minus intercept-inclusive parameter count
+非冗余限制,nonredundant restrictions,,full row rank restriction matrix
+杠杆值,leverage,,hat matrix diagonal; HC3 requires below one
+帽子矩阵,hat matrix,,orthogonal fitted-value projection
+岭回归,Ridge regression,,loss scaling determines alpha correspondence
+套索回归,Lasso regression,,L1 penalty with soft thresholding
+弹性网络回归,Elastic Net regression,,L1 L2 mixture
+次梯度,subgradient,,absolute value interval at zero
+软阈值,soft thresholding,,one-dimensional Lasso solution
+目标函数,objective function,,explicit units and minimization direction
+决策变量,decision variable,,quantities the model can choose
+可行点,feasible point,,satisfies all constraints
+凸集,convex set,,contains segments between its points
+凸函数,convex function,,below chords
+二次规划,quadratic program,QP,this chapter restricts to convex QP
+线性规划,linear program,LP,linear objective and affine constraints
+拉格朗日函数,Lagrangian,,dual multiplier sign follows constraint form
+弱对偶,weak duality,,dual bound on primal values
+强对偶,strong duality,,equal optimal values
+互补松弛,complementary slackness,,nonbinding inequalities have zero multipliers
+斯莱特条件,Slater condition,,sufficient constraint qualification
+影子价格,shadow price,,local objective sensitivity to resource bound
+相对内部,relative interior,,interior within affine hull
+活动约束,active constraint,,binding need not imply a positive multiplier
+定义域,domain,,where the stated formula is defined
+成交,trade execution,,order execution event
+清算,clearing,,obligations and netting distinct from settlement
+交收,settlement,,transfer of agreed cash or securities
+股息应收,dividend receivable,,entitlement before cash payment
+名义敞口,notional exposure,,reference exposure not posted collateral
+变动保证金,variation margin,VM,periodic contract cash settlement
+合约乘数,contract multiplier,,quote-point to contract monetary amount
+折扣率,haircut,,repo collateral financing buffer
+覆盖利率平价,covered interest parity,CIP,same maturity positive accumulation factors
+修正久期,modified duration,,local fixed-cash-flow yield sensitivity
+凸性,convexity,,second derivative divided by positive price
+期权支付额,option payoff,,before premium and financing
+简单收益,simple return,,wealth difference over beginning wealth
+对数收益,log return,,positive wealth ratio natural logarithm
+几何平均,geometric mean,,equal-interval compounded growth
+复合年增长率,compound annual growth rate,CAGR,no external cash flows and explicit year span
+时间加权收益,time-weighted return,TWR,segment around external flows
+资金加权收益,money-weighted return,,investor flow amounts and timing
+内部收益率,internal rate of return,IRR,cash-flow discount equation
+弱平稳增量,weakly stationary increments,,constant moments and lag covariances
+结构性基准行,structural baseline row,,display sentinel excluded from return statistics
+归母净利润,net income attributable to the parent,,distinct from earnings available to common when preferred distributions exist
+普通股可用盈利,earnings available to common shareholders,,after applicable preferred distributions
+选定经营营运资本,selected operating working capital,Selected OWC,declared subset rather than universal NWC
+经营活动现金流,cash flow from operations,CFO,signed period operating cash
+资本开支,capital expenditure,CapEx,positive expenditure under declared scope
+企业自由现金流,free cash flow to firm,FCFF,operating scope matched to WACC and EV
+股权自由现金流,free cash flow to equity,FCFE,common-equity scope matched to equity cost
+非控股权益,noncontrolling interest,NCI,consolidated scope outside-parent equity claim
+非经营资产,nonoperating assets,NOA,separately valued assets excluded from matched operating cash
+加权平均资本成本,weighted average cost of capital,WACC,matched operating risk and financing claims
+终值,terminal value,TV,value at explicit forecast endpoint
+不应依赖通知,non-reliance notice,,separate validity state from numerical version availability
+权益法,equity method,,associates or joint ventures subject to applicable standards
+随机贴现因子,stochastic discount factor,SDF,state-dependent current-value weight
+状态价格,state price,,q=p times m; need not sum to one
+完备市场,complete market,,traded payoffs span state-payoff space
+证券市场线,Security Market Line,SML,CAPM expected return versus beta
+因子载荷,factor loading,,dimensionless conditional linear exposure
+残差协方差,residual covariance,,need not be diagonal
+同期归因,contemporaneous attribution,,uses realized same-period factors; not ex ante prediction
+严格嵌套模型,strictly nested models,,old columns identical when adding regressors
+Holm逐步校正,Holm step-down adjustment,,covers declared nine-intercept family only
+随机过程,stochastic process,,time-indexed family of random variables
+一次实现,realization,,one observed path rather than a population law
+遍历性,ergodicity,,conditions connecting path averages and population expectations
+严格平稳,strict stationarity,,all finite-dimensional distributions invariant to time shifts
+弱平稳,weak stationarity,,finite constant mean and lag-only covariance
+偏自相关函数,partial autocorrelation function,PACF,linear dependence after controlling intermediate lags
+可逆性,invertibility,,stable unique innovation representation under declared MA convention
+单位根,unit root,,AR polynomial root on unit circle; ordinary ADF addresses +1
+协整,cointegration,,nonstationary series with a lower-order linear combination
+误差修正模型,error-correction model,ECM,short-run differences plus lagged long-run error
+Granger预测检验,Granger-causality test,,incremental lagged predictive information; no structural intervention claim
+稳态初始化,stationary initialization,,initial distribution matched to stationary solution
+已实现方差,realized variance,RV,sum of squared intrainterval log-return increments
+二次变差,quadratic variation,QV,limiting path variation; distinguish conditional variance
+波动聚集,volatility clustering,,dependence in squared returns or innovations
+准极大似然,quasi-maximum likelihood,QML,conditional objective with stated regularity conditions
+QLIKE损失,quasi-likelihood loss,QLIKE,log forecast plus proxy divided by forecast
+微观结构噪声,market microstructure noise,,measurement noise can contaminate fine-grid realized variance
+状态空间模型,state-space model,,state transition and observation equations
+潜在状态,latent state,,unobserved state described by the model
+卡尔曼增益,Kalman gain,,maps observation innovation into state units; not a probability
+创新方差,innovation variance,,observation-scale forecast error variance S
+滤波状态,filtered state,,state estimate incorporating the current observation
+平滑状态,smoothed state,,state estimate incorporating observations after the target date
+Joseph协方差更新,Joseph covariance update,,numerically stable covariance update under declared model
+动态对冲比率,dynamic hedge ratio,,time-varying exposure with explicit execution clock
+协方差收缩,covariance shrinkage,,combine noisy covariance with a structured target
+美元中性,dollar neutrality,,zero net weight; distinct from beta neutrality
+行业中性,sector neutrality,,absolute exhaustive sector constraints imply dollar neutrality
+风险预算,risk budgeting,,specified relative risk contributions
+后验均值协方差,posterior-mean covariance,,uncertainty about the mean; distinguish predictive return covariance
+二次增长代理,quadratic growth proxy,,"declared approximation, not exact discrete log utility"
+权重换手代理,weight-turnover proxy,,buy-plus-sell weight difference; not exact traded notional
+阻尼Newton法,damped Newton method,,line search preserves domain; verify original residuals
+家族错误率,family-wise error rate,FWER,probability of one or more false rejections among a specified family
+错误发现率,false discovery rate,FDR,expected fraction of false rejections among all rejections; zero when no rejection
+试验账本,trial ledger,,append-only record of evaluated attempts including undefined and abandoned
+胜者诅咒,winner's curse,,selected effect-size inflation; multiplicity correction is not effect-size debiasing
+有效独立试验数,effective number of independent trials,,here matched to mean maximum absolute statistic; not a tail-error guarantee
+配对内重排名,reranking within valid pairs,,rank each side after restricting to both-finite observations
+有效日期数,number of valid dates,,time aggregation count; distinct from signals and paired assets
+方差膨胀因子,variance inflation factor,VIF,variance-of-mean ratio under stated dependence model; may be below one
+禁运窗,embargo window,,gap prevents label overlap; not a guarantee of temporal independence
+结果曝光,result exposure,,record of previously seen results; separate from local content hashing
+目标权重换手,target-weight turnover,,"sum absolute target changes; buys plus sells, no halving or price drift"
+账面市值比,book-to-market,B/M,stock/stock value characteristic
+盈利收益率,earnings yield,E/P,fixed annual earnings divided by equity market cap; not monthly return
+价值陷阱,value trap,,cheap ratio with deteriorating fundamentals; not directly observable label in real data
+持仓批次,vintage,,one dated set of target weights; share replacement distinct from traded quantity
+形成区间,formation interval,,explicit endpoints and observation count
+时间序列动量,time-series momentum,TSMOM,own past-return sign; volatility scaling and always-long benchmark
+横截面动量,cross-sectional momentum,XSMOM,relative ranks; nominal net zero does not ensure beta zero
+应计项目比率,accrual ratio,,net income minus operating cash flow over average assets; sign explicit
+毛利润对资产,gross profitability,GP/A,course average-assets convention distinguished from original paper
+同版本规则,same-version rule,,numerator and comparative balances from one known filing
+权益乘数,equity multiplier,,assets/equity; distinguish average from ending balances
+套息,carry,,counterfactual return on stated capital under unchanged market conditions
+抵押资本,collateral capital,,return denominator distinct from notional
+名义金额,notional,,price times contract units; distinguish collateral
+远期升贴水,forward premium,,F/S minus 1 under a fixed quote direction
+现货升水,backwardation,,nearby contract above deferred contract
+期货升水,contango,,deferred contract above nearby contract
+便利收益,convenience yield,,net benefit of holding the physical commodity
+展期收益,roll yield,,"unchanged-curve convergence, not a roll-date splice jump"
+滑降,roll-down,,bond maturity shortens along an unchanged yield curve
+低波动,low volatility,,rank on ex ante volatility; distinct from low beta
+低贝塔,low beta,,market sensitivity does not determine total volatility
+押注低贝塔,betting against beta,BAB,state estimated/true beta and financing leg separately
+全额抵押指数,fully collateralized index,,rebalance notional with wealth; not fixed one-contract cash ledger
+缩尾,winsorization,,same-date quantiles can create ties
+正态分数,normal scores,,rank-based values; not immune to new names or missingness
+正交化,orthogonalization,,residualize on previous signals; declare order
+合成信息系数,composite information coefficient,,requires feasible joint moments and nonzero variance
+上市支持集,listed support set,,all signal-listed coordinates; no-alpha names may hedge
+有效阿尔法集,alpha-valid set,,nonmissing score subset used for initial ranking
+齐次约束,homogeneous constraints,,Aw=0 survives common scaling; nonzero targets generally do not
+完全随机缺失,missing completely at random,MCAR,缺失机制独立于所讨论信号
+自融资,self-financing,,no external deposits or withdrawals
+扣费后净值,post-fee NAV,,"target denominator at execution, distinct from closing NAV"
+执行价,execution price,E,explicit fill benchmark; default E=P is only a closing-mark proxy
+标记价,mark price,P,"valuation price, not necessarily execution price"
+自由现金,free cash,F,available cash outside segregated collateral
+受限抵押,restricted collateral,R,internal transfers cancel in NAV
+借券回扣,borrow rebate,,declare collateral-interest basis; do not add it twice
+不交易区域,no-trade region,,region of current drifted state u under declared static objective
+实施短缺,implementation shortfall,IS,signed single-parent domain; identity does not validate fee semantics
+排除自成交量参与率,exclusive participation rate,,own fill divided by external volume
+包含自成交量参与率,inclusive participation rate,,own fill divided by external plus own volume
+截止余量,cutoff remainder,,signed unfilled parent quantity R=Q-F
+总回报代理水平,total-return proxy level,,synthetic unit; no dividend cash booked again
+执行副本,execution copy,,eligibility-adjusted target copy; original signal preserved
+回测偏差,backtesting bias,,identify the contaminated information or accounting channel
+前视偏差,look-ahead bias,,release and ingestion must precede decision
+幸存者偏差,survivorship bias,,do not apply end-of-period survival backward
+数据窥探,data snooping,,retain all attempted specifications
+选择最大值,selection maximum,,expectation is not a critical value
+逆Mills比率,inverse Mills ratio,,normal truncation model with fixed location and scale
+半开标签区间,half-open label interval,,"(t,e]; touching is not overlap"
+标签结束时点,label end time,e,settlement endpoint distinct from availability
+标签可得时点,label availability time,a,caller filters actual availability before fitting
+前视净化,purging,,remove any candidate overlapping any test label
+特征禁运,embargo,,post-test feature-support buffer under declared coordinates
+净化向前步进,purged walk-forward,,past and available training candidates
+净化交叉验证,purged K-fold,,offline diagnostic may use future blocks
+嵌套验证,nested validation,,select only inside current outer training fold
+总L1换手,total L1 turnover,,buy plus sell notional divided by pre-trade NAV
+下行偏差,downside deviation,DD,full-sample denominator includes zero shortfalls
+索提诺比率,Sortino ratio,,state target frequency and annualization convention
+盈利因子,profit factor,PF,period-return ratio here; differs from trade-money PF
+概率夏普比率,probabilistic Sharpe ratio,PSR,moment-based asymptotic approximation
+折减夏普比率,deflated Sharpe ratio,DSR,Gaussian expected-maximum approximation; not exact FWER
+回测过拟合概率,probability of backtest overfitting,PBO,state strict-rank or CSCV-logit convention
+组合对称交叉验证,combinatorially symmetric cross-validation,CSCV,equal time blocks and complementary halves
+期望最大值,expected maximum,,expectation differs from a family-wise critical quantile
+有效试验数,effective number of trials,,correlation interpolation is heuristic
+原始峰度,raw kurtosis,,normal benchmark is 3
+预期尾部损失,expected shortfall,ES,tail loss mean with fractional probability at atoms
+在险价值,value at risk,VaR,confidence level horizon and loss convention required
+分数尾部,fractional tail,,allocate threshold atom mass to exact tail probability
+超越指示变量,exceedance indicator,,one when realized loss exceeds forecast VaR
+无条件覆盖,unconditional coverage,,Kupiec count-based coverage does not test clustering
+比例失败检验,proportion-of-failures test,POF,iid Bernoulli likelihood with asymptotic chi-square calibration
+保证金余量,margin headroom,,collateral less required margin; not position direction
+清算天数,liquidation days,,fixed participation capacity approximation
+毛暴露,gross exposure,,sum absolute position weights
+尺度参数,scale parameter,,Student-t scale is not its standard deviation
+买价,bid,,venue and time specific
+卖价,ask,,venue and time specific
+中间价,midpoint,mid,mark; not a fill promise
+报价点差,quoted spread,,absolute USD/share; relative spread dimensionless
+有效点差,effective spread,,twice direction-adjusted fill-minus-arrival mid
+实现点差,realized spread,,specified post-trade horizon
+滑点,slippage,,declare direction benchmark and units
+临时冲击,temporary impact,,model component in current fill price
+永久冲击,permanent impact,,persistent model update; not inferred from finite markout
+可见深度,displayed depth,,single snapshot conditional executability
+订单簿扫单,order-book sweep,,static visible-depth calculator
+在途预留量,reserved in-flight quantity,,sent but not confirmed at next send
+事前预测量排程,forecast-volume schedule,,freeze forecast before first send
+事后市场均价,ex-post market VWAP,,external trades exclude own unless separately stated
+执行风险,execution risk,,price exposure during execution
+暗池路由,dark-pool routing,,model thresholds require applicable evidence
+配对交易,pairs trading,,"training-only screening, two-leg execution and full evidence boundaries"
+拆股权益,split entitlement,,exact decimal conversion is distinct from fractional execution support
+整股执行支持域,whole-share execution domain,,fractional actual holdings cause whole-account rejection before daily accrual
+仓位事件,position episode,,from first fill leaving flat to both legs flat; open episodes excluded from win rate
+首次到达价,first-arrival price,,fixed parent-order anchor for repeated partial fills
+冻结价差,frozen spread,,trading-period spread uses formation coefficients and normalization
+同向对冲,same-direction hedge,,negative log elasticity can imply same-sign legs under first-order conditions
+出场补单,exit retry,,"completion constrained by sample length, capacity and execution domain"
+幅度加权准确率,magnitude-weighted accuracy,,same invested nonzero-return subset; p=±1 identity
+方向准确率,directional accuracy,,equal weight per evaluated observation
+信噪比,signal-to-noise ratio,SNR,linear model variance ratio
+状态切换,regime shift,,prediction relation changes
+校准斜率,calibration slope,,linear projection diagnostic; not complete calibration
+可靠性图,reliability diagram,,group average prediction versus realization
+特征工程,feature engineering,,information source and availability explicit
+标签成熟,label maturity,,label_available_at no later than fit_time
+截面误差,cross-sectional error,,demeaned squared error retains scale
+紧奇异值分解,compact singular value decomposition,compact SVD,rank-r basis excludes nullspace
+正则化路径,regularization path,,coefficients over penalty grid
+弹性网,Elastic Net,,L1 and L2 mixture; same concept as 弹性网络回归
+软阈值算子,soft-thresholding operator,,sign(z)(abs(z)-t)+
+无核衰减截断,unweighted covariance truncation,,distinct from fixed Bartlett NW
+固定带宽Bartlett核,fixed-bandwidth Bartlett kernel,,weights 1-k/(q+1)
+构造展示回放,constructed display replay,,reads frozen payloads; no new training
+回归树,regression tree,CART,recursive axis-aligned partitions; leaf mean under squared loss
+树桩,decision stump,,one split
+随机森林,random forest,RF,averaging with feature sampling; correlation-bias-variance tradeoff
+梯度提升,gradient boosting,GBM,negative-gradient function updates
+直方图梯度提升,histogram gradient boosting,HGB,training-only binning and date-based round selection
+叶样本约束,minimum leaf samples,,panel rows are not independent dates
+不纯度重要性,mean decrease in impurity,MDI,training diagnostic; high-cardinality bias
+置换重要性,permutation importance,,loss increase on a declared validation set
+组置换,group permutation,,one within-date permutation shared by group columns
+夏普利值,Shapley value,,allocation depends on value function and background
+干预式SHAP,interventional SHAP,,draw complement jointly from background; not causal identification
+条件式SHAP,conditional SHAP,,condition background on observed coordinates
+消融,ablation,,registered component removal with matched evaluation
+主成分分析,principal component analysis,PCA,training variance directions; no prediction guarantee
+解释方差比例,explained variance ratio,,training eigenvalue divided by trace
+重构决定系数,reconstruction R-squared,,orthogonal projection with frozen center and positive total norm
+主成分回归,principal component regression,PCR,truncation may discard predictive directions
+子空间主角,principal angles,,subspace relation; not individual-axis rotation
+符号不确定性,sign indeterminacy,,sign convention does not resolve repeated-eigenvalue rotations
+劳埃德迭代,Lloyd iteration,,assignment and mean updates with stated tie and empty-cluster rules
+调整兰德指数,adjusted Rand index,ARI,label invariant; perturbation design determines stability meaning
+隐马尔可夫模型,hidden Markov model,HMM,observations conditionally independent given complete latent path
+滤波概率,filtered probability,,past observations with training-fixed parameters
+平滑概率,smoothed probability,,uses later observations; historical diagnostic
+白化,whitening,,rescales PC scores; breaks the stated same-penalty orthogonal control
+MP谱边界,Marchenko-Pastur spectral edge,MP,iid asymptotic reference; not a hard finite-sample bound
+结构归纳偏置,structural inductive bias,,architecture constrains the function class; no automatic trading advantage
+多层感知机,multilayer perceptron,MLP,the complete trained architecture in Chapter 42
+反向传播,backpropagation,,chain rule with explicit batch and output normalization
+小批次,mini-batch,,shuffle only within the mature training block
+雅可比矩阵,Jacobian matrix,,vector fixed-gate LSTM direct path is diag(f)
+互相关,cross-correlation,,kernel is not reversed; distinguish finite valid boundaries
+平移等变性,translation equivariance,,valid only on common positions under stated boundary conventions
+遗忘门,forget gate,,direct path gain; not the total derivative
+恒定误差回路,constant error carousel,CEC,does not eliminate all gradient decay
+缩放点积注意力,scaled dot-product attention,,Q/K/V operator; no complete Transformer training here
+因果掩码,causal mask,,additive zero retains logits; negative infinity excludes future keys
+后验预测分布,posterior predictive distribution,,integrates shared parameter uncertainty
+共轭先验,conjugate prior,,posterior belongs to the prior family under the chosen likelihood
+边际似然,marginal likelihood,,normalizing probability or density of observed data
+部分池化,partial pooling,,known hyperparameters in this teaching example
+后验精度,posterior precision,,inverse posterior variance; inverse squared-return units
+条件可交换性,conditional exchangeability,,identification assumption; not verified by the constructed table
+正值性,positivity,,population support condition; finite empty cells are a separate data-support check
+稳定个体处理值假设,stable unit treatment value assumption,SUTVA,no interference and no hidden treatment versions
+分层标准化,stratified standardization,,same target weights in both arms; causal only under assumptions
+对撞物,collider,,conditioning may induce association; arrows alone do not fix its sign
+词袋,bag of words,BoW,unordered counts; no statistical independence assumption
+词频逆文档频率,term frequency–inverse document frequency,TF-IDF,vocabulary and IDF fitted only on training documents
+词表外词项,out-of-vocabulary term,OOV,ignored by frozen vocabulary; all-OOV input yields a zero vector
+均值池化,mean pooling,,normalization requires a nonzero pooled vector
+预训练语料截止,pretraining corpus cutoff,,a cutoff declaration alone is insufficient for historical PIT
+费用容忍度,fee tolerance,,fixed proportional fee-model sensitivity; not AUM capacity
+伊藤等距,Itô isometry,,square-integrable predictable/progressive integrands
+除息价格,ex-dividend price,,distinguish price drift from total-return drift
+市场风险价格,market price of risk,,lambda has units year^(-1/2)
+反偶变量,antithetic variates,,independent unit is a pair mean
+剩余期限,remaining maturity,,API T equals tau; calendar Theta is minus V_tau
+强误差,strong error,,common-noise terminal L2 RMSE here
+弱误差,weak error,,paired mean difference for g(S)=S here
+渐进可测,progressively measurable,,joint measurability condition for the integrand
+可预测,predictable,,holding based on information available before the increment
+数据闸,data gate,,"schema, finite values and explicit units"
+时点闸,timing gate,,eligible historical version before signal
+执行闸,execution gate,,risk checks and durable-fill remainder
+对账闸,reconciliation gate,,independent cash/quantity/NAV checks
+恢复闸,recovery gate,,"unpublished, valid and corrupt publication branches"
+幂等性,idempotency,,fixed input identity and confirmed durable fills
+数据血缘,data lineage,,configuration/input/code identity
+列投影下推,projection pushdown,,read only requested columns
+过滤下推,filter pushdown,,skip eligible row groups using metadata
+全额成交,full fill,,positive real share quantities; no lot restriction
+命名空间原子性,namespace atomicity,,same-filesystem rename; not power-loss durability
+累计均值,cumulative mean,,all observations through current t; no retroactive increments
+协变量偏移,covariate shift,,"changed P(X), invariant P(Y|X)"
+环形块自助法,circular block bootstrap,,single seeded generator across all replications
+锁定报告,locked reporting,,future access constraint on exposed history; not blind holdout
+费后目标,post-cost target,,target monetary holdings w times post-cost NAV
