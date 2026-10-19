@@ -33,15 +33,15 @@
     );
     document.title =
       language === "en"
-        ? "Quantitative Finance and Systematic Research | Yuxiao Ma"
-        : "量化金融与系统化研究 | Yuxiao Ma";
+        ? "QuantWeft | Yuxiao Ma"
+        : "QuantWeft · 量化经纬 | Yuxiao Ma";
     document.querySelector('meta[name="description"]').content =
       language === "en"
-        ? "A bilingual quantitative finance course: 45 chapters, six projects, a Capstone, complete textbooks, workbooks, and shared Notebooks."
-        : "量化金融与系统化研究：45章、六个项目与Capstone，中英文教材、练习册与共享Notebook。";
+        ? "QuantWeft, a bilingual quantitative finance course: 45 chapters, six projects, a Capstone, complete textbooks, workbooks, and shared Notebooks."
+        : "QuantWeft · 量化经纬：45章、六个项目与Capstone，中英文教材、练习册与共享Notebook。";
     document.querySelectorAll("[data-doc-zh]").forEach((a) => {
       a.href =
-        "https://github.com/YuxiaoMa66/quant_course/blob/main/" +
+        "https://github.com/YuxiaoMa66/quantweft/blob/main/" +
         a.dataset[language === "en" ? "docEn" : "docZh"];
     });
     code.textContent = code.textContent.replace(

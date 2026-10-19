@@ -1,8 +1,10 @@
 <p align="right"><strong>简体中文</strong> | <a href="README.en.md">English</a></p>
 
-![量化金融与系统化研究，Yuxiao Ma 编著](docs/assets/course-cover.png)
+![QuantWeft · 量化经纬，Yuxiao Ma 编著](docs/assets/quantweft-cover.png)
 
-# 量化金融与系统化研究
+# QuantWeft · 量化经纬
+
+**量化金融与系统化研究双语课程**
 
 从数学与金融基础，到可复现的系统化研究。
 
@@ -16,8 +18,8 @@
 
 | | 中文 | English |
 | :--- | :--- | :--- |
-| **正文**：概念、推导与完整示例 | [阅读中文教材](editions/zh/body/main.pdf) | [Read the textbook](editions/en/body/main.pdf) |
-| **练习册**：主动回忆、练习与完整答案 | [阅读中文练习册](editions/zh/workbook/quant-course-workbook-zh.pdf) | [Read the workbook](editions/en/workbook/quant-course-workbook-en.pdf) |
+| **正文**：概念、推导与完整示例 | [阅读中文教材](editions/zh/body/quantweft-textbook-zh.pdf) | [Read the textbook](editions/en/body/quantweft-textbook-en.pdf) |
+| **练习册**：主动回忆、练习与完整答案 | [阅读中文练习册](editions/zh/workbook/quantweft-workbook-zh.pdf) | [Read the workbook](editions/en/workbook/quantweft-workbook-en.pdf) |
 | **学习入口**：先修关系与项目安排 | [中文学习指南](editions/zh/README.md) | [English learning guide](editions/en/README.md) |
 
 建议先读正文，独立完成练习册，再运行 Notebook 核对计算与输出。完整教材以 PDF 为阅读入口；仓库不包含原编辑工作区的完整 PDF 排版构建链。

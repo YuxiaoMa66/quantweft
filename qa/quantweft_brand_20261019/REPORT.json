@@ -1,0 +1,36 @@
+{
+  "scope": "QuantWeft brand and filenames only",
+  "website_links": 24,
+  "current_entry_links": "PASS",
+  "browser_matrix": "12 zh/en light/dark 1280/390/320 widths PASS; interaction checks PASS",
+  "provenance_verifier": "842 source identities accounted; four PDFs unchanged",
+  "old_repository_visibility": "private",
+  "new_owner_path_available": "YuxiaoMa66/quantweft returned404 before rename",
+  "course_execution": "not run",
+  "PDF_build": "not run",
+  "independent_review": {
+    "decision": "PASS",
+    "reviewer": "separate luna_max_worker naming_acceptance",
+    "scope": "Frozen branding and filename-only revision"
+  },
+  "local_sync": {
+    "scope": "QuantWeft branding only",
+    "writes": 33,
+    "pdf_path_map": {
+      "editions/zh/body/main.pdf": "editions/zh/body/quantweft-textbook-zh.pdf",
+      "editions/zh/workbook/quant-course-workbook-zh.pdf": "editions/zh/workbook/quantweft-workbook-zh.pdf",
+      "editions/en/body/main.pdf": "editions/en/body/quantweft-textbook-en.pdf",
+      "editions/en/workbook/quant-course-workbook-en.pdf": "editions/en/workbook/quantweft-workbook-en.pdf"
+    },
+    "four_pdf_bytes": "unchanged, equal in editor formal package and GitHub checkout",
+    "formal_files": 847,
+    "manifest_sha256": "7980650b48620cdace182c63b3a49392c175e65a0db8d553ba68fb98d9c17d0d",
+    "backup": "BACKUP_MANIFEST.json",
+    "independent_review": "PASS",
+    "historical_records": "preserved",
+    "course_execution": "not_run",
+    "pdf_rebuild": "not_run",
+    "public_publication": false
+  },
+  "asset_review": "New QuantWeft course cover visually inspected; Chinese mobile website header inspected"
+}

@@ -1,8 +1,10 @@
 <p align="right"><a href="README.md">简体中文</a> | <strong>English</strong></p>
 
-![Quantitative Finance and Systematic Research by Yuxiao Ma](docs/assets/course-cover.png)
+![QuantWeft by Yuxiao Ma](docs/assets/quantweft-cover.png)
 
-# Quantitative Finance and Systematic Research
+# QuantWeft
+
+**A Bilingual Course in Quantitative Finance and Systematic Research**
 
 From mathematical and financial foundations to reproducible systematic research.
 
@@ -16,8 +18,8 @@ A bilingual course for learners who want to understand models, implement them, a
 
 | | English | 中文 |
 | :--- | :--- | :--- |
-| **Textbook**: concepts, derivations, and worked examples | [Read the textbook](editions/en/body/main.pdf) | [阅读中文教材](editions/zh/body/main.pdf) |
-| **Workbook**: active recall, exercises, and complete answers | [Read the workbook](editions/en/workbook/quant-course-workbook-en.pdf) | [阅读中文练习册](editions/zh/workbook/quant-course-workbook-zh.pdf) |
+| **Textbook**: concepts, derivations, and worked examples | [Read the textbook](editions/en/body/quantweft-textbook-en.pdf) | [阅读中文教材](editions/zh/body/quantweft-textbook-zh.pdf) |
+| **Workbook**: active recall, exercises, and complete answers | [Read the workbook](editions/en/workbook/quantweft-workbook-en.pdf) | [阅读中文练习册](editions/zh/workbook/quantweft-workbook-zh.pdf) |
 | **Learning guide**: prerequisites and project sequence | [English learning guide](editions/en/README.md) | [中文学习指南](editions/zh/README.md) |
 
 Read the textbook, attempt the workbook independently, then run the Notebooks to check calculations and outputs. Use the PDFs for complete course reading; this repository does not include the editorial workspace's full PDF layout toolchain.

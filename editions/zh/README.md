@@ -1,8 +1,8 @@
-# 量化金融与系统化研究：中文入口
+# QuantWeft · 量化经纬：中文入口
 
 本地正式版（2026-10-19）：45章、项目1–6与Capstone的中文正文与练习册完整PDF已独立接受；共用代码、运行器与依赖在本包根，已在隔离目录按本页命令冷启动核验，范围见[本地验证说明](LOCAL_VALIDATION.md)。本版已获授权作为本地正式版，尚未对外发布；真实市场研究仍未执行。
 
-[完整正文PDF](body/main.pdf) · [完整练习册 PDF](workbook/quant-course-workbook-zh.pdf)
+[完整正文PDF](body/quantweft-textbook-zh.pdf) · [完整练习册 PDF](workbook/quantweft-workbook-zh.pdf)
 
 [学习路线](resources/learning_roadmap.md) · [45章大纲](resources/syllabus.md) · [45节点/120必须边与3背景边](resources/dependency_graph.md)
 
@@ -59,3 +59,5 @@ Capstone提供已接受的研究问题、时间契约、完整协议、字典和
 [可选输入契约](OPTIONAL_DATA.md) · [本轮验证范围](LOCAL_VALIDATION.md) · [后续事项](REMAINING_ITEMS.md) · [实际文件结构](FILE_TREE.md)
 
 [练习设计来源与致谢](../../ACKNOWLEDGEMENTS.md)：部分设计借鉴 loom-notes 模板，并按本课程需要调整，并非完整套用。
+
+项目现名为 **QuantWeft · 量化经纬**，副标题为“量化金融与系统化研究双语课程”。四册 PDF 文件名已更新，已接受的 PDF 内容、页码和内部旧称保持原样。

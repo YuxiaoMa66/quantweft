@@ -1,8 +1,8 @@
-# Quantitative finance and systematic research: English entry
+# QuantWeft: English learning guide
 
 Local formal edition (2026-10-19): the complete English body and workbook PDFs for Chapters 1–45, Projects 1–6, and the Capstone have been independently accepted; the shared code, runner, and dependencies sit at this package root and were cold-started in an isolated directory with the commands on this page (scope in [Validation scope](LOCAL_VALIDATION.md)). This is the authorized local formal edition; it has not been published externally, and real-market research has not been run.
 
-[Full body PDF](body/main.pdf) · [Full workbook PDF](workbook/quant-course-workbook-en.pdf)
+[Full body PDF](body/quantweft-textbook-en.pdf) · [Full workbook PDF](workbook/quantweft-workbook-en.pdf)
 
 [Learning route](resources/learning_roadmap.md) · [45-chapter curriculum](resources/syllabus.md) · [45 nodes/120 required edges and 3 background edges](resources/dependency_graph.md)
 
@@ -59,3 +59,5 @@ The Capstone supplies accepted research questions, timing contracts, protocol, d
 [Optional input contracts](OPTIONAL_DATA.md) · [Validation scope](LOCAL_VALIDATION.md) · [Remaining work](REMAINING_ITEMS.md) · [Actual file structure](FILE_TREE.md)
 
 [Exercise design credit](../../ACKNOWLEDGEMENTS.md): selected design and layout ideas draw on loom-notes, adapted to the course rather than using the template in full.
+
+The project is now **QuantWeft**, a bilingual course in quantitative finance and systematic research. The four PDF filenames use the new brand; accepted PDF content, page numbers, and legacy internal terminology are unchanged.

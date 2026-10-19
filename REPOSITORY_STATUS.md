@@ -32,7 +32,7 @@ For later intentional edits, keep the original manifest as a dated baseline; rec
 
 ## 练习册名称与来源修订 / Workbook naming and attribution
 
-2026-10-19：读者入口中的 Loom 改称“练习册 / Workbook”；完整练习册 PDF 迁移至 `editions/zh/workbook/quant-course-workbook-zh.pdf` 与 `editions/en/workbook/quant-course-workbook-en.pdf`，PDF 原字节不变。README、网站与当前学习入口同步更新，练习设计与版式的部分上游借鉴详见 [来源与致谢](ACKNOWLEDGEMENTS.md)。这不是完整采用 Loom 模板，也不改变课程整体的许可范围。
+2026-10-19：读者入口中的 Loom 改称“练习册 / Workbook”；完整练习册 PDF 迁移至 `editions/zh/workbook/quantweft-workbook-zh.pdf` 与 `editions/en/workbook/quantweft-workbook-en.pdf`，PDF 原字节不变。README、网站与当前学习入口同步更新，练习设计与版式的部分上游借鉴详见 [来源与致谢](ACKNOWLEDGEMENTS.md)。这不是完整采用 Loom 模板，也不改变课程整体的许可范围。
 
 Reader-facing names are now **Workbook**. The two PDFs have descriptive filenames and unchanged bytes. Current navigation and the website use the new paths; [Attribution](ACKNOWLEDGEMENTS.md) explains the selective influence of loom-notes. Technical source paths needed by embedded PDF links, original acceptance records, the original source manifest, and legacy PDF prose remain unchanged.
 
@@ -41,3 +41,11 @@ The original `verify_snapshot.py` checks the initial dated layout and is expecte
 ```sh
 python3 provenance/verify_workbook_revision.py
 ```
+
+## QuantWeft 品牌与仓库更名 / Brand and repository rename
+
+当前项目名为 **QuantWeft · 量化经纬**，副标题“量化金融与系统化研究双语课程”。仓库为 `YuxiaoMa66/quantweft`。四册 PDF 采用 `quantweft-textbook-{zh,en}.pdf` 和 `quantweft-workbook-{zh,en}.pdf`，目录深度、PDF 字节及配套实现保持不变。
+
+The current brand is **QuantWeft** with the subtitle **A Bilingual Course in Quantitative Finance and Systematic Research**. Historic acceptance and origin records keep their original project names. PDF contents and internal titles have not been rebuilt for this branding change. The editorial workspace and checkout retain their existing local folder paths to preserve historical references.
+
+Current revision verification: `python3 provenance/verify_brand_revision.py`. Earlier snapshot/workbook verifiers retain their dated scope.
