@@ -16,7 +16,7 @@ This is a lightweight reader and code snapshot, not a backup of the entire edito
 
 Only the four small constructed CSV fixtures under `data/fixtures/` are bundled. Other constructed fixtures and teaching figures already present in the accepted edition remain included. French raw/extracted/processed market datasets and derived research series are not uploaded. Historical teaching charts and disclosed summaries are not new market evidence. The G01/G05/PIT gates, Chapter 39 and Project 6 historical gaps, and negative/zero results retain their existing status. No market research or A10-B is executed by this repository setup.
 
-Private visibility is not a publication or data-rights grant. No open-source license or new redistribution permission is selected by this setup. Keep the repository private unless the owner separately authorizes publication and resolves license/data rights.
+Current licensing: MIT for project-original software and CC BY-SA 4.0 for project-original educational content, subject to LICENSE.md and third-party exceptions. This does not establish rights in market data, copied materials, or embedded third-party components. Keep the repository private until the itemized rights review is resolved; Pages remains disabled.
 
 ## Provenance / 来源
 
@@ -49,3 +49,9 @@ python3 provenance/verify_workbook_revision.py
 The current brand is **QuantWeft** with the subtitle **A Bilingual Course in Quantitative Finance and Systematic Research**. Historic acceptance and origin records keep their original project names. PDF contents and internal titles have not been rebuilt for this branding change. The editorial workspace and checkout retain their existing local folder paths to preserve historical references.
 
 Current revision verification: `python3 provenance/verify_brand_revision.py`. Earlier snapshot/workbook verifiers retain their dated scope.
+
+## Licensing and support preparation / 许可与赞助准备
+
+用户于 2026-10-19 授权采用“原创代码 MIT、原创教材 CC BY-SA 4.0、自愿赞助”。详见 [许可范围](LICENSE.md)、[第三方声明](THIRD_PARTY_NOTICES.md)、[贡献规则](CONTRIBUTING.md)与[赞助说明](SUPPORT.md)。尚无收款账户，只有配置示例，未启用 Sponsor 按钮。公开再分发待办见 [RIGHTS_REVIEW.md](RIGHTS_REVIEW.md)；选定许可不代表第三方内容已获许可或仓库已公开。原始来源与接受收据保持历史身份。
+
+The earlier snapshot and naming entries describe dated actions. The current software/content licenses apply to the owner’s licensable original contributions, with no new course, research, or PDF validation. Current verification uses `python3 provenance/verify_current_revision.py`; earlier verifiers retain their dated revision scope.

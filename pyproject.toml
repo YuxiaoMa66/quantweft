@@ -6,6 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "quant-course-a1"
 version = "0.1.0"
 description = "Shared research interfaces for the Chinese quantitative finance course"
+license = {file = "LICENSES/MIT.txt"}
 requires-python = ">=3.12"
 dependencies = [
   "numpy",

@@ -1,0 +1,130 @@
+{
+  "revision": "OPEN_LICENSE_PREPARATION_20261019",
+  "scope": "MIT original code; CC-BY-SA-4.0 original content; third-party exceptions; no public release; funding inactive",
+  "baseline_sha256": "7b3ac9416e40dc72ab46e9d47caa444e4c88848a5190d533268aab30c919e2d5",
+  "path_map": {
+    "editions/en/body/main.pdf": "editions/en/body/quantweft-textbook-en.pdf",
+    "editions/en/loom/main.pdf": "editions/en/workbook/quantweft-workbook-en.pdf",
+    "editions/zh/body/main.pdf": "editions/zh/body/quantweft-textbook-zh.pdf",
+    "editions/zh/loom/main.pdf": "editions/zh/workbook/quantweft-workbook-zh.pdf"
+  },
+  "intentional_document_changes": {
+    "README.md": {
+      "before_sha256": "7c1b1c6930545a575b9443389f56ba5c952c093eac5b601c1ecaca44d542980f",
+      "sha256": "7bd2a97755e9d9e13555c8fc348b01a863dc35c2b296dd6d60af9c1d7b3bf105"
+    },
+    "editions/en/FILE_TREE.md": {
+      "before_sha256": "2a124ab613aa19938095d70fef0ae45689c2d57f33d25932c5558bea8b305b72",
+      "sha256": "02b8c832b18488eda788961eff2cbbb8fb6580aaee0c932301971b73cfbda2a8"
+    },
+    "editions/en/LOCAL_VALIDATION.md": {
+      "before_sha256": "506490d4075d47555a70108443f1127fabf2f89718ed01f5670b092193115585",
+      "sha256": "438938e6ac2e3f29493e4d0627f9230d923120f736eb5444949587e8dedfd949"
+    },
+    "editions/en/NOTEBOOK_GUIDE.md": {
+      "before_sha256": "666a68ad14b421b8a54ed1855157c6e86c416740d1f17fddd06eeafa4f50963f",
+      "sha256": "2ce169ea364e2eb90e92009da18ccd64cf53f1eb2c4b5ab2849ee02aa5e631cf"
+    },
+    "editions/en/README.md": {
+      "before_sha256": "cd6b5429745c21f50ac067fb2cf9d2e64d02ee6b953ac47f0e6f938c4abd020b",
+      "sha256": "e19595c879dfe4eefbd0c349af7dbea9b125fc282d5ecf0e1c4b305e8bd8ad18"
+    },
+    "editions/en/projects/project06/README.md": {
+      "before_sha256": "7dd61f840f96a5b60c1b83d09082bcc296bb3bf74952138de43e9594ac4488cb",
+      "sha256": "b75fa81999f2ae927f578f6afa88ad873b1b2940498f93771b42fe7242362cf7"
+    },
+    "editions/en/projects/project06/V2_TREES.md": {
+      "before_sha256": "1bf6be896ac8e3809faaa9274922af81cb4479c8ba108a012ec90350757b53d6",
+      "sha256": "a670e63622a06ad36b6b1e9995ccc12ab48f7ee0b5abbdf1da1dda651969b08f"
+    },
+    "editions/en/projects/project06/solutions.md": {
+      "before_sha256": "0e553107bf73d5c46e97c37684abe1bdf4885c41555fae963153312cdf836215",
+      "sha256": "e127f0515e0129f3dd5655ed3764ac6834d9d845ea135ebe9b513df335e44788"
+    },
+    "editions/en/resources/syllabus.md": {
+      "before_sha256": "366cb535f98b746508fa378d9f0d69065038a23388adaac0f6e1be12a68462e6",
+      "sha256": "6329320d306984317c0dea7ecca54a9eb446de11774a1ec4a94f6f9c84fe9bda"
+    },
+    "editions/zh/FILE_TREE.md": {
+      "before_sha256": "5675f63ec9b1ec2e971b657b5df7cd7129d101630e415aad927d7313a162e2d8",
+      "sha256": "9e0b22e6487f8a9ae8b0de49006dc8fe24d5fe731cb1769a7682aed39a3c64dd"
+    },
+    "editions/zh/LOCAL_VALIDATION.md": {
+      "before_sha256": "cc27b12c3cde0da694ff300829418ad769eef2f18b203a46aba4bcae4d277300",
+      "sha256": "d70b8a185db456c215f965f390d5ce519719f1a088748024043ec484d22b9dff"
+    },
+    "editions/zh/NOTEBOOK_GUIDE.md": {
+      "before_sha256": "367a935ae42de93b6aa3ed2628f8b88bd196d01c21d94e317b344c3edf771452",
+      "sha256": "5e6f8551c617516092af2247daff47c814a8e924c50e090235bf45696e863d9f"
+    },
+    "editions/zh/README.md": {
+      "before_sha256": "b6bd1dcf0af4a1fdc44bb4df1d827ac67bb15f63004cacb6ed48c2d7fe65f7d9",
+      "sha256": "34b5d6a86f2c0437e9dc17cec07f726ccc8a5b618ec502857984611095acd2f8"
+    },
+    "editions/zh/resources/syllabus.md": {
+      "before_sha256": "12130be67076af9ee7c72cf6fc820428ca3cf37462858f939efbdd1e62682766",
+      "sha256": "9a79f339ccbf929598096fbf60676cce63489473e0b824c4f046540e56e0cd5e"
+    },
+    "projects/project06/README.md": {
+      "before_sha256": "2e62f7d474c8cd4d7f83f31be814ba48dfd1c071f18b1c1c460f60d5ff6fc60f",
+      "sha256": "da09f45184c1853ea175031c94dc42bdae925ab77df153da73df2234c02f3b92"
+    },
+    "projects/project06/V2_TREES.md": {
+      "before_sha256": "de6027a448c0dcf765f3f91468e950c3a3dc05c75e8cce5ee722a127b6718988",
+      "sha256": "d83de0b059c9f4b726415101e6aac573005d98912652fc2393894adf47dbcc67"
+    },
+    "projects/project06/solutions.md": {
+      "before_sha256": "8686a51fb9b72c6bb4471b6b635f0993d0fe31166c8c32110c8351a91eceac3c",
+      "sha256": "5c3a7f9a5e0ad910a9b52048739b78aa70ab754771f8dc25666915a12137b6be"
+    },
+    "pyproject.toml": {
+      "before_sha256": "287e989009c889f793aad294a75c68777480d524498fb4e7dc3fbdd8a5632e73",
+      "sha256": "7939311f4db77ab1969be53ee7b2cd7e8902dcbde0956713d00858c8be7b1420"
+    }
+  },
+  "additional_current_files": {
+    ".gitattributes": "e5cf23814e8dd21c89f7dba99c9a2032cfd9b9465d152ccbe13099a7b89e7594",
+    ".github/FUNDING.yml.example": "31b0dfd683a65240573e0a326dd2b40f310ad1beaa55bb5680553dd009ffa62b",
+    ".gitignore": "211971b9950474652516b33183df273db6d83542e16e429551a38d2501d7c23c",
+    "ACKNOWLEDGEMENTS.md": "4df3e4071d069381cce4535fa2f62da55867074702bc68b862dd1a4c911bf80e",
+    "CONTRIBUTING.md": "f0473ae12426149f447ff51e484630aca229357ebf91199782a582de99525351",
+    "LICENSE.md": "a238675d00217d03e873502f4a85fdcd8b516188678ca6fbcdcf672a2fe2b74e",
+    "LICENSES/CC-BY-SA-4.0.txt": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+    "LICENSES/MIT.txt": "c5b4c3c368372efa1c04460cab54e900934832891613271d4afdde9aeb2b412a",
+    "README.en.md": "b6bfaa57f9f73fa48aef03283544bed0b19672b5b64598216b94ecabe1eb5436",
+    "REPOSITORY_STATUS.md": "bba749f91be14e50c10fea3c98faa69ff7fdee8839fd6badd67e4fb2ef09b69c",
+    "RIGHTS_REVIEW.md": "c5b0d79a0251c8062d0d92d7688b6bb93dc4ca778cb2656b40362bea76897bd8",
+    "SUPPORT.md": "556e75a24d41a3725169b1f7c491ae6b5fcd8ab85014e5546940700d85dadad2",
+    "THIRD_PARTY_NOTICES.md": "da44f3a0de9b27803abd4499c5b7949e2213b3c67c259719cd9654527be481d8",
+    "docs/.nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/HOMEPAGE_DESIGN.json": "34598e42ab2cfa5557b40eb526f65b49639b4fd987a6e97e987f4b359d776581",
+    "docs/SITE.md": "4ed9a8971f5389ddd77b39ea1a597852b846df7b7e449277b5710c37419b219b",
+    "docs/assets/ORIGIN.json": "0ce1728de49c45ecddf949b92a7c2e73fbe1c54c9c9a864c37bf63c75a83e808",
+    "docs/assets/course-cover.png": "415fe3fb88f5e7ae06797546551a4aef675b2f3ef9facdeacb2d818a1ddbdfc3",
+    "docs/assets/quantweft-cover.png": "aa90a4f5c2bc4657296a03737525dca2a687e6fbe83a511df2679e9d6b565c04",
+    "docs/assets/research-surfaces.png": "bbda1073d11b4c35c829dda9ce91dc0a9692877526b57227daae429749df44e3",
+    "docs/index.html": "d9b8006e7de03d793672a82700b9d36ff8c72bc82f036a61f1e82e8ec5fcd168",
+    "docs/site.js": "cb4182a131ad7b76ebdf802d9ab24ea164fad0fac09a9a1177dd5b35318bc319",
+    "docs/styles.css": "1a7bab321e87db7d9a0f7cb8386db156d67ffe913371d08faf189ac1bc9cf287",
+    "loom/README.md": "24015b279bc005bd90df4c48f3eeeb151f672ec81dffeb321f7cd6fd6ee0c022",
+    "provenance/BRAND_REVISION.json": "959228749c8bf6d8b77a021d0bc2839d7c47d7e23e7023f02a99d87247399027",
+    "provenance/FORMAL_MANIFEST.json": "7b3ac9416e40dc72ab46e9d47caa444e4c88848a5190d533268aab30c919e2d5",
+    "provenance/LICENSE_SOURCES.json": "2d2ca86d58d55d433c071b42aea4e137792bf1468e5b41d1f19f084e400c3061",
+    "provenance/ORIGIN.json": "adaf819b37b115dc6336c6c54032f2ece4fd46b3263203c0a4e41f0638b4c309",
+    "provenance/WORKBOOK_REVISION.json": "9e02aa439349e2375e795cdafe6baa8cf1a6475aee510d49f15ba5db18886cc4",
+    "provenance/verify_brand_revision.py": "ce24b311a970c987882e9359647903aa738c6c30ab9b25f6243549feff8765f6",
+    "provenance/verify_current_revision.py": "ae8ac756a70a93aec68041c4749509d4ed87b454637f9452f9238ac299b879fc",
+    "provenance/verify_snapshot.py": "15a92e853901e1745e6b5a557c17895ca4aec0b47998c723cd2320ca3177af1f",
+    "provenance/verify_workbook_revision.py": "266e77e6c26e89230dca2c0fe09fcd873fbd7b7b4249bfe450414bd5dc0d56a1",
+    "qa/quantweft_brand_20261019/REPORT.json": "cbcc8e517d9d7a677125710d68c2646121178e424ca4f1563deabcc5f752d6be",
+    "qa/site_20261019/REPORT.json": "2bd0aa1ae307203b2a1bbbe097befc674032ab2dec63b8d28483044d9a2f19d4",
+    "qa/workbook_naming_20261019/REPORT.json": "e976dc13c75b280c52974c2630641fcae09950538ea28764061d10197efe99e1",
+    "third_party/loom-notes/LICENSE": "37749a5538cae7a4b593db42b5c3948387e094ccca77fbf8d09c99eb4e57a9ef",
+    "third_party/loom-notes/ORIGIN.json": "7d2565d750db5f364f0f2e3643f6cc22fc821b538be39503393138613dcf6717",
+    "workbook/README.md": "e0b668e648e534159c8d03ff4589698ea83268413bcb8213a6e554ca47d3c2f0"
+  },
+  "previous_revision": "provenance/BRAND_REVISION.json",
+  "PDF_bytes": "All four accepted PDFs unchanged",
+  "execution": "No course/notebook/research run; no PDF build",
+  "rights_clearance": "pending; not established by manifests or scans"
+}

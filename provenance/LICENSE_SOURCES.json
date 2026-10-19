@@ -1,0 +1,14 @@
+{
+  "LICENSES/MIT.txt": {
+    "url": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/MIT.txt",
+    "adaptation": "copyright placeholder filled with 2026 Yuxiao Ma",
+    "sha256": "c5b4c3c368372efa1c04460cab54e900934832891613271d4afdde9aeb2b412a",
+    "retrieved_date": "2026-10-19"
+  },
+  "LICENSES/CC-BY-SA-4.0.txt": {
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt",
+    "adaptation": "none",
+    "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+    "retrieved_date": "2026-10-19"
+  }
+}

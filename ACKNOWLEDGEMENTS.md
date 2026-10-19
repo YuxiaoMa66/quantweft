@@ -17,3 +17,7 @@ The course companion is called the **Workbook**. **Loom** identifies the upstrea
 See the [preserved upstream LICENSE](third_party/loom-notes/LICENSE) for the class and skill. Its scope is the upstream material it covers; it does not license the entire course or replace the rights notices of other sources.
 
 核对版本 / Reference revision: [`290fa4042d33a7dd11f290eb39fba7f5d5b71369`](https://github.com/Polaris-Aeterna/loom-notes/tree/290fa4042d33a7dd11f290eb39fba7f5d5b71369).
+
+## 当前课程许可 / Current course licenses
+
+本课程原创代码采用 MIT，原创教学内容采用 CC BY-SA 4.0，范围与例外见 [LICENSE.md](LICENSE.md)。这不改变上游许可或扩大作者对第三方内容的权利。The project’s own licensing is separate from the upstream Loom license and does not relicense third-party material.

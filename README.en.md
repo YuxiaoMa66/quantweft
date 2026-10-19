@@ -75,8 +75,12 @@ This repository inherits the accepted local formal bilingual edition of October 
 
 The default route uses constructed data. French market data are not distributed, and real-market research has not been run. Historical results and unresolved evidence gaps retain their recorded scope; see [Remaining work](editions/en/REMAINING_ITEMS.md) and [Optional data contracts](editions/en/OPTIONAL_DATA.md).
 
-By **Yuxiao Ma**. This repository is currently private and has no selected open-source license. Access does not grant redistribution rights. See [Repository scope and provenance](REPOSITORY_STATUS.md).
+By **Yuxiao Ma**. Original code uses **MIT**; original educational content uses **CC BY-SA 4.0**, subject to [scope and third-party exceptions](LICENSE.md). The repository remains private pending the [public-release rights review](RIGHTS_REVIEW.md). See [Repository scope and provenance](REPOSITORY_STATUS.md).
 
 ## Exercise design credit
 
 Parts of the workbook’s exercise design and layout draw on the [loom-notes](https://github.com/Polaris-Aeterna/loom-notes) LaTeX template, selectively adapted to the course. The template is not used in full. See [Attribution and acknowledgements](ACKNOWLEDGEMENTS.md).
+
+## Contribute and support
+
+[Contributions](CONTRIBUTING.md) are welcome. See the [voluntary support plan](SUPPORT.md); payment channels are not active. Learning and reuse under the licenses do not require sponsorship.

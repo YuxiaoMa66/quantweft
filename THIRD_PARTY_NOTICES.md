@@ -1,0 +1,33 @@
+# Third-party notices / 第三方声明
+
+Read this together with [LICENSE.md](LICENSE.md). Only rights the project owner or credited contributors can grant are licensed as project-original material. Source citations, access to a website, and inclusion in an accepted teaching package do not establish redistribution permission. This list is a triage register, not a certification that all third-party rights have been cleared.
+
+本声明与根许可说明共同使用。只授权作者或贡献者有权许可的原创部分；引用、网页可访问及教学接受记录都不等于公开再分发许可。本清单记录已识别类别，不证明全部权利已核清。
+
+| Material / 材料 | Origin and scope / 来源与范围 | Current treatment / 当前处理 |
+| --- | --- | --- |
+| Loom template / 模板 | [Polaris-Aeterna/loom-notes](https://github.com/Polaris-Aeterna/loom-notes), 北极甜虾 (Polaris), reference revision `290fa4042d33a7dd11f290eb39fba7f5d5b71369` | Selected exercise-design/layout influence, not full adoption or a claim that the course exercises come from upstream. Preserve [its LICENSE](third_party/loom-notes/LICENSE) and [attribution](ACKNOWLEDGEMENTS.md). Upstream example notebooks and their mathematical sources are not relicensed by this notice. |
+| Software dependencies / 软件依赖 | Packages named in `pyproject.toml` and the lock file | Their own licenses apply. The lock file is a dependency record, not a grant to relicense dependency code. Distribution of vendored dependencies or an executable bundle would need a separate notices review. |
+| Books, papers, websites, quoted or adapted material / 教材、论文、网页与改编 | `references.md`, bilingual reference resources, chapter `source_notes.md`, inline citations, and stable exercise sources | Keep existing source credits. Treat external text, figures, closely adapted exercises and quotations as exceptions to the project-original grant unless rights are verified. Topic or mathematical-idea references do not by themselves mean copied expression. |
+| French historical analysis / French 历史分析 | Examples include `projects/project01/data_manifest.json`, `projects/project03/research_report/report.md`, related historical figures, summaries and the four PDFs | The referenced raw/extracted/processed French datasets are not bundled. Public redistribution of retained derived charts/tables and their source terms needs assessment; absence of the datasets does not clear every derived artifact. No data-use or market-research permission is granted here. |
+| Constructed examples and CSVs / 构造算例 | Four `data/fixtures/` CSVs; `fixtures/late/ch43/constructed_documents.csv`; Chapter 35/36 teaching-curve CSVs; terminology CSV | These are distinct from French market inputs. Numeric facts may lack copyright; original schema, arrangement or prose is covered only to the extent licensable under the root content terms. Constructed status alone is not proof of every input's origin. |
+| Figures and images / 图表与图片 | Tracked PNGs in `figures/`, `fixtures/`, project/chapter directories and English figure views | Original licensable teaching graphics use the root content license; copied or data-derived components retain separate rights. A source-to-image mapping remains a public-release task. No source-free inference of ownership is made. |
+| AI-generated website artwork / AI 生成网站插画 | `docs/assets/course-cover.png`, `docs/assets/research-surfaces.png`, `docs/assets/quantweft-cover.png`; generated through OpenAI image tooling during the October 19, 2026 design sessions | Identified as AI-assisted conceptual artwork, not empirical research. The project offers any transferable rights it holds under CC BY-SA 4.0, without promising exclusive copyright or clearance of unrelated third-party rights. These illustrations are not third-party market charts. |
+| PDF-embedded fonts / PDF 内嵌字体 | Fonts embedded in the four accepted PDFs; no standalone font distribution is promised | Check actual embedded font names, subset status and the applicable font embedding/distribution terms before public release. Do not assume that having a system font installed authorizes every type of redistribution. |
+| Historical QA and provenance / 历史证据 | Existing `qa/` records and `provenance/` manifests | Retain the original records; they establish dated file or validation identities, not copyright permission. Facts, hashes and identifiers do not become newly owned simply by listing them. |
+
+Public-release actions and open items are tracked in [RIGHTS_REVIEW.md](RIGHTS_REVIEW.md). Do not remove source credits or replace a third-party copyright holder with the project author.
+
+公开前待办见 [RIGHTS_REVIEW.md](RIGHTS_REVIEW.md)。不得删除原出处，或将第三方版权人替换为课程作者。
+
+## Concrete review targets / 具体核查对象
+
+- French-derived examples: `figures/a2/ch05_pca.png`, `figures/a4/ch17_french_industry_trindex.png`, `figures/a4/ch20_french_estimated_frontiers.png`, `figures/a6/ch31_french_rolling_validation.png`, and Project 2/3 result figures. Review `projects/project02/data_manifest.json` and `projects/project03/data_manifest.json`; similar content is embedded in the PDFs.
+- `part02/chapter10/source_notes.md` records MIT OCW source references and warns that material-level terms may be CC BY-NC-SA. It states that explanations and graphics are original; exercise-to-source comparison remains pending. CC BY-SA here covers only project-original rights, not any NC-SA source expression.
+- `figures/a3/ch12_apple_cashflow.png` is an author-generated chart from selected Apple filing figures; source notes are in `part02/chapter12/source_notes.md`. Preserve attribution and assess any relevant distribution terms rather than assuming all filing content is public domain.
+- `fixtures/late/ch43/constructed_documents.csv` uses the identifier `CONSTRUCTED_TEACHING_CORPUS_OPEN_ACADEMIC_USE`. This historical source identifier is not a license. Confirm the original synthetic prose's source and rights; where the author holds them, current licensing follows LICENSE.md, without changing the recorded identifier.
+- The accepted PDFs embed subsets from Computer Modern, Latin Modern, Fandol, Libertinus, DejaVu and TeX Gyre families. Exact package versions, notices and embedding/distribution permissions remain to be documented.
+
+The paths above refer to the GitHub reader/code repository, not every historical file in the larger editorial workspace. These are review targets, not findings of infringement.
+
+以上路径以 GitHub 读者与代码仓库为范围，未覆盖更大编辑工作区的全部历史材料。上述条目是待核查对象，不是侵权结论。

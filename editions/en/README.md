@@ -61,3 +61,5 @@ The Capstone supplies accepted research questions, timing contracts, protocol, d
 [Exercise design credit](../../ACKNOWLEDGEMENTS.md): selected design and layout ideas draw on loom-notes, adapted to the course rather than using the template in full.
 
 The project is now **QuantWeft**, a bilingual course in quantitative finance and systematic research. The four PDF filenames use the new brand; accepted PDF content, page numbers, and legacy internal terminology are unchanged.
+
+[License scope](../../LICENSE.md): original software MIT; original educational content CC BY-SA 4.0. See [third-party exceptions](../../THIRD_PARTY_NOTICES.md) and the [public-release review](../../RIGHTS_REVIEW.md). [Voluntary support](../../SUPPORT.md) is not required; payment channels are inactive.

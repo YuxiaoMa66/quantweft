@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-19",
+  "provider": "OpenAI image-generation tool",
+  "purpose": "Conceptual course artwork, not empirical plots",
+  "rights_note": "Offers only transferable rights held by the project owner under CC-BY-SA-4.0; no guarantee of exclusive copyright or third-party clearance",
+  "files": {
+    "course-cover.png": {
+      "sha256": "415fe3fb88f5e7ae06797546551a4aef675b2f3ef9facdeacb2d818a1ddbdfc3",
+      "origin": "Generated during the course homepage/brand design sessions",
+      "reference": "Original generated bilingual course cover"
+    },
+    "research-surfaces.png": {
+      "sha256": "bbda1073d11b4c35c829dda9ce91dc0a9692877526b57227daae429749df44e3",
+      "origin": "Generated during the course homepage/brand design sessions",
+      "reference": "course-cover.png used as visual reference for the text-free illustration and QuantWeft cover"
+    },
+    "quantweft-cover.png": {
+      "sha256": "aa90a4f5c2bc4657296a03737525dca2a687e6fbe83a511df2679e9d6b565c04",
+      "origin": "Generated during the course homepage/brand design sessions",
+      "reference": "course-cover.png used as visual reference for the text-free illustration and QuantWeft cover"
+    }
+  }
+}

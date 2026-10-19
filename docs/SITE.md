@@ -37,3 +37,9 @@ The native CSS editorial layout continues the course cover's teal identity. The 
 本次校验记录见 [`../qa/site_20261019/REPORT.json`](../qa/site_20261019/REPORT.json)。课程运行与教材 PDF 未因网站设计而重新核验。
 
 See the report above for this website's checks. Website checks do not rerun or extend the course's PDF or execution validation.
+
+## 许可与赞助 / Licensing and support
+
+网站功能代码适用 MIT，原创教学文字与作者有权许可的插画适用 CC BY-SA 4.0，例外见 [许可范围](../LICENSE.md)。收款渠道尚未启用，仅准备 [赞助说明](../SUPPORT.md)与 `.github/FUNDING.yml.example`。Pages 与仓库仍未公开，公开前须处理 [权利核查](../RIGHTS_REVIEW.md)。
+
+Functional site code uses MIT; original educational prose and licensable rights in the identified illustrations use CC BY-SA 4.0, subject to the linked exceptions. No payment channels are active.
