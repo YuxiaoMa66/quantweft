@@ -53,6 +53,18 @@ The native CSS editorial layout uses paper cream by day, neutral charcoal by nig
 
 Language switching, themes, mobile layout, and command copying have been checked. These checks do not rerun the course or validate research results. Internal review logs are not distributed with the reader repository.
 
+## 访问统计 / Traffic analytics
+
+2026-10-20 在 Cloudflare Pages 启用 Web Analytics，由随后部署自动接入，网站不重复嵌入统计脚本。维护者从 Cloudflare 的 QuantWeft 项目 → Metrics → View Web Analytics 查看；分析正式站点时按主机名 `quantweft.yuxiao.win` 筛选，避免混入 `pages.dev` 预览访问。
+
+页面浏览量表示页面加载，不等于独立人数、按钮点击或成功下载；初期也可能包含维护与验证访问。统计从接入生效后积累，不补造历史访问。前端拦截或未发送统计信标可能造成漏计。
+
+先在后台观察访问趋势、来源、设备与热门章节。有真实数据后，再评估公开累计浏览量、最近 30 天每日浏览量和热门章节；累计值应注明起始日期，跨越平台保留期时须使用实际留存的日汇总。当前不公开访客明细，也不展示模拟访问数字。
+
+Cloudflare Pages Web Analytics was enabled on 2026-10-20 and is injected automatically on subsequent deployments; the source does not embed a duplicate beacon. Open QuantWeft → Metrics → View Web Analytics in Cloudflare and filter by hostname `quantweft.yuxiao.win` to separate production traffic from `pages.dev` previews.
+
+Page views count page loads, not distinct people, button clicks, or completed downloads. Early traffic may include maintenance and verification. Counts accumulate after activation; historical traffic is not fabricated. Blocked or missing beacons can cause undercounting. Start with the private dashboard. A later public summary may show cumulative views from a stated start date, daily views over the last 30 days, and popular chapters, using actual retained daily aggregates when platform retention is exceeded. No visitor-level data or simulated counts are published.
+
 ## 许可与赞助 / Licensing and support
 
 网站功能代码适用 MIT，原创教学文字与作者有权许可的插画适用 CC BY-SA 4.0，例外见 [许可范围](../LICENSE.md)。已展示作者提供的微信和支付宝收款码，详见 [支持方式](../.github/SUPPORT.md)；GitHub Sponsors 等待审核，尚未启用 `.github/FUNDING.yml`。网页版已公开，仓库保持私有；既有 [权利核查](legal/RIGHTS_REVIEW.md)仍待完成。
