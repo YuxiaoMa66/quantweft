@@ -6,6 +6,12 @@
 
 **A Bilingual Course in Quantitative Finance and Systematic Research**
 
+## Web textbook
+
+**[Open the web reader · preview guide →](docs/SITE.md)**
+
+Read 45 chapters with full-text search, same-chapter language switching, and day/night modes. **Local preview is ready; public hosting is not enabled.** The link explains how to open the reader.
+
 From mathematical and financial foundations to reproducible systematic research.
 
 A bilingual course for learners who want to understand models, implement them, and evaluate research carefully. The textbook, active exercises, and Notebooks connect concepts, derivations, and code.

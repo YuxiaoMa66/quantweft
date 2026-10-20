@@ -4,6 +4,14 @@
 
 The static entry is [`index.html`](index.html). It includes Chinese/English switching, light/dark themes, four PDF links, curriculum, six projects, Capstone, and Notebook commands. Language and manual theme preferences are stored locally. Use `?lang=zh` or `?lang=en` to choose a language. Without JavaScript, the Chinese page and document links remain available.
 
+## 阅读入口 / Reading entry
+
+**[打开中文网页版](http://127.0.0.1:8765/read/zh/index.html)** · **[Open the English reader](http://127.0.0.1:8765/read/en/index.html)**
+
+上述链接需要本机已启动预览服务，启动方法见下文。目前尚未部署公网地址；仓库侧边的 Website 链接指向本页，提供预览入口与说明。
+
+These links require the local preview server below. No public reader URL is deployed yet. The repository sidebar links here for preview access and instructions.
+
 ## 完整在线教材 / Complete online reader
 
 推荐从仓库根目录构建并预览完整网站：

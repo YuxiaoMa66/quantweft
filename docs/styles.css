@@ -185,7 +185,8 @@ p {
 }
 .header-inner nav {
   display: flex;
-  gap: 28px;
+  align-items: center;
+  gap: 24px;
   margin-left: auto;
 }
 .header-inner nav a {
@@ -193,6 +194,15 @@ p {
   text-decoration: none;
   color: var(--muted);
 }
+.header-inner nav .nav-reader {
+  color: var(--on-accent);
+  background: var(--accent);
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.header-inner nav .nav-reader:hover { background: var(--accent-hover); }
 .preferences {
   display: flex;
   gap: 8px;
@@ -238,8 +248,9 @@ p {
 }
 .hero-actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 28px;
+  gap: 16px 28px;
   margin-top: 30px;
 }
 .button {
@@ -254,6 +265,11 @@ p {
   font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
+}
+.hero-actions .primary {
+  min-height: 56px;
+  padding: 14px 26px;
+  font-size: 16px;
 }
 .primary {
   background: var(--accent);

@@ -39,5 +39,10 @@ for(const lang of ['zh','en']) {
  const chapter=index.find(p=>p.url==='ch08.html');
  assert(chapter.text.includes('import numpy'),'Search must include code');
 }
+const landing=fs.readFileSync(path.join(root,'index.html'),'utf8');
+for(const name of ['button primary','nav-reader']) {
+ assert(landing.includes(`class="${name}" href="read/zh/index.html" data-reader-zh="read/zh/index.html" data-reader-en="read/en/index.html"`),'Online reader entry: '+name);
+}
+assert(!landing.includes('data-online-reader'),'All online entry markers must resolve');
 assert(math>10000,'Expected full mathematical content');
 console.log(`PASS: ${pages.length} pages, 45 bilingual chapter pairs (90 routes), ${localLinks} local links/assets, ${math} rendered equations, no missing anchors or math errors.`);

@@ -157,7 +157,7 @@ for (const lang of ['zh','en']) {
   fs.writeFileSync(path.join(out,`read/search-${lang}.json`),JSON.stringify(search));
 }
 let landing=fs.readFileSync(path.join(out,'index.html'),'utf8');
-landing=landing.replace('class="button primary" href="#read"','class="button primary" href="read/zh/index.html" data-reader-zh="read/zh/index.html" data-reader-en="read/en/index.html"');
+landing=landing.replace(/href="[^"]*" data-online-reader/g,'href="read/zh/index.html" data-reader-zh="read/zh/index.html" data-reader-en="read/en/index.html"');
 landing=landing.replace(/href="https:\/\/github.com\/YuxiaoMa66\/quantweft\/blob\/main\/([^"#]+)([^"]*)"/g,(full,target,fragment)=>{
   if(pages.has(target))return `href="${pages.get(target).route}${fragment}"`;
   if(target.endsWith('.pdf')){
