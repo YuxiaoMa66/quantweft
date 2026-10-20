@@ -6,11 +6,11 @@ The static entry is [`index.html`](index.html). It includes Chinese/English swit
 
 ## 阅读入口 / Reading entry
 
-**[打开中文网页版](http://127.0.0.1:8765/read/zh/index.html)** · **[Open the English reader](http://127.0.0.1:8765/read/en/index.html)**
+**[打开中文网页版](https://quantweft.yuxiao.win/read/zh/)** · **[Open the English reader](https://quantweft.yuxiao.win/read/en/)**
 
-上述链接需要本机已启动预览服务，启动方法见下文。目前尚未部署公网地址；仓库侧边的 Website 链接指向本页，提供预览入口与说明。
+正式首页：[https://quantweft.yuxiao.win](https://quantweft.yuxiao.win)。网站由 Cloudflare Pages 托管；本地预览方法见下文。
 
-These links require the local preview server below. No public reader URL is deployed yet. The repository sidebar links here for preview access and instructions.
+The website is hosted on Cloudflare Pages. These public reading links do not require a local preview server; local preview instructions follow below.
 
 ## 完整在线教材 / Complete online reader
 
@@ -35,9 +35,13 @@ To preview only the original introduction, serve `docs/` with the Python command
 
 ## 托管状态 / Hosting status
 
-目前未启用 Pages，仓库保持私有。完整站点应由构建后的 `dist/` 部署，不能仅发布 `/docs`。输出包含正文与搜索全文；四册 PDF 下载跳转 GitHub，私有仓库仍需访问权限；公开前需完成既有权利核查及发布确认。仅推送构建源码不会自动开放站点。
+2026-10-20 已由维护者确认发布网页版，托管于 Cloudflare Pages；GitHub 仓库仍为私有，GitHub Pages 未启用。生产分支 `main`，Node.js 24，构建命令 `npm run build && npm run check`，输出目录 `dist`。后续推送会自动构建发布。网站包含正文、图片与搜索全文；四册 PDF 下载跳转 GitHub，仍需仓库访问权限。
 
-Pages remains disabled and the repository private. Deploy the built `dist/` for the complete site; `/docs` alone is only the introduction. The output includes prose and full-text search data. All four PDF downloads link to GitHub and require repository access while private. Complete the existing rights review and release confirmation before publication. Pushing build source does not publish the site.
+The maintainer confirmed publication of the web edition on 2026-10-20 through Cloudflare Pages. The GitHub repository remains private; GitHub Pages is disabled. Production uses `main`, Node.js 24, build command `npm run build && npm run check`, and output directory `dist`. Pushes trigger automatic deployments. Prose, images and full-text search are public; PDF downloads link to GitHub and still require repository access.
+
+网站上线不等于第三方材料权利核查已经完成；[既有核查项](legal/RIGHTS_REVIEW.md)继续保留原状态。
+
+Website deployment does not close the existing third-party rights review; its recorded items remain pending.
 
 ## 设计与校验 / Design and checks
 
@@ -51,6 +55,6 @@ Language switching, themes, mobile layout, and command copying have been checked
 
 ## 许可与赞助 / Licensing and support
 
-网站功能代码适用 MIT，原创教学文字与作者有权许可的插画适用 CC BY-SA 4.0，例外见 [许可范围](../LICENSE.md)。已展示作者提供的微信和支付宝收款码，详见 [支持方式](../.github/SUPPORT.md)；GitHub Sponsors 等待审核，尚未启用 `.github/FUNDING.yml`。Pages 与仓库仍未公开，公开前须处理 [权利核查](legal/RIGHTS_REVIEW.md)。
+网站功能代码适用 MIT，原创教学文字与作者有权许可的插画适用 CC BY-SA 4.0，例外见 [许可范围](../LICENSE.md)。已展示作者提供的微信和支付宝收款码，详见 [支持方式](../.github/SUPPORT.md)；GitHub Sponsors 等待审核，尚未启用 `.github/FUNDING.yml`。网页版已公开，仓库保持私有；既有 [权利核查](legal/RIGHTS_REVIEW.md)仍待完成。
 
 Functional site code uses MIT; original educational prose and licensable rights in the identified illustrations use CC BY-SA 4.0, subject to the linked exceptions. Maintainer-supplied WeChat Pay and Alipay QR images are displayed; payment acceptance has not been tested. GitHub Sponsors awaits approval, and no live `FUNDING.yml` is enabled.

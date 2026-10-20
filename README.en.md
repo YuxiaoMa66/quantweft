@@ -8,9 +8,9 @@
 
 ## Web textbook
 
-**[Open the web reader · preview guide →](docs/SITE.md)**
+**[Open the web reader →](https://quantweft.yuxiao.win/read/en/)**
 
-Read 45 chapters with full-text search, same-chapter language switching, and day/night modes. **Local preview is ready; public hosting is not enabled.** The link explains how to open the reader.
+Read 45 chapters with full-text search, same-chapter language switching, and day/night modes. The web edition is live. PDF downloads link to GitHub and require access while the repository is private.
 
 From mathematical and financial foundations to reproducible systematic research.
 

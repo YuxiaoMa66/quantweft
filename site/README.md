@@ -40,6 +40,6 @@ Edit the existing chapter, project, and resource Markdown, then rebuild. New doc
 
 Publish the entire `dist/`, at a domain root or repository subpath. Prose and math render during the build; diagrams render in the browser from self-hosted modules; browsers do not need remote math scripts or CDN fonts. Enable compression and static-asset caching on the production host.
 
-目前未启用公开托管。`dist/` 包含教材正文与搜索全文，不含 PDF，发布前完成既有[权利核查](../docs/legal/RIGHTS_REVIEW.md)。依赖许可见[第三方声明](../docs/legal/THIRD_PARTY_NOTICES.md)。内部调试与审阅记录保留在仓库之外。
+网页版已通过 Cloudflare Pages 发布于 [https://quantweft.yuxiao.win](https://quantweft.yuxiao.win)，仓库保持私有。`dist/` 包含教材正文与搜索全文，不含 PDF；既有[权利核查](../docs/legal/RIGHTS_REVIEW.md)仍待完成。依赖许可见[第三方声明](../docs/legal/THIRD_PARTY_NOTICES.md)。内部调试与审阅记录保留在仓库之外。
 
-Public hosting remains disabled. The output contains course prose and full search text, with PDFs hosted on GitHub; complete the existing rights review before publishing. See the dependency notices above. Internal debugging and review records stay outside the repository.
+The website is hosted on Cloudflare Pages; the repository remains private. The output contains course prose and full search text, with PDFs hosted on GitHub; the existing rights-review items remain pending. See the dependency notices above. Internal debugging and review records stay outside the repository.

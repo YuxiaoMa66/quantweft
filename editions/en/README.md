@@ -1,6 +1,6 @@
 # QuantWeft: English learning guide
 
-Local formal edition (2026-10-19): the complete English body and workbook PDFs for Chapters 1–45, Projects 1–6, and the Capstone have been independently accepted; the shared code, runner, and dependencies sit at this package root and were cold-started in an isolated directory with the commands on this page (scope in [Validation scope](LOCAL_VALIDATION.md)). This is the authorized local formal edition; it has not been published externally, and real-market research has not been run.
+Local formal edition (2026-10-19): the complete English body and workbook PDFs for Chapters 1–45, Projects 1–6, and the Capstone have been independently accepted; the shared code, runner, and dependencies sit at this package root and were cold-started in an isolated directory with the commands on this page (scope in [Validation scope](LOCAL_VALIDATION.md)). This describes the local acceptance record. The web edition was published on 2026-10-20; PDFs remain in the private GitHub repository. Real-market research has not been run.
 
 [Full body PDF](body/quantweft-textbook-en.pdf) · [Full workbook PDF](workbook/quantweft-workbook-en.pdf)
 
