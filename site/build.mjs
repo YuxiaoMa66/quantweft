@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import MarkdownIt from 'markdown-it';
 import container from 'markdown-it-container';
 import {isPrintLayout,stripPrintLines} from './print-layout.mjs';
@@ -189,6 +190,14 @@ landing=landing.replace(/href="https:\/\/github.com\/YuxiaoMa66\/quantweft\/blob
   return full;
 });
 landing=landing.replace(/data-doc-(zh|en)="([^"]+)"/g,(full,lang,target)=>pages.has(target)?`data-reader-${lang}="${pages.get(target).route}"`:full);
+// Returning readers must receive new landing assets after a deployment.
+for (const asset of ['styles.css','site.js']) {
+  const source=path.join(out,asset);
+  const hash=createHash('sha256').update(fs.readFileSync(source)).digest('hex').slice(0,12);
+  const versioned=asset.replace(/\.(css|js)$/,`.${hash}.$1`);
+  fs.renameSync(source,path.join(out,versioned));
+  landing=landing.replace(`"${asset}"`,`"${versioned}"`);
+}
 fs.writeFileSync(path.join(out,'index.html'),landing);
 fs.writeFileSync(path.join(out,'read/index.html'),'<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=zh/index.html"><a href="zh/index.html">中文</a> <a href="en/index.html">English</a>');
 console.log(`Built ${pages.size+2} static reader pages; 90 chapter texts; ${copied.size} book/image assets. No course source was modified.`);

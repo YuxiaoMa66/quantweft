@@ -58,6 +58,8 @@ for(const name of ['button primary','nav-reader']) {
  assert(landing.includes(`class="${name}" href="read/zh/index.html" data-reader-zh="read/zh/index.html" data-reader-en="read/en/index.html"`),'Online reader entry: '+name);
 }
 assert(!landing.includes('data-online-reader'),'All online entry markers must resolve');
+assert(/href="styles\.[a-f0-9]{12}\.css"/.test(landing),'Landing styles must change URL when content changes');
+assert(/src="site\.[a-f0-9]{12}\.js"/.test(landing),'Landing script must change URL when content changes');
 const sourceRoot=path.dirname(root);
 const sources=execFileSync('git',['ls-files'],{cwd:sourceRoot,encoding:'utf8'}).trim().split('\n').filter(p=>p.endsWith('.md')&&!p.startsWith('third_party/'));
 let expectedBoxes=0,expectedDiagrams=0;
