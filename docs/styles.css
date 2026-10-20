@@ -287,21 +287,25 @@ p {
   font-size: 14px;
   font-weight: 600;
 }
-.hero-art {
-  min-width: 0;
+.reader-preview {
+  display:block;min-width:0;padding:24px 30px 0;background:var(--card);
+  border:1px solid var(--line);color:var(--text);text-decoration:none;
 }
-.hero-art img {
-  width: 100%;
-  height: 344px;
-  object-fit: cover;
-  object-position: right;
-  display: block;
-  border: 1px solid var(--line);
-}
-.hero-art p {
-  font-size: 11px;
-  margin-top: 9px;
-}
+.reader-preview:hover{color:var(--text);border-color:var(--accent)}
+.preview-meta{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:10px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:18px}
+.reader-preview h2{font-size:25px;line-height:1.25;font-weight:600;margin-bottom:20px;letter-spacing:-.025em}
+.preview-definition,.preview-example{font-family:"Iowan Old Style",Georgia,"Songti SC",serif;font-size:15px;line-height:1.75}
+.preview-label{font-family:inherit;color:var(--accent);font-size:12px;font-weight:600;margin-bottom:8px}
+.preview-equation{font-family:Georgia,serif;font-size:22px;text-align:center;margin:16px 0;white-space:nowrap}
+.preview-equation .katex{font-size:1em}
+.preview-equation .katex-display{margin:0}
+.preview-assumption{font-size:12px;color:var(--muted)}
+.preview-example{margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+.preview-example h3{font-size:14px;font-weight:600;line-height:1.6}
+.preview-path{display:flex;align-items:center;justify-content:space-between;gap:10px;max-width:290px;margin:12px 0;font-size:27px;font-variant-numeric:lining-nums tabular-nums}
+.preview-step{display:grid;text-align:center;line-height:1;color:var(--accent);font-size:22px}
+.preview-step small{font:10px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.preview-footer{display:flex;justify-content:space-between;gap:12px;margin-top:20px;padding-block:14px;border-top:1px solid var(--line);font-size:12px;font-weight:600;color:var(--accent)}
 .facts {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1.4fr;
@@ -609,9 +613,7 @@ summary {
   .hero h1 {
     font-size: 40px;
   }
-  .hero-art img {
-    height: 310px;
-  }
+  .reader-preview {padding:22px 24px 0;}
   .facts p {
     flex-direction: column;
     align-items: flex-start;
@@ -671,9 +673,8 @@ summary {
   .hero-actions {
     margin-top: 24px;
   }
-  .hero-art img {
-    height: 200px;
-  }
+  .reader-preview {padding:22px 24px 0;}
+  .reader-preview h2 {font-size:24px;}
   .facts {
     grid-template-columns: 1fr 1fr;
     gap: 22px;

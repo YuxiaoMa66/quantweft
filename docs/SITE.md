@@ -45,9 +45,9 @@ Website deployment does not close the existing third-party rights review; its re
 
 ## 设计与校验 / Design and checks
 
-采用纸本学术风格：白天米白、夜晚中性炭黑，少量墨蓝点缀，使用原生 CSS 编辑式布局。页面主题整体切换，支持手机和键盘操作，减少动态偏好下关闭平滑滚动。封面曲面为概念插画，不代表市场实证数据。
+采用纸本学术风格：白天米白、夜晚中性炭黑，少量墨蓝点缀，使用原生 CSS 编辑式布局。页面主题整体切换，支持手机和键盘操作，减少动态偏好下关闭平滑滚动。首页使用第 11 章定义、公式和构造算例的阅读预览，并链接对应语言的章节。
 
-The native CSS editorial layout uses paper cream by day, neutral charcoal by night, and restrained ink-blue accents. The full page switches themes together, supports mobile and keyboard use, and disables smooth scrolling for reduced motion. The cover surfaces are conceptual artwork, not market evidence.
+The native CSS editorial layout uses paper cream by day, neutral charcoal by night, and restrained ink-blue accents. The full page switches themes together, supports mobile and keyboard use, and disables smooth scrolling for reduced motion. The homepage previews Chapter 11 with a definition, equation and constructed example, linking to the chapter in the selected language.
 
 页面已检查语言切换、主题、手机显示和复制命令；这不代表重新运行课程或验证研究结果。内部审阅记录不随读者仓库分发。
 
