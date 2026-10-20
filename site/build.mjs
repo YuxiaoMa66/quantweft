@@ -3,6 +3,7 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import MarkdownIt from 'markdown-it';
 import container from 'markdown-it-container';
+import {isPrintLayout,stripPrintLines} from './print-layout.mjs';
 import texmath from 'markdown-it-texmath';
 import katex from 'katex';
 import hljs from 'highlight.js';
@@ -69,6 +70,7 @@ md.use(container, 'teaching-box', {
 });
 const fenceRule = md.renderer.rules.fence;
 md.renderer.rules.fence = (tokens, i, options, env, renderer) => {
+  if (tokens[i].info.trim() === '{=latex}' && isPrintLayout(tokens[i].content)) return '';
   if (tokens[i].info.trim() !== 'mermaid') return fenceRule(tokens,i,options,env,renderer);
   const en = env.page.lang === 'en';
   return `<figure class="diagram"><button class="diagram-zoom" hidden aria-pressed="false">${en?'Enlarge diagram':'放大图表'}</button><div class="diagram-view" tabindex="0" role="region" aria-label="${en?'Diagram (scroll when enlarged)':'流程图（放大后可滚动）'}"></div><details class="diagram-source" open><summary>${en?'Diagram source':'图表源文'}</summary><pre><code>${escape(tokens[i].content)}</code></pre></details></figure>\n`;
@@ -113,7 +115,7 @@ function compile(page) {
   current = page;
   // Normalize display delimiters only outside code, so escaped currency dollars stay inside math.
   const chunks = read(page.source).split(/(^```[^\n]*\n[\s\S]*?^```[^\n]*$|^~~~[^\n]*\n[\s\S]*?^~~~[^\n]*$)/m);
-  const source = chunks.map((s,i)=>i%2?s:s
+  const source = chunks.map((s,i)=>i%2?s:stripPrintLines(s)
     .replace(/\\color\{qink\}/g,'')
     .replace(/\\begin\{center\}\s*\\begin\{tikzpicture\}[\s\S]*?\\end\{tikzpicture\}\s*\\end\{center\}/g, `![${page.lang==='en'?'Three observed points, candidate lines, and OLS residuals':'三个观测点、候选直线与 OLS 残差'}](${path.posix.relative(path.posix.dirname(page.source),'site/regression.svg')})`)
     .replace(/\$\$([\s\S]*?)\$\$/g,(_,tex)=>'\\[\n'+tex+'\n\\]')
@@ -127,7 +129,7 @@ function compile(page) {
   }
   page.headings = headings;
   page.html = md.renderer.render(tokens,md.options,{page});
-  page.search = tokens.filter(t=>['inline','fence','code_block'].includes(t.type)||t.type.startsWith('math_')).map(t=>t.children?.filter(x=>['text','code_inline'].includes(x.type)||x.type.startsWith('math_')).map(x=>x.content).join(' ')||t.content).join(' ');
+  page.search = tokens.filter(t=>!(t.type==='fence' && t.info.trim()==='{=latex}' && isPrintLayout(t.content))).filter(t=>['inline','fence','code_block'].includes(t.type)||t.type.startsWith('math_')).map(t=>t.children?.filter(x=>['text','code_inline'].includes(x.type)||x.type.startsWith('math_')).map(x=>x.content).join(' ')||t.content).join(' ');
 }
 for (const p of pages.values()) compile(p);
 if (mathErrors.length) {

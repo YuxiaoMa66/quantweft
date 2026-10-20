@@ -2,6 +2,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
+import {isPrintLayout,stripPrintLines} from './print-layout.mjs';
+assert(isPrintLayout(String.raw`\needspace{28\baselineskip}`));
+assert(isPrintLayout(String.raw`\par\smallskip`));
+assert(!isPrintLayout(String.raw`\frac{1}{2}`));
+assert(!isPrintLayout(String.raw`\clearpage and teaching text`));
+assert.equal(stripPrintLines(String.raw`\Needspace{7\baselineskip}`),'');
+assert.equal(stripPrintLines('    '+String.raw`\clearpage`),'    '+String.raw`\clearpage`,'Preserve indented code');
 const root=path.resolve(import.meta.dirname,'..','dist');
 function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)])}
 const files=walk(root), pages=files.filter(f=>f.endsWith('.html'));
@@ -12,6 +19,8 @@ let localLinks=0,math=0,boxes=0,diagrams=0;
 for(const file of pages){
  const html=fs.readFileSync(file,'utf8');
  assert(!html.includes('class="math-error"'),file);
+ for(const block of html.matchAll(/<pre[^>]*><code class="language-\{=latex\}">([\s\S]*?)<\/code><\/pre>/g))assert(!isPrintLayout(block[1]),'Print-only code block: '+file);
+ assert(!/<p>\\(?:[Nn]eedspace|clearpage|newpage)\b/.test(html),'Print-only paragraph: '+file);
  assert(!/:::\s*\{\.body-/.test(html),'Unrendered teaching box: '+file);
  boxes+=(html.match(/class="teaching-box /g)||[]).length;
  diagrams+=(html.match(/class="diagram"/g)||[]).length;
