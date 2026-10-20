@@ -1,16 +1,21 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
 const root=path.resolve(import.meta.dirname,'..','dist');
 function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)])}
 const files=walk(root), pages=files.filter(f=>f.endsWith('.html'));
 const errors=[], missingAnchors=[];
 const decode=s=>s.replace(/&amp;/g,'&');
 const headingIds=new Map(pages.map(p=>[p,new Set([...fs.readFileSync(p,'utf8').matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]))]));
-let localLinks=0,math=0;
+let localLinks=0,math=0,boxes=0,diagrams=0;
 for(const file of pages){
  const html=fs.readFileSync(file,'utf8');
  assert(!html.includes('class="math-error"'),file);
+ assert(!/:::\s*\{\.body-/.test(html),'Unrendered teaching box: '+file);
+ boxes+=(html.match(/class="teaching-box /g)||[]).length;
+ diagrams+=(html.match(/class="diagram"/g)||[]).length;
+ if(html.includes('class="diagram"'))assert(html.includes('/diagrams.js"'),'Missing diagram module: '+file);
  math+=(html.match(/class="katex"/g)||[]).length;
  for(const m of html.matchAll(/\b(?:href|src)="([^"]+)"/g)){
   const value=decode(m[1]);if(/^(?:https?:|mailto:|data:)/.test(value))continue;
@@ -44,5 +49,13 @@ for(const name of ['button primary','nav-reader']) {
  assert(landing.includes(`class="${name}" href="read/zh/index.html" data-reader-zh="read/zh/index.html" data-reader-en="read/en/index.html"`),'Online reader entry: '+name);
 }
 assert(!landing.includes('data-online-reader'),'All online entry markers must resolve');
+const sourceRoot=path.dirname(root);
+const sources=execFileSync('git',['ls-files'],{cwd:sourceRoot,encoding:'utf8'}).trim().split('\n').filter(p=>p.endsWith('.md')&&!p.startsWith('third_party/'));
+let expectedBoxes=0,expectedDiagrams=0;
+for(const source of sources){const text=fs.readFileSync(path.join(sourceRoot,source),'utf8');expectedBoxes+=(text.match(/^(?:[ \t]*- )?[ \t]*:{3,} \{\.body-/gm)||[]).length;expectedDiagrams+=(text.match(/^```mermaid\s*$/gm)||[]).length;}
+assert.equal(boxes,expectedBoxes,'All teaching boxes must render, including boxes nested in lists');
+assert.equal(diagrams,expectedDiagrams,'All Mermaid fences must render as diagrams');
+assert(fs.existsSync(path.join(root,'_reader/mermaid/mermaid.esm.min.mjs')),'Missing self-hosted Mermaid');
+console.log(`PASS: ${boxes} teaching boxes and ${diagrams} diagram containers match the source corpus.`);
 assert(math>10000,'Expected full mathematical content');
 console.log(`PASS: ${pages.length} pages, 45 bilingual chapter pairs (90 routes), ${localLinks} local links/assets, ${math} rendered equations, no missing anchors or math errors.`);

@@ -138,3 +138,16 @@ footer{display:flex;flex-wrap:wrap;gap:12px 22px;justify-content:space-between;f
  .reader-layout{display:block;max-width:none}main{padding:0}.prose,:lang(zh-CN) .prose{font-size:11pt}
  .prose pre,.prose table{overflow:visible}.prose h2,.prose h3{break-after:avoid}body{background:white;color:black}
 }
+/* Teaching boxes preserve the book's four roles without loud background colors. */
+.prose .teaching-box{margin:30px 0;padding:20px 24px;border:1px solid var(--line);border-left:3px solid var(--accent);background:var(--panel);min-width:0}
+.prose .teaching-title{margin:0 0 16px;font-family:var(--sans);font-size:16px;font-weight:650;line-height:1.6;color:var(--accent)}
+.prose .teaching-box>:last-child{margin-bottom:0}.prose .body-pitfall{border-left-style:double;border-left-width:5px}
+.prose .diagram{margin:28px 0;padding:18px 0;border-block:1px solid var(--line)}
+.diagram-view{overflow:auto;overscroll-behavior:contain}.diagram-view:empty{display:none}
+.diagram-view svg{display:block;width:min(100%,var(--diagram-width));max-width:100%!important;height:auto;margin:auto}
+.diagram-expanded .diagram-view{max-height:75vh}
+.diagram-expanded .diagram-view svg{width:var(--diagram-width);max-width:none!important;margin:0}
+.diagram-zoom{display:block;margin:0 0 14px auto;font:13px var(--sans);color:var(--accent);border:1px solid var(--line);background:var(--bg);padding:7px 12px;cursor:pointer}
+.diagram-source{font:13px/1.7 var(--sans);color:var(--muted);margin-top:16px}.diagram-source summary{cursor:pointer}
+@media(max-width:767px){.prose .teaching-box{padding:16px;margin:24px 0}.prose .teaching-title{font-size:15px}}
+@media print{.diagram-zoom,.diagram-source{display:none}.diagram-view{max-height:none;overflow:visible}.diagram-expanded .diagram-view svg{width:100%;max-width:100%!important}}

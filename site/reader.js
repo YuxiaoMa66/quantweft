@@ -11,7 +11,7 @@
   toggle.hidden=false;
   toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');}});
-  for(const pre of document.querySelectorAll('pre')) {
+  for(const pre of document.querySelectorAll('pre:not(.diagram-source pre)')) {
     pre.tabIndex=0;
     const button=document.createElement('button');button.className='code-copy';button.textContent=t('复制代码','Copy code');
     button.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(pre.textContent);button.textContent=t('已复制','Copied')}catch{button.textContent=t('请选中代码手动复制','Select code to copy')}setTimeout(()=>button.textContent=t('复制代码','Copy code'),2500)});pre.after(button);
