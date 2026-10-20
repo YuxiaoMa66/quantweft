@@ -632,37 +632,75 @@
             ><span lang="en">Attribution and acknowledgements</span></a
           >
         </div>
-        <div class="exercise-credit" id="support">
-          <h3>
+        <section class="support-block" id="support" aria-labelledby="support-title">
+          <h3 id="support-title">
             <span lang="zh-CN">参与和支持 QuantWeft</span
             ><span lang="en">Contribute and support QuantWeft</span>
           </h3>
-          <p>
-            <span lang="zh-CN"
-              >欢迎提交内容改进。自愿赞助将用于校对、双语维护和运行环境维护，不影响课程许可；当前尚未开通收款渠道。</span
-            ><span lang="en"
-              >Contributions are welcome. Voluntary support will fund
-              proofreading, bilingual maintenance, and runnable examples. It
-              does not affect the licenses; payment channels are not
-              active.</span
-            >
-          </p>
-          <div class="resource-links">
-            <a
-              href="https://github.com/YuxiaoMa66/quantweft/blob/main/.github/CONTRIBUTING.md"
-              ><span lang="zh-CN">贡献规则</span
-              ><span lang="en">Contributing</span></a
-            ><a
-              href="https://github.com/YuxiaoMa66/quantweft/blob/main/.github/SUPPORT.md"
-              ><span lang="zh-CN">赞助计划</span
-              ><span lang="en">Support plan</span></a
-            ><a
-              href="https://github.com/YuxiaoMa66/quantweft/blob/main/LICENSE.md"
-              ><span lang="zh-CN">许可范围</span
-              ><span lang="en">License scope</span></a
-            >
+          <div class="support-paths">
+            <section class="support-path" aria-labelledby="feedback-title">
+              <h4 id="feedback-title">
+                <span lang="zh-CN">提交学习反馈</span
+                ><span lang="en">Send learning feedback</span>
+              </h4>
+              <p>
+                <span lang="zh-CN"
+                  >发现内容、数学、翻译、代码或网站问题？请说明章节或位置、实际情况和预期结果。若要直接修复，请先阅读贡献指南。</span
+                ><span lang="en"
+                  >Found an issue with the content, math, translation, code, or
+                  site? Include the chapter or location, what happened, and what
+                  you expected. Read the contribution guide before proposing a
+                  fix.</span
+                >
+              </p>
+              <div class="support-actions">
+                <a
+                  class="button primary"
+                  href="https://github.com/YuxiaoMa66/quantweft/issues/new?template=feedback.yml"
+                  ><span lang="zh-CN">提交反馈</span
+                  ><span lang="en">Send feedback</span></a
+                ><a
+                  class="text-link"
+                  href="https://github.com/YuxiaoMa66/quantweft/blob/main/.github/CONTRIBUTING.md"
+                  ><span lang="zh-CN">贡献指南</span
+                  ><span lang="en">Contribution guide</span></a
+                >
+              </div>
+            </section>
+            <section class="support-path" aria-labelledby="sharing-title">
+              <h4 id="sharing-title">
+                <span lang="zh-CN">支持课程维护</span
+                ><span lang="en">Support course maintenance</span>
+              </h4>
+              <p>
+                <span lang="zh-CN"
+                  >校对一段译文、修复一个示例，或在公开发布后分享正式阅读入口，都能支持课程维护。GitHub Sponsors 正在筹备，收款尚未开通。</span
+                ><span lang="en"
+                  >Proofread a translation, fix an example, or share the official
+                  reading link after public release. GitHub Sponsors is being
+                  prepared; payments are not enabled.</span
+                >
+              </p>
+              <div class="support-actions">
+                <a
+                  class="text-link"
+                  href="https://github.com/YuxiaoMa66/quantweft/blob/main/LICENSE.md"
+                  ><span lang="zh-CN">许可范围</span
+                  ><span lang="en">License scope</span></a
+                ><a
+                  class="text-link"
+                  href="https://github.com/YuxiaoMa66/quantweft/blob/main/.github/SUPPORT.md"
+                  ><span lang="zh-CN">了解支持方式</span
+                  ><span lang="en">Ways to support</span></a
+                >
+              </div>
+            </section>
           </div>
-        </div>
+          <p class="support-note">
+            <span lang="zh-CN">仓库目前为私有；提交 GitHub Issue 或 PR 需要有仓库访问权限。</span
+            ><span lang="en">The repository is private. GitHub issues and pull requests require repository access.</span>
+          </p>
+        </section>
         <details>
           <summary>
             <span lang="zh-CN">教材版本、验证范围与数据说明</span
@@ -742,6 +780,10 @@
           data-doc-en="docs/maintenance/REPOSITORY_STATUS.md"
           ><span lang="zh-CN">范围与来源</span
           ><span lang="en">Scope and provenance</span></a
+        >
+        <a href="#support"
+          ><span lang="zh-CN">参与与支持</span
+          ><span lang="en">Contribute and support</span></a
         >
       </p>
     </footer>

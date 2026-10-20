@@ -4,11 +4,19 @@ Thank you for helping improve the explanations, exercises, translations, code an
 
 欢迎改进讲解、练习、翻译、代码和可复现性。提交前请阅读 [许可范围](../LICENSE.md) 与 [第三方声明](../docs/legal/THIRD_PARTY_NOTICES.md)。
 
+## 从这里开始 / Start here
+
+**[提交学习反馈 / Send feedback](https://github.com/YuxiaoMa66/quantweft/issues/new?template=feedback.yml)** · [查看已有问题 / Existing issues](https://github.com/YuxiaoMa66/quantweft/issues)
+
+小修正可直接提交 PR；较大的结构、依赖或数据改动，先用反馈表单沟通范围。请填写章节位置、实际与预期情况；只有需要复现时才补充运行环境。
+
+Submit a focused PR for a small correction. Discuss scope through the feedback form before larger structural, dependency, or dataset changes. Include the location and actual versus expected result; add environment details only when needed to reproduce the problem.
+
 ## What to submit / 如何提交
 
-Open an issue or a focused pull request describing the reader problem, affected chapter or stable exercise ID, the proposed correction, and how it was checked. Keep code, derivations, units, prerequisites, questions and complete answers consistent. State whether calculations were recomputed, code was run, or only text was reviewed; a successful build alone does not establish teaching or research validity.
+The repository is currently private. GitHub issues and pull requests require an account with repository access. For chapter prose, the paired source files are `course/zh/chapters/chNN/content.md` and `course/en/chapters/chNN/content.md`; keep the Chinese and English text aligned where both are affected. Open an issue or a focused pull request with the exact chapter, section, stable exercise ID, or file path; describe the reader problem and proposed correction. Keep code, derivations, units, prerequisites, questions and complete answers consistent. State which checks you actually ran: distinguish text review, independent recalculation, and code or Notebook execution. A successful build alone does not establish teaching or research validity.
 
-通过 issue 或范围明确的 PR 说明读者问题、涉及章节或稳定题号、修改内容和检查方式。同步核对代码、推导、单位、先修、题目和完整答案；区分实际运行、独立复算与纯文字检查。无需为改错重训模型或扩大研究范围。
+仓库目前为私有；提交 GitHub Issue 或 PR 需要账号具有仓库访问权限。章节正文的中英文源文件分别位于 `course/zh/chapters/chNN/content.md` 和 `course/en/chapters/chNN/content.md`；涉及两种语言时请保持文字对应。提交 issue 或范围明确的 PR 时，标明章节、节、稳定题号或文件路径，说明读者遇到的问题和拟议修正。保持代码、推导、单位、先修、题目和完整答案一致。说明实际运行的检查，并区分文字检查、独立复算与代码或 Notebook 执行；构建成功本身不能证明教学或研究有效。
 
 Do not upload proprietary or personal data, credentials, unlicensed figures, copied textbook passages or exercises without the required permission, or market data with unverified redistribution terms. Cite sources and identify the exact license and any modifications for third-party material. Discuss new dependencies, datasets and major structural changes before adding them.
 

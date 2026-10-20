@@ -1,0 +1,62 @@
+name: "Course feedback / 学习反馈"
+description: "Report a learning issue or suggest an improvement. Do not include private data, credentials, or secrets. / 报告学习问题或建议改进；请勿填写个人或专有数据、凭据或密钥。"
+title: "反馈 / Feedback: "
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Type / 类型"
+      description: "Choose the closest fit. / 选择最接近的一类。"
+      options:
+        - "Content / 内容"
+        - "Math / 数学"
+        - "Translation / 翻译"
+        - "Code / 代码"
+        - "Site / 网站"
+        - "Suggestion / 建议"
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: "Location / 位置"
+      description: "Chapter, section, exercise ID, file path, or page URL. / 章节、节、题号、文件路径或页面地址。"
+      placeholder: "Chapter 12, §3 / 第 12 章第 3 节"
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: "Actual behavior / 当前情况"
+      description: "What did you see? / 你看到了什么？"
+      placeholder: "Describe the text, result, or behavior. / 描述相关文字、结果或行为。"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected behavior / 预期情况"
+      description: "What did you expect instead? For suggestions, describe the desired outcome. / 你预期是什么？如为建议，请描述希望达到的效果。"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "Reproduction steps / 复现步骤 (optional / 可选)"
+      description: "Add steps only if useful. Do not include private data, credentials, or secrets. / 仅在有帮助时填写步骤；请勿填写个人或专有数据、凭据或密钥。"
+    validations:
+      required: false
+  - type: textarea
+    id: environment
+    attributes:
+      label: "Environment / 环境 (optional / 可选)"
+      description: "Add relevant browser, operating system, or version details. / 可补充相关浏览器、操作系统或版本信息。"
+    validations:
+      required: false
+  - type: textarea
+    id: checks
+    attributes:
+      label: "Checks performed / 已做检查 (optional / 可选)"
+      description: "Say what you checked, if anything. / 如已检查，请简述检查内容。"
+    validations:
+      required: false

@@ -91,4 +91,4 @@ Parts of the workbook’s exercise design and layout draw on the [loom-notes](ht
 
 ## Contribute and support
 
-[Contributions](.github/CONTRIBUTING.md) are welcome. See the [voluntary support plan](.github/SUPPORT.md); payment channels are not active. Learning and reuse under the licenses do not require sponsorship.
+Send [learning feedback](https://github.com/YuxiaoMa66/quantweft/issues/new?template=feedback.yml) or read the [contribution guide](.github/CONTRIBUTING.md). The repository is private, so GitHub issues and pull requests require repository access. Sharing the course or reusing the material under its [existing licenses](LICENSE.md) also supports the project; learning and licensed reuse do not require payment. See the [payment status](.github/SUPPORT.md).

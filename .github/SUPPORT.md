@@ -1,28 +1,47 @@
-# Support QuantWeft / 支持量化经纬
+# 支持 QuantWeft / Support QuantWeft
 
-QuantWeft's original code is available under MIT and its original educational content under CC BY-SA 4.0, with the exceptions in [LICENSE.md](../LICENSE.md). Use of those licenses does not require payment. The current repository remains private while the [public-release review](../docs/legal/RIGHTS_REVIEW.md) is completed.
+让更多人读懂模型、动手验证，是 QuantWeft 持续维护的方向。反馈一个读者卡点、校对一段译文、修复一个运行问题，都是有价值的支持。
 
-QuantWeft 的原创代码采用 MIT，原创教学内容采用 CC BY-SA 4.0，具体例外见 [许可说明](../LICENSE.md)。按许可使用不要求付费。目前仍为私有仓库，公开前待办见 [权利核查](../docs/legal/RIGHTS_REVIEW.md)。
+QuantWeft connects understanding models with checking them in code. Reporting a confusing explanation, proofreading a translation, or fixing a runnable example all help the course improve.
 
-## Voluntary support / 自愿赞助
+## 从不花钱的支持开始 / Ways to help
 
-If the course helps you, you will be able to support proofreading, bilingual maintenance, and keeping the examples usable. Support is voluntary. It does not purchase investment advice, expected returns, guaranteed updates, priority fixes, private tutoring or permission to override third-party rights. Any future paid service would have separate terms.
+- **反馈问题**：[提交学习反馈](https://github.com/YuxiaoMa66/quantweft/issues/new?template=feedback.yml)，注明章节、题号或页面位置，以及实际情况和预期结果。
+- **改进内容与代码**：[阅读贡献指南](CONTRIBUTING.md)，提交范围明确的修改；中英文、题目与答案一起核对。
+- **分享与关注**：公开发布后，可以分享正式阅读入口或在 GitHub Star 收藏项目，帮助有需要的读者发现课程。
 
-若课程对你有帮助，欢迎未来自愿赞助内容校对、双语维护及运行环境维护。赞助不购买投资建议、收益承诺、固定更新频率、优先修复、私人辅导或第三方权利豁免。后续如提供付费服务，将单独约定。
+Report a reader problem through the feedback form, contribute a focused correction using the guide above, or share the official reading link once the course is publicly released. The repository currently requires authorized GitHub access; sharing a private link does not grant access.
 
-## Payment status / 收款状态
+仓库目前私有，反馈与 PR 入口需要已有的 GitHub 访问权限；分享私有链接不会自动开放访问。
 
-**No payment channel is active.** GitHub Sponsors and Ko-fi profiles have not been supplied or verified. This page does not collect payment or financial information. The repository has a commented [configuration example](FUNDING.yml.example), not an enabled Sponsor button. Do not send money to an account merely because it uses a similar project name.
+## 自愿赞助 / Voluntary sponsorship
 
-**当前未启用收款。** 尚无已提供并核验的 GitHub Sponsors 或 Ko-fi 页面。本页不收集付款或财务信息；仓库只提供注释形式的配置示例，未启用 Sponsor 按钮。不要仅凭同名页面付款。
+未来的自愿赞助将支持内容校对、双语维护、Notebook 运行环境及网页阅读体验。按许可学习和复用不要求捐助。赞助不购买投资建议、收益承诺、固定更新频率、优先修复或私人辅导。
 
-## Maintainer setup / 维护者启用步骤
+Future voluntary sponsorships will support proofreading, bilingual maintenance, Notebook usability, and the web reading experience. Learning and reuse under the licenses do not require payment. Sponsorship does not purchase investment advice, expected returns, guaranteed updates, priority fixes, or private tutoring.
 
-1. Apply for [GitHub Sponsors](https://github.com/sponsors) and/or create a [Ko-fi](https://ko-fi.com/) page using an account you control. Complete required identity, banking and tax steps directly on the platform; do not put such information in this repository.
-2. Provide the confirmed public profile URLs. Check ownership, eligibility and availability of the payment page. Decide whether to enable one-time support, monthly support, or both.
-3. Copy `.github/FUNDING.yml.example` to `.github/FUNDING.yml`, uncomment only the verified providers, and fill in their actual profile slugs. Do not publish placeholder usernames. Update this page and the website only after the payment channels are active.
-4. Before accepting payments, confirm applicable reporting and platform requirements for your circumstances. Do not represent personal creator support as a tax-deductible charitable donation without a valid basis. Retain payment and expense records privately.
+**收款尚未启用。** 当前没有已核验、可收款的 GitHub Sponsors 或 Ko-fi 页面；本页没有付款按钮。启用后会在这里和仓库 Sponsor 入口发布真实链接。
 
-维护者应在平台自行完成开户、身份、收款及税务步骤，随后提供真实公开链接。只启用核验过的渠道，不把身份证件、银行卡、税表或付款记录写入仓库。赞助不默认具有慈善捐赠的抵税资格；具体申报按实际情况确认。
+**Payments are not enabled.** No active GitHub Sponsors or Ko-fi page has been verified. This page has no payment button. Verified payment links will appear here and in the repository Sponsor entry when available.
 
-Official setup references: [GitHub Sponsors onboarding](https://docs.github.com/en/sponsors/receiving-sponsorships-through-github-sponsors/setting-up-github-sponsors-for-your-personal-account), [GitHub funding configuration](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository), [Ko-fi fees](https://help.ko-fi.com/hc/en-us/articles/360002506494-Does-Ko-fi-take-a-fee).
+## 许可 / Licensing
+
+原创代码按 MIT、原创教学内容按 CC BY-SA 4.0，范围及第三方例外见 [LICENSE.md](../LICENSE.md)。开通赞助不会改变课程许可或替代[公开前权利核查](../docs/legal/RIGHTS_REVIEW.md)。
+
+Original software uses MIT and original educational content uses CC BY-SA 4.0, subject to the scope and exceptions above. Enabling sponsorship does not change those licenses or replace the public-release review.
+
+<details>
+<summary>维护者：开通与接入 / Maintainer setup</summary>
+
+1. 从 [GitHub Sponsors 申请入口](https://github.com/sponsors/accounts)选择自己的个人账号，按平台要求完成资料与开源贡献说明。资格及审核以平台为准，不能把尚未公开的材料描述为已经开源。
+2. 在平台直接完成身份、银行与税务步骤，并启用 GitHub 双因素认证。银行所在地区需与实际居住地区一致；个人资料不要提交到 Issues、PR 或本仓库。
+3. 完成介绍与赞助档位，审阅后申请批准。提交申请不代表页面已经可以收款。
+4. 页面获批并可用后，核验所属账号和正式链接，再将 [配置示例](FUNDING.yml.example)复制为 `.github/FUNDING.yml`，仅填写已核验的渠道。同步更新本页及网站状态。
+
+Choose your personal account in GitHub Sponsors, describe your actual open-source contributions, and follow the platform's identity, bank, tax, and two-factor-authentication steps. Complete personal forms directly on the platform. After approval, verify the active public page before enabling `FUNDING.yml` and updating the site. Application submission alone is not an active payment channel.
+
+If Ko-fi is added later, use a verified account you control. Do not publish placeholder payment links. Keep payment and expense records privately; do not describe creator support as tax-deductible charitable donations without a valid basis.
+
+[GitHub Sponsors 官方设置说明 / Official setup guide](https://docs.github.com/en/sponsors/receiving-sponsorships-through-github-sponsors/setting-up-github-sponsors-for-your-personal-account) · [Sponsor 按钮配置 / Sponsor button](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository)
+
+</details>

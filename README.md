@@ -91,4 +91,4 @@ python3 -m venv .venv
 
 ## 参与与支持
 
-欢迎[提交改进](.github/CONTRIBUTING.md)或了解[自愿赞助计划](.github/SUPPORT.md)。当前仅准备收款配置，尚未启用付款渠道；学习与按许可复用不要求捐助。
+欢迎[提交学习反馈](https://github.com/YuxiaoMa66/quantweft/issues/new?template=feedback.yml)或查看[贡献指南](.github/CONTRIBUTING.md)。仓库目前为私有，提交 GitHub Issue 或 PR 需要有仓库访问权限。分享课程或按[现有许可](LICENSE.md)复用教材也能支持项目；学习与许可复用无需捐助，自愿收款渠道尚未启用。详见[收款状态](.github/SUPPORT.md)。
