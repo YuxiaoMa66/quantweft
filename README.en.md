@@ -91,4 +91,17 @@ Parts of the workbook’s exercise design and layout draw on the [loom-notes](ht
 
 ## Contribute and support
 
-Send [learning feedback](https://github.com/YuxiaoMa66/quantweft/issues/new?template=feedback.yml) or read the [contribution guide](.github/CONTRIBUTING.md). The repository is private, so GitHub issues and pull requests require repository access. Sharing the course or reusing the material under its [existing licenses](LICENSE.md) also supports the project; learning and licensed reuse do not require payment. See the [payment status](.github/SUPPORT.md).
+Send [learning feedback](https://github.com/YuxiaoMa66/quantweft/issues/new?template=feedback.yml) or read the [contribution guide](.github/CONTRIBUTING.md). The repository is private, so issues and PRs require access. Voluntary support helps maintain the bilingual course; learning and licensed reuse do not require payment.
+
+<details>
+<summary>Support with WeChat Pay / Alipay · View QR codes</summary>
+
+Choose any amount in the corresponding app and verify the recipient. Open either image for the original size. The repository does not process payments; availability depends on the provider.
+
+| WeChat Pay | Alipay |
+| --- | --- |
+| [![WeChat Pay support QR](docs/assets/support/wechat-pay.jpg)](docs/assets/support/wechat-pay.jpg) | [![Alipay support QR](docs/assets/support/alipay.jpg)](docs/assets/support/alipay.jpg) |
+
+</details>
+
+GitHub Sponsors is awaiting approval. See [support details](.github/SUPPORT.md).

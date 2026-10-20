@@ -91,4 +91,17 @@ python3 -m venv .venv
 
 ## 参与与支持
 
-欢迎[提交学习反馈](https://github.com/YuxiaoMa66/quantweft/issues/new?template=feedback.yml)或查看[贡献指南](.github/CONTRIBUTING.md)。仓库目前为私有，提交 GitHub Issue 或 PR 需要有仓库访问权限。分享课程或按[现有许可](LICENSE.md)复用教材也能支持项目；学习与许可复用无需捐助，自愿收款渠道尚未启用。详见[收款状态](.github/SUPPORT.md)。
+欢迎[提交学习反馈](https://github.com/YuxiaoMa66/quantweft/issues/new?template=feedback.yml)或查看[贡献指南](.github/CONTRIBUTING.md)。仓库目前私有，Issue 和 PR 需要访问权限。自愿支持用于双语课程维护，学习与按许可复用不要求捐助。
+
+<details>
+<summary>微信 / 支付宝支持 · 查看收款码</summary>
+
+金额随意，请在对应 App 中核对收款人。点击图片可放大原图。仓库不处理支付，实际收款是否可用以平台提示为准。
+
+| 微信支付 | 支付宝 |
+| --- | --- |
+| [![微信支持收款码](docs/assets/support/wechat-pay.jpg)](docs/assets/support/wechat-pay.jpg) | [![支付宝支持收款码](docs/assets/support/alipay.jpg)](docs/assets/support/alipay.jpg) |
+
+</details>
+
+GitHub Sponsors 等待审核，详见[支持方式](.github/SUPPORT.md)。

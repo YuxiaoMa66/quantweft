@@ -51,6 +51,6 @@ Language switching, themes, mobile layout, and command copying have been checked
 
 ## 许可与赞助 / Licensing and support
 
-网站功能代码适用 MIT，原创教学文字与作者有权许可的插画适用 CC BY-SA 4.0，例外见 [许可范围](../LICENSE.md)。收款渠道尚未启用，仅准备 [赞助说明](../.github/SUPPORT.md)与 `.github/FUNDING.yml.example`。Pages 与仓库仍未公开，公开前须处理 [权利核查](legal/RIGHTS_REVIEW.md)。
+网站功能代码适用 MIT，原创教学文字与作者有权许可的插画适用 CC BY-SA 4.0，例外见 [许可范围](../LICENSE.md)。已展示作者提供的微信和支付宝收款码，详见 [支持方式](../.github/SUPPORT.md)；GitHub Sponsors 等待审核，尚未启用 `.github/FUNDING.yml`。Pages 与仓库仍未公开，公开前须处理 [权利核查](legal/RIGHTS_REVIEW.md)。
 
-Functional site code uses MIT; original educational prose and licensable rights in the identified illustrations use CC BY-SA 4.0, subject to the linked exceptions. No payment channels are active.
+Functional site code uses MIT; original educational prose and licensable rights in the identified illustrations use CC BY-SA 4.0, subject to the linked exceptions. Maintainer-supplied WeChat Pay and Alipay QR images are displayed; payment acceptance has not been tested. GitHub Sponsors awaits approval, and no live `FUNDING.yml` is enabled.

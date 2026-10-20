@@ -16,13 +16,29 @@ Report a reader problem through the feedback form, contribute a focused correcti
 
 ## 自愿赞助 / Voluntary sponsorship
 
-未来的自愿赞助将支持内容校对、双语维护、Notebook 运行环境及网页阅读体验。按许可学习和复用不要求捐助。赞助不购买投资建议、收益承诺、固定更新频率、优先修复或私人辅导。
+自愿支持将用于内容校对、双语维护、Notebook 运行环境及网页阅读体验。按许可学习和复用不要求捐助。赞助不购买投资建议、收益承诺、固定更新频率、优先修复或私人辅导。
 
-Future voluntary sponsorships will support proofreading, bilingual maintenance, Notebook usability, and the web reading experience. Learning and reuse under the licenses do not require payment. Sponsorship does not purchase investment advice, expected returns, guaranteed updates, priority fixes, or private tutoring.
+Voluntary support will help fund proofreading, bilingual maintenance, Notebook usability, and the web reading experience. Learning and reuse under the licenses do not require payment. Sponsorship does not purchase investment advice, expected returns, guaranteed updates, priority fixes, or private tutoring.
 
-**收款尚未启用。** 当前没有已核验、可收款的 GitHub Sponsors 或 Ko-fi 页面；本页没有付款按钮。启用后会在这里和仓库 Sponsor 入口发布真实链接。
+### 微信与支付宝 / WeChat Pay and Alipay
 
-**Payments are not enabled.** No active GitHub Sponsors or Ko-fi page has been verified. This page has no payment button. Verified payment links will appear here and in the repository Sponsor entry when available.
+作者提供了以下收款码原图。请使用对应 App 扫码，核对收款人后再自行决定是否支付及金额。网站和仓库不处理支付，也不收集付款资料；实际收款可用性以平台提示为准。
+
+These original QR images were supplied by the maintainer. Scan with the corresponding app and verify the recipient before choosing whether and how much to pay. The website and repository do not process payments or collect payment details. Availability depends on the provider.
+
+| 微信支付 / WeChat Pay | 支付宝 / Alipay |
+| --- | --- |
+| [![WeChat Pay support QR](../docs/assets/support/wechat-pay.jpg)](../docs/assets/support/wechat-pay.jpg) | [![Alipay support QR](../docs/assets/support/alipay.jpg)](../docs/assets/support/alipay.jpg) |
+
+可点击图片放大，或在对应 App 中从相册识别。支付前请核对收款人及金额；若平台提示不可用，请勿继续付款。
+
+Open either image at full size, or use the matching app's image-recognition feature. Check the recipient and amount before paying; do not proceed if the provider reports that payment is unavailable.
+
+### GitHub Sponsors
+
+GitHub Sponsors 申请已提交，等待平台审核；当前不提供尚未上线的 Sponsors 付款按钮。Ko-fi 未配置。这里只展示作者提供的微信与支付宝收款码。
+
+The GitHub Sponsors application is awaiting review. No inactive Sponsors payment button is shown. Ko-fi is not configured; only the maintainer-supplied WeChat Pay and Alipay codes are displayed here.
 
 ## 许可 / Licensing
 

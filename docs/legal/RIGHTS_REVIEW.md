@@ -1,8 +1,8 @@
 # Public-release rights review / 公开前权利核查
 
-**Status: pending; repository private; GitHub Pages disabled; payment channels inactive.** The selected MIT and CC BY-SA 4.0 licenses apply only to licensable project-original rights as stated in [LICENSE.md](../../LICENSE.md). This register is not a finding that the items below are infringing; it records evidence still needed for a public release.
+**Status: pending; repository private; GitHub Pages disabled; payment QR images displayed; GitHub Sponsors pending.** The selected MIT and CC BY-SA 4.0 licenses apply only to licensable project-original rights as stated in [LICENSE.md](../../LICENSE.md). This register is not a finding that the items below are infringing; it records evidence still needed for a public release.
 
-**当前状态：核查未闭合，仓库私有，Pages 未启用，收款未启用。** 许可已按根说明选定，但不能据此替第三方授权。下列待办不等于认定侵权，而是公开前仍需证据的项目。
+**当前状态：核查未闭合，仓库私有，Pages 未启用，已展示收款码，GitHub Sponsors 待审核。** 许可已按根说明选定，但不能据此替第三方授权。下列待办不等于认定侵权，而是公开前仍需证据的项目。
 
 | ID | Item / 核查项 | Evidence and next action / 证据与后续动作 | State / 状态 |
 | --- | --- | --- | --- |
@@ -14,7 +14,7 @@
 | R06 | AI illustration provenance / AI 插画来源 | Three website images are identified in THIRD_PARTY_NOTICES.md. Retain generation provenance and assess any actual third-party rights concern; do not claim exclusive copyright merely because an image was generated. | Provenance identified / 来源已标识 |
 | R07 | Release payload, history and private information / 发布载荷与历史信息 | The pre-change tracked inventory covers 870 files. Credential-pattern checks found no matching candidates in the selected text formats; this is not a history-wide or binary-content guarantee. Review the intended public tree and Git history, remove any content that cannot be distributed, and keep restricted data excluded. | Public release check pending / 待发布核验 |
 | R09 | Synthetic text corpus / 构造文本语料 | `fixtures/late/ch43/constructed_documents.csv` uses `CONSTRUCTED_TEACHING_CORPUS_OPEN_ACADEMIC_USE` as a historical identifier, not a license. Confirm original authorship and any upstream inputs; apply the current content terms only to rights the author can grant. Do not silently relabel or rerun accepted examples. | Source/authority pending / 待来源与授权确认 |
-| R08 | Real payment profiles / 真实收款页面 | The owner has no Sponsors/Ko-fi page yet. Only `.github/FUNDING.yml.example` is present. Complete platform onboarding outside the repository, then verify public profile ownership before enabling funding or payment links. | Not configured / 未配置 |
+| R08 | Real payment profiles / 真实收款页面 | The owner supplied original WeChat Pay and Alipay QR images for the support section. No test payment or settlement validation was performed. GitHub Sponsors awaits approval; Ko-fi and live FUNDING.yml are not enabled. Verify the public Sponsors page before connecting it. | QR displayed; Sponsors pending / 已展示二维码，Sponsors 待审核 |
 
 ## What has been checked / 已检查内容
 

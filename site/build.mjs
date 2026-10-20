@@ -60,7 +60,7 @@ function resolveLink(page, url, image=false) {
   const target = path.posix.normalize(path.posix.join(path.posix.dirname(page.source), decodeURIComponent(raw)));
   if (pages.has(target)) return href(page, pages.get(target)) + (hash ? '#' + hash : '');
   if (!fs.existsSync(path.join(root, target))) return url;
-  if (image || target.endsWith('.pdf')) {
+  if (image || /\.(?:pdf|png|jpe?g|svg|webp)$/i.test(target)) {
     const dest = '_content/' + target;
     if (!copied.has(dest)) { fs.mkdirSync(path.dirname(path.join(out,dest)),{recursive:true}); fs.copyFileSync(path.join(root,target),path.join(out,dest)); copied.add(dest); }
     return href(page, dest) + (hash ? '#' + hash : '');
