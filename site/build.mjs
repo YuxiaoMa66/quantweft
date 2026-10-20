@@ -4,6 +4,7 @@ import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import MarkdownIt from 'markdown-it';
 import container from 'markdown-it-container';
+import cjkFriendly from 'markdown-it-cjk-friendly';
 import {isPrintLayout,stripPrintLines} from './print-layout.mjs';
 import texmath from 'markdown-it-texmath';
 import katex from 'katex';
@@ -60,6 +61,7 @@ const md = new MarkdownIt({html:true, linkify:false, highlight(code, lang) {
   catch (error) { mathErrors.push({source:current.source, tex, error:error.message}); return `<code class="math-error">${escape(tex)}</code>`; }
 }}, delimiters:['brackets','dollars'], katexOptions:{strict:'ignore', trust:false}});
 // Pandoc-style teaching boxes share the Markdown parser, including lists, code and math.
+md.use(cjkFriendly);
 const boxInfo = /^\{\.(body-(?:definition|conditions|example|pitfall)) title="([\s\S]*)"\}$/;
 md.use(container, 'teaching-box', {
   validate: info => boxInfo.test(info.trim()),
@@ -121,8 +123,21 @@ function compile(page) {
     .replace(/\\color\{qink\}/g,'')
     .replace(/\\begin\{center\}\s*\\begin\{tikzpicture\}[\s\S]*?\\end\{tikzpicture\}\s*\\end\{center\}/g, `![${page.lang==='en'?'Three observed points, candidate lines, and OLS residuals':'三个观测点、候选直线与 OLS 残差'}](${path.posix.relative(path.posix.dirname(page.source),'site/regression.svg')})`)
     .replace(/\$\$([\s\S]*?)\$\$/g,(_,tex)=>'\\[\n'+tex+'\n\\]')
-    .replace(/\\\[([\s\S]*?)\\\]/g,(_,tex)=>'\n\n\\[\n'+tex+'\n\\]\n\n')).join('');
+    .replace(/(^[ \t]*)?\\\[([\s\S]*?)\\\]/gm,(_,indent='',tex)=>'\n\n'+indent+'\\[\n'+tex+'\n'+indent+'\\]\n\n')).join('');
   const tokens = md.parse(source, {page});
+  // A standalone definition label is a deliberate line, not prose wrapping.
+  let definitions=false;
+  for (let i=0;i<tokens.length;i++) {
+    if(tokens[i].type==='heading_open' && tokens[i].tag==='h2') definitions=/^5[.、\s]/.test(tokens[i+1].content);
+    const children=tokens[i].children;
+    if(!definitions || tokens[i].type!=='inline' || !children) continue;
+    const first=children.findIndex(t=>t.type!=='text' || t.content.trim());
+    if(children[first]?.type!=='strong_open') continue;
+    const close=children.findIndex((t,j)=>j>first && t.type==='strong_close');
+    let next=close+1;
+    if(children[next]?.type==='text' && /^[：:。.]?\s*$/.test(children[next].content)) next++;
+    if(close>first && children[next]?.type==='softbreak') children[next].type='hardbreak';
+  }
   const headings = []; const used = new Map();
   for (let i=0;i<tokens.length;i++) if (tokens[i].type==='heading_open') {
     const text = tokens[i+1].children?.filter(t=>!['html_inline'].includes(t.type)).map(t=>t.content).join('') || tokens[i+1].content;

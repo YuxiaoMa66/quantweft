@@ -45,6 +45,13 @@ for(const lang of ['zh','en'])for(let n=1;n<=45;n++){
  assert(html.includes(`href="../${lang==='zh'?'en':'zh'}/${name}"`),'Same-chapter language switch '+name);
  assert(html.includes('<article class="prose">'),'Missing article');
  assert.equal((html.match(/<h1[ >]/g)||[]).length,1,'Chapter needs one main heading');
+ const definitions=html.match(/<h2[^>]*>5[.、\s][\s\S]*?(?=<h2|$)/)?.[0];
+ assert(definitions,'Missing formal definitions: '+lang+'/'+name);
+ const prose=definitions.replace(/<pre[\s\S]*?<\/pre>|<code[\s\S]*?<\/code>/g,'');
+ assert(!prose.includes('**'),'Unrendered definition emphasis: '+lang+'/'+name);
+ assert(!/\n\d+\. <strong>/.test(prose),'Definition list escaped its list item: '+lang+'/'+name);
+ if(n===43)assert(/<li>\s*(?:<p>)?<strong>(?:Stable unit|稳定个体)/.test(definitions),'Fourth causal assumption must be a list item: '+lang);
+
 }
 for(const lang of ['zh','en']) {
  const overview=fs.readFileSync(path.join(root,'read',lang,'index.html'),'utf8');
@@ -53,6 +60,10 @@ for(const lang of ['zh','en']) {
  const chapter=index.find(p=>p.url==='ch08.html');
  assert(chapter.text.includes('import numpy'),'Search must include code');
 }
+const optionsChapter=fs.readFileSync(path.join(root,'read/zh/ch10.html'),'utf8');
+assert(optionsChapter.includes('<strong>期权（option）</strong>'),'CJK punctuation must allow adjacent bold text');
+const costsChapter=fs.readFileSync(path.join(root,'read/zh/ch35.html'),'utf8');
+assert(/<strong>定义 5\.1[^<]*<\/strong>：<br>/.test(costsChapter),'Standalone definition label must retain its line break');
 const landing=fs.readFileSync(path.join(root,'index.html'),'utf8');
 for(const name of ['button primary','nav-reader']) {
  assert(landing.includes(`class="${name}" href="read/zh/index.html" data-reader-zh="read/zh/index.html" data-reader-en="read/en/index.html"`),'Online reader entry: '+name);

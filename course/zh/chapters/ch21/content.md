@@ -128,6 +128,7 @@ Ledoit 与 Wolf（2004）§2.2 式（12）把 Lemma 2.1 改写为特征值形式
 
 投资组合的总波动率函数为 \(\sigma(\mathbf{w}) = \sqrt{\mathbf{w}^\top \Sigma \mathbf{w}}\)。
 由于对任意正标量 \(a > 0\)，满足 \(\sigma(a\mathbf{w}) = a\sigma(\mathbf{w})\)，因此组合波动率是持仓权重 \(\mathbf{w}\) 的**一阶齐次函数（homogeneous of degree 1）**。
+
 以下求导和风险份额要求 \(\sigma(\mathbf w)>0\)，\(\Sigma\) 对称半正定。根据 Euler 齐次函数定理（Euler's Theorem for Homogeneous Functions）：
 \[
 \sigma(\mathbf{w}) = \sum_{i=1}^n w_i \frac{\partial \sigma(\mathbf{w})}{\partial w_i}.

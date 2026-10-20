@@ -133,6 +133,7 @@ Therefore, the absolute sector neutrality used in this chapter necessarily impli
 
 Portfolio volatility is the function \(\sigma(\mathbf{w}) = \sqrt{\mathbf{w}^\top \Sigma \mathbf{w}}\).
 Because \(\sigma(a\mathbf{w}) = a\sigma(\mathbf{w})\) for any positive scalar \(a > 0\), portfolio volatility is **homogeneous of degree 1** in the weight vector \(\mathbf{w}\).
+
 The derivatives and risk shares below require \(\sigma(\mathbf w)>0\) and a symmetric positive-semidefinite matrix \(\Sigma\). By Euler's theorem for homogeneous functions:
 \[
 \sigma(\mathbf{w}) = \sum_{i=1}^n w_i \frac{\partial \sigma(\mathbf{w})}{\partial w_i}.

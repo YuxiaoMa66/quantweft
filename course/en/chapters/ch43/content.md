@@ -117,7 +117,9 @@ When the posterior concentration is finite and both Beta parameters are positive
 
 ### 5.3 Normal Hierarchical Model and Partial Pooling
 The closed form assumes independent group priors conditional on the known hyperparameters, and conditionally independent, homoskedastic normal observations within each group given its $\theta_j$. New-observation noise is independent of $\theta_j$ and the old observations. With within-group time dependence or heteroskedasticity, $\sigma^2/n_j$ and these fixed precision weights cannot be used directly.
+
 Consider $J$ asset or analyst groups. The parameter for group $j$ has a common prior $\theta_j \sim \mathcal{N}(\mu, \tau^2)$, and within-group observations satisfy $y_{j, i} \sim \mathcal{N}(\theta_j, \sigma^2)$. The sampling variance of the sample mean $\bar{y}_j$ is $\sigma_j^2 = \sigma^2 / n_j$.
+
 When the hyperparameters $(\mu, \tau^2, \sigma^2)$ are **known**, the posterior mean of group mean $\theta_j$ has the following closed-form partial-pooling solution (Equation 5.17 in Gelman et al., BDA3):
 $$
 \hat{\theta}_j = (1 - w_j)\mu + w_j \bar{y}_j, \quad w_j = \frac{n_j / \sigma^2}{1/\tau^2 + n_j / \sigma^2} = \frac{n_j}{n_j + \sigma^2 / \tau^2}
@@ -129,6 +131,7 @@ Let the binary treatment variable be $T \in \{0, 1\}$. For each unit, define a p
 - $Y(1)$: the potential outcome for the unit if it receives the treatment ($T=1$);
 - $Y(0)$: the potential outcome for the unit if it does not receive the treatment ($T=0$).
 The fundamental difficulty in causal inference is that only one of the two potential outcomes can be observed for any unit in practice: $Y = T \cdot Y(1) + (1-T) \cdot Y(0)$.
+
 The **average treatment effect (ATE)** for the target population is defined as:
 $$
 \operatorname{ATE} = E[Y(1) - Y(0)]
@@ -142,7 +145,8 @@ Following Hernán & Robins (2020), statistical contrasts in observed data can be
    $$
    0 < P(T=1 \mid Z=z) < 1
    $$
-Positivity means every stratum has a positive probability of receiving either treatment; it **does not** mean that variables follow a normal distribution. If everyone in a stratum receives treatment or everyone receives control, the counterfactual outcome for the missing arm cannot be identified from the data. The algorithm must report an explicit error and reject the calculation; it must never fill the missing value silently.
+
+   Positivity means every stratum has a positive probability of receiving either treatment; it **does not** mean that variables follow a normal distribution. If everyone in a stratum receives treatment or everyone receives control, the counterfactual outcome for the missing arm cannot be identified from the data. The algorithm must report an explicit error and reject the calculation; it must never fill the missing value silently.
 4. **Stable unit treatment value assumption (SUTVA)**: This includes two closely related dimensions:
    - **No interference**: One unit’s treatment does not affect another unit’s potential outcome (for example, one stock having an earnings call and being bought by a strategy does not directly change the potential excess return of a stock without a call in the parallel world);
    - **No treatment variation / no hidden versions of treatment**: For a stated treatment level $T=t$, there are no unobserved versions of treatment that lead to different potential outcomes (for example, whether a CEO or CFO leads the call, or how quickly they speak, does not make the treatment $T=1$ causally different under the declared treatment definition).
@@ -156,6 +160,7 @@ Emphasize that the numerical contrast from stratified standardization can be int
 
 ### 5.7 Point-in-Time (PIT) Availability and Delay Contract
 Inputs must have nonmissing, time-zone-aware values for event, revision, availability, ingestion, signal, trade, and label times. Under valid inputs and version semantics, the teaching selector requires one decision cutoff per `source_id` and positive, increasing integer version identifiers. Duplicate versions, contradictory times, and missing text cause errors; versions ingested too late are filtered out. License fields store source notes only; the program does not determine legal authorization. These checks also run at the direct training entry point.
+
 Alternative data must record the complete lifecycle timestamps for every version:
 - Eligibility rule (iff, under the valid-input and version-semantics assumptions above): a version is eligible at the decision time if and only if $\max(\operatorname{available\_at}, \operatorname{ingested\_at}) \le \operatorname{signal\_time}$.
 - Version replacement: If an event has several revised versions, use only the latest compliant version ingested by the signal cutoff; never overwrite history retrospectively.
