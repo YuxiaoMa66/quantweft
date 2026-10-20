@@ -66,5 +66,7 @@ assert.equal(boxes,expectedBoxes,'All teaching boxes must render, including boxe
 assert.equal(diagrams,expectedDiagrams,'All Mermaid fences must render as diagrams');
 assert(fs.existsSync(path.join(root,'_reader/mermaid/mermaid.esm.min.mjs')),'Missing self-hosted Mermaid');
 console.log(`PASS: ${boxes} teaching boxes and ${diagrams} diagram containers match the source corpus.`);
+assert(!files.some(file=>file.endsWith('.pdf')),'PDF downloads belong on GitHub, outside the site payload');
+for(const lang of ['zh','en']){const html=fs.readFileSync(path.join(root,'read',lang,'ch01.html'),'utf8');assert(html.includes(`https://github.com/YuxiaoMa66/quantweft/blob/main/editions/${lang}/body/quantweft-textbook-${lang}.pdf`),'Textbook link must point to GitHub');}
 assert(math>10000,'Expected full mathematical content');
 console.log(`PASS: ${pages.length} pages, 45 bilingual chapter pairs (90 routes), ${localLinks} local links/assets, ${math} rendered equations, no missing anchors or math errors.`);

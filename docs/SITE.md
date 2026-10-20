@@ -35,9 +35,9 @@ To preview only the original introduction, serve `docs/` with the Python command
 
 ## 托管状态 / Hosting status
 
-目前未启用 Pages，仓库保持私有。完整站点应由构建后的 `dist/` 部署，不能仅发布 `/docs`。输出包含正文、四册 PDF 与搜索全文；公开前需完成既有权利核查及发布确认。仅推送构建源码不会自动开放站点。
+目前未启用 Pages，仓库保持私有。完整站点应由构建后的 `dist/` 部署，不能仅发布 `/docs`。输出包含正文与搜索全文；四册 PDF 下载跳转 GitHub，私有仓库仍需访问权限；公开前需完成既有权利核查及发布确认。仅推送构建源码不会自动开放站点。
 
-Pages remains disabled and the repository private. Deploy the built `dist/` for the complete site; `/docs` alone is only the introduction. The output includes prose, four PDFs, and full-text search data. Complete the existing rights review and release confirmation before publication. Pushing build source does not publish the site.
+Pages remains disabled and the repository private. Deploy the built `dist/` for the complete site; `/docs` alone is only the introduction. The output includes prose and full-text search data. All four PDF downloads link to GitHub and require repository access while private. Complete the existing rights review and release confirmation before publication. Pushing build source does not publish the site.
 
 ## 设计与校验 / Design and checks
 
