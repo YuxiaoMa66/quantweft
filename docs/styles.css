@@ -522,6 +522,32 @@ p {
 .reference {
   padding-bottom: 70px;
 }
+.author {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  border-top: 1px solid var(--line);
+}
+.author-copy p {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 62ch;
+  color: var(--muted);
+}
+.author-copy p + p {
+  margin-top: 14px;
+}
+.author-links {
+  display: flex;
+  gap: 24px;
+  margin-top: 22px;
+}
+@media (max-width: 767px) {
+  .author {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
 .reference-links {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
