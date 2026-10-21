@@ -102,10 +102,17 @@ h2,
 h3 {
   text-wrap: balance;
 }
+/* Textbook-style display type; system serifs avoid font downloads blocked in some regions. */
+h1,
+h2 {
+  font-family: "Iowan Old Style", Georgia, "Songti SC", "Noto Serif SC",
+    "Noto Serif CJK SC", "Source Han Serif SC", "STSong", serif;
+  font-weight: 700;
+}
 h2 {
   font-size: clamp(28px, 3.2vw, 40px);
   line-height: 1.3;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.01em;
 }
 h3 {
   font-size: 20px;
@@ -217,6 +224,17 @@ p {
   font-size: 13px;
   white-space: nowrap;
 }
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+}
+.github-link:hover { color: var(--accent); }
 .hero {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -233,9 +251,8 @@ p {
 }
 .hero h1 {
   font-size: clamp(40px, 4.25vw, 58px);
-  line-height: 1.16;
-  letter-spacing: -0.045em;
-  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
 }
 .headline-end {
   display: block;
@@ -306,44 +323,15 @@ p {
 .preview-step{display:grid;text-align:center;line-height:1;color:var(--accent);font-size:22px}
 .preview-step small{font:10px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 .preview-footer{display:flex;justify-content:space-between;gap:12px;margin-top:20px;padding-block:14px;border-top:1px solid var(--line);font-size:12px;font-weight:600;color:var(--accent)}
-.facts {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1.4fr;
-  border-block: 1px solid var(--line);
-  padding-block: 24px;
-  gap: 20px;
-}
-.facts p {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  font-size: 13px;
-}
-.facts strong {
-  font-size: 36px;
-  line-height: 1.2;
-  font-weight: 500;
-  letter-spacing: -0.04em;
-  color: var(--text);
-}
-.facts .fact-language {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 3px;
-}
-.fact-language strong {
-  font-size: 22px;
-  letter-spacing: -0.025em;
-}
 .books {
   display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  gap: 18px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
 }
 .book {
   display: flex;
+  flex-direction: column;
   min-width: 0;
-  min-height: 192px;
   border: 1px solid var(--line);
   color: var(--text);
   text-decoration: none;
@@ -353,34 +341,30 @@ p {
   border-color: var(--accent);
   color: var(--text);
 }
-.book:nth-child(2),
-.book:nth-child(3) {
-  background: var(--surface);
-}
 .book-spine {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
   font-size: 10px;
   letter-spacing: 0.12em;
-  padding: 20px 13px;
-  border-left: 1px solid var(--line);
+  padding: 16px 20px 0;
   color: var(--accent);
-  text-align: center;
 }
 .book-content {
-  padding: 26px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 6px 20px 18px;
 }
 .book h3 {
-  font-size: 23px;
+  font-size: 19px;
 }
 .book p {
-  font-size: 14px;
-  margin-top: 9px;
+  font-size: 13px;
+  margin-top: 6px;
 }
 .book-action {
   display: block;
   font-size: 13px;
-  margin-top: 24px;
+  margin-top: auto;
+  padding-top: 14px;
   color: var(--accent);
 }
 .section-note {
@@ -598,6 +582,9 @@ summary {
   }
 }
 @media (max-width: 1023px) {
+  .books {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .container {
     width: calc(100% - 48px);
   }
@@ -614,11 +601,6 @@ summary {
     font-size: 40px;
   }
   .reader-preview {padding:22px 24px 0;}
-  .facts p {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
   .setup-grid {
     gap: 30px;
   }
@@ -647,6 +629,12 @@ summary {
     font-size: 10px;
   }
   /* Phones keep only the reader entry; section links stay in the page. */
+  .header-inner nav {
+    margin-left: auto;
+  }
+  .preferences {
+    margin-left: 0;
+  }
   .header-inner nav a:not(.nav-reader) {
     display: none;
   }
@@ -660,6 +648,9 @@ summary {
   .preferences button {
     font-size: 11px;
     padding: 6px 8px;
+  }
+  .github-link {
+    width: 28px;
   }
   .hero {
     grid-template-columns: 1fr;
@@ -680,26 +671,6 @@ summary {
   }
   .reader-preview {padding:22px 24px 0;}
   .reader-preview h2 {font-size:24px;}
-  .facts {
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
-    padding-block: 22px;
-  }
-  .facts p {
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-  }
-  .facts strong {
-    font-size: 30px;
-  }
-  .facts .fact-language {
-    gap: 3px;
-    align-items: flex-start;
-  }
-  .fact-language strong {
-    font-size: 20px;
-  }
   .section {
     padding-block: 52px;
   }
@@ -708,16 +679,7 @@ summary {
   }
   .books {
     grid-template-columns: 1fr;
-    gap: 14px;
-  }
-  .book {
-    min-height: 170px;
-  }
-  .book-content {
-    padding: 22px;
-  }
-  .book h3 {
-    font-size: 22px;
+    gap: 10px;
   }
   .route article {
     grid-template-columns: 1fr;
@@ -766,10 +728,13 @@ summary {
     padding-bottom: 28px;
   }
 }
-@media (max-width: 359px) {
-  .brand-mark {
+/* Narrow phones keep the QW mark; the hero names the course right below. */
+@media (max-width: 479px) {
+  .brand > span:not(.brand-mark) {
     display: none;
   }
+}
+@media (max-width: 359px) {
   .preferences button {
     padding-inline: 6px;
   }

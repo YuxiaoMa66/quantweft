@@ -72,6 +72,7 @@ for(const name of ['button primary','nav-reader']) {
 assert(!landing.includes('data-online-reader'),'All online entry markers must resolve');
 assert(!/blob\/main\/[^"]+\.pdf/.test(landing),'Landing PDF links must download directly');
 assert(landing.includes('property="og:image"'),'Landing needs a social preview image');
+assert(/class="github-link"\s+href="https:\/\/github\.com\/YuxiaoMa66\/quantweft"/.test(landing),'Header needs the repository link');
 assert(/href="styles\.[a-f0-9]{12}\.css"/.test(landing),'Landing styles must change URL when content changes');
 assert(/src="site\.[a-f0-9]{12}\.js"/.test(landing),'Landing script must change URL when content changes');
 const sourceRoot=path.dirname(root);
