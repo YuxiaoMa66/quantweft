@@ -81,7 +81,7 @@ python3 -m venv .venv
 
 默认路线使用构造数据，不分发 French 市场数据，也未执行真实市场研究。历史结果与未解决的证据缺口按原记录保留，详见[后续事项](editions/zh/REMAINING_ITEMS.md)与[可选数据契约](editions/zh/OPTIONAL_DATA.md)。
 
-作者：**Yuxiao Ma**。原创代码采用 **MIT**，原创教材与练习采用 **CC BY-SA 4.0**，第三方例外见[许可范围](LICENSE.md)。仓库在[公开前权利核查](docs/legal/RIGHTS_REVIEW.md)完成前保持私有。见[仓库范围与来源](docs/maintenance/REPOSITORY_STATUS.md)。
+作者：**Yuxiao Ma**。原创代码采用 **MIT**；作者有权许可的原创教材与练习采用 **CC BY-NC-SA 4.0**，仅限非商业使用，商业使用须另行许可。第三方例外见[许可范围](LICENSE.md)。仓库在[公开前权利核查](docs/legal/RIGHTS_REVIEW.md)完成前保持私有。见[仓库范围与来源](docs/maintenance/REPOSITORY_STATUS.md)。
 
 </details>
 

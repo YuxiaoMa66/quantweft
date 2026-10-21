@@ -2,7 +2,7 @@
   "date": "2026-10-19",
   "provider": "OpenAI image-generation tool",
   "purpose": "Conceptual course artwork, not empirical plots",
-  "rights_note": "Offers only transferable rights held by the project owner under CC-BY-SA-4.0; no guarantee of exclusive copyright or third-party clearance",
+  "rights_note": "Transferable rights held by the project owner are offered under CC-BY-NC-SA-4.0",
   "files": {
     "course-cover.png": {
       "sha256": "415fe3fb88f5e7ae06797546551a4aef675b2f3ef9facdeacb2d818a1ddbdfc3",

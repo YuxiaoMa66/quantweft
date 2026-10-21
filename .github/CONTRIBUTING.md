@@ -24,9 +24,9 @@ Do not upload proprietary or personal data, credentials, unlicensed figures, cop
 
 ## Contribution licensing / 贡献许可
 
-By intentionally submitting a contribution for inclusion, you confirm that you have the right to submit it under the applicable project license: MIT for your original software and CC BY-SA 4.0 for your original educational content, with mixed Notebooks split as described in LICENSE.md. Clearly identified third-party components keep their declared licenses and require review. You retain ownership of your contributions; no copyright assignment is requested. Do not submit material subject to incompatible employer, co-author, publisher or data-provider terms.
+By intentionally submitting a contribution for inclusion, you confirm that you have the right to submit it under the applicable project license: MIT for your original software and CC BY-NC-SA 4.0 for your original educational content, with mixed Notebooks split as described in LICENSE.md. Clearly identified third-party components keep their declared licenses and require review. You retain ownership of your contributions; no copyright assignment is requested. Do not submit material subject to incompatible employer, co-author, publisher or data-provider terms.
 
-主动提交供项目收录的贡献时，你确认有权按对应许可提供：原创软件按 MIT，原创教学内容按 CC BY-SA 4.0，混合 Notebook 按根许可说明区分。明确标出的第三方组成部分保留其许可并需复核。贡献者保留版权，无需转让；不得提交与雇主、合著者、出版社或数据方约定冲突的内容。
+主动提交供项目收录的贡献时，你确认有权按对应许可提供：原创软件按 MIT，原创教学内容按 CC BY-NC-SA 4.0，混合 Notebook 按根许可说明区分。明确标出的第三方组成部分保留其许可并需复核。贡献者保留版权，无需转让；不得提交与雇主、合著者、出版社或数据方约定冲突的内容。
 
 ## Review and public release / 审阅与公开
 

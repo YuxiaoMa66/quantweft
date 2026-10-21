@@ -67,6 +67,6 @@ Page views count page loads, not distinct people, button clicks, or completed do
 
 ## 许可与赞助 / Licensing and support
 
-网站功能代码适用 MIT，原创教学文字与作者有权许可的插画适用 CC BY-SA 4.0，例外见 [许可范围](../LICENSE.md)。已展示作者提供的微信和支付宝收款码，详见 [支持方式](../.github/SUPPORT.md)；GitHub Sponsors 等待审核，尚未启用 `.github/FUNDING.yml`。网页版已公开，仓库保持私有；既有 [权利核查](legal/RIGHTS_REVIEW.md)仍待完成。
+网站功能代码适用 MIT，作者有权许可的原创教学文字与插画适用 CC BY-NC-SA 4.0，仅限非商业使用；商业使用须另行许可。例外见 [许可范围](../LICENSE.md)。已展示作者提供的微信和支付宝收款码，详见 [支持方式](../.github/SUPPORT.md)；GitHub Sponsors 等待审核，尚未启用 `.github/FUNDING.yml`。网页版已公开，仓库保持私有；[权利核查](legal/RIGHTS_REVIEW.md)仍待完成。
 
-Functional site code uses MIT; original educational prose and licensable rights in the identified illustrations use CC BY-SA 4.0, subject to the linked exceptions. Maintainer-supplied WeChat Pay and Alipay QR images are displayed; payment acceptance has not been tested. GitHub Sponsors awaits approval, and no live `FUNDING.yml` is enabled.
+Functional site code uses MIT; author-controlled original educational prose and illustration rights use CC BY-NC-SA 4.0 for non-commercial use. Commercial use requires separate permission. See the linked exceptions. Maintainer-supplied WeChat Pay and Alipay QR images are displayed; payment acceptance has not been tested. GitHub Sponsors awaits approval, and no live `FUNDING.yml` is enabled.

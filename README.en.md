@@ -81,7 +81,7 @@ This repository inherits the accepted local formal bilingual edition of October 
 
 The default route uses constructed data. French market data are not distributed, and real-market research has not been run. Historical results and unresolved evidence gaps retain their recorded scope; see [Remaining work](editions/en/REMAINING_ITEMS.md) and [Optional data contracts](editions/en/OPTIONAL_DATA.md).
 
-By **Yuxiao Ma**. Original code uses **MIT**; original educational content uses **CC BY-SA 4.0**, subject to [scope and third-party exceptions](LICENSE.md). The repository remains private pending the [public-release rights review](docs/legal/RIGHTS_REVIEW.md). See [Repository scope and provenance](docs/maintenance/REPOSITORY_STATUS.md).
+By **Yuxiao Ma**. Original code uses **MIT**; author-controlled original educational content uses **CC BY-NC-SA 4.0** for non-commercial use. Commercial use requires separate permission. See [license scope and third-party exceptions](LICENSE.md). The repository remains private pending the [public-release rights review](docs/legal/RIGHTS_REVIEW.md). See [Repository scope and provenance](docs/maintenance/REPOSITORY_STATUS.md).
 
 </details>
 

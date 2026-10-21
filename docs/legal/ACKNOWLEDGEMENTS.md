@@ -20,4 +20,4 @@ See the [preserved upstream LICENSE](../../third_party/loom-notes/LICENSE) for t
 
 ## 当前课程许可 / Current course licenses
 
-本课程原创代码采用 MIT，原创教学内容采用 CC BY-SA 4.0，范围与例外见 [LICENSE.md](../../LICENSE.md)。这不改变上游许可或扩大作者对第三方内容的权利。The project’s own licensing is separate from the upstream Loom license and does not relicense third-party material.
+本课程原创代码采用 MIT，作者有权许可的原创教学内容采用 CC BY-NC-SA 4.0；非商业使用，商业使用须另行许可。范围与例外见 [LICENSE.md](../../LICENSE.md)。这不改变上游许可或扩大作者对第三方内容的权利。The project’s original software uses MIT and author-controlled original educational content uses CC BY-NC-SA 4.0 for non-commercial use; commercial use requires separate permission. This is separate from the upstream Loom license and does not relicense third-party material.

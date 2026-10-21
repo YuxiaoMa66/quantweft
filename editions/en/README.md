@@ -64,7 +64,7 @@ The Capstone supplies accepted research questions, timing contracts, protocol, d
 
 The project is now **QuantWeft**, a bilingual course in quantitative finance and systematic research. The four PDF filenames use the new brand; accepted PDF content, page numbers, and legacy internal terminology are unchanged.
 
-[License scope](../../LICENSE.md): original software MIT; original educational content CC BY-SA 4.0. See [third-party exceptions](../../docs/legal/THIRD_PARTY_NOTICES.md) and the [public-release review](../../docs/legal/RIGHTS_REVIEW.md). [Voluntary support](../../.github/SUPPORT.md) is not required; payment channels are inactive.
+[License scope](../../LICENSE.md): original software MIT; author-controlled original educational content CC BY-NC-SA 4.0 for non-commercial use. Commercial use requires separate permission. See [third-party exceptions](../../docs/legal/THIRD_PARTY_NOTICES.md) and the [public-release review](../../docs/legal/RIGHTS_REVIEW.md). [Voluntary support](../../.github/SUPPORT.md) is not required; payment channels are inactive.
 
 
 ## Repository paths and historical references

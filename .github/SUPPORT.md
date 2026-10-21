@@ -42,9 +42,9 @@ The GitHub Sponsors application is awaiting review. No inactive Sponsors payment
 
 ## 许可 / Licensing
 
-原创代码按 MIT、原创教学内容按 CC BY-SA 4.0，范围及第三方例外见 [LICENSE.md](../LICENSE.md)。开通赞助不会改变课程许可或替代[公开前权利核查](../docs/legal/RIGHTS_REVIEW.md)。
+原创代码按 MIT、作者有权许可的原创教学内容按 CC BY-NC-SA 4.0（非商业使用；商业使用须另行许可），范围及第三方例外见 [LICENSE.md](../LICENSE.md)。开通赞助不会改变课程许可或替代[公开前权利核查](../docs/legal/RIGHTS_REVIEW.md)。
 
-Original software uses MIT and original educational content uses CC BY-SA 4.0, subject to the scope and exceptions above. Enabling sponsorship does not change those licenses or replace the public-release review.
+Original software uses MIT and author-controlled original educational content uses CC BY-NC-SA 4.0 for non-commercial use; commercial use requires separate permission. See the scope and exceptions above. Enabling sponsorship does not change those licenses or replace the public-release review.
 
 <details>
 <summary>维护者：开通与接入 / Maintainer setup</summary>

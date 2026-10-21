@@ -44,6 +44,7 @@ for(const lang of ['zh','en'])for(let n=1;n<=45;n++){
  const name=`ch${String(n).padStart(2,'0')}.html`,html=fs.readFileSync(path.join(root,'read',lang,name),'utf8');
  assert(html.includes(`href="../${lang==='zh'?'en':'zh'}/${name}"`),'Same-chapter language switch '+name);
  assert(html.includes('<article class="prose">'),'Missing article');
+ assert(html.includes('>MIT / CC BY-NC-SA 4.0</a>'),'Reader must show the current content license');
  assert.equal((html.match(/<h1[ >]/g)||[]).length,1,'Chapter needs one main heading');
  const definitions=html.match(/<h2[^>]*>5[.、\s][\s\S]*?(?=<h2|$)/)?.[0];
  assert(definitions,'Missing formal definitions: '+lang+'/'+name);
