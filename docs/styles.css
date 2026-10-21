@@ -671,6 +671,9 @@ summary {
   }
   .reader-preview {padding:22px 24px 0;}
   .reader-preview h2 {font-size:24px;}
+  /* Phones show only the intuition example so the downloads stay close. */
+  .preview-definition {display:none;}
+  .preview-example {margin-top:0;padding-top:0;border-top:0;}
   .section {
     padding-block: 52px;
   }
