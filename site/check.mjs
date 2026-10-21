@@ -24,7 +24,7 @@ for(const file of pages){
  assert(!/:::\s*\{\.body-/.test(html),'Unrendered teaching box: '+file);
  boxes+=(html.match(/class="teaching-box /g)||[]).length;
  diagrams+=(html.match(/class="diagram"/g)||[]).length;
- if(html.includes('class="diagram"'))assert(html.includes('/diagrams.js"'),'Missing diagram module: '+file);
+ if(html.includes('class="diagram"'))assert(/\/diagrams\.[a-f0-9]{12}\.js"/.test(html),'Missing diagram module: '+file);
  math+=(html.match(/class="katex"/g)||[]).length;
  for(const m of html.matchAll(/\b(?:href|src)="([^"]+)"/g)){
   const value=decode(m[1]);if(/^(?:https?:|mailto:|data:)/.test(value))continue;
@@ -44,6 +44,7 @@ for(const lang of ['zh','en'])for(let n=1;n<=45;n++){
  const name=`ch${String(n).padStart(2,'0')}.html`,html=fs.readFileSync(path.join(root,'read',lang,name),'utf8');
  assert(html.includes(`href="../${lang==='zh'?'en':'zh'}/${name}"`),'Same-chapter language switch '+name);
  assert(html.includes('<article class="prose">'),'Missing article');
+ assert(/_reader\/reader\.[a-f0-9]{12}\.css"/.test(html)&&/_reader\/reader\.[a-f0-9]{12}\.js"/.test(html),'Reader assets must change URL when content changes');
  assert(html.includes('>MIT / CC BY-NC-SA 4.0</a>'),'Reader must show the current content license');
  assert.equal((html.match(/<h1[ >]/g)||[]).length,1,'Chapter needs one main heading');
  const definitions=html.match(/<h2[^>]*>5[.、\s][\s\S]*?(?=<h2|$)/)?.[0];
