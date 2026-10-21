@@ -19,6 +19,7 @@ let localLinks=0,math=0,boxes=0,diagrams=0;
 for(const file of pages){
  const html=fs.readFileSync(file,'utf8');
  assert(!html.includes('class="math-error"'),file);
+ assert(!html.includes('&lt;!--'),'Source comment rendered as text: '+file);
  for(const block of html.matchAll(/<pre[^>]*><code class="language-\{=latex\}">([\s\S]*?)<\/code><\/pre>/g))assert(!isPrintLayout(block[1]),'Print-only code block: '+file);
  assert(!/<p>\\(?:[Nn]eedspace|clearpage|newpage)\b/.test(html),'Print-only paragraph: '+file);
  assert(!/:::\s*\{\.body-/.test(html),'Unrendered teaching box: '+file);

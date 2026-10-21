@@ -106,6 +106,7 @@ md.renderer.rules.link_open = (tokens, i, options, env, renderer) => {
 };
 function sourceHtml(tokens,i,options,env) {
   return tokens[i].content.replace(/<[^>]*>/g,tag=> {
+    if (/^<!--[\s\S]*-->$/.test(tag)) return ''; // Editorial comments stay out of the page.
     if (/^<p align="(?:right|center|left)">$/i.test(tag)) return tag;
     const link=tag.match(/^<a href="([^"]+)">$/i);
     if(link && md.validateLink(link[1])) return `<a href="${escape(resolveLink(env.page,link[1]))}">`;
