@@ -14,9 +14,9 @@ Submit a focused PR for a small correction. Discuss scope through the feedback f
 
 ## What to submit / 如何提交
 
-The repository is currently private. GitHub issues and pull requests require an account with repository access. For chapter prose, the paired source files are `course/zh/chapters/chNN/content.md` and `course/en/chapters/chNN/content.md`; keep the Chinese and English text aligned where both are affected. Open an issue or a focused pull request with the exact chapter, section, stable exercise ID, or file path; describe the reader problem and proposed correction. Keep code, derivations, units, prerequisites, questions and complete answers consistent. State which checks you actually ran: distinguish text review, independent recalculation, and code or Notebook execution. A successful build alone does not establish teaching or research validity.
+For chapter prose, the paired source files are `course/zh/chapters/chNN/content.md` and `course/en/chapters/chNN/content.md`; keep the Chinese and English text aligned where both are affected. Open an issue or a focused pull request with the exact chapter, section, stable exercise ID, or file path; describe the reader problem and proposed correction. Keep code, derivations, units, prerequisites, questions and complete answers consistent. State which checks you actually ran: distinguish text review, independent recalculation, and code or Notebook execution. A successful build alone does not establish teaching or research validity.
 
-仓库目前为私有；提交 GitHub Issue 或 PR 需要账号具有仓库访问权限。章节正文的中英文源文件分别位于 `course/zh/chapters/chNN/content.md` 和 `course/en/chapters/chNN/content.md`；涉及两种语言时请保持文字对应。提交 issue 或范围明确的 PR 时，标明章节、节、稳定题号或文件路径，说明读者遇到的问题和拟议修正。保持代码、推导、单位、先修、题目和完整答案一致。说明实际运行的检查，并区分文字检查、独立复算与代码或 Notebook 执行；构建成功本身不能证明教学或研究有效。
+章节正文的中英文源文件分别位于 `course/zh/chapters/chNN/content.md` 和 `course/en/chapters/chNN/content.md`；涉及两种语言时请保持文字对应。提交 issue 或范围明确的 PR 时，标明章节、节、稳定题号或文件路径，说明读者遇到的问题和拟议修正。保持代码、推导、单位、先修、题目和完整答案一致。说明实际运行的检查，并区分文字检查、独立复算与代码或 Notebook 执行；构建成功本身不能证明教学或研究有效。
 
 Do not upload proprietary or personal data, credentials, unlicensed figures, copied textbook passages or exercises without the required permission, or market data with unverified redistribution terms. Cite sources and identify the exact license and any modifications for third-party material. Discuss new dependencies, datasets and major structural changes before adding them.
 
@@ -30,6 +30,6 @@ By intentionally submitting a contribution for inclusion, you confirm that you h
 
 ## Review and public release / 审阅与公开
 
-Maintainers review contributions before accepting them. Contributing, sponsorship, and public-release approval are separate decisions. No payment is required for contributions or issue reports. Current public-release blockers are recorded in [RIGHTS_REVIEW.md](../docs/legal/RIGHTS_REVIEW.md).
+Maintainers review contributions before accepting them. Contributing, sponsorship, and public-release approval are separate decisions. No payment is required for contributions or issue reports. Open rights-review items are recorded in [RIGHTS_REVIEW.md](../docs/legal/RIGHTS_REVIEW.md).
 
-维护者审阅后决定收录。贡献接受、赞助和公开发布是不同事项；提问与投稿不要求付费。当前公开前待办见 [RIGHTS_REVIEW.md](../docs/legal/RIGHTS_REVIEW.md)。
+维护者审阅后决定收录。贡献接受、赞助和公开发布是不同事项；提问与投稿不要求付费。当前核查待办见 [RIGHTS_REVIEW.md](../docs/legal/RIGHTS_REVIEW.md)。

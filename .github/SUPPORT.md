@@ -10,9 +10,9 @@ QuantWeft connects understanding models with checking them in code. Reporting a 
 - **改进内容与代码**：[阅读贡献指南](CONTRIBUTING.md)，提交范围明确的修改；中英文、题目与答案一起核对。
 - **分享与关注**：公开发布后，可以分享正式阅读入口或在 GitHub Star 收藏项目，帮助有需要的读者发现课程。
 
-Report a reader problem through the feedback form, contribute a focused correction using the guide above, or share the official reading link once the course is publicly released. The repository currently requires authorized GitHub access; sharing a private link does not grant access.
+Report a reader problem through the feedback form, contribute a focused correction using the guide above, or share the official reading link, https://quantweft.yuxiao.win.
 
-仓库目前私有，反馈与 PR 入口需要已有的 GitHub 访问权限；分享私有链接不会自动开放访问。
+欢迎分享官方阅读链接 https://quantweft.yuxiao.win。
 
 ## 自愿赞助 / Voluntary sponsorship
 
@@ -42,9 +42,9 @@ The GitHub Sponsors application is awaiting review. No inactive Sponsors payment
 
 ## 许可 / Licensing
 
-原创代码按 MIT、作者有权许可的原创教学内容按 CC BY-NC-SA 4.0（非商业使用；商业使用须另行许可），范围及第三方例外见 [LICENSE.md](../LICENSE.md)。开通赞助不会改变课程许可或替代[公开前权利核查](../docs/legal/RIGHTS_REVIEW.md)。
+原创代码按 MIT、作者有权许可的原创教学内容按 CC BY-NC-SA 4.0（非商业使用；商业使用须另行许可），范围及第三方例外见 [LICENSE.md](../LICENSE.md)。开通赞助不会改变课程许可或替代[权利核查](../docs/legal/RIGHTS_REVIEW.md)。
 
-Original software uses MIT and author-controlled original educational content uses CC BY-NC-SA 4.0 for non-commercial use; commercial use requires separate permission. See the scope and exceptions above. Enabling sponsorship does not change those licenses or replace the public-release review.
+Original software uses MIT and author-controlled original educational content uses CC BY-NC-SA 4.0 for non-commercial use; commercial use requires separate permission. See the scope and exceptions above. Enabling sponsorship does not change those licenses or replace the rights review.
 
 <details>
 <summary>维护者：开通与接入 / Maintainer setup</summary>

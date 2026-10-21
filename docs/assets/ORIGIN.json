@@ -18,6 +18,11 @@
       "sha256": "aa90a4f5c2bc4657296a03737525dca2a687e6fbe83a511df2679e9d6b565c04",
       "origin": "Generated during the course homepage/brand design sessions",
       "reference": "course-cover.png used as visual reference for the text-free illustration and QuantWeft cover"
+    },
+    "og-cover.png": {
+      "sha256": "f24ae328f3c2590bb7c7447b046089c0a4604ea3c45502dc5ea3ce656e7b03e3",
+      "origin": "Derived on 2026-10-21 by scaling quantweft-cover.png to 1200 px wide and padding it to 1200x628 with its background color",
+      "reference": "Social preview image for the landing page"
     }
   }
 }

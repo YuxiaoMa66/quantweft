@@ -35,9 +35,9 @@ To preview only the original introduction, serve `docs/` with the Python command
 
 ## 托管状态 / Hosting status
 
-2026-10-20 已由维护者确认发布网页版，托管于 Cloudflare Pages；GitHub 仓库仍为私有，GitHub Pages 未启用。生产分支 `main`，Node.js 24，构建命令 `npm run build && npm run check`，输出目录 `dist`。后续推送会自动构建发布。网站包含正文、图片与搜索全文；四册 PDF 下载跳转 GitHub，仍需仓库访问权限。
+2026-10-20 已由维护者确认发布网页版，托管于 Cloudflare Pages；GitHub 仓库于 2026-10-21 公开，GitHub Pages 未启用。生产分支 `main`，Node.js 24，构建命令 `npm run build && npm run check`，输出目录 `dist`。后续推送会自动构建发布。网站包含正文、图片与搜索全文；四册 PDF 从 GitHub 直接下载。
 
-The maintainer confirmed publication of the web edition on 2026-10-20 through Cloudflare Pages. The GitHub repository remains private; GitHub Pages is disabled. Production uses `main`, Node.js 24, build command `npm run build && npm run check`, and output directory `dist`. Pushes trigger automatic deployments. Prose, images and full-text search are public; PDF downloads link to GitHub and still require repository access.
+The maintainer confirmed publication of the web edition on 2026-10-20 through Cloudflare Pages. The GitHub repository became public on 2026-10-21; GitHub Pages is disabled. Production uses `main`, Node.js 24, build command `npm run build && npm run check`, and output directory `dist`. Pushes trigger automatic deployments. Prose, images and full-text search are public; PDFs download directly from GitHub.
 
 网站上线不等于第三方材料权利核查已经完成；[既有核查项](legal/RIGHTS_REVIEW.md)继续保留原状态。
 

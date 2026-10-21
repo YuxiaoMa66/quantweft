@@ -646,8 +646,13 @@ summary {
   .brand small {
     font-size: 10px;
   }
-  .header-inner nav {
+  /* Phones keep only the reader entry; section links stay in the page. */
+  .header-inner nav a:not(.nav-reader) {
     display: none;
+  }
+  .header-inner nav .nav-reader {
+    font-size: 12px;
+    padding: 6px 10px;
   }
   .preferences {
     gap: 4px;

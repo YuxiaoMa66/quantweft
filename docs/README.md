@@ -32,7 +32,7 @@ The [bilingual chapter index](../course/README.md) pairs both languages by chapt
 
 [贡献 / Contributing](../.github/CONTRIBUTING.md) · [自愿支持 / Voluntary support](../.github/SUPPORT.md) · [网站预览 / Website preview](SITE.md)
 
-[许可范围 / Licenses](../LICENSE.md) · [来源致谢 / Credits](legal/ACKNOWLEDGEMENTS.md) · [第三方声明 / Third-party notices](legal/THIRD_PARTY_NOTICES.md) · [公开前权利核查 / Release review](legal/RIGHTS_REVIEW.md)
+[许可范围 / Licenses](../LICENSE.md) · [来源致谢 / Credits](legal/ACKNOWLEDGEMENTS.md) · [第三方声明 / Third-party notices](legal/THIRD_PARTY_NOTICES.md) · [权利核查 / Rights review](legal/RIGHTS_REVIEW.md)
 
 [仓库范围 / Repository scope](maintenance/REPOSITORY_STATUS.md) · [环境与运行 / Environment and execution](../editions/en/NOTEBOOK_GUIDE.md)
 

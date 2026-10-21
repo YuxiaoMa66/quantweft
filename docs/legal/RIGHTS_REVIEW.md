@@ -1,8 +1,8 @@
-# Public-release rights review / 公开前权利核查
+# Rights review / 权利核查
 
-**Status: pending; repository private; web edition public via Cloudflare Pages on 2026-10-20; GitHub Pages disabled; payment QR images displayed; GitHub Sponsors pending.** The selected MIT and CC BY-NC-SA 4.0 licenses apply only to author-controlled project-original rights as stated in [LICENSE.md](../../LICENSE.md). This register is not a finding that the items below are infringing; it records evidence still needed for a public release.
+**Status: ongoing; web edition public via Cloudflare Pages on 2026-10-20; repository public on 2026-10-21; GitHub Pages disabled; payment QR images displayed; GitHub Sponsors pending.** The selected MIT and CC BY-NC-SA 4.0 licenses apply only to author-controlled project-original rights as stated in [LICENSE.md](../../LICENSE.md). This register is not a finding that the items below are infringing; it records evidence still being collected after publication.
 
-**当前状态：核查未闭合，仓库私有，网页版于 2026-10-20 经维护者确认在 Cloudflare Pages 公开，GitHub Pages 未启用，已展示收款码，GitHub Sponsors 待审核。** 许可已按根说明选定，但不能据此替第三方授权。下列待办不等于认定侵权，而是公开前仍需证据的项目。
+**当前状态：核查持续进行，网页版于 2026-10-20 经维护者确认在 Cloudflare Pages 公开，仓库于 2026-10-21 公开，GitHub Pages 未启用，已展示收款码，GitHub Sponsors 待审核。** 许可已按根说明选定，但不能据此替第三方授权。下列待办不等于认定侵权，而是公开后仍在补充证据的项目。
 
 | ID | Item / 核查项 | Evidence and next action / 证据与后续动作 | State / 状态 |
 | --- | --- | --- | --- |

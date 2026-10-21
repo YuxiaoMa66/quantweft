@@ -10,7 +10,7 @@
 
 **[打开网页版教材 →](https://quantweft.yuxiao.win/read/zh/)**
 
-45 章完整阅读 · 全文搜索 · 同章中英切换 · 白天／夜晚模式。网页版现已上线；PDF 下载跳转 GitHub，私有仓库仍需访问权限。
+45 章完整阅读 · 全文搜索 · 同章中英切换 · 白天／夜晚模式。网页版现已上线；四册 PDF 可从 GitHub 直接下载。
 
 从数学与金融基础，到可复现的系统化研究。
 
@@ -81,7 +81,7 @@ python3 -m venv .venv
 
 默认路线使用构造数据，不分发 French 市场数据，也未执行真实市场研究。历史结果与未解决的证据缺口按原记录保留，详见[后续事项](editions/zh/REMAINING_ITEMS.md)与[可选数据契约](editions/zh/OPTIONAL_DATA.md)。
 
-作者：**Yuxiao Ma**。原创代码采用 **MIT**；作者有权许可的原创教材与练习采用 **CC BY-NC-SA 4.0**，仅限非商业使用，商业使用须另行许可。第三方例外见[许可范围](LICENSE.md)。仓库在[公开前权利核查](docs/legal/RIGHTS_REVIEW.md)完成前保持私有。见[仓库范围与来源](docs/maintenance/REPOSITORY_STATUS.md)。
+作者：**Yuxiao Ma**。原创代码采用 **MIT**；作者有权许可的原创教材与练习采用 **CC BY-NC-SA 4.0**，仅限非商业使用，商业使用须另行许可。第三方例外见[许可范围](LICENSE.md)。仓库已公开，[权利核查](docs/legal/RIGHTS_REVIEW.md)持续进行。见[仓库范围与来源](docs/maintenance/REPOSITORY_STATUS.md)。
 
 </details>
 
@@ -91,7 +91,7 @@ python3 -m venv .venv
 
 ## 参与与支持
 
-欢迎[提交学习反馈](https://github.com/YuxiaoMa66/quantweft/issues/new?template=feedback.yml)或查看[贡献指南](.github/CONTRIBUTING.md)。仓库目前私有，Issue 和 PR 需要访问权限。自愿支持用于双语课程维护，学习与按许可复用不要求捐助。
+欢迎[提交学习反馈](https://github.com/YuxiaoMa66/quantweft/issues/new?template=feedback.yml)或查看[贡献指南](.github/CONTRIBUTING.md)。自愿支持用于双语课程维护，学习与按许可复用不要求捐助。
 
 <details>
 <summary>微信 / 支付宝支持 · 查看收款码</summary>

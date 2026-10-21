@@ -10,7 +10,7 @@
 
 **[Open the web reader →](https://quantweft.yuxiao.win/read/en/)**
 
-Read 45 chapters with full-text search, same-chapter language switching, and day/night modes. The web edition is live. PDF downloads link to GitHub and require access while the repository is private.
+Read 45 chapters with full-text search, same-chapter language switching, and day/night modes. The web edition is live, and all four PDFs download directly from GitHub.
 
 From mathematical and financial foundations to reproducible systematic research.
 
@@ -81,7 +81,7 @@ This repository inherits the accepted local formal bilingual edition of October 
 
 The default route uses constructed data. French market data are not distributed, and real-market research has not been run. Historical results and unresolved evidence gaps retain their recorded scope; see [Remaining work](editions/en/REMAINING_ITEMS.md) and [Optional data contracts](editions/en/OPTIONAL_DATA.md).
 
-By **Yuxiao Ma**. Original code uses **MIT**; author-controlled original educational content uses **CC BY-NC-SA 4.0** for non-commercial use. Commercial use requires separate permission. See [license scope and third-party exceptions](LICENSE.md). The repository remains private pending the [public-release rights review](docs/legal/RIGHTS_REVIEW.md). See [Repository scope and provenance](docs/maintenance/REPOSITORY_STATUS.md).
+By **Yuxiao Ma**. Original code uses **MIT**; author-controlled original educational content uses **CC BY-NC-SA 4.0** for non-commercial use. Commercial use requires separate permission. See [license scope and third-party exceptions](LICENSE.md). The repository is public; the [rights review](docs/legal/RIGHTS_REVIEW.md) is ongoing. See [Repository scope and provenance](docs/maintenance/REPOSITORY_STATUS.md).
 
 </details>
 
@@ -91,7 +91,7 @@ Parts of the workbook’s exercise design and layout draw on the [loom-notes](ht
 
 ## Contribute and support
 
-Send [learning feedback](https://github.com/YuxiaoMa66/quantweft/issues/new?template=feedback.yml) or read the [contribution guide](.github/CONTRIBUTING.md). The repository is private, so issues and PRs require access. Voluntary support helps maintain the bilingual course; learning and licensed reuse do not require payment.
+Send [learning feedback](https://github.com/YuxiaoMa66/quantweft/issues/new?template=feedback.yml) or read the [contribution guide](.github/CONTRIBUTING.md). Voluntary support helps maintain the bilingual course; learning and licensed reuse do not require payment.
 
 <details>
 <summary>Support with WeChat Pay / Alipay · View QR codes</summary>

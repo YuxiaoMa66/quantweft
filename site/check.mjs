@@ -70,6 +70,8 @@ for(const name of ['button primary','nav-reader']) {
  assert(landing.includes(`class="${name}" href="read/zh/index.html" data-reader-zh="read/zh/index.html" data-reader-en="read/en/index.html"`),'Online reader entry: '+name);
 }
 assert(!landing.includes('data-online-reader'),'All online entry markers must resolve');
+assert(!/blob\/main\/[^"]+\.pdf/.test(landing),'Landing PDF links must download directly');
+assert(landing.includes('property="og:image"'),'Landing needs a social preview image');
 assert(/href="styles\.[a-f0-9]{12}\.css"/.test(landing),'Landing styles must change URL when content changes');
 assert(/src="site\.[a-f0-9]{12}\.js"/.test(landing),'Landing script must change URL when content changes');
 const sourceRoot=path.dirname(root);
@@ -81,6 +83,6 @@ assert.equal(diagrams,expectedDiagrams,'All Mermaid fences must render as diagra
 assert(fs.existsSync(path.join(root,'_reader/mermaid/mermaid.esm.min.mjs')),'Missing self-hosted Mermaid');
 console.log(`PASS: ${boxes} teaching boxes and ${diagrams} diagram containers match the source corpus.`);
 assert(!files.some(file=>file.endsWith('.pdf')),'PDF downloads belong on GitHub, outside the site payload');
-for(const lang of ['zh','en']){const html=fs.readFileSync(path.join(root,'read',lang,'ch01.html'),'utf8');assert(html.includes(`https://github.com/YuxiaoMa66/quantweft/blob/main/editions/${lang}/body/quantweft-textbook-${lang}.pdf`),'Textbook link must point to GitHub');}
+for(const lang of ['zh','en']){const html=fs.readFileSync(path.join(root,'read',lang,'ch01.html'),'utf8');assert(html.includes(`https://github.com/YuxiaoMa66/quantweft/raw/main/editions/${lang}/body/quantweft-textbook-${lang}.pdf`),'Textbook link must point to GitHub');}
 assert(math>10000,'Expected full mathematical content');
 console.log(`PASS: ${pages.length} pages, 45 bilingual chapter pairs (90 routes), ${localLinks} local links/assets, ${math} rendered equations, no missing anchors or math errors.`);

@@ -2,7 +2,7 @@
 
 Copyright (c) 2026 Yuxiao Ma, for project-original material to the extent the author holds the relevant rights. Other contributors retain their copyright. Third-party ownership and notices remain unchanged.
 
-QuantWeft uses separate licenses for software and educational content. This notice describes their scope; the linked full license texts govern. Private repository access is separate from permission to use material you lawfully receive. No donation or sponsorship is required.
+QuantWeft uses separate licenses for software and educational content. This notice describes their scope; the linked full license texts govern. No donation or sponsorship is required.
 
 QuantWeft 对软件和教学内容分别授权。本文件说明许可范围，完整条款以所链接许可证正文为准。仓库访问控制与已合法取得材料的使用许可相互独立。使用许可不以捐助或赞助为条件。
 
@@ -22,6 +22,10 @@ When sharing the educational content, provide appropriate attribution, link the 
 
 分享教学内容时，须按完整条款适当署名、提供许可证链接并标明修改；分享改编作品时，须按完整条款使用相同或兼容的许可证。非商业条件以许可证正文定义为准。
 
+Copies of the educational content obtained before 2026-10-21 were offered under [CC BY-SA 4.0](LICENSES/CC-BY-SA-4.0.txt). Creative Commons licenses are irrevocable, so those copies remain usable under CC BY-SA 4.0. Content obtained on or after 2026-10-21 is offered under CC BY-NC-SA 4.0.
+
+2026-10-21 之前取得的教学内容副本曾按 [CC BY-SA 4.0](LICENSES/CC-BY-SA-4.0.txt) 提供。CC 许可不可撤销，这些副本仍可按 CC BY-SA 4.0 使用；自 2026-10-21 起取得的内容适用 CC BY-NC-SA 4.0。
+
 Suggested attribution / 建议署名方式:
 
 > QuantWeft · 量化经纬, Yuxiao Ma, https://github.com/YuxiaoMa66/quantweft, CC BY-NC-SA 4.0 for author-controlled original educational content. Credit other contributors separately. Adapted material: describe your changes and source revision. Embedded original software: MIT.
@@ -38,6 +42,6 @@ Suggested attribution / 建议署名方式:
 
 ## Publication status / 发布状态
 
-The repository remains private while the web edition is public. The itemized rights review in [RIGHTS_REVIEW.md](docs/legal/RIGHTS_REVIEW.md) remains pending. This license notice is not a certification that every file is cleared for redistribution.
+The repository and web edition are public. The itemized rights review in [RIGHTS_REVIEW.md](docs/legal/RIGHTS_REVIEW.md) is ongoing. This license notice is not a certification that every file is cleared for redistribution.
 
-网页版已公开，仓库保持私有。[公开前权利核查](docs/legal/RIGHTS_REVIEW.md)仍待完成。本许可说明不代表所有文件均已获准再分发。
+仓库与网页版均已公开。[权利核查](docs/legal/RIGHTS_REVIEW.md)持续进行。本许可说明不代表所有文件均已获准再分发。
