@@ -70,5 +70,3 @@ The Capstone supplies accepted research questions, timing contracts, protocol, d
 ## Running repository examples
 
 Run commands from the cloned `quantweft/` repository root. Notebook output files appear after you execute the corresponding cells; optional market inputs are not included. See the setup steps above and the [optional data guide](OPTIONAL_DATA.md).
-
-Some bundled project TeX files are layout fragments without the complete historical input chain. Use the complete workbook PDF linked on this page for the exercises and their answers.

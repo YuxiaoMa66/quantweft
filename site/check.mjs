@@ -27,6 +27,7 @@ let localLinks=0,math=0,boxes=0,diagrams=0;
 for(const file of pages){
  const html=fs.readFileSync(file,'utf8');
  assert(!html.includes('class="math-error"'),file);
+ assert(!/href="[^"]+\.(?:tex|cls|sty)(?:[#?][^"]*)?"/i.test(html),'Public typesetting-source link: '+file);
  assert(!/原主根|本轮新核源|BIL23B|canonical_written=false|author_candidate_pending_independent_acceptance/.test(html),'Internal production note: '+file);
  assert(!html.includes('&lt;!--'),'Source comment rendered as text: '+file);
  for(const block of html.matchAll(/<pre[^>]*><code class="language-\{=latex\}">([\s\S]*?)<\/code><\/pre>/g))assert(!isPrintLayout(block[1]),'Print-only code block: '+file);
@@ -87,7 +88,9 @@ assert(/class="github-link"\s+href="https:\/\/github\.com\/YuxiaoMa66\/quantweft
 assert(/href="styles\.[a-f0-9]{12}\.css"/.test(landing),'Landing styles must change URL when content changes');
 assert(/src="site\.[a-f0-9]{12}\.js"/.test(landing),'Landing script must change URL when content changes');
 const sourceRoot=path.dirname(root);
-const sources=execFileSync('git',['ls-files'],{cwd:sourceRoot,encoding:'utf8'}).trim().split('\n').filter(isReaderSource);
+const tracked=execFileSync('git',['ls-files'],{cwd:sourceRoot,encoding:'utf8'}).trim().split('\n');
+assert(!tracked.some(file=>/\.(?:tex|cls|sty)$/i.test(file)),'Typesetting sources must stay outside the public repository');
+const sources=tracked.filter(isReaderSource);
 let expectedBoxes=0,expectedDiagrams=0;
 for(const source of sources){const text=fs.readFileSync(path.join(sourceRoot,source),'utf8');expectedBoxes+=(text.match(/^(?:[ \t]*- )?[ \t]*:{3,} \{\.body-/gm)||[]).length;expectedDiagrams+=(text.match(/^```mermaid\s*$/gm)||[]).length;}
 assert.equal(boxes,expectedBoxes,'All teaching boxes must render, including boxes nested in lists');

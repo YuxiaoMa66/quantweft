@@ -52,3 +52,8 @@ versions/
 
 # Static reader dependencies and generated HTML
 node_modules/
+
+# Typesetting sources are maintained locally, outside the public repository
+*.tex
+*.cls
+*.sty

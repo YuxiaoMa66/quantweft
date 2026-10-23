@@ -1,7 +1,7 @@
 # Project 6 Questions and Complete Answers
 
 
-This file contains the stable Project 6 IDs P6-L01–P6-L08 and P6-T01–P6-T04. P6-L01–P6-L03 preserve the base-report questions; P6-L04–P6-L08 cover the v2 tree-model and PCA extension. The questions also appear in the [v2 teaching guide](V2_TREES.md) and the [workbook study notes](loom/sections/p06.tex). Each answer stays in the same project as its prompt.
+This file contains the stable Project 6 IDs P6-L01–P6-L08 and P6-T01–P6-T04. P6-L01–P6-L03 preserve the base-report questions; P6-L04–P6-L08 cover the v2 tree-model and PCA extension. The questions also appear in the [v2 teaching guide](V2_TREES.md) and the [Complete workbook PDF](../../workbook/quantweft-workbook-en.pdf). Each answer stays in the same project as its prompt.
 
 
 ## Project questions: work independently first

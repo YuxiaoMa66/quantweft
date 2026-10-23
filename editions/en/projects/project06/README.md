@@ -11,7 +11,7 @@ This project describes time-grouped forecasting and portfolio methods. The curre
 | A8-B tree-model extension | Constructed-data extension | Tree-model comparisons, training-only feature importance, stability, and ablation implementation. See [v2 results and scope](research_report/v2_trees.md). |
 | Complete Project 6 | Real-market evidence not included | Real data are not available for this project; constructed results do not replace real-market evidence. |
 
-This page, the data dictionary, and the base-pipeline report describe the A8-A foundation; the [v2 report](research_report/v2_trees.md) covers A8-B tree methods and constructed results. No real-data study has been performed. The tree/PCA guide is [V2_TREES.md](V2_TREES.md), the answer key is [solutions.md](solutions.md), and the workbook is [loom/main_p06.tex](loom/main_p06.tex).
+This page, the data dictionary, and the base-pipeline report describe the A8-A foundation; the [v2 report](research_report/v2_trees.md) covers A8-B tree methods and constructed results. No real-data study has been performed. The tree/PCA guide is [V2_TREES.md](V2_TREES.md), the answer key is [solutions.md](solutions.md), and the workbook is [Complete workbook PDF](../../workbook/quantweft-workbook-en.pdf).
 
 ## Research question and data
 

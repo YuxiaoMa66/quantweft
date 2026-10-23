@@ -76,7 +76,7 @@ Correlation != Cointegration；残差检验用对应临界值；同一测试段�
 - **真实价格实证：blocked。** 2026-10-10来源决定记录了当时所查方案的许可缺口，未获得适用的机构授权；这不是本版新核验的现行条款或对全部免费源的普遍判断，见 数据来源决定；`data_manifest.json` status=blocked，`--data real` 以退出码3拒绝运行。
 - 预注册：[configs/preregistration_v1.json](configs/preregistration_v1.json)（8对、2010–2025、504/126滚动、EG \(p<0.05\)、\(|z|\) 2/0.5/4、成本与借券为情景），冻结于任何价格下载之前。
 - 代码：[src/p05_pairs.py](src/p05_pairs.py)（数据校验、前向TR、形成与EG、信号、双腿账本、融资/借券/股息/拆股、部分成交、IS、walk-forward）；[src/p05_constructed.py](src/p05_constructed.py)（标注的教学构造面板）；CLI [run_project05.py](run_project05.py)；图 make_figures.py；测试 tests/test_p05_pairs.py。
-- 报告：[research_report/report.md](research_report/report.md)；练习与解答：[exercises.md](exercises.md)、[solutions.md](solutions.md)、[solutions_code.py](solutions_code.py)；历史源Notebook：[notebooks/p05_pairs.ipynb](notebooks/p05_pairs.ipynb)（读者执行上述默认读者包副本）；主动练习：[loom/main_p05.tex](loom/main_p05.tex)；数据字典：[data_dictionary.md](data_dictionary.md)。
+- 报告：[research_report/report.md](research_report/report.md)；练习与解答：[exercises.md](exercises.md)、[solutions.md](solutions.md)、[solutions_code.py](solutions_code.py)；历史源Notebook：[notebooks/p05_pairs.ipynb](notebooks/p05_pairs.ipynb)（读者执行上述默认读者包副本）；主动练习：[完整练习册 PDF](../../editions/zh/workbook/quantweft-workbook-zh.pdf)；数据字典：[data_dictionary.md](data_dictionary.md)。
 - 构造面板上的结果只证明实现与方法：账本现金残差约1e−9美元、IS分解与直接金额法一致、未来扰动不改形成期估计；screened组合的正Sharpe来自一次假阳性入选、在252日形成窗下变号；按预注册规则，即使在构造数据上也不能写“支持”。
 
 ```bash

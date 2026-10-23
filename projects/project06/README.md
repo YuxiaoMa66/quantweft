@@ -11,7 +11,7 @@
 | A8-B 树模型扩展 | 构造数据扩展 | 树模型比较、训练内特征重要性、稳定性与消融实现。见 [v2 结果与范围](research_report/v2_trees.md)。 |
 | 完整 Project 6 | 未包含真实市场实证 | 真实数据目前无法用于本项目；构造结果不能替代真实市场证据。 |
 
-本页、数据字典和基础管线报告介绍A8-A基础层；A8-B树模型方法与构造结果见[v2报告](research_report/v2_trees.md)。真实数据实证尚未进行。树/PCA扩展指南见[V2_TREES.md](V2_TREES.md)，项目答案见[solutions.md](solutions.md)，练习册见[loom/main_p06.tex](loom/main_p06.tex)。
+本页、数据字典和基础管线报告介绍A8-A基础层；A8-B树模型方法与构造结果见[v2报告](research_report/v2_trees.md)。真实数据实证尚未进行。树/PCA扩展指南见[V2_TREES.md](V2_TREES.md)，项目答案见[solutions.md](solutions.md)，练习册见[完整练习册 PDF](../../editions/zh/workbook/quantweft-workbook-zh.pdf)。
 
 ## 研究问题与数据
 
