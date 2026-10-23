@@ -64,7 +64,7 @@ The Capstone supplies accepted research questions, timing contracts, protocol, d
 
 **QuantWeft** is a bilingual course in quantitative finance and systematic research, with a textbook and workbook in each language.
 
-[License scope](../../LICENSE.md): original software MIT; author-controlled original educational content CC BY-NC-SA 4.0 for non-commercial use. Commercial use requires separate permission. See [third-party exceptions](../../docs/legal/THIRD_PARTY_NOTICES.md) and the [rights review](../../docs/legal/RIGHTS_REVIEW.md). [Voluntary support](../../.github/SUPPORT.md) is not required; WeChat Pay and Alipay support codes are available on the support page.
+[License scope](../../LICENSE.md): original software MIT; author-controlled original educational content CC BY-NC-SA 4.0 for non-commercial use. Commercial use requires separate permission. See [third-party exceptions](../../docs/legal/THIRD_PARTY_NOTICES.md) and the [rights review](../../docs/legal/RIGHTS_REVIEW.md). [Voluntary support](../../.github/SUPPORT.md) is not required; [GitHub Sponsors](https://github.com/sponsors/YuxiaoMa66), WeChat Pay and Alipay are available on the support page.
 
 
 ## Running repository examples

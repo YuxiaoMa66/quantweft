@@ -104,4 +104,4 @@ python3 -m venv .venv
 
 </details>
 
-GitHub Sponsors 等待审核，详见[支持方式](.github/SUPPORT.md)。
+也可以[通过 GitHub Sponsors 支持课程](https://github.com/sponsors/YuxiaoMa66)，选择自定义金额。详见[支持方式](.github/SUPPORT.md)。

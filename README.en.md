@@ -104,4 +104,4 @@ Choose any amount in the corresponding app and verify the recipient. Open either
 
 </details>
 
-GitHub Sponsors is awaiting approval. See [support details](.github/SUPPORT.md).
+You can also [support the course through GitHub Sponsors](https://github.com/sponsors/YuxiaoMa66) with a custom amount. See [support details](.github/SUPPORT.md).

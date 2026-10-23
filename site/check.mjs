@@ -84,6 +84,9 @@ for(const name of ['button primary','nav-reader']) {
 assert(!landing.includes('data-online-reader'),'All online entry markers must resolve');
 assert(!/blob\/main\/[^"]+\.pdf/.test(landing),'Landing PDF links must download directly');
 assert(landing.includes('property="og:image"'),'Landing needs a social preview image');
+const sponsorsUrl='https://github.com/sponsors/YuxiaoMa66';
+assert(landing.includes(`href="${sponsorsUrl}"`),'Landing needs the active Sponsors link');
+assert.equal(fs.readFileSync(path.join(root,'..','.github/FUNDING.yml'),'utf8').trim(),'github: YuxiaoMa66','Sponsor button must use the verified account');
 assert(/class="github-link"\s+href="https:\/\/github\.com\/YuxiaoMa66\/quantweft"/.test(landing),'Header needs the repository link');
 assert(/href="styles\.[a-f0-9]{12}\.css"/.test(landing),'Landing styles must change URL when content changes');
 assert(/src="site\.[a-f0-9]{12}\.js"/.test(landing),'Landing script must change URL when content changes');

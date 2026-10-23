@@ -64,7 +64,7 @@ Capstone提供研究问题、时间契约、完整协议、字典和18项报告�
 
 **QuantWeft · 量化经纬**是一套量化金融与系统化研究双语课程，提供中英文教材和练习册。
 
-[许可范围](../../LICENSE.md)：原创代码 MIT，作者有权许可的原创教学内容 CC BY-NC-SA 4.0，仅限非商业使用；商业使用须另行许可。[第三方例外](../../docs/legal/THIRD_PARTY_NOTICES.md)与[权利核查](../../docs/legal/RIGHTS_REVIEW.md)另列。[参与和自愿赞助](../../.github/SUPPORT.md)，已展示微信与支付宝收款码，GitHub Sponsors 待审核。
+[许可范围](../../LICENSE.md)：原创代码 MIT，作者有权许可的原创教学内容 CC BY-NC-SA 4.0，仅限非商业使用；商业使用须另行许可。[第三方例外](../../docs/legal/THIRD_PARTY_NOTICES.md)与[权利核查](../../docs/legal/RIGHTS_REVIEW.md)另列。[参与和自愿赞助](../../.github/SUPPORT.md)，可通过 [GitHub Sponsors](https://github.com/sponsors/YuxiaoMa66)、微信或支付宝支持课程维护。
 
 
 ## 仓库路径与历史引用

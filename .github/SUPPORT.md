@@ -10,19 +10,23 @@ Report a reader problem through the [feedback form](https://github.com/YuxiaoMa6
 
 Voluntary support helps maintain the bilingual course, Notebook experience, and website. The course remains available under its stated licenses.
 
+### GitHub Sponsors
+
+[通过 GitHub Sponsors 支持 Yuxiao Ma / Sponsor Yuxiao Ma on GitHub](https://github.com/sponsors/YuxiaoMa66)
+
+可在 GitHub 页面选择自定义金额。
+
+Choose a custom amount on the GitHub Sponsors page.
+
 ### 微信与支付宝 / WeChat Pay and Alipay
 
 以下收款码由作者提供。请用相应 App 扫码，并在付款前核对收款人及金额。支付是否可用以平台显示为准。
 
-These author-provided QR codes are the currently available payment channels. Use the corresponding app and check the recipient and amount before paying; availability depends on the provider.
+These QR codes were supplied by the author. Use the corresponding app and check the recipient and amount before paying; availability depends on the provider.
 
 | 微信支付 / WeChat Pay | 支付宝 / Alipay |
 | --- | --- |
 | [![WeChat Pay support QR](../docs/assets/support/wechat-pay.jpg)](../docs/assets/support/wechat-pay.jpg) | [![Alipay support QR](../docs/assets/support/alipay.jpg)](../docs/assets/support/alipay.jpg) |
-
-GitHub Sponsors is awaiting platform review; no Sponsors payment page is currently available.
-
-GitHub Sponsors 正在等待平台审核，目前尚无可用的 Sponsors 付款页面。
 
 ## 许可 / Licensing
 

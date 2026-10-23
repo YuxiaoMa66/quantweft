@@ -1,7 +1,0 @@
-# QuantWeft funding configuration EXAMPLE ONLY. No live funding file is enabled.
-# 当前为配置示例，未启用收款。核验真实页面后复制为 FUNDING.yml，再取消对应行注释。
-# Use the actual GitHub account with an approved, active Sponsors listing.
-# github: YuxiaoMa66
-# Add the verified Ko-fi profile slug; do not use the display name or full URL.
-# ko_fi: YOUR_VERIFIED_KOFI_SLUG
-# Never commit banking details, tokens, tax identifiers, or placeholder payment links.
