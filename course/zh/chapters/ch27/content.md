@@ -738,7 +738,7 @@ assert realised[1.0] > 0.3 and abs(realised[0.5]) < 0.05 and realised[0.2] < -0.
 
 ## 20. 参考文献
 
-引用键与读取范围见 [source_notes.md](source_notes.md)。
+参考资料与链接见 [source_notes.md](source_notes.md)。
 
 - CH27_KMPV2013：Koijen, R. S. J., Moskowitz, T. J., Pedersen, L. H., Vrugt, E. B. *Carry*. NBER Working Paper 19325，2013 年 8 月版（工作稿，期刊版未读）；式 (2)–(7)、(9)–(10)、(13)–(15)、(24)–(25) 与脚注 6。
 - CH27_FP2013：Frazzini, A., Pedersen, L. H. *Betting Against Beta*，作者稿，2013-05-10 版（工作稿，期刊版未读）；摘要、式 (14)–(17)、页 16–21 的相关文字。

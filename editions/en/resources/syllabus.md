@@ -1,8 +1,8 @@
 # Curriculum: quantitative finance and systematic research
 
-Local formal edition (2026-10-19): the complete English body and workbook PDFs for Chapters 1–45, Projects 1–6, and the Capstone have been independently accepted; the shared code, runner, and dependencies sit at this package root and were cold-started in an isolated directory with the commands on the [entry page](../README.md) (scope in [Validation scope](../LOCAL_VALIDATION.md)). This is the authorized local formal edition; it has not been published externally, and real-market research has not been run.
+The course covers 45 chapters, six applied projects and a Capstone. Use the table to find a topic, its learning goals and its examples. Read the textbook for explanations and derivations, then use the workbook for practice. PDFs and setup instructions are on the [course entry page](../README.md).
 
-The 45 rows preserve curriculum coverage, outcomes, examples and levels: 33 Must Know, 8 Should Know and 4 Advanced. Optional describes a route choice rather than permission to omit a core definition. Read the body for explanation and derivation, attempt Workbook recall and exercises before the complete same-chapter answers, then use each Notebook in its stated mode. Market-research completion is a separate question.
+Must Know marks the core route; Should Know adds useful detail; Advanced covers topics that need further preparation. Choose optional topics according to your project. Notebook inputs and outputs are listed in the [Notebook guide](../NOTEBOOK_GUIDE.md).
 
 
 ## The quant landscape
@@ -100,7 +100,7 @@ The 45 rows preserve curriculum coverage, outcomes, examples and levels: 33 Must
 | [Project 4: Multi-factor equity strategy](../projects/project04/README.md) | 12, 23–26, 28–31, 35–36 | Require PIT signals, historical universes, net returns and robustness; constructed sublabs do not close market evidence. |
 | [Project 5: Pairs trading](../projects/project05/README.md) | 16–17, 29–31, 35–36 | Select within training, freeze rules and reconcile self-financing OOS ledgers and costs. |
 | [Project 6: Machine-learning alpha](../projects/project06/README.md) | 31, 35, 37–40, 43 | Split by date, fit transforms inside training and compare baselines, net returns and stability. |
-| [Capstone](../capstone/README.md) | Methods from all six projects, 33, 45 | 18 report items and reproducible workflow; negative results can pass. Market execution has separate gates. |
+| [Capstone](../capstone/README.md) | Methods from all six projects, 33, 45 | Explain the hypothesis, data, methods and results using the report template, and provide reproduction steps. |
 
 Prepare a download plan and dictionary for P1, format parsing for P2, an equal-weight baseline for P3, a PIT dictionary for P4, alignment for P5, label calendars for P6, and hypothesis/data feasibility for the Capstone. Passing requires credible design, checks and reporting, not profitability.
 

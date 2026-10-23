@@ -1,49 +1,43 @@
-# 第35章来源核读记录
+# 第35章：参考资料
 
-核读日期：2026-10-09。作者侧候选稿配套记录；本文件记录来源核对范围与证据边界，不代表正式教材验收或实盘策略背书。
+本页列出本章相关的论文、课程、数据来源与工具文档。
 
-## 一、核读来源清单与支持边界
+<a id="opened-source-documents"></a>
 
-| 来源键 | 来源名称与官方链接 | 来源类型 | 实际核读范围 | 本章支持的具体主张 | 不能支持的主张与边界限制 |
-|---|---|---|---|---|---|
-| `AQR_COST` | Andrea Frazzini, Ronen Israel, Tobias J. Moskowitz (2012), [Trading Costs of Asset Pricing Anomalies](https://www.aqr.com/Insights/Research/Working-Paper/Trading-Costs-of-Asset-Pricing-Anomalies) | AQR机构工作论文页 | 通过 Tavily Search 与 Extract 读取 AQR 官方研究页面和摘要；页面标注2012-12-05。样本描述为1998–2011年、19个发达市场、近1万亿美元机构实盘交易数据；未声称逐页核读完整论文。 | 支持第11.1节对该样本的描述，以及论文摘要所述“若干组合成本估计低于早期聚合成交/报价研究估计”、实际执行成本输入与组合优化的研究方法。 | 页面摘要不足以支持把具体订单执行算法（如TWAP/VWAP或智能路由）说成该成本差异的原因；不支持把专有样本的参数迁移为通用成本常数，也不证明所有因子扣费后均显著。 |
-| `ALMGREN_CHRISS_2000` | Almgren & Chriss, [Optimal execution of portfolio transactions](https://www.risk.net/journal-risk/2161150/optimal-execution-portfolio-transactions) | 原始学术论文（出版社出版页与学术副本） | 读取出版社记录（Journal of Risk, 3(2), 5–39, DOI: 10.21314/JOR.2001.041）及可访问副本中关于离散时间框架下市场冲击分解与执行成本模型的第 1–3 节。 | 支持第 5.4 节与第 6.1 节将总冲击严格解耦为侵蚀即刻成交价的临时冲击 $g(v)$ 与改变后续均衡中间价的永久冲击 $h(v)$ 的经典定义。 | 不把论文中为了数学解析性而设定的特定线性冲击系数或特定股票日波动率作为真实市场通用常数；不证明该模型能自动消除日内流动性突变或黑天鹅事件带来的执行风险。 |
-| `HUBERMAN_STANZL_2004` | Huberman & Stanzl, [Price Manipulation and Quasi-Arbitrage](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2004.00531.x) | 原始论文；Econometrica, 72(4), 1247–1275, DOI 10.1111/j.1468-0262.2004.00531.x | Tavily Search核对Wiley题录/摘要；补充打开Wiley出版社页并阅读摘要，及Columbia Business School作者机构PDF的摘要、引言、时间无关价格影响章节说明与结论；详细记录见`qa/a7/ch35_ch36_batch/sources/extracted/huberman_stanzl_reading_record.md`。 | 只支持第5.4节的条件性理论说明：在论文的市场假设和时间无关永久价格更新框架下，为排除准套利，永久价格更新函数须线性；若永久更新与临时影响函数分离，临时部分可为更一般形状。 | 这是模型定理，不是所有市场冲击函数的经验规律；未声称逐页阅读全文或把它迁移成实盘参数。 |
-| `SEC_IS_2003` | U.S. SEC, [Request for Comments on Measures To Improve Disclosure of Mutual Fund Transaction Costs](https://www.sec.gov/rules-regulations/2003/12/request-comments-measures-improve-disclosure-mutual-fund-transaction-costs) | SEC 官方征求意见文件 (Release Nos. 33-8349, 34-48952, IC-26313) | 读取 SEC 官方征求意见稿全文中关于共同基金交易成本、实施差额（Implementation Shortfall）、未成交机会成本定义及披露争议的讨论章节。 | 支持第 5.3 节与第 11.1 节关于实施差额连接纸面投资组合与实际执行组合的概念渊源，并支持“SEC在2003年指出当时组合实施差额没有普遍接受的计算方式”这一历史性表述。 | 该文件为2003年概念征求意见文件；不确立当前通用监管公式，也不构成任何司法管辖区下的法律或合规意见。 |
-| `CESARI_MARZO_ZAGAGLIA_2012` | Cesari, Marzo, Zagaglia, [Effective Trade Execution](https://arxiv.org/abs/1206.5324) | 学术工作论文 (arXiv:1206.5324) | 读取 arXiv 全文元数据、文献综述与交易执行成本分类结构章节。 | 支持第 5 节与第 14 节关于执行摩擦、TWAP/VWAP 调度基准、点差与市场冲击相互关系的学术术语与分类口径交叉核验。 | 该论文属于学术预印本，不作为交易所规则或工业界最佳执行的唯一技术标准。 |
-| `SEC_ALGO` | U.S. SEC, [Staff Report on Algorithmic Trading in U.S. Capital Markets](https://www.sec.gov/files/algo_trading_report_2020.pdf) | 监管机构官方研究报告 (2020) | 读取官方报告关于美股多场所/自动化市场结构、算法交易影响及流动性提供的章节。 | 支持第 11.1 节对多场所市场结构、正常条件下若干市场质量和流动性指标改善，以及压力/波动期间可能出现风险的概述。 | 不支持本章对大盘与小微盘之间总体点差、深度或成本差异作经验断言；不代表对特定券商或高频做市商合规性的背书。 |
-| `PEROLD_1988` | André F. Perold, [The Implementation Shortfall: Paper vs. Reality](https://jpm.pm-research.com/content/14/3/4), *The Journal of Portfolio Management*, 14(3), 4–9 (1988) | 原始学术论文/出版社出版页与HBS作者书目页 | 2026-10-09批次通过Tavily搜索结果核对HBS与JPM页面上的书目元数据；2026-10-16本批仅沿用该历史书目身份，未重新检索或核读论文全文。 | 仅支持作者、题名与出版信息的书目识别；不据此支持第6.2节的具体定义或公式。 | 不把Perold称为实施差额概念首创者；SEC（2003）把早期概念来源追溯到Treynor（1981）。书目核验不能支持论文具体段落或公式。 |
+### AQR_COST
 
----
+[Trading Costs of Asset Pricing Anomalies](https://www.aqr.com/Insights/Research/Working-Paper/Trading-Costs-of-Asset-Pricing-Anomalies)
 
-## 二、搜索与核验执行细节记录
+2012 年工作论文摘要所述样本覆盖 1998–2011 年、19 个发达市场和近 1 万亿美元的机构实盘交易；论文成本估计不作为本书构造示例的参数。
 
-1. **检索环境与执行记录**：
-   - 2026-10-09 通过批次统一检索记录与 Tavily 提取接口，核验了 Risk.net 出版社书目、SEC 官方文件库、AQR 官方研究知识库与 arXiv 预印本文献元数据。
-   - 原始抽取元数据保存在 `qa/a7/ch35_ch36_batch/sources/` 归档路径中。
+### SEC_ALGO
 
-2. **数据缺口与教学构造声明**：
-   - 严格遵循 `qa/a7/ch35_ch36_batch/SOURCE_DATA_GAP.md` 的范围界定：本地环境未包含真实股票的日内 Tick/Level-2 订单簿、未包含券商借券池历史费率与召回流水、未包含机构真实算法执行私有数据库。
-   - 本章第 8 节展示的数值案例、第 10 节展示的可视化曲线以及第 15–18 节展示的习题算例，**全部为明确标注的教学构造参数与合成场景**。
-   - 严禁将本章的参数（如 $\lambda_A = 1.0 \times 10^{-5}$、借券费率 $3.65\%$、点差 $\$0.04$ 等）当作特定历史股票的实证估计值；本章严谨展示的是摩擦建模与账本对账的数学机理，不主张任何实盘投资 Alpha。
+[Staff Report on Algorithmic Trading in U.S. Capital Markets](https://www.sec.gov/files/algo_trading_report_2020.pdf)
 
+### ALMGREN_CHRISS_2000
 
-## 三、Rev2事件计息与口径补充
+[Optimal execution of portfolio transactions](https://www.risk.net/journal-risk/2161150/optimal-execution-portfolio-transactions)
 
-- 第5.5节与35-L07将同一单调事件时钟作为教学账本边界。各段按简单ACT/360对段初可得现金与空头市值计提；结算事件把现金利息净额入账，使下一段现金利息基数更新。段末首次观察到的新mark只用于后续区间，不回填此前借券费。此为本候选的明确实验约定，并非对所有券商结算合同的描述。
-- 第5.6节（定义5.8）与35-E02区分可交易风险证券集合的成交换手和包括现金权重的全资产重配量。月度输入、月度成本与月度收益保持同频；年化换手只作为月值乘12的展示统计，不代入月度容量式。
-- 35-E04按各证券空头市值与借券费率逐项加总。示例中的“平均费率”只在明确为空头市值加权、且费率与持仓市值在区间内恒定时可乘以总空头市值；简单算术平均不具该性质。所列极端权重反例用于展示加权误差，不是市场费率样本。
-- Rev2对事件段逐条重生成融资、借券与NAV桥接结果；实际输入与独立复算证据见候选 `projects/project04/cost_execution_lab/` 的实验输出及 `qa/a7/ch35_ch36_batch/independent_recalc.py`。这些数据均为构造教学实验。
+引用限于模型假设和教学推导，不把模型参数当作市场校准
 
-## 四、BIL17A 语言边界补充（2026-10-16）
+### SEC_IS_2003
 
-- 正文的零成交均价保持未定义；佣金、成交金额、滑点与成交价格相关项只在非零实际成交集合上求和，空和为 0。参考实现的 `signed_qty` 是已确认的实际成交 $F$，不是母单申报量 $Q$。
-- 二手车类比、临时/永久冲击表述与第8节标记路径均属于构造模型边界。有限期限的观察不证明永久冲击，也不支持特定恢复速度；二手车比较固定了相同半点差以区分 Ask 与 mid。
-- 第8节设定目标权重在09:15锁定、在09:30按到达中间价换算股数，并明确 $P^{\text{dec}}=P^{\text{arr}}$ 仅为本构造假设。例中卖空所得按可立即使用现金处理；未建模抵押/冻结限制，不可泛化到账户合同。
-- 第8.2节用 $0.01/3000$、$0.10/12000$、$0.04/12000$ 表示精确冲击斜率，价格按美分显示与入账；这些等价替换保留原示例结果，不更改历史数据或成本核心。
-- `SEC_ALGO` 仅用于支持多场所结构、算法交易影响、若干市场质量/流动性概述及压力期风险，不支持大盘与小微盘点差、深度或成本差异断言。`SEC_IS_2003` 使用本记录中列明的正式 URL。`PEROLD_1988` 仅保留元数据身份；`Bouchaud et al. (2004)` 是未核读的后续选读，不支撑正文主张。
-- 历史Rev2记录中曾使用35-E05标签；当前稳定题号以I3映射为准，事件计息题为35-E04，Loom补充为35-L07，不据旧标签新增题目。
-- 固定 $T$ 的35-C01将 $\beta N$ 明定为外生每槽惩罚，并将流动性重置与 $g$ 不随 $T/N$ 变化列为构造假设；另说明等分交易时 $\Delta t=T/N$、$v=X/T$，若 $g=g(v)$ 则增加切片数本身不会降低每股冲击；整数选择限制在 $N\ge1$ 并比较邻近可行值。
-- 35-E02及Loom换手换算将 $2\tau_{\text{risky, one-sided}}\,\text{NAV}$限定为相同NAV、共同标记价且按该价全额成交时的实际双边股票成交额；一般情形仅为权重推算的请求名义额代理，部分成交应从成交记录计算。
-- 显式费率例不陈述特定司法辖区的当前征收规则；本章只处理明确费率表下的模型费用，未成交佣金的说法仅限本账本模型，账户特定申报/撤单费用不在范围内。35-C02把 $R_g$ 定义为相对零基准的超额收益，才能直接使用12\%/8\%=1.5。
-- 绑定I3的静态Notebook检查记录默认4单元格、小型构造账本/IS示例与1幅图；Notebook创建自己的唯一 `RUN_DIR` 保存新算图表，外层runner另在唯一execution目录保存执行副本与execution JSON。本章语言修订不等同于完整Project 4 CLI运行；英文Notebook语言层归BIL23。
+[Request for Comments on Measures To Improve Disclosure of Mutual Fund Transaction Costs](https://www.sec.gov/rules-regulations/2003/12/request-comments-measures-improve-disclosure-mutual-fund-transaction-costs)
+
+用于说明实施差额与纸面组合、未成交机会成本及计算口径并无唯一公认标准
+
+### CESARI_MARZO_ZAGAGLIA_2012
+
+[Effective Trade Execution](https://arxiv.org/abs/1206.5324)
+
+该工作论文不单独证明行业算法的统一实现
+
+### HUBERMAN_STANZL_2004
+
+[Price Manipulation and Quasi-Arbitrage](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2004.00531.x)
+
+### PEROLD_1988
+
+[The Implementation Shortfall: Paper vs. Reality](https://jpm.pm-research.com/content/14/3/4)
+
+[章节正文](content.md) · [完整参考资料](../../../../editions/zh/resources/references.md)

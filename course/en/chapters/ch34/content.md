@@ -1,6 +1,6 @@
 # Chapter 34 — Market Microstructure
 
-> Prior engineering evidence is cited under its original acceptance status. Through-line: translate quotes shown on a screen into specific orders, venue rules, visible contra-side liquidity, actual fills, positions, and profit and loss, while recording when each step occurs and when its information becomes available. Prerequisites: Chapter 10, Markets and Traders; and Chapter 29, Backtest Ledgers. Chapter 33, Risk Management, provides background. After reading, you should be able to recompute a book sweep, explain why the midpoint is not a promise of execution, identify what snapshots and OHLCV cannot prove, and carry execution limits back into research design.
+> Through-line: translate quotes shown on a screen into specific orders, venue rules, visible contra-side liquidity, actual fills, positions, and profit and loss, while recording when each step occurs and when its information becomes available. Prerequisites: Chapter 10, Markets and Traders; and Chapter 29, Backtest Ledgers. Chapter 33, Risk Management, provides background. After reading, you should be able to recompute a book sweep, explain why the midpoint is not a promise of execution, identify what snapshots and OHLCV cannot prove, and carry execution limits back into research design.
 
 ## 1. Learning Objectives
 
@@ -191,7 +191,7 @@ python code/ch34_market_microstructure.py --output-dir "runs/ch34_$(python -c 'i
 .venv/bin/python -m pytest tests/test_microstructure.py -q
 ~~~
 
-The command creates `ch34_sweep_case.json` and `figures/ch34_order_book_sweep.png` in a unique `runs` subdirectory. By default, the I3 reader-package Notebook calls the shared microstructure logic to compute a fresh small static sweep and saves one figure in a unique `RUN_DIR`; it does not download external data or set a random seed. Use the outer runner described in `projects/PROJECT_READER.md` from the package root and save the execution copy and execution JSON. Do not rewrite the source Notebook or frozen QA outputs. The English Notebook language layer and full-package cold start are deferred to BIL23.
+The command creates `ch34_sweep_case.json` and `figures/ch34_order_book_sweep.png` in a unique `runs` subdirectory. By default, the reader-package Notebook calls the shared microstructure logic to compute a fresh small static sweep and saves one figure in a unique `RUN_DIR`; it does not download external data or set a random seed. Use the outer runner described in `projects/PROJECT_READER.md` from the package root; it saves an execution copy and execution JSON.
 
 The policy for NaN is rejection: this kernel accepts only finite `Decimal` prices and integer share counts, not table missing values. Execution price, quantity, and cash amount have units of USD/share, shares, and USD, respectively. This function does not infer the data clock; the caller must first ensure the snapshot is eligible for the order's decision and arrival times. This code is a teaching example, not a real data frequency, tradable time series, or seeded experiment.
 

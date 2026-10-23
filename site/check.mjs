@@ -1,6 +1,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
+import {isReaderSource} from './reader-sources.mjs';
+assert(isReaderSource('course/zh/chapters/ch01/content.md'));
+assert(isReaderSource('editions/en/resources/references.md'));
+assert(!isReaderSource('.github/pull_request_template.md'));
+assert(!isReaderSource('docs/SITE.md'));
+assert(!isReaderSource('projects/project01/qa/acceptance.md'));
+assert(!isReaderSource('qa/private-log.md'));
+
 import {execFileSync} from 'node:child_process';
 import {isPrintLayout,stripPrintLines} from './print-layout.mjs';
 assert(isPrintLayout(String.raw`\needspace{28\baselineskip}`));
@@ -19,6 +27,7 @@ let localLinks=0,math=0,boxes=0,diagrams=0;
 for(const file of pages){
  const html=fs.readFileSync(file,'utf8');
  assert(!html.includes('class="math-error"'),file);
+ assert(!/原主根|本轮新核源|BIL23B|canonical_written=false|author_candidate_pending_independent_acceptance/.test(html),'Internal production note: '+file);
  assert(!html.includes('&lt;!--'),'Source comment rendered as text: '+file);
  for(const block of html.matchAll(/<pre[^>]*><code class="language-\{=latex\}">([\s\S]*?)<\/code><\/pre>/g))assert(!isPrintLayout(block[1]),'Print-only code block: '+file);
  assert(!/<p>\\(?:[Nn]eedspace|clearpage|newpage)\b/.test(html),'Print-only paragraph: '+file);
@@ -78,7 +87,7 @@ assert(/class="github-link"\s+href="https:\/\/github\.com\/YuxiaoMa66\/quantweft
 assert(/href="styles\.[a-f0-9]{12}\.css"/.test(landing),'Landing styles must change URL when content changes');
 assert(/src="site\.[a-f0-9]{12}\.js"/.test(landing),'Landing script must change URL when content changes');
 const sourceRoot=path.dirname(root);
-const sources=execFileSync('git',['ls-files'],{cwd:sourceRoot,encoding:'utf8'}).trim().split('\n').filter(p=>p.endsWith('.md')&&!p.startsWith('third_party/'));
+const sources=execFileSync('git',['ls-files'],{cwd:sourceRoot,encoding:'utf8'}).trim().split('\n').filter(isReaderSource);
 let expectedBoxes=0,expectedDiagrams=0;
 for(const source of sources){const text=fs.readFileSync(path.join(sourceRoot,source),'utf8');expectedBoxes+=(text.match(/^(?:[ \t]*- )?[ \t]*:{3,} \{\.body-/gm)||[]).length;expectedDiagrams+=(text.match(/^```mermaid\s*$/gm)||[]).length;}
 assert.equal(boxes,expectedBoxes,'All teaching boxes must render, including boxes nested in lists');

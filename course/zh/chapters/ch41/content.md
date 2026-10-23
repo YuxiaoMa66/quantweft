@@ -1,6 +1,6 @@
 # 第41章 无监督学习（Unsupervised Learning）
 
-> 作者：Yuxiao Ma。既有A8-B构造实现已获限定接受、待正式整合，不等于真实研究完成。主线：PCA 与聚类不看标签，压缩的是方差和距离结构；解释方差高不等于预测力强，聚类得到的状态不等于经济机制。只有在训练窗内拟合缩放、主成分和簇中心，再对之后的日期投影或分配，它们才能进入可交易的研究；全样本 PCA、事后状态标签和用未来数据平滑的状态概率都会泄漏。
+> 作者：Yuxiao Ma。本章构造实现用于方法演示，不报告已完成的真实数据研究。主线：PCA 与聚类不看标签，压缩的是方差和距离结构；解释方差高不等于预测力强，聚类得到的状态不等于经济机制。只有在训练窗内拟合缩放、主成分和簇中心，再对之后的日期投影或分配，它们才能进入可交易的研究；全样本 PCA、事后状态标签和用未来数据平滑的状态概率都会泄漏。
 > 先修：第5章线性代数（特征值分解、正交投影）、第15章因子模型（协方差、因子暴露）、第16章时间序列 I（滚动窗口与自相关）、第38章管线（训练内拟合、日期 walk-forward）。完成后你能：手算 2×2 协方差的主成分和解释方差比例；说明缩放如何改变主成分；计算训练内 PCA 的样本外重构 $R^2$ 并解释本例为何低于样本内，而非把此大小关系当成逐窗口定理；用 k-means 在滚动的市场状态特征上做在线分配并检验簇稳定性；手算一步隐马尔可夫滤波，区分滤波概率与平滑概率；用构造数据展示事后状态标签使策略看起来更好的程度。
 
 ## 1. 本章目标
@@ -245,7 +245,7 @@ for x in (-0.025, -0.010, 0.003):
 ## 9. Python Implementation
 
 - 核心模块：`src/quant_course/unsupervised_tools.py`。
-- 接口契约：`qa/a8/ch40_ch41_batch/INTERFACE_CONTRACT.md` 第2节。公开函数：pca_fit、pca_project、pca_reconstruction_r2、subspace_cosines、trailing_state_features、fit_kmeans_states、assign_states、align_labels、cluster_stability、hmm_filter_smooth、simulate_markov_regimes、simulate_factor_panel。测试 `tests/test_unsupervised_tools.py`。
+- 公开函数：pca_fit、pca_project、pca_reconstruction_r2、subspace_cosines、trailing_state_features、fit_kmeans_states、assign_states、align_labels、cluster_stability、hmm_filter_smooth、simulate_markov_regimes、simulate_factor_panel。测试 `tests/test_unsupervised_tools.py`。
 - 章节脚本，约 7 秒。复现时只传 `--out`；`--figures-dir course/zh/chapters/ch41/figures` 会覆盖本章源图，只在有意刷新时使用：
 
   ```bash
@@ -333,7 +333,7 @@ print(round(ut.pca_reconstruction_r2(test, full), 3),
 
 **对照与解释边界。** 43个`q/noise`序列跨序列独立、单位边际方差，但各自为AR(1)、系数0.98；另外3个价格特征来自收益路径且与q有间接联系。全46维不是独立同方差总体，有限样本的主方向也不是预定信号方向。截断PCA可能丢信号或减少估计方差，谁占主导需验证，不能把改善自动判成泄漏。必要控制是保留全部 $k=46$ 成分、同一训练Scaler、同一alpha且不whiten：正交旋转 $V$ 下 $\|y-XVb\|^2+\alpha\|b\|^2=\|y-X\beta\|^2+\alpha\|\beta\|^2$，其中 $\beta=Vb$，所以理论预测与原Ridge相同（数值误差除外）。截断后此等价不成立，也不保证降噪有利。历史结果应逐指标读：PCA+Ridge相对训练均值R²两景好于Ridge，IC两景较低；基础10/20bp夏普更低，反号−0.14/−0.52却略好于Ridge的−0.15/−0.53。结果见第40章第13节的 Project 6 v2 表格与 `projects/project06/research_report/v2_trees.md`。
 
-**聚类与状态。** 本批不把聚类状态加入 Project 6：构造的"载荷反号"情景改变的是截面特征与收益的关系，市场层面的波动与收益不受影响，基于市场状态特征的聚类没有可识别的对象。状态规则的研究应另立协议（第17节 41-C02）。
+**聚类与状态。** 在该构造情景中不把聚类状态加入 Project 6：构造的"载荷反号"情景改变的是截面特征与收益的关系，市场层面的波动与收益不受影响，基于市场状态特征的聚类没有可识别的对象。状态规则的研究应另立协议（第17节 41-C02）。
 
 ## 14. Chapter Summary
 
@@ -502,12 +502,12 @@ print(round(same_day["wealth"][-1], 3), round(lagged["wealth"][-1], 3))
 
 ## 20. References
 
-完整链接与核读位置见 `references.md`, `references/sources.json` 与本章 `source_notes.md`。
+链接与参考资料见 `references.md`, `references/sources.json` 与本章 `source_notes.md`。
 
 - `NUMPY`：NumPy 文档（`linalg.eigh`）。用于第6.1节、第8.1节特征分解。核读：本机 2.5.3 实现即依据。
-- `SK_PITFALLS`：scikit-learn "Common pitfalls"（数据泄漏、训练内预处理）。用于第5节缩放、第12.1节。核读：沿用 A8-A 登记。
+- `SK_PITFALLS`：scikit-learn "Common pitfalls"（数据泄漏、训练内预处理）。用于第5节缩放、第12.1节。
 - `CH41_JC2016`：Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Phil. Trans. R. Soc. A*, 374, 20150202。用于第5节、第6.2节缩放。核读：AMC 侦察报告读过第2(c)节；作者未重读。
-- `CH41_LCBP1999`：Laloux, L., Cizeau, P., Bouchaud, J.-P., & Potters, M. (1999). Noise dressing of financial correlation matrices. *Physical Review Letters*, 83, 1467–1470。用于第6.3节上界公式与假设、第11节。核读：见 `source_notes.md`。
+- `CH41_LCBP1999`：Laloux, L., Cizeau, P., Bouchaud, J.-P., & Potters, M. (1999). Noise dressing of financial correlation matrices. *Physical Review Letters*, 83, 1467–1470。用于第6.3节上界公式与假设、第11节。参考资料：见 `source_notes.md`。
 - `CH41_HAMILTON1989`：Hamilton, J. D. (1989). A new approach to the economic analysis of nonstationary time series and the business cycle. *Econometrica*, 57(2), 357–384。用于第5节 HMM、第6.6节滤波与平滑。核读：侦察报告（R）；作者未读全文。
 - `CH41_AT2012`：Ang, A., & Timmermann, A. (2012). Regime changes and financial markets. *Annual Review of Financial Economics*, 4, 313–337。用于第11节、第19节。核读：侦察报告（R）；作者未读全文。
 - `CH41_CK1986`：Connor, G., & Korajczyk, R. A. (1986). Performance measurement with the arbitrage pricing theory. *Journal of Financial Economics*, 15(3), 373–394。用于第19节。核读：仅摘要级。
@@ -518,4 +518,4 @@ print(round(same_day["wealth"][-1], 3), round(lagged["wealth"][-1], 3))
 
 ## Notebook读者入口
 
-I3第41章Notebook有12格、6代码格，会fresh计算手算、四组合PCA、方差与预测力、3000日状态路径及D11事后50种子4200–4249，写新RUN_DIR两图；不能称冻结回放。该诊断不升级为预注册主结果。Notebook两语投影由BIL23处理，本批未运行或修改Notebook。
+第41章 Notebook有12格、6代码格，会fresh计算手算、四组合PCA、方差与预测力、3000日状态路径及D11事后50种子4200–4249，写新RUN_DIR两图。该诊断不升级为预注册主结果。

@@ -3,14 +3,14 @@
 \color{qink}
 
 
-2026-10-14读者教学接入。研究对象是固定French十行业修订历史、虚拟月配置及all-in假设费用下，行业动量（Industry Momentum）M0相对EW10的配对净月收益差。设计A10-A限定接受，执行协议A10-A.1 v2技术接受，G02日期与G04统计/费用口径已关闭。G01实际主体、用途及相应权利材料仍unknown，G05未获A10-B授权，执行blocked；历史available/ingested/revision仍unknown。完整预注册、market_verified、execution_authorized均false；原始再分发未计划=not_requested，不代表granted。已曝光历史不是盲holdout。
+本研究设计比较固定French十行业修订历史、假设月度配置及all-in费用下的行业动量M0与EW10配对净月收益差。历史available/ingested/revision时间仍未知，数据已曝光，不是盲holdout；数据主体、用途及适用权利仍unknown，原始再分发未获许可，真实市场执行尚未进行。
 
 ## 阅读顺序与先修
 
 \color{qink}
 
 
-先读[研究问题与曝光](RESEARCH_DESIGN.md)，再读[月收益字段](data_dictionary_monthly.md)与[时间契约](TIME_CONTRACT.md)，随后读[完整数学协议](PROTOCOL.md)，最后按[18项报告导读](research_report/REPORT_GUIDE.md)填写[研究报告模板](research_report/report_template.md)。[源身份与转换记录](accepted_source_map.json)保存源SHA、版本和本地去向，核心阅读无需访问制作QA。
+先读[研究问题与曝光](RESEARCH_DESIGN.md)，再读[月收益字段](data_dictionary_monthly.md)与[时间契约](TIME_CONTRACT.md)，随后读[完整数学协议](PROTOCOL.md)，最后按[18项报告导读](research_report/REPORT_GUIDE.md)填写[研究报告模板](research_report/report_template.md)。[来源元数据](accepted_source_map.json)列出输入、快照日期、版本、哈希和单位。
 
 先修按问题分组：Ch3/11教来源与复利，Ch15教RF/FF3归因，Ch22–25教假说与信号，Ch29/31–33教费用、时间与推断，Ch35–36教费用单位和执行边界，Ch38教标签成熟，Ch45教身份/状态/恢复。项目P1–3展示历史统计与基准，P4展示构造费用，P6展示预测/标签和未闭合真实研究边界。对应正文可直达：[Ch3](../course/zh/chapters/ch03/content.md)、[Ch11](../course/zh/chapters/ch11/content.md)、[Ch15](../course/zh/chapters/ch15/content.md)、[Ch22](../course/zh/chapters/ch22/content.md)、[Ch23](../course/zh/chapters/ch23/content.md)、[Ch24](../course/zh/chapters/ch24/content.md)、[Ch25](../course/zh/chapters/ch25/content.md)、[Ch29](../course/zh/chapters/ch29/content.md)、[Ch31](../course/zh/chapters/ch31/content.md)、[Ch32](../course/zh/chapters/ch32/content.md)、[Ch33](../course/zh/chapters/ch33/content.md)、[Ch35](../course/zh/chapters/ch35/content.md)、[Ch36](../course/zh/chapters/ch36/content.md)、[Ch38](../course/zh/chapters/ch38/content.md)、[Ch45](../course/zh/chapters/ch45/content.md)。可从[正文导航](../editions/zh/README.md)、[Loom导航](../workbook/README.md)与[P1](../projects/project01/README.md)、[P2](../projects/project02/README.md)、[P3](../projects/project03/README.md)、[P4](../projects/project04/README.md)、[P6](../projects/project06/README.md)返回材料。
 
@@ -29,7 +29,7 @@
 \color{qink}
 
 
-French参数文件SHA256为`d49ac62cff7d6496e478211921d507fe7216c18b0e4f13b57e48fc893eb12505`。其候选gates原字段保持源身份，当前G02/G04已由原主2026-10-13裁定关闭；不得把旧pending当当前待办，也不得因此把execution_authorized改true。完整源SHA在本地血缘JSON。
+French参数定义日期、统计和费用约定；历史 available/ingested/revision 时间仍未知，因此该配置是待检验设计，不是已执行的市场研究结果。
 
 ## 工程到研究的接口桥
 

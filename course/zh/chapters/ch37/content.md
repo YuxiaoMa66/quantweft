@@ -14,7 +14,7 @@
 5. 说出金融问题与 Kaggle 类竞赛在数据生成、测试集、评价指标上的差别，并据此选择基准（baseline）。
 6. 为后续第38–40章和 Project6 写出评价门槛：样本外、稳定性、成本、尾部和经济逻辑五项同时检查。
 
-完成条件：第15–17节每道题能独立做出，答案与第18节一致；能解释第8节历史缓存的输入、输出与局限。默认读者入口与重新运行的身份差别见第9节；本批不重跑模拟。
+完成条件：第15–17节每道题能独立做出，答案与第18节一致；能解释第8节历史缓存的输入、输出与局限。默认读者入口与重新运行的身份差别见第9节；第9节保存的历史模拟结果不会由默认读者入口重跑。
 
 ## 2. 为什么 Quant 需要它
 
@@ -242,7 +242,7 @@ $\sum_t|r_t|=0.4+0.3+0.2+0.5+3.0+0.4+0.2+0.1+0.3+2.5=7.9$（%）。
 
 ## 9. Python Implementation
 
-脚本：`code/ch37_ml_philosophy.py`。历史工程脚本可重算构造实验；工作树版本即使指定新 `--out` 仍可能覆盖原章图，故此处不提供直接覆盖指令。默认接受读者包中的第37章 Notebook会新算十日案例、100000重叠日、三组各200次零信号实验和状态切换，并在唯一运行目录写十日财富图；本批仅解释该行为，未执行。CLI历史先计算 $N=1$ 再计算10/100/1000，Notebook从10开始，随机数消耗不同，同seed3702不代表同一次具体结果。Notebook英文语言层在BIL23完成。
+脚本：`code/ch37_ml_philosophy.py`。历史工程脚本可重算构造实验；工作树版本即使指定新 `--out` 仍可能覆盖原章图，故此处不提供直接覆盖指令。默认接受读者包中的第37章 Notebook会新算十日案例、100000重叠日、三组各200次零信号实验和状态切换，并在唯一运行目录写十日财富图；该 Notebook 描述的是新计算路线；这里未执行它。CLI历史先计算 $N=1$ 再计算10/100/1000，Notebook从10开始，随机数消耗不同，同seed3702不代表同一次具体结果。
 
 输入全部为脚本内的教学构造参数与固定种子（3701 状态切换、3702 多重检验、3703 重叠标签）；输出 `ch37_results.json`（拒绝覆盖已有文件）及三张图。数据频率为日频；十日案例的 signal_time 为前一日收盘、trade_time 为当日开盘、收益区间为开盘到次日开盘。缺失值策略：输入出现 NaN 或 inf 直接报错，不填补。
 
@@ -529,7 +529,7 @@ $\sqrt{252/252}\times2.25=2.25$。报告值 2.0 低于零假设下最佳值的�
 - `PBO`：Bailey, D. H., Borwein, J., López de Prado, M., Zhu, Q. J. (2017). The probability of backtest overfitting. Journal of Computational Finance. 支持第6.5节选择偏差的背景。
 - `DSR`：Bailey, D. H., López de Prado, M. (2014). The Deflated Sharpe Ratio. 支持第6.5节 $E[\max Z]$ 近似式（本书第32章 `expected_max_standard_normal` 实现）。
 - `CH22_HLZ2014`：Harvey, Liu, Zhu. …and the Cross-Section of Expected Returns. 支持第5节多重检验在因子研究中的背景。
-- `CH37_GKX2020`：Gu, S., Kelly, B., Xiu, D. (2020). Empirical Asset Pricing via Machine Learning. Review of Financial Studies 33(5), 2223–2273. 作者核读：§1.8 式（19）第2249页（$R^2_{\text{OS}}$ 相对零预测及理由）、表1 第2250页（OLS $-3.46\%$、OLS-3 0.16\%、ENet+H 0.11\%）、§2.2 NN3 0.40\%、引言中多空组合夏普 1.35/2.45。支持第5节 $R^2_{\text{OS}}$ 基准、第11节证据边界。
+- `CH37_GKX2020`：Gu, S., Kelly, B., Xiu, D. (2020). Empirical Asset Pricing via Machine Learning. Review of Financial Studies 33(5), 2223–2273. §1.8 式（19）第2249页（$R^2_{\text{OS}}$ 相对零预测及理由）、表1 第2250页（OLS $-3.46\%$、OLS-3 0.16\%、ENet+H 0.11\%）、§2.2 NN3 0.40\%、引言中多空组合夏普 1.35/2.45。支持第5节 $R^2_{\text{OS}}$ 基准、第11节证据边界。
 - `CH37_CT2008`：Campbell, J. Y., Thompson, S. B. (2008). Predicting Excess Stock Returns Out of Sample: Can Anything Beat the Historical Average? Review of Financial Studies 21(4), 1509–1531；作者读 NBER w11468 版本式（1）第5页。支持第5节历史均值基准定义。
 - `CH37_AHM2019`：Arnott, R., Harvey, C. R., Markowitz, H. (2019). A Backtesting Protocol in the Era of Machine Learning. Journal of Financial Data Science 1(1), 64–74。来源侦察报告读到全文（引言、交易成本一节）；作者未重新打开，仅作第13节评价协议的延伸阅读。
-- 泄漏的学术定义（Kaufman 等 2012）与“准确率与经济收益背离”的专题论文（Leung 等 2021）均因访问限制未读到全文，本章不引用其具体结论；对应内容由第6.1节推导与 `SK_PITFALLS` 支撑。核读记录见 `course/zh/chapters/ch37/source_notes.md`。
+- 泄漏的学术定义（Kaufman 等 2012）与“准确率与经济收益背离”的专题论文（Leung 等 2021）均因访问限制未读到全文，本章不引用其具体结论；对应内容由第6.1节推导与 `SK_PITFALLS` 支撑。相关资料见 `course/zh/chapters/ch37/source_notes.md`。

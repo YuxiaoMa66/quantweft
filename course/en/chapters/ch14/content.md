@@ -235,7 +235,7 @@ If constructed \(R_f=2\%\) and expected simple market total return \(\mathbb E[R
 
 ### Default Entry Point for This Reader Edition
 
-From the accepted I3 reader package root, establish the [documented environment](../../../../editions/en/README.md), then run:
+From the reader package root, establish the [documented environment](../../../../editions/en/README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch14_asset_pricing.ipynb
@@ -243,11 +243,11 @@ From the accepted I3 reader package root, establish the [documented environment]
 
 The default run checks four constructed return rows, betas, and residuals, then draws new CML/SML and beta-scatter charts using RF=2% and expected market return 8%. Both new PNGs go to `runs/ch14_asset_pricing_<uuid>/`. With `RUN_FRENCH=False`, the historical French regression and residual-chart branches are disabled: the default neither reads nor downloads market snapshots. The NoDur figures and tables in Sections 10–11 remain historical reading material.
 
-The runner separately records kernel execution in a unique `runs/execution_*` directory, distinct from the chapter UUID method directory printed by the Notebook. Constructed execution checks computational interfaces; it produces no market research result, PIT forecast, or strategy return after costs. Chapter 14's historical NoDur inference uses HAC5; Chapter 15 and Project 2 historical main tables use HAC6. Keep point estimates and inference settings identifiable rather than altering intervals for superficial agreement. This batch inspected actual source without executing these Notebooks or rerunning historical regressions.
+The runner separately records kernel execution in a unique `runs/execution_*` directory, distinct from the chapter UUID method directory printed by the Notebook. Constructed execution checks computational interfaces; it produces no market research result, PIT forecast, or strategy return after costs. Chapter 14's historical NoDur inference uses HAC5; Chapter 15 and Project 2 historical main tables use HAC6. Keep point estimates and inference settings identifiable rather than altering intervals for superficial agreement. The constructed execution check tests interfaces only; the historical regressions were not rerun.
 
-English Markdown for the Chapter 14 Notebook belongs to BIL23; this batch does not modify it. The CLI and old production tests below refer to the course working root. Readers need not restore production tests absent from the package.
+The CLI below uses historical market inputs identified in the data manifest. The default Notebook uses constructed data.
 
-### Historical Course Working Root and Original Implementation
+### Shared Implementation and CLI
 
 Core calculations are in [`asset_pricing.py`](../../../../src/quant_course/asset_pricing.py): `beta_from_covariance` divides covariance by variance; `fit_capm_excess` returns estimates, fitted values, residuals, and (R^2) using single-regressor OLS identities; `capm_expected_return` applies the expected-return relation. Heteroskedasticity and autocorrelation consistent (HAC) inference uses the shared monthly `fit_monthly_factor_model` rather than a second engine. Missing or nonfinite inputs raise explicit errors, without silently dropping rows.
 
@@ -259,7 +259,7 @@ The [`ch14_asset_pricing.py`](../../../../code/ch14_asset_pricing.py) script is 
 
 For historical data, the manifest first verifies processed-file SHA-256 hashes; NoDur, Mkt-RF, and RF must then have consecutive `PeriodIndex('M')` months. Mkt-RF already subtracts RF, so the target subtracts it only once via `NoDur - RF`. Month labels do not establish information-availability, signal, or trade timestamps: this is not a backtest. HAC maxlags=5 means five adjacent monthly observation rows. Month ends separated by 28, 30, or 31 days are not converted to artificial equal-second timestamps. Inference depends on time-series approximations and bandwidth choices; significance alone does not establish alpha.
 
-The CLI above belongs to historical course production, rather than the accepted I3 reader default. Programs 14-P01–P03 can be pasted independently at the working root after installing the course as documented. The local `.venv/bin/python` already imports `quant_course` directly, so no additional path bootstrap was added.
+After installing the course as documented, run Programs 14-P01–P03 independently from the repository root. Use `.venv/bin/python` from the same environment to import `quant_course`.
 
 ## 10. Visualization
 
@@ -501,7 +501,7 @@ The deterministic sine error is not perfectly orthogonal to \(x\), so beta need 
 
 ## 20. References
 
-1. Sharpe, W. F. (1964). “Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk.” *The Journal of Finance*, 19(3), 425–442. [Original article and publication metadata](https://doi.org/10.1111/j.1540-6261.1964.tb02865.x). Supports mean–variance assumptions, efficient portfolios, and market risk; actual reading scope is in [`source_notes.md`](../../../zh/chapters/ch14/source_notes.md).
+1. Sharpe, W. F. (1964). “Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk.” *The Journal of Finance*, 19(3), 425–442. [Original article and publication metadata](https://doi.org/10.1111/j.1540-6261.1964.tb02865.x). Supports mean–variance assumptions, efficient portfolios, and market risk; publication details appear in [`source_notes.md`](../../../zh/chapters/ch14/source_notes.md).
 2. Markowitz, H. (1952). “Portfolio Selection.” *The Journal of Finance*, 7(1), 77–91. [Wiley metadata and DOI](https://doi.org/10.1111/j.1540-6261.1952.tb01525.x). Metadata only were checked, without full page-by-page reading.
 3. Princeton FIN501. [Lecture 02: One-Period Asset Pricing](https://swh.princeton.edu/~markus/teaching/Fin501/02Lecture.pdf), slides 43–66. Supports general pricing kernels and SDFs; all technical conditions of the fundamental theorem are not developed here.
 4. Lo, A. W. MIT OCW 15.401. [The CAPM and APT](https://live.ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/411d7d9df37d4d0440b18e17e8cea3a9_MIT15_401F08_lec15.pdf), specified slides. See source notes for reading and formula-adaptation scope.

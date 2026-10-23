@@ -2,7 +2,7 @@
 
 ## The reader’s route and the identity of the evidence
 
-This is the BIL17B candidate for complete bilingual teaching, pending independent acceptance. Real-market research remains planned and blocked; it is not verified. The implementation and constructed demonstrations have limited acceptance through c5, ALIGN, and the later whole-share execution boundary. Read the [historical c5 acceptance](../../../../projects/project05/ACCEPTED_VERSION.md), [protocol-alignment acceptance](../../../../projects/project05/ACCEPTED_ALIGNMENT_20261014.md), and [current whole-share boundary acceptance](../../../../projects/project05/ACCEPTED_SETTLEMENT_BOUNDARY_20261014.md) in that order. The last supersedes ALIGN’s earlier treatment of fractional actual holdings. Those historical records remain unchanged.
+This page describes constructed teaching results under the whole-share execution boundary. Real-market research has not been performed because data permissions are missing; constructed results are not market evidence.
 
 Start with stationarity and cointegration in Chapters 16–17, accounting and evaluation in Chapters 29–31, and the accepted material in Chapters 34–36. A quote is not a fill, and requested quantity $Q$ is not actual filled quantity $F$. Reserve capacity for orders in flight and explain the disposition of terminal remainder $R=Q-F$. Only confirmed fills change cash and holdings; subsequent marks determine net asset value (NAV). Implementation shortfall (IS) attributes performance relative to a decision benchmark; it is not deducted from cash again.
 
@@ -16,9 +16,9 @@ Read the [exercises](exercises.md) and [complete solutions](solutions.md), then 
 
 ### The default Notebook and a full research run
 
-The accepted I3 package’s `projects/project05/notebooks/p05_pairs.ipynb` explicitly defaults to constructed data. It freshly runs the three-pair screened/ungated main route, producing formation, ledger, and performance tables and one figure. It does not merely load an old cache, and it does not run the full CLI cost/threshold grids. Read explanatory prose, historical replay tables, and new constructed outputs according to their labels. The complete English Notebook language layer, portable package, and full cold-start validation belong to BIL23; this batch neither edits nor executes the Notebook.
+The default `projects/project05/notebooks/p05_pairs.ipynb` uses constructed data and runs the three-pair screened/ungated main route, producing formation, ledger, and performance tables plus one figure. It does not merely load an old cache or run the full CLI cost/threshold grids. Read explanatory prose, historical replay tables, and new outputs according to their labels.
 
-From the configured I3 package root, run an execution copy through the outer runner:
+From the configured default reader package root, run an execution copy through the outer runner:
 
 ```bash
 .venv/bin/python run_notebook.py projects/project05/notebooks/p05_pairs.ipynb
@@ -75,7 +75,7 @@ c5 has limited acceptance; real research remains incomplete.
 - **Real-price empirical research is blocked.** The 2026-10-10 source decision recorded licensing gaps in the options then checked; no applicable institutional authorization was obtained. This is neither a fresh review of current terms nor a universal claim about every free source. See the source decision. `data_manifest.json` remains blocked; `--data real` rejects execution with exit code 3.
 - [Preregistration v1](../../../../projects/project05/configs/preregistration_v1.json): eight pairs, 2010–2025, rolling 504/126 windows, EG $p<0.05$, $|z|$ thresholds 2/0.5/4, and cost/borrow scenarios; frozen before any price download.
 - [Implementation](../../../../projects/project05/src/p05_pairs.py): validation, forward total returns, formation and EG, signals, two-leg accounting, financing/borrow/dividends/splits, partial fills, IS, and walk-forward evaluation. [Constructed panel](../../../../projects/project05/src/p05_constructed.py); [CLI](../../../../projects/project05/run_project05.py); figures; tests.
-- [Report](research_report/report.md), [exercises](exercises.md), [solutions](solutions.md), [reference code](../../../../projects/project05/solutions_code.py), historical source [Notebook](../../../../projects/project05/notebooks/p05_pairs.ipynb) (readers execute the I3 package copy above), [active practice](loom/main_p05.tex), and [dictionary](data_dictionary.md).
+- [Report](research_report/report.md), [exercises](exercises.md), [solutions](solutions.md), [reference code](../../../../projects/project05/solutions_code.py), historical source [Notebook](../../../../projects/project05/notebooks/p05_pairs.ipynb) (readers execute the default reader package copy above), [active practice](loom/main_p05.tex), and [dictionary](data_dictionary.md).
 - Constructed results demonstrate the method and implementation: cash residuals around $10^{-9}$ USD, equality of decomposed and direct IS, and formation estimates unchanged by future perturbations. The old positive screened Sharpe came from a false-positive selection and changed sign with a 252-day formation window. Even these constructed results do not satisfy the rule for supporting the strategy.
 
 ```bash

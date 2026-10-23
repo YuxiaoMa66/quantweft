@@ -3,7 +3,7 @@
 \color{qink}
 
 
-This document retains the complete technical body of the v2 protocol accepted on 2026-10-13, including the signal, continuous ledger, costs, and statistical conventions. Only the teaching navigation and candidate-stage process language have been adapted. G02 and G04 have received technical acceptance; the source freeze is unchanged. Current permissions and execution status are summarized in the [Capstone README](README.md). Monthly labels and historical clocks are specified in the [Time and Label Contract](TIME_CONTRACT.md); required outputs and interpretations are listed in the [report guide](research_report/REPORT_GUIDE.md). A basis point (bps) is $10^{-4}$; net asset value (NAV) is ledger net value; HAC means heteroskedasticity and autocorrelation consistent covariance estimation.
+This protocol specifies the research question, continuous ledger, costs, and statistical conventions. The [Capstone README](README.md) summarizes scope and research limits; the [Time and Label Contract](TIME_CONTRACT.md) defines monthly labels and historical clocks; the [report guide](research_report/REPORT_GUIDE.md) lists outputs and interpretations. A basis point (bps) is $10^{-4}$; net asset value (NAV) is ledger net value; HAC means heteroskedasticity and autocorrelation consistent covariance estimation.
 
 ## Question, assets, signal, and prior exposure
 
@@ -32,7 +32,7 @@ P3 has exposed the full 1990-01 through 2026-08 ten-industry/equal-weight histor
 \color{qink}
 
 
-The calendar arithmetic is $440=(2026-1990)\times12+(8-1)+1$; $\lfloor0.4\times440\rfloor=176$, $\lfloor0.3\times440\rfloor=132$, leaving 132 months. The three full-month segments are contiguous, non-overlapping, and each is at least 24 months; the evaluation window is at least 120 months. For the first evaluation month, 1990-01, L17/skip1 uses 1988-07..1989-11 and skips 1989-12; L11/skip1 uses 1989-01..1989-11; L5 uses 1989-07..1989-11; L11/skip2 uses 1988-12..1989-10. The general endpoints are $[t-\mathrm{skip}-L,\ t-\mathrm{skip}-1]$, containing exactly $L$ months. Calendar arithmetic was checked in the accepted protocol's constructed checks without reading market-return values; this teaching adaptation did not rerun those checks.
+These calendar identities are mathematical definitions; they do not verify historical return availability.
 
 ## Thirteen continuous paths and segment boundaries
 
@@ -122,7 +122,7 @@ the constructed check independently proves this. The full 440-month mean is desc
 
 The statistic is $t_{\mathrm{stat}}=\hat\mu/\mathrm{SE}$. The one-sided 5% positive-direction test and one-sided 95% lower bound are $\hat\mu-t_{0.95,131}\,\mathrm{SE}$; the two-sided 95% interval is $\hat\mu\pm t_{0.975,131}\,\mathrm{SE}$. The $t(131)$ reference is an approximation and does not guarantee exact coverage under dependence or non-stationarity. If SE is zero/non-finite, months are missing, $n\le L$, or parameters are not identified, report `undefined` / rejected explicitly with the reason. Do not fill months, silently reduce L, or set an undefined result to $p=0$. Log numerical discrepancies; do not change the primary conclusion by choosing a different convention.
 
-The local statsmodels constant-OLS mapping is `maxlags=6`, `weights_func=weights_bartlett`, `use_correction=True`, `use_t=True`. The original technical acceptance included constructed HAC and calendar/continuous-cost-contract checks. Those constructed checks are not research on the target market, and this reader adaptation did not rerun them.
+These settings define the estimator in the hypothetical protocol; they do not establish market results.
 
 For post-hoc FF3 attribution, subtract the same-month FF3 RF once from net total return; do not subtract RF again from published `Mkt-RF`, `SMB`, or `HML`. Keep months and currency aligned. Use an intercept and three factors, $k=4$, with correction $n/(n-4)$; do not apply the primary $k=1$ correction. Do not change the course's existing attribution interface or insert invented factors into the primary paired difference to call it. The shared same-month RF already cancels in the primary mean difference, so do not subtract RF again there.
 
@@ -131,6 +131,6 @@ For post-hoc FF3 attribution, subtract the same-month FF3 RF once from net total
 \color{qink}
 
 
-For the primary 132-row paired $d$, use the circular block bootstrap with block length 12 months, 5,000 replications, and seed `20261012`; lengths 6 and 24 are prespecified interval sensitivities only. Initialize one dedicated Python `random.Random(seed)` generator once before the replication loop. All 5,000 replications consume that same evolving state, without reseeding inside the loop. Draw each required block start uniformly using `randrange(n)`, concatenate circular consecutive blocks until reaching $\lceil n/\mathrm{block}\rceil$ blocks, and truncate to $n$; compute each bootstrap mean. Compute percentile quantiles by linear interpolation at position $(B-1)p$; the one-sided lower bound uses $p=0.05$, and the two-sided interval uses $0.025$ / $0.975$. Report any disagreement with HAC; do not select the favorable interval or add another statistical selection family. This design is retained, and this batch did not run the target-sample bootstrap or a new selection.
+No target-sample bootstrap result is available.
 
 CAGR, volatility, net-excess Sharpe, drawdown, costs, and weights are prespecified descriptive measures for a future authorized run. Development, validation, and the full 440 months do not replace the primary mean test and are not used for training or parameter selection. Keep the 10 bps/month illustrative net-advantage threshold separate from statistical significance. Preserve the original 18-item mapping for risk, industry concentration, tails, a uniform constructed shock, and FF3 attribution. With no trade prices/volume, stock IDs, or historical constituent versions, do not estimate real capacity or claim the absence of survivorship bias for the whole market. Do not invent PSR/DSR/PBO results to fill headings; where applicability is insufficient, mark `not_applicable` / `not_evaluated`. Retain all positive, zero, and negative results.

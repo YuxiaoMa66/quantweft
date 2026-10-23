@@ -323,15 +323,15 @@ A^\top A=\begin{bmatrix}4&6\\6&14\end{bmatrix},
 
 ### 本读者版的默认运行入口
 
-从接受I3读者包的根目录，按其[README](../../../../editions/zh/README.md)建立独立环境后运行：
+从随包读者包的根目录，按其[README](../../../../editions/zh/README.md)建立独立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch09_optimization.ipynb
 ```
 
-Notebook调用随包共享实现；默认不读取未随包提供的French数据，也不下载数据。每次执行与图表写入唯一UUID的runs子目录，终端打印实际输出位置。旧制作测试和以下历史命令属于课程工作项目；读者默认路线采用包根Notebook及其断言。可选历史数据遵守读者包的[数据契约](../../../../editions/zh/OPTIONAL_DATA.md)，本批未重跑。
+Notebook 调用随包共享实现；默认不读取未随包提供的 French 数据，也不下载数据。每次执行与图表写入唯一 UUID 的 `runs/` 子目录，终端打印实际输出位置。读者默认路线采用包根 Notebook 及其断言。可选历史数据遵守读者包的[数据契约](../../../../editions/zh/OPTIONAL_DATA.md)。
 
-I3包另外保留code/ch09_optimization.py，但本章默认读者入口仍为上面的Notebook。
+读者包另外保留 `code/ch09_optimization.py`，但本章默认入口仍为上面的 Notebook。
 
 ### 历史课程根路线
 
@@ -658,7 +658,7 @@ S(w_\theta)=\frac{1}{\theta\sqrt{q(y_1)}}\longrightarrow+\infty,
 
 ## 19. Further Reading
 
-- **Must Know**：Boyd 与 Vandenberghe《Convex Optimization》§§3.1.4、4.1–4.4、5.1–5.2.3、5.5.3、5.6.1–5.6.3、9.1.1。依次查 Hessian 判别、凸优化问题/LP/QP、拉格朗日对偶与 Slater、KKT 必要与充分条件、扰动敏感度、最小二乘正规方程。章节和页码记录在 [`source_notes.md`](source_notes.md)。
+- **Must Know**：Boyd 与 Vandenberghe《Convex Optimization》§§3.1.4、4.1–4.4、5.1–5.2.3、5.5.3、5.6.1–5.6.3、9.1.1。依次查 Hessian 判别、凸优化问题/LP/QP、拉格朗日对偶与 Slater、KKT 必要与充分条件、扰动敏感度、最小二乘正规方程。书目与链接见 [`source_notes.md`](source_notes.md)。
 - **Should Know**：CVXPY 官方 [DCP 指南](https://www.cvxpy.org/tutorial/dcp/) 与 [Quadratic program 示例](https://www.cvxpy.org/examples/basic/quadratic_program.html)，对照凸曲率规则、组合均值—方差标准式与 `dual_value` 的映射。
 - **Advanced**：CVXPY [LP 示例](https://www.cvxpy.org/examples/basic/linear_program.html)、[least-squares 示例](https://www.cvxpy.org/examples/basic/least_squares.html)、[solver guide](https://www.cvxpy.org/tutorial/solvers/index.html) 和 [problem status guide](https://www.cvxpy.org/tutorial/intro/index.html)。用于核对标准形式、状态标签、solver statistics 及不可行/无界语义。
 - **Optional**：若需要进一步讨论非凸数值方法，可读 Boyd §9 的无约束最小化章节；它不是本章凸 QP 解保证的来源，也不能替代 Sharpe 变换的条件证明。

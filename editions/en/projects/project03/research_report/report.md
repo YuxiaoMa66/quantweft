@@ -1,6 +1,6 @@
 # Project 3 Research Report: Rolling Out-of-Sample Comparison of Four Long-Only Portfolios
 
-Historical research date: 2026-10-06. This report fully preserves the historical inputs, values, and negative results; the default offline Notebook runs only an independent constructed example, as described in the [guide](../READER_GUIDE.md). This language revision did not rerun the report.
+Historical research date: 2026-10-06. This report records the historical inputs, values, and negative results. The default offline Notebook runs a separate constructed example, as described in the [guide](../READER_GUIDE.md); the two routes use different inputs and answer different questions.
 
 ## 1. Research question and falsifiable hypothesis
 

@@ -9,7 +9,7 @@
 
 学完本章后，读者应能把一组响应变量和特征写成线性模型，判断正规方程何时有唯一解；从残差平方和计算 \(R^2\) 与调整 \(R^2\)；对单个或一组线性限制执行 \(t\) 检验或 \(F\) 检验，并准确说明 p 值表示什么；解释异方差、自相关和多重共线性分别影响什么；按误差结构选择经典、HC3 或 HAC 协方差估计；将标准化与惩罚回归放进仅使用过去数据的时间序列交叉验证管线。
 
-完成条件是按第9节说明从接受I3读者包根运行 `.venv/bin/python run_notebook.py notebooks/ch08_regression.ipynb`，核对Notebook输出与每次新写入UUID运行目录的图表；历史课程根的CLI与图路径仍见第9节，并能指出这份同期模拟样本不能证明因果关系、CAPM 有效性或可交易收益。
+完成条件是按第9节说明从随包读者包根运行 `.venv/bin/python run_notebook.py notebooks/ch08_regression.ipynb`，核对Notebook输出与每次新写入UUID运行目录的图表；历史课程根的CLI与图路径仍见第9节，并能指出这份同期模拟样本不能证明因果关系、CAPM 有效性或可交易收益。
 
 ## 2. 为什么 Quant 需要它
 
@@ -304,19 +304,19 @@ X^\top X\hat\beta=X^\top y.
 
 ### 本读者版的默认运行入口
 
-从接受I3读者包的根目录，按其[README](../../../../editions/zh/README.md)建立独立环境后运行：
+从随包读者包的根目录，按其[README](../../../../editions/zh/README.md)建立独立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch08_regression.ipynb
 ```
 
-Notebook调用随包共享实现；默认不读取未随包提供的French数据，也不下载数据。每次执行与图表写入唯一UUID的runs子目录，终端打印实际输出位置。旧制作测试和以下历史命令属于课程工作项目；读者默认路线采用包根Notebook及其断言。可选历史数据遵守读者包的[数据契约](../../../../editions/zh/OPTIONAL_DATA.md)，本批未重跑。
+Notebook 调用随包共享实现；默认不读取未随包提供的 French 数据，也不下载数据。每次执行与图表写入唯一 UUID 的 `runs/` 子目录，终端打印实际输出位置。读者默认路线采用包根 Notebook 及其断言。可选历史数据遵守读者包的[数据契约](../../../../editions/zh/OPTIONAL_DATA.md)。
 
-I3包中没有历史code/ch08_regression.py；默认Notebook和regression_tools确实随包提供，不应为恢复历史路径改动I3。
+读者包不含历史版 `code/ch08_regression.py`，默认入口是随包提供的 Notebook 和 `regression_tools`。
 
 ### 历史课程根路线
 
-实现集中在 [`regression_tools.py`](../../../../src/quant_course/regression_tools.py)，包括时间索引与特征校验、`fit_ols_with_robust_covariance`、固定种子模拟器 `simulate_capm_like_data`、训练集内正则化选择器 `select_regularized_models`。封装要求特征和因变量使用完全相同的唯一、升序、时区感知时间索引；输入必须是有限实数，不静默丢弃或填补缺失；加入截距后检查满秩。HAC 最大滞后须小于样本数。本批修订的共用实现候选还以设计矩阵左奇异向量的行平方和计算杠杆，用机器精度乘最大设计维数识别无法与1区分的杠杆值，并明确拒绝HC3分母边界；可计算的高杠杆样本不按宽泛的默认近似相等规则拒绝。此修订供后续双语装配；冻结接受I3的旧模块未回写，输入检查仍不等于推断有效性证书。该教学封装要求时间戳的实际经过间隔相等，拒绝缺失期、事件不等距或不等月长标签直接压成等距行；复数输入也明确拒绝。日历月度、交易日时间或事件时间的实证任务，必须先定义观测时间尺度并使用对应实现，不能补造零收益来通过检查。
+实现集中在 [`regression_tools.py`](../../../../src/quant_course/regression_tools.py)，包括时间索引与特征校验、`fit_ols_with_robust_covariance`、固定种子模拟器 `simulate_capm_like_data`、训练集内正则化选择器 `select_regularized_models`。封装要求特征和因变量使用完全相同的唯一、升序、时区感知时间索引；输入必须是有限实数，不静默丢弃或填补缺失；加入截距后检查满秩。HAC 最大滞后须小于样本数。HC3 修正项在杠杆等于 1 时因分母为零而无定义；低于 1 的高杠杆值本身并不构成计算失败。输入检查仍不等于推断有效性证书。该教学封装要求时间戳的实际经过间隔相等，拒绝缺失期、事件不等距或不等月长标签直接压成等距行；复数输入也明确拒绝。日历月度、交易日时间或事件时间的实证任务，必须先定义观测时间尺度并使用对应实现，不能补造零收益来通过检查。
 
 可在项目根目录独立执行完整样例与作图：
 
@@ -362,7 +362,7 @@ for name, result in (("classical", fit.classical), ("HC3", fit.hc3), ("HAC(5)", 
 
 ## 11. Real Market Example
 
-本章不报告真实市场回归，也不把构造数据称为经验 CAPM 检验。Ken French 的真实 10 Industry 月收益缓存已由课程根代理准备，数值实证安排在第 15 章与项目 2；本章不重复下载或估计。Sharpe 的 CAPM 原始论文给出均衡理论背景，但不是这份模拟结果的证据。若后续将真实收益加入本章，应另行给出下载 URL、快照日期、样本区间、频率、单位、风险利率和市场代理定义、版本、许可边界及 SHA-256，并把数据清洗与估计结果和此构造例子分开报告。
+本章不报告真实市场回归，也不把构造数据称为经验 CAPM 检验。Ken French 的真实 10 Industry 月收益仅用于第 15 章与项目 2 的数值实证；本章不重复下载或估计。Sharpe 的 CAPM 原始论文给出均衡理论背景，但不是这份模拟结果的证据。若后续将真实收益加入本章，应另行给出下载 URL、快照日期、样本区间、频率、单位、风险利率和市场代理定义、版本、许可边界及 SHA-256，并把数据清洗与估计结果和此构造例子分开报告。
 
 ## 12. Common Mistakes
 

@@ -441,7 +441,7 @@ X=\begin{bmatrix}1&2\\2&4\\3&6\end{bmatrix},\qquad
 
 ## 9. Python Implementation
 
-### 默认读者包入口（承接接受I3）
+### 默认读者包入口（承接随包）
 
 从[读者安装说明](../../../../editions/zh/README.md)建立环境，在读者包根运行：
 
@@ -449,7 +449,7 @@ X=\begin{bmatrix}1&2\\2&4\\3&6\end{bmatrix},\qquad
 .venv/bin/python run_notebook.py notebooks/ch05_linear_algebra.ipynb
 ```
 
-默认Notebook调用随包共享实现，不读取未随包提供的French数据、不下载数据；新运行和图写入唯一runs子目录。读者CLI使用UUID目录并拒绝覆盖。未随包提供的旧测试位置只是原制作验收记录；读者使用Notebook内断言。French输入仅按[可选数据契约](../../../../editions/zh/OPTIONAL_DATA.md)提供，本批未重跑。下面保留原课程根脚本路线，与读者包入口分别使用各自环境。
+默认 Notebook 调用随包共享实现，不读取未随包提供的 French 数据，也不下载数据；新运行和图写入唯一 `runs/` 子目录。读者 CLI 使用 UUID 目录并避免覆盖已有结果。Notebook 内的断言用于核对构造示例；French 输入仅按[可选数据契约](../../../../editions/zh/OPTIONAL_DATA.md)提供。
 
 
 共享[PCA实现](../../../../src/quant_course/math_tools.py)只接收训练矩阵，返回训练均值、按行存储的成分方向、解释方差、方差比与训练得分。输入至少两行一列、全为有限实数；不自行填NaN或标准化；全体列总方差为零时明确报错。实用脚本为[code/ch05_linear_algebra.py](../../../../code/ch05_linear_algebra.py)，执行Notebook为[ch05_linear_algebra.ipynb](../../../../notebooks/ch05_linear_algebra.ipynb)。先按[环境说明](../../../../editions/zh/README.md)安装本地项目，然后在课程根目录运行：
@@ -830,7 +830,7 @@ print(first, second)
 
 评分10分：经济命名与比较2分，版本时间2分，训练与样本外2分，尺度及稳定性2分，投资约束/费用与明确反证2分。只写“PCA降维所以模型更好”不给方法分。
 
-### 18.4 本轮新增题完整解答
+### 18.4 题目完整解答
 
 **5-N01解答。** \(X\)是\(2\times2\)，行表示两期、列按A和B排列；\(w\)是\(2\times1\)，记录区间开始时的两项权重；\(Xw\)是\(2\times1\)，逐期组合收益。第一期内积为\(0.6\times0.02+0.4\times(-0.01)=0.008\)，第二期为\(0.6\times(-0.03)+0.4\times0.04=-0.002\)，所以\(Xw=(0.008,-0.002)^\top\)。\(w^\top R_1\)是\(1\times1\)标量0.008。权重和收益都无量纲；同一期收益的协方差单位是收益平方。若权重是在收益发生后才选择，乘积会带入未来信息。
 
@@ -882,7 +882,7 @@ assert np.allclose((returns * weights).sum(axis=0), [-0.006, 0.012])
 
 ## 20. References
 
-本章数学推导和小例子为原创教学表达，来源用于核对课程范围与技术定义；不是对某本教材逐页改写。核验日期为2026-10-05，具体读取范围与边界见[source_notes.md](source_notes.md)。
+本章数学推导和小例子为原创教学表达，来源用于核对课程范围与技术定义；不是对某本教材逐页改写。来源与适用边界见[source_notes.md](source_notes.md)。
 
 - **MIT_LA / MIT_LA_SYLL**：[MIT OCW 18.06 Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/)、[Syllabus](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/pages/syllabus/)。课程范围包括线性方程、向量空间、正交、特征值与正定矩阵；本章未声称逐份读取视频和讲义。
 - **NP_SVD**：[numpy.linalg.svd](https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html)。核对分解、紧凑形状、奇异值排序及重构关系。

@@ -271,7 +271,7 @@ assert np.allclose(wrong_contributions.sum(axis=1), [0.00, 0.02])
 
 ### Default Entry in the Accepted Reader Package
 
-This sample carries forward the shared implementation of the accepted I3 reader. Create the environment following the [reader installation instructions](../../../../editions/en/README.md), then run from the reader-package root:
+This sample carries forward the shared implementation of the reader. Create the environment following the [reader installation instructions](../../../../editions/en/README.md), then run from the reader-package root:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch02_python.ipynb
@@ -885,7 +885,7 @@ The retained rows are A/date2/0.02 and B/date2/−0.01. Derived values are 2 and
 
 ## 20. References and Reading Boundaries
 
-Specific pages, inherited verification dates and reading limits are recorded in [Chinese source audit record](../../../zh/chapters/ch02/source_notes.md). NUMPY, PANDAS, POLARS and SCIPY source keys appear in the course [references.md](../../../../references.md). The following official materials support terminology and API behavior; the market example uses the French official data page and the recorded local snapshot.
+Additional references are listed in [chapter source notes](../../../zh/chapters/ch02/source_notes.md). NUMPY, PANDAS, POLARS and SCIPY source keys appear in the course [references.md](../../../../references.md). The following official materials support terminology and API behavior; the market example uses the French official data page and the recorded local snapshot.
 
 - Python documentation: control flow, exceptions, modules, hints, venv and floating-point arithmetic.
 - NumPy User Guide: arrays and broadcasting.

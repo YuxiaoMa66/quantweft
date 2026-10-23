@@ -3,16 +3,16 @@
 \color{qink}
 
 
-**Package note.** Run instructions in the engineering document apply to the final, complete course package. This Markdown-only candidate does not include runnable course entrypoints. Links into `outputs/` identify read-only I3 sources; they are not command working directories. Final package navigation will be mapped during integration.
+This page describes the study design and its reader route. The engineering example is documented separately; links into `outputs/` identify read-only packaged results where noted.
 
-This reader edition was added on 2026-10-14. The research question concerns the paired net monthly return difference between industry momentum strategy M0 and EW10 under the fixed revised French ten-industry history, hypothetical monthly allocations, and an all-in assumed cost. The A10-A design received limited acceptance, and the A10-A.1 v2 execution protocol received technical acceptance; G02 (dates) and G04 (statistical and cost conventions) are closed. G01 (the actual subject, use, and applicable rights evidence) remains unknown; G05 has not authorized A10-B, so execution is blocked. Historical `available` / `ingested` / `revision` times remain unknown. `full_preregistration`, `market_verified`, and `execution_authorized` are all `false`. Raw redistribution is `not_requested`, which does not mean `granted`. The historical data have been exposed and are not a blind holdout.
+The study compares paired net monthly returns for industry-momentum M0 and EW10 under the fixed revised French ten-industry history, hypothetical monthly allocations, and an all-in assumed cost. Historical `available`, `ingested`, and `revision` times remain unknown; the historical data have been exposed and are not a blind holdout. The applicable data subject, use, and rights remain unknown, raw redistribution has not been authorized, and no real-market execution has been performed.
 
 ## Reading order and prerequisites
 
 \color{qink}
 
 
-Read [Research Question, Sources, and Prior Exposure](RESEARCH_DESIGN.md), then the [Monthly Return Data Dictionary](data_dictionary_monthly.md) and [Time and Label Contract](TIME_CONTRACT.md), then the [Full Mathematical Protocol](PROTOCOL.md). Finally, follow the [18-item report guide](research_report/REPORT_GUIDE.md) while completing the [report template](research_report/report_template.md). The [read-only I3 source map](../../../capstone/accepted_source_map.json) records source hashes, versions, and reader destinations; readers do not need production QA to understand this protocol.
+Read [Research Question, Sources, and Prior Exposure](RESEARCH_DESIGN.md), then the [Monthly Return Data Dictionary](data_dictionary_monthly.md) and [Time and Label Contract](TIME_CONTRACT.md), then the [Full Mathematical Protocol](PROTOCOL.md). Finally, follow the [18-item report guide](research_report/REPORT_GUIDE.md) while completing the [report template](research_report/report_template.md). The [source metadata](../../../capstone/accepted_source_map.json) lists input identity, snapshot dates, versions, hashes, and units.
 
 Prerequisites by topic: Chapters 3 and 11 cover data sources and compounding; Chapter 15 covers RF / FF3 attribution; Chapters 22–25 cover hypotheses and signals; Chapters 29 and 31–33 cover costs, time, and inference; Chapters 35–36 cover cost units and execution boundaries; Chapter 38 covers label maturity; Chapter 45 covers identity, status, and recovery. Projects P1–P3 show historical statistics and benchmarks, P4 shows constructed costs, and P6 shows prediction, labels, and unresolved real-research boundaries. Direct links to the current English chapter sources: [Chapter 3](../../../course/en/chapters/ch03/content.md), [Chapter 11](../../../course/en/chapters/ch11/content.md), [Chapter 15](../../../course/en/chapters/ch15/content.md), [Chapter 22](../../../course/en/chapters/ch22/content.md), [Chapter 23](../../../course/en/chapters/ch23/content.md), [Chapter 24](../../../course/en/chapters/ch24/content.md), [Chapter 25](../../../course/en/chapters/ch25/content.md), [Chapter 29](../../../course/en/chapters/ch29/content.md), [Chapter 31](../../../course/en/chapters/ch31/content.md), [Chapter 32](../../../course/en/chapters/ch32/content.md), [Chapter 33](../../../course/en/chapters/ch33/content.md), [Chapter 35](../../../course/en/chapters/ch35/content.md), [Chapter 36](../../../course/en/chapters/ch36/content.md), [Chapter 38](../../../course/en/chapters/ch38/content.md), and [Chapter 45](../../../course/en/chapters/ch45/content.md). Return through the read-only [body index](../README.md), [Loom index](../../../loom/README.md), and [P1](../../../projects/project01/README.md), [P2](../../../projects/project02/README.md), [P3](../../../projects/project03/README.md), [P4](../../../projects/project04/README.md), and [P6](../../../projects/project06/README.md).
 
@@ -29,7 +29,7 @@ Prerequisites by topic: Chapters 3 and 11 cover data sources and compounding; Ch
 \color{qink}
 
 
-The French parameter file has SHA-256 `d49ac62cff7d6496e478211921d507fe7216c18b0e4f13b57e48fc893eb12505`. Its candidate gate fields retain their source identity. The original main conversation closed G02 and G04 on 2026-10-13. Do not treat old `pending` fields as current open items, and do not use those closures to change `execution_authorized` to `true`. Full source hashes are recorded in the read-only source map.
+The French parameter file defines the dates, statistical conventions, and costs. Historical availability, ingestion, and revision times remain unknown, so the configuration is a design to test, not a completed market study.
 
 ## The bridge from engineering to research
 

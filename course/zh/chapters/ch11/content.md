@@ -1,6 +1,6 @@
 # 第11章 — 收益率与复利（Returns and Compounding）
 
-<!-- C5 draft candidate; pending independent review. -->
+
 
 > 主线：先确定账户里发生了什么，再决定应计算哪一种收益。先修第2章Python、第6章概率和第10章市场工具。总收益、简单收益、对数收益、均值、增长率和夏普比率回答不同问题；本章从财富递推开始，推到同一区间的金融数据计算。所有构造案例明确标注，真实案例使用冻结的French月度发布快照。
 
@@ -274,13 +274,13 @@ g_{p,t}=\log\left(1+\sum_iw_iR_{i,t}\right).
 
 ### 本读者版的默认运行入口
 
-从接受I3读者包根目录，按其[环境说明](../../../../editions/zh/README.md)建立独立环境后运行：
+从随包读者包根目录，按其[环境说明](../../../../editions/zh/README.md)建立独立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch11_returns.ipynb
 ```
 
-Notebook调用随包共用实现。第11章默认执行构造财富路径；French历史读取、绘图与缓存核对保留为被跳过的说明单元，不是本次默认执行。运行器将新内核执行记录写入唯一的runs/execution_*目录，Notebook新生成的图表写入另一唯一UUID子目录；终端打印实际位置。未随包提供的French数据不默认读取，也不下载。下面的旧课程制作测试与历史CLI按课程工作根说明；读者采用上方Notebook内断言。可选历史数据另遵守[数据契约](../../../../editions/zh/OPTIONAL_DATA.md)，本批未重跑。
+Notebook 调用随包共享实现。第11章默认运行构造财富路径，不读取或下载未随包提供的 French 历史数据。运行器将新内核执行记录写入唯一 `runs/execution_*` 目录，Notebook 新生成的图表写入另一唯一 UUID 子目录；终端打印实际位置。读者采用上方 Notebook 内断言。可选历史数据须遵守[数据契约](../../../../editions/zh/OPTIONAL_DATA.md)。
 
 ### 历史课程工作根与原实现
 
@@ -549,6 +549,6 @@ print(result)
 
 ## 20. References
 
-外部来源实际读取范围见 [source_notes.md](source_notes.md) 与 来源/度量准备契约。复利来源为MIT官方课程，风险聚合式由本章协方差展开独立推导，不假称从未读的Lo全文逐式引用。
+外部来源与引用边界见 [source_notes.md](source_notes.md) 与 来源/度量准备契约。复利来源为MIT官方课程，风险聚合式由本章协方差展开独立推导，不假称从未读的Lo全文逐式引用。
 
 真实数据版本、下载时间、单位与SHA-256分别见 行业manifest、FF3/FF5 manifest；可复核数值为 实际指标输出。财富及图是原创计算，未复制来源图表，未凭公开可下载推断所有数据的外部分发许可。

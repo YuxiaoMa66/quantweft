@@ -39,13 +39,6 @@ Notebook 分别拟合 CAPM（Mkt-RF）、FF3（Mkt-RF、SMB、HML）和 FF5（Mk
 历史报告不是因果研究、实时 PIT 检验、事前预测、交易优势或可投资产品评价。French 原始、解压和处理数据没有随读者包提供；报告中的下载日期和 SHA-256 用于识别历史输入，不能替代数据授权。公开下载不等于可以再分发。G01 权利、主体和用途仍未知；G05 未授权 A10-B，历史市场数据执行仍受阻。成本、融资和借券对现有报告不适用，因为没有信号、仓位、订单、成交或交易账本；这不表示成本为零。
 
 
-## 历史课程制作入口
+## 历史结果
 
-以下只记录课程工作根原制作约定，不是随包默认运行要求；本批未重跑。历史状态为verified，当前双语候选为draft，待独立验收。原CLI由脚本路径定位课程根，输入哈希/CRC核验后写历史outputs及五幅图，不能用新构造输出覆盖。
-
-```bash
-.venv/bin/python projects/project02/run_project02.py
-.venv/bin/python -m pytest tests/test_project02_analysis.py -q
-```
-
-原工作Notebook曾使用`quant-course-venv`内核调用同一分析入口；接受I3默认改用包根`run_notebook.py`的新内核构造路线，未随包旧测试不要求读者补回。
+历史报告与默认构造Notebook使用不同的输入和因子序列；历史数据身份见[data manifest](data_manifest.json)，结果与限制见[研究报告](research_report/report.md)。

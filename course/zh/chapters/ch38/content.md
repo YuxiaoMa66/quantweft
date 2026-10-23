@@ -13,7 +13,7 @@
 6. 分开报告预测层（$R^2_{\text{OS}}$、IC、校准斜率）与组合层（成本后收益，第39章与 Project6）。
 7. 用三组可运行反例量化错误做法的代价：随机打乱 K 折、全样本特征选择、把标签起点设在信号收盘。
 
-完成条件：第15–17节可独立完成；能追溯第8–10节冻结输入与输出，并解释第9节新运行与冻结回放的身份边界；本批不运行或重训。
+完成条件：第15–17节可独立完成；能追溯第8–10节冻结输入与输出，并解释第9节新运行与冻结回放的身份边界；本章描述的历史缓存不代表新运行或重训结果。
 
 ## 2. 为什么 Quant 需要它
 
@@ -293,7 +293,7 @@ $$
 
 缺失值策略：训练行特征或标签缺失则丢弃并计数；测试行特征缺失则不预测并计数；出现 `inf` 直接报错。
 
-章节脚本：`code/ch38_ml_pipeline.py`。历史工作脚本的默认图路径可能覆盖章图，不应直接运行来验证冻结数字。接受I3读者Notebook为fresh构造计算，写入唯一运行目录并生成一张标签时间线图；其英文语言层留BIL23。本批未执行CLI、Notebook或课程API。
+章节脚本：`code/ch38_ml_pipeline.py`。历史工作脚本的默认图路径可能覆盖章图，不应直接运行来验证冻结数字。读者包 Notebook 会新算构造数据，在唯一运行目录写入一张标签时间线图。CLI、Notebook 和课程 API 均未运行。
 
 种子 3801–3803；输出 `ch38_results.json`（拒绝覆盖）和三张图。第8.2、8.3节的“错误”做法只用于度量偏差，代码中标注 `WRONG`，从不用于选择模型。测试：`tests/test_ml_pipeline.py`（22 项，含逐行边界、未来扰动、测试标签扰动、缺失值和与第29章账本联用）。
 
@@ -505,7 +505,7 @@ for j in range(9):
 assert labels.loc[(close.index[9:], slice(None)), 'y'].isna().all()
 ```
 
-再分别调用 `execution_lag=0`、`horizon=True`，以及价格单元改0/inf的副本，用 `try/except ValueError` 核对拒绝输入；若没报错就显式 `raise AssertionError`。这些是读者参考方法，本批未运行课程API；既有测试位置为 `tests/test_ml_pipeline.py::test_01_hand_computed_labels`。
+再分别调用 `execution_lag=0`、`horizon=True`，以及价格单元改0/inf的副本，用 `try/except ValueError` 核对拒绝输入；若没报错就显式 `raise AssertionError`。这些是读者参考方法；课程 API 未运行；既有测试位置为 `tests/test_ml_pipeline.py::test_01_hand_computed_labels`。
 
 ### 38-P02
 参考实现：`code/ch38_ml_pipeline.py::selection_leak`；本书运行全样本选择 $+0.617\%$ / IC 0.0476，Pipeline 内 $-1.214\%$ / IC $-0.0101$。完整方法：先固定同一组日期折；错误支路在 `X_all,y_all` 上拟合 `SelectKBest`，再逐折训练；正确支路每折建立 `Pipeline([StandardScaler, SelectKBest, Ridge])` 并仅向fit传入训练行。两支路都把预测写回原索引，最后在同一有效评价集上算指标。扰动检查须固定原折、特征与内层规则，仅替换该折外层测试标签：
@@ -519,10 +519,10 @@ p2 = fit_training_only_pipeline(X, changed, fold).predict(X.iloc[fold.test_rows]
 np.testing.assert_array_equal(p1, p2)
 ```
 
-这里 `fit_training_only_pipeline` 表示上述每折训练内选择函数，内部只读取 `X.iloc[fold.train_rows]` 与对应非缺失训练标签；不能把测试标签用于选k或调参。已有完整工程参考为 `selection_leak` 和 `tests/test_ml_pipeline.py::test_host_predictions_do_not_depend_on_test_labels`；本批未重算模拟。
+这里 `fit_training_only_pipeline` 表示上述每折训练内选择函数，内部只读取 `X.iloc[fold.train_rows]` 与对应非缺失训练标签；不能把测试标签用于选k或调参。已有完整工程参考为 `selection_leak` 和 `tests/test_ml_pipeline.py::test_host_predictions_do_not_depend_on_test_labels`；此处未重算模拟。
 
 ### 38-P03
-承接I3已应用校订：用 `rows=np.repeat(np.arange(30),4)[1:]` 删去date0一行，得到119行；`TimeSeriesSplit(n_splits=3,gap=20)` 首折末训练行11对应原日期3，首测试行32对应原日期8。$\ell=1,h=5$ 时末训练标签到日期9才结束，拟合日8尚未知，因此满足第二种失败条件。每日期最多4行、gap20不会让同一日期同时跨训练和测试，不能虚构第一种失败。
+校订后的方法示例如下：用 `rows=np.repeat(np.arange(30),4)[1:]` 删去date0一行，得到119行；`TimeSeriesSplit(n_splits=3,gap=20)` 首折末训练行11对应原日期3，首测试行32对应原日期8。$\ell=1,h=5$ 时末训练标签到日期9才结束，拟合日8尚未知，因此满足第二种失败条件。每日期最多4行、gap20不会让同一日期同时跨训练和测试，不能虚构第一种失败。
 
 ```python
 rows = np.repeat(np.arange(30), 4)[1:]
@@ -560,4 +560,4 @@ assert rows[tr[-1]] + 1 + 5 > rows[te[0]]
 - `SK_CALIBRATION`：scikit-learn Probability calibration 用户指南。支持第5节可靠性图的分类版本。
 - `CH38_CT2010`：Cawley, G. C., Talbot, N. L. C. (2010). On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation. JMLR 11, 2079–2107。支持第5节“调参与评价分开”。
 - `CH38_PRADO2018`：López de Prado, M. (2018). Advances in Financial Machine Learning. Wiley. 第7章目录。只作延伸阅读。
-- 第31章 `quant_course.validation`（`intervals_overlap`、`purged_kfold_splits`、`embargo`）与第23章 `quant_course.factor_research`（`ic_series`、`ic_summary`）。核读记录见 `course/zh/chapters/ch38/source_notes.md`。
+- 第31章 `quant_course.validation`（`intervals_overlap`、`purged_kfold_splits`、`embargo`）与第23章 `quant_course.factor_research`（`ic_series`、`ic_summary`）。参考资料见 `course/zh/chapters/ch38/source_notes.md`。

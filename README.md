@@ -77,7 +77,7 @@ python3 -m venv .venv
 
 
 
-本仓库继承 2026-10-19 已接受的本地正式双语版。教材与离线工程的既有验证范围见[本地验证说明](editions/zh/LOCAL_VALIDATION.md)，本次首页设计不代表重新运行课程或研究。
+默认示例使用构造数据。运行环境与兼容性见[运行说明](editions/zh/LOCAL_VALIDATION.md)，真实数据与项目限制见[数据说明](editions/zh/REMAINING_ITEMS.md)。
 
 默认路线使用构造数据，不分发 French 市场数据，也未执行真实市场研究。历史结果与未解决的证据缺口按原记录保留，详见[后续事项](editions/zh/REMAINING_ITEMS.md)与[可选数据契约](editions/zh/OPTIONAL_DATA.md)。
 

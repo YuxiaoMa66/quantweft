@@ -454,7 +454,7 @@ d与v_corr均为月收益平方；相关情形的月波动为 \(\sqrt{v_{corr}}\
 
 ### 本读者版的默认运行入口
 
-从接受I3读者包根目录，按其[环境说明](../../../../editions/zh/README.md)建立环境后运行：
+从随包读者包根目录，按其[环境说明](../../../../editions/zh/README.md)建立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch15_factor_models.ipynb
@@ -462,9 +462,9 @@ d与v_corr均为月收益平方；相关情形的月波动为 \(\sqrt{v_{corr}}\
 
 默认种子20261015生成2010-01起120个月的五列构造因子（各列正态标准差0.025）、RF=0.001，以及RF+0.002+1.0×Mkt-RF+0.3×HML加正态标准差0.01误差的单个CONSTRUCTED资产。CAPM、FF3、FF5使用同一基础因子列，故本次构造模型严格嵌套。实际`build_summary(..., constructed=True)`核三个模型的ddof=1样本方差恒等式及HAC3/6/12点估计不变；输出系数CSV、摘要JSON和三张新图，写入`runs/ch15_factor_models_<uuid>/`。CSV显式含`model`和`coefficient`列。新图分别为月alpha及HAC区间、FF5载荷及区间、月度项的算术累加归因；图题中的资产名来自CONSTRUCTED资产。`RUN_FRENCH=False`使默认路径不装载French历史快照。本章第10–11节仍展示原NoDur历史图表。
 
-运行器另在唯一`runs/execution_*`目录保存内核执行记录；它与Notebook打印的本章UUID方法目录用途不同。构造运行核对计算接口，不形成市场研究结果、PIT预测或扣费策略收益。第14章历史NoDur使用HAC5，第15章和项目2历史主表使用HAC6，点估计与推断设置须分别识别，不能为表面一致改写区间。本批仅核实际源代码，未执行这些Notebook或重跑历史回归。
+运行器另在唯一`runs/execution_*`目录保存内核执行记录；它与Notebook打印的本章UUID方法目录用途不同。构造运行核对计算接口，不形成市场研究结果、PIT预测或扣费策略收益。第14章历史NoDur使用HAC5，第15章和项目2历史主表使用HAC6，点估计与推断设置须分别识别，不能为表面一致改写区间。本章保留的是历史估计值，不报告重新运行的历史回归结果。
 
-第15章I3 Notebook第4、18格的旧Markdown仍描述官方快照的共享列差异；该描述只适用于历史French案例，不能用来说明当前共同构造列。第14、15章Notebook的英文Markdown及这两格叙述校正归BIL23；本批不改章Notebook。 下方CLI与旧制作测试按课程工作根理解；未随读者包提供的制作测试不要求补回。
+第15章packaged Notebook第4、18格的旧Markdown仍描述官方快照的共享列差异；该描述只适用于历史French案例，不能用来说明当前共同构造列。下方CLI与旧制作测试按课程工作根理解；未随读者包提供的制作测试不要求补回。
 
 ### 历史课程工作根与原实现
 
@@ -845,4 +845,4 @@ for col, difference in {"Mkt-RF": 0.0003, "SMB": 0.0137, "HML": 0.0, "RF": 0.0}.
 - Kenneth R. French Data Library：[三因子](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_factors.html)，[五因子](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_5_factors_2x3.html)。方法页与快照版本分开核验。
 - statsmodels：[稳健协方差 API](https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.RegressionResults.get_robustcov_results.html)。软件参数支持可复算性，不替代统计假设。
 
-完整来源读取边界见 [source_notes.md](source_notes.md)。本轮修订前版本的正文、代码、Notebook、图和同章答案接受范围见 历史根验收记录；C7新增教学内容待原主独立验收。
+完整来源读取边界见 [source_notes.md](source_notes.md)。

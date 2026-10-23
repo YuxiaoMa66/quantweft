@@ -297,7 +297,7 @@ Core module: `src/quant_course/ml_pipeline.py` (shared by Chapter 39 and Project
 
 Missing-data policy: Drop and count training rows with missing features or labels; do not predict and count test rows with missing features; raise an error if `inf` occurs.
 
-Chapter script: `code/ch38_ml_pipeline.py`. The historical working script's default figure path may overwrite chapter figures; do not run it to validate the frozen values. The accepted I3 reader Notebook performs fresh constructed calculations, writes to a unique run directory, and generates one label-timeline figure; its English-language layer is deferred to BIL23. This batch did not run the CLI, Notebook, or course API.
+Chapter script: `code/ch38_ml_pipeline.py`. The historical working script's default figure path may overwrite chapter figures; do not run it to validate the frozen values. The reader Notebook performs fresh constructed calculations, writes to a unique run directory, and generates one label-timeline figure; The CLI, Notebook, and course API were not run.
 
 Seeds 3801–3803; outputs `ch38_results.json` (refuses to overwrite) and three figures. The “incorrect” practices in Sections 8.2 and 8.3 are used only to measure bias; the code marks them `WRONG`, and they are never used to select a model. Tests: `tests/test_ml_pipeline.py` (22 cases, including row-by-row boundaries, future-data perturbation, test-label perturbation, missing values, and integration with the Chapter 29 ledger).
 
@@ -548,7 +548,7 @@ Here, `fit_training_only_pipeline` means the per-fold training-only selection fu
 
 ### 38-P03
 
-Following the correction already applied in I3: use `rows=np.repeat(np.arange(30),4)[1:]` to remove one row from date 0, leaving 119 rows. In the first fold of `TimeSeriesSplit(n_splits=3,gap=20)`, the final training row is index 11, from original date 3; the first test row is index 32, from original date 8. With $\ell=1,h=5$, the last training label does not end until date 9, so it is unknown at fit date 8 and satisfies the second failure criterion. With at most four rows per date, `gap=20` does not put the same date on both sides; do not invent that as the failure.
+For the 30-date example with four rows per date, use `rows=np.repeat(np.arange(30),4)[1:]` to remove one row from date 0, leaving 119 rows. In the first fold of `TimeSeriesSplit(n_splits=3,gap=20)`, the final training row is index 11, from original date 3; the first test row is index 32, from original date 8. With $\ell=1,h=5$, the last training label does not end until date 9, so it is unknown at fit date 8 and satisfies the second failure criterion. With at most four rows per date, `gap=20` does not put the same date on both sides; do not invent that as the failure.
 
 ```python
 rows = np.repeat(np.arange(30), 4)[1:]
@@ -588,4 +588,4 @@ First purge true label overlap. A remaining future training row has finite retur
 - `SK_CALIBRATION`: scikit-learn user guide to probability calibration. Supports the classification version of reliability diagrams in Section 5.
 - `CH38_CT2010`: Cawley, G. C., Talbot, N. L. C. (2010). “On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation.” *JMLR* 11, 2079–2107. Supports separating tuning from evaluation in Section 5.
 - `CH38_PRADO2018`: López de Prado, M. (2018). *Advances in Financial Machine Learning*. Wiley. Chapter 7 table of contents. For further reading only.
-- Chapter 31, `quant_course.validation` (`intervals_overlap`, `purged_kfold_splits`, `embargo`), and Chapter 23, `quant_course.factor_research` (`ic_series`, `ic_summary`). See `course/zh/chapters/ch38/source_notes.md` for the reading record.
+- Chapter 31, `quant_course.validation` (`intervals_overlap`, `purged_kfold_splits`, `embargo`), and Chapter 23, `quant_course.factor_research` (`ic_series`, `ic_summary`). See `course/zh/chapters/ch38/source_notes.md` for references.

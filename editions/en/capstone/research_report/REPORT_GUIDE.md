@@ -10,7 +10,7 @@ After reading this guide, you should be able to connect the research question th
 \color{qink}
 
 
-The question, exposure, historical source-review scope, and metadata for S01/S07/S08/S09 are incorporated in [Research Design](../RESEARCH_DESIGN.md) and the [read-only I3 source map](../../../../capstone/accepted_source_map.json). S02/S05 refer to the [Protocol](../PROTOCOL.md) and [French protocol config in the read-only I3 source](../../../../capstone/configs/french_protocol_v2.json); S03 is the [Time Contract](../TIME_CONTRACT.md), and S04 is the [Monthly-Return Dictionary](../data_dictionary_monthly.md). S06 is the accepted source mapping for this guide's 18-item structure. R/P refer to the original-main acceptance decisions and current pending status, available from the README and source map. These codes locate sources; readers do not need to consult QA outside the package.
+S01/S07/S08/S09 describe the question, exposure, historical review scope, and metadata in [Research Design](../RESEARCH_DESIGN.md) and [source metadata](../../../../capstone/accepted_source_map.json). S02/S05 refer to the [Protocol](../PROTOCOL.md) and [French protocol config](../../../../capstone/configs/french_protocol_v2.json); S03 is the [Time Contract](../TIME_CONTRACT.md), and S04 is the [Monthly-Return Dictionary](../data_dictionary_monthly.md). S06 describes this guide's 18-item structure. These codes locate the study inputs and outputs.
 
 <a id="item-1"></a>
 

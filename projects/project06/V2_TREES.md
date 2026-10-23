@@ -1,8 +1,8 @@
 # Project 6 v2 教学指南：树模型、稳定性、消融与 PCA+Ridge
 
-**Author:** Yuxiao Ma · **Revision date:** 2026-10-16.
 
-**候选状态：** 本指南延伸 BIL18 已限定范围接受、待正式整合的 A8-A 基础层。A8-B 的构造数据扩展已有独立限定范围接受入口，但本批双语教学材料仍待独立审阅。真实数据研究状态仍为 **blocked**，完整 Project 6 仍未 verified。这里的数字是指定生成机制下的教学证据，不是市场证据。
+
+本指南介绍A8-A基础管线上的树/PCA构造数据扩展。结果用于说明指定生成机制下的方法，不是市场证据；真实数据研究因数据与权利缺口尚未进行。
 
 本指南把 P6 的线性基线、树模型、PCA、组合和推断口径连成一条可复核的研究流程。细表和冻结历史限制见 [基础管线报告](research_report/README.md) 与 [v2 研究报告](research_report/v2_trees.md)；同项目全部题目和解答见 [solutions.md](solutions.md)。
 
@@ -70,18 +70,15 @@ PCA 每折选择的成分数为 30（10 折）、5（5 折）、15（1 折）。
 
 ## 7. Notebook 回放与真实数据边界
 
-I3 的 P6v2 Notebook 包含 9 个单元格、其中 4 个代码单元格；按固定 fixture 回放两份历史摘要、日期基数及历史消融/稳定性展示，并从冻结摘要生成一张新图 `historical_constructed_trees_sharpe.png` 写入 RUN_DIR。冻结输出明确标记 fit 为 SKIPPED。它不重训，不生成新模型结果，也不重新计算完整 CLI。旧版“未验收”banner 是历史文字；A8-B 当前为 limited-scope accepted pending formal integration。BIL19 双语候选仍待独立审阅，整个 P6 仍未 verified。
+P6 v2 Notebook 展示固定摘要、日期基数及历史消融和稳定性结果，不训练模型，也不代表真实数据研究。
 
-真实数据仍 blocked；A10-B 的数据/PIT 状态保持未验证。不得把本章的生成机制结果写成实证、收益承诺或市场 alpha。后续若获准真实数据，必须新建协议版本、核验数据许可与时间点，并把所有已看过的构造结果登记为事前已知；本批没有做这些工作。
+真实数据研究仍受数据来源、权利及历史PIT时点缺口限制。不得把本章的生成机制结果写成实证、收益承诺或市场 alpha。若将来使用真实数据，应先核验许可与时间点；已查看的构造结果属于已曝光信息。
 
-## 8. 本地来源地图
+## 8. 实现与结果文件
 
-- P6 v1 冻结配置：`projects/project06/configs/p06_base_v1.json`；v2 冻结配置：`projects/project06/configs/p06_trees_v2.json`。
 - 实现：`projects/project06/src/p06_pipeline.py`、`projects/project06/src/p06_trees.py`、`src/quant_course/ml_pipeline.py`、`src/quant_course/tree_models.py`。
-- 结果身份与冻结值：`projects/project06/research_report/v2_summary_base.json`、`v2_summary_regime.json`、`v2_ic_date_bases.json`；QA 原始摘要归属 `qa/a8/ch40_ch41_batch/evidence/qa_r1/`。
-- 研究报告：`projects/project06/research_report/README.md`、`projects/project06/research_report/v2_trees.md`。
-- P6 与第40章边界审读：`qa/bilingual_revision/BIL19/preparation/ROOT_READER_NOTES.md`、`qa/bilingual_revision/BIL19/PRE_FREEZE_REVIEW_01.md`。
-- Notebook 沿用已有构造展示，v2 方法与结果边界见[研究报告](research_report/v2_trees.md)；内部接受回执不随读者仓库分发。
+- 冻结结果与日期基数：`fixtures/projects/project06/v2_summary_base.json`、`v2_summary_regime.json`、`v2_ic_date_bases.json`。
+- Notebook uses the packaged constructed displays; methods and evidence limits are described in the [v2 report](research_report/v2_trees.md).
 
 ## 练习：保持同一实验、同一指标口径
 

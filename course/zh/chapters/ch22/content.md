@@ -329,7 +329,7 @@ for n, tol in ((10, 0.04), (100, 0.03), (1000, 0.02)):
 print(round(expected_max_standard_normal(32), 3), round(expected_max_standard_normal_exact(32), 3))   # 2.1 2.07
 ```
 
-**默认离线入口与历史实验分开。** 在随书 I3 读者包根目录运行：
+**默认离线入口与历史实验分开。** 在随书 读者包根目录运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch22_research_methodology.ipynb
@@ -362,7 +362,7 @@ NaN策略：账本接受NaN指标并计数；`ic_summary`丢弃NaN日期并记�
 
 **计划（冻结）。** 假设：过去 12-1 收益较高的行业，下个月收益较高（符号为正）。信号：月末 $s$ 用 $s-11$ 至 $s-1$ 共 11 个月的复利收益，不含当月；标签：下一个月 $s+1$ 的简单收益；横截面 10 个行业；主指标：留出样本中每月斯皮尔曼秩相关（Rank IC）均值的 $t$ 统计量（Newey–West 滞后 0）；判据：留出 $t\ge2.0$ 且为正；成本假设 10 bp 每单位换手，只用于多空组合的演示；发现样本到 1999-12，留出样本 2000-01 至 2026-07；尝试预算 24 个变体（回看 1 到 12 个月，跳过 0 或 1 个月）。备注字段写着：这份计划是在读过相关文献、并在前面章节用过同一份数据之后写的，不是盲计划，也没有外部登记。
 
-**结果。** 所有数字由 `code/ch22_research_methodology.py` 产生，并由 `qa/a5/claude/recompute/ch22_recompute.py`（不导入课程代码，用逐月循环和 `scipy.stats.spearmanr`）独立复算，两者一致。
+**结果。** 所有数字由 `code/ch22_research_methodology.py` 产生；独立复算采用逐月循环和 `scipy.stats.spearmanr`，结果一致。
 
 | 变体（回看, 跳过） | 发现月数 | 发现平均 Rank IC | 发现 $t$ | 留出月数 | 留出平均 Rank IC | 留出 $t$ |
 |---|---|---|---|---|---|---|
@@ -608,7 +608,7 @@ print(round(observed, 3), round(n_eff, 2), round((np.abs(z).max(axis=1) > 1.96).
 
 ## 20. 参考文献
 
-引用键与读取范围见 [source_notes.md](source_notes.md)。
+参考资料与链接见 [source_notes.md](source_notes.md)。
 
 - CH22_HLZ2014：Harvey, C. R., Liu, Y., Zhu, H. (2014). “… and the Cross-Section of Expected Returns.” NBER Working Paper 20592。支持第 2、5、6.3、7 节；期刊版 RFS 2016 未读。
 - CH22_DSR2014：Bailey, D. H., López de Prado, M. (2014). “The Deflated Sharpe Ratio.” 作者预印本 2014-07-31 版。支持第 6.5 节式 (1)。

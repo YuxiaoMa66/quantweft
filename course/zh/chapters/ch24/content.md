@@ -171,7 +171,7 @@ HML 是四个价值加权组合收益的算术组合：两个“价值”组合�
 
 ## 8. 数值例题：手算每一步
 
-所有数字由 `hand_examples()` 产生，并在 `qa/a5/claude/recompute/ch24_recompute.py` 里用不同实现复核。公司为教学构造（Orion 与 Lyra 取自第13章，其余为本章构造），不是真实公司。
+所有数字由 `hand_examples()` 产生，并用不同实现独立复核。公司为教学构造（Orion 与 Lyra 取自第13章，其余为本章构造），不是真实公司。
 
 ### 8.1 同一行业两家公司的四种口径（Orion 与 Lyra）
 
@@ -258,13 +258,13 @@ $\Delta=0.9$，$\sigma_u=0.5$：$\mathrm{Var}(a)=(0.45)^2=0.2025$；衰减因子
 | `group_percentile` | 信号表、行业标签（静态或带日期）、最小组大小 | 同日行业内百分位；组内有效资产不足为 NaN；标签缺失为 NaN |
 | `latest_available_values` | 版本长表、月度 `PeriodIndex`、取值列 | 每个月末每个证券最新已知的报告期的最晚版本；要求时区；歧义行报错；月末最后一刻为截止 |
 
-默认离线入口（从 I3 阅读包根目录运行）：
+默认离线入口（从 阅读包根目录运行）：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch24_value_factors.ipynb
 ```
 
-默认 `RUN_FRENCH=False`。展示手算比率、缺失政策、行业排名和PIT版本，并用300家公司×108个月、种子20261031的构造面板演示；只创建章节 `RUN_DIR`，不写CSV/PNG/JSON或生成历史图库。 runner另写 `runs/execution_<stem>_<uuid>/` 的执行副本与状态。Notebook英语语言层及整包路径在BIL23装配；下列为历史完整CLI与测试参考，并非默认离线命令：
+默认 `RUN_FRENCH=False`。展示手算比率、缺失政策、行业排名和PIT版本，并用300家公司×108个月、种子20261031的构造面板演示；只创建章节 `RUN_DIR`，不写CSV/PNG/JSON或生成历史图库。 runner另写 `runs/execution_<stem>_<uuid>/` 的执行副本与状态。下列为历史完整CLI与测试参考，并非默认离线命令：
 
 ```bash
 .venv/bin/python code/ch24_value_factors.py
@@ -514,7 +514,7 @@ print(naive.round(2).to_dict(), fixed.round(2).to_dict())
 
 当前 `signal_contract.json` 是 `p04-prep-0.2`；通用预处理规则是 `frozen_rules.json` 的 `p04-prep-0.1`，两个文件职责不同。七字段为价值三项 `book_to_market`、`earnings_yield`、`ev_to_ebitda_cheapness`，动量一项 `mom_12_1`，质量三项 `gp_a`、`neg_accrual`、`roe_avg`。FCF Yield 是本章教材变量，当前七字段没有实现它；OP 同样不是本层信号。
 
-构造宇宙的 EV 只算 `market_cap + debt - cash`，契约明确将少数权益、优先股、非经营资产设零。这是构造假设，不能把真实公司的缺字段当零；真实使用须取得完整 PIT 桥项、统一币种尺度并核对完整桥。旧机器契约澄清已关闭，见 `qa/a5/codex_followup_fixes/acceptance.md`；本次只把已关闭边界教清楚。
+构造宇宙的 EV 只算 `market_cap + debt - cash`，契约明确将少数权益、优先股、非经营资产设零。这是构造假设，不能把真实公司的缺字段当零；真实使用须取得完整 PIT 桥项、统一币种尺度并核对完整桥。
 
 三章共用一次以下接口表。信号层中性化与持仓层投影分开：前者改变信号，后者改变权重，前者不能保证后者可交易或中性。
 
@@ -672,7 +672,7 @@ print(round(raw, 4), round(inside, 4))
 
 ## 20. 参考资料
 
-引用键与读取范围见 [source_notes.md](source_notes.md)。
+参考资料与链接见 [source_notes.md](source_notes.md)。
 
 - CH24_FF_FACTORS_PAGE：Kenneth R. French Data Library，“Description of Fama/French Factors”。支持 HML 算术与 t−1 财年、正账面权益、7 月形成。
 - CH24_FF5_PAGE：同库“Description of Fama/French 5 Factors (2x3)”。

@@ -20,7 +20,7 @@
 $$R_{\mathrm{purge}}=\{2,3,4,5,9,10,11,12\},$$
 $$R_{\mathrm{embargo}}=\{13,14\},\qquad S_{\mathrm{final}}=\{0,1\}.$$
 
-再按第9节默认I3读者路线理解代码、完成本章题答。保存的五种子/历史French结果是继承证据，本次修订不重跑完整CLI、Notebook、runner或历史研究。划分正确也不能单独证明全部数据、执行和特征通道无泄漏。
+再按第 9 节默认读者路线理解代码并完成本章题答。保存的五种子与历史 French 结果是既有记录，并非本章示例的新计算。划分正确也不能单独证明全部数据、执行和特征通道无泄漏。
 
 ---
 
@@ -353,13 +353,13 @@ $$\mathrm{Cov}(Y_t,Y_{t+\ell})=m_2^{h-\ell}m_1^{2\ell}-m_1^{2h}$$
 `walk_forward_splits` 默认 `purge_overlap=True`，必须同时提供与样本数量一致的观测时间 `t` 与标签结束 `e`；缺少时直接报错，不会静默退化成普通时间切分。若为了对照实验明确关闭净化，可传 `purge_overlap=False`，但时间顺序本身不能保证标签已结算。例：`n=15, train_size=6, test_size=3`，若 `e=t+5`，第一折候选训练 0–5、测试 6–8；净化后仅保留训练 0、1。省略区间会遗留训练 2–5 的重叠标签。
 
 
-本章核心算法位于 `src/quant_course/validation.py`。默认从已接受I3读者包根运行：
+本章核心算法位于 `src/quant_course/validation.py`。默认从已随包读者包根运行：
 
 ```bash
 python run_notebook.py notebooks/ch31_model_validation.ipynb
 ```
 
-默认Notebook会新算单种子500日期的四方案、1-NN、净化K折及嵌套构造，不是只读取五种子摘要；French分支默认跳过。Notebook创建唯一 `runs/ch31_model_validation_<uuid>/` 并将图写在该运行目录；runner另存 `runs/execution_<stem>_<uuid>/` 中的执行副本与 `execution.json`，失败亦保留。本次修订没有执行它们。英语Notebook/共享runner的全包装配与冷启动仍待BIL23。以下为代码阅读与独立小例入口，不引导覆盖历史CLI默认输出。
+默认Notebook会新算单种子500日期的四方案、1-NN、净化K折及嵌套构造，不是只读取五种子摘要；French分支默认跳过。Notebook创建唯一 `runs/ch31_model_validation_<uuid>/` 并将图写在该运行目录；runner另存 `runs/execution_<stem>_<uuid>/` 中的执行副本与 `execution.json`，失败亦保留。本章没有报告这些程序的新运行结果。以下为代码阅读与独立小例入口，不引导覆盖历史CLI默认输出。
 
 ### 9.1 区间重叠测试与 Purge / Embargo 基础函数
 
@@ -565,7 +565,7 @@ print("实际内层训练/验证索引:", nested_res["inner_splits_used"])
 
 ## 11. Real Market Example
 
-本节保留历史方法示例，不是本批重新取得或执行的数据研究。French原始、提取及处理文件不随默认I3包提供；默认Notebook跳过该分支，使用权、主体与用途仍须另核，A10-A/A10-A.1不替代G05/A10-B执行授权。
+本节展示历史方法示例，不是新取得的数据或新运行的研究。French原始、提取及处理文件不随默认读者包提供；默认Notebook跳过该分支，使用权、主体与用途仍须另核，研究设计不等于获得真实数据执行授权。
 
 为了展示模型验证在真实市场资产上的表现，我们使用已在工作区中冻结的 Kenneth R. French 10 行业组合月度总收益率数据（1926-07 至 2026-08，共 1202 个月度观测）。
 
@@ -1050,4 +1050,4 @@ $$e_i=\min(t_{\mathrm{profit}},t_{\mathrm{loss}},t_i+h).$$
 2. `SK_PITFALLS`: scikit-learn documentation on "Common pitfalls and recommended practices in machine learning validation". 关于全样本预处理泄漏与特征污染的官方规范。
 3. `PBO`: Bailey, D. H., Borwein, J., López de Prado, M., & Zhu, Q. J. (2014). "Pseudo-Mathematics and Financial Charlatanism: The High Probability of Overfitting in Financial Investment." *Notices of the AMS*.
 4. `FRENCH_10_IND`: Kenneth R. French Data Library, 10 Industry Portfolios (value-weighted, monthly), 1926-07 至 2026-08 (1202 个月). 清单文件 SHA-256: `3b71cd5f781f9790cc380195c22635e03e9c9e27a5f43cd2d0d46fb12efa8271`.
-5. 本章代码及历史独立复核结果（本次修订未重跑）：`code/ch31_model_validation.py`；数值输出为 `build/codex_a6/final_learning_review/ch31/recheck/results/ch31_results.json`，该历史复核图表为 `build/codex_a6/final_learning_review/ch31/recheck/figures/ch31_*.png`。既有 QA 历史和正文引用图未被覆盖。
+5. 本章代码及历史独立复核结果（未重新计算）：`code/ch31_model_validation.py`；数值输出为 `build/codex_a6/final_learning_review/ch31/recheck/results/ch31_results.json`，该历史复核图表为 `build/codex_a6/final_learning_review/ch31/recheck/figures/ch31_*.png`。既有 QA 历史和正文引用图未被覆盖。

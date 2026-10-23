@@ -1,6 +1,6 @@
 # Quant glossary
 
-Definitions, mathematical expressions, uses and limitations are aligned with the accepted chapters. The 347 historical entries include useful context-specific repetitions; they are not 347 distinct scientific claims. The accepted terminology list contains 425 items, mapped to these definitions or the supplements below. Original source titles and code identifiers retain their spelling.
+Find definitions, uses and common confusions by term. Some terms have chapter-specific conditions; use the definition and units stated in the chapter you are reading.
 
 [Notation and units](notation.md) · [Learning route](learning_roadmap.md)
 

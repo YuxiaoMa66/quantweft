@@ -192,7 +192,7 @@ python code/ch34_market_microstructure.py --output-dir "runs/ch34_$(python -c 'i
 .venv/bin/python -m pytest tests/test_microstructure.py -q
 ~~~
 
-命令在唯一 runs 子目录生成 ch34_sweep_case.json 和 figures/ch34_order_book_sweep.png。I3读者包默认Notebook调用共享 microstructure 逻辑新算小静态扫单，在唯一 RUN_DIR 保存一图，不下载外部数据、不设随机种子。按包根 projects/PROJECT_READER.md 使用外层 runner，保存执行副本与执行JSON，不重写源Notebook或冻结qa输出。英语Notebook语言层与全包冷启动归BIL23。
+命令在唯一 runs 子目录生成 ch34_sweep_case.json 和 figures/ch34_order_book_sweep.png。随包 Notebook调用共享 microstructure 逻辑新算小静态扫单，在唯一 RUN_DIR 保存一图，不下载外部数据、不设随机种子。按包根 projects/PROJECT_READER.md 使用外层 runner，保存执行副本与执行JSON，
 
 NaN 政策是拒绝：本内核只接受有限的 Decimal 价格和整数股数，不接受表格缺失值。执行价格、数量、现金额的量纲分别是 USD/股、股、USD。数据时钟不由本函数推断；调用者须先保证订单的决策与到达时点有资格使用所读快照。本代码是教学算例，不含真实数据频率、可交易时间序列或种子。
 
@@ -206,11 +206,11 @@ NaN 政策是拒绝：本内核只接受有限的 Decimal 价格和整数股数�
 
 ## 11. Real Market Example
 
-本批没有下载、读取或估计真实成交、订单簿或收益序列；所有数值案例和图都标为教学构造，故没有真实数据许可、频率、样本期或数据哈希可报告。本节的来源只证明某些规则说明/数据格式文件确实存在，不代表我们观察了它们所描述期间的市场。
+本章未下载、读取或估计真实成交、订单簿或收益序列；所有数值案例和图都标为教学构造，故没有真实数据许可、频率、样本期或数据哈希可报告。本节的来源只证明某些规则说明/数据格式文件确实存在，不代表我们观察了它们所描述期间的市场。
 
 若之后做真实盘口研究，数据合同至少应写明供应商/交易所、产品与许可、规则及 feed 版本、证券标识与场所、样本期、事件时间精度及其时区、源端发布时间/可用时间、本地接收时间、校正/删重/排序/断档处理、显示与隐藏订单覆盖、公司行动和停牌处理，并保存未经变换的事件记录及摘要哈希。对于历史队列，单一快照不够：需要足以重建订单新增、执行、减量/撤销、改价、场所状态和同时间戳排序的事件消息，以及适用的撮合规则。
 
-本章核读的 [Nasdaq TotalView-ITCH 5.0规范](https://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NQTVITCHSpecification.pdf)把订单新增、执行、取消及删除等消息分别编码，说明逐事件feed与聚合快照的资料范围不同。引用该规范只为说明消息类别；本批未取得、解析或分析该feed的真实事件，不据此报告任何成交统计或市场效果。
+本章核读的 [Nasdaq TotalView-ITCH 5.0规范](https://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NQTVITCHSpecification.pdf)把订单新增、执行、取消及删除等消息分别编码，说明逐事件feed与聚合快照的资料范围不同。引用该规范只为说明消息类别；本章未取得、解析或分析该 feed 的真实事件，不据此报告任何成交统计或市场效果。
 
 ## 12. Common Mistakes
 
@@ -362,5 +362,5 @@ assert (no_fill.filled, no_fill.remaining, no_fill.notional, no_fill.vwap) == (
 
 ## 20. References
 
-逐条来源及核读范围见 course/zh/chapters/ch34/source_notes.md 与 references/sources.json。来源支持订单规则、消息类别和摘要级机制；不提供构造行情或成本参数。未读章节、规则或论文全文不作为证据。
+参考资料见 course/zh/chapters/ch34/source_notes.md 与 references/sources.json。来源支持订单规则、消息类别和摘要级机制；不提供构造行情或成本参数。未读章节、规则或论文全文不作为证据。
 

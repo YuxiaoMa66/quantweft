@@ -1,14 +1,29 @@
-# 第11章来源与计算核验记录
+# 第11章：参考资料
 
-2026-10-06。完整实际读取范围见 ../../qa/a3/ch11_source_and_metric_contract.md。MIT官方15.401讲义读取复利slide28–29和实际/名义slide30–34及主题时间线；Lo2002只核验作者发表列表与摘要/元数据，未取得全文。协方差聚合公式、Jensen/组合财富、现金流IRR等由本章独立推导，不将未读来源补成全文引用。
+本页列出本章相关的论文、课程、数据来源与工具文档。
 
-当前真实输入为2026-10-05下载的French NoDur行业组合与FF3 RF月收益小数，原始/处理文件hash和vintage在各manifest；loader核验处理后hash、月度唯一/有序/连续与有限值，再一对一连接2010-01至2019-12。它不转换第二次百分数、不填缺失，也不还原逐股PIT时钟。
+<a id="opened-source-documents"></a>
 
-code/ch11_returns.py实际输出保存在qa/a3/ch11_actual_metrics.json：120月、终财富3.141190294871468、月算术均值.0100991666667、月几何均值.009583983381、CAGR月区间约定.121267991608、月SD.032172825048、sqrt12约定波动.111449935212、sqrt12约定SR1.039249824195、月末最大回撤正幅度.158392213808。图由同一脚本实际生成，根已查看轴和曲线；当前历史描述不支持真实策略交易结论。
+### MIT_FIN
 
-核心performance.py13项准备测试通过，记录qa/a3/ch11_metrics_tests.log；正文5独立示例、Notebook6代码单元冷执行、读取/指标28专项测试均通过；独立数学审核无阻断，首词和零财富口径意见已处理。排版初编14页，章节保持draft，代表页视觉及最终验收仍由根代理执行。所有构造数字、现金流和理论AR1增量明确标为教学构造，不伪装市场数据。
+[MIT OCW 15.401 Finance Theory I (Fall 2008)](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/)
 
+### FRENCH
 
-## 2026-10-15 BIL06 双语教学候选
+[Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html)
 
-完整读工作正文、notes、plan、接受I3正文/Loom。承接I3包根Notebook与UUID输出；历史课程CLI/测试分开标注，French默认跳过。原数值、全部题答及代码计算保留；第10章P01/P02/P03按主控ROOT_CODE_ENTRY_CORRECTION.md在Path导入后补课程根src导入路径，修复独立入口；与英文纯打印标签翻译分别登记，三个完整答案仅复核入口和原断言；第10章只明示正初始股票分母/共享函数条件和MES例乘数，第11章明示正价格分母与端点账本教学构造。原平方根缩放的固定期限/所有期限区别保留。原来源仍按已读日期/范围继承；未补成全文阅读，仅重跑第10章三个受影响独立答案的原断言，未重跑其余旧数值/Notebook/French。仅作者候选，待主控独立验收；canonical_written=false、formal_publication=false、final_verified=false。
+月度聚合数据不等于完整数据库，也不提供逐股点时版本。
+
+### NUMPY
+
+[NumPy documentation](https://numpy.org/doc/stable/)
+
+### CH11_MIT_PV
+
+[MIT OCW 15.401: Present Value Relations](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/73c95059e657c8a7acb042ea33a21940_MIT15_401F08_lec02.pdf)
+
+### LO_SR_META
+
+[Andrew W. Lo: The Statistics of Sharpe Ratios — author publication record](https://alo.mit.edu/publications/page/18/)
+
+[章节正文](content.md) · [完整参考资料](../../../../editions/zh/resources/references.md)

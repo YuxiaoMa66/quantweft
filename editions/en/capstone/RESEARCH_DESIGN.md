@@ -3,7 +3,7 @@
 \color{qink}
 
 
-The [README](README.md) states the current technical acceptance and stopping point. This document explains why M0 is compared with EW10 and what inputs can answer the question. Full parameters are in the [protocol](PROTOCOL.md) and the original-byte [French protocol config in the read-only I3 source](../../../capstone/configs/french_protocol_v2.json).
+The [README](README.md) summarizes study scope and limits. This document explains why M0 is compared with EW10 and what inputs can answer the question. Full parameters are in the [protocol](PROTOCOL.md) and the [French protocol config](../../../capstone/configs/french_protocol_v2.json).
 
 ## Primary question and hypotheses
 
@@ -27,7 +27,7 @@ Negative and zero outcomes also complete the research. If the interval crosses z
 
 The ten industries are supplier portfolio categories, not permanent security IDs; monthly returns follow the supplier's total-return convention. The observation is one paired portfolio return difference for a month, not ten independent industry experiments. The selected route can compare portfolio-level differences under fixed revised history and hypothetical costs. The institution-level, security-by-security PIT route was not selected; the P5 requirement for 16 assets and the P6 data-span requirement do not carry over.
 
-Fixed input identity: `French_20261005_revised_history_A10A_v1`; snapshot date 2026-10-05; vintage 202608; coverage 1926-07..2026-08, 1,202 months. Industry download time in UTC: `2026-10-05T19:18:24.585420+00:00`; FF3 download time: `2026-10-05T21:11:10.296518+00:00`. Convert the original percentages to decimals once only. This edition reuses metadata from the accepted materials; it did not read new CSV/ZIP bytes or recompute data statistics. Names, hashes, and units are in the [read-only I3 source-identity map](../../../capstone/accepted_source_map.json). This package does not distribute the research-market CSV/ZIP files.
+Fixed input identity: `French_20261005_revised_history_A10A_v1`; snapshot date 2026-10-05; vintage 202608; coverage 1926-07..2026-08, 1,202 months. Industry download time in UTC: `2026-10-05T19:18:24.585420+00:00`; FF3 download time: `2026-10-05T21:11:10.296518+00:00`. Convert the original percentages to decimals once only. Source names, hashes, and units are listed in the [source metadata](../../../capstone/accepted_source_map.json). This package does not distribute the research-market CSV/ZIP files.
 
 Historical source review was limited to the official ten-industry construction, coverage, and copyright sections; the factor RF/definition sections; the data homepage sections on revisions/format changes; and the CRSP changes body. The linked CRSP PDF was not read. Do not use that unread PDF or unchecked papers to prove the mechanism. This edition did not browse the web and makes no claim of new source review or of an absence of licensing terms across the whole site. Prior ICBC plans and older rights tables are historical records only; the current actual subject and use are unknown and are not presumed to be individual or bank-internal. Public download and copyright attribution do not replace rights evidence for the actual activity.
 
@@ -41,7 +41,7 @@ Historical source review was limited to the official ten-industry construction, 
 | P1 | README and manifest: NoDur / HiTec / Enrgy for 2010–2019, with descriptive results for 2020–2024 | Carry forward unit and snapshot review; industry-wealth measures have already been shown | The historical design batch did not recompute its measures |
 | P2 | README/config: nine realized CAPM / FF3 / FF5 groups for 2010–2019; estimate on 2010–2014 and same-month attribution on 2015–2019 | Choose FF3 rather than mixing FF3 and FF5; carry forward monthly RF/HAC conventions | Attribution is not prediction, and alpha does not decide whether momentum wins |
 | P3 | README/config: full ten-industry history 1990-01..2026-08; 60-month primary specification and multiple window/cost sensitivities; public report did not credibly find three estimated portfolios better than equal weight | Use a simple equal-weight baseline to reduce model search; this choice has a hindsight component | Net results and benchmark exposure already exist over the same history; it cannot be called an unused holdout |
-| P4 | Cost-preparation README/acceptance entry: constructed signals, share ledger, and cost/execution experiments | Adopt exact cost-ledger boundaries and avoid residuals from industry-neutral projection | Constructed costs do not calibrate real markets |
+| P4 | Cost-preparation guide:
 | P5 | Manifest/acceptance identity: paired constructed study; real panel blocked; 16-asset historical requirement belongs to P5 | Do not inherit its assets/dates or choose a model based on paired performance | Not every constructed-performance row was reread; user/old-session exposure history is unknown |
 | P6 | Manifest/acceptance identity: baseline/tree-model constructed results and later presentation revisions; real study blocked and overall status not verified | Do not add an ML contest; reuse time-contract gates | The missing row-level predictions for Chapter 39 and the failed-artifact gaps remain open; do not claim the evidence is complete |
 

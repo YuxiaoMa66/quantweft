@@ -275,7 +275,7 @@ assert np.allclose(z_t2, [0.88, -0.18])
 
 ### 本读者版的默认运行入口
 
-从接受I3读者包根目录，按其[环境说明](../../../../editions/zh/README.md)建立独立环境后运行：
+从随包读者包根目录，按其[环境说明](../../../../editions/zh/README.md)建立独立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch17_time_series_ii.ipynb
@@ -285,7 +285,7 @@ assert np.allclose(z_t2, [0.88, -0.18])
 
 Notebook显示`fixtures/figures/a4/ch17_cointegration_simulation.png`随包既有图；显示不等于本次重新生成。`RUN_FRENCH=False`关闭历史市场分支。虽然创建并打印`runs/ch17_time_series_ii_<uuid>/`，本Notebook不向它写CSV或PNG。运行器另在唯一`runs/execution_*`目录保存执行副本与状态；两个目录用途不同。构造计算不形成市场预测或策略净收益证据；第10–11节的French历史图表与数字保留原有身份。
 
-下方CLI与制作测试属于历史课程工作根流程，不是本包默认路线；未随包提供的制作测试不要求读者补回。I3 CLI第16章仍无条件读取French，CLI第17章历史分支需`--french-data`，均不替代上述默认命令。
+下方CLI与制作测试属于历史课程工作根流程，不是本包默认路线；未随包提供的制作测试不要求读者补回。CLI第16章仍无条件读取French，CLI第17章历史分支需`--french-data`，均不替代上述默认命令。
 
 ### 历史课程工作根与原实现
 
@@ -588,4 +588,4 @@ print("y -> x p-value:", y_predicts_x.pvalue)
 - Benjamini, Y., & Hochberg, Y. (1995). “Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing.” *Journal of the Royal Statistical Society: Series B*, 57(1), 289–300. [DOI](https://doi.org/10.1111/j.2517-6161.1995.tb02031.x)。引入并讨论错误发现率，BH 方法在独立检验假设下控制 FDR；不是家族错误率控制方法。
 - Benjamini, Y., & Yekutieli, D. (2001). “The Control of the False Discovery Rate in Multiple Testing under Dependency.” *The Annals of Statistics*, 29(4), 1165–1188. [DOI](https://doi.org/10.1214/aos/1013699998)。讨论 BH 在正回归依赖（PRDS）条件下的 FDR 控制；不能由“检验相关”本身推出这些条件成立。
 - Statsmodels 0.15.0 官方文档：[ADF](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.adfuller.html)、[Engle–Granger `coint`](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.coint.html)、[VAR](https://www.statsmodels.org/stable/vector_ar.html)、[Granger 检验](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.grangercausalitytests.html)。仅支持代码行为。
-- Kenneth R. French Data Library. [10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html)。支持 §11 行业月收益来源与数据区块定位；缓存修订、哈希和使用限制见 [`source_notes.md`](source_notes.md)。
+- Kenneth R. French Data Library. [10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html)。支持 §11 行业月收益来源与数据区块定位；缓存版本、哈希和使用限制见 [`source_notes.md`](source_notes.md)。

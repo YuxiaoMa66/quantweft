@@ -215,7 +215,7 @@ notebooks/ch45_production_quant.ipynb      解释、调用与实际图
 tests/test_production_pipeline.py         反例与边界
 ```
 
-源码布局（Source Layout, src layout）把可导入包放在`src/`下。通常安装包后由环境找到它；本批沿用现有虚拟环境，入口显式把课程`src`加入模块搜索路径，没有重新安装。读者从课程根用`.venv/bin/python code/ch45_production_quant.py --help`启动新进程，导入不依赖上次Notebook内存。冷启动（Cold Start）就是重新建立这些依赖，而不是把旧kernel里已有变量当输入。
+源码布局（Source Layout, src layout）把可导入包放在`src/`下。通常安装包后由环境找到它；入口显式把课程`src`加入模块搜索路径。读者从课程根用`.venv/bin/python code/ch45_production_quant.py --help`启动新进程，导入不依赖上次Notebook内存。冷启动（Cold Start）就是重新建立这些依赖，而不是把旧kernel里已有变量当输入。
 
 可安装包还需要构建规则。Python增强提案（Python Enhancement Proposal, PEP）517规定构建前端怎样调用后端，PEP 518规定在`pyproject.toml`声明构建依赖；它们没有规定目录必须叫`src`。本项目实际的`[build-system]`选择`setuptools.build_meta`，`[tool.setuptools]`将包目录映射到`src`。前者回答“谁构建”，后者回答“从哪里发现包”。发行包名`quant-course-a1`也不等于导入名`quant_course`。这些边界让数据闸前的代码身份可追溯；不能用一次导入成功证明已构建wheel或锁定全部依赖。PyPA文档的src布局段及本地配置支持这里的区分。
 
@@ -240,7 +240,7 @@ tests/test_production_pipeline.py         反例与边界
 
 为手算读取规模，假设每个字段都用8字节且忽略元数据、压缩和解析成本；这只是布局模型，不是实际CSV或Parquet文件大小。全表为$4\times4\times8=128$字节。只读价格列是$4\times1\times8=32$字节；再成功跳过两行旧组，数据部分为$2\times1\times8=16$字节，还要加读取统计元数据的费用。三个中间数解释了“少读哪些东西”，不是性能基准。
 
-DuckDB是进程内分析查询引擎，Parquet是文件格式，二者不是同一层。可选SQL `SELECT asset,current_price FROM read_parquet('quotes.parquet') WHERE event_time <= ...`说明如何把时点闸条件交给引擎；没有真实`quotes.parquet`夹具，本批也缺duckdb/pyarrow，因此没有运行这段。实际验收仍读取小JSON/CSV并显式检查集合、单位与时戳。缺包不影响理解列投影，更不能证明时点正确：未来修订的表即使读得很快，仍不是当时可得输入。
+DuckDB是进程内分析查询引擎，Parquet是文件格式，二者不是同一层。可选SQL `SELECT asset,current_price FROM read_parquet('quotes.parquet') WHERE event_time <= ...`说明如何把时点闸条件交给引擎；没有真实`quotes.parquet`夹具，此环境未安装duckdb/pyarrow，因此这段SQL未执行。实际验收仍读取小JSON/CSV并显式检查集合、单位与时戳。缺包不影响理解列投影，更不能证明时点正确：未来修订的表即使读得很快，仍不是当时可得输入。
 
 ### 5.3 用两笔成交学习SQL、键与事务边界
 
@@ -257,7 +257,7 @@ DuckDB是进程内分析查询引擎，Parquet是文件格式，二者不是同�
 \color{qink}
 
 
-先按`run_key`筛选，再数唯一成交，最后聚合现金流：A的支出为$10\times100.1+1.001=1002.001$，B为$20\times50.05+1.001=1002.001$；总支出2004.002 USD，现金$10000-2004.002=7995.998$ USD。下面把已接受 I3 的 PATH09 串成完整链：从最终完整课程包根目录启动同一次构造 CLI，再把其 state_db 与 run_key 传给只读查询。先将随后 Python 块保存为 print_examples/I2-PATH-09.py；该块与 I3 同名脚本一致。运行说明适用于包含共享脚本与配置的完整课程包；若工作根缺少入口，先核对明确标注的只读来源。这里呈现用法，不是本批执行记录。
+先按`run_key`筛选，再数唯一成交，最后聚合现金流：A的支出为$10\times100.1+1.001=1002.001$，B为$20\times50.05+1.001=1002.001$；总支出2004.002 USD，现金$10000-2004.002=7995.998$ USD。下面示范完整操作链：从课程包根目录启动构造 CLI，再把其 state_db 与 run_key 传给只读查询。将随后 Python 块保存为脚本，并从包含共享脚本与配置的课程包根目录运行。这里说明用法，不报告新的执行结果。
 
 ```sh
 run="runs/path09_$(.venv/bin/python -c 'from uuid import uuid4; print(uuid4().hex)')"
@@ -282,7 +282,7 @@ assert abs((10000-spent)-7995.998)<=1e-6
 print(count,spent,"USD; final cash",10000-spent)
 ```
 
-唯一键可拒绝重复插入，但仅有键还不够：恢复时还要核成交时间、股数、费用和顺序与冻结目标一致。原子性、一致性、隔离性和持久性（Atomicity, Consistency, Isolation, Durability, ACID）描述数据库事务。本核心先提交成交记录，再分别写事件和状态；不能声称成交与全部审计事件在同一个事务中。恢复以已提交`fills`为事实，日志缺一行也不能重新扣一次钱。`BEGIN IMMEDIATE`是SQLite可选的提前请求写事务方式，仍可能遇到`SQLITE_BUSY`；本批不把它当分布式锁，也没有改造为多进程交易平台。文件目录发布在另一个资源中，必须使用第6.4节的三类恢复判断。
+唯一键可拒绝重复插入，但仅有键还不够：恢复时还要核成交时间、股数、费用和顺序与冻结目标一致。原子性、一致性、隔离性和持久性（Atomicity, Consistency, Isolation, Durability, ACID）描述数据库事务。本核心先提交成交记录，再分别写事件和状态；不能声称成交与全部审计事件在同一个事务中。恢复以已提交`fills`为事实，日志缺一行也不能重新扣一次钱。`BEGIN IMMEDIATE`是SQLite可选的提前请求写事务方式，仍可能遇到`SQLITE_BUSY`；这不是分布式锁，也不是多进程交易平台。文件目录发布在另一个资源中，必须使用第6.4节的三类恢复判断。
 
 ### 5.4 配置、血缘、缓存与同一逻辑任务
 
@@ -300,7 +300,7 @@ print(count,spent,"USD; final cash",10000-spent)
 \color{qink}
 
 
-调度（Scheduling）回答何时触发，幂等回答重复触发以后怎样做。设任务逻辑日为09-02，计划09:00触发，实际因队列积压到09:00:03启动，又因重试09:00:05启动。两个进程属于同一逻辑key，不能因物理秒数不同就当两个新交易任务。Apache Airflow的逻辑日期（Logical Date）通常表示数据区间起点，区别于墙钟执行时间；`sched`则是进程内事件队列，不能代替持久调度服务或市场交易日历。本批没有安装任务。
+调度（Scheduling）回答何时触发，幂等回答重复触发以后怎样做。设任务逻辑日为09-02，计划09:00触发，实际因队列积压到09:00:03启动，又因重试09:00:05启动。两个进程属于同一逻辑key，不能因物理秒数不同就当两个新交易任务。Apache Airflow的逻辑日期（Logical Date）通常表示数据区间起点，区别于墙钟执行时间；`sched`则是进程内事件队列，不能代替持久调度服务或市场交易日历。本例不安装任务调度器。
 
 应用程序编程接口（Application Programming Interface, API）的重试还涉及外部副作用。下面是未运行的券商接口推演，不代表本章发过订单：
 
@@ -345,7 +345,7 @@ print(stream.getvalue().strip())
 
 监控指标（Monitoring Metrics）则压缩许多事件：计数器（Counter）累计尝试数或唯一模拟成交数；重试可让尝试数从1变2，而唯一成交仍为2。瞬时仪表（Gauge）可增可减，例子是cash7995.998 USD或A持仓10 share。直方图（Histogram）按桶累积观察次数：教学延迟为0.02、0.07、0.20秒，边界0.05、0.10、$+\infty$对应累计计数1、2、3；总和0.29秒，平均$0.29/3=0.09667$秒。桶里丢失了精确排序信息，所以不能从这三个计数读出精确P99；开放末桶也不给P99有限上界。这些是未部署指标的手算解释。
 
-实验追踪（Experiment Tracking）再把指标连回版本：记录run key、输入/config/code哈希、状态和工件路径。成功算例净PnL−4.002与失败STOPPED都进入运行索引，不能只记录赚钱或完成的任务。MLflow可管理这类run、参数、指标和工件，但本批没有调用其API或启动服务。数据闸拒绝、对账停单和模型告警是不同原因，只有先保留细分事件，监控曲线才有可解释的用途。
+实验追踪（Experiment Tracking）再把指标连回版本：记录run key、输入/config/code哈希、状态和工件路径。成功算例净PnL−4.002与失败STOPPED都进入运行索引，不能只记录赚钱或完成的任务。MLflow可管理这类run、参数、指标和工件，但本例不调用其API或启动服务。数据闸拒绝、对账停单和模型告警是不同原因，只有先保留细分事件，监控曲线才有可解释的用途。
 
 ### 5.7 容器、配置与秘密的生命周期
 
@@ -368,7 +368,7 @@ CMD ["--help"]
 
 逐步读：FROM选基础镜像；WORKDIR设相对路径；RUN在假想构建时安装核心复用依赖；COPY只拷贝所列课程目录；ENTRYPOINT指向真实Capstone入口，CMD默认只显示帮助。若未来构建，context应为课程根，`docker build -f capstone/Dockerfile .`才找得到`src`；`capstone/.dockerignore`不是该course-root context的有效根ignore。这里既没build，也没运行容器；RUN需要依赖取得条件，不能把离线数据例子误称离线镜像构建。
 
-这个基础tag和未锁定的pip版本会随时间变化，所以不是可重建镜像digest的证明。未来发布应记录镜像摘要、依赖锁和平台条件；本批不安装额外环境。秘密管理（Secrets Management）还要分构建期与运行期：Docker文档指出构建ARG/ENV会持久存在于镜像，不能传构建秘密；临时build secret mount另有生命周期。运行时可由受控凭据服务/秘密挂载提供最小权限值，环境变量方式也须考虑权限、脱敏和轮换。本例没有凭据，配置快照和日志中没有秘密值。模型回滚时核对配置版本，并不能“回滚”已经发生的成交。
+这个基础tag和未锁定的pip版本会随时间变化，所以不是可重建镜像digest的证明。未来发布应记录镜像摘要、依赖锁和平台条件；本例不安装额外环境。秘密管理（Secrets Management）还要分构建期与运行期：Docker文档指出构建ARG/ENV会持久存在于镜像，不能传构建秘密；临时build secret mount另有生命周期。运行时可由受控凭据服务/秘密挂载提供最小权限值，环境变量方式也须考虑权限、脱敏和轮换。本例没有凭据，配置快照和日志中没有秘密值。模型回滚时核对配置版本，并不能“回滚”已经发生的成交。
 
 ### 5.8 模型漂移：先算统计量，再判断标签何时可用
 
@@ -385,7 +385,7 @@ CMD ["--help"]
 
 冻结$\mu_0=0.10$、$\delta=0.01$、h=0.05，依次收到成熟误差0.10、0.15、0.18：第一步$S=-0.01,M=-0.01,S-M=0$；第二步$S=0.03,M=-0.01,S-M=0.04$；第三步$S=0.10,M=-0.01,S-M=0.11$，才越过教学阈值。若09-01 16:05作预测，收益标签区间止于09-02 16:00，那么09-02 15:59不能算该误差；在16:00后标签已完成且取得时可在线更新。若标签到17:00才发布/入库，仍要等到17:00。成熟后在线更新与离线回放均可，不能提前用未来收益。
 
-这些统计量是“保存特征/成熟标签版本→计算→核查数据故障或经济变化→决定停单/兼容回滚”的中间证据。固定阈值必须在允许历史块中校准，不能看最终测试表现调阈值；自动重训仍不在本批授权内。回滚要核特征模式、变换/模型版本、现金和已持仓，不能删除旧成交。模拟盘（Paper Trading）通常用虚拟资金检查交易反馈；本批只有离线构造撮合，没有接入真实paper接口或证明任何真实Alpha。
+这些统计量是“保存特征/成熟标签版本→计算→核查数据故障或经济变化→决定停单/兼容回滚”的中间证据。固定阈值必须在允许历史块中校准，不能看最终测试表现调阈值；自动重训不属于本例范围。回滚要核特征模式、变换/模型版本、现金和已持仓，不能删除旧成交。模拟盘（Paper Trading）通常用虚拟资金检查交易反馈；本章只演示离线构造撮合，未接入真实paper接口，也未证明真实Alpha。
 
 
 ## 6. 推导
@@ -704,8 +704,8 @@ reader_cli_01是首次演示路径。开始独立新实验时换为新的目录�
 
 教学 Notebook（`notebooks/ch45_production_quant.ipynb`）遵循如下原则：
 1. 单元格仅调用 `quant_course.production_pipeline` 核心函数，不重复编写撮合与对账算法。
-2. 已接受 I3 Notebook 默认只在独立新目录运行一次正常构造场景，核现金、NAV与残差，读取事件账本并生成一张新图。账本的多个事件阶段不是多月策略。
-3. 幂等与恢复由第9.1节、45-P04、独立 `capstone/check_portable.py` 和已有测试承载，不声称 Notebook 运行这些场景；该恢复入口在当前工作根暂不可用。
+2. 已接受 packaged Notebook 默认只在独立新目录运行一次正常构造场景，核现金、NAV与残差，读取事件账本并生成一张新图。账本的多个事件阶段不是多月策略。
+3. 幂等与恢复由第9.1节、45-P04、独立 `capstone/check_portable.py` 和已有测试承载，不声称 Notebook 运行这些场景；该 Notebook 不运行这些恢复场景。
 4. 从空白内核自顶向下顺序执行，输出纯净的结构化摘要与核验图表。
 
 ## 10. 可视化
@@ -1286,7 +1286,7 @@ reconcile_handcalc()
 
 1. 先等收益区间终点与标签实际可得/入库时刻，二者都不晚于更新时刻才能算残差。成熟后可以在线更新，也可以离线回放；不要求只能离线。09-02 16:00成熟但17:00才收到的标签，在16:30还不可用。
 2. 固定同一误差路径，$h_2>h_1$时越过大阈值的首次时点不早于小阈值，固定观察期内触发集合随阈值缩小；具体误报率仍要按允许历史时间块校准。若持续均值增量$\Delta\mu>\delta$，忽略噪声和过冲可近似检测延迟$h/(\Delta\mu-\delta)$个成熟标签更新周期，非保证。厚尾/依赖、多指标重复监控都可能改变实际误报。
-3. 告警后先排查数据版本、新鲜度、变换与单位，再决定暂停新单或兼容版本回滚；既有现金/成交不可抹去。本批不训练、自动重训或用最终测试调阈值。
+3. 告警后先排查数据版本、新鲜度、变换与单位，再决定暂停新单或兼容版本回滚；既有现金/成交不可抹去。本例不训练或自动重训，也不使用最终测试调阈值。
 
 开放题评分：成熟标签与单位/冻结基线30%，路径关系和近似条件30%，误报校准/多重监控20%，停单与状态兼容20%。
 
@@ -1342,6 +1342,6 @@ reconcile_handcalc()
 24. [CH45_R2_PH] River. *PageHinkley*, definition/parameters/update. URL: <https://riverml.xyz/dev/api/drift/PageHinkley/>. 根读在线更新与运行均值/忘却/双侧说明；本章固定基线例非该库完整实现。
 25. [CH45_R2_SRC] PyPA. *src layout vs flat layout*. URL: <https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/>. 根读目录/安装/源CLI路径段。
 26. [CH45_R2_PEP517] Python. *PEP 517*, Abstract/Source trees/backend interface. URL: <https://peps.python.org/pep-0517/>.
-27. [CH45_R2_PEP518] Python. *PEP 518*, Abstract/build-system. URL: <https://peps.python.org/pep-0518/>. 本批未构建或安装包。
+27. [CH45_R2_PEP518] Python. *PEP 518*, Abstract/build-system. URL: <https://peps.python.org/pep-0518/>.
 
 本章R2新增原文范围见source_notes；原Page1954论文没有亲读，PH固定基线规则是本章明确给定的教学变体。

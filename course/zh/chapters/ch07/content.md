@@ -390,13 +390,13 @@ n_{\mathrm{eff}}\approx n\frac{1-\phi}{1+\phi}.
 
 ### 本读者版的默认运行入口
 
-从接受I3读者包的根目录，按其[README](../../../../editions/zh/README.md)建立独立环境后运行：
+从随包读者包的根目录，按其[README](../../../../editions/zh/README.md)建立独立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch07_statistics.ipynb
 ```
 
-该Notebook调用随包共享实现，不读取未随包提供的French数据、不下载数据；每次写入唯一UUID的runs子目录，并打印实际输出位置。旧制作测试与下面的历史课程根命令属于原工作项目；读者默认运行使用上述包根Notebook及其断言。可选历史French路径需遵守读者包的[数据契约](../../../../editions/zh/OPTIONAL_DATA.md)，本批未重跑。
+该 Notebook 调用随包共享实现，不读取未随包提供的 French 数据，也不下载数据；每次运行写入唯一 UUID 的 `runs/` 子目录并打印输出位置。读者默认使用上述包根 Notebook 及其断言。可选 French 数据须遵守读者包的[数据契约](../../../../editions/zh/OPTIONAL_DATA.md)。
 
 ### 历史课程根路线
 
@@ -834,4 +834,4 @@ print("long-run variance ratio", long_run_ratio, "SE ratio", np.sqrt(long_run_ra
 - [Künsch (1989), The Jackknife and the Bootstrap for General Stationary Observations](https://projecteuclid.org/journals/annals-of-statistics/volume-17/issue-3/The-Jackknife-and-the-Bootstrap-for-General-Stationary-Observations/10.1214/aos/1176347265.full), *The Annals of Statistics*, 17(3), 1217–1241，DOI 10.1214/aos/1176347265：已核对出版社摘要及作者发表目录，尚未将全文定理作为本章已验证结论。
 - [Kenneth French：10行业组合说明](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html)：真实月度收益缓存的来源；不是 PIT 逐股交易数据库。
 
-具体核验范围与程序记录见[本章来源说明](source_notes.md)。
+补充参考资料见[本章来源说明](source_notes.md)。

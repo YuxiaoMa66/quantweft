@@ -1,6 +1,6 @@
 # Project 6 v2：树模型比较、重要性、稳定性与消融（构造数据研究报告）
 
-2026-10-11 冻结的 A8-B 结果；2026-10-16 作者修订。作者：Yuxiao Ma。**全部结果来自教学构造数据（`data_class = CONSTRUCTED`），不是市场证据。** A8-B 现有独立 limited-scope accepted pending formal integration 入口；本批 BIL19 双语候选仍待独立审阅。真实数据实证仍 blocked，完整 Project 6 未 verified。基础管线报告见 [README.md](README.md)，其 A8-A 冻结内容仍单独保留。
+A8-B树模型扩展的结果全部来自教学构造数据（`data_class = CONSTRUCTED`），不是市场证据。真实数据实证受数据来源与权利限制，尚未进行。基础管线报告见 [README.md](README.md)，其中保留A8-A构造结果。
 
 ## 1. 假设与问题
 
@@ -141,9 +141,9 @@
 - 重要性只在 63 日内层窗上计算 3 次重复，方差大；组置换只分两组。
 - 计算：本报告数字所用运行 `qa_r1` 的端到端时间（整套 `p06_trees.run`、写出与作图，不是单独拟合）基础 1100 s、反号 906 s；开发运行 `dev01` 在并行负载下为 1981 s、1382 s，两次结果数值相同；随机森林 `n_jobs=-1`，预测的浮点求和顺序可能因线程而异（事后重拟合与原预测在默认容差内一致，由 `posthoc_test_importance` 断言）。
 
-## 7. I3 Notebook 展示回放与本次工作边界
+## 7. Notebook 展示与研究范围
 
-P6v2 的 I3 阅读 Notebook 共 9 个单元格、4 个代码单元格；它用冻结 fixture 回放两份摘要、IC 日期基数以及历史消融/稳定性展示，并从冻结摘要生成 `historical_constructed_trees_sharpe.png` 写入 RUN_DIR。fit 明确为 SKIPPED；没有重训、完整 CLI 或新的模型检验。旧的“未验收”banner 属历史文字；A8-B 当前状态为 limited-scope accepted pending formal integration。BIL19 双语候选仍待独立审阅，完整 P6 尚未 verified。本次作者修订未运行 Notebook、模型、生成器或全量 CLI。
+P6 v2 Notebook展示固定摘要、IC日期基数以及历史消融与稳定性结果，不训练模型，也不代表真实数据研究。
 
 第40章实验的 26 特征、1,260 日、12 折，以及登记主强度与另行五倍事后敏感性，保持独立，不能并入 P6 的 46 特征、1,512 日、16 折报告。数据/PIT 与 A10-B 状态依旧未验证，真实研究保持 blocked。
 
@@ -154,4 +154,4 @@ P6v2 的 I3 阅读 Notebook 共 9 个单元格、4 个代码单元格；它用�
 
 ---
 
-**双语候选状态（2026-10-16）：** 本文是 BIL19 作者候选，题号 P6-L04–P6-L08 的完整答案位于同项目 `solutions.md`，基础题 P6-L01–P6-L03 保留在 `README.md` 并一并收录于答案册。BIL18 的受限基础层与 A8-B 回执身份未改；本批不写入冻结目录、不作正式出版或最终验证登记。
+题号P6-L04–P6-L08的扩展题答案见同项目 [solutions.md](../solutions.md)；基础题P6-L01–P6-L03也收录于答案册，便于按题号查阅。

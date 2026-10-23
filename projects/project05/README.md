@@ -2,7 +2,7 @@
 
 ## 当前读者路线与证据身份
 
-本版为 BIL17B 完整双语教学候选，待独立验收；真实价格研究仍为 planned / blocked，不登记 verified。已有实现与构造教学按 c5 → ALIGN → 最新整股边界限定接受。按顺序读 [c5历史接受](ACCEPTED_VERSION.md)、[协议对齐接受](ACCEPTED_ALIGNMENT_20261014.md)、[当前整股边界接受](ACCEPTED_SETTLEMENT_BOUNDARY_20261014.md)：后者覆盖早期ALIGN关于实际零碎持仓可保留退出的说法，三份历史入口原件不改。
+本项目说明配对交易的构造教学与整股执行边界。真实价格实证因数据许可缺口尚未进行，构造结果不是市场证据。
 
 先读第16、17章的平稳性（Stationarity）与协整（Cointegration）、第29–31章的账本与评价，再读已接受的第34–36章：报价（Quote）不是成交（Fill），请求（Order Request）$Q$ 不是实际成交 $F$；在途请求要预留，截止余量 $R=Q-F$ 仍须说明去向。只有已确认成交更新现金与持仓，随后按同一时钟标记净值（NAV）；实施短缺（Implementation Shortfall, IS）是相对决策基准的归因，不再从现金扣一次。
 
@@ -16,9 +16,9 @@
 
 ### 默认Notebook与独立研究运行
 
-已接受I3包的 `projects/project05/notebooks/p05_pairs.ipynb` 默认明确使用constructed：fresh运行三对配对的screened/ungated主路线，产生形成表、账本/绩效表和一幅图；不是只加载旧缓存，也不执行完整CLI的成本/阈值网格。Notebook的正文说明、历史回放表和新构造输出须按标签分别阅读。英文Notebook语言层、便携整包及冷启动整体验证归BIL23，本批没有改或执行Notebook。
+默认 Notebook `projects/project05/notebooks/p05_pairs.ipynb` 使用构造数据，并fresh运行三对 screened/ungated 主路线，生成形成、账本与绩效表和一幅图；它不是只加载旧缓存，也不运行完整CLI成本/阈值网格。按标签区分解释文字、历史回放表和新构造输出。
 
-在已配置的I3包根，使用外层runner运行执行副本：
+在已配置的默认读者包根，使用外层runner运行执行副本：
 
 ```bash
 .venv/bin/python run_notebook.py projects/project05/notebooks/p05_pairs.ipynb
@@ -76,7 +76,7 @@ Correlation != Cointegration；残差检验用对应临界值；同一测试段�
 - **真实价格实证：blocked。** 2026-10-10来源决定记录了当时所查方案的许可缺口，未获得适用的机构授权；这不是本版新核验的现行条款或对全部免费源的普遍判断，见 数据来源决定；`data_manifest.json` status=blocked，`--data real` 以退出码3拒绝运行。
 - 预注册：[configs/preregistration_v1.json](configs/preregistration_v1.json)（8对、2010–2025、504/126滚动、EG \(p<0.05\)、\(|z|\) 2/0.5/4、成本与借券为情景），冻结于任何价格下载之前。
 - 代码：[src/p05_pairs.py](src/p05_pairs.py)（数据校验、前向TR、形成与EG、信号、双腿账本、融资/借券/股息/拆股、部分成交、IS、walk-forward）；[src/p05_constructed.py](src/p05_constructed.py)（标注的教学构造面板）；CLI [run_project05.py](run_project05.py)；图 make_figures.py；测试 tests/test_p05_pairs.py。
-- 报告：[research_report/report.md](research_report/report.md)；练习与解答：[exercises.md](exercises.md)、[solutions.md](solutions.md)、[solutions_code.py](solutions_code.py)；历史源Notebook：[notebooks/p05_pairs.ipynb](notebooks/p05_pairs.ipynb)（读者执行上述I3包副本）；主动练习：[loom/main_p05.tex](loom/main_p05.tex)；数据字典：[data_dictionary.md](data_dictionary.md)。
+- 报告：[research_report/report.md](research_report/report.md)；练习与解答：[exercises.md](exercises.md)、[solutions.md](solutions.md)、[solutions_code.py](solutions_code.py)；历史源Notebook：[notebooks/p05_pairs.ipynb](notebooks/p05_pairs.ipynb)（读者执行上述默认读者包副本）；主动练习：[loom/main_p05.tex](loom/main_p05.tex)；数据字典：[data_dictionary.md](data_dictionary.md)。
 - 构造面板上的结果只证明实现与方法：账本现金残差约1e−9美元、IS分解与直接金额法一致、未来扰动不改形成期估计；screened组合的正Sharpe来自一次假阳性入选、在252日形成窗下变号；按预注册规则，即使在构造数据上也不能写“支持”。
 
 ```bash

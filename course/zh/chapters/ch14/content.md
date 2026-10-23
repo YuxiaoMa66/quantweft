@@ -235,7 +235,7 @@ R_B-R_f=5\%+1.5(R_m-R_f-6\%)+\varepsilon.
 
 ### 本读者版的默认运行入口
 
-从接受I3读者包根目录，按其[环境说明](../../../../editions/zh/README.md)建立环境后运行：
+从随包读者包根目录，按其[环境说明](../../../../editions/zh/README.md)建立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch14_asset_pricing.ipynb
@@ -243,11 +243,11 @@ R_B-R_f=5\%+1.5(R_m-R_f-6\%)+\varepsilon.
 
 默认运行先核四行构造收益、beta与残差，再用给定RF=2%、市场期望收益8%绘制新的CML/SML图和beta散点图。两张新PNG写入`runs/ch14_asset_pricing_<uuid>/`。历史French回归及历史残差图分支由`RUN_FRENCH=False`关闭，不在默认运行中读取或下载市场快照；本章第10–11节的NoDur图表是已有历史读物。
 
-运行器另在唯一`runs/execution_*`目录保存内核执行记录；它与Notebook打印的本章UUID方法目录用途不同。构造运行核对计算接口，不形成市场研究结果、PIT预测或扣费策略收益。第14章历史NoDur使用HAC5，第15章和项目2历史主表使用HAC6，点估计与推断设置须分别识别，不能为表面一致改写区间。本批仅核实际源代码，未执行这些Notebook或重跑历史回归。
+运行器另在唯一`runs/execution_*`目录保存内核执行记录；它与Notebook打印的本章UUID方法目录用途不同。构造运行核对计算接口，不形成市场研究结果、PIT预测或扣费策略收益。第14章历史NoDur使用HAC5，第15章和项目2历史主表使用HAC6，点估计与推断设置须分别识别，不能为表面一致改写区间。本章保留的是历史估计值，不报告重新运行的历史回归结果。
 
-第14章Notebook英文Markdown归BIL23，本批不改章Notebook。 下方CLI与旧制作测试按课程工作根理解；未随读者包提供的制作测试不要求补回。
+下方 CLI 使用历史市场数据，所需输入见项目的数据清单；默认 Notebook 使用构造数据。
 
-### 历史课程工作根与原实现
+### 共享实现与命令行入口
 
 核心计算封装在 [`asset_pricing.py`](../../../../src/quant_course/asset_pricing.py)：`beta_from_covariance` 实施协方差除以方差，`fit_capm_excess` 用单解释变量 OLS 恒等式返回点估计、拟合值、残差和 (R^2)，`capm_expected_return` 应用期望收益关系。异方差与自相关稳健推断（heteroskedasticity and autocorrelation consistent，HAC）由共享月频函数 `fit_monthly_factor_model` 负责；本章不另写第二套月度 HAC 引擎。所有输入缺失或不有限时都明确报错，不静默删行。
 
@@ -259,7 +259,7 @@ R_B-R_f=5\%+1.5(R_m-R_f-6\%)+\varepsilon.
 
 真实数据先按 manifest 对处理后文件做 SHA-256 校验，再检查 NoDur、Mkt-RF、RF 为连续 `PeriodIndex('M')` 月份。因子表中 Mkt-RF 已经扣掉 RF，因此被解释变量只做一次 `NoDur - RF`。以收益月份作标签，代码没有建立当时信息可得、发信号或成交的时间戳，所以它不是回测。月度 HAC 的 maxlags=5 是 5 个相邻月度观察行；月末间隔有 28、30、31 天，不转造成假的等秒 DatetimeIndex。统计显著性依赖时间序列近似假设与带宽选择，不能单独确认 alpha。
 
-上方CLI属于历史课程工作根制作流程，不是接受I3读者包的默认入口。第14-P01–P03可在已按环境说明安装本课程的工作根独立粘贴运行；本地`.venv/bin/python`已能直接导入`quant_course`，无需另加路径修补。
+第14-P01–P03可在按环境说明安装课程后，从仓库根目录独立运行。使用相同虚拟环境的 `.venv/bin/python` 导入 `quant_course`。
 
 ## 10. Visualization
 

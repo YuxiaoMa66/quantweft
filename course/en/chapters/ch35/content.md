@@ -1,6 +1,6 @@
 # Chapter 35 — Transaction Costs
 
-> Prior engineering evidence is cited under its original acceptance status. Through-line: map optimizer target weights and ideal prices through spread, slippage, impact, fees, financing, and borrow costs to scenario-specific fill quantities, cash changes, and ending net asset value (NAV). Prevent frictions already embedded in fill prices from being charged again as cash expenses, and establish self-financing and capacity-sensitive boundaries for net-return accounting. Prerequisites: Chapter 29, Backtest Ledgers; and Chapter 34, Market Microstructure. After reading, you should be able to separate the pricing logic for commissions, spreads, slippage, temporary impact, and permanent impact; derive the closed-form purchasable quantity under a self-financing constraint; post cash entries without double counting; hand-reconcile a complete implementation-shortfall ledger with partial fills and multi-asset frictions; and build turnover and capacity sensitivity analyses, including a strategy's break-even AUM.
+> Through-line: map optimizer target weights and ideal prices through spread, slippage, impact, fees, financing, and borrow costs to scenario-specific fill quantities, cash changes, and ending net asset value (NAV). Prevent frictions already embedded in fill prices from being charged again as cash expenses, and establish self-financing and capacity-sensitive boundaries for net-return accounting. Prerequisites: Chapter 29, Backtest Ledgers; and Chapter 34, Market Microstructure. After reading, you should be able to separate the pricing logic for commissions, spreads, slippage, temporary impact, and permanent impact; derive the closed-form purchasable quantity under a self-financing constraint; post cash entries without double counting; hand-reconcile a complete implementation-shortfall ledger with partial fills and multi-asset frictions; and build turnover and capacity sensitivity analyses, including a strategy's break-even AUM.
 
 ## 1. Learning Objectives
 
@@ -271,7 +271,7 @@ which double counts the spread and temporary impact and creates a fictitious cas
 
 ### 6.2 Equivalence Between NAV Changes and Implementation Shortfall
 
-The Perold (1988) entry is included here as a bibliographic record only. The 2026-10-09 source review checked publisher and author metadata; it did not read the paper itself. This batch carried forward that historical status without a new search or full-text review. The SEC (2003) document notes that, at the time, there was no universally accepted method for calculating portfolio implementation shortfall and discusses the concept's historical origins. This section adopts an explicit teaching convention: **the difference between paper-portfolio PnL and actual-portfolio PnL**. The decomposition into decision price, arrival price, cutoff price, and unfilled opportunity cost is the convention stated in this chapter; it is not a claim that all current markets or regulatory regimes use the same formula.
+The Perold (1988) entry is included here as a bibliographic record only. This chapter checked publisher and author metadata only; the paper itself was not read. This chapter checked publisher and author metadata only; the paper itself was not read. The SEC (2003) document notes that, at the time, there was no universally accepted method for calculating portfolio implementation shortfall and discusses the concept's historical origins. This section adopts an explicit teaching convention: **the difference between paper-portfolio PnL and actual-portfolio PnL**. The decomposition into decision price, arrival price, cutoff price, and unfilled opportunity cost is the convention stated in this chapter; it is not a claim that all current markets or regulatory regimes use the same formula.
 
 Suppose the investment decision is made at $t_{\text{dec}}$, with decision benchmark vector $P^{\text{dec}}$ and signed parent-order target $Q$. The order reaches the market at $t_{\text{arr}}$, when the midpoint vector is $P^{\text{arr}}$. The actual fill vector is $F$; fill VWAP $P_i^{\text{fill}}$ is defined only for $i\in\mathcal I_F=\{i:F_i\ne0\}$; the unfilled remainder is $R=Q-F$. At the end of the window or evaluation time $t_{\text{term}}$, the market mark vector is $P^{\text{term}}$. Every subscript $i$ below refers to the same asset.
 
@@ -546,7 +546,7 @@ The first two columns show how turnover and scale have different effects on unit
 
 ## 9. Python Implementation
 
-This chapter and Chapter 36 share `src/quant_course/execution_costs.py`; the experiment report and notebook call the same cost and execution core. The static I3 notebook inspection records that its default path has four cells, uses a small constructed ledger/IS example, and produces one figure. The Notebook creates its own unique `RUN_DIR` for fresh numerical and graphical outputs. The outer runner separately creates a unique execution directory for the executed Notebook copy and `execution.json`. This is not a full Project 4 CLI run. The English Notebook language layer remains assigned to BIL23. Common objects include:
+This chapter and Chapter 36 share `src/quant_course/execution_costs.py`; the experiment report and notebook call the same cost and execution core. The packaged Notebook uses four cells for a small constructed ledger/IS example and produces one figure. The Notebook creates its own unique `RUN_DIR` for fresh numerical and graphical outputs. The outer runner separately creates a unique execution directory for the executed Notebook copy and `execution.json`. This is not a full Project 4 CLI run. Common objects include:
 
 | Interface | Purpose |
 |---|---|
@@ -656,7 +656,7 @@ In institutional quantitative investing, real trading-cost structures can differ
 
 ### 11.2 Data Available in the Current Teaching Environment and Known Gaps
 
-The inventory in `qa/a7/ch35_ch36_batch/SOURCE_DATA_GAP.md` defines the data boundaries for the current course stage:
+The current data boundaries are:
 
 - **Available data:** The local environment contains monthly industry and factor-return snapshots from Kenneth French (used for macro and broad asset-pricing demonstrations) and constructed monthly signals from the Project 4 preparation layer.
 - **Missing real-world materials:** The local environment does not have per-stock intraday Level 2/Level 3 order-book replay data, daily historical intraday stock-borrow rates and availability flags, or live execution records containing broker dark-pool and smart-routing fills.
@@ -1189,7 +1189,7 @@ To build a complete academic and industry understanding of transaction costs, ma
 
 1. **Must Know**
    - **Perold, A. F. (1988).** *The Implementation Shortfall: Paper vs. Reality*. *The Journal of Portfolio Management*, 14(3), 4–9. [JPM publisher record](https://jpm.pm-research.com/content/14/3/4).
-     - *Why read it:* A bibliographic lead related to implementation shortfall. The 2026-10-09 source review checked publisher and author bibliographic metadata only; it did not read the paper's text. This chapter does not rely on this entry for a specific definition, formula, or priority claim. This batch carried forward that historical status without a new search or full-text review.
+     - *Why read it:* A bibliographic lead related to implementation shortfall. The 2026-10-09 source review checked publisher and author bibliographic metadata only; it did not read the paper's text. This chapter does not rely on this entry for a specific definition, formula, or priority claim. This chapter checked publisher and author metadata only; the paper itself was not read.
    - **Almgren, R., & Chriss, N. (2000).** *Optimal Execution of Portfolio Transactions*. *Journal of Risk*, 3(2), 5–39.
      - *Why read it:* A classic foundation for algorithmic execution and impact modeling. Read Sections 1–3 on the physical decomposition of temporary and permanent impact and the derivation of a discrete-time mean-variance optimal execution trajectory.
 2. **Should Know**

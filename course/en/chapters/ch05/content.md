@@ -372,7 +372,7 @@ Follow the [reader installation instructions](../../../../editions/en/README.md)
 .venv/bin/python run_notebook.py notebooks/ch05_linear_algebra.ipynb
 ```
 
-The default Notebook uses packaged shared logic without absent French inputs or downloads. New runs and figures use unique runs directories; the reader CLI uses universally unique identifiers (UUIDs) and rejects overwrites. Historical tests absent from the reader are original production-check references. Use the Notebook assertions. Optional French inputs require the [data contract](../../../../editions/en/OPTIONAL_DATA.md); this batch did not rerun them.
+The default Notebook uses packaged shared logic without absent French inputs or downloads. New runs and figures use unique runs directories; the reader CLI uses universally unique identifiers (UUIDs) and rejects overwrites. Historical tests absent from the reader are original production-check references. Use the Notebook assertions. Optional French inputs require the [data contract](../../../../editions/en/OPTIONAL_DATA.md); those optional French inputs are not run by default.
 
 The [shared PCA implementation](../../../../src/quant_course/math_tools.py) takes only a training matrix and returns its mean, row-stored directions, explained variances, ratios and training scores. Require at least two rows and one column of finite real values. It neither fills NaN nor standardizes; zero total variance raises an error. The separate original-course route uses [the script](../../../../code/ch05_linear_algebra.py), [Notebook](../../../../notebooks/ch05_linear_algebra.ipynb) and [project environment](../../../../editions/en/README.md):
 
@@ -789,6 +789,6 @@ Specify objects/order, derive matching-frequency returns from information-availa
 
 ## 20. References and Reading Boundaries
 
-The exposition and small examples are original teaching material, not a page-by-page textbook rewrite. Historical source verification is dated 2026-10-05; the [Chinese source audit record](../../../zh/chapters/ch05/source_notes.md) states actual reading and limits. No new external reading, market download or market execution was performed for this translation.
+The exposition and small examples are original teaching material, not a page-by-page textbook rewrite. The [chapter source notes](../../../zh/chapters/ch05/source_notes.md) list references and limitations.
 
 MIT_LA and MIT_LA_SYLL support course-topic mapping, without claiming every video/lecture was read. NP_SVD supports decomposition, reduced shapes, ordering and reconstruction; NP_EIGH supports real-symmetric input, column directions, ascending eigenvalues and the triangle convention. NP_SOLVE and NP_COND support full-rank square systems, errors and the two-norm condition number. SK_PCA supports centering/scaling and component/variance attributes; the project uses explicit shared SVD and does not claim equivalence to every online library default. The exact official URLs are retained in the source audit record and the reading links above.

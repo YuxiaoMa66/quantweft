@@ -1,20 +1,43 @@
-# 第41章来源核读记录（A8-B）
+# 第41章：参考资料
 
-区分三类：**作者核读**（Claude 主会话亲自读到原文对应位置）、**侦察报告**（AMC `scout-1791667422-cf64cb4c`，gemini-3.8-flash-high，报告原文 `qa/a8/ch40_ch41_batch/amc/scout_r1_REPORT.md`；侦察自报 R/A/B，作者未逐条复核者只按侦察报告记）、**本机源码**（`.venv` 中 scikit-learn 1.9.1 / numpy 2.5.3）。没有读到的页码不写。
+本页列出本章相关的论文、课程、数据来源与工具文档。
 
-| 键 | 用于正文 | 状态 | 读到的位置与内容 |
-|---|---|---|---|
-| CH41_LCBP1999 Laloux, Cizeau, Bouchaud, Potters (1999) | §6.3 上界、§11 | **作者核读** arXiv:cond-mat/9810255v1 PDF（SHA256 `2861aac6…`，2026-10-10 下载到会话工具结果目录，未入库） | 式(3)：$\lambda_{\max,\min}=\sigma^2(1+1/Q\pm2\sqrt{1/Q})$，$Q=T/N\ge1$，$N,T\to\infty$；$\sigma^2$ 为 $M$ 元素方差（其归一化下为 1）。有限 $N$ 时边缘模糊。实证：S&P 500 的 $N=406$ 只股票、1991–96 日变化、$T=1309$（$Q=3.22$）；最大特征值约为 $\lambda_{\max}$ 的 25 倍（正文）/30 倍（图1说明，原文两处不一致），对应"市场"；去掉市场后 $\sigma^2=0.85$，最佳拟合 $\sigma^2=0.74$，仍有若干特征值在上界之外。正文 §6.3 写作 $\sigma^2(1\pm\sqrt q)^2$，$q=N/T$，与式(3)代数等价。 |
-| CH41_JC2016 Jolliffe & Cadima (2016) | §5、§6.2 | 侦察报告（R，§2(c)） | 协方差 PCA 依赖尺度、方差大的变量主导；相关系数 PCA 适合单位不同的变量。作者未重读。 |
-| CH41_HAMILTON1989 | §5、§6.6 | 侦察报告（R，§3–4，pp.360–367） | 马尔可夫转换模型；滤波概率只用到 $t$，平滑概率用全样本。作者未读全文；正文 §6.6 的递推由作者按贝叶斯公式推出，并由 `tests/test_unsupervised_tools.py` 与 41-P02 验证"滤波不看未来"。 |
-| CH41_AT2012 Ang & Timmermann (2012) | §11、§19 | 侦察报告（R） | 状态转换在金融中的应用综述（厚尾、波动聚集、相关性变化）。作者未读全文，正文只作延伸阅读，不引用具体数字。 |
-| CH41_CK1986 Connor & Korajczyk (1986) | §19 | 侦察报告（A/R 混合） | 渐近主成分。仅作延伸阅读。 |
-| CH41_VL2010 von Luxburg (2010) | §5、§19 | 侦察报告（R） | 用重抽样一致性选择簇数及其理论局限。作者未读全文。 |
-| SK_KMEANS_DOC | §5 | 本机源码 + 侦察 | `KMeans` 目标为 inertia；1.9.1 默认 `n_init="auto"`（本章代码显式传 `n_init`）；`adjusted_rand_score` 为 Hubert–Arabie 调整兰德指数。 |
-| NUMPY | §6.1、§8.1 | 本机实现 | `numpy.linalg.eigh` 返回升序特征值，代码中降序重排并按本书符号约定定向。 |
+<a id="opened-source-documents"></a>
 
-侦察报告中未被正文使用的说法（例如 ARI 下界为 −0.5）不引入正文。正文的全部数值来自本批构造数据与 `code/ch41_unsupervised.py`，与上述文献无关。
+### NUMPY
 
-## BIL19双语教学修订边界
+[NumPy documentation](https://numpy.org/doc/stable/)
 
-历史文献核读身份沿用，未新联网核读或运行课程。重构R²正交分解与零分母API约定对照只读 unsupervised_tools.py；费用时钟及高斯混合硬分类流程对照只读 ch41_unsupervised.py，保留历史结果而解释其固定权重代理与第29章事件账本差别。HMM密度及PCA小算沿用主控7项独立算术证据。全k PCA/Ridge等价由正交范数保持直接推出，不是新实证。P6特征43序列AR与3价格列、10预测序列/8主表的定位见PRE_FREEZE_REVIEW_01.md。
+### SK_PITFALLS
+
+[scikit-learn Common pitfalls and recommended practices](https://scikit-learn.org/stable/common_pitfalls.html)
+
+### CH41_JC2016
+
+[Principal component analysis: a review and recent developments (Jolliffe & Cadima 2016, Phil. Trans. R. Soc. A 374, 20150202)](https://doi.org/10.1098/rsta.2015.0202)
+
+### CH41_LCBP1999
+
+[Noise dressing of financial correlation matrices (Laloux, Cizeau, Bouchaud, Potters 1999, PRL 83, 1467-1470)](https://arxiv.org/abs/cond-mat/9810255)
+
+### CH41_HAMILTON1989
+
+[A New Approach to the Economic Analysis of Nonstationary Time Series and the Business Cycle (Hamilton 1989, Econometrica 57(2), 357-384)](https://doi.org/10.2307/1912559)
+
+### CH41_AT2012
+
+[Regime Changes and Financial Markets (Ang & Timmermann 2012, Annual Review of Financial Economics 4, 313-337)](https://doi.org/10.1146/annurev-financial-110310-134302)
+
+### CH41_CK1986
+
+[Performance measurement with the arbitrage pricing theory: A new framework for analysis (Connor & Korajczyk 1986, JFE 15(3), 373-394)](https://doi.org/10.1016/0304-405X(86)90027-9)
+
+### CH41_VL2010
+
+[Clustering stability: an overview (von Luxburg 2010, Foundations and Trends in Machine Learning 2(3), 235-274)](https://arxiv.org/abs/1007.1075)
+
+### SK_KMEANS_DOC
+
+[scikit-learn 1.9.1: KMeans and adjusted_rand_score](https://scikit-learn.org/stable/modules/clustering.html)
+
+[章节正文](content.md) · [完整参考资料](../../../../editions/zh/resources/references.md)

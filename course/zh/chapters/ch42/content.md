@@ -444,7 +444,7 @@ print(f"Test predictions shape: {pred_te_real.shape}, Mean prediction: {pred_te_
 
 ## 10. Visualization
 
-历史冻结的 CONSTRUCTED 教学 CLI 实验生成了 5 幅图表；本轮仅复用原图，存放在相对目录 `figures/root_r2/` 下：
+以下 5 幅图表来自保存的 CONSTRUCTED 教学实验：
 
 ### 10.1 训练与验证损失曲线（Loss Curves & Early Stopping）
 ![Figure 42.1: MLP 训练与验证损失曲线](figures/root_r2/loss_curve.png)
@@ -485,7 +485,7 @@ print(f"Test predictions shape: {pred_te_real.shape}, Mean prediction: {pred_te_
    - LSTM 通过引入带遗忘门的恒定误差回路（CEC），建立了长程记忆的加法流动通道；
    - Transformer 通过点积自注意力突破了序列距离限制，并依赖因果掩码在注意力计算内部阻断未来信息。
 3. **市场数据未运行声明**：
-   本轮实验未运行真实二级市场行情数据回测；所有实证数字均来自本章冻结协议（种子 4201、4202、4203）的教学构造实验，严禁外推或混淆为真实市场业绩。
+   未使用真实二级市场行情进行回测；所有实证数字均来自本章冻结协议（种子 4201、4202、4203）的教学构造实验，严禁外推或混淆为真实市场业绩。
 
 ### 11.2 本章构造实验（Constructed Teaching Benchmark）数据汇总
 本章在遵循严格协议冻结的前提下，使用独立随机数种子（4201）生成了包含弱非线性（$0.0004 x_0 + 0.0002(x_1^2 - 1)$）与独立高斯噪声的合成资产面板。完整实证数据汇总于下表：
@@ -951,7 +951,7 @@ if __name__ == "__main__":
     run_c01_experiment()
 ```
 
-**继承历史冻结的事后教学运行数值（本轮未重跑）**：
+**保存的历史事后教学运行数值（未重新运行）**：
 - 合规流程：恢复 Best Epoch = 5，测试集 MSE = $0.0001018575$，$R^2 = -0.004977$；
 - 污染流程：恢复 Best Epoch = 17，测试集 MSE = $0.0001015535$，$R^2 = -0.001978$。
 
@@ -1033,7 +1033,7 @@ if __name__ == "__main__":
     run_c02_experiment()
 ```
 
-**继承历史冻结的事后教学运行数值（本轮未重跑）**：
+**保存的历史事后教学运行数值（未重新运行）**：
 - 0 bps（毛收益）：总收益率 +1.55%，Sharpe = +0.501；
 - 2 bps：总收益率 -1.88%，Sharpe = -0.541；
 - 5 bps：总收益率 -6.80%，Sharpe = -2.101；
@@ -1068,9 +1068,9 @@ if __name__ == "__main__":
 ## 20. References
 
 1. Goodfellow, I., Bengio, Y., & Courville, A. (2016). *Deep Learning*. MIT Press. 官方在线版：[前馈网络§6.2.2.1/§6.5](https://www.deeplearningbook.org/contents/mlp.html)、[批次与SGD§8.1.2–8.1.3/§8.3.1](https://www.deeplearningbook.org/contents/optimization.html)、[互相关与等变§9.1–9.2](https://www.deeplearningbook.org/contents/convnets.html)、[长期依赖§10.7及LSTM变体§10.10.1](https://www.deeplearningbook.org/contents/rnn.html)。
-2. Gers, F. A., Schmidhuber, J., & Cummins, F. (2000). Learning to Forget: Continual Prediction with LSTM. *Neural Computation*, 12(10), 2451–2471. [作者PDF](https://sferics.idsia.ch/pub/juergen/FgGates-NC.pdf)，历史来源核查只核标题、作者与摘要，本轮继承该范围；具体现代tanh门式见下一项。
+2. Gers, F. A., Schmidhuber, J., & Cummins, F. (2000). Learning to Forget: Continual Prediction with LSTM. *Neural Computation*, 12(10), 2451–2471. [作者PDF](https://sferics.idsia.ch/pub/juergen/FgGates-NC.pdf)，仅核对标题、作者与摘要，具体现代tanh门式见下一项。
 3. PyTorch Contributors. *torch.nn.LSTM*, 2.14官方文档。[现代六式](https://docs.pytorch.org/docs/2.14/generated/torch.nn.LSTM.html)。只作公式来源；本章未安装或调用PyTorch。
 4. Vaswani, A., et al. (2017). Attention Is All You Need. *Advances in Neural Information Processing Systems*, 30. [作者论文arXiv:1706.03762](https://arxiv.org/pdf/1706.03762)，核读§3.2.1、§3.2.3、§3.5。
 5. Scikit-learn Developers. [Common pitfalls and recommended practices](https://scikit-learn.org/stable/common_pitfalls.html)，核读预处理泄漏部分。
 
-历史来源核读范围、版本与证据见共享路径 `course/zh/chapters/ch42/source_notes.md`；BIL20继承这些记录，未重新访问网页；延伸阅读建议不等于本轮已核读全文。
+延伸阅读建议不等于已核读全文。

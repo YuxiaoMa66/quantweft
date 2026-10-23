@@ -4,7 +4,7 @@
 
 ## 运行
 
-以下是A6历史维护/复核入口，不是当前I3默认P5 Notebook；新读者从[当前项目导读](../README.md)按唯一RUN_DIR运行。A6结果不可与A5或c5拼接成同一实验，本批没有复跑。
+A6是独立的双资产构造账本示例，不与A5筛选诊断或c5三对研究合并为同一实验。普通读者主路线见[当前项目导读](../README.md)。
 
 与 Project 4 共用一个 CLI：
 
@@ -12,7 +12,7 @@
 .venv/bin/python projects/project04/backtest_preparation/backtest_interfaces.py
 ```
 
-结果在同一 JSON 的 `p05` 键下（`qa/a6/claude/results/p04_p05/p04_p05_backtest_interfaces.json`），图在 `figures/a6/p04_p05_backtest_interfaces.png` 右栏。测试：`tests/test_ch29_project_interfaces.py`。
+
 
 ## 为什么不用 A5 的 French 行业配对
 
@@ -35,5 +35,3 @@ JSON 报告训练估计（β 训练值与真值 1.5 的差别）、订单与成�
 ## 真实数据缺项
 
 两只（或多只）真实证券的未复权成交价、公司行动、可借券数量与费用、开盘/VWAP 执行价、双腿冲击；训练段内的筛选搜索次数（沿用 A5 账本）与多重检验；滚动 walk-forward 与协整破裂监测。
-
-根代理最终复跑：当前JSON。作者历史默认输出拒绝覆盖，复跑须指定新输出目录。

@@ -265,13 +265,13 @@ Beta说明对风险源的共同敏感度。假设组合的市场Beta为1.5，市
 
 ### 本读者版的默认运行入口
 
-本样章共享I3已接受读者包的实现。从克隆后的仓库根目录（`quantweft/`）建立环境，再运行：
+本样章使用读者包中的共享实现。从克隆后的仓库根目录（`quantweft/`）建立环境，再运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch01_lifecycle.ipynb
 ```
 
-默认构造Notebook不读取未随包提供的French数据、不下载数据；新输出写入唯一`runs/`子目录。以下历史CLI、测试和数据路径以课程根为工作目录；其中French路线须自备符合授权与manifest契约的输入，本批未运行。I3可搬移CLI默认写入新UUID的runs目录、拒绝覆盖；已位于读者根时不再执行`cd quantweft`。安装与可选数据说明见[接受读者安装入口](../../../../editions/zh/README.md)和[可选数据契约](../../../../editions/zh/OPTIONAL_DATA.md)。构造检查通过不代表真实市场计算已重新执行。
+默认构造Notebook不读取未随包提供的French数据、不下载数据；新输出写入唯一`runs/`子目录。French 数据分析须由读者提供符合数据契约且获准使用的本地输入。可搬移CLI默认写入新UUID的runs目录、拒绝覆盖；安装与可选数据说明见[读者安装入口](../../../../editions/zh/README.md)和[可选数据契约](../../../../editions/zh/OPTIONAL_DATA.md)。构造数据检查通过不代表真实市场计算已验证。
 
 
 本章脚本为[code/ch01_lifecycle.py](../../../../code/ch01_lifecycle.py)，Notebook为[ch01_lifecycle.ipynb](../../../../notebooks/ch01_lifecycle.ipynb)。运行环境和步骤见[环境说明](../../../../editions/zh/README.md)。脚本明确记录教学构造与资金口径，不发出交易指令。

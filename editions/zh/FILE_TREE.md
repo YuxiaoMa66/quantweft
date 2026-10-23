@@ -26,5 +26,3 @@ docs/                 # introduction website, navigation and legal notices
 LICENSES/             # full license texts
 third_party/          # retained upstream attribution
 ```
-
-从仓库根目录运行代码。环境与示例见 [Notebook 导读](NOTEBOOK_GUIDE.md)；数据可用性见 [可选输入](OPTIONAL_DATA.md)。内部构建和审阅记录不随读者仓库分发。

@@ -1,6 +1,6 @@
 # Project 2 Solutions
 
-> Reader note: The data version, values, negative results, and null results below are retained from the historical study and exercises. They are historical teaching material, not new market results from the current constructed-data run of the I3 reader notebook. The data-authorization branch is skipped by default.
+> Reader note: The data version, values, negative results, and null results below are retained from the historical study and exercises. They are historical teaching material, not new market results from the current constructed-data run of the default reader notebook. The data-authorization branch is skipped by default.
 
 The question numbers correspond to the [exercises](exercises.md). Multiply decimal returns by 100 to convert them to percentage points; the project outputs retain decimal precision.
 

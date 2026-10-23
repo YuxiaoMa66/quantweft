@@ -1,6 +1,6 @@
 # 第40章 树模型（Tree-Based Models）
 
-> 作者：Yuxiao Ma。既有 A8-B 构造实现已获限定范围接受、待正式整合；这不等于真实研究完成。主线：树用分段常数逼近非线性与交互，随机森林靠平均降低方差，梯度提升沿负梯度逐步修残差；它们的深度、叶样本、轮数和学习率都必须在训练内按日期选择，重要性只能当作有边界的诊断，经济结论仍看与基准同口径的成本后组合。
+> 作者：Yuxiao Ma。本章构造实现用于方法演示，不报告已完成的真实数据研究。主线：树用分段常数逼近非线性与交互，随机森林靠平均降低方差，梯度提升沿负梯度逐步修残差；它们的深度、叶样本、轮数和学习率都必须在训练内按日期选择，重要性只能当作有边界的诊断，经济结论仍看与基准同口径的成本后组合。
 > 先修：第38章管线（日期 walk-forward、标签可用时点、训练内调参）、第39章正则化线性模型（偏差—方差、基准比较）。完成后你能：手算一次最优切分和两轮提升；推导森林方差公式；说明 sklearn 1.9.1 中 HistGradientBoosting 内置早停为何不能直接用于面板；在第38章管线上比较树模型与线性模型的预测指标和成本后结果；计算按日期的置换重要性并解释它在相关特征下的局限。
 
 ## 1. 本章目标
@@ -186,7 +186,7 @@ $$
 
 ## 8. 完整数值例题
 
-本节数字均为教学构造。8.1–8.4 为手算，并由 `code/ch40_tree_models.py` 的 `hand` 部分与 scikit-learn 1.9.1 核对；8.5来自同一脚本的登记主模拟（种子与设定见脚本文档串和 `qa/a8/ch40_ch41_batch/DECISION_LOG.md` D08）；8.6是看到主结果后另加的D11五倍敏感性，不是事前主结果。
+本节数字均为教学构造。8.1–8.4 为手算，并由 `code/ch40_tree_models.py` 的 `hand` 部分与 scikit-learn 1.9.1 核对；8.5来自同一脚本的登记主模拟（种子与设定见脚本文档串和 脚本 docstring 中记录的 D08）；8.6是看到主结果后另加的D11五倍敏感性，不是事前主结果。
 
 ### 8.1 一次切分：逐个阈值计算
 
@@ -287,7 +287,7 @@ $x_2$ 与 $x_1$ 含有完全相同的信息，重要性却为 0。若模型碰�
 
 ## 9. Python Implementation
 
-- 核心模块 `src/quant_course/tree_models.py`（契约见 `qa/a8/ch40_ch41_batch/INTERFACE_CONTRACT.md` 第1节）：`make_estimator`、`fit_select_predict_tree`、`walk_forward_predict_tree`、`permutation_importance_by_date`、`simulate_interaction_panel`。外层与内层折、标签可用时点、缺失值规则复用第38章 `ml_pipeline.date_walk_forward`；评价与账本复用 `prediction_metrics` 与 `backtest_predictions`（第29章 `run_backtest`）。测试 `tests/test_tree_models.py`。
+- 核心模块 `src/quant_course/tree_models.py`：`make_estimator`、`fit_select_predict_tree`、`walk_forward_predict_tree`、`permutation_importance_by_date`、`simulate_interaction_panel`。外层与内层折、标签可用时点、缺失值规则复用第38章 `ml_pipeline.date_walk_forward`；评价与账本复用 `prediction_metrics` 与 `backtest_predictions`（第29章 `run_backtest`）。测试 `tests/test_tree_models.py`。
 - 章节脚本。复现时只传 `--out`；`--figures-dir` 会覆盖本章 `figures/` 中的源图，只在有意刷新源图时使用：
 
   ```bash
@@ -375,7 +375,7 @@ print(auto.do_early_stopping_, auto.validation_fraction)  # True 0.1: random 10%
 
 **问题。** 在 Project 6 已冻结的构造面板上，树模型相对零预测、训练均值和正则化线性模型，样本外预测与成本后组合是否更好；结果是否稳定；哪些特征组贡献了结果。
 
-**协议（`projects/project06/configs/p06_trees_v2.json`，首次 v2 运行前冻结，SHA256 `60101509…`）。** 继承 v1 的数据生成器、两个登记情景（基础、75% 处载荷反号）、特征（3 个价格特征 + 3 个有载荷特征 + 40 个零载荷特征）、$h=5$、滞后 1 日、外层扩张窗（最少 504 日、每折 63 日、16 折）、内层最后 2 个 63 日验证窗、美元中性组合与单边 0/10/20 个基点的第29章账本。新增：单树（深度 2/3/4/6、叶 1000）、随机森林（200 棵、`max_features=0.33`、叶 500/2000、`max_samples=0.5`）、梯度提升（HGB、上限 300 轮、学习率 0.05/0.02、深度 2/3、每叶至少500行，轮数在内层日期折上选择）、PCA+Ridge（第41章辅助消融）。重要性：每折最后一个内层验证窗上按日期置换（3 次）、价格/特征两组的组置换；外层测试窗置换重要性与随机森林 MDI 只作事后诊断。消融：去掉价格特征、只用价格特征、训练内前 10 特征。稳定性：每折所选参数与 IC、相邻折重要性排名相关、三个种子。比较统计：逐日 IC 相对 Ridge 的差及 NW $t$（滞后 4）。多次比较不做校正，全部为描述性结果。**冻结前已看过** A8-A v1 的构造结果（配置文件内逐条登记），因此这不是真实市场的事前预注册。v1 六个基线模型用未修改的 v1 代码重跑，与 A8-A c3 摘要逐值一致（两情景各 209 个数值，最大相对差 0）。
+**协议（`projects/project06/configs/p06_trees_v2.json`，研究开始前冻结，SHA256 `60101509…`）。** 继承 v1 的数据生成器、两个登记情景（基础、75% 处载荷反号）、特征（3 个价格特征 + 3 个有载荷特征 + 40 个零载荷特征）、$h=5$、滞后 1 日、外层扩张窗（最少 504 日、每折 63 日、16 折）、内层最后 2 个 63 日验证窗、美元中性组合与单边 0/10/20 个基点的第29章账本。模型包括：单树（深度 2/3/4/6、叶 1000）、随机森林（200 棵、`max_features=0.33`、叶 500/2000、`max_samples=0.5`）、梯度提升（HGB、上限 300 轮、学习率 0.05/0.02、深度 2/3、每叶至少500行，轮数在内层日期折上选择）、PCA+Ridge（第41章辅助消融）。重要性：每折最后一个内层验证窗上按日期置换（3 次）、价格/特征两组的组置换；外层测试窗置换重要性与随机森林 MDI 只作事后诊断。消融：去掉价格特征、只用价格特征、训练内前 10 特征。稳定性：每折所选参数与 IC、相邻折重要性排名相关、三个种子。比较统计：逐日 IC 相对 Ridge 的差及 NW $t$（滞后 4）。多次比较不做校正，全部为描述性结果。**方案冻结前已查看过**早期构造基线结果，并在配置中记录，因此这不是在查看结果前完成的真实市场预注册。六个基线模型与保存的摘要逐值一致（两情景各 209 个数值，最大相对差 0）。
 
 **结果：基础情景**（构造数据；$R^2_{\text{OS}}$ 相对训练均值；IC 为各模型**自身有 IC 的日期**上的逐日 Spearman IC 均值，括号内为 NW $t$（滞后 4 个交易日，只对日期连续的序列报告）；ΔIC 为模型与 Ridge 在**两者都有 IC 的共同日期**上的逐日差的均值；夏普按单边成本 0/10/20 个基点；换手为年化；10bp 下最大回撤：OLS −14.2%、Ridge −12.9%、Lasso −9.3%、Elastic Net −7.2%、单树 −20.0%、随机森林 −12.3%、梯度提升 −11.0%、PCA+Ridge −12.0%）：
 
@@ -464,7 +464,7 @@ $^{\mathrm a}$ **日期基数。** 有成熟标签的测试日为 1002 个。OLS
 
 **40-C01**（Project 6 v2 解读）阅读第13节表格与 `projects/project06/research_report/v2_trees.md`。(a) 树模型在两个登记情景下与 Ridge 的 IC 差（NW $t$）和成本后夏普差是什么方向？与第8.5–8.6节的结论一致吗？(b) 三个登记消融（去掉价格特征、只用价格特征、训练内前 10 特征）各说明了什么？(c) 种子稳定性：不同种子的预测相关与成本后夏普差多大？(d) 你会用哪些结果反驳"梯度提升发现了 Alpha"？额外先修：第37章基准与第32章绩效。
 
-**40-C02**（真实数据协议）为真实日频个股面板写一页树模型研究协议：特征与可得时点、标签、外层与内层折、网格与轮数选择、重要性窗口、消融、成本情景、种子、基准与反证条件。说明你如何保证它在看到真实结果之前冻结，以及哪些 `A8-A/A8-B` 构造结果你已经看过、需要披露。
+**40-C02**（真实数据协议）为真实日频个股面板写一页树模型研究协议：特征与可得时点、标签、外层与内层折、网格与轮数选择、重要性窗口、消融、成本情景、种子、基准与反证条件。说明你如何保证它在看到真实结果之前冻结，以及此前是否看过构造结果并需要披露。
 
 ## 18. 完整答案
 
@@ -625,13 +625,13 @@ assert np.array_equal(Xp["sig"], Xp["twin"])
 
 ## 20. References
 
-以下“作者核读”均指原课程作者历史核读，记录在source_notes；BIL19沿用其身份，本轮未重新打开原文或联网核读。
 
-完整链接与核读位置见 `references.md`, `references/sources.json` 与本章 `source_notes.md`。
 
-- `SK_PITFALLS`：scikit-learn "Common pitfalls"。用于第7节、第12.3节训练内预处理。核读：沿用 A8-A 登记。
-- `SK_TREE_SRC`：scikit-learn 1.9.1 本机源码：`tree/_classes.py`（`feature_importances_` 文档串警告）、`ensemble/_forest.py`（`RandomForestRegressor.max_features` 默认 1.0）、`ensemble/_hist_gradient_boosting/` 下 `gradient_boosting.py` 第533–581行（`early_stopping="auto"` 与 `train_test_split`）、`splitting.pyx` `compute_node_value`（$-G/(H+\lambda)$）、`grower.py`（shrinkage = learning_rate）。用于第5节、第6.3–6.4节、第12.1节。核读：**作者核读**（本机源码）。
-- `CH37_GKX2020`：Gu, S., Kelly, B., & Xiu, D. (2020). Empirical asset pricing via machine learning. *RFS*, 33(5), 2223–2274。用于第2节、第11节。核读：**作者核读**：第2248–2249页样本与切分、脚注32、第2251页 RF 0.33%/GBRT+H 0.34% 与浅树、第2252页大市值 0.52%–0.70%。
+链接与参考资料见 `references.md`, `references/sources.json` 与本章 `source_notes.md`。
+
+- `SK_PITFALLS`：scikit-learn "Common pitfalls"。用于第7节、第12.3节训练内预处理。
+- `SK_TREE_SRC`：scikit-learn 1.9.1 本机源码：`tree/_classes.py`（`feature_importances_` 文档串警告）、`ensemble/_forest.py`（`RandomForestRegressor.max_features` 默认 1.0）、`ensemble/_hist_gradient_boosting/` 下 `gradient_boosting.py` 第533–581行（`early_stopping="auto"` 与 `train_test_split`）、`splitting.pyx` `compute_node_value`（$-G/(H+\lambda)$）、`grower.py`（shrinkage = learning_rate）。用于第5节、第6.3–6.4节、第12.1节。
+- `CH37_GKX2020`：Gu, S., Kelly, B., & Xiu, D. (2020). Empirical asset pricing via machine learning. *RFS*, 33(5), 2223–2274。用于第2节、第11节。第2248–2249页样本与切分、脚注32、第2251页 RF 0.33%/GBRT+H 0.34% 与浅树、第2252页大市值 0.52%–0.70%。
 - `CH40_BREIMAN2001`：Breiman, L. (2001). Random forests. *Machine Learning*, 45, 5–32。用于第5节、第6.2节、第19节。核读：侦察报告（R）。
 - `ESL_2ND_ED`：Hastie, Tibshirani, Friedman (2009). *The Elements of Statistical Learning*, 2nd ed。用于第6.2节式(15.1)、第6.3节。核读：侦察报告（R：第15.2节第588页式15.1）；作者未重读。
 - `CH40_FRIEDMAN2001`：Friedman, J. H. (2001). Greedy function approximation: a gradient boosting machine. *Annals of Statistics*, 29(5), 1189–1232。用于第6.3节。核读：侦察报告（R）。
@@ -644,4 +644,4 @@ assert np.array_equal(Xp["sig"], Xp["twin"])
 
 ## Notebook读者入口
 
-I3的第40章Notebook有11格、5代码格；会fresh计算手算核与5倍交互面板的7模型，并在新RUN_DIR写两图，不是读取旧缓存。它不运行完整CLI的四面板或全部重要性；5倍仍为D11事后诊断。Notebook语言层在BIL23处理，本批未运行或修改Notebook。
+第40章 Notebook有11格、5代码格；会fresh计算手算核与5倍交互面板的7模型，并在新RUN_DIR写两图，不是读取旧缓存。它不运行完整CLI的四面板或全部重要性；5倍仍为D11事后诊断。

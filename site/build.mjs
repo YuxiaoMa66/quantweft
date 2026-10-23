@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import MarkdownIt from 'markdown-it';
 import container from 'markdown-it-container';
 import cjkFriendly from 'markdown-it-cjk-friendly';
+import {isReaderSource} from './reader-sources.mjs';
 import {isPrintLayout,stripPrintLines} from './print-layout.mjs';
 import texmath from 'markdown-it-texmath';
 import katex from 'katex';
@@ -16,7 +17,7 @@ const git = 'https://github.com/YuxiaoMa66/quantweft/blob/main/';
 // GitHub's /raw/ path downloads the PDF instead of opening the slow blob viewer.
 const pdf = 'https://github.com/YuxiaoMa66/quantweft/raw/main/';
 const files = execFileSync('git', ['ls-files'], { cwd: root, encoding: 'utf8' }).trim().split('\n');
-const sources = files.filter(p => p.endsWith('.md') && !p.startsWith('third_party/'));
+const sources = files.filter(isReaderSource);
 const read = p => fs.readFileSync(path.join(root, p), 'utf8');
 const escape = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const slug = s => s.toLowerCase().replace(/[^\p{L}\p{N}_\s-]/gu, '').trim().replace(/\s/g, '-');

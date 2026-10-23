@@ -1,6 +1,6 @@
 # QuantWeft: English learning guide
 
-Local formal edition (2026-10-19): the complete English body and workbook PDFs for Chapters 1–45, Projects 1–6, and the Capstone have been independently accepted; the shared code, runner, and dependencies sit at this package root and were cold-started in an isolated directory with the commands on this page (scope in [Validation scope](LOCAL_VALIDATION.md)). This describes the local acceptance record. The web edition was published on 2026-10-20; PDFs download directly from the public GitHub repository. Real-market research has not been run.
+Read the 45 chapters online, download the textbook and workbook PDFs, or run the accompanying Python examples. The course includes six projects and a Capstone; start with the learning route below.
 
 [Full body PDF](body/quantweft-textbook-en.pdf) · [Full workbook PDF](workbook/quantweft-workbook-en.pdf)
 
@@ -48,13 +48,13 @@ python3 -m venv .venv
 .venv/bin/python run_notebook.py editions/en/notebooks/ch35_execution_ledger_constructed.ipynb
 ```
 
-Commands printed in the books, `run_notebook.py notebooks/chNN_*.ipynb` and `projects/<project>/notebooks/*.ipynb`, run the accepted I3 Notebook copies at the package root and work as printed. The English language views of the same Notebooks are under `editions/en/notebooks/` and `editions/en/projects/`, the Chinese views under the same paths in `editions/zh/`; code cells are identical. Project Notebooks do not read the undistributed French data on their default route.
+Commands printed in the books, `run_notebook.py notebooks/chNN_*.ipynb` and `projects/<project>/notebooks/*.ipynb`, run the Notebooks at the repository root and work as printed. The English language views of the same Notebooks are under `editions/en/notebooks/` and `editions/en/projects/`, the Chinese views under the same paths in `editions/zh/`; code cells are identical. Project Notebooks do not read the undistributed French data on their default route.
 
 ## Data and research results
 
-The default route is offline. French raw, extracted and processed data are not bundled. G01’s actual legal entity, purpose and rights remain unknown; G05 has not authorized A10-B. A10-A has limited design acceptance and A10-A.1 technical protocol acceptance, neither market-execution permission. Public availability does not establish research-use or redistribution rights. Do not download market data to run these Notebooks or label constructed replacements as missing historical market inputs.
+The default route is offline. French raw, extracted and processed data are not bundled. Market-data research use and redistribution require separate permission; the repository does not contain all inputs for real-market studies. Public availability does not establish research-use or redistribution rights. Do not download market data to run these Notebooks or label constructed replacements as missing historical market inputs.
 
-Historical acceptance of Projects 1–3 binds its original version and scope, not stock-level PIT or tradability. Projects 4–6 retain their recorded market-research blocks and evidence gaps; constructed method checks cannot close them. Chapter 39’s historical row predictions and common-date paired evidence remain missing, without fabrication or retraining. Fixed summaries and figures replay their original records rather than new verification. Retain all negative and zero results; unknown or blocked does not mean a zero effect.
+The Project 1–3 examples do not establish stock-level PIT coverage or tradability. Projects 4–6 retain their recorded market-research blocks and evidence gaps; constructed method checks cannot close them. Chapter 39’s historical row predictions and common-date paired evidence remain missing, without fabrication or retraining. Fixed summaries and figures replay their original records rather than new verification. Retain all negative and zero results; unknown or blocked does not mean a zero effect.
 
 The Capstone supplies accepted research questions, timing contracts, protocol, dictionary and 18 report guides, plus fixed two-asset offline engineering. Its French monthly configuration is parameter teaching only; the market adapter is unimplemented and target market research/results have not been produced. Engineering PASS does not answer the target net-mean hypothesis. Exposed history cannot become a blind holdout again; historical availability, ingestion and revision clocks remain unknown.
 
@@ -62,13 +62,13 @@ The Capstone supplies accepted research questions, timing contracts, protocol, d
 
 [Exercise design credit](../../docs/legal/ACKNOWLEDGEMENTS.md): selected design and layout ideas draw on loom-notes, adapted to the course rather than using the template in full.
 
-The project is now **QuantWeft**, a bilingual course in quantitative finance and systematic research. The four PDF filenames use the new brand; accepted PDF content, page numbers, and legacy internal terminology are unchanged.
+**QuantWeft** is a bilingual course in quantitative finance and systematic research, with a textbook and workbook in each language.
 
-[License scope](../../LICENSE.md): original software MIT; author-controlled original educational content CC BY-NC-SA 4.0 for non-commercial use. Commercial use requires separate permission. See [third-party exceptions](../../docs/legal/THIRD_PARTY_NOTICES.md) and the [rights review](../../docs/legal/RIGHTS_REVIEW.md). [Voluntary support](../../.github/SUPPORT.md) is not required; payment channels are inactive.
+[License scope](../../LICENSE.md): original software MIT; author-controlled original educational content CC BY-NC-SA 4.0 for non-commercial use. Commercial use requires separate permission. See [third-party exceptions](../../docs/legal/THIRD_PARTY_NOTICES.md) and the [rights review](../../docs/legal/RIGHTS_REVIEW.md). [Voluntary support](../../.github/SUPPORT.md) is not required; WeChat Pay and Alipay support codes are available on the support page.
 
 
-## Repository paths and historical references
+## Running repository examples
 
-Run commands from the cloned `quantweft/` repository root; do not run `cd quantweft` again if already there. The original I3 reader and this repository share the implementation: `outputs/quant_course_reader_candidate_20261014/` identifies the source package, not a subdirectory in this checkout. This page is the setup entry; see the [optional data contract](OPTIONAL_DATA.md) for optional inputs. Historical QA, omitted market inputs and outputs generated only after execution retain their original status. References to files not bundled here remain textual records rather than clickable repository-file links.
+Run commands from the cloned `quantweft/` repository root. Notebook output files appear after you execute the corresponding cells; optional market inputs are not included. See the setup steps above and the [optional data guide](OPTIONAL_DATA.md).
 
 Some bundled project TeX files are layout fragments without the complete historical input chain. Use the complete workbook PDF linked on this page for the exercises and their answers.

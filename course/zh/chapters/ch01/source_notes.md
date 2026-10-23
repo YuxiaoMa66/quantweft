@@ -1,12 +1,23 @@
-# Chapter 1 来源范围与教学构造
+# 第1章：参考资料
 
-课程架构批次核验日期2026-10-05；本章研究生命周期、岗位任务、数字和练习为原创教学组织，不把教学例子称为真实基金交易或论文实验。
+本页列出本章相关的论文、课程、数据来源与工具文档。
 
-基础体系参考来源已登记references/sources.json：Princeton ORFE Undergraduate Program官方课程概述用于金融工程/数学/计算体系映射；MIT OCW 15.401 Finance Theory I官方课程概述用于金融基础、风险与定价主线。架构批次实际读取概述，未声称逐份读完讲义。本章不引用未经取得的教材页码，也不把岗位分类当作所有机构统一使用的组织标准。
+<a id="opened-source-documents"></a>
 
-组合毛收益1%、绝对权重变化和0.2、单边成本10bp、净收益0.98%及100000变100980均为显式手算/程序构造；成本按绝对权重变化和计算，未除以2。信号时点、下一期成交与收益区间是教学时间契约，不声称实际交易所记录。
+### ORFE
 
-正文A1验收、独立片段执行、同章答案和代表页视觉检查见qa/a1/acceptance.md。来源键的核验记录只是课程概述读取范围，不替代以后各方法章的主题专属论文和数据验证；本记录补齐每章来源边界，不改变已发布A1正文或PDF。
+[Princeton ORFE Undergraduate Program](https://orfe.princeton.edu/undergraduate)
 
+### MIT_FIN
 
-BIL01新增桥接为原创教学构造；本轮未重新联网、未新增全文阅读。I3读者导航/实现与既有历史核读层级沿用，补讲按本批独立复算证据。
+[MIT OCW 15.401 Finance Theory I (Fall 2008)](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/)
+
+### SEC_ALGO
+
+[Staff Report on Algorithmic Trading in U.S. Capital Markets](https://www.sec.gov/files/algo_trading_report_2020.pdf)
+
+### FRENCH_10
+
+[Detail for 10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html)
+
+[章节正文](content.md) · [完整参考资料](../../../../editions/zh/resources/references.md)

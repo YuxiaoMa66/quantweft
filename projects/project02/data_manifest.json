@@ -40,7 +40,7 @@
         "-99.99",
         "-999"
       ],
-      "keka_validation": "passed; Keka 7z archive test reported Everything is Ok"
+      "archive_integrity": "passed"
     },
     "ff3": {
       "course_manifest": "data/manifests/french_factors_2026-10-05.json",
@@ -90,7 +90,7 @@
         "-99.99",
         "-999"
       ],
-      "keka_validation": "passed; Keka 7z archive test reported Everything is Ok"
+      "archive_integrity": "passed"
     },
     "ff5": {
       "course_manifest": "data/manifests/french_factors_2026-10-05.json",
@@ -142,7 +142,7 @@
         "-99.99",
         "-999"
       ],
-      "keka_validation": "passed; Keka 7z archive test reported Everything is Ok"
+      "archive_integrity": "passed"
     }
   },
   "selected_sample": {

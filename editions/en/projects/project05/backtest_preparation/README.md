@@ -4,13 +4,13 @@ Status: the historical A6 constructed interface has limited acceptance. This lay
 
 ## Run
 
-The commands below are historical A6 maintenance and review entry points, not the current default P5 Notebook in the I3 package. New readers should start from the [current project guide](../README.md) and use its unique RUN_DIR. A6 results cannot be joined with A5 or c5 results as if they were one experiment. This batch did not rerun A6.
+A6 is a separate two-asset constructed-ledger example. Keep it distinct from the A5 screening diagnostic and the c5 three-pair study. See the [current project guide](../README.md) for the reader route.
 
 A6 shares a CLI with Project 4:
 
     .venv/bin/python projects/project04/backtest_preparation/backtest_interfaces.py
 
-Results are stored under the p05 key in the same JSON (qa/a6/claude/results/p04_p05/p04_p05_backtest_interfaces.json); the figure is in the right panel of figures/a6/p04_p05_backtest_interfaces.png. Test: tests/test_ch29_project_interfaces.py.
+
 
 ## Why not use the A5 French industry pairs?
 
@@ -33,5 +33,3 @@ The JSON reports the training estimate (the difference between the estimated bet
 ## Missing real-data inputs
 
 Unadjusted execution prices for two or more real securities, corporate actions, borrowable quantity and fees, open/VWAP execution prices, and two-leg impact; the number of screening searches within the training segment (using the A5 ledger) and multiple testing; rolling walk-forward and cointegration-breakdown monitoring.
-
-Root agent's final rerun: current JSON. The author's historical default output refuses to overwrite; reruns must specify a new output directory.

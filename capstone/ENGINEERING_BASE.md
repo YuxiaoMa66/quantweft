@@ -4,8 +4,8 @@
 
 
 **状态**：`construction-only`（仅构造数据基线，无真实市场数据、无真实实盘/券商执行）。  
-**版本**：`1.0.0` (A9-B Engineering Foundation Freeze)  
-**配置冻结文件**：`capstone/configs/offline_constructed.json`
+**版本**：1.0.0
+**构造配置**：capstone/configs/offline_constructed.json
 
 ---
 
@@ -19,7 +19,7 @@
 3. **因果与时点严格隔离**：
    - 特征与信号决策仅可读取 $\le \text{signal\_time}$ 的观测数据（`available_at`, `ingested_at`, `as_of`）。
    - 未来次日撮合（$09:00\text{Z}, 09:01\text{Z}$）与期末结算标记（$16:00\text{Z}$）仅供模拟器读取，严禁泄漏至特征与信号层。
-4. **研究待办边界**：本阶段仅确立工程架构与质量闸门，18项研究报告中的策略发现与实盘检验均标为 `pending_A10`。
+4. **研究范围**：本工程基础说明构造数据下的技术架构，不报告策略研究结果或真实市场检验。
 
 ---
 
@@ -28,7 +28,7 @@
 \color{qink}
 
 
-以下运行说明适用于完整课程包。恢复检查入口 `capstone/check_portable.py` 已按已接受I3只读来源逐字节恢复，可在包根直接运行。
+以下运行说明适用于完整课程包。恢复检查入口 capstone/check_portable.py 可在包根运行。
 
 从包根按[读者 README](../README.md)建立独立环境。每次生成新 `runs/` 子目录，使用原固定构造配置；目录、状态库与任务键在同一次调用中保持一致：
 
@@ -40,9 +40,9 @@ run="runs/capstone_$(.venv/bin/python -c 'from uuid import uuid4; print(uuid4().
 .venv/bin/python capstone/run_offline.py --config capstone/configs/offline_constructed.json --run-key reader --state-db "$run/state.db" --output-dir "$run/artifacts"
 ```
 
-需要只读两笔成交及现金核账时，按[PATH09 完整链](../print_examples/PATH09_CHAIN.md)复用同一次状态库和任务键。已有恢复/幂等检查入口为 `capstone/check_portable.py`，本次文档适配不要求重复历史47项检查。
+需要只读核对两笔成交及现金时，可按 PATH09 完整链复用同一次状态库和任务键。capstone/check_portable.py 提供恢复与幂等检查入口。
 
-原 A9-B 版本将命令写到 `build/batches/A9-B/r2/...`；那些固定目录是**历史审计运行位置**，不是当前便携运行指令。原文来源及 SHA 在[便携历史接受摘要](ACCEPTED_ENGINEERING_VERSION.md)中保留。本文其余工程接口沿用，不改变原接受裁定、固定配置或18项研究模板。
+从课程包根目录按本节命令运行。固定配置使用双资产构造教学数据；输出仅描述离线工程示例。18 项研究报告结构用于组织证据，不代表研究结果或市场数据使用授权。
 
 ---
 
@@ -98,14 +98,14 @@ run="runs/capstone_$(.venv/bin/python -c 'from uuid import uuid4; print(uuid4().
 * `report_evidence_interface.json`：18章研究证据接口定义（Capstone 入口生成）。
 * `figures/`：图表（门禁结果指示图 `gate_outcomes.png`、现金与 NAV 演进图 `cash_nav_timeline.png`）。
 
-* `normalized_inputs.json`、`normalized_config.json`、`lineage.json`：规范化输入、配置与版本血缘，全部绑定发布hash。结构化事件保存在SQLite events，运行stdout为JSON摘要；没有启动Python logging平台/Prometheus服务。图由CLI发布后生成，图不纳入核心缓存提交事务；正文图另存候选manifest。
+* normalized_inputs.json、normalized_config.json、lineage.json：规范化输入、配置与版本血缘，绑定发布文件校验和。结构化事件保存在 SQLite events，stdout 为 JSON 摘要。图由 CLI 发布后生成，不纳入核心缓存提交事务。
 
-恢复仅覆盖本批受控Python异常和本机SQLite/目录发布测试；未断电、未验分布式多进程、未运行真实券商模拟盘。Dockerfile为参考配置，镜像未构建、容器未运行，基础tag/未锁定依赖也不构成字节环境冻结。
+恢复机制处理受控 Python 异常与本机 SQLite/目录发布流程；不涵盖断电、分布式多进程故障或真实券商接入。Dockerfile 是参考配置；容器构建和依赖锁定需单独处理。
 
-`capstone/.dockerignore`是骨架参考；上述course-root构建的有效默认ignore应位于构建上下文根。本Dockerfile只COPY指定src/capstone/code，不COPY build或.venv，但此说明不代替镜像实际构建检查。
+capstone/.dockerignore 是骨架参考；course-root 构建上下文的默认 ignore 文件应位于上下文根。本 Dockerfile 仅复制指定的 src/capstone/code 路径，不复制 build 或 .venv。
 
-## R2限定返修接口
+## 附加技术约束
 
 \color{qink}
 
-金额容差1e−6 USD；固定配置股数有限正实数，非正信号目标0，算例整数，不校验券商lot size。观测/执行/估值资产集合一致，在状态创建前验证。压力简单收益≥−1，正冲击为一般情景允许，loss=−scenarioPnL可能为负。计算后非有限动量写FEATURE_VALIDATION_FAILED/STOPPED，0fills/不发布；终局独立对账失败写TERMINAL_RECONCILIATION_FAILED/STOPPED，保留原fills并拒绝重试。三种发布恢复：未发布新attempt；已发布有效补完成；已发布损坏拒绝。故障计累计实际成交次序，不绑定资产名；恢复不再注入第一笔已有成交，无足够正目标的指定故障在DB前拒绝。标签成熟后监控可在线更新，不能提前用未来标签；本批不运行模型监控。
+金额容差1e−6 USD；固定配置股数有限正实数，非正信号目标0，算例整数，不校验券商lot size。观测/执行/估值资产集合一致，在状态创建前验证。压力简单收益≥−1，正冲击为一般情景允许，loss=−scenarioPnL可能为负。计算后非有限动量写FEATURE_VALIDATION_FAILED/STOPPED，0fills/不发布；终局独立对账失败写TERMINAL_RECONCILIATION_FAILED/STOPPED，保留原fills并拒绝重试。三种发布恢复：未发布新attempt；已发布有效补完成；已发布损坏拒绝。故障计累计实际成交次序，不绑定资产名；恢复不再注入第一笔已有成交，无足够正目标的指定故障在DB前拒绝。标签成熟后监控可在线更新，不能提前用未来标签；该示例不运行模型监控。

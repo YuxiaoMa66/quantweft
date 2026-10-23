@@ -21,14 +21,10 @@
 ## 按顺序阅读
 
 - [读者导读](READER_GUIDE.md)：输入、动作、输出、公式、图轴及六题的材料归属。
-- [中文Notebook语言投影](../../editions/zh/projects/project01/notebooks/project01_financial_data_analysis.ipynb)：沿用接受I3的同一数值单元，只修说明。
+- [中文 Notebook](../../editions/zh/projects/project01/notebooks/project01_financial_data_analysis.ipynb)：使用构造数据完成计算与练习。
 - [数据字典](data_dictionary.md)与[原数据清单](data_manifest.json)：区分构造列契约、历史快照哈希链、组合形成日和分类代码来源期。
 - [历史报告](research_report/report.md)、[六题练习](exercises.md)与[全部参考答案](solutions.md)：报告读取题对应原快照，不用构造结果替换答案。
-- [历史配置](configs/analysis.json)与[历史QA](qa/acceptance.md)：固定窗口、年化约定及原验收范围。
+- [历史配置](configs/analysis.json)：固定窗口与年化约定。
 - [English project materials](../../editions/en/projects/project01/README.md)：英文导读、字典、完整历史报告和题答。
-
-## 历史课程工作路线
-
-原课程工作根命令为`.venv/bin/python projects/project01/run_project01.py`；它依赖清单绑定的French原始ZIP、解压CSV和处理后CSV，原制作测试在`tests/test_project01_analysis.py`。这些是历史复现位置，不是当前离线Notebook默认路线。原输出身份见报告与QA，本批没有运行或重新生成。
 
 G01数据权利/主体/用途未解决，G05/A10-B未授权；A10-A.1技术协议接受不等于数据许可或执行授权。自备数据契约只供理解未来输入要求，不在本次读者运行中启用市场分支。

@@ -3,7 +3,7 @@
 \color{qink}
 
 
-**Status:** The bounded research design and technical protocol have been accepted; target-market execution is blocked. See the current [Capstone README](../README.md). The engineering appendix below retains its historical identity and is not a French-market result. The original generic prompts are provided for comparison. The selected French protocol does not include model training, neutralization, a Cartesian grid, or mandatory DSR/PBO calculations; use the current design and report guide for each section.
+The report template separates the constructed engineering example from the French-market study. Historical timing and rights limits are summarized in the current [Capstone README](../README.md). The selected French protocol does not include model training, neutralization, a Cartesian grid, or mandatory DSR/PBO calculations; use the current design and report guide for each section.
 
 ## 1. Research Hypothesis
 
@@ -163,46 +163,46 @@ Data, trading, statistical, model, market-regime, capacity, and deployment gaps;
 \color{qink}
 
 
-Fixed now: R/P, S01/S02/S06: current reportable status is design/protocol technically accepted and execution blocked; future positive, zero, negative, or interval-crossing-zero outcomes each have their own interpretation. Engineering PASS does not answer $\mu_d>0$. See [Guide item 18](REPORT_GUIDE.md#item-18). Target-market output: **not run**.
+the research design and protocol specify how outcomes should be interpreted
 
 Answer the initial hypothesis; distinguish evidence, conjecture, and unresolved questions. Report honestly if the net result is not economically meaningful.
 
 ---
 
-## Engineering Foundation Evidence Appendix (A9-B Engineering Base Interface)
+## Constructed Engineering Example: Scope and Limits
 
 \color{qink}
 
 
-The following preserves the historical status and figures from the original A9-B engineering appendix. These historical `pending` / candidate labels do not override the current A10-A / A10-A.1 acceptance status and do not mean that market research has been run. See the [current research entry](../README.md) and the 18 guide items above for current conventions.
+This appendix describes the offline constructed engineering example and the research it does not cover. Its figures are teaching data, not French-market results.
 
-**Historical status:** The A9-B engineering-foundation phase was completed, providing an offline production pipeline, quality gates, persistent ledger, and reconciliation loop. All real research and strategy-development work was explicitly marked `pending_A10` at that time.
+The offline example covers input data, quality checks, signals, simulated fills, ledger, risk, reconciliation, and reporting. It produces no real-market study or strategy conclusion.
 
-### Engineering evidence and research status by report section
+### Implementation scope by report topic
 
 \color{qink}
 
 
-| Report section | Historical status | Engineering evidence / artifact index | Note |
+| Report section | Scope | Constructed example | Research gap |
 |---|---|---|---|
-| 1. Research Hypothesis | `pending_A10` | No strategy hypothesis; framework interface only | Formal research hypothesis awaited A10 |
-| 2. Data Sources | `pending_A10` | `CONSTRUCTED_TEACHING_DATA` v1.0.0 | No external real-data download |
-| 3. Data Dictionary | `pending_A10` | `capstone/data_dictionary.md` appendix | Constructed-field engineering dictionary only |
-| 4. Point-in-Time Logic | `author_candidate_pending_independent_acceptance` | $\max(\texttt{avail},\texttt{ingest},\texttt{as\_of})\le\texttt{signal}<\texttt{trade}$ | Constructed time contract and rejection tests; pending independent acceptance at the time |
-| 5. Data Cleaning | `author_candidate_pending_independent_acceptance` | Staleness threshold ($\le 3600\text{ s}$), strictly positive prices, non-null/non-duplicate checks | Rejects the anomalies listed in the pre-fill contract |
-| 6. Feature Engineering | `pending_A10` | One-period teaching momentum $(P_t-P_{t-1})/P_{t-1}>0$ | Formal A10 feature engineering and ablation were pending |
-| 7. Signal Construction | `pending_A10` | Fixed teaching allocation quantities (A: 10, B: 20) | Cross-sectional ranking and neutralization awaited A10 |
-| 8. Portfolio Construction | `pending_A10` | Fixed teaching positions; ex-ante leverage check $0.20\le0.50$ | Formal portfolio method awaited A10 preregistration |
-| 9. Transaction Cost Model | `author_candidate_pending_independent_acceptance` | 10 bps spread embedded in fill price; 10 bps commission charged explicitly | No duplicate charge; total cost USD 4.002 |
-| 10. Walk-Forward Validation | `pending_A10` | No rolling-window split run | Real rolling out-of-sample backtest awaited A10 |
-| 11. Performance Analysis | `pending_A10` | Baseline ending NAV $9{,}995.998\,\mathrm{USD}$; net loss $-4.002\,\mathrm{USD}$ | Teaching example, not real strategy alpha |
-| 12. Risk Analysis | `author_candidate_pending_independent_acceptance` | $-10\%$ market-shock scenario loss USD 200.0 $\le$ USD 1000.0 limit | Stress test and ex-ante leverage gate passed |
-| 13. Factor Attribution | `pending_A10` | No multi-factor decomposition | Attribution awaited A10 under Project 2 units/RF/HAC rules |
-| 14. Robustness Tests | `pending_A10` | No parameter-robustness perturbations | Subsample and sensitivity analyses awaited A10 |
-| 15. Parameter Sensitivity | `pending_A10` | No parameter-grid scan | Parameter response surface awaited A10 |
-| 16. Overfitting Discussion | `pending_A10` | No multiple-testing check | PSR/DSR/PBO calculations awaited A10 |
-| 17. Limitations | `author_candidate_pending_independent_acceptance` | Offline, single-process environment; constructed teaching data; no live-market impact | Engineering boundaries stated; no extrapolation |
-| 18. Final Research Conclusion | `pending_A10` | Constructed engineering-interface candidate; strategy-validity test awaited A10 | No unsupported empirical investment conclusion |
+| 1. Research Hypothesis | No strategy hypothesis | Framework interface only | No French-market hypothesis is tested |
+| 2. Data Sources | Constructed input | `CONSTRUCTED_TEACHING_DATA` v1.0.0 | No external real-data download |
+| 3. Data Dictionary | Constructed fields | `capstone/data_dictionary.md` appendix | Engineering dictionary only |
+| 4. Point-in-Time Logic | Constructed time contract | $\max(	exttt{avail},	exttt{ingest},	exttt{as\_of})\le	exttt{signal}<	exttt{trade}$ | Constructed timing contract and rejection tests; French historical event times remain unknown |
+| 5. Data Cleaning | Constructed checks | Staleness threshold ($\le 3600	ext{ s}$), strictly positive prices, non-null/non-duplicate checks | Rejects anomalies listed in the pre-fill contract |
+| 6. Feature Engineering | One-period teaching momentum | $(P_t-P_{t-1})/P_{t-1}>0$ | French monthly features and ablation not implemented |
+| 7. Signal Construction | Fixed teaching quantities | A: 10, B: 20 | No French cross-sectional ranking or neutralization |
+| 8. Portfolio Construction | Fixed teaching positions | Ex-ante leverage check $0.20\le0.50$ | No French portfolio method has been run |
+| 9. Transaction Cost Model | Constructed cost example | 10 bps spread embedded in fill price; 10 bps commission charged explicitly | No duplicate charge; total cost USD 4.002 |
+| 10. Walk-Forward Validation | Not run | No rolling-window split | No real rolling out-of-sample backtest |
+| 11. Performance Analysis | Constructed result | Baseline ending NAV USD 9,995.998; net loss USD 4.002 | Teaching example, not strategy alpha |
+| 12. Risk Analysis | Constructed scenario | -10% market-shock loss USD 200.0 $\le$ USD 1,000.0 limit | Constructed scenario result only |
+| 13. Factor Attribution | Not implemented | No multi-factor decomposition | French attribution not run |
+| 14. Robustness Tests | Not run | No parameter-robustness perturbations | No subsample or sensitivity analysis |
+| 15. Parameter Sensitivity | Not run | No parameter-grid scan | No parameter response surface |
+| 16. Overfitting Discussion | Not run | No multiple-testing check | PSR/DSR/PBO not calculated |
+| 17. Limitations | Scope boundary | Offline, single-process environment; constructed teaching data; no live-market impact | No extrapolation to real markets |
+| 18. Final Research Conclusion | No market conclusion | Constructed engineering interface only | Strategy validity is not tested |
 
 \color{qink}
 
@@ -212,4 +212,4 @@ The following preserves the historical status and figures from the original A9-B
 \color{qink}
 
 
-R01–R04 counterexamples / STOPPED / overwrite and actual-order evidence are in the historical source `qa/a9/ch45_batch/revisions/r2_20261012`. The amount tolerance is $10^{-6}\,\mathrm{USD}$; real-valued share quantities and three recovery branches are described in `ENGINEERING_BASE.md`. All real-research sections were still `pending_A10` in this historical appendix. It does not fill real results or register acceptance.
+The engineering implementation uses an amount tolerance of $10^{-6}\,\mathrm{USD}$; real-valued share quantities and three recovery branches are described in `ENGINEERING_BASE.md`. These software behaviors do not provide market results or imply market validation.

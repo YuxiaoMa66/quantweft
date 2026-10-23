@@ -436,7 +436,7 @@ MC在Q下求期望来算价格；离散对冲实验在P下设定含股息μ=.08�
 
 ## 8. Numerical Example：冻结的欧式定价与对冲实验
 
-全部为SIMULATED / CONSTRUCTED，每份支付对应一股；输入\(S_0\)=K=100、T=1年、r=.05、q=.02、σ=.20。首轮运行前固定协议，历史输出原位于`build/batches/A9-A/r1/runs/experiment_output_02`，现已归档；原运行身份见归档索引。下面沿用历史根独立运行并已接受的数值；现存独立根结果见results.json。现存根结果与归档作者运行保留各自身份，本双语批次未重新运行或提取归档。所有金额为每股同币种教学金额。
+全部为SIMULATED / CONSTRUCTED，每份支付对应一股；输入\(S_0\)=K=100、T=1年、r=.05、q=.02、σ=.20。首轮运行前固定协议；下列数值是该模拟实验的保存结果，此处未重新计算。所有金额为每股同币种教学金额。
 
 ### 8.1 手算与解析价格的中间值
 
@@ -944,7 +944,7 @@ Optional：Hull《Options, Futures, and Other Derivatives》、Shreve《Stochast
 
 ## 20. References
 
-本章关键来源键与实际读取位置见[source_notes.md](source_notes.md)，全局来源台账见[references/sources.json](../../../../editions/zh/resources/sources.json)。原论文来源支持理论命题；本章模拟的输入、输出、代码hash与运行记录是另一层证据。
+本章参考资料见[source_notes.md](source_notes.md)，全局来源台账见[references/sources.json](../../../../editions/zh/resources/sources.json)。原论文来源支持理论命题；本章模拟的输入、输出、代码hash与运行记录是另一层证据。
 
 - CH44_BS1973：Black & Scholes, 1973，[Princeton课程托管原文](https://www.cs.princeton.edu/courses/archive/fall02/cs323/links/blackscholes.pdf)，JPE 81(3), 637–654，DOI [10.1086/260062](https://doi.org/10.1086/260062)。支持无股息原模型假设与动态复制。
 - CH44_MERTON1973：Merton, 1973，[BU托管原文](http://polymer.bu.edu/hes/merton73py538.pdf)，Bell J. Econ. Manag. Sci. 4(1), 141–183，DOI [10.2307/3003143](https://doi.org/10.2307/3003143)，§7式42–44及脚注62支持含股息PDE与欧式call。

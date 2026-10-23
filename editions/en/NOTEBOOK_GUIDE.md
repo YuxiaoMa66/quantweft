@@ -1,14 +1,14 @@
 # Notebook guide
 
-Local formal edition (2026-10-19): the complete English body and workbook PDFs for Chapters 1–45, Projects 1–6, and the Capstone have been independently accepted; the shared code, runner, and dependencies sit at this package root and were cold-started in an isolated directory with the commands on this page (scope in [Validation scope](LOCAL_VALIDATION.md)). This is the authorized local formal edition; it has not been published externally, and real-market research has not been run.
+Each language has 45 chapter Notebooks and nine project Notebooks. The Chinese and English versions share code; choose the language you prefer.
 
-Create one shared environment at the final package root. Language views change Markdown only: 54 logical implementations do not become 108 numerical implementations. The project declares Python≥3.12; its lock binds the historically checked macOS arm64 / CPython 3.14.7 environment, not every 3.12+ platform. Installation may require a network; default teaching execution is offline. The commands on this page were run as written in a fresh environment in an isolated directory; results are in [Validation scope](LOCAL_VALIDATION.md).
+Set up the shared environment from the [course entry page](README.md), then run cells in order. Python 3.12 or later is required; the included lock file targets macOS arm64 / CPython 3.14.7. Other platforms may need different dependency versions. See [environment and compatibility](LOCAL_VALIDATION.md).
 
-The 45 chapter and nine project Notebooks form 54 logical implementations, each with two Markdown language views. Each pair retains identical code, outputs, execution_count, cell metadata and Notebook metadata. Eight previously accepted project views retain their bytes; 98 new views and two existing views with repaired guide links change Markdown only. See the [cell-level identity](../shared/NOTEBOOK_IDENTITY.json).
+The default examples use constructed data. Some Notebooks also display saved figures or summaries; the table below distinguishes calculation from display. A saved figure does not mean the Notebook reruns its original experiment.
 
-Start the same environment inside the shared root and run each Notebook in order. Switching language views in one kernel is not an independent experiment. Unique RUN_DIR values prevent overwrites, but a created directory need not contain business outputs. Seeds bind a specific call order; CLI and Notebook values need not match when RNG consumption differs. Some plot/print labels remain Chinese; English Markdown explains essential labels, inputs and units without changing executable text or claiming recomputation.
+Write new outputs to a separate `RUN_DIR`. Random seeds reproduce a given call sequence, so CLI and Notebook results may differ if they consume random numbers in a different order.
 
-## Actual default mode by Notebook
+## Inputs and outputs by Notebook
 
 | Entry | Inputs, computation and outputs |
 |---|---|
@@ -60,7 +60,7 @@ Start the same environment inside the shared root and run each Notebook in order
 | [project01_financial_data_analysis](projects/project01/notebooks/project01_financial_data_analysis.ipynb) | Seed 101 creates 180 months/three return columns plus RF; save return CSV and one plot; descriptive windows; no French. |
 | [project02_factor_regression](projects/project02/notebooks/project02_factor_regression.ipynb) | Seed 102 creates 120 shared-factor months/one asset; save three coefficient CSVs and one residual plot; check reconstruction, not variance decomposition. |
 | [project03_portfolio_oos](projects/project03/notebooks/project03_portfolio_oos.ipynb) | 48 months/four assets, 24-month training and 24 OOS months for four strategies; save metrics CSV, four ledgers and one plot; no historical bootstrap. |
-| [cost_execution_lab](projects/project04/cost_execution_lab/cost_execution_lab.ipynb) | Fresh frozen-volume, fixed-parent and partial/zero-fill examples; replay accepted current-signal summary; two new display plots; no full P4. |
+| [cost_execution_lab](projects/project04/cost_execution_lab/cost_execution_lab.ipynb) | Fresh frozen-volume, fixed-parent and partial/zero-fill examples; replay saved current-signal summary; two new display plots; no full P4. |
 | [p04_signal_layer](projects/project04/preparation/notebooks/p04_signal_layer.ipynb) | Fresh constructed rules, filing versions, signals and counterexamples; save one diagnostic figure; no real-company PIT. |
 | [p05_pairs](projects/project05/notebooks/p05_pairs.ipynb) | Fresh three-pair gated/ungated main route and one plot; x is fill_date, y is z from prior signal_date; no full grid. |
 | [p05_screening](projects/project05/preparation/notebooks/p05_screening.ipynb) | Fresh 30 null and 30 selected worlds with one plot; French 45-pair historical windows disabled. |
@@ -69,8 +69,8 @@ Start the same environment inside the shared root and run each Notebook in order
 
 Chapters 26, 30, 31, 38 and 40–42 may incur repeated simulations, fits or ledgers; no unmeasured runtime is promised. Chapter 39/P6 replay does not train, Chapter 43 makes no LLM call, and Chapter 45 covers the normal path rather than the recovery suite. P4’s 13 half-hour labels are 09:30–15:30 UTC slot starts, with fills at +15 minutes and terminal mark at 16:00:30. In the P5 pairs plot, the fill_date x-axis differs from the prior signal_date underlying the plotted z.
 
-The default route is offline. French raw, extracted and processed data are not bundled. G01’s actual legal entity, purpose and rights remain unknown; G05 has not authorized A10-B. A10-A has limited design acceptance and A10-A.1 technical protocol acceptance, neither market-execution permission. Public availability does not establish research-use or redistribution rights. Do not download market data to run these Notebooks or label constructed replacements as missing historical market inputs.
+The default route is offline. French raw, extracted and processed data are not bundled. Market-data research use and redistribution require separate permission; the repository does not contain all inputs needed for real-market studies. Public availability does not establish research-use or redistribution rights. Do not download market data to run these Notebooks or label constructed replacements as missing historical market inputs.
 
-Historical acceptance of Projects 1–3 binds its original version and scope, not stock-level PIT or tradability. Projects 4–6 retain their recorded market-research blocks and evidence gaps; constructed method checks cannot close them. Chapter 39’s historical row predictions and common-date paired evidence remain missing, without fabrication or retraining. Fixed summaries and figures replay their original records rather than new verification. Retain all negative and zero results; unknown or blocked does not mean a zero effect.
+The Project 1–3 examples do not establish stock-level PIT coverage or tradability. Projects 4–6 retain their recorded market-research blocks and evidence gaps; constructed method checks cannot close them. Chapter 39’s historical row predictions and common-date paired evidence remain missing, without fabrication or retraining. Fixed summaries and figures replay their original records rather than new verification. Retain all negative and zero results; unknown or blocked does not mean a zero effect.
 
 [Optional data](OPTIONAL_DATA.md) · [Validation scope](LOCAL_VALIDATION.md) · [Curriculum](resources/syllabus.md)

@@ -1,6 +1,6 @@
 # Project 5 — Exercises
 
-These constructed exercises inherit the limited c5/ALIGN acceptance and the later whole-share boundary. This BIL17B bilingual teaching candidate awaits independent acceptance. Complete answers are in [solutions.md](solutions.md); reference implementation: `projects/project05/solutions_code.py`. Code exercises use the **teaching constructed panel** in `src/p05_constructed.py`. It demonstrates methods, not market evidence. Real-price research remains blocked; see report Section 2.
+These exercises use the constructed teaching panel and explain it under the whole-share execution boundary. Complete answers are in [solutions.md](solutions.md); reference implementation: `projects/project05/solutions_code.py`. Code exercises use the **teaching constructed panel** in `src/p05_constructed.py`. It demonstrates methods, not market evidence. Real-price research remains blocked; see report Section 2.
 
 Prerequisites: Chapters 16–17 (stationarity and cointegration), Chapters 29 and 31 (accounting and walk-forward evaluation), and Chapters 35–36 (costs, execution, and IS).
 

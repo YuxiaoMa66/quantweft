@@ -1,10 +1,5 @@
-# Project5当前协议对齐接受入口
+# Project 5: Whole-Share Execution Boundary
 
-2026-10-14。r1工程与r2题答限定接受并备份同步。目标股数先在信号收盘单位取整再换算拆股，IS参考价另算；真实入口绑定实际消费预注册字节摘要。
+For the constructed teaching examples, target shares are rounded in signal-close share units before split conversion. The implementation-shortfall reference price is handled separately for dividends. These rules describe the simulated execution boundary; they do not establish real-market results.
 
-- 原主独立接受（历史源文件未纳入离线执行范围）与收据（历史源文件未纳入离线执行范围）
-- 当前候选回交（历史源文件未纳入离线执行范围）；7页报告与11页Loom组合见收据。
-- 备份同步与只读收尾（历史源文件未纳入离线执行范围）
-- [原c5接受身份](ACCEPTED_VERSION.md)保持历史原件；旧冻结清单对应旧源，新接受源差异见同步清单。
-
-真实实证blocked，完整Project5未verified。1.5:1公司行动可留下0.5股未退出：零碎股退出/现金替代规则仍未接受，真实执行前须解决制度或拒绝不支持输入。固定构造11CSV及全部负结果不变；没有真实数据使用或正式出版。
+A 1.5:1 corporate action can leave 0.5 share after conversion. The treatment of fractional-share exits or cash substitution has not been specified. A real execution path must define that rule or reject unsupported inputs. Real-price research has not been performed because data-source and rights requirements remain unmet. Report negative constructed results without turning them into market evidence.

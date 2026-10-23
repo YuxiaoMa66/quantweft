@@ -76,7 +76,7 @@ L_{t,h}=-(V_{t+h}-V_t).
 \operatorname{ES}_{\alpha}(L)=\frac{E[L\mathbf 1\{L>v\}]+v\,[P(L\leq v)-\alpha]}{1-\alpha}.
 \]
 
-右尾 ES 需要 \(L\) 的正部可积，即 \(E[L^+]<\infty\)，否则尾部均值可能不存在或为无穷。有限样本的有限值本身总有有限经验均值，但从有限样本推到总体 ES 仍依赖尾部假设和样本量。此处采用的分位积分和阈值原子修正与 Acerbi–Tasche 所讨论的定义相符；已读页码和符号转换记录在 [来源说明](source_notes.md)。
+右尾 ES 需要 \(L\) 的正部可积，即 \(E[L^+]<\infty\)，否则尾部均值可能不存在或为无穷。有限样本的有限值本身总有有限经验均值，但从有限样本推到总体 ES 仍依赖尾部假设和样本量。此处采用的分位积分和阈值原子修正与 Acerbi–Tasche 所讨论的定义相符；符号转换见 [来源说明](source_notes.md)。
 
 ## 6. 推导
 
@@ -205,15 +205,15 @@ $$LR_{uc}=-2\log\Lambda=2\left[x\log\frac{x/n}{q}+(n-x)\log\frac{1-x/n}{1-q}\rig
 
 本章 CLI 在 [ch33_risk_management.py](../../../../code/ch33_risk_management.py)，复用第29章账本、现有暴露报告函数和冻结French数据读取器。
 
-默认读者从接受I3包根目录运行：
+默认读者从随包包根目录运行：
 
 ```sh
 python run_notebook.py notebooks/ch33_risk_management.ipynb
 ```
 
-I3的 `analyze(include_french=False)` 默认跳过French；Notebook fresh计算3000个构造历史观察与50000个Monte Carlo损失，写结果JSON并生成4图。它创建唯一 `runs/ch33_risk_management_<uuid>/`；I3 CLI使用自己的 `runs/cli_ch33_<uuid>/`。runner还保存执行副本、execution.json和失败状态到 `runs/execution_<stem>_<uuid>/`。因此不能把该Notebook称为不写实验文件的静态回放。本批只静态核入口，不执行完整Notebook/CLI。工作源 `code/ch33_risk_management.py` 的 `analyze()` 仍无include_french参数并总调用French，与I3包装不同；不能将两入口混称已完全同步。英语Notebook、装配和冷启动留BIL23。若另获运行授权，须指定新输出目录，不能覆盖冻结qa或图。
+读者包中的 `analyze(include_french=False)` 默认跳过French；Notebook fresh计算3000个构造历史观察与50000个Monte Carlo损失，写结果JSON并生成4图。它创建唯一 `runs/ch33_risk_management_<uuid>/`；CLI 使用自己的 `runs/cli_ch33_<uuid>/`。runner还保存执行副本、execution.json和失败状态到 `runs/execution_<stem>_<uuid>/`。因此不能把该Notebook称为不写实验文件的静态回放。Notebook 和 CLI 未运行，因此此处没有新的完整执行结果。课程根脚本 `code/ch33_risk_management.py` 的 `analyze()` 没有 `include_french` 参数且会调用 French，和读者包包装器行为不同；两种入口应分别理解。如运行该研究，指定新输出目录，避免覆盖已有 QA 结果或图表。
 
-核心输入按函数分别检查。`scenario_pnl`（简单收益情景重估）拒绝非正价格和低于−100%的简单收益；经验损失向量和无界Student-t参数损失允许大于1，属于另一模型域，不对其硬裁剪。Student-t API按标准差输入要求nu>2。损失货币/比例、股数、USD/股、ADV股/交易日及持有期均需明确。相关测试入口是 `tests/test_ch33_risk.py` 和 `tests/test_ch33_workflow.py`；本批仅执行新显示小例的局部核验，历史完整workflow不重跑。
+核心输入按函数分别检查。`scenario_pnl`（简单收益情景重估）拒绝非正价格和低于−100%的简单收益；经验损失向量和无界Student-t参数损失允许大于1，属于另一模型域，不对其硬裁剪。Student-t API按标准差输入要求nu>2。损失货币/比例、股数、USD/股、ADV股/交易日及持有期均需明确。相关测试入口是 `tests/test_ch33_risk.py` 和 `tests/test_ch33_workflow.py`；本章的小型显示例与完整历史 workflow 分开。
 
 ## 10. Visualization
 
@@ -530,10 +530,10 @@ $$ES_\alpha(L)=-\frac1{1-\alpha}\int_0^{1-\alpha}q_X(u)du.$$
 
 ## 20. References
 
-- `[AT2002-v5]` Carlo Acerbi and Dirk Tasche, “On the Coherence of Expected Shortfall,” arXiv:cond-mat/0104295v5, 2002. <https://arxiv.org/pdf/cond-mat/0104295v5>. 本章引用范围：离散尾部原子修正、分位积分、尾部样本平均的相关定义与论证；局部核读，具体页码见 [source_notes.md](source_notes.md#opened-source-documents)。
+- `[AT2002-v5]` Carlo Acerbi and Dirk Tasche, “On the Coherence of Expected Shortfall,” arXiv:cond-mat/0104295v5, 2002. <https://arxiv.org/pdf/cond-mat/0104295v5>. 支持离散尾部原子修正、分位积分与尾部样本平均相关定义和论证。
 - `[KUPIEC1995-FEDS95-24]` Paul H. Kupiec, “Techniques for Verifying the Accuracy of Risk Measurement Models,” Finance and Economics Discussion Series 95-24, Federal Reserve Board, cover May 1995; interior title page April 1995. <https://fraser.stlouisfed.org/files/docs/publications/bog_feds/feds_1995-024.pdf>. 本章只采用所读选页中的监测设定和计数 likelihood，不把原文所有论断照搬为一般结论。
 - `[SCIPY-T]` SciPy v1.18.0 Manual, scipy.stats.t. <https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html>. 本章只据此确认 Student-t 分布 API 与位置/尺度参数化。
 - `[FRENCH-FROZEN]` Kenneth R. French Data Library, 10 Industry Portfolios, value-weighted monthly block; FF3 risk-free series. Industry data: <https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/10_Industry_Portfolios_CSV.zip>; details: <https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html>. 课程冻结快照、下载时间、授权说明、处理字段和校验值见对应 data/manifests JSON；其历史值为当前修订版本。
-- `[A6-33-PLAN]` 项目本地冻结计划 `qa/a6/claude/plan.md` 与 `A6_CONTRACT.md` 的第 33 章合同条款。用于课程接口、符号和教学边界，不作为外部实证证据。
 
-以上每个公式或经验结果对应的实际读取范围、方法用途与限制集中记录在 [来源说明](source_notes.md)。
+
+公式或经验结果的参考资料与限制见 [来源说明](source_notes.md)。

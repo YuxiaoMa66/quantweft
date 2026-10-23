@@ -171,7 +171,7 @@ French定义的OP采用账面权益口径：本例明确用期末权益400，$\m
 
 ## 8. 数值例题：手算每一步
 
-所有数字由 `hand_examples()` 产生，并由 `qa/a5/claude/recompute/ch26_recompute.py` 用不同实现复核。公司为教学构造。
+所有数字由 `hand_examples()` 产生，并用不同实现独立复核。公司为教学构造。
 
 ### 8.1 同样的 ROE 提升：经营改善与加杠杆
 
@@ -228,13 +228,13 @@ $\rho_1=0.0241$，$\rho_2=0.0418$：$(\rho_1+\rho_2)/\sqrt2=0.0466$。若两个�
 | `earnings_stability` | 年度比率历史（行为财年） | 最近 $n$ 年的样本标准差；不足 `min_years` 为 NaN |
 | `roe_from_leverage` | $\rho$、$i$、$D/E$ | $\rho+(\rho-i)D/E$；$D/E<0$ 或非有限报错 |
 
-默认离线入口（从 I3 阅读包根目录运行）：
+默认离线入口（从 阅读包根目录运行）：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch26_quality.ipynb
 ```
 
-默认 `RUN_FRENCH=False`。稳定性示例是100000个worlds、种子11（正文历史示例200000）；合成示例400000样本且每个r12重置种子5（正文600000且连续rng）；quality_world/quality_study默认种子20261107。 runner另写 `runs/execution_<stem>_<uuid>/` 的执行副本与状态。Notebook英语语言层及整包路径在BIL23装配；下列为历史完整CLI与测试参考，并非默认离线命令：
+默认 `RUN_FRENCH=False`。稳定性示例是100000个worlds、种子11（正文历史示例200000）；合成示例400000样本且每个r12重置种子5（正文600000且连续rng）；quality_world/quality_study默认种子20261107。 runner另写 `runs/execution_<stem>_<uuid>/` 的执行副本与状态。下列为历史完整CLI与测试参考，并非默认离线命令：
 
 ```bash
 .venv/bin/python code/ch26_quality.py
@@ -598,7 +598,7 @@ print(round(sim, 4), round(0.05 / np.sqrt(3.0), 4))
 
 ## 20. 参考资料
 
-引用键与读取范围见 [source_notes.md](source_notes.md)。
+参考资料与链接见 [source_notes.md](source_notes.md)。
 
 - CH26_FF5_PAGE：Kenneth R. French Data Library，“Description of Fama/French 5 Factors (2x3)”。
 - CH26_FF2015：Fama, E. F., French, K. R. (2015). *Journal of Financial Economics* 116(1)，表 8 说明（印刷页 14）、第 7 节（页 12–13）。

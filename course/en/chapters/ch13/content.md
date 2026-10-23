@@ -273,13 +273,13 @@ A separate constructed DCF uses year-end FCFF of 40, 45, 50, 55, and 60 USD mill
 
 ### Default Entry Point for This Reader Edition
 
-From the accepted I3 reader package root, set up its [environment](../../../../editions/en/README.md), then run:
+From the reader package root, set up its [environment](../../../../editions/en/README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch13_valuation.ipynb
 ```
 
-The Notebook calls the packaged shared implementation. Orion/Lyra, forecasts, capital costs, PIT clocks, and market values are constructed; the Apple section only checks statement lines. By default it displays two existing packaged figures without redrawing them. The runner writes new kernel execution records to a unique `runs/execution_*` directory; the Notebook separately creates a unique UUID chapter-method directory and prints its location. These directories have distinct purposes; existing figures are not new batch outputs. Unbundled French data are neither read by default nor downloaded. The CLI and old production tests below refer to the working-course root. Readers use the Notebook assertions above and need not restore missing production tests. English Notebook Markdown remains pending BIL23 integration. No Notebook or old numerical suite was executed in this batch.
+The Notebook calls the packaged shared implementation. Orion/Lyra, forecasts, capital costs, PIT clocks, and market values are constructed; the Apple section only checks statement lines. By default it displays two existing packaged figures without redrawing them. The runner writes new kernel execution records to a unique `runs/execution_*` directory; the Notebook separately creates a unique UUID chapter-method directory and prints its location. These directories have distinct purposes; the displayed figures are saved historical outputs. Unbundled French data are neither read by default nor downloaded. The CLI and old production tests below refer to the working-course root. Readers use the Notebook assertions above and need not restore missing production tests. The Notebook and old numerical suite were not run to produce the historical figures shown here.
 
 ### Historical Working-Course Root and Original Implementation
 
@@ -729,4 +729,4 @@ Reference scoring (10 points): matched cash-flow claims and discount rates, 2; P
 4. SEC, [Non-GAAP Financial Measures C&DIs, Question 102.07](https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/non-gaap-financial-measures): common CFO-minus-CapEx FCF is nonuniform, requires explanation, and is not freely discretionary cash, Sections 5–7 and 12.
 5. Apple Inc., [FY2024 Form 10-K, accession 0000320193-24-000123](https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm): period, operating income, net income, diluted EPS, EPS weighted-average shares, ending shares, and balance-sheet lines, Section 11. This supports original filing facts only, not actual capitalization, P/E, signals, or returns.
 
-This chapter uses no secondary-market valuations or historical quotes. Source locations, reading scope, and verification limits are in [source_notes.md](../../../zh/chapters/ch13/source_notes.md).
+This chapter uses no secondary-market valuations or historical quotes. References and limits are listed in [source_notes.md](../../../zh/chapters/ch13/source_notes.md).

@@ -271,13 +271,13 @@ assert np.allclose(wrong_contributions.sum(axis=1), [0.00, 0.02])
 
 ### 接受读者包的默认入口
 
-本样章沿用I3接受读者的共享实现。按[读者安装说明](../../../../editions/zh/README.md)建立环境，从读者包根运行：
+本样章使用读者包中的共享实现。按[读者安装说明](../../../../editions/zh/README.md)建立环境，从读者包根运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch02_python.ipynb
 ```
 
-默认Notebook调用随包共享逻辑，不读取未随包提供的French数据、不下载数据；新执行结果写入唯一runs子目录。以下课程根目录代码、环境锁文件和历史测试入口为原工作源路线，勿与读者根混用。French历史文件须按[可选数据契约](../../../../editions/zh/OPTIONAL_DATA.md)自备授权输入，本批未重跑。读者包CLI默认采用新UUID运行目录并拒绝覆盖；构造运行不等于市场数据或成交验证。
+默认 Notebook 调用随包共享逻辑，不读取未随包提供的 French 数据，也不下载数据；新执行结果写入唯一 `runs/` 子目录。French 历史数据须按[可选数据契约](../../../../editions/zh/OPTIONAL_DATA.md)由读者自行提供获准使用的输入。读者 CLI 为每次运行创建新的 UUID 目录并避免覆盖已有结果。构造数据运行不等于市场数据或成交验证。
 
 
 下面代码展示 Python 语法结构，不重复核心收益函数。价格清洗和正式收益计算由 [src/quant_course/timeseries.py](../../../../src/quant_course/timeseries.py) 提供；本章教学脚本调用同一核心逻辑，Notebook 也调用库函数。交付链接为 [脚本](../../../../code/ch02_python.py) 与 [Notebook](../../../../notebooks/ch02_python.ipynb)。
@@ -904,7 +904,7 @@ print(result)
 
 ## 20. References
 
-本章来源的具体页面、核验日期和核验边界见 [source_notes.md](source_notes.md)。基础来源键 NUMPY、PANDAS、POLARS、SCIPY 见课程 [references.md](../../../../references.md)。下列页面直接支持本章中的 API 行为和术语；Real Market Example 使用 French 官方数据页及课程本地快照。
+本章参考资料见 [source_notes.md](source_notes.md)。基础来源键 NUMPY、PANDAS、POLARS、SCIPY 见课程 [references.md](../../../../references.md)。下列页面直接支持本章中的 API 行为和术语；Real Market Example 使用 French 官方数据页及课程本地快照。
 
 - Python 官方文档：控制流、异常、模块、类型提示、venv、浮点算术。
 - NumPy 官方用户指南：数组基础和广播规则。

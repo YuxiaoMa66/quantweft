@@ -10,7 +10,7 @@
 \color{qink}
 
 
-S01/S07/S08/S09的研究问题、曝光、历史核读范围和元数据已经接入[研究设计](../RESEARCH_DESIGN.md)与[血缘表](../accepted_source_map.json)；S02/S05是[协议](../PROTOCOL.md)/[参数](../configs/french_protocol_v2.json)，S03是[时间契约](../TIME_CONTRACT.md)，S04是[月收益字典](../data_dictionary_monthly.md)。S06为本篇18项结构的接受映射来源；R/P为原主接受裁定和当前待决状态，见[入口](../README.md)及血缘表。源代号只用于定位，不要求读者访问包外QA。
+S01/S07/S08/S09的研究问题、曝光、历史核读范围和元数据见[研究设计](../RESEARCH_DESIGN.md)与[来源元数据](../accepted_source_map.json)；S02/S05见[协议](../PROTOCOL.md)/[参数](../configs/french_protocol_v2.json)，S03见[时间契约](../TIME_CONTRACT.md)，S04见[月收益字典](../data_dictionary_monthly.md)。S06说明本篇18项结构与对应输出。源代号用于导航；读者无需访问包外QA。
 
 <a id="item-1"></a>
 

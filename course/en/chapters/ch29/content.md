@@ -386,7 +386,7 @@ A constant rescaling of back-adjusted historical prices does not automatically m
 
 ::: {.body-example title="Complete example: four dates of entry, drift, rebalancing, and reconciliation"}
 
-This is the frozen two-asset hand example from `qa/a6/claude/plan.md`. The calculation below retains intermediate precision and rounds only displayed values.
+This is a fixed-input two-asset hand example. The calculation below retains intermediate precision and rounds only displayed values.
 
 ### 8.1 Inputs
 
@@ -460,13 +460,13 @@ These residuals are from the inherited frozen run, not a newly rerun historical 
 
 ## 9. Python Implementation
 
-The default reader route is `notebooks/ch29_backtest_engine.ipynb` in the accepted I3 reader package. From that package’s root, run:
+The default reader route is `notebooks/ch29_backtest_engine.ipynb` in the reader package. From that package’s root, run:
 
 ```bash
 python run_notebook.py notebooks/ch29_backtest_engine.ipynb
 ```
 
-The Notebook defaults to `RUN_FRENCH=False`. It computes the four-date ledger, weight drift, `constructed_study`, and extreme-policy teaching examples. The historical French tables and figures in Section 11 are not new outputs from this default run. The runner saves the executed Notebook and `execution.json` under a unique `runs/execution_<stem>_<uuid>/`, including failed executions. The Notebook also creates its own `runs/ch29_backtest_engine_<uuid>/`; its main results are in-kernel tables and printed output, so do not assume everything is saved to that inner directory. Read Section 11’s data boundary first. The chapter Notebook’s English language layer, a portable complete package, and cold-start verification remain pending BIL23; this chapter is not a promise of an independently portable English software package.
+The Notebook defaults to `RUN_FRENCH=False`. It computes the four-date ledger, weight drift, `constructed_study`, and extreme-policy teaching examples. The historical French tables and figures in Section 11 are not new outputs from this default run. The runner saves the executed Notebook and `execution.json` under a unique `runs/execution_<stem>_<uuid>/`, including failed executions. The Notebook also creates its own `runs/ch29_backtest_engine_<uuid>/`; its main results are in-kernel tables and printed output, so do not assume everything is saved to that inner directory. Read Section 11’s data boundary first.
 
 
 All core backtesting and reconciliation functions in this chapter are implemented in `src/quant_course/backtest.py`. The code below shows how to call the engine in a standalone Python environment and reconcile the results end to end:
@@ -551,7 +551,7 @@ The four figures below are retained from the historical outputs of `code/ch29_ba
 
 ### 11.1 Historical Data Specification and Sources
 
-This section retains an earlier historical proxy-ledger study. French raw, extracted, and processed data are not bundled in the default I3 reader package; the paths below identify sources in the full project. Data-use rights, subject, and purpose remain unresolved. Public availability is not authorization to redistribute data or execute research. Acceptance of the A10-A limited-scope design and A10-A.1 technical protocol does not replace data rights or execution authorization; G05/A10-B remains unauthorized. Aggregated monthly industry returns are not company-level point-in-time (PIT) inputs. Real membership, tradable prices, corporate actions, borrow/financing, capacity, and trading calendars require separate checks. These curves do not demonstrate deployable market returns.
+This section retains an earlier historical proxy-ledger study. French raw, extracted, and processed data are not bundled in the default reader package; the paths below identify sources in the full project. Data-use rights, subject, and purpose remain unresolved. Public availability is not authorization to redistribute data or execute research. A research design does not grant data rights or authorize execution; real-data analysis is not run by default. Aggregated monthly industry returns are not company-level point-in-time (PIT) inputs. Real membership, tradable prices, corporate actions, borrow/financing, capacity, and trading calendars require separate checks. These curves do not demonstrate deployable market returns.
 This section reports an empirical analysis using monthly value-weighted returns for the **10 Industry Portfolios** published by the Kenneth French Data Library:
 - **Data file:** `data/processed/french_10_industries_monthly.csv`
 - **Checksum (SHA-256):** `3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950` (the corresponding manifest is `data/manifests/french_industries_2026-10-05.json`, SHA-256 `3b71cd5f781f9790cc380195c22635e03e9c9e27a5f43cd2d0d46fb12efa8271`)

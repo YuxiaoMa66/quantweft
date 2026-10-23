@@ -7,7 +7,7 @@
 
 |字段|经济含义/主键|类型、单位、频率|event_time|available_at|ingested_at|revision_at|as_of|
 |---|---|---|---|---|---|---|---|
-|snapshot_id|固定输入身份，复合主键|string，版本|快照覆盖结束|当前版本最早发布unknown|manifest下载UTC|unknown，保留新版本|本候选固定快照|
+|snapshot_id|固定输入身份，复合主键|string，版本|快照覆盖结束|当前版本最早发布unknown|manifest下载UTC|unknown，保留新版本|本文件对应固定快照|
 |month|收益日历月，主键|YYYYMM string/月度|该月起止|历史每月unknown|继承文件下载|历史unknown|继承snapshot|
 |industry_id|十行业列转长表ID，主键|enum/月度|供应商分组有效区间|成员发布unknown|继承文件|unknown|继承snapshot|
 |`NoDur/Durbl/Manuf/Enrgy/HiTec/Telcm/Shops/Hlth/Utils/Other`（各列）|价值加权行业总收益，含股息口径；逐列均同契约|float，小数简单总收益/月|month区间|unknown，不能填月末已知|industry下载UTC|unknown|固定快照|
@@ -33,7 +33,7 @@
 \color{qink}
 
 
-拆股、分红已在供应商总收益方法内，不再叠加现金事件；缺逐股事件表，不能独立重建。退市与股票池仅供应商聚合口径，不宣称验证底层全市场完整性。财报公告/重述对所选价格动量无直接特征输入，故本批不适用；若增加价值/质量即变更问题且需新的PIT字段，不是当前协议自由项。组合分类历史变化不等于可交易证券ID变化。归一化财富指数只服务账本演示，不送入真实价格成交接口。
+拆股、分红已在供应商总收益方法内，不再叠加现金事件；缺逐股事件表，不能独立重建。退市与股票池仅供应商聚合口径，不宣称验证底层全市场完整性。财报公告/重述对所选价格动量无直接特征输入，因此不属于所选问题的直接输入；若增加价值/质量即变更问题且需新的PIT字段，不是当前协议自由项。组合分类历史变化不等于可交易证券ID变化。归一化财富指数只服务账本演示，不送入真实价格成交接口。
 
 
 这份字典用于研究计划；[两资产工程字典](data_dictionary.md)用于USD/share、share与秒级构造运行。两份接口不能互换。[时间契约](TIME_CONTRACT.md)给出资格/标签判断；[协议](PROTOCOL.md)给出费用和统计全式；[入口](README.md)给出当前接受状态。

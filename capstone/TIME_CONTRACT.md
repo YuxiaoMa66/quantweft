@@ -16,7 +16,7 @@ signal_i,t=Π_(m=t-12)^(t-2)(1+R_i,m)-1，恰为11个月；t-1不进入特征。
 
 对真实PIT行，必要资格为max(available_at,ingested_at,适用revision_at,query_as_of)≤S_t，signal<T_t；同秒若无顺序证据应严格小于。event_time描述经济事实，与公告时间不强加一条全序；公告可在事件生效前。revision_at记外部修订发布，不按ingestion排序；选择最新合格外部版本，同发布时间冲突拒绝。as_of为查询截止而非把2026快照下载时间伪造到1990年。
 
-历史French每月available、ingested、revision未知；已知下载UTC仅说明2026快照入库。因此历史时间闸门的严格PIT状态=unknown/blocked；限定历史分析状态=假设模拟，该推论域已由原主限定接受。延迟敏感性不能把unknown变passed。
+历史French每月available、ingested、revision时间未知，因此严格PIT状态无法确认。历史示例使用假设时钟；延迟敏感性不能证明实际可得性。
 
 RF与因子只用于实现后的同月超额收益、风险/归因；不作为当月事前决策特征。组合总收益减对应FF3的RF一次，Mkt-RF/SMB/HML不再减RF。现金若保留，则用事后同月RF模拟收益，必须标假设，不声称信号时已知；主规格全额投资，现金只承担费用对账残余。
 

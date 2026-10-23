@@ -1,6 +1,6 @@
 # Project 5 Data Dictionary
 
-Status: inherits the limited acceptance of c5/v2 and the ALIGN field contract, with the latest whole-share boundary taking precedence. This is a bilingual teaching candidate, not new market-data validation. The real panel is blocked (data_manifest.json); the same field contract is implemented and tested by the teaching constructed panel in src/p05_constructed.py.
+This dictionary defines fields for the c5/v2 constructed teaching panel and the current whole-share execution boundary. Real-data use remains limited by data rights and historical PIT fields (see data_manifest.json); src/p05_constructed.py implements the constructed panel.
 
 ## Input 1: Daily panel (long format)
 

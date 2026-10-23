@@ -161,7 +161,7 @@ MC独立样本单位为反偶配对均值，SE按M个配对计算，95%为正态
 
 ## 第45章离线工程契约
 
-所有时间UTC。event_time为报价事件；available_at、ingested_at、revision_time、as_of均不晚于signal_time，且event_time≤as_of≤signal_time<trade_time≤mark_time。新鲜度同时检查当前event_time和as_of距signal_time的秒数；prior_event_time为历史回看端点。收益分别在每资产(fill_time,mark_time]计量。价格USD/share，数量share，现金/NAV/成本USD，bps乘10^-4为小数。点差嵌入fill_price，佣金另扣，毛PnL以mid到mark计算；净PnL=毛PnL−成本。本批融资/借券/冲击设零，非零拒绝。
+所有时间UTC。event_time为报价事件；available_at、ingested_at、revision_time、as_of均不晚于signal_time，且event_time≤as_of≤signal_time<trade_time≤mark_time。新鲜度同时检查当前event_time和as_of距signal_time的秒数；prior_event_time为历史回看端点。收益分别在每资产(fill_time,mark_time]计量。价格USD/share，数量share，现金/NAV/成本USD，bps乘10^-4为小数。点差嵌入fill_price，佣金另扣，毛PnL以mid到mark计算；净PnL=毛PnL−成本。本例将融资、借券与冲击成本设为零；实现会拒绝非零输入。
 
 ### 第45章R2支持域澄清
 固定配置股数允许有限正实数share，信号目标在非正动量时为0；手算用整数不代表券商lot-size约束。金额容差1e−6 USD，数量守恒容差按share声明。一般情景简单收益shock≥−1且有限，loss=−scenarioPnL可为负。成熟标签可在label_end之后在线更新累积统计，未成熟时不可用。已发布损坏成果不转新attempt；仅未发布成果允许新staging恢复。

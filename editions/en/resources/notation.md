@@ -1,6 +1,6 @@
 # Notation, units and information clocks
 
-The accepted chapter's locally stated definition takes precedence over a reused letter. This resource gives the common contract and the local distinctions needed to read formulas without changing their numerical implementation.
+Symbols can have chapter-specific meanings. This guide lists common units and dimensions; use the local definition when a chapter reuses a symbol.
 
 ## Common dimensions
 

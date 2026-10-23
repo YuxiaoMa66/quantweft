@@ -448,7 +448,7 @@ The Bayesian example also has model boundaries: the binomial update assumes tria
 
 ## 8. Numerical Example
 
-This section inherits constructed results from the historical A8-C frozen protocols `qa/a8/ch42_ch43_batch/EXPERIMENT_PROTOCOL.json` and `EXPERIMENT_ADDENDUM_v1.json` in the same directory. Historical hand/code checks and supplemental demonstrations retain their original status; BIL20 did not rerun them.
+This section presents constructed results from a protocol fixed before the run. Historical hand/code checks and supplemental demonstrations retain their stated scope; no new run is reported here.
 
 ### 8.1 Hand Calculation: Beta-Binomial Example
 - **Input**: Prior $\alpha = 2, \beta = 2$; $n = 10$ trials with $y = 8$ successes.
@@ -595,7 +595,7 @@ print(negation_sentiment_scorer("earnings performance did not improve showing no
 
 ## 9. Python Implementation
 
-The core module is `bayesian_text.py` under `src/quant_course`. The standalone script is `ch43_bayesian_text.py` under `code`; tests are in `test_bayesian_text.py` under `tests`. Historical execution counts and results are in the applicable A8-C/C19 QA records; BIL20 revises teaching only.
+The core module is `bayesian_text.py` under `src/quant_course`. The standalone script is `ch43_bayesian_text.py` under `code`; tests are in `test_bayesian_text.py` under `tests`. The execution counts and results shown here are historical and are not new outputs from this chapter.
 
 ### 9.1 Execution Command and Run Contract
 - Execution environment: the course-standard virtual environment, invoked from the course source root as `.venv/bin/python`.
@@ -1249,7 +1249,7 @@ This experiment tests extrapolation across time blocks with a shared template su
   - Gelman, Carlin, Stern, Dunson, Vehtari, and Rubin (2013/2025). *Bayesian Data Analysis* (BDA3), Sections 2.4, 2.5, and 5.4. Read closely on conjugate priors, posterior-predictive integration, and the closed-form normal partial-pooling solution.
   - Hernán, M. A., and Robins, J. M. (2020). *Causal Inference: What If*, Part I (Chapters 1–3). Read closely on potential outcomes, conditional exchangeability, positivity, and SUTVA.
 - **Should know**:
-  - Stan Development Team. *Stan User’s Guide*, the official pages on *Hierarchical Regression* and *Posterior Predictive Checks*; this round inherits the historical source check and reading scope documented in [the shared source notes](../../../zh/chapters/ch43/source_notes.md). Understand production-level ideas for Bayesian hierarchical models.
+  - Stan Development Team. *Stan User’s Guide*, the official pages on *Hierarchical Regression* and *Posterior Predictive Checks*; the source version and references are listed in [the shared source notes](../../../zh/chapters/ch43/source_notes.md). Understand production-level ideas for Bayesian hierarchical models.
   - Official scikit-learn documentation: *Text Feature Extraction* and *Common Pitfalls in Machine Learning*. Study how to avoid leakage in text-feature extraction.
 - **Advanced**:
   - Hernán and Robins, *What If*, §§6.3 and 7.3: Continue practicing identification decisions using the collider path and backdoor criterion reviewed here.
@@ -1271,4 +1271,4 @@ This experiment tests extrapolation across time blocks with a shared template su
 - `OPENAI_HALLUCINATION_2025`: OpenAI. (2025). *Why Language Models Hallucinate*. Official research explainer, 2025-09-05; historical source check inherited this round. `https://openai.com/index/why-language-models-hallucinate/`. [Supports LLM hallucination and factual-review practices in Sections 5, 12, and 18]
 
 
-The historical reading scope and its inheritance in this round are recorded in shared `course/zh/chapters/ch43/source_notes.md`; BIL20 did not revisit these web pages or execute the historical protocols.
+References are listed in shared `course/zh/chapters/ch43/source_notes.md`; historical protocols were not executed here.

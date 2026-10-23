@@ -436,7 +436,7 @@ Frictionless continuous replication provides a model benchmark. Discrete rebalan
 
 ## 8. Numerical Example: Frozen European Pricing and Hedging Experiment
 
-All results are SIMULATED / CONSTRUCTED, with each payoff corresponding to one share. Inputs are \(S_0\)=K=100, T=1 year, r=.05, q=.02, and σ=.20. The protocol was fixed before the first run; the historical output was originally in `build/batches/A9-A/r1/runs/experiment_output_02` and has since been archived. Original run identities are recorded in the archive inventory. The numbers below retain the accepted historical independent root run; its existing results.json is available separately. The existing root results and archived author run retain distinct identities. This bilingual batch neither reran the experiment nor extracted the archive. All amounts are per-share teaching amounts in the same currency.
+All results are SIMULATED / CONSTRUCTED, with each payoff corresponding to one share. Inputs are \(S_0\)=K=100, T=1 year, r=.05, q=.02, and σ=.20. The protocol was fixed before the first run. The values below are saved results from that simulated study; they were not recalculated for this text. All amounts are per-share teaching amounts in the same currency.
 
 ### 8.1 Intermediate Values for the Hand Calculation and Analytic Price
 
@@ -559,7 +559,7 @@ Without fees, higher frequency lowers the error SD in this sample. With fees, hi
 
 ### 8.8 Cash and Share Reconciliation in a Complete Ledger
 
-Path 0, 12 steps, fee=.001, with time i/12 years. The tables separate cash flows on the old position from the current rebalance. Unrounded values from the existing independent root run are in ledger_n12_cost0.001.json; the archived author payload is separately indexed above. Use the actual floating-point values to reconcile the ledger with the code in §18 rather than requiring 1e−10 agreement from six-digit displayed values.
+Path 0, 12 steps, fee=.001, with time i/12 years. The tables separate cash flows on the old position from the current rebalance. Unrounded values are saved in ledger_n12_cost0.001.json. Use them to reconcile the ledger with the code in §18 rather than requiring 1e−10 agreement from six-digit displayed values.
 
 | i | S | New shares | Interval interest | Interval dividend | Rebalance cash flow |
 |---|---|---|---|---|---|

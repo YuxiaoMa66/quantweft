@@ -1,6 +1,6 @@
 # Project 2 Exercises
 
-> Reader note: The data version, values, negative results, and null results below are retained from the historical study and exercises. They are historical teaching material, not new market results from the current constructed-data run of the I3 reader notebook. The data-authorization branch is skipped by default.
+> Reader note: The data version, values, negative results, and null results below are retained from the historical study and exercises. They are historical teaching material, not new market results from the current constructed-data run of the default reader notebook. The data-authorization branch is skipped by default.
 
 Answer the questions before consulting the [solutions](solutions.md). Unless a question says otherwise, returns are expressed as decimals, and the model results come from the fixed 2010–2019 sample.
 

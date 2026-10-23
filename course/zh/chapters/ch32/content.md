@@ -180,7 +180,7 @@ $$E[M_N] \approx (1 - \gamma)\Phi^{-1}\left(1 - \frac{1}{N}\right) + \gamma \Phi
 
 ## 8. Numerical Example
 
-本节数值来源于 CLI 计算产出 `qa/a6/codex_resume/ch32/results/ch32_results.json`，提供手算输入与可复算输出的对照。
+本节以 CLI 保存的结果对照手算输入，展示可复算输出。
 
 ::: {.body-example title="完整例题：六期描述指标"}
 
@@ -317,7 +317,7 @@ $$M = \begin{bmatrix}
 ## 9. Python Implementation
 
 本章所有核心算法均已沉淀至模块 `src/quant_course/inference.py`，完整 CLI 工具位于 `code/ch32_performance_statistics.py`。
-从接受I3读者包根目录运行 `python run_notebook.py notebooks/ch32_performance_statistics.ipynb`。Notebook创建唯一 `runs/ch32_performance_statistics_<uuid>/`，fresh计算一个种子的1250×200冠军构造及252期CSCV，后续单元主要展示内核中的结果；它不只是静态回放，静态章图也不是该次Notebook新产物。French默认跳过。runner另将执行副本及execution.json写入 `runs/execution_<stem>_<uuid>/`，失败运行同样保留。英语Notebook与便携装配/冷启动归BIL23，本批不执行这些完整入口。
+从随包读者包根目录运行 `python run_notebook.py notebooks/ch32_performance_statistics.ipynb`。Notebook创建唯一 `runs/ch32_performance_statistics_<uuid>/`，fresh计算一个种子的1250×200冠军构造及252期CSCV，后续单元主要展示内核中的结果；它不只是静态回放，静态章图也不是该次Notebook新产物。French默认跳过。runner另将执行副本及execution.json写入 `runs/execution_<stem>_<uuid>/`，失败运行同样保留。
 
 工作CLI仍含French、多种子冠军和AR研究，不应为阅读本章默认启动；若另获运行授权，应使用新输出目录，不覆盖冻结qa结果。下面保留局部API演示。
 
@@ -359,7 +359,7 @@ print("DSR 论文案例核对通过！")
 
 ## 10. Visualization
 
-本章沿用历史4图，本批仅从既有六划分缓存更正首图的阈值标签，不重跑历史研究。图表保存在 `figures/a6/` 目录下，所有绘图均标注了样本规模、轴物理单位与理论数据源。
+本章4图来自历史输出；首图阈值标签已按保存的六划分结果更正，底层研究未重跑。图表保存在 `figures/a6/` 目录下，所有绘图均标注了样本规模、轴物理单位与理论数据源。
 
 ### 10.1 手算 6 种 CSCV 划分的秩分布与 Logit
 ![CSCV 手算划分分布](../../../../figures/a6/ch32_hand_cscv_splits.png)
@@ -636,7 +636,7 @@ for values, target in [([0.0, 0.02], 0.0), (r, math.nan), (r, math.inf), (r, -ma
         raise AssertionError("undefined/nonfinite case must fail")
 print(value, expected_dd)
 ```
-零收益期留在全样本n=7内；只有三个负收益期也不能把分母改成3。非零门槛时先逐期减去同频门槛；未定义值应报错。共享API非有限目标护栏由本批候选直接测试核验。
+零收益期留在全样本n=7内；只有三个负收益期也不能把分母改成3。非零门槛时先逐期减去同频门槛；未定义值应报错。共享 API 会检查并拒绝非有限目标值。
 
 ### 32-P02 参考实现与测试
 ```python
@@ -721,7 +721,7 @@ assert round(turnover.iloc[3], 4) == 0.0728
 print("32-P04 测试通过！")
 ```
 
-P04承接BIL15A接受账本：dates[0]/dates[2]收盘信号分别在dates[1]/dates[3]以给定执行价成交；换手分母是交易前NAV，分子是买卖名义额总和，费用率0.002按成交名义额计入自融资账本。成交日收盘权重可因价格与费用偏离目标，不能用目标权重差直接替代账本换手。
+账本示例中：dates[0]/dates[2]收盘信号分别在dates[1]/dates[3]以给定执行价成交；换手分母是交易前NAV，分子是买卖名义额总和，费用率0.002按成交名义额计入自融资账本。成交日收盘权重可因价格与费用偏离目标，不能用目标权重差直接替代账本换手。
 
 ### 32-C01 挑战题参考论证与评分标准
 - **参考论证**：对于 AR(1) 过程，自协方差函数为 $\gamma_k = \frac{\sigma_\epsilon^2}{1-\phi^2} \phi^{|k|}$。总样本方差为 $\mathrm{Var}(\sum_{t=1}^T r_t) = T\gamma_0 + 2\sum_{k=1}^{T-1} (T-k)\gamma_k$。当 $T$ 充分大时，其相对 i.i.d. 的均值方差膨胀为 $1 + 2\sum_{k=1}^\infty \phi^k = \frac{1+\phi}{1-\phi}$。若 $\phi = 0.5$，膨胀因子为 3，标准误为 i.i.d. 标准误的 $\sqrt{3} \approx 1.732$ 倍。

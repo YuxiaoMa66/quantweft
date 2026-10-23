@@ -145,4 +145,4 @@ The strongest supported description is that High Technology has the highest hist
 .venv/bin/python -m pytest tests/test_project01_analysis.py -q
 ```
 
-The historical CLI reads frozen files and generates figures, JSON metrics and window CSVs. Tests check snapshot hashes, continuous intervals, one-to-one RF alignment and hand-checkable wealth/drawdown boundaries. See the [QA record](../../../../../projects/project01/qa/acceptance.md) for the complete original checks. Historical teaching derivations and tables are in the original [Notebook](../../../../../projects/project01/notebooks/project01_financial_data_analysis.ipynb), designed for a clean kernel under that original data route.
+The historical report uses frozen inputs. Teaching derivations and tables are in the original [Notebook](../../../../../projects/project01/notebooks/project01_financial_data_analysis.ipynb). The historical study and current constructed Notebook use different inputs and outputs.

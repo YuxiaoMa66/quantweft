@@ -645,7 +645,7 @@ Let \(A=0.1z^2+0.9\). For \(z\sim N(0,1)\), EA=0.1(1)+0.9=1. A is nondegenerate,
 
 ## 19. Further Reading
 
-- **Must Know — Bollerslev (1986), §§2–3.** Read the GARCH representation, weak-stationarity variance condition, and GARCH(1,1) fourth-moment condition; the corresponding passages and author-PDF page references for this chapter are recorded in `source_notes.md`.
+- **Must Know — Bollerslev (1986), §§2–3.** Read the GARCH representation, weak-stationarity variance condition, and GARCH(1,1) fourth-moment condition; the source version used in this chapter is listed in `source_notes.md`.
 - **Must Know — Andersen, Bollerslev, Diebold & Labys (2003), Introduction and §2.** Read about the asymptotic relationship between high-frequency sums of squared returns and quadratic variation/integrated variance, including the jump term; do not misread a limit result as equality between finite-grid RV and conditional variance.
 - **Should Know — Hansen & Lunde (2006), Introduction, theoretical framework, empirical section and conclusion.** Read how microstructure noise and frequency choice change realized-variance precision; frequency conclusions from that paper’s sample apply only to its sample and setting.
 - **Should Know — Patton (2011), §2 propositions and conclusion.** Read the requirements for forecast-comparison losses with noisy but conditionally unbiased variance proxies; the proxy used in this chapter does not automatically meet them.
@@ -656,7 +656,7 @@ Let \(A=0.1z^2+0.9\). For \(z\sim N(0,1)\), EA=0.1(1)+0.9=1. A is nondegenerate,
 ## 20. References
 
 1. French Data Library. **10 Industry Portfolios**, monthly average value-weighted returns. The original download URL is in the data manifest; the study snapshot, processing, and hashes are listed in Section 11. The table contains currently downloadable historical values, not historical point-in-time vintages.
-2. Bollerslev, T. (1986). “Generalized autoregressive conditional heteroskedasticity.” *Journal of Econometrics*, 31(3), 307–327. DOI: [10.1016/0304-4076(86)90063-1](https://doi.org/10.1016/0304-4076(86)90063-1). This chapter checks the key moment conditions against §§2–3 of the author’s original journal PDF, physical PDF pages 3–6; the specific reading range is in [`source_notes.md`](../../../zh/chapters/ch18/source_notes.md).
+2. Bollerslev, T. (1986). “Generalized autoregressive conditional heteroskedasticity.” *Journal of Econometrics*, 31(3), 307–327. DOI: [10.1016/0304-4076(86)90063-1](https://doi.org/10.1016/0304-4076(86)90063-1). This chapter checks the key moment conditions against §§2–3 of the author’s original journal PDF.
 3. Andersen, T. G., Bollerslev, T., Diebold, F. X., & Labys, P. (2003). “Modeling and forecasting realized volatility.” *Econometrica*, 71(2), 579–625. DOI: [10.1111/1468-0262.00418](https://doi.org/10.1111/1468-0262.00418). This chapter reads the Introduction and opening of §2; the derivation coverage is noted in the source notes.
 4. Hansen, P. R., & Lunde, A. (2006). “Realized variance and market microstructure noise.” *Journal of Business & Economic Statistics*, 24(2), 127–161. DOI: [10.1198/073500106000000071](https://doi.org/10.1198/073500106000000071).
 5. Patton, A. J. (2011). “Volatility forecast comparison using imperfect volatility proxies.” *Journal of Econometrics*, 160(1), 246–256. DOI: [10.1016/j.jeconom.2010.03.034](https://doi.org/10.1016/j.jeconom.2010.03.034).
@@ -664,4 +664,4 @@ Let \(A=0.1z^2+0.9\). For \(z\sim N(0,1)\), EA=0.1(1)+0.9=1. A is nondegenerate,
 7. SciPy documentation. [`scipy.optimize.minimize`, SLSQP method](https://docs.scipy.org/doc/scipy/reference/optimize.minimize-slsqp.html). Optimizer API and stopping criterion only.
 8. `arch` 7.2 documentation. [Forecasting](https://arch.readthedocs.io/en/stable/univariate/forecasting.html); [EWMA variance process](https://arch.readthedocs.io/en/stable/univariate/generated/arch.univariate.EWMAVariance.html). Documentation consulted for definitions and alignment; the estimator was not installed or used.
 
-Source locations, historical reading ranges, and verification limits are detailed in [source_notes.md](../../../zh/chapters/ch18/source_notes.md).
+Further references and verification limits are listed in [source_notes.md](../../../zh/chapters/ch18/source_notes.md).

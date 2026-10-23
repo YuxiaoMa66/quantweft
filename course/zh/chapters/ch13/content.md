@@ -273,13 +273,13 @@ WACC=\frac{480(10\%)+40(10\%)+20(7\%)+260(6\%)(1-25\%)}{800}
 
 ### 本读者版的默认运行入口
 
-从接受I3读者包根目录，按其[环境说明](../../../../editions/zh/README.md)建立环境后运行：
+从随包读者包根目录，按其[环境说明](../../../../editions/zh/README.md)建立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch13_valuation.ipynb
 ```
 
-Notebook调用随包共享实现。第13章Orion/Lyra、预测现金流、资本成本、PIT时钟与市值均为构造；Apple小节仅核财报行。默认只展示随包既有两张图，不重绘；运行器把新内核执行记录写入唯一的`runs/execution_*`目录，Notebook另建立唯一UUID的本章方法目录并打印位置。两目录用途不同，不把既有图说成本批新产物。未随包提供的French数据不默认读取，也不下载。下方CLI及旧制作测试按课程工作根解释；读者用上方Notebook内断言，旧制作测试未随包时不要求补回。英文Notebook的Markdown层仍待BIL23装配，本批未执行Notebook或旧数值套件。
+Notebook 调用随包共享实现。第13章 Orion/Lyra、预测现金流、资本成本、PIT 时钟与市值均为构造；Apple 小节仅核对财报行。默认只展示随包既有两张图，不重绘；运行器把新内核执行记录写入唯一的 `runs/execution_*` 目录，Notebook 另建立唯一 UUID 的本章方法目录并打印位置。两目录用途不同，既有图不是本次生成的结果。未随包提供的 French 数据不默认读取，也不下载。读者用上方 Notebook 内断言。
 
 ### 历史课程工作根与原实现
 
@@ -729,4 +729,4 @@ M=EV_{\mathrm{core}}-D-PREF-NCI+CASH+NOA_{\mathrm{other}}+I.
 4. SEC, [Non-GAAP Financial Measures C&DIs, Question 102.07](https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/non-gaap-financial-measures)：CFO 减 CapEx 的常见 FCF 口径非统一、需解释且不等于可自由支配现金，第 5–7、12 节。
 5. Apple Inc., [FY2024 Form 10-K, accession 0000320193-24-000123](https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm)：期间、营业利润、净利润、摊薄 EPS、EPS 加权平均股数、期末流通股数及资产负债表行，第 11 节。仅支持 SEC 原申报中列示的财报事实，不支持真实市场市值、P/E、信号或回报结论。
 
-本章不使用二手市场估值或历史行情。来源位置、阅读范围与核验边界详见 [source_notes.md](source_notes.md)。
+本章不使用二手市场估值或历史行情。来源与引用边界详见 [source_notes.md](source_notes.md)。

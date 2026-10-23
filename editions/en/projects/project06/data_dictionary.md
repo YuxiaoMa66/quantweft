@@ -1,6 +1,6 @@
 # Project 6 Data Dictionary (A8-A Constructed Base Panel)
 
-**Scope and status:** This dictionary describes the frozen A8-A base configuration and its constructed panel. It is used to check the timing contract, pipeline, and teaching mechanisms; it is not market evidence. Real-data research remains **blocked**. Licensing and field requirements are in `data_manifest.json`. The complete Project 6 is not complete or verified; the A8-B tree-model extension has its own configuration, report, and acceptance entry.
+**Scope:** This dictionary describes the frozen A8-A base configuration and its constructed panel. It is used to check the timing contract, pipeline, and teaching mechanisms; it is not market evidence. Real-data research has not been performed because source and rights requirements remain unmet. Licensing and field requirements are in `data_manifest.json`.
 
 ## Keys, frequency, and sample
 
@@ -52,7 +52,7 @@ Report prediction metrics (such as out-of-sample `R^2` relative to the zero and 
 - Configured one-way proportional fees are 0, 0.001, and 0.002 (0, 10, and 20 basis points); initial cash is 1,000,000. NAV is marked at each daily close; fees are charged on traded notional.
 - Only the proportional fees above are included. Borrow fees, financing spreads, market impact, capacity, and margin costs are not modeled. Under the Chapter 29 convention, short-sale proceeds remain fully in cash.
 
-## Historical status and limits
+## Interpretation limits
 
-The A8-A base implementation and constructed teaching validation were accepted within a limited scope, as was the A8-R1 display revision. The A8-B tree-model extension has a separate limited-scope acceptance entry. Constructed results describe model behavior under a frozen simulated design; they do not establish real-market predictability, returns, or alpha. Real-data research remains **blocked**, and the complete Project 6 has not been verified.
+The A8-A base implementation describes constructed teaching validation, and A8-R1 explains the display of frozen results. The A8-B tree-model extension is described in its own configuration and report. Constructed results describe model behavior under a frozen simulated design; they do not establish real-market predictability, returns, or alpha. Real-data research has not been performed.
 

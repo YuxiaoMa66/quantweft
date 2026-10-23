@@ -26,7 +26,7 @@
 
 ## 运行
 
-本节命令定位A5历史筛选诊断及测试；不是本批重新运行，也不是P5三对构造Notebook或c5完整网格。普通读者主路线见[项目导读](../README.md)，不会覆盖这里的历史结果。
+A5准备层展示French行业组合的训练段相关与协整筛选、反例及描述性诊断；它与三对构造Notebook和c5完整网格属于不同研究范围。普通读者主路线见[项目导读](../README.md)。
 
 ```bash
 .venv/bin/python projects/project05/preparation/screening_layer.py

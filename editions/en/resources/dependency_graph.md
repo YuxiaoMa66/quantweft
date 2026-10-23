@@ -1,5 +1,5 @@
 # Chapter prerequisite graph
-Solid arrows are required prerequisites; dotted arrows provide background. Absence of an edge does not imply absence of applications. The current graph has 45 nodes and 120 required edges, plus three background edges. All 118 historical required edges remain; 13→15 and 24→26 are added.
+Solid arrows indicate required preparation; dashed arrows show useful background. Use the chapter numbers to plan your reading, then follow the project milestones in the learning route.
 ```mermaid
 flowchart TD
   C1["Chapter 1 — Quantitative Finance and the Quant Industry"]
@@ -171,5 +171,9 @@ flowchart TD
   C17 -. background .-> C18
   C33 -. background .-> C34
 ```
-13→15 supplies valuation and claim interpretation; 24→26 supplies statement conventions and value/quality comparisons. 11→12 provides return context. 17→18 is background: Chapter 18 develops EWMA/ARCH/GARCH from given-mean innovations, squared increments and Chapter 16 dependence; it does not require unit roots, cointegration, VAR or EG. 33→34 adds risk context rather than prerequisites for quotes and books.
-The matching openings in Chapters 12, 15, 18, 26 and 34 in both languages were integrated and accepted in BIL23B. See the [learning route](learning_roadmap.md) for project prerequisites.
+
+## Reading the prerequisites
+
+- Read Chapter 13 before Chapter 15 for valuation and financial claims, and Chapter 24 before Chapter 26 for accounting conventions and value/quality comparisons.
+- Chapters 11, 17 and 33 provide background for Chapters 12, 18 and 34 respectively. Chapter 18 builds on the dependence concepts in Chapter 16; cointegration and VAR are not required for its EWMA/ARCH/GARCH derivations.
+- See the [learning route](learning_roadmap.md) for project prerequisites.

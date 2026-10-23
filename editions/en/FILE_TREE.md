@@ -26,5 +26,3 @@ docs/                 # introduction website, navigation and legal notices
 LICENSES/             # full license texts
 third_party/          # retained upstream attribution
 ```
-
-Run code from the repository root. See the [Notebook guide](NOTEBOOK_GUIDE.md) for setup and examples, and [Optional inputs](OPTIONAL_DATA.md) for data availability. Internal build and review records are not part of the reader distribution.

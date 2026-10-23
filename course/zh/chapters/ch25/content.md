@@ -170,7 +170,7 @@ B_s-B_{s-1}=\frac1K\bigl(w^{(s)}-w^{(s-K)}\bigr)
 
 ## 8. 数值例题：手算每一步
 
-所有数字由 `hand_examples()` 产生，并由 `qa/a5/claude/recompute/ch25_recompute.py` 用不同实现复核。例子为教学构造。
+所有数字由 `hand_examples()` 产生，并用不同实现独立复核。例子为教学构造。
 
 ### 8.1 12–1 的窗口：十四个月的收益
 
@@ -221,13 +221,13 @@ B_s-B_{s-1}=\frac1K\bigl(w^{(s)}-w^{(s-K)}\bigr)
 | `net_of_costs` | 毛收益、权重、单位成本 | 毛收益减去 $c\times\sum|\Delta w|$（目标到目标，不含漂移） |
 | `trailing_bear_state` | 市场总收益序列、窗口 | 过去 24 个月（含当月）累计为负记 1，窗口不足为 NaN |
 
-默认离线入口（从 I3 阅读包根目录运行）：
+默认离线入口（从 阅读包根目录运行）：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch25_momentum.ipynb
 ```
 
-默认 `RUN_FRENCH=False`，展示窗口、复利、CS/TS权重及24×6、种子2的vintage恒等式（K=1/3/6）。五个市场单元均跳过，默认不导入ch25模块、不计算拆股/展期或历史网格。 runner另写 `runs/execution_<stem>_<uuid>/` 的执行副本与状态。Notebook英语语言层及整包路径在BIL23装配；下列为历史完整CLI与测试参考，并非默认离线命令：
+默认 `RUN_FRENCH=False`，展示窗口、复利、CS/TS权重及24×6、种子2的vintage恒等式（K=1/3/6）。五个市场单元均跳过，默认不导入ch25模块、不计算拆股/展期或历史网格。 runner另写 `runs/execution_<stem>_<uuid>/` 的执行副本与状态。下列为历史完整CLI与测试参考，并非默认离线命令：
 
 ```bash
 .venv/bin/python code/ch25_momentum.py
@@ -644,7 +644,7 @@ print(round(100 * ts.mean(), 3), round(100 * always.mean(), 3), round(t, 2))
 
 ## 20. 参考资料
 
-引用键与读取范围见 [source_notes.md](source_notes.md)。
+参考资料与链接见 [source_notes.md](source_notes.md)。
 
 - CH25_JT1993：Jegadeesh, N., Titman, S. (1993). *Journal of Finance* 48(1)，印刷页 68–69。
 - CH25_AMP2013：Asness, C. S., Moskowitz, T. J., Pedersen, L. H. (2013). *Journal of Finance* 68(3)，印刷页 936–937。

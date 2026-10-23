@@ -315,13 +315,13 @@ D2交易记录解释“信号→成交→收益”的接口，5/10的一股账�
 
 ### 接受读者包的默认入口
 
-本样章沿用I3接受读者的共享实现。按[读者安装说明](../../../../editions/zh/README.md)建立环境，从读者包根运行：
+本样章使用读者包中的共享实现。按[读者安装说明](../../../../editions/zh/README.md)建立环境，从读者包根运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch03_data.ipynb
 ```
 
-默认Notebook调用随包共享逻辑，不读取未随包提供的French数据、不下载数据；新执行结果写入唯一runs子目录。以下课程根目录代码、环境锁文件和历史测试入口为原工作源路线，勿与读者根混用。French历史文件须按[可选数据契约](../../../../editions/zh/OPTIONAL_DATA.md)自备授权输入，本批未重跑。读者包CLI默认采用新UUID运行目录并拒绝覆盖；构造运行不等于市场数据或成交验证。
+默认 Notebook 调用随包共享逻辑，不读取未随包提供的 French 数据，也不下载数据；新执行结果写入唯一 `runs/` 子目录。French 历史数据须按[可选数据契约](../../../../editions/zh/OPTIONAL_DATA.md)由读者自行提供获准使用的输入。读者 CLI 为每次运行创建新的 UUID 目录并避免覆盖已有结果。构造数据运行不等于市场数据或成交验证。
 
 
 PIT 核心函数、行情示例脚本、模拟 fixtures 和 Notebook 的接口如下。函数模块在 [src/quant_course/pit.py](../../../../src/quant_course/pit.py)，完整脚本在 [code/ch03_data.py](../../../../code/ch03_data.py)，Notebook 在 [notebooks/ch03_data.ipynb](../../../../notebooks/ch03_data.ipynb)。Fixtures 在 [a1_pit_signals.csv](../../../../data/fixtures/a1_pit_signals.csv)、[a1_pit_versions.csv](../../../../data/fixtures/a1_pit_versions.csv) 与 [a1_corporate_actions.csv](../../../../data/fixtures/a1_corporate_actions.csv)；metadata 明确标注为模拟数据。
@@ -899,7 +899,7 @@ assert correct_asof_select(versions_df, "2024-04-21 16:00:00-04:00") == 8.0  # �
 
 ## 20. References
 
-本章引用键已登记到共享 references/sources.json 和 references.bib；精确链接、读取范围和证据边界见本章 source_notes.md。
+本章引用键已登记到共享 references/sources.json 和 references.bib；来源链接与引用边界见本章 source_notes.md。
 
 - **SEC_API**：[EDGAR Application Programming Interfaces (APIs)](https://www.sec.gov/edgar/sec-api-documentation)。支持 data.sec.gov 接口、companyfacts/frames、更新频率、批量数据与访问说明；不证明供应商和本地系统可用时刻。
 - **NYSE_CAL**：[Holidays & Trading Hours](https://www.nyse.com/markets/hours-calendars)。支持交易时段以 Eastern Time 表达、年度假期与部分提前收市；不代表历史逐日行情样本。

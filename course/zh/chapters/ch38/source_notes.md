@@ -1,20 +1,39 @@
-# 第38章来源核读记录（A8-A）
+# 第38章：参考资料
 
-日期：2026-10-10。“作者核读”指主会话本人读到；“侦察报告”指 AMC job `scout-1791633892-1997ed71`（gemini-3.8-flash-high，只读）报告、作者未重新打开。
+本页列出本章相关的论文、课程、数据来源与工具文档。
 
-| 键 | 访问层级 | 实际读取位置 | 支持正文 | 限制 |
-|---|---|---|---|---|
-| `SK_TSS` | 已有键；作者在本机 scikit-learn 1.9.1 中读取 `TimeSeriesSplit.__doc__` | 参数 `gap`：从每个训练集末尾排除的**样本**数 | 6.2 节、第12.1节 | 只说明软件语义，不支持“gap 取多少合适” |
-| `SK_PITFALLS` | 已有键；侦察报告读 1.9.1 文档 §12.2 | 数据泄漏、训练内预处理 | 第5节、第12.2节 | — |
-| `SK_PIPE_DOC` | 新键；侦察报告读用户指南 §6.1.1 与 1.9.1 `Pipeline.__doc__` | fit 时各步依次只在传入数据上拟合 | 第5节 Pipeline 定义 | 作者未重新打开网页；行为由 `tests/test_ml_pipeline.py` 的训练内标准化测试独立验证 |
-| `SK_GRID_DOC` | 新键；侦察报告读用户指南 §3.2 与 `GridSearchCV.__doc__` | 每折重拟合整个 Pipeline | 第20节 | 同上；本书管线未使用 GridSearchCV |
-| `SK_CALIBRATION` | 新键；侦察报告读用户指南 §1.16–1.16.2 | 可靠性曲线（分类概率） | 第5节校准定义的分类版本 | 本章的回归校准斜率为本书定义，不由该文档支持 |
-| `CH38_CT2010` | 新键；侦察报告读全文（JMLR PDF） | 摘要、§5、§9 | 第5节“调参与评价分开”、第19节 | 作者未重新打开 |
-| `CH38_PRADO2018` | 新键；侦察报告：出版商目录（第7章 7.1–7.5，pp.103–111） | 仅目录 | 第19节延伸阅读 | 正文未读；本章 purging/embargo 规则由 6.1–6.2 节推导及第31章支撑 |
-| 第31章、第23章代码 | 本仓库源码，作者读源 | `validation.intervals_overlap/purge/embargo/purged_kfold_splits`；`factor_research.ic_series/ic_summary` | 6.1、6.2 节，第8.2节 | 第31章 walk-forward 按行切块、不处理 label_available_at，本章新模块补足 |
+<a id="opened-source-documents"></a>
 
-本章全部数值与图为构造数据（种子 3801–3803），不构成市场证据。
+### SK_TSS
 
-## BIL18 双语教学修订（2026-10-16）
+[scikit-learn TimeSeriesSplit](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html)
 
-以上核读层级与日期为历史记录，本批没有重新访问文献或扩大其证据等级。候选承接接受I3语义校订及准备记录的独立小算，保留冻结结果；新增的是概念边界、完整参考方法和自然英文正文。Notebook语言层留BIL23；本批不运行课程API、CLI、Notebook、大模拟或真实研究。具体对应见本批SOURCE_MAP与题号清单。
+TimeSeriesSplit 的 gap 与训练窗口设置不等同于 Purged CV。
+
+### SK_PITFALLS
+
+[scikit-learn Common pitfalls and recommended practices](https://scikit-learn.org/stable/common_pitfalls.html)
+
+### CH38_CT2010
+
+[On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation (Cawley, Talbot 2010, JMLR 11 2079-2107)](https://www.jmlr.org/papers/volume11/cawley10a/cawley10a.pdf)
+
+### CH38_PRADO2018
+
+[Advances in Financial Machine Learning (López de Prado 2018, Wiley), Chapter 7](https://www.wiley.com/en-us/Advances+in+Financial+Machine+Learning-p-9781119482086)
+
+### SK_PIPE_DOC
+
+[scikit-learn: Pipelines and composite estimators (1.9.1)](https://scikit-learn.org/stable/modules/compose.html)
+
+### SK_GRID_DOC
+
+[scikit-learn: Tuning the hyper-parameters of an estimator (1.9.1)](https://scikit-learn.org/stable/modules/grid_search.html)
+
+### SK_CALIBRATION
+
+[scikit-learn: Probability calibration (1.9.1)](https://scikit-learn.org/stable/modules/calibration.html)
+
+只支持分类可靠性图，回归校准斜率为本书定义
+
+[章节正文](content.md) · [完整参考资料](../../../../editions/zh/resources/references.md)

@@ -645,7 +645,7 @@ cd /tmp
 
 ## 19. 延伸阅读
 
-- **Must Know — Bollerslev (1986), §§2–3。** 看GARCH表示、弱平稳方差条件、GARCH(1,1)四阶矩条件；本章对应位置和作者PDF阅读页记在 `source_notes.md`。
+- **Must Know — Bollerslev (1986), §§2–3。** 看GARCH表示、弱平稳方差条件、GARCH(1,1)四阶矩条件；本章所用原刊版本为作者PDF， `source_notes.md`。
 - **Must Know — Andersen, Bollerslev, Diebold & Labys (2003), Introduction and §2。** 看高频收益平方和与二次变差/积分方差的渐近关系及跳跃项；不要把极限结论误读成有限网格RV等于条件方差。
 - **Should Know — Hansen & Lunde (2006), Introduction, theoretical framework, empirical section and conclusion。** 看微观结构噪声和频率选择如何改变已实现方差精度；论文样本中的频率结论只对其样本/设置负责。
 - **Should Know — Patton (2011), §2 propositions and conclusion。** 看有噪声但条件无偏方差代理下预测比较损失的要求；本章实际代理不自动满足该要求。
@@ -656,7 +656,7 @@ cd /tmp
 ## 20. 参考文献
 
 1. French Data Library. **10 Industry Portfolios**，月度平均价值加权收益。原下载地址见数据manifest；本研究快照、处理与哈希列在第11节。该表包含当前可下载历史值，不等于历史point-in-time vintage。
-2. Bollerslev, T. (1986). “Generalized autoregressive conditional heteroskedasticity.” *Journal of Econometrics*, 31(3), 307–327. DOI: [10.1016/0304-4076(86)90063-1](https://doi.org/10.1016/0304-4076(86)90063-1). 本章仅据作者原刊PDF §§2–3、PDF物理页3–6核关键矩条件，具体读取范围见 [`source_notes.md`](source_notes.md)。
+2. Bollerslev, T. (1986). “Generalized autoregressive conditional heteroskedasticity.” *Journal of Econometrics*, 31(3), 307–327. DOI: [10.1016/0304-4076(86)90063-1](https://doi.org/10.1016/0304-4076(86)90063-1). 本章依据作者原刊 PDF §§2–3 核对关键矩条件。
 3. Andersen, T. G., Bollerslev, T., Diebold, F. X., & Labys, P. (2003). “Modeling and forecasting realized volatility.” *Econometrica*, 71(2), 579–625. DOI: [10.1111/1468-0262.00418](https://doi.org/10.1111/1468-0262.00418). 本章阅读引言和§2开头；推导范围见来源注记。
 4. Hansen, P. R., & Lunde, A. (2006). “Realized variance and market microstructure noise.” *Journal of Business & Economic Statistics*, 24(2), 127–161. DOI: [10.1198/073500106000000071](https://doi.org/10.1198/073500106000000071).
 5. Patton, A. J. (2011). “Volatility forecast comparison using imperfect volatility proxies.” *Journal of Econometrics*, 160(1), 246–256. DOI: [10.1016/j.jeconom.2010.03.034](https://doi.org/10.1016/j.jeconom.2010.03.034).
@@ -664,4 +664,4 @@ cd /tmp
 7. SciPy documentation. [`scipy.optimize.minimize`, SLSQP method](https://docs.scipy.org/doc/scipy/reference/optimize.minimize-slsqp.html). Optimizer API and stopping criterion only.
 8. `arch` 7.2 documentation. [Forecasting](https://arch.readthedocs.io/en/stable/univariate/forecasting.html); [EWMA variance process](https://arch.readthedocs.io/en/stable/univariate/generated/arch.univariate.EWMAVariance.html). Documentation consulted for definitions/alignment; estimator not installed/used.
 
-来源位置、历史阅读范围与核验边界详见 [source_notes.md](source_notes.md)。
+来源与引用边界详见 [source_notes.md](source_notes.md)。

@@ -390,13 +390,13 @@ Finally, prior Beta(2,2) and 6 wins/4 losses give posterior Beta(8,6), with succ
 
 ### Default entry point in the accepted reader package
 
-From the accepted I3 reader package root, create the isolated environment described in its [README](../../../../editions/en/README.md), then run:
+From the reader package root, create the isolated environment described in its [README](../../../../editions/en/README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch07_statistics.ipynb
 ```
 
-This notebook calls the packaged shared implementation, reads no omitted French data and downloads nothing. Each execution writes a unique UUID subdirectory under runs and prints its location. Old production tests and historical course-root commands below belong to the original project; the default reader route is this package-root notebook with its assertions. Optional historical French inputs follow the reader’s [data contract](../../../../editions/en/OPTIONAL_DATA.md); this batch did not rerun them.
+This notebook calls the packaged shared implementation, reads no omitted French data and downloads nothing. Each execution writes a unique UUID subdirectory under runs and prints its location. Old production tests and historical course-root commands below belong to the original project; the default reader route is this package-root notebook with its assertions. Optional historical French inputs follow the reader’s [data contract](../../../../editions/en/OPTIONAL_DATA.md); those optional French inputs are not run by default.
 
 ### Historical course-root route
 
@@ -834,5 +834,5 @@ The next chapter uses regression for conditional relationships and factor exposu
 - [Künsch (1989), The Jackknife and the Bootstrap for General Stationary Observations](https://projecteuclid.org/journals/annals-of-statistics/volume-17/issue-3/The-Jackknife-and-the-Bootstrap-for-General-Stationary-Observations/10.1214/aos/1176347265.full), *The Annals of Statistics*, 17(3), 1217–1241, DOI 10.1214/aos/1176347265. Publisher abstract and author publication list were checked; full-text theorems are not claimed as verified here.
 - [Kenneth French: 10 industry portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html): source of the real monthly-return cache, not a PIT individual-security trading database.
 
-The [chapter source notes](../../../zh/chapters/ch07/source_notes.md) record verification scope and program evidence.
+The [chapter source notes](../../../zh/chapters/ch07/source_notes.md) list further references and program information.
 

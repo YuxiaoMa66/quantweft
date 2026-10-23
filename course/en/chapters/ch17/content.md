@@ -275,7 +275,7 @@ Actual ledgers should charge fees using each executed notional, the exact holdin
 
 ### Default Entry Point for This Reader Edition
 
-From the accepted I3 reader package root, create an independent environment using its [environment instructions](../../../../editions/en/README.md), then run:
+From the reader package root, create an independent environment using its [environment instructions](../../../../editions/en/README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch17_time_series_ii.ipynb
@@ -285,7 +285,7 @@ The default run constructs two 900-month samples using seeds 20261017 and 202610
 
 The Notebook displays the existing bundled figure `fixtures/figures/a4/ch17_cointegration_simulation.png`; displaying it does not regenerate it. `RUN_FRENCH=False` disables the historical market branch. Although it creates and prints `runs/ch17_time_series_ii_<uuid>/`, this Notebook writes no CSV or PNG there. The runner separately saves the executed copy and status in a unique `runs/execution_*` directory; these directories serve different purposes. Constructed calculations are not evidence of market predictability or strategy net returns. The historical French figures and numbers in Sections 10–11 retain their original status.
 
-The CLI and production tests below belong to the historical course working-root workflow and are not this package's default route. Readers need not restore production tests that are absent from the package. The I3 Chapter 16 CLI still reads French data unconditionally; the Chapter 17 CLI's historical branch requires `--french-data`. Neither replaces the default command above.
+The optional Chapter 16 CLI reads French data unconditionally; the Chapter 17 French-data branch requires `--french-data`. Use either route only with locally supplied data and appropriate permissions. The default Notebook command above remains the offline entry.
 
 ### Historical Course Working Root and Original Implementation
 

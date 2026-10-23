@@ -222,7 +222,7 @@ In the chapter’s zero-skill simulation, $M=200$ independent noise strategies e
 
 ## 8. Numerical Examples
 
-This section compares hand-calculation inputs and reproducible outputs from the CLI result `qa/a6/codex_resume/ch32/results/ch32_results.json`.
+This section compares hand-calculation inputs with saved CLI results that can be reproduced from the public command.
 
 ::: {.body-example title="Complete worked example: six-period descriptive measures"}
 
@@ -366,7 +366,7 @@ This module reports both thresholds. For $N=4$, the strict rule counts only rank
 
 The chapter’s core algorithms are stored in `src/quant_course/inference.py`; the full CLI tool is `code/ch32_performance_statistics.py`.
 
-From the root of the accepted I3 reader package, run `python run_notebook.py notebooks/ch32_performance_statistics.ipynb`. The Notebook creates a unique `runs/ch32_performance_statistics_<uuid>/` directory, computes a fresh champion example with one seed and 1,250 observations and 200 candidate strategies, and calculates 252 CSCV partitions; later cells mainly display results already held in the kernel. It is therefore more than a static replay, and the static chapter figures are not new outputs from that Notebook run. French data is skipped by default. The runner also writes an execution copy and `execution.json` to `runs/execution_<stem>_<uuid>/`; failed runs are retained too. The English Notebook and portable packaging/cold-start work belong to BIL23, and are not executed as part of this chapter workflow.
+From the root of the reader package, run `python run_notebook.py notebooks/ch32_performance_statistics.ipynb`. The Notebook creates a unique `runs/ch32_performance_statistics_<uuid>/` directory, computes a fresh champion example with one seed and 1,250 observations and 200 candidate strategies, and calculates 252 CSCV partitions; later cells mainly display results already held in the kernel. It is therefore more than a static replay, and the static chapter figures are not new outputs from that Notebook run. French data is skipped by default. The runner also writes an execution copy and `execution.json` to `runs/execution_<stem>_<uuid>/`; failed runs are retained too.
 
 The working CLI still includes French data, multi-seed champion analysis, and AR research and should not be launched just to read this chapter. If separately authorized, use a new output directory and do not overwrite frozen QA results. The following is a local API demonstration.
 
@@ -810,7 +810,7 @@ assert round(turnover.iloc[3], 4) == 0.0728
 print("32-P04 tests passed.")
 ```
 
-P04 carries forward the accepted BIL15A ledger: closing signals on dates[0] and dates[2] execute on dates[1] and dates[3], respectively, at the specified execution prices. Turnover uses pre-trade NAV as its denominator and total buy and sell notional as its numerator; the 0.002 fee rate is applied to traded notional in the self-financing ledger. Closing weights on trade dates may differ from target weights because of prices and fees, so target-weight changes cannot replace ledger turnover.
+The ledger example uses: closing signals on dates[0] and dates[2] execute on dates[1] and dates[3], respectively, at the specified execution prices. Turnover uses pre-trade NAV as its denominator and total buy and sell notional as its numerator; the 0.002 fee rate is applied to traded notional in the self-financing ledger. Closing weights on trade dates may differ from target weights because of prices and fees, so target-weight changes cannot replace ledger turnover.
 
 ### 32-C01 — Challenge Argument and Rubric
 

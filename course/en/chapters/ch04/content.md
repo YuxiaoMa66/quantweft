@@ -1058,4 +1058,4 @@ Along \((.6-s,.4+s)\), the sum remains one and nonnegativity with \(s\ge0\) requ
 
 ## 20. References and Reading Boundaries
 
-The inherited sources, exact URLs, verification methods and limits appear in the [Chinese source audit record](../../../zh/chapters/ch04/source_notes.md). The original exposition and derivations explain the mathematics; MIT OpenCourseWare supports topic placement and formula structure, Boyd supports convex optimality conditions, and NumPy supports sampled-array difference semantics. The bond and quadratic numbers are constructed by the author. No new external-document reading, market data download or market execution took place for this translation.
+Additional references and their scope appear in the [chapter source notes](../../../zh/chapters/ch04/source_notes.md). The original exposition and derivations explain the mathematics; MIT OpenCourseWare supports topic placement and formula structure, Boyd supports convex optimality conditions, and NumPy supports sampled-array difference semantics. The bond and quadratic numbers are constructed by the author.

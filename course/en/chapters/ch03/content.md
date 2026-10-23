@@ -279,7 +279,7 @@ The D2 record explains the signal/fill/return interface; the May 10 ledger is a 
 
 ### Default Entry in the Accepted Reader
 
-Follow the accepted I3 [reader installation instructions](../../../../editions/en/README.md), then run from the reader-package root:
+Follow the [reader installation instructions](../../../../editions/en/README.md), then run from the reader-package root:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch03_data.ipynb
@@ -834,7 +834,7 @@ If same-second order is unknown, exclude or use finer time/monotonic sequences. 
 
 ## 20. References and Reading Boundaries
 
-Keys are registered in shared references/sources.json and references.bib. Exact inherited reading scope and dates are in [Chinese source audit record](../../../zh/chapters/ch03/source_notes.md). This translation adds no new online reading or market run.
+Keys are registered in shared references/sources.json and references.bib. Further references are listed in [chapter source notes](../../../zh/chapters/ch03/source_notes.md).
 
 - **SEC_API:** [EDGAR Application Programming Interfaces](https://www.sec.gov/edgar/sec-api-documentation). Endpoints, companyfacts/frames, refresh, bulk data and access; no proof of vendor/local clocks.
 - **NYSE_CAL:** [Holidays & Trading Hours](https://www.nyse.com/markets/hours-calendars). Eastern hours, holidays and early closes; no historical quote sample.

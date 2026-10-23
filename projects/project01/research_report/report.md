@@ -143,4 +143,4 @@ NoDur 在前五年 CAGR 最高，HiTec 在之后两段最高。能源在 2015–
 .venv/bin/python -m pytest tests/test_project01_analysis.py -q
 ```
 
-CLI 从冻结文件读取并生成图、JSON 指标和窗口 CSV；测试检查冻结哈希、连续时间范围、RF 一对一对齐以及财富和回撤的可手算边界。完整项目验收记录见 [QA](../qa/acceptance.md)，教学推导与表格可在 [Notebook](../notebooks/project01_financial_data_analysis.ipynb) 从干净内核运行。
+历史报告使用冻结输入；教学推导与表格见[Notebook](../notebooks/project01_financial_data_analysis.ipynb)。历史研究数据与当前构造Notebook的输入和输出不同。

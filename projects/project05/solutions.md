@@ -1,6 +1,6 @@
 # Project 5 练习解答
 
-状态：继承已限定接受c5/ALIGN的构造教学数值，按最新整股支持域解释；本批未重跑历史CLI或参考解。所有数字由 `.venv/bin/python projects/project05/solutions_code.py` 实测打印（2026-10-10，候选清单 `qa/a7/project05_batch/CANDIDATE_MANIFEST_c5.json`）。P5-05至P5-09为教学构造面板结果，只演示方法。c1–c4按v1得到的旧结果原样保留在 `qa/a7/project05_batch/evidence/`，本文件只给c5结果。
+本文件解释构造教学数值，并按整股支持域给出答案。P5-05至P5-09为教学构造面板结果，只演示方法；c1–c4的v1历史结果不作为本文件结论。
 
 ## P5-01
 

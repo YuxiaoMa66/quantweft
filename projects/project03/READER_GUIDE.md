@@ -25,7 +25,7 @@ Notebook默认只执行构造分支，不执行French分支。种子103生成200
 - `erc_ledger_CONSTRUCTED.csv`；
 - `project03_wealth_CONSTRUCTED.png`。
 
-运行器另建 `runs/execution_project03_portfolio_oos_<uuid>/` 保存执行副本和状态，不能与项目运行目录混同。构造财富图含初始1，共25个点；原Holding month横轴是0至24的位置序号，0为首个持有月前，不是日历日期。默认不下载或读取French，不运行历史主规格、参数网格、Bootstrap或后见之明分析，也不生成它们的summary.json等文件。保存的旧输出若存在，仅是原文件携带的记录，不是本轮执行证据。
+运行器另建 `runs/execution_project03_portfolio_oos_<uuid>/` 保存执行副本和状态，不能与项目运行目录混同。构造财富图含初始1，共25个点；原Holding month横轴是0至24的位置序号，0为首个持有月前，不是日历日期。默认不下载或读取French，不运行历史主规格、参数网格、Bootstrap或后见之明分析，也不生成它们的summary.json等文件。已保存的旧输出是历史记录，不代表当前运行结果。
 
 ## 如何阅读完整历史材料
 
@@ -37,4 +37,4 @@ P3-02需要历史primary_ledger.csv，P3-05需历史French数据和工作根代�
 
 ## 两种语言的Notebook
 
-中文与英文项目Notebook由同一个已接受读者源投影，仅Markdown语言与默认运行说明不同；代码单元格、保存输出及metadata保持原样。本轮不重新执行Notebook。最终读者包的路径装配与运行验证仍须在整合时完成；本导读不把语言层校验称为一次新的数值或市场验证。
+中文与英文项目Notebook的代码单元格和保存输出相同，Markdown说明与默认运行提示使用各自语言。默认路线只运行构造分支；French历史分支需另行满足数据权利与PIT要求。

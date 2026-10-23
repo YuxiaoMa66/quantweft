@@ -494,13 +494,13 @@ P=\begin{pmatrix}0.9&0.1\\0.3&0.7\end{pmatrix}
 
 ### 本读者版的默认运行入口
 
-从接受I3读者包的根目录，按其[README](../../../../editions/zh/README.md)建立独立环境后运行：
+从随包读者包的根目录，按其[README](../../../../editions/zh/README.md)建立独立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch06_probability.ipynb
 ```
 
-该Notebook调用随包共享实现，不读取未随包提供的French数据、不下载数据；每次写入唯一UUID的runs子目录，并打印实际输出位置。旧制作测试与下面的历史课程根命令属于原工作项目；读者默认运行使用上述包根Notebook及其断言。可选历史French路径需遵守读者包的[数据契约](../../../../editions/zh/OPTIONAL_DATA.md)，本批未重跑。
+该 Notebook 调用随包共享实现，不读取未随包提供的 French 数据，也不下载数据；每次运行写入唯一 UUID 的 `runs/` 子目录并打印输出位置。读者默认使用上述包根 Notebook 及其断言。可选 French 数据须遵守读者包的[数据契约](../../../../editions/zh/OPTIONAL_DATA.md)。
 
 ### 历史课程根路线
 
@@ -939,7 +939,7 @@ X_{t+\Delta}-X_t\mid S_t=s\sim N(\mu_s\Delta,\sigma_s^2\Delta).
 
 ## 20. References
 
-来源均为官方课程或官方软件文档；具体阅读范围、检索方式和不能支持的结论见本章 [source_notes.md](source_notes.md)。本章没有真实市场实证来源。
+来源均为官方课程或官方软件文档；补充参考资料见本章 [source_notes.md](source_notes.md)。本章没有真实市场实证来源。
 
 - **MIT_6041SC** — MIT OpenCourseWare, [6.041SC Probabilistic Systems Analysis and Applied Probability, Fall 2013](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/)。Lecture 1–2、5–6、8、10、12、17 的链接和阅读范围见 source notes。
 - **MIT_6262** — MIT OpenCourseWare, [6.262 Discrete Stochastic Processes, Spring 2011](https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/)。本章所读 Lecture 3、Lecture 4 与 Poisson Processes Chapter 2 §2.1 直链见 source notes。
@@ -947,4 +947,4 @@ X_{t+\Delta}-X_t\mid S_t=s\sim N(\mu_s\Delta,\sigma_s^2\Delta).
 - **NUMPY_RANDOM** — NumPy, [Random Generator reference](https://numpy.org/doc/stable/reference/random/generator.html), [Generator.binomial](https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.binomial.html), [Generator.normal](https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.normal.html), [Generator.poisson](https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.poisson.html)。
 - **SCIPY_STATS** — SciPy, [binom](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binom.html), [norm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html), [lognorm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.lognorm.html), [poisson](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.poisson.html), [t](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html) distribution references。
 
-补充官方API：[SciPy expon](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.expon.html)、[SciPy uniform](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.uniform.html)。根代理实际读取参数化及分布定义，计数到等待时间和零相关反例为原创推导。
+补充官方API：[SciPy expon](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.expon.html)、[SciPy uniform](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.uniform.html)。参数化及分布定义支持本节说明；计数到等待时间和零相关反例为原创推导。

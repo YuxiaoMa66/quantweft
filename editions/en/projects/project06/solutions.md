@@ -1,8 +1,7 @@
 # Project 6 Questions and Complete Answers
 
-**Author:** Yuxiao Ma · **Revision date:** 2026-10-16.
 
-This file contains the stable Project 6 IDs P6-L01–P6-L08 and P6-T01–P6-T04. P6-L01–P6-L03 preserve the original questions in the base report; P6-L04–P6-L08 cover the BIL19 v2 tree and PCA extension. The questions also appear in the [v2 teaching guide](V2_TREES.md) and the [workbook study notes](loom/sections/p06.tex). Each answer stays in the same project as its prompt.
+This file contains the stable Project 6 IDs P6-L01–P6-L08 and P6-T01–P6-T04. P6-L01–P6-L03 preserve the base-report questions; P6-L04–P6-L08 cover the v2 tree-model and PCA extension. The questions also appear in the [v2 teaching guide](V2_TREES.md) and the [workbook study notes](loom/sections/p06.tex). Each answer stays in the same project as its prompt.
 
 
 ## Project questions: work independently first

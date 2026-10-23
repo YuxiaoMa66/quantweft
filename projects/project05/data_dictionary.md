@@ -1,6 +1,6 @@
 # Project 5 数据字典
 
-状态：继承限定接受的c5/v2与ALIGN字段契约，最新整股边界优先；本批为双语教学候选，不是新市场数据验证。真实面板blocked（`data_manifest.json`）；同一字段契约由教学构造面板 `src/p05_constructed.py` 实现并测试。
+本字典定义 c5/v2 教学构造面板的字段与最新整股执行边界。真实面板受数据许可和历史PIT字段限制（见 `data_manifest.json`）；构造面板由 `src/p05_constructed.py` 实现。
 
 ## 输入1：日频面板（长表）
 

@@ -203,15 +203,15 @@ Core functions are in [risk.py](../../../../src/quant_course/risk.py), grouped b
 
 The chapter CLI is [ch33_risk_management.py](../../../../code/ch33_risk_management.py). It reuses the Chapter 29 ledger, the existing exposure-report function, and the frozen French data reader.
 
-Readers should start from the accepted I3 package root:
+Readers should start from the reader package root:
 
 ```sh
 python run_notebook.py notebooks/ch33_risk_management.ipynb
 ```
 
-In I3, `analyze(include_french=False)` skips French by default. The Notebook freshly calculates 3,000 constructed historical observations and 50,000 Monte Carlo losses, writes a results JSON, and generates four figures. It creates a unique `runs/ch33_risk_management_<uuid>/`; the I3 CLI uses its own `runs/cli_ch33_<uuid>/`. The runner also saves an execution copy, `execution.json`, and failure status under `runs/execution_<stem>_<uuid>/`. Therefore this Notebook must not be described as a static replay that writes no experiment files. This batch only inspected the entry points statically; it did not execute the full Notebook or CLI. The working-source `code/ch33_risk_management.py` still has an `analyze()` function with no `include_french` argument and always calls French, unlike the I3 wrapper; the two entry points must not be described as fully synchronized. The English Notebook, assembly, and cold start belong to BIL23. If a separate run is authorized, specify a new output directory and do not overwrite frozen QA results or figures.
+In the reader package, `analyze(include_french=False)` skips French by default. The Notebook freshly calculates 3,000 constructed historical observations and 50,000 Monte Carlo losses, writes a results JSON, and generates four figures. It creates a unique `runs/ch33_risk_management_<uuid>/`; the CLI uses its own `runs/cli_ch33_<uuid>/`. The runner also saves an execution copy, `execution.json`, and failure status under `runs/execution_<stem>_<uuid>/`. Therefore this Notebook must not be described as a static replay that writes no experiment files. The full Notebook and CLI were not run, so no new full-execution result is reported here. The course-root script `code/ch33_risk_management.py` has no `include_french` argument in `analyze()` and calls French, unlike the reader-package wrapper. Treat the two entry points separately. For an authorized rerun, specify a new output directory so existing QA results and figures are preserved.
 
-Check core inputs separately by function. `scenario_pnl` (simple-return scenario revaluation) rejects non-positive prices and simple returns below −100%. Empirical loss vectors and unbounded Student-t parametric losses allow losses above 1; they belong to a different model domain and must not be hard-clipped. The Student-t API takes standard deviation and requires \(\nu>2\). State the loss currency/proportion, shares, USD per share, ADV in shares per trading day, and holding period. Relevant test entry points are `tests/test_ch33_risk.py` and `tests/test_ch33_workflow.py`; this batch only makes local checks of the new display example and does not rerun the historical full workflow.
+Check core inputs separately by function. `scenario_pnl` (simple-return scenario revaluation) rejects non-positive prices and simple returns below −100%. Empirical loss vectors and unbounded Student-t parametric losses allow losses above 1; they belong to a different model domain and must not be hard-clipped. The Student-t API takes standard deviation and requires \(\nu>2\). State the loss currency/proportion, shares, USD per share, ADV in shares per trading day, and holding period. Relevant test entry points are `tests/test_ch33_risk.py` and `tests/test_ch33_workflow.py`; the small display example is distinct from the full historical workflow.
 
 ## 10. Visualization
 
@@ -531,10 +531,10 @@ At an atom endpoint, negating a lower quantile requires a corresponding one-side
 
 ## 20. References
 
-- [AT2002-v5] Carlo Acerbi and Dirk Tasche, “On the Coherence of Expected Shortfall,” arXiv:cond-mat/0104295v5, 2002. <https://arxiv.org/pdf/cond-mat/0104295v5>. Historical A6/C15 citation scope: discrete-tail atom adjustment, quantile integration, and related definitions and arguments for tail-sample averages; local reading only. See [source_notes.md](../../../zh/chapters/ch33/source_notes.md#opened-source-documents) for specific pages.
+- [AT2002-v5] Carlo Acerbi and Dirk Tasche, “On the Coherence of Expected Shortfall,” arXiv:cond-mat/0104295v5, 2002. <https://arxiv.org/pdf/cond-mat/0104295v5>. Supports the discrete-tail atom adjustment, quantile integration, and related definitions and arguments for tail-sample averages.
 - [KUPIEC1995-FEDS95-24] Paul H. Kupiec, “Techniques for Verifying the Accuracy of Risk Measurement Models,” Finance and Economics Discussion Series 95-24, Federal Reserve Board, cover dated May 1995; interior title page dated April 1995. <https://fraser.stlouisfed.org/files/docs/publications/bog_feds/feds_1995-024.pdf>. The historical A6/C15 scope uses only the monitoring setup and count likelihood from the pages read; it does not generalize every claim in the source.
 - [SCIPY-T] SciPy v1.18.0 Manual, `scipy.stats.t`. <https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html>. The historical A6/C15 citation uses it only to confirm the Student-t API and location/scale parameterization.
 - [FRENCH-FROZEN] Kenneth R. French Data Library, 10 Industry Portfolios, value-weighted monthly block; FF3 risk-free series. Industry data: <https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/10_Industry_Portfolios_CSV.zip>; details: <https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html>. See the corresponding project data-manifest JSON for the course's frozen snapshot, download date, use statement, processed fields, and checksums. These are current revised historical values.
-- [A6-33-PLAN] Project-local frozen plan `qa/a6/claude/plan.md` and Chapter 33 contract terms in `A6_CONTRACT.md`. These support course interfaces, notation, and teaching scope, not external empirical evidence.
 
-The historical A6/C15 reading scope, method use, and limitations for each formula and empirical result are consolidated in [source_notes.md](../../../zh/chapters/ch33/source_notes.md#opened-source-documents).
+
+References and limitations for each formula and empirical result are listed in [source_notes.md](../../../zh/chapters/ch33/source_notes.md#opened-source-documents).

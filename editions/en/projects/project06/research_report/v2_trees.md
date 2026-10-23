@@ -1,6 +1,6 @@
 # Project 6 v2: Tree-Model Comparison, Importance, Stability, and Ablation
 
-**Frozen A8-B results dated 2026-10-11; author revision dated 2026-10-16. Author: Yuxiao Ma.** **All results come from a teaching construction (data_class = CONSTRUCTED), not market evidence.** A8-B has its own limited-scope acceptance entry, pending formal integration. The BIL19 bilingual candidate remains pending independent review. Real-data work is blocked, and complete Project 6 remains unverified. The base-pipeline report is [README.md](README.md); its A8-A frozen content remains separately preserved.
+All A8-B tree-extension results come from a teaching construction (`data_class = CONSTRUCTED`), not market evidence. Real-data research has not been performed because data-source and rights requirements remain unmet. The base-pipeline report is [README.md](README.md), which preserves A8-A constructed results.
 
 ## 1. Hypotheses and questions
 
@@ -148,9 +148,9 @@ The tree models followed the specified training-only pipeline, but showed no dis
 - Importance: computed on 63-date inner windows with three repeats, so variance is high; grouped permutation has only two groups.
 - Computation: qa_r1 end-to-end time (the full p06_trees.run, including writes and plots, not fit time alone) was 1,100 seconds for base and 906 for reversal. Development run dev01 took 1,981 and 1,382 seconds under parallel load, with identical values. RF uses n_jobs=-1; floating-point summation order may vary by thread (post hoc refit matched original predictions within the default tolerance, asserted by posthoc_test_importance).
 
-## 7. I3 notebook display replay and current scope
+## 7. Notebook display and research scope
 
-The I3 reader notebook for P6 v2 has 9 cells, 4 of them code cells. It replays two frozen summaries, the IC date bases, and historical ablation and stability displays from fixed fixtures, and generates `historical_constructed_trees_sharpe.png` from the frozen summaries into RUN_DIR. Fit is explicitly marked SKIPPED; there was no retraining, full CLI, or new model test. The old “not accepted” banner is historical text; A8-B is currently limited-scope accepted pending formal integration. The BIL19 bilingual candidate remains pending independent review, and complete P6 remains unverified. This author revision did not run the notebook, models, generator, or full CLI.
+The P6 v2 Notebook displays fixed summaries, IC date bases, and historical ablation and stability results. It does not train a model or represent a real-data study.
 
 The Chapter 40 experiment's 26 features, 1,260 dates, 12 folds, registered primary strength, and separate fivefold post hoc sensitivity remain separate from P6's 46 features, 1,512 dates, and 16 folds. Data and point-in-time status and A10-B remain unverified; real research remains blocked.
 

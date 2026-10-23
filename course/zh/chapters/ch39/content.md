@@ -1,6 +1,6 @@
 # 第39章 正则化线性模型（Regularized Linear Models）
 
-> 历史展示沿用A8-R1冻结结果，旧A8-A接受版本保留；本章不重训、不补造历史预测。主线：特征多、信号弱时，OLS 的系数方差会吞掉样本外表现；Ridge、Lasso、Elastic Net 用可控的偏差换方差，但正则强度必须在训练内选，结果必须与零预测和训练均值比较，并在成本后评价。
+> 历史展示报告保存的摘要结果；本章不重训模型，也不补造历史预测。主线：特征多、信号弱时，OLS 的系数方差会吞掉样本外表现；Ridge、Lasso、Elastic Net 用可控的偏差换方差，但正则强度必须在训练内选，结果必须与零预测和训练均值比较，并在成本后评价。
 > 先修：第8章回归（OLS、标准化、软件中的正则化入门）、第38章管线。完成后你能：写出 scikit-learn 中三种估计器的目标函数与缩放约定；在正交设计下手算四个估计量；推导 Ridge 单系数的偏差、方差与最优强度；解释 L1/L2 的几何与共线性下的行为；在第38章管线上比较六个模型的预测指标与成本后组合结果。
 
 ## 1. 本章目标
@@ -13,7 +13,7 @@
 6. 解释共线性下 OLS 的符号翻转、Ridge 的平分、Lasso 的二选一，以及系数不能直接解释为因果。
 7. 用第38章的日期 walk-forward 与训练内调参，在“噪声特征多于有效信号”的构造面板上比较零预测、训练均值、OLS、Ridge、Lasso、Elastic Net 的样本外与成本后表现。
 
-完成条件：第15–17节可独立完成；能追溯第8–10节冻结输入与输出，并解释第9节新运行与冻结回放的身份边界；本批不运行或重训。
+完成条件：第15–17节可独立完成；能追溯第8–10节冻结输入与输出，并解释第9节新运行与冻结回放的身份边界；默认 Notebook 不运行历史训练。
 
 ## 2. 为什么 Quant 需要它
 
@@ -104,7 +104,7 @@ $$
 \rho'=\frac{c\rho}{(1-\rho)+c\rho}.
 $$
 
-推导只需把变换后的目标除以$c^2$：残差项复原，L1项多一个$1/c$，L2项不变。固定$\rho$后仅机械地把EN的$\alpha$乘100不会同时保住两项；小数收益与百分数收益必须连同网格一起登记。这是目标函数的单位换算，不是本批重新调参。
+推导只需把变换后的目标除以$c^2$：残差项复原，L1项多一个$1/c$，L2项不变。固定$\rho$后仅机械地把EN的$\alpha$乘100不会同时保住两项；小数收益与百分数收益必须连同网格一起登记。这是目标函数的单位换算，这不代表百分数收益网格已重新调参。
 
 **偏差—方差（bias-variance）。** 估计量 $\hat w$ 的均方误差 $E\|\hat w-w\|^2=\|E\hat w-w\|^2+\operatorname{tr}\operatorname{Var}(\hat w)$。正则化增加第一项、减少第二项。
 
@@ -275,7 +275,7 @@ VIF $=1/(1-0.99^2)=50.25$。OLS 平均接近真实值（无偏）但单次结果
 | Lasso | −0.037% | +0.033% | 0.0380 | 441/750 | +20.83% / 1.37 | +15.91% / 1.08 | 13.9 | −4.18% |
 | Elastic Net | +0.025% | +0.095% | 0.0499 | 624/750 | +41.49% / 2.08 | +33.64% / 1.75 | 19.0 | −5.27% |
 
-**日期与推断展示（A8-R1）**：上表IC是各模型自身有效日的冻结摘要均值，不是统一日期集上的排名。候选标签日期为750；Ridge有效750，Lasso441，Elastic Net624。零预测与训练均值是常数，IC未定义，不能以0充当观测IC。缺少第39章冻结逐行预测，Ridge–Lasso及Ridge–Elastic Net的共同日期、两方配对均值/均值差、逐日缺失成因均**未能复算**；有效日期少于750只能从摘要确认，不能由P06另一个实验的行数据补出。旧折记录支持部分Lasso折全零，但不等于已独立证明每个缺失日期的原因。
+**日期与推断展示**：上表IC是各模型自身有效日的保存的摘要均值，不是统一日期集上的排名。候选标签日期为750；Ridge有效750，Lasso441，Elastic Net624。零预测与训练均值是常数，IC未定义，不能以0充当观测IC。第39章逐行预测文件不可用，Ridge–Lasso及Ridge–Elastic Net的共同日期、两方配对均值/均值差、逐日缺失成因均**未能复算**；有效日期少于750只能从摘要确认，不能由P06另一个实验的行数据补出。现有折记录支持部分Lasso折全零，但不等于已独立证明每个缺失日期的原因。
 
 **先问在哪些日期取平均。** 对模型$m$定义$D_m=\{d:\mathrm{IC}_{m,d}\text{有定义}\}$，自身均值为$|D_m|^{-1}\sum_{d\in D_m}\mathrm{IC}_{m,d}$。若与Ridge配对，令$D_{mR}=D_m\cap D_R$，两方都限制到$D_{mR}$：
 
@@ -300,7 +300,7 @@ $$
 
 ## 9. Python Implementation
 
-脚本 `code/ch39_regularized_models.py`；共享模块 `quant_course.ml_pipeline`（第38章），其中 `backtest_predictions` 把预测接到第29章账本 `run_backtest`（滞后成交、比例费用、$N$ 个收益对应 $N+1$ 个财富点）。历史工程入口可重训，但不能用重训补造3904历史缺失逐行预测；工作脚本也可能覆盖原图。接受I3默认Notebook只回放冻结摘要与展示图，不运行历史训练。本批未运行CLI/Notebook/API，Notebook英文语言层留BIL23。
+脚本 `code/ch39_regularized_models.py`；共享模块 `quant_course.ml_pipeline`（第38章），其中 `backtest_predictions` 把预测接到第29章账本 `run_backtest`（滞后成交、比例费用、$N$ 个收益对应 $N+1$ 个财富点）。历史工程入口可重训，但不能用重训补造3904历史缺失逐行预测；工作脚本也可能覆盖原图。随包默认Notebook只回放冻结摘要与展示图，不运行历史训练。CLI、Notebook 和课程 API 均未运行。
 
 种子 3901–3904；输出 `ch39_results.json` 与三张图。频率日频；signal_time 为收盘 $D_k$，trade_time 为 $D_{k+1}$ 收盘，标签区间 5 日；缺失值策略同第38章。借券费、融资利差、冲击与容量未建模。测试：`tests/test_ch39_regularized.py`（手算估计量、$\alpha^\ast$、软阈值）与 `tests/test_ml_pipeline.py`。
 
@@ -504,13 +504,13 @@ for j in range(X.shape[1]):
 图例区分3真实与12噪声，横轴分别注明估计器约定；最大/最小网格端点与非零容差都要保存。这里提供方法，未重新运行历史路径。
 
 ### 39-P02
-参考实现 `panel_case` 与 `backtest_predictions`。完整执行方法如下，供后续明确授权的新实验使用，本批不运行3904重训或3905：
+参考实现 `panel_case` 与 `backtest_predictions`。完整执行方法如下，供后续明确授权的新实验使用，此处不运行3904重训或3905：
 
 1. 固定第8.4节全部构造参数，`simulate_return_panel`→`make_forward_labels(horizon=5,execution_lag=1)`→`price_features`与characteristics合并→`stack_features`，核46列。
 2. 对同一标签表调用 `date_walk_forward`（504/63日期），保存每折fit_time、train_rows/test_rows；断言每个训练标签成熟、训练信号日期小于fit日期、训练与当前测试跨集合的真实标签区间无重叠（训练内部及测试内部的五日标签允许重叠）。
 3. 按第8.4节固定六模型网格，分别 `walk_forward_predict(...,inner_val_dates=63,inner_folds=2,inner_min_train_dates=252)`；保存逐行预测与每折 `chosen_params`，再计算两基准R2、每个模型有效IC日期集和共同集。
 4. 每个模型同一预测分别 `backtest_predictions(close,pred,rebalance_every=5,fee_rate=0.0)` 与费用0.001；比较相同日期NAV、成本和换手。零与训练均值空仓应总收益0；非零费用且实际交易路径成本后终点较低，无交易应相等。每路径 $N$ 日收益须有 $N+1$ 财富点。
-5. 将完整参数原样封存后仅把seed改3905，另存唯一新目录，保留正负结果及参数选择，不回头选有利种子。新运行是新身份，不能填作3904历史缺失行。若未获运行授权，应像本批一样写“未执行”，不填想象数值。
+5. 将完整参数原样封存后仅把seed改3905，另存唯一新目录，保留正负结果及参数选择，不回头选有利种子。新运行是新身份，不能填作3904历史缺失行。若尚未执行，应明确标为“未执行”，不填想象数值。
 
 测试见 `tests/test_ml_pipeline.py` 中以 `test_host_backtest` 开头的用例。展示数值见第8.4节；IC自身日数750/441/624来自冻结摘要。共同日期与配对均值未能复算，旧压缩NW t不作四交易日HAC推断；不能重训补造这次历史证据。各折超参数存于 `ch39_results.json`。(5) 的结果无论好坏都写进报告。
 
@@ -547,4 +547,4 @@ $D_R=\{1,2,3\}$、$D_m=\{1,3\}$、$D_{mR}=\{1,3\}$。Ridge自身均值$(0.1+0.9+
 - `CH08_DOC_17`：Zou, H., Hastie, T. (2005). Regularization and variable selection via the elastic net. JRSS-B 67(2), 301–320。定理1 分组效应，侦察报告核读。
 - `CH39_FHT2010`：Friedman, J., Hastie, T., Tibshirani, R. (2010). Regularization Paths for Generalized Linear Models via Coordinate Descent. Journal of Statistical Software 33(1), 1–22。侦察报告核读第1–2节。
 - `CH37_GKX2020`：Gu, Kelly, Xiu (2020)，作者核读式（19）第2249页与表1第2250页。
-- 核读记录：`course/zh/chapters/ch39/source_notes.md`。
+- 参考资料：`course/zh/chapters/ch39/source_notes.md`。

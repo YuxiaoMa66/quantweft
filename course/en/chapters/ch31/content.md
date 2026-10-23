@@ -19,7 +19,7 @@ After this chapter you should be able to:
 Completion means calculating the 15-observation example by hand and reconciling it with the code:
 $$R_{\mathrm{purge}}=\{2,3,4,5,9,10,11,12\},$$
 $$R_{\mathrm{embargo}}=\{13,14\},\qquad S_{\mathrm{final}}=\{0,1\}.$$
-Then follow the default I3 reader route in §9 and complete the questions and answers. The stored five-seed and historical French results are inherited evidence. This revision does not rerun the full CLI, Notebook, runner, or historical studies. Correct splits alone do not validate every input, execution, or feature channel.
+Then follow the default reader route in §9 and complete the questions and answers. The stored five-seed and historical French results are inherited evidence. This revision does not rerun the full CLI, Notebook, runner, or historical studies. Correct splits alone do not validate every input, execution, or feature channel.
 
 ## 2. Why Quants Need It
 
@@ -304,14 +304,14 @@ Suppose three assets are observed over 15 trading days, giving 45 rows arranged 
 
 By default, walk_forward_splits uses purge_overlap=True and requires both observation times t and label end times e, each with the same number of entries as the samples. If either is missing, it raises an error rather than silently falling back to an ordinary time split. For a comparison experiment, Purge can be explicitly disabled with purge_overlap=False, but time order alone does not guarantee that labels have settled. For example, with n=15, train_size=6, test_size=3 and e=t+5, the first fold has candidate training samples 0–5 and test samples 6–8; after purging, only training samples 0 and 1 remain. Omitting the intervals would leave overlapping labels for training samples 2–5.
 
-The chapter's core algorithm is in src/quant_course/validation.py. From the root of the accepted I3 reader package, the default command is:
+The chapter's core algorithm is in src/quant_course/validation.py. From the root of the reader package, the default command is:
 
 ```bash
 python run_notebook.py notebooks/ch31_model_validation.ipynb
 ```
 
 
-The default Notebook computes a new single-seed run for the four schemes on 500 dates, 1-NN, purged K-Fold, and nested construction; it does not merely read the five-seed summary. The French branch is skipped by default. The Notebook creates a unique `runs/ch31_model_validation_<uuid>/` directory and writes figures there. The runner separately saves an execution copy and execution.json under `runs/execution_<stem>_<uuid>/`; failed runs are retained as well. Neither was executed for this revision. Full assembly and cold-start verification of the English Notebook and shared runner remain for BIL23. The following code is an entry point for reading the implementation and for a small independent example. It does not direct the reader to overwrite historical CLI defaults.
+The default Notebook computes a new single-seed run for the four schemes on 500 dates, 1-NN, purged K-Fold, and nested construction; it does not merely read the five-seed summary. The French branch is skipped by default. The Notebook creates a unique `runs/ch31_model_validation_<uuid>/` directory and writes figures there. The runner separately saves an execution copy and execution.json under `runs/execution_<stem>_<uuid>/`; failed runs are retained as well. Neither was executed for this revision.  The following code is an entry point for reading the implementation and for a small independent example. It does not direct the reader to overwrite historical CLI defaults.
 
 ### 9.1 Interval-Overlap Test and Basic Purge / Embargo Functions
 
@@ -520,7 +520,7 @@ The table reports the observed five-seed mean values (key: `leakage_experiment.s
 
 ## 11. Real-Market Example
 
-This section preserves a historical methodological illustration; it is not a newly acquired dataset or rerun. Raw, extracted, and processed French files are absent from the default I3 package, whose Notebook skips this branch. Rights, subjects, and intended uses need separate review. A10-A/A10-A.1 do not replace G05/A10-B execution authorization.
+This section shows a historical methodological illustration, not a newly acquired dataset or new run. Raw, extracted, and processed French files are absent from the default reader package, whose Notebook skips this branch. Rights, subjects, and intended uses need separate review. A study design does not authorize execution with real data.
 
 To illustrate model validation on real-market assets, we use the frozen Kenneth R. French 10 Industry Portfolios monthly total-return data in the workspace, covering 1926-07 through 2026-08 (1,202 monthly observations).
 

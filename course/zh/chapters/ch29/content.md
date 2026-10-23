@@ -488,7 +488,7 @@ $$r_t^{\text{naive}} = \sum_{i=1}^N w_{i,\text{target}} \cdot r_{i,t}$$
 
 ## 8. 完整数值例题
 
-我们在这里完整复现 `qa/a6/claude/plan.md` 中冻结的经典双资产手算例。读者可跟随步骤核验每一个中间变量与最终指标。
+以下按固定输入完整展开经典双资产手算例。读者可跟随步骤核验每一个中间变量与最终指标。
 
 ### 8.1 初始环境与行情输入
 ::: {.body-example title="完整例题：四期建仓、漂移、再平衡与对账"}
@@ -625,7 +625,7 @@ C_3&=C_2-(\Delta M_A+\Delta M_B)-\text{Fees}_3\\
 | 2026-02-27 | +54.9121 | +54.9121 | 0.0000 | 0.0000 | +54.9121 | $-7.82 \times 10^{-14}$ | $0.0$ |
 | 2026-03-02 | +26.2955 | +9.9840 | +16.4712 | -0.1598 | +26.2955 | $-7.11 \times 10^{-15}$ | $2.84 \times 10^{-14}$ |
 
-**手算结论**：上表残差来自原冻结运行，不是本批重跑的历史结果；中间量用未舍入值计算后再显示。原最大对账残差为 $1.56 \times 10^{-13}$，现金恒等式误差仅为 $2.84 \times 10^{-14}$，展示了离散账本在浮点精度下的自洽性。
+**手算结论**：上表残差来自保存的历史运行，并非新运行结果；中间量用未舍入值计算后再显示。原最大对账残差为 $1.56 \times 10^{-13}$，现金恒等式误差仅为 $2.84 \times 10^{-14}$，展示了离散账本在浮点精度下的自洽性。
 
 ---
 
@@ -635,13 +635,13 @@ C_3&=C_2-(\Delta M_A+\Delta M_B)-\text{Fees}_3\\
 
 本章所有核心回测与对账功能均封装于 `src/quant_course/backtest.py` 中。
 
-默认读者路线是已接受I3读者包中的 `notebooks/ch29_backtest_engine.ipynb`。在读者包根目录运行：
+默认读者路线是已随包读者包中的 `notebooks/ch29_backtest_engine.ipynb`。在读者包根目录运行：
 
 ```bash
 python run_notebook.py notebooks/ch29_backtest_engine.ipynb
 ```
 
-Notebook默认 `RUN_FRENCH=False`，新算四期账本、权重漂移、`constructed_study`及极端政策等教学构造；第11节的历史French表图不是这次默认执行的新输出。runner将执行Notebook和 `execution.json` 保存在唯一的 `runs/execution_<stem>_<uuid>/`，失败也保留。Notebook自身另建 `runs/ch29_backtest_engine_<uuid>/`；主要结果是内核中的表和打印，不能假定全部已保存到内层目录。先按第11节理解历史数据边界。本章Notebook的英语语言层、可携带全包与冷启动仍待BIL23完成。
+Notebook默认 `RUN_FRENCH=False`，新算四期账本、权重漂移、`constructed_study`及极端政策等教学构造；第11节的历史French表图不是这次默认执行的新输出。runner将执行Notebook和 `execution.json` 保存在唯一的 `runs/execution_<stem>_<uuid>/`，失败也保留。Notebook自身另建 `runs/ch29_backtest_engine_<uuid>/`；主要结果是内核中的表和打印，不能假定全部已保存到内层目录。先按第11节理解历史数据边界。
 
 以下代码展示如何在独立 Python 环境中调用回测引擎并完成端到端对账：
 
@@ -693,7 +693,7 @@ assert max_residual < 1e-12
 
 ## 10. 图形解读
 
-以下4张图沿用历史 `code/ch29_backtest_engine.py` 产物，本批未重画或重新运行。两张局部标题/图例拥挤处由完整图注解释；摘要不含完整NAV路径，不能据此重造全曲线。原图保存在 `figures/a6/` 目录中：
+以下4张图来自历史 `code/ch29_backtest_engine.py` 输出；这里未重画或重跑。两张局部标题/图例拥挤处由完整图注解释；摘要不含完整NAV路径，不能据此重造全曲线。原图保存在 `figures/a6/` 目录中：
 
 ### 10.1 手算例账本资产拆解与对账残差
 ![手算例账本资产拆解与对账残差](../../../../figures/a6/ch29_hand_ledger.png)
@@ -724,7 +724,7 @@ assert max_residual < 1e-12
 ## 11. 真实历史收益的代理账本案例
 
 ### 11.1 真实数据规格与来源清单
-本节保留此前以 Kenneth French 数据图书馆 **10 个行业投资组合（10 Industry Portfolios）** 月度价值加权收益率完成的历史代理账本研究。原始、提取及处理后的French数据未随默认I3读者包提供；以下路径是完整工程中的历史来源位置。数据权利、主体与用途仍待解决，不能把公开可见当成获准重分发或执行研究。A10-A有限范围设计及A10-A.1技术协议的接受不替代数据权利和执行授权，G05/A10-B尚未获授权。行业聚合月收益不是公司级时点可得（point-in-time, PIT）输入；真实成分、可交易价格、公司行动、借券/融资、容量及交易日历仍需另核。以下曲线不证明现实可部署收益。
+本节保留此前以 Kenneth French 数据图书馆 **10 个行业投资组合（10 Industry Portfolios）** 月度价值加权收益率完成的历史代理账本研究。原始、提取及处理后的French数据未随默认读者包提供；以下路径是完整工程中的历史来源位置。数据权利、主体与用途仍待解决，不能把公开可见当成获准重分发或执行研究。研究设计不等于获得数据权利或执行授权；默认不运行真实数据分析。行业聚合月收益不是公司级时点可得（point-in-time, PIT）输入；真实成分、可交易价格、公司行动、借券/融资、容量及交易日历仍需另核。以下曲线不证明现实可部署收益。
 - **数据文件位置**：`data/processed/french_10_industries_monthly.csv`
 - **校验哈希（SHA-256）**：`3b097d810c295d64eedfa1ece7067ff2a0707f5ca90e33935df9949251f70950`（对应清单 `data/manifests/french_industries_2026-10-05.json`，SHA-256 为 `3b71cd5f781f9790cc380195c22635e03e9c9e27a5f43cd2d0d46fb12efa8271`）
 - **无风险利率文件**：`data/processed/french_factors_3_monthly.csv`（SHA-256 为 `c19770a19a0ac47ad1c29074f57234570aeaa9725212cb4fa8146a2846c52814`）

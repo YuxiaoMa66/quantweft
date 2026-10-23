@@ -249,7 +249,7 @@ Projecting the full-column weights first and then zeroing unlisted names general
 
 ## 8. Numerical examples: work through each step
 
-All values are produced by `hand_examples()` and independently checked by `qa/a5/claude/recompute/ch28_recompute.py`. The stocks and signals are teaching constructions.
+All values are produced by `hand_examples()` and independently checked with a separate implementation. The stocks and signals are teaching constructions.
 
 ### 8.1 Winsorization, z-scores, and normal scores
 
@@ -801,7 +801,7 @@ A sequentially orthogonalized combination is a linear combination $w^\top z$, so
 
 ## 20. References
 
-Citation keys and reading scope are listed in [source_notes.md](../../../zh/chapters/ch28/source_notes.md).
+Citation keys and references are listed in [source_notes.md](../../../zh/chapters/ch28/source_notes.md).
 
 - CH28_FF5_PAGE: Kenneth R. French Data Library, “Description of Fama/French 5 Factors (2x3)” (construction and sample conditions for HML, RMW, CMA, SMB, and the market).
 - CH22_GELMANLOKEN2013: Gelman, A. and Loken, E. (2013), unpublished working paper (see Chapter 22 source notes).

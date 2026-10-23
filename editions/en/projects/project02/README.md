@@ -39,13 +39,6 @@ The common Mkt-RF and SMB series in the historical official FF3 and FF5 files ar
 The historical report is not a causal study, real-time PIT test, ex ante forecast, trading-advantage test, or evaluation of an investable product. The reader package does not include the raw, extracted, or processed French data. The report’s download date and SHA-256 identify historical inputs; they do not grant data rights. Public access does not imply permission to redistribute. G01 rights, subject, and use remain unknown; G05 does not authorize A10-B, so historical market-data execution remains blocked. Costs, financing, and borrowing are not applicable to the available report because there is no signal, position, order, fill, or transaction ledger; this does not mean costs are zero.
 
 
-## Historical course production entry
+## Historical results
 
-These commands document the original course working-root workflow; they are not requirements for the packaged default and were not rerun in this batch. The original project status is verified; this bilingual candidate is draft, pending independent acceptance. The historical CLI locates the course root from its own path, validates hashes and CRCs, and writes historical outputs and five figures. Constructed outputs must not overwrite them.
-
-```bash
-.venv/bin/python projects/project02/run_project02.py
-.venv/bin/python -m pytest tests/test_project02_analysis.py -q
-```
-
-The old working Notebook used the `quant-course-venv` kernel to call that analysis entry. The accepted I3 default instead uses the package-root `run_notebook.py` with a fresh kernel and constructed inputs. Readers need not restore old production tests absent from the package.
+The default package route uses `run_notebook.py` with a fresh kernel and constructed inputs. Historical regression outputs are described in the report and are distinct from the constructed Notebook results.

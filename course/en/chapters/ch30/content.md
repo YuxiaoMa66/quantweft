@@ -254,14 +254,14 @@ A universe containing only surviving stocks would conceal this real liquidation 
 
 ## 9. Python Implementation
 
-The complete course entrypoint for the bias analyses in this chapter is `code/ch30_backtest_biases.py`. By default, first run the following from the root of the accepted I3 reader package:
+The complete course entrypoint for the bias analyses in this chapter is `code/ch30_backtest_biases.py`. By default, first run the following from the root of the reader package:
 
 ```bash
 python run_notebook.py notebooks/ch30_backtest_biases.ipynb
 ```
 
 
-The Notebook skips the French branch by default and computes only the constructed example. Initialization creates a unique `runs/ch30_backtest_biases_<uuid>/` directory; the runner separately saves an execution copy and `execution.json` under `runs/execution_<stem>_<uuid>/`, retaining failed runs as well. English translation of the chapter Notebook, the full package, and cold-start work are assigned to BIL23. The complete course calls below are provided to explain the original method, including the 522-observation constructed dataset and the full bias study; they were not run during this revision. Before running them independently, check the actual parameters and output paths, and do not overwrite historical QA.
+The Notebook skips the French branch by default and computes only the constructed example. Initialization creates a unique `runs/ch30_backtest_biases_<uuid>/` directory; the runner separately saves an execution copy and `execution.json` under `runs/execution_<stem>_<uuid>/`, retaining failed runs as well. The complete course calls below are provided to explain the original method, including the 522-observation constructed dataset and the full bias study; they were not run during this revision. Before running them independently, check the actual parameters and output paths, and do not overwrite historical QA.
 
 Daily returns used to generate research signals are calculated from unadjusted closing prices, split ratios, cash dividends, and delisting liquidation prices according to ledger events. Orders are executed and daily positions are valued using raw, unadjusted prices. A general close-based signal formed at the close on date $d$ may use historical features only through that close; after `lag=1`, its holding interval is from the next grid observation's open through its close. The regression label is the gross open-to-close return over that interval and does not assign the overnight gap before execution to the new position. If information is released after the close at 16:30, it can first be used in a signal formed at the next observation day's close, then executed at the open of the following observation day.
 
@@ -313,7 +313,7 @@ assert pert["is_wrong_causality_violated"] == 1
 For the `filled_orders` metric in the perturbation results, if the fill keys (signal time, trade time, asset) differ, the metric returns `1.0` as a limited marker of identity change. If the keys match, it returns the maximum absolute difference in fill quantity, price, notional, and fees. The other continuous metrics each return the maximum absolute difference in their corresponding outputs.
 ## 10. Visualization
 
-The saved historical results from `code/ch30_backtest_biases.py` are located in `qa/a6/codex_resume/ch30/results_v2/`, and the corresponding four figures are in `qa/a6/codex_resume/ch30/figures_v2/`. This revision reuses those curves; it does not rerun the code or redraw the figures. The v1 results and figures remain in `results/` and `figures/`; the figures used in the textbook are updated only after the v2 snapshot has been saved.
+The saved historical results from `code/ch30_backtest_biases.py` underlie the four figures shown here; they were not rerun or redrawn for this text. The chapter figures reflect a later saved snapshot; earlier results and figures remain separate.
 
 ### 10.1 Figure 1: NAV paths for look-ahead and survivorship bias
 
@@ -366,7 +366,7 @@ The saved historical results from `code/ch30_backtest_biases.py` are located in 
 
 ### 11.1 Historical-method example and its data-rights boundary
 
-This section retains the historical methodological illustration previously based on Kenneth R. French's data. The raw, extracted, and processed data are not included in the default I3 package, and the rights, subjects, and intended uses remain unresolved. The A10-A design and A10-A.1 technical protocol do not replace execution authorization; G05/A10-B has not been authorized. The historical study is not rerun here. The previously used monthly returns for 10 industry portfolios illustrate selection bias over a long span of real historical data:
+This section retains the historical methodological illustration previously based on Kenneth R. French's data. The raw, extracted, and processed data are not included in the default reader package, and the rights, subjects, and intended uses remain unresolved. A study design does not authorize execution with real data. These data illustrate the historical method; no new study run is reported here. The previously used monthly returns for 10 industry portfolios illustrate selection bias over a long span of real historical data:
 
 - **Data-source URL**: <https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/10_Industry_Portfolios_CSV.zip>
 - **Industry-data manifest**: `data/manifests/french_industries_2026-10-05.json` (SHA-256: `3b71cd5f781f9790cc380195c22635e03e9c9e27a5f43cd2d0d46fb12efa8271`)
@@ -1340,6 +1340,4 @@ The following list identifies sources cited in this chapter and their locally ve
 - `QUANT_COURSE_RESEARCH_PROTOCOL`: Chapter 22 Research Methodology (`src/quant_course/research_protocol.py`).
   - Classes and functions: `TrialLedger`, `expected_max_standard_normal`, `expected_max_standard_normal_exact`, `bonferroni_adjust`, `holm_adjust`.
 - `QUANT_COURSE_CH30_CLI`: Chapter 30 Implementation CLI (`code/ch30_backtest_biases.py`).
-  - Current result output: `qa/a6/codex_resume/ch30/results_v2/ch30_results.json`.
-
-English translation of the chapter Notebook and assembly, portable paths, and cold-start verification of the shared reader package remain assigned to BIL23. English chapter prose does not establish completion of the full English software package.
+  - The displayed results are saved historical outputs, not a new run.

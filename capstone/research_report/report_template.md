@@ -3,7 +3,7 @@
 \color{qink}
 
 
-状态：限定研究设计/技术协议已接受，目标市场执行blocked；当前状态见[Capstone入口](../README.md)。原工程附录保留历史身份，不解释为French市场结果。原通用提示供对照，当前所选French协议不包含模型训练、中性化、笛卡尔网格或DSR/PBO强制计算；逐节以当前设计与导读输出为准。
+该模板区分构造工程示例与French市场研究。时间与权利限制见[Capstone入口](../README.md)。当前French协议不包含模型训练、中性化、笛卡尔网格或强制DSR/PBO计算；逐节以当前设计与导读为准。
 
 ## 1. Research Hypothesis
 
@@ -163,47 +163,47 @@ CAGR/Sharpe/Drawdown等、依赖下区间、简单基准与分期；不只报最
 \color{qink}
 
 
-当前已确定：R/P、S01/S02/S06：可报告的现状=问题/协议技术已接受、执行blocked；未来正/零/负/区间跨0有各自解释，工程PASS不回答$\mu_d>0$。详见[第18项导读](REPORT_GUIDE.md#item-18)；目标市场输出：**未执行**。
+未来正/零/负/区间跨0有各自解释，工程PASS不回答$\mu_d>0$。
 
 回答初始假设，区分证据、推测和待验证；成本后无意义也应如实结论。
 
 
 ---
 
-## 工程基础证据附录（A9-B Engineering Base Interface）
+## 构造工程示例：覆盖范围与限制
 
 \color{qink}
 
 
-以下保留原A9-B工程附录的历史状态和数字；这些pending/候选词不覆盖当前A10-A/A10-A.1接受设计，也不表示市场研究已经执行。当前口径见[研究入口](../README.md)与上面18项导读。
+本附录描述离线构造工程示例覆盖的内容和研究缺口；数值均属于教学构造数据，不是French市场结果。
 
-状态：A9-B 工程基础建设阶段已完成，提供离线生产管线、质量闸门、持久化账本与对账闭环；所有真实研究与策略开发工作显式标注为 `pending_A10`。
+离线工程示例覆盖数据输入、质量检查、信号、模拟成交、账本、风险、对账与报告；真实研究与策略结论未产生。
 
-### 18 章节工程证据与研究状态映射表
+### 18项报告主题的实现范围
 
 \color{qink}
 
 
-| 报告章节 | 当前状态 | 工程基础证据 / 交付物索引 | 说明 |
+| 报告章节 | 实现范围 | 构造工程示例 | 研究缺口 |
 |---|---|---|---|
-| 1. Research Hypothesis | `pending_A10` | 暂无策略假设，仅验证框架接口 | 待 A10 确定正式研究假说 |
-| 2. Data Sources | `pending_A10` | `CONSTRUCTED_TEACHING_DATA` v1.0.0 | 无外部真实数据下载 |
-| 3. Data Dictionary | `pending_A10` | `capstone/data_dictionary.md` 附录 | 仅提供构造字段工程字典 |
-| 4. Point-in-Time Logic | **`author_candidate_pending_independent_acceptance`** | 满足 $\max(\text{avail}, \text{ingest}, \text{as\_of}) \le \text{signal} < \text{trade}$ | 构造时点契约和拒绝测试，待独立接受 |
-| 5. Data Cleaning | **`author_candidate_pending_independent_acceptance`** | 陈旧阈值($\le 3600\text{s}$)、严格正价、非空非重复检验 | 成交前拒绝本批契约中列明的异常 |
-| 6. Feature Engineering | `pending_A10` | 单期教学动量 $(P_t - P_{t-1})/P_{t-1} > 0$ | 待 A10 正式特征工程与消融 |
-| 7. Signal Construction | `pending_A10` | 教学固定分配股数 (A:10, B:20) | 待 A10 截面排序与中性化 |
-| 8. Portfolio Construction | `pending_A10` | 教学固定仓位，事前杠杆率核查 $0.20 \le 0.50$ | 待 A10 预登记正式组合方法 |
-| 9. Transaction Cost Model | **`author_candidate_pending_independent_acceptance`** | 点差 10bps 内嵌于成交价，佣金 10bps 显式计提 | 零重复扣费，总成本 4.002 USD |
-| 10. Walk-Forward Validation | `pending_A10` | 暂未执行滑动窗口切分 | 待 A10 真实滚动样本外回测 |
-| 11. Performance Analysis | `pending_A10` | 基线期末净值 9995.998 USD，净亏损 -4.002 USD | 教学算例非真实策略阿尔法 |
-| 12. Risk Analysis | **`author_candidate_pending_independent_acceptance`** | -10% 市场冲击情景损失 200.0 USD $\le$ 1000.0 USD 限额 | 压力测试与事前杠杆门禁通过 |
-| 13. Factor Attribution | `pending_A10` | 暂无多因子分解 | 待 A10 按项目2单位/RF/HAC规则选择归因 |
-| 14. Robustness Tests | `pending_A10` | 暂无参数鲁棒性扰动 | 待 A10 子样本与敏感性分析 |
-| 15. Parameter Sensitivity | `pending_A10` | 暂无参数网格扫描 | 待 A10 参数响应面分析 |
-| 16. Overfitting Discussion | `pending_A10` | 暂无多重测试检验 | 待 A10 计算 PSR/DSR/PBO |
-| 17. Limitations | **`author_candidate_pending_independent_acceptance`** | 离线单进程环境，构造教学数据，无实盘市场冲击 | 明确工程边界，无外推推论 |
-| 18. Final Research Conclusion | `pending_A10` | 构造工程接口候选，策略有效性检验留待 A10 | 不作任何未经实证的投资结论 |
+| 1. Research Hypothesis | No strategy hypothesis | Framework interface only | No French-market hypothesis is tested |
+| 2. Data Sources | Constructed input | `CONSTRUCTED_TEACHING_DATA` v1.0.0 | No external real-data download |
+| 3. Data Dictionary | Constructed fields | `capstone/data_dictionary.md` appendix | Engineering dictionary only |
+| 4. Point-in-Time Logic | Constructed time contract | 满足 $\max(	ext{avail}, 	ext{ingest}, 	ext{as\_of}) \le 	ext{signal} < 	ext{trade}$ | 构造时点契约和拒绝测试；French历史事件时间仍未知 |
+| 5. Data Cleaning | Constructed checks | 陈旧阈值($\le 3600	ext{s}$)、严格正价、非空非重复检验 | 拒绝成交前契约列明的异常 |
+| 6. Feature Engineering | One-period teaching momentum | $(P_t - P_{t-1})/P_{t-1} > 0$ | French月度特征与消融尚未实现 |
+| 7. Signal Construction | Fixed teaching quantities | A: 10, B: 20 | 未运行French截面排序或中性化 |
+| 8. Portfolio Construction | Fixed teaching positions | 事前杠杆率核查 $0.20 \le 0.50$ | 未运行French组合方法 |
+| 9. Transaction Cost Model | Constructed cost example | 点差10bps内嵌于成交价；佣金10bps显式计提 | 零重复扣费，总成本4.002 USD |
+| 10. Walk-Forward Validation | Not run | 未执行滑动窗口切分 | 未进行真实滚动样本外回测 |
+| 11. Performance Analysis | Constructed result | 基线期末净值9995.998 USD；净亏损−4.002 USD | 教学算例，不是策略alpha |
+| 12. Risk Analysis | Constructed scenario | −10%市场冲击情景损失200.0 USD $\le$ 1000.0 USD限额 | 仅为构造情景结果 |
+| 13. Factor Attribution | Not implemented | 暂无多因子分解 | French归因未执行 |
+| 14. Robustness Tests | Not run | 暂无参数鲁棒性扰动 | 未做子样本或敏感性分析 |
+| 15. Parameter Sensitivity | Not run | 暂无参数网格扫描 | 未生成参数响应面 |
+| 16. Overfitting Discussion | Not run | 暂无多重测试检验 | 未计算PSR/DSR/PBO |
+| 17. Limitations | Scope boundary | 离线单进程、构造教学数据、无实盘市场冲击 | 不外推到真实市场 |
+| 18. Final Research Conclusion | No market conclusion | 仅构造工程接口 | 未检验策略有效性 |
 
 \color{qink}
 
@@ -212,4 +212,4 @@ CAGR/Sharpe/Drawdown等、依赖下区间、简单基准与分期；不只报最
 
 \color{qink}
 
-R01–R04反例/STOPPED/覆盖与实际次序证据见 `qa/a9/ch45_batch/revisions/r2_20261012`；金额容差1e−6 USD、真实数股数支持域和三类恢复路径见ENGINEERING_BASE。所有真实研究栏目仍pending_A10；本附录不填真实成果、不登记接受。
+金额容差为1e−6 USD；真实数股数支持域和三类恢复路径见[工程入口](../ENGINEERING_BASE.md)。这些软件行为不提供真实市场结果，也不构成市场验证。

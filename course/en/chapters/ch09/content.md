@@ -312,15 +312,15 @@ No feasible production plan exceeds 160, which the intersection attains, proving
 
 ### Default entry in the accepted reader package
 
-From the accepted I3 reader-package root, create the isolated environment described in its [README](../../../../editions/en/README.md), then run:
+From the reader-package root, create the isolated environment described in its [README](../../../../editions/en/README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch09_optimization.ipynb
 ```
 
-The notebook calls the packaged shared implementation. It reads no omitted French data and downloads none by default. Every execution and its figures go into a unique UUID runs directory, whose actual location is printed. Old production tests and historical commands below belong to the course working project; the default reader route uses the package-root notebook and its assertions. Optional historical data follows the reader’s [data contract](../../../../editions/en/OPTIONAL_DATA.md); this batch did not rerun it.
+The notebook calls the packaged shared implementation. It reads no omitted French data and downloads none by default. Every execution and its figures go into a unique UUID runs directory, whose actual location is printed. Old production tests and historical commands below belong to the course working project; the default reader route uses the package-root notebook and its assertions. Optional historical data follows the reader’s [data contract](../../../../editions/en/OPTIONAL_DATA.md); those optional historical inputs are not run by default.
 
-I3 also includes code/ch09_optimization.py, but the default reader entry remains the notebook above.
+The reader package also includes `code/ch09_optimization.py`, but the default entry remains the Notebook above.
 
 ### Historical course-root route
 
@@ -641,7 +641,7 @@ PD is sufficient, not necessary. Keep singular PSD \(\operatorname{diag}(0,1)\) 
 
 ## 19. Further Reading
 
-- **Must Know**: Boyd and Vandenberghe, *Convex Optimization*, §§3.1.4, 4.1–4.4, 5.1–5.2.3, 5.5.3, 5.6.1–5.6.3 and 9.1.1. Read Hessian criteria, convex problems/LP/QP, Lagrangian duality/Slater, KKT necessity/sufficiency, perturbation sensitivity and least-squares normal equations. Chapter/page records appear in [`source_notes.md`](../../../zh/chapters/ch09/source_notes.md).
+- **Must Know**: Boyd and Vandenberghe, *Convex Optimization*, §§3.1.4, 4.1–4.4, 5.1–5.2.3, 5.5.3, 5.6.1–5.6.3 and 9.1.1. Read Hessian criteria, convex problems/LP/QP, Lagrangian duality/Slater, KKT necessity/sufficiency, perturbation sensitivity and least-squares normal equations. Bibliographic details appear in [`source_notes.md`](../../../zh/chapters/ch09/source_notes.md).
 - **Should Know**: CVXPY’s [DCP guide](https://www.cvxpy.org/tutorial/dcp/) and [QP example](https://www.cvxpy.org/examples/basic/quadratic_program.html) for curvature rules, mean–variance form and `dual_value` mappings.
 - **Advanced**: [LP](https://www.cvxpy.org/examples/basic/linear_program.html), [least squares](https://www.cvxpy.org/examples/basic/least_squares.html), [solver guide](https://www.cvxpy.org/tutorial/solvers/index.html) and [status guide](https://www.cvxpy.org/tutorial/intro/index.html) for standard forms, status, statistics and infeasibility/unboundedness.
 - **Optional**: Boyd Chapter 9 on unconstrained minimization for further numerical/nonconvex discussion. It does not establish this chapter’s convex-QP guarantees or replace the conditional Sharpe-transformation proof.

@@ -1,6 +1,6 @@
 # Project 4: New Integrative Teaching Exercises
 
-This constructed, integrative teaching expansion was added in BIL15B and uses independent P4-Txx identifiers. It is not a historical P4 assignment or new real-market research. The original cost Exercises 1–6 and their [complete solutions](cost_execution_lab/solutions.md) retain their original identities. This set's [complete solutions](solutions.md) are listed separately in the same project. Read the [reader guide](READER_GUIDE.md), Chapters 29–31, and the cost materials first.
+This constructed set of integrative teaching exercises uses separate P4-Txx identifiers. It is not a historical P4 assignment or new real-market research. The original cost Exercises 1–6 and their [complete solutions](cost_execution_lab/solutions.md) retain their original identities. This set’s [complete solutions](solutions.md) are listed separately in the same project. Read the [reader guide](READER_GUIDE.md), Chapters 29–31, and the cost materials first.
 
 ## Shared inputs and simplifications
 
@@ -30,4 +30,4 @@ This is a separate, small label timeline. Do not describe its few samples as pas
 1. Which of the candidate historical rows 0..5 can train at the fit time? Do any overlap test intervals? Is there an embargo under the chapter's post-test definition?
 2. Inner validation A: at 2, train on the available history and validate on sample 2. Inner validation B: train at 3 and validate on sample 3. List the training rows for each. Given validation labels (1,−1), candidate predictions A=(0.5,−0.5) and B=(1,0), calculate the MSE in both folds and select a parameter. Which rows are used to fit scaling?
 3. Run the outer test only for selected candidate A. The labels are (0.2,−0.2,0), and predictions are (0.1,0.1,0.1); find the MSE. Given the complete family's valid nominal p-values (0.04,0.20), apply Bonferroni/Holm at the 5% level. Does selecting A establish tradable alpha?
-4. Compare this new exercise with the old R2R6 results, the 2026-10-14 current-signal cost summary, the I3 default Notebook's fresh computation/replay, and real research, which is still planned. If holdout performance is negative or one algorithm performs worse, what must be preserved? Which teaching, consumer, assembly, and data-rights gates remain?
+4. Distinguish results computed in this exercise from results read from historical summaries. Which findings are negative or zero? What PIT data, price/execution fields, and usage rights would be required for real-market research?

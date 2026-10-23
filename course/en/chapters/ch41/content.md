@@ -1,6 +1,6 @@
 # Chapter 41: Unsupervised Learning
 
-> Author: Yuxiao Ma. The existing A8-B constructed implementation has limited-scope acceptance pending formal integration; this does not mean that real research is complete. Main thread: PCA and clustering do not use labels; they compress variance and distance structure. High explained variance does not imply predictive power, and a cluster-derived state is not an economic mechanism. These methods can enter a tradable study only when scaling, principal components, and cluster centers are fitted within the training window, and later dates are projected or assigned afterward. Full-sample PCA, hindsight state labels, and state probabilities smoothed with future data all leak information.
+> Author: Yuxiao Ma. The constructed implementation is a method demonstration; it does not report completed real-data research. Main thread: PCA and clustering do not use labels; they compress variance and distance structure. High explained variance does not imply predictive power, and a cluster-derived state is not an economic mechanism. These methods can enter a tradable study only when scaling, principal components, and cluster centers are fitted within the training window, and later dates are projected or assigned afterward. Full-sample PCA, hindsight state labels, and state probabilities smoothed with future data all leak information.
 > Prerequisites: Chapter 5 linear algebra (eigendecomposition, orthogonal projection), Chapter 15 factor models (covariance, factor exposures), Chapter 16 Time Series I (rolling windows and autocorrelation), and Chapter 38 pipelines (training-only fitting and date-based walk-forward). By the end, you should be able to calculate the principal component and explained-variance ratio of a 2 × 2 covariance matrix by hand; explain how scaling changes principal components; calculate out-of-sample reconstruction $R^2$ for training-fitted PCA and explain why it is lower than the in-sample value in this example without treating that ordering as a per-window theorem; use k-means to assign rolling market-state features online and test cluster stability; calculate one hidden Markov filter update by hand and distinguish filtered from smoothed probabilities; and use constructed data to show how much hindsight state labels can improve the apparent performance of a strategy.
 
 ## 1. Learning Objectives
@@ -244,7 +244,7 @@ Cluster stability on training-window features, using 20 IID row bootstrap sample
 ## 9. Python Implementation
 
 - Core module: `src/quant_course/unsupervised_tools.py`.
-- Interface contract: Section 2 of `qa/a8/ch40_ch41_batch/INTERFACE_CONTRACT.md`. Public functions: `pca_fit`, `pca_project`, `pca_reconstruction_r2`, `subspace_cosines`, `trailing_state_features`, `fit_kmeans_states`, `assign_states`, `align_labels`, `cluster_stability`, `hmm_filter_smooth`, `simulate_markov_regimes`, and `simulate_factor_panel`. Tests: `tests/test_unsupervised_tools.py`.
+- Public functions: `pca_fit`, `pca_project`, `pca_reconstruction_r2`, `subspace_cosines`, `trailing_state_features`, `fit_kmeans_states`, `assign_states`, `align_labels`, `cluster_stability`, `hmm_filter_smooth`, `simulate_markov_regimes`, and `simulate_factor_panel`. Tests: `tests/test_unsupervised_tools.py`.
 - Chapter script, approximately 7 seconds. Pass only --out when reproducing results; --figures-dir `course/zh/chapters/ch41/figures` overwrites the source figures and should be used only when intentionally refreshing them:
 
   ```bash
@@ -502,14 +502,14 @@ Before looking at test results, specify a decision rule; for example, do not ado
 
 ## 20. References
 
-Reading statuses below refer to the original course author’s historical review recorded in source_notes; BIL19 inherits those statuses without reopening publications or performing new online verification.
 
-Full links and reading locations are in `references.md`, `references/sources.json`, and this chapter's `source_notes.md`.
+
+References and links are in `references.md`, `references/sources.json`, and this chapter's `source_notes.md`.
 
 - NUMPY: NumPy documentation (linalg.eigh). Used for eigendecomposition in Sections 6.1 and 8.1. Reading status: based on the local 2.5.3 implementation.
-- SK_PITFALLS: scikit-learn “Common pitfalls” (data leakage and training-only preprocessing). Used for scaling in Section 5 and Section 12.1. Reading status: carried forward from A8-A.
+- SK_PITFALLS: scikit-learn “Common pitfalls” (data leakage and training-only preprocessing). Used for scaling in Section 5 and Section 12.1.
 - CH41_JC2016: Jolliffe, I. T., & Cadima, J. (2016). Principal component analysis: a review and recent developments. *Phil. Trans. R. Soc. A*, 374, 20150202. Used in Section 5 and Section 6.2 on scaling. Reading status: the AMC reconnaissance report covered Section 2(c); the author did not reread it.
-- CH41_LCBP1999: Laloux, L., Cizeau, P., Bouchaud, J.-P., & Potters, M. (1999). Noise dressing of financial correlation matrices. *Physical Review Letters*, 83, 1467–1470. Used for the bound and assumptions in Section 6.3 and for Section 11. Reading status: see `source_notes.md`.
+- CH41_LCBP1999: Laloux, L., Cizeau, P., Bouchaud, J.-P., & Potters, M. (1999). Noise dressing of financial correlation matrices. *Physical Review Letters*, 83, 1467–1470. Used for the bound and assumptions in Section 6.3 and for Section 11. References: see `source_notes.md`.
 - CH41_HAMILTON1989: Hamilton, J. D. (1989). A new approach to the economic analysis of nonstationary time series and the business cycle. *Econometrica*, 57(2), 357–384. Used for the HMM in Section 5 and filtering and smoothing in Section 6.6. Reading status: the reconnaissance report (R); the author did not read the full text.
 - CH41_AT2012: Ang, A., & Timmermann, A. (2012). Regime changes and financial markets. *Annual Review of Financial Economics*, 4, 313–337. Used in Section 11 and Section 19. Reading status: reconnaissance report (R); the author did not read the full text.
 - CH41_CK1986: Connor, G., & Korajczyk, R. A. (1986). Performance measurement with the arbitrage pricing theory. *Journal of Financial Economics*, 15(3), 373–394. Used in Section 19. Reading status: abstract only.
@@ -520,5 +520,5 @@ Specific passages read, reader, and which sources were consulted only at abstrac
 
 ## Notebook Reader Entry
 
-The I3 Chapter 41 notebook has 12 cells, including 6 code cells. It freshly calculates the hand example, four PCA combinations, variance versus prediction, a 3,000-day state path, and the D11 post hoc diagnostic over seeds 4200–4249; it writes two new figures to a new `RUN_DIR`. It is not a frozen replay. This diagnostic is not promoted to a preregistered primary result. The notebook's bilingual projection is handled by BIL23; this batch did not run or modify the notebook.
+The Chapter 41 Notebook has 12 cells, including 6 code cells. It freshly calculates the hand example, four PCA combinations, variance versus prediction, a 3,000-day state path, and the D11 post hoc diagnostic over seeds 4200–4249; it writes two new figures to a new `RUN_DIR`. This diagnostic is post hoc and is not a preregistered primary result. The calculations and outputs described here are the notebook’s expected behavior.
 

@@ -3,7 +3,7 @@
 \color{qink}
 
 
-本篇保留2026-10-13 v2接受协议的完整信号、连续账本、费用及统计技术正文；只转换教学导航与候选阶段过程性文字。G02/G04已经技术接受，源冻结未改。当前权限/执行状态集中见[入口](README.md)，月标签与历史时钟细节见[时间契约](TIME_CONTRACT.md)，逐项输出与解释见[报告导读](research_report/REPORT_GUIDE.md)。基点（Basis Point, bps）=0.0001；净资产值（Net Asset Value, NAV）是账本净值；HAC为异方差与自相关一致（Heteroskedasticity and Autocorrelation Consistent）协方差估计。
+本文说明研究假设、连续账本、费用与统计约定。当前研究边界见[入口](README.md)，月标签与历史时钟细节见[时间契约](TIME_CONTRACT.md)，逐项输出与解释见[报告导读](research_report/REPORT_GUIDE.md)。基点（Basis Point, bps）=0.0001；净资产值（Net Asset Value, NAV）是账本净值；HAC为异方差与自相关一致（Heteroskedasticity and Autocorrelation Consistent）协方差估计。
 
 ## 问题、资产、信号和已曝光历史
 
@@ -106,7 +106,7 @@ FF3事后归因为净总收益−同月FF3 RF，只减一次；Mkt-RF/SMB/HML原
 \color{qink}
 
 
-主132行配对d的circular block bootstrap保持12月/5000/seed20261012；6/24月仅预定区间敏感性。在5000次复制循环前只创建一个专用 Python `random.Random(seed)`，全部复制持续消费同一生成器状态，不在复制内部重播；每个所需block调用 `randrange(n)` 抽均匀起点，环形连续拼ceil(n/block)块，截到n；每次均值。percentile分位数按(B−1)p位置线性插值，一侧下限p=.05，双侧p=.025/.975。bootstrap与HAC口径不一致也全部报告，不挑有利区间，不加新的统计选择族。该设计保留，本轮没有运行目标样本bootstrap或新选择。
+主132行配对d的circular block bootstrap保持12月/5000/seed20261012；6/24月仅预定区间敏感性。在5000次复制循环前只创建一个专用 Python `random.Random(seed)`，全部复制持续消费同一生成器状态，不在复制内部重播；每个所需block调用 `randrange(n)` 抽均匀起点，环形连续拼ceil(n/block)块，截到n；每次均值。percentile分位数按(B−1)p位置线性插值，一侧下限p=.05，双侧p=.025/.975。bootstrap与HAC口径不一致也全部报告，不挑有利区间，不加新的统计选择族。该协议指定此方法；目前没有French目标样本的bootstrap结果。
 
 CAGR/波动/净超额Sharpe/回撤/费用/权重在未来获授权后作为预定描述；development/validation/全440不作主均值替代、训练或参数选择。经济示意阈值净月优势10bps与显著性分开。风险/行业集中/尾部/统一构造冲击和FF3归因保持原18项映射；无成交价/量、股票ID和历史版本不估真实容量、不宣称全市场无survivorship。PSR/DSR/PBO不为填标题硬造结果，适用性不足明确not_applicable/not_evaluated。全部正/零/负结果保留。
 

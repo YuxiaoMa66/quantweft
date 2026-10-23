@@ -337,13 +337,13 @@ Under this defined formula, FCF happens to be unchanged: the 12,685 downward CFO
 
 ### Default Entry Point for This Reader Edition
 
-From the accepted I3 reader package root, set up the environment using its [instructions](../../../../editions/en/README.md), then run:
+From the reader package root, set up the environment using its [instructions](../../../../editions/en/README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch12_statements.ipynb
 ```
 
-The Notebook calls the packaged shared implementation. Chapter 12 recalculates fixed transcriptions of Apple/Spire statement facts; PIT clocks and market capitalization are constructed. By default it displays the two existing packaged figures without redrawing them. The runner writes new kernel execution records to a unique `runs/execution_*` directory; the Notebook separately creates a unique UUID chapter-method directory and prints its location. These directories serve different purposes, and existing figures are not new outputs from this batch. French data absent from the package are neither read by default nor downloaded. The CLI and old production tests below refer to the working-course root. Readers use the Notebook assertions above and need not restore unbundled production tests. The English Notebook Markdown layer remains pending BIL23 integration. This batch executed neither Notebooks nor old numerical suites.
+The Notebook calls the packaged shared implementation. Chapter 12 recalculates fixed transcriptions of Apple/Spire statement facts; PIT clocks and market capitalization are constructed. By default it displays the two existing packaged figures without redrawing them. The runner writes new kernel execution records to a unique `runs/execution_*` directory; the Notebook separately creates a unique UUID chapter-method directory and prints its location. These directories serve different purposes, and the displayed figures are saved historical outputs. French data absent from the package are neither read by default nor downloaded. The CLI and old production tests below refer to the working-course root. Readers use the Notebook assertions above and need not restore unbundled production tests. The Notebook and old numerical suite were not executed to produce the historical figures shown here.
 
 ### Historical Working-Course Root and Original Implementation
 
@@ -735,7 +735,7 @@ Scoring: traceable raw and derived data, 3 points; correct two-clock and revisio
 
 ## 20. References
 
-This chapter does not modify shared sources.json or references.bib. The direct links below identify official originals. Reading scope, verification date, raw figures, and timing limits are recorded in [source_notes.md](../../../zh/chapters/ch12/source_notes.md).
+This chapter does not modify shared sources.json or references.bib. The direct links below identify official originals. References and timing limits are listed in [source_notes.md](../../../zh/chapters/ch12/source_notes.md).
 
 1. SEC, [How to Read a 10-K](https://www.sec.gov/files/reada10k.pdf) and [Beginners’ Guide to Financial Statements](https://www.sec.gov/reportspubs/investor-publications/investorpubsbegfinstmtguide): statement functions and operating/investing/financing cash-flow classification, Sections 3, 5, and 6.
 2. SEC, [EDGAR API Documentation](https://www.sec.gov/edgar/sec-api-documentation): companyfacts/frames and calendar versus fiscal periods, Sections 6.4, 11, and 13.

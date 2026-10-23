@@ -529,9 +529,9 @@ $$\begin{aligned}
 
 ## 9. Python Implementation
 
-I3读者包默认Notebook为独立四格构造IS小例，将JSON和一图写入唯一RUN_DIR；按包根run_notebook.py外层runner保存执行副本及执行JSON。它不是完整CLI、P4历史walk-forward或市场实验，英语Notebook语言层与全包冷启动归BIL23。
+本Notebook用四格展示构造的 IS 小例，不代表完整命令行工具、历史 walk-forward 或市场实验。
 
-工程执行采用第35章§5.4说明的无量纲系数模型；下面AC离散式是明示假设下的解析教学模型，不能声称引擎已输入同一扩散/风险校准参数。当前Project 4结果身份见第35章§10.3与当前接受入口，旧R2R6只作历史构造证据。本章与实验共用 `quant_course.execution_costs`，不另建一套费用、排程或IS引擎。`ExecutionSlot` 分开保存事前预测量、发送前已观测量和当期实现量，并用 `observation_time` 记录可得时点；`execute_order` 返回成交、截止剩余、有符号IS分解及直接金额校验。
+工程执行采用第35章§5.4说明的无量纲系数模型；下面AC离散式是明示假设下的解析教学模型，不能声称引擎已输入同一扩散/风险校准参数。本章与实验共用 `quant_course.execution_costs`，不另建一套费用、排程或IS引擎。`ExecutionSlot` 分开保存事前预测量、发送前已观测量和当期实现量，并用 `observation_time` 记录可得时点；`execute_order` 返回成交、截止剩余、有符号IS分解及直接金额校验。
 
 下面复现第8节预测VWAP的构造案例。为使输出与手算表一致，此例将点差、临时及永久冲击设为零，只按每股佣金记账；市场量仍用于参与率容量约束。
 
@@ -596,7 +596,7 @@ assert ledger.reconcile_ledger()["is_exact"] == 1.0
 
 ## 10. Visualization
 
-以下两图继承已接受原图，本批未重新运行。原图由本章目录中的 `figures/build_figures.py` 从明确列出的构造参数生成；脚本同时保存Almgren–Chriss前沿的数值CSV。图形展示模型的方向关系，不代表真实证券的执行成本或最优策略。
+以下两图是保存的历史图表，未在本章重新运行生成。原图由本章目录中的 `figures/build_figures.py` 从明确列出的构造参数生成；脚本同时保存Almgren–Chriss前沿的数值CSV。图形展示模型的方向关系，不代表真实证券的执行成本或最优策略。
 
 ### 图1：同一父订单的累计成交轨迹
 
@@ -612,7 +612,7 @@ TWAP每片请求2,500股；预测VWAP按40/30/20/10%的事前曲线分配；滞�
 
 ## 11. Evidence Boundary and TCA Study Design
 
-本批没有真实逐笔成交、订单簿或机构执行样本，因此本节不报告真实证券案例或实证滑点。本节依照 `qa/a7/ch35_ch36_batch/SOURCE_DATA_GAP.md` 记录数据边界，并给出未来获得授权数据后可采用的研究设计示例。
+本章没有真实逐笔成交、订单簿或机构执行样本，因此不报告真实证券案例或实证滑点；以下给出未来取得适当授权数据后可采用的研究设计示例。
 
 ### 11.1 数据可得性范围与缺口披露
 
@@ -633,9 +633,9 @@ TWAP每片请求2,500股；预测VWAP按40/30/20/10%的事前曲线分配；滞�
    - 到达中间价：以母单到达市场瞬间的全国最优买卖报价中间价 $P_{\text{arrival}} = (P_{\text{NBBO}}^{\text{bid}} + P_{\text{NBBO}}^{\text{ask}}) / 2$ 为准。
    - 市场 VWAP：按研究问题、行情源和目标基准定义成交窗口及交易资格。竞价、场外/大宗、修正或迟报成交的纳入规则因基准而异，需事前记录；不能默认一律剔除。
 3. 因子化冲击分解回归：
-   未来若取得适当授权的数据，可将母单实际滑点对交易特征进行横截面回归；本批不执行估计：
+   未来若取得适当授权的数据，可将母单实际滑点对交易特征进行横截面回归；此处不报告估计结果：
    $$\text{Slippage}_i = \alpha + \beta_1 \cdot \sigma_i \left(\frac{|Q_i|}{\text{ADV}_i}\right)^{0.5} + \beta_2 \cdot \text{Spread}_i + \epsilon_i$$
-   这里 $i$ 索引订单，$Q_i$ 是买正卖负的股数，$\text{ADV}_i>0$ 是对应标的的日均成交股数；分母采用一天的成交股数，使 $|Q_i|/\text{ADV}_i$ 为一天成交量比例，不混用股数和美元量。左侧 $\text{Slippage}_i$ 是按买卖方向调整的每股美元价格偏离，例如 $\operatorname{sgn}(Q_i)(P_{\text{fill},i}-P_{\text{benchmark},i})$；$\sigma_i$ 是决策前冻结窗口估计的一日价格变动标准差，$\text{Spread}_i$ 是全点差，二者均为USD/股。因此截距 $\alpha$ 与残差 $\epsilon_i$ 也为USD/股，$\beta_1,\beta_2$ 无量纲。卖单 $Q_i=-1000$、$\text{ADV}_i=100000$ 时，原式的 $\sqrt{-0.01}$ 不在实数域，修正后为 $\sqrt{0.01}=0.1$。这只是未来研究设计；本批没有真实数据校准，构造参数下的滑点或成本不能作为真实策略容量。
+   这里 $i$ 索引订单，$Q_i$ 是买正卖负的股数，$\text{ADV}_i>0$ 是对应标的的日均成交股数；分母采用一天的成交股数，使 $|Q_i|/\text{ADV}_i$ 为一天成交量比例，不混用股数和美元量。左侧 $\text{Slippage}_i$ 是按买卖方向调整的每股美元价格偏离，例如 $\operatorname{sgn}(Q_i)(P_{\text{fill},i}-P_{\text{benchmark},i})$；$\sigma_i$ 是决策前冻结窗口估计的一日价格变动标准差，$\text{Spread}_i$ 是全点差，二者均为USD/股。因此截距 $\alpha$ 与残差 $\epsilon_i$ 也为USD/股，$\beta_1,\beta_2$ 无量纲。卖单 $Q_i=-1000$、$\text{ADV}_i=100000$ 时，原式的 $\sqrt{-0.01}$ 不在实数域，修正后为 $\sqrt{0.01}=0.1$。这只是未来研究设计；没有真实数据校准，构造参数下的滑点或成本不能作为真实策略容量。
 
 ## 12. Common Mistakes
 
@@ -1205,4 +1205,4 @@ $$M(z)=p(z)c_B+(1-p(z))(c_A+\Delta(z))-c_A
 7. `PEROLD_1988`:
    - 引用条目：André F. Perold, “The Implementation Shortfall: Paper vs. Reality,” *The Journal of Portfolio Management*, 14(3), 4–9 (1988). [JPM publisher record](https://jpm.pm-research.com/content/14/3/4).
    - 支持范围：仅支持作者、题名、期刊、卷期与页码等书目身份；不支持本章具体段落、教学定义或公式。
-   - 适用边界声明：2026-10-09的历史核读仅核对HBS作者页和JPM出版社书目记录，未核读全文；BIL17A沿用该状态，未作新的外部核查。SEC（2003）将实施差额概念早期来源追溯到Treynor（1981），故不把Perold称作首创者。
+   - 适用边界声明：2026-10-09的历史核读仅核对HBS作者页和JPM出版社书目记录，未核读全文；本章仅核对作者与出版商元数据，未读取全文。SEC（2003）将实施差额概念早期来源追溯到Treynor（1981），故不把Perold称作首创者。

@@ -1,9 +1,7 @@
 # Project 4 Cost & Execution Lab: Research Report
 
-**Batch:** A7-B, Chapters 35–36 integration  
-**Historical version:** R2R6, 2026-10-09 (old signal-layer identity; kept separate from the 2026-10-14 refresh)  
 **Seed:** 20261210  
-**Status:** Constructed teaching experiment; not empirical evidence or full Project 4 acceptance
+**Status:** Constructed teaching experiment; not market evidence or proof of full Project 4 strategy validity
 
 ## 1. Scope and data boundary
 
@@ -11,7 +9,7 @@ This module connects the existing monthly Project 4 signal layer to a new execut
 
 The cost configuration explicitly uses a constructed 240-firm universe (including 40 banks), 97 monthly input dates starting in December 2013, and 96 evaluation returns from January 2014 through December 2021; the first input month is warm-up. It uses a 60-month training period (January 2014–December 2018) and 36-month test period (January 2019–December 2021). Intraday illustrations use 13 half-hour slots and a volume profile frozen from training inputs. Seed 20261210 fixes the generated path. The experiment applies the configured annual borrow-rate scalar uniformly across names; this is a single-rate teaching scenario, not a point-in-time per-security borrow series. The cost CLI’s 97-month configured input is distinct from 96-month defaults in some signal-layer functions; a shared seed does not make the inputs element-for-element identical.
 
-The inputs are not point-in-time historical financial statements or a historical security universe. The repository has no historical order-book/quote stream, broker fill and fee records, point-in-time borrow availability, or calibrated intraday volume data for this experiment. The outputs below do not establish real alpha, real-world execution costs, strategy capacity, or complete Project 4 validity. The data boundary is recorded separately in `qa/a7/ch35_ch36_batch/SOURCE_DATA_GAP.md`.
+The inputs are not point-in-time historical financial statements or a historical security universe. The repository has no historical order-book/quote stream, broker fill and fee records, point-in-time borrow availability, or calibrated intraday volume data for this experiment. The outputs below do not establish real alpha, real-world execution costs, strategy capacity, or complete Project 4 validity.
 
 ## 2. Method and accounting contract
 
@@ -105,23 +103,19 @@ The five stages are a sequential 24-month constructed path; they are not indepen
 
 The final step includes modeled cash interest (4% credit on positive cash; 6% debit on negative cash) and borrow fees. Its rebound is path-dependent and does not show that borrow fees improve performance.
 
-## 9. Ledger and audit evidence
+## 9. Financing and borrow-cost comparison
 
-The R2R6 rerun summary includes balance-sheet reconciliation, monthly returns and turnover, a segment-level financing audit, and exported mark events. All performance tables and figures below are sourced from `outputs/a7b_rev2r6_20261009/summary_results.json`; earlier rev2, R2R3, R2R4, R2R5 and v8 outputs remain separate prior-run baselines. `independent_recalc.json` hashes the summary, monthly ledger, financing segments, marks, execution clock, and config used for its checks. Each financing interval is independently reconstructed from prior cash, prior short positions, the latest exported mark available at the interval start, rates, ACT/360 elapsed days, and event order. The R2R6 export contains 7,574 financing intervals, 1,434,399 mark events, and 753,285 execution-clock rows; 231,780 order slots had no fill and still receive an available slot-end mark. The new clock export records both `slot_start` and `slot_fill_event_at`. This generated path has zero overlapping windows; overlap and equal-time sizing are tested in the execution engine for POV, TWAP and VWAP.
-
-The R2R6 rerun leaves the two-decimal performance tables above unchanged from R2R5; those tables also matched R2R4. The following table preserves the historical rev2-to-rev2r2 event-mark correction comparison; R2R6 repeats the corrected event path and confirms those values from its own exported intervals:
-
-| Strategy | Prior rev2 interest (USD) | Corrected rev2r2 / R2R3 interest (USD) | Prior rev2 borrow (USD) | Corrected rev2r2 / R2R3 borrow (USD) |
+The table retains the earlier and corrected financing-interest and borrow-fee values for this constructed accounting path. Amounts are in USD.
+| Strategy | Earlier interest (USD) | Corrected interest (USD) | Earlier borrow (USD) | Corrected borrow (USD) |
 |---|---:|---:|---:|---:|
 | TWAP | 314,756.010458 | 314,756.011551 | 123,797.835654 | 123,797.835649 |
 | Forecast VWAP | 315,186.047455 | 315,186.048535 | 123,963.165790 | 123,963.165868 |
 | Lagged POV | 264,217.869948 | 264,217.895606 | 104,334.788931 | 104,334.721055 |
 
-The old rev2 export had 3,816 financing intervals and no separate mark-event file. The corrected rev2r2 model added the full event-granular intervals and mark events; the R2R6 rerun confirms these interval counts: TWAP 2,802, VWAP 2,802, POV 1,650, plus 320 gross intervals without financing exposure. The input universe, seed, decision rules, and 96-month evaluation window are unchanged. R2R6 regenerates the complete result set and extends the execution clock schema; its constructed CLI schedule has no overlaps, so summary metrics remain the same.
 
-## 10. Current-signal refresh (2026-10-14) and I3 Notebook default behavior
+## 10. Current-signal constructed summary (2026-10-14)
 
-The current-signal refresh summary is at `build/batches/INTEGRATION-PREP/p04_cost_refresh_20261014/runs/current_signal_01/cli/summary_results.json`, relative to the repository root. The I3 reader candidate carries the same bytes at `fixtures/projects/project04/summary_results_current_signal_20261014.json`. This is a constructed engineering-consumer refresh based on the accepted current signal layer. The old A7-B R2R6 output and Notebook identities were not rewritten. The current summary also uses the cost configuration’s 97 input months, 96 return months, and 60/36 split, but it must be cited as its own result identity rather than merged with old R2R6 results.
+The current-signal constructed summary is included at fixtures/projects/project04/summary_results_current_signal_20261014.json. It uses 97 configured input months, 96 return months, and a 60/36 split. The earlier signal baseline and current summary use different signal inputs and must be read separately, not merged into one history.
 
 Each cell below is CAGR / annualized Sharpe:
 
@@ -162,8 +156,8 @@ The current summary’s 24-month ablation is:
 
 The current sensitivity summary contains both positive and negative values. The 0.5x target-scale row is positive, but no strategy or parameter winner was selected. Scaling changes requested turnover and gross exposure together, so it remains a joint scenario.
 
-The I3 reader Notebook is at `projects/project04/cost_execution_lab/cost_execution_lab.ipynb`. Its default run recomputes the frozen U-shaped profile, the 10,000-share fixed-parent comparison, and the 5,000-share liquidity-stress example, then checks their corresponding values against the saved current summary. It replays the 96-month walk-forward results, high-friction scenario, sensitivities, ablation, and ledger audits from that saved summary; it does not rerun those longer studies by default. Running the Notebook creates a unique run directory at repository-root `runs/` and writes images. These are not new experiments or market-data verification in this author batch.
+The included Notebook is projects/project04/cost_execution_lab/cost_execution_lab.ipynb. It recomputes the frozen U-shaped profile, fixed-parent comparison, and liquidity-stress example; longer walk-forward results, high-friction scenarios, sensitivities, ablation, and ledger summaries are read from the public summary fixture. It does not rerun the full study by default. Running it creates a unique directory under repository-root runs/ and writes images.
 
-## 11. Reproduction and handoff boundary
+## 11. Reading scope
 
-This report is one of the four bilingual cost-reading documents, accompanied by two Notebook language projections. Source code, configuration, frozen R2R6 evidence, the current-signal summary, and the I3 reader Notebook remain at their versioned paths relative to the full repository root; these documents do not copy the complete project into a portable software package. R2R6 evidence is under `qa/a7/ch35_ch36_batch/independent_acceptance/rev2/r2r6/candidate/projects/project04/cost_execution_lab/outputs/a7b_rev2r6_20261009/`. The current-signal refresh remains a constructed engineering consumer, not verification of real costs or capacity; the full real-data Project 4 strategy has not been accepted. The I3 Notebook’s computation and replay boundary is described in Section 10.
+The longer current-signal results come from the included public summary fixture; the Notebook recomputes the small examples and replays the longer results. The summary is constructed engineering output, not verification of real costs or capacity. Real-data conclusions remain limited by data rights and evidence gaps.

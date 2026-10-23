@@ -1,8 +1,8 @@
 # Project 6 v2 Teaching Guide: Tree Models, Stability, Ablation, and PCA + Ridge
 
-**Author:** Yuxiao Ma · **Revision date:** 2026-10-16.
 
-**Candidate status:** This guide extends the A8-A foundation, which has limited-scope acceptance pending formal integration under BIL18. The A8-B constructed-data extension has its own limited-scope acceptance entry. The bilingual teaching materials in this BIL19 batch remain author candidates pending independent review. Real-data research remains **blocked**, and the complete Project 6 remains unverified. The numbers here are teaching evidence under a specified data-generating process, not market evidence.
+
+This guide describes the constructed-data tree/PCA extension to the A8-A foundation. The results illustrate methods under a specified data-generating process, not market evidence. Real-data research has not been performed because data and rights requirements remain unmet.
 
 This guide connects the linear baselines, tree models, PCA, portfolio accounting, and limits on inference. Full tables and frozen historical qualifications are in the [base-pipeline report](research_report/README.md) and [v2 research report](research_report/v2_trees.md). The complete project question set and answers are in [solutions.md](solutions.md).
 
@@ -70,18 +70,15 @@ The frozen configuration's comparison.claims_rule says only that the constructed
 
 ## 7. Notebook replay and the real-data boundary
 
-The I3 reader notebook for P6 v2 has 9 cells, 4 of them code cells. It replays two historical summaries, date bases, and historical ablation and stability displays from fixed fixtures, and generates one new display plot, `historical_constructed_trees_sharpe.png`, from frozen summaries into RUN_DIR. The frozen output marks fit as SKIPPED. It does not retrain, generate new model results, or rerun the full CLI. The older “not accepted” banner is historical text; A8-B is currently limited-scope accepted pending formal integration. The BIL19 bilingual candidate remains pending independent review, and complete P6 remains unverified.
+The P6 v2 Notebook presents fixed summaries, date bases, and historical ablation and stability results. It does not train a model or represent a real-data study.
 
-Real-data work remains blocked; the `data/PIT` state and A10-B are unverified. Do not describe these constructed mechanisms as empirical findings, return promises, or market alpha. Any future approved real-data project needs a new protocol version, verified data licensing and timing, and an explicit record that all previously seen constructed results are known in advance. None of that work was done in this batch.
+Real-data research remains blocked by source, rights, and historical timing gaps. Do not describe these constructed mechanisms as empirical findings, return promises, or market alpha. A real-data study must establish data licensing and point-in-time availability; previously viewed constructed results are exposed information.
 
-## 8. Local source map
+## 8. Implementation and result files
 
-- Frozen P6 v1 configuration: `projects/project06/configs/p06_base_v1.json`; v2 configuration: `projects/project06/configs/p06_trees_v2.json`.
 - Implementation: `projects/project06/src/p06_pipeline.py`, `projects/project06/src/p06_trees.py`, `src/quant_course/ml_pipeline.py`, and `src/quant_course/tree_models.py`.
-- Result identity and frozen values: `projects/project06/research_report/v2_summary_base.json`, `v2_summary_regime.json`, and `v2_ic_date_bases.json`; original QA summaries are under `qa/a8/ch40_ch41_batch/evidence/qa_r1/`.
-- Reports: `projects/project06/research_report/README.md` and `projects/project06/research_report/v2_trees.md`.
-- P6 / Chapter 40 boundary review: `qa/bilingual_revision/BIL19/preparation/ROOT_READER_NOTES.md` and `qa/bilingual_revision/BIL19/PRE_FREEZE_REVIEW_01.md`.
-- The Notebook carries forward constructed displays. See the [v2 report](research_report/v2_trees.md) for methods and evidence limits; internal acceptance receipts are not distributed.
+- Frozen results and date bases: `fixtures/projects/project06/v2_summary_base.json`, `v2_summary_regime.json`, and `v2_ic_date_bases.json`.
+- The Notebook uses packaged constructed displays. Methods and evidence limits are described in the [v2 report](research_report/v2_trees.md).
 
 ## Exercises: preserve the experiment and metric definition
 

@@ -1,6 +1,6 @@
 # Project 5 Source Feasibility
 
-This table carries forward the 2026-10-05 frozen snapshot and the source status at the time of the A5 preparation layer. Current vendor terms were not rechecked in this batch. The later 2026-10-10 source decision is also retained with its historical date; institutional use still requires verification against the applicable contract, fields, and rights. See the [current project guide](../README.md).
+This table records the 2026-10-05 snapshot and source status for the A5 preparation layer; the 2026-10-10 source decision is a separate dated record. Institutional use requires checking the applicable contract, fields, and rights. See the [current project guide](../README.md).
 
 | Need | Candidate source | Status in this layer | Record |
 |---|---|---|---|

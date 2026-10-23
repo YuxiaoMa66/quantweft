@@ -329,7 +329,7 @@ for n, tol in ((10, 0.04), (100, 0.03), (1000, 0.02)):
 print(round(expected_max_standard_normal(32), 3), round(expected_max_standard_normal_exact(32), 3))   # 2.1 2.07
 ```
 
-**Default offline entrypoint and historical experiment are separate.** From the root of the accompanying I3 reader package, run:
+**Default offline entrypoint and historical experiment are separate.** From the root of the accompanying reader package, run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch22_research_methodology.ipynb
@@ -362,7 +362,7 @@ The data frequency is monthly; `signal_time` is month-end, the label is the foll
 
 **Plan (frozen).** Hypothesis: industries with higher past 12-1 returns have higher returns next month (positive sign). Signal: at month-end $s$, compound returns over the 11 months from $s-11$ through $s-1$, excluding the current month; label: simple return in the next month, $s+1$; cross-section: 10 industries; primary metric: the t-statistic of the mean monthly Spearman rank correlation (Rank IC) in the holdout sample (Newey–West lag 0); criterion: holdout $t\ge2.0$ and positive; cost assumption: 10 bp per unit of turnover, used only for the long-short portfolio demonstration; discovery sample through 1999-12, holdout sample from 2000-01 through 2026-07; trial budget of 24 variants (lookback 1–12 months, skip 0 or 1 month). The notes field says that this plan was written after reading the relevant literature and using the same data in earlier chapters; it is not a blind plan and was not externally registered.
 
-**Results.** All numbers were produced by `code/ch22_research_methodology.py` and independently recomputed by `qa/a5/claude/recompute/ch22_recompute.py` (without importing course code, using a monthly loop and `scipy.stats.spearmanr`); the two agree.
+**Results.** All numbers were produced by `code/ch22_research_methodology.py`; an independent monthly-loop calculation with `scipy.stats.spearmanr` agrees.
 
 | Variant (lookback, skip) | Discovery months | Discovery mean Rank IC | Discovery $t$ | Holdout months | Holdout mean Rank IC | Holdout $t$ |
 |---|---:|---:|---:|---:|---:|---:|
@@ -608,7 +608,7 @@ The output is approximately 1.648, 5.92, and 0.258: the maximum absolute value o
 
 ## 20. References
 
-Citation keys and reading ranges are listed in [`source_notes.md`](../../../zh/chapters/ch22/source_notes.md).
+Citation keys and references are listed in [`source_notes.md`](../../../zh/chapters/ch22/source_notes.md).
 
 - CH22_HLZ2014: Harvey, C. R., Liu, Y., Zhu, H. (2014). “… and the Cross-Section of Expected Returns.” NBER Working Paper 20592. Supports Sections 2, 5, 6.3, and 7; the 2016 RFS journal version has not been read.
 - CH22_DSR2014: Bailey, D. H., López de Prado, M. (2014). “The Deflated Sharpe Ratio.” Authors’ 2014-07-31 preprint. Supports the equation in Section 6.5.

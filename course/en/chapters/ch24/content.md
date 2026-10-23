@@ -277,13 +277,13 @@ The core implementation is in [factor_signals.py](../../../../src/quant_course/f
 | group_percentile | Signal table, industry labels (static or time-varying), minimum group size | Same-date within-industry percentile; NaN when too few valid assets are in the group or the label is missing |
 | latest_available_values | Long-form version table, monthly PeriodIndex, value columns | Latest version of the latest known reporting period for each security at each month-end; requires time zones; errors on ambiguous rows; cutoff is the final instant of month-end |
 
-Default offline entry point (run from the root of the I3 reading package):
+Default offline entry point (run from the root of the reading package):
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch24_value_factors.ipynb
 ```
 
-The default is RUN_FRENCH=False. It shows hand-calculated ratios, missing-value policies, industry rankings, and PIT versions, then demonstrates a constructed panel with 300 companies, 108 months, and seed 20261031. It creates only the chapter RUN_DIR and writes no CSV, PNG, or JSON files or historical figure library. The runner separately writes an execution copy and status under `runs/execution_<stem>_<uuid>/`. The Notebook's English language layer and full-package paths are assembled in BIL23. The following are references to the historical full CLI and tests, not default offline commands:
+The default is RUN_FRENCH=False. It shows hand-calculated ratios, missing-value policies, industry rankings, and PIT versions, then demonstrates a constructed panel with 300 companies, 108 months, and seed 20261031. It creates only the chapter RUN_DIR and writes no CSV, PNG, or JSON files or historical figure library. The runner separately writes an execution copy and status under `runs/execution_<stem>_<uuid>/`. The following are references to the historical full CLI and tests, not default offline commands:
 
 ```bash
 .venv/bin/python code/ch24_value_factors.py
@@ -695,7 +695,7 @@ How to vary the industry-level difference $\Delta$: copy value_world and change 
 
 ## 20. References
 
-Citation keys and reading scope are listed in [source_notes.md](../../../zh/chapters/ch24/source_notes.md).
+Citation keys and references are listed in [source_notes.md](../../../zh/chapters/ch24/source_notes.md).
 
 - CH24_FF_FACTORS_PAGE: Kenneth R. French Data Library, “Description of Fama/French Factors.” Supports HML arithmetic and the use of fiscal-year $t-1$ values, positive book equity, and July portfolio formation.
 - CH24_FF5_PAGE: The same library, “Description of Fama/French 5 Factors (2x3).”

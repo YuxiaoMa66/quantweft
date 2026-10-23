@@ -206,13 +206,13 @@ P(y)=\sum_i CF_i(1+y)^{-t_i}.
 
 ### 本读者版的默认运行入口
 
-从接受I3读者包根目录，按其[环境说明](../../../../editions/zh/README.md)建立独立环境后运行：
+从随包读者包根目录，按其[环境说明](../../../../editions/zh/README.md)建立独立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch10_markets.ipynb
 ```
 
-Notebook调用随包共用实现。第10章全部是合约现金流的构造输入。运行器将新内核执行记录写入唯一的runs/execution_*目录，Notebook新生成的图表写入另一唯一UUID子目录；终端打印实际位置。未随包提供的French数据不默认读取，也不下载。下面的旧课程制作测试与历史CLI按课程工作根说明；读者采用上方Notebook内断言。可选历史数据另遵守[数据契约](../../../../editions/zh/OPTIONAL_DATA.md)，本批未重跑。
+Notebook 调用随包共享实现。第10章全部是合约现金流的构造输入。运行器将新内核执行记录写入唯一的 `runs/execution_*` 目录，Notebook 新生成的图表写入另一唯一 UUID 子目录；终端打印实际位置。未随包提供的 French 数据不默认读取，也不下载。读者采用上方 Notebook 内断言。可选历史数据另遵守[数据契约](../../../../editions/zh/OPTIONAL_DATA.md)。
 
 ### 历史课程工作根与原实现
 
@@ -239,7 +239,7 @@ Notebook 在 [notebooks/ch10_markets.ipynb](../../../../notebooks/ch10_markets.i
 
 本章没有读取或下载真实行情，也没有声称这些构造数字代表市场成交。现实规则例只用美国证券交收和 CME 产品规格：SEC staff FAQ 称相关修订规则的合规日为 2024-05-28。Rule 15c6-1 适用于受该规则约束、由在美国注册的经纪商或交易商执行的证券交易；规则也列明证券类别和交易安排的例外，且某些交易可在成交时明确约定延长交收。这里的例子限于适用规则的证券交易：若周二 2024-05-28 成交，按营业日计的 T+1 是周三 2024-05-29。不能据此推出所有债券、外汇、期货、repo、跨境证券或每类交易都按这个日历交收。
 
-DTCC 对 NSCC 连续净额结算（Continuous Net Settlement, CNS）和 DTC 证券/资金簿记转移的说明是美国市场基础设施案例，不是全世界清算架构的定义。CME 产品规格显示 MES 是 USD 5 × S&P 500 指数点，ES 是 USD 50 × 指数点；本章仅引用乘数，未采用页面上会随时间变化的保证金或名义估值。来源页面与阅读范围见 [source_notes.md](source_notes.md)。
+DTCC 对 NSCC 连续净额结算（Continuous Net Settlement, CNS）和 DTC 证券/资金簿记转移的说明是美国市场基础设施案例，不是全世界清算架构的定义。CME 产品规格显示 MES 是 USD 5 × S&P 500 指数点，ES 是 USD 50 × 指数点；本章仅引用乘数，未采用页面上会随时间变化的保证金或名义估值。补充来源见 [source_notes.md](source_notes.md)。
 
 ## 12. Common Mistakes
 
@@ -546,6 +546,6 @@ FX 断言会拒绝缺失或含糊的报价方向；期货只接受“合约 × U
 
 ## 20. References
 
-详细 URL、实际读取范围、使用边界及检查日期见 [source_notes.md](source_notes.md)。本章主要引用 SEC/Investor.gov、DTCC、CME Group、OCC、CFTC、ECB、BIS 与 MIT OpenCourseWare 的官方页面。构造数据由本章原创，用来演示算术；它们不是来源页面中的报价或真实观测。特别是美国 T+1、CME 乘数和期货保证金表述，只支持本章点名的规则与合约范围，不应外推至别的市场或产品。
+详细参考资料及使用边界见 [source_notes.md](source_notes.md)。本章主要引用 SEC/Investor.gov、DTCC、CME Group、OCC、CFTC、ECB、BIS 与 MIT OpenCourseWare 的官方页面。构造数据由本章原创，用来演示算术；它们不是来源页面中的报价或真实观测。特别是美国 T+1、CME 乘数和期货保证金表述，只支持本章点名的规则与合约范围，不应外推至别的市场或产品。
 
-C5新增敏感度桥接使用原创推导和构造现金流；新增读取MIT Part IV课堂转录17:05–19:32的局部近似和风险用途段落（2026-10-13），读取范围与沿用来源证据见本批来源复核。
+敏感度桥接使用原创推导和构造现金流，并介绍局部近似及其风险用途。相关资料见本章参考文献。

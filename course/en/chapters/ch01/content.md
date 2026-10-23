@@ -233,13 +233,13 @@ Choosing weights 0.6/0.2 after observing A 2%/B −1% and applying them to that 
 
 ### Default accepted-reader entry point
 
-Use the shared I3 reader at the cloned repository root (`quantweft/`). Set up its environment under README.md, then run from that reader root:
+Use the shared reader at the cloned repository root (`quantweft/`). Set up its environment under README.md, then run from that reader root:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch01_lifecycle.ipynb
 ```
 
-The constructed notebook does not read omitted French files or download data. Each run writes to a unique `runs/` subdirectory. The historical CLI and test/data paths below refer to the course root. French calculations require authorized local inputs and manifests and were not rerun for this batch. The portable I3 CLI defaults to a fresh UUID run and rejects overwriting. When already at the reader root, do not run `cd quantweft` again. README.md and OPTIONAL_DATA.md describe setup and optional inputs. A constructed check does not revalidate market calculations.
+The constructed notebook does not read omitted French files or download data. Each run writes to a unique `runs/` subdirectory. The historical CLI and test/data paths below refer to the course root. French calculations require authorized local inputs and manifests and were not rerun for this batch. The portable CLI defaults to a fresh UUID run and rejects overwriting. When already at the reader root, do not run `cd quantweft` again. README.md and OPTIONAL_DATA.md describe setup and optional inputs. A constructed check does not revalidate market calculations.
 
 The chapter script is `code/ch01_lifecycle.py`, with `notebooks/ch01_lifecycle.ipynb`; the run environment and steps are described in the [environment notes](../../../../editions/en/README.md). The script records the teaching construction and capital convention and sends no trading instructions. The original course-root command is:
 
@@ -542,6 +542,6 @@ CASH is cash, \(q\) actual quantity, \(P\) valuation price, and LIAB liabilities
 3. **FRENCH_10:** Kenneth R. French, *Detail for 10 Industry Portfolios*. This chapter explains applicability. [Portfolio description](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html).
 4. **FRENCH:** Kenneth R. French, Data Library, for format and historical-calculation revisions. [Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html).
 
-Source-reading levels follow the existing source_notes.md and accepted I3 records. This batch did not revisit websites or read additional full texts.
+Chapter references are listed in source_notes.md.
 
 Local shared references: [source notes](../../../zh/chapters/ch01/source_notes.md), [accepted reader setup](../../../../editions/en/README.md), [optional data contract](../../../../editions/en/OPTIONAL_DATA.md), [shared script](../../../../code/ch01_lifecycle.py), [shared notebook](../../../../editions/en/notebooks/ch01_lifecycle.ipynb).

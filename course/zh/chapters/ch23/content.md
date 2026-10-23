@@ -284,7 +284,7 @@ $\rho=0.85,h=3$ 时 $\mathrm{VIF}_{\mathrm{NW}}=1.916$，低于模型长期VIF�
 
 ## 8. 数值例题：手算每一步
 
-所有数字由本章 CLI 的 `hand_examples()` 产生，并在 `qa/a5/claude/recompute/ch23_recompute.py` 里用不同的实现独立复核。
+所有数字由本章 CLI 的 `hand_examples()` 产生，并用不同实现独立复核。
 
 ### 8.1 并列与缺失下的名次、百分位
 
@@ -462,7 +462,7 @@ print(signal.iloc[11:13].round(2))
 
 关于代码段五：改动 30 月起的收益，信号行 0 至 30 不变。第 30 行用月份 $19,\dots,29$（跳过第 30 月），所以 12-1 的跳月恰好保证该月的收益尚未进入信号；这正是“没有多或少 shift 一个月”的检验。
 
-**默认离线入口。** 在随书 I3 读者包根目录运行：
+**默认离线入口。** 在随书 读者包根目录运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch23_cross_sectional_research.ipynb
@@ -583,8 +583,8 @@ print(round(same_month.mean, 3), round(next_month.mean, 4))
 
 | 层 | 当前接受入口与范围 | 本章如何使用 |
 |---|---|---|
-| A5 信号准备 | `qa/a5/codex_followup_fixes/acceptance.md`：构造 PIT、同日处理、信号契约；真实 EV 桥字段未齐不能默认为零 | 读取特征与日期契约，未接受完整策略 |
-| A6 账本接口 | `qa/a6/codex_resume/acceptance.md`：构造价格、上市过滤、退市与账本对接 | 读取执行约束；全空间中性化后过滤仍有残余暴露 |
+| 信号准备 | 构造数据按 PIT、同日处理和信号契约处理；真实 EV 桥字段未齐不能默认为零 | 该例说明特征与日期约束，不构成完整策略 |
+| 账本接口 | 构造价格用于说明上市过滤、退市与账本对接 | 全空间中性化后再过滤仍可能留下残余暴露 |
 | A7-B 成本实验 | `projects/project04/cost_execution_lab/ACCEPTED_VERSION.md`：受限教学成本/执行实验 | 成本敏感度是构造实验，不能当真实 Alpha/容量 |
 
 一个四名反例能说明过滤为什么不是重新优化。行业一 A、B 权重 $(0.3,-0.3)$；行业二 C、D 权重 $(0.2,-0.2)$。全空间行业和都为0、净和0、gross=1。若 B 不可交易而归零，最终权重 $(0.3,0,0.2,-0.2)$，行业一暴露0.3、净和0.3、gross=0.7；即使按 $1/0.7$ 放大回 gross=1，行业一与净暴露仍为 $3/7$，不是0。
@@ -733,7 +733,7 @@ print(reject(naive), reject(nw), reject(non, stats.t.ppf(0.975, 39)))
 
 ## 20. 参考文献
 
-引用键与读取范围见 [source_notes.md](source_notes.md)。
+参考资料与链接见 [source_notes.md](source_notes.md)。
 
 - CH23_PETERSEN2005：Petersen, M. A. (2005/2006). “Estimating Standard Errors in Finance Panel Data Sets: Comparing Approaches.” NBER WP 11280。支持第 5、6.6 节关于 Fama–MacBeth 估计与标准误；RFS 2009 终稿未读。
 - CH23_JT1993：Jegadeesh, N., Titman, S. (1993). “Returns to Buying Winners and Selling Losers.” *Journal of Finance* 48(1)，支持重叠持有的说明。

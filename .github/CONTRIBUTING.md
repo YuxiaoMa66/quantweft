@@ -30,6 +30,6 @@ By intentionally submitting a contribution for inclusion, you confirm that you h
 
 ## Review and public release / 审阅与公开
 
-Maintainers review contributions before accepting them. Contributing, sponsorship, and public-release approval are separate decisions. No payment is required for contributions or issue reports. Open rights-review items are recorded in [RIGHTS_REVIEW.md](../docs/legal/RIGHTS_REVIEW.md).
+Maintainers review contributions before accepting them. No payment is required for contributions or issue reports. Open rights-review items are recorded in [RIGHTS_REVIEW.md](../docs/legal/RIGHTS_REVIEW.md).
 
-维护者审阅后决定收录。贡献接受、赞助和公开发布是不同事项；提问与投稿不要求付费。当前核查待办见 [RIGHTS_REVIEW.md](../docs/legal/RIGHTS_REVIEW.md)。
+维护者审阅后决定收录。提问与投稿不要求付费。当前核查待办见 [RIGHTS_REVIEW.md](../docs/legal/RIGHTS_REVIEW.md)。

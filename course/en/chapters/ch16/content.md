@@ -369,7 +369,7 @@ Finally, compare the two constructed return machines with common mean 0.005 and 
 
 ### Default Entry Point for This Reader Edition
 
-From the accepted I3 reader package root, create an independent environment using its [environment instructions](../../../../editions/en/README.md), then run:
+From the reader package root, create an independent environment using its [environment instructions](../../../../editions/en/README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch16_time_series.ipynb
@@ -379,7 +379,7 @@ With seed 20261016, the default run constructs 480 months of IID and AR(1) retur
 
 The Notebook displays the existing bundled figure `fixtures/figures/a4/ch16_stationarity_acf.png`; displaying it does not regenerate it. `RUN_FRENCH=False` disables the historical market branch. Although it creates and prints `runs/ch16_time_series_<uuid>/`, this Notebook writes no CSV or PNG there. The runner separately saves the executed copy and status in a unique `runs/execution_*` directory; these directories serve different purposes. Constructed calculations are not evidence of market predictability or strategy net returns. The historical French figures and numbers in Sections 10–11 retain their original status.
 
-The CLI and production tests below belong to the historical course working-root workflow and are not this package's default route. Readers need not restore production tests that are absent from the package. The I3 Chapter 16 CLI still reads French data unconditionally; the Chapter 17 CLI's historical branch requires `--french-data`. Neither replaces the default command above.
+The optional Chapter 16 CLI reads French data unconditionally; the Chapter 17 French-data branch requires `--french-data`. Use either route only with locally supplied data and appropriate permissions. The default Notebook command above remains the offline entry.
 
 ### Historical Course Working Root and Original Implementation
 
@@ -718,7 +718,7 @@ Score 0–2 points for each item: correctly identify the data version and indust
 
 ## 20. References
 
-The definitions and AR(1)/MA(1) moment formulas in this chapter are derived independently; statsmodels documentation is used to verify code interfaces and parameter meanings. For full verification dates, page ranges read, runtime dependencies, and conclusions unsupported by the data, see [`source_notes.md`](../../../zh/chapters/ch16/source_notes.md).
+The definitions and AR(1)/MA(1) moment formulas in this chapter are derived independently; statsmodels documentation is used to verify code interfaces and parameter meanings. For references, runtime dependencies, and conclusions unsupported by the data, see [`source_notes.md`](../../../zh/chapters/ch16/source_notes.md).
 
 - Official statsmodels documentation for `ARIMA`, `ARIMAResults.get_forecast`, `acf`, `pacf`, `acorr_ljungbox`, and `ArmaProcess` supports the implementation and API descriptions in this chapter; it does not support claims that the model is valid or that markets are predictable.
 - Kenneth R. French Data Library [10 Industry Portfolios data description](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html) supports the source and field background for the downloaded portfolio file. The numbers in this chapter were cross-checked against the cache and hash manifest. The public download page is not treated as a general license for redistribution beyond the course directory.

@@ -1,6 +1,6 @@
 # Project 5 Research Report: Preregistered Walk-Forward Pairs Trading
 
-Status: inherits the c5/v2 constructed results and the limited-accepted ALIGN alignment; the current execution domain is governed by the 2026-10-14 whole-share boundary. BIL17B is a teaching-integration candidate. Historical result date: 2026-10-10; protocol/boundary date: 2026-10-14. **Real-price empirical work: blocked (data permissions).** Every numeric result in this report comes from the explicitly labeled teaching constructed panel. It shows only that the workflow, ledger, and testing methods can run under the contract; it is not evidence of profitability or cointegration for any real pair. The old c1–c4 results under preregistration v1 remain unchanged in qa/a7/project05_batch/evidence/ and are not reused as c5 conclusions.
+This report describes c5/v2 constructed results under the 2026-10-14 whole-share execution boundary. **Real-price empirical work: blocked (data permissions).** Every numeric result comes from the labeled teaching constructed panel. It shows only that the workflow, ledger, and testing methods can run under the contract; it is not evidence of profitability or cointegration for any real pair. Earlier c1–c4 results under v1 are a separate setup and are not used as c5 conclusions.
 
 ## 1. Research question and falsifiable hypothesis
 
@@ -149,7 +149,7 @@ Once data are available (institutional permission confirmed, field/sample valida
 
 ## 10. Reader run route and historical review
 
-Ordinary readers should run .venv/bin/python run_notebook.py projects/project05/notebooks/p05_pairs.ipynb from the root of the accepted I3 package. The new constructed main route writes to the unique RUN_DIR; the outer runner also retains an execution copy of the Notebook and execution.json. It fresh-runs formation and ledgers for three screened/ungated constructed pairs, and produces a table and one figure; it does not run the full CLI grids listed below. The English Notebook layer, portable package, and cold start belong to BIL23 and were not executed in this batch. The commands below are for historical review and maintenance, not a list ordinary readers must run one by one; build_notebook.py writes the source Notebook.
+Readers can run `.venv/bin/python run_notebook.py projects/project05/notebooks/p05_pairs.ipynb` from the course root. The constructed main route writes to a unique RUN_DIR and produces formation and ledger/performance tables for three screened/ungated pairs plus one figure; it does not run the full CLI grids. The outer runner retains an execution copy and `execution.json`. Read explanatory prose, historical replay tables, and new outputs according to their labels.
 
     .venv/bin/python projects/project05/run_project05.py --data constructed --out <new_directory>/cli
     .venv/bin/python projects/project05/make_figures.py --run <new_directory>/cli --out <new_directory>/figures

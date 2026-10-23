@@ -1,6 +1,6 @@
 # Project 3 Exercise Solutions
 
-The six complete solutions and historical measured-output comments dated 2026-10-06 are retained below; they have not been rerun in this round. The code belongs to the course-work-root route and requires the course dependencies, historical outputs, and French inputs; the default reader's constructed branch does not provide these historical artifacts. P3-01 can be solved by hand. When the materials are unavailable, read the historical reference solutions for P3-02 and P3-05; do not conflate results from the constructed run with a historical reproduction. See the [Standalone Run Guide](READER_GUIDE.md).
+The six solutions and measured-output comments dated 2026-10-06 describe the historical study. Their code requires course dependencies, historical outputs, and French inputs, which are separate from the default constructed branch. P3-01 can be solved by hand; read P3-02 and P3-05 as historical reference solutions when those inputs are unavailable. Do not conflate constructed results with historical reproduction. See the [Standalone Run Guide](READER_GUIDE.md).
 
 ```python
 import sys

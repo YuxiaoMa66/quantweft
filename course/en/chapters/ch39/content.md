@@ -1,6 +1,6 @@
 # Chapter 39 Regularized Linear Models
 
-> The historical display follows the frozen A8-R1 results; the older A8-A accepted version is preserved. This chapter does not retrain models or fabricate historical predictions. Main thread: when features are numerous and signals are weak, OLS coefficient variance can overwhelm out-of-sample performance. Ridge, Lasso, and Elastic Net trade controlled bias for lower variance, but regularization strength must be selected within the training data, and results must be evaluated against zero-prediction and training-mean baselines and after costs.
+> The historical display reports saved summary results. This chapter does not retrain models or fabricate historical predictions. Main thread: when features are numerous and signals are weak, OLS coefficient variance can overwhelm out-of-sample performance. Ridge, Lasso, and Elastic Net trade controlled bias for lower variance, but regularization strength must be selected within the training data, and results must be evaluated against zero-prediction and training-mean baselines and after costs.
 
 > Prerequisites: Chapter 8 regression (OLS, standardization, introduction to regularization in software) and Chapter 38 pipelines. After this chapter, you will be able to: write the objective functions and scaling conventions for three scikit-learn estimators; hand-calculate four estimators under an orthogonal design; derive the bias, variance, and optimal strength $\alpha^\ast=\sigma^2/w^2$ for a single Ridge coefficient; explain L1/L2 geometry and their behavior under collinearity; and compare out-of-sample prediction metrics and after-cost portfolio results for six models on the Chapter 38 pipeline.
 
@@ -276,7 +276,7 @@ Constructed panel (seed 3904): 40 assets, 1,260 days; 3 true features (daily exp
 | Lasso | −0.037% | +0.033% | 0.0380 | 441/750 | +20.83% / 1.37 | +15.91% / 1.08 | 13.9 | −4.18% |
 | Elastic Net | +0.025% | +0.095% | 0.0499 | 624/750 | +41.49% / 2.08 | +33.64% / 1.75 | 19.0 | −5.27% |
 
-**Dates and inference display (A8-R1):** The table reports the frozen summary means of each model's IC on its own valid dates; these are not rankings on a common date set. There are 750 candidate label dates; Ridge has 750 valid dates, Lasso 441, and Elastic Net 624. Zero prediction and the training mean are constants, so their IC is undefined and must not be entered as an observed 0. Chapter 39's frozen row-level predictions are missing, so the common dates and paired mean/difference for Ridge–Lasso and Ridge–Elastic Net, as well as the reason for each daily omission, **could not be recomputed**. The summaries confirm only that each has fewer than 750 valid dates; rows from the separate P06 experiment cannot be used to fill them in. Old fold records support that some Lasso folds were all zero, but do not independently establish the reason for every missing date.
+**Dates and inference display:** The table reports the saved summary means of each model's IC on its own valid dates; these are not rankings on a common date set. There are 750 candidate label dates; Ridge has 750 valid dates, Lasso 441, and Elastic Net 624. Zero prediction and the training mean are constants, so their IC is undefined and must not be entered as an observed 0. The Chapter 39 row-level predictions are unavailable, so the common dates and paired mean/difference for Ridge–Lasso and Ridge–Elastic Net, as well as the reason for each daily omission, **could not be recomputed**. The summaries confirm only that each has fewer than 750 valid dates; rows from the separate P06 experiment cannot be used to fill them in. Available fold records support that some Lasso folds were all zero, but do not independently establish the reason for every missing date.
 
 **First ask which dates are averaged.** For model $m$, define $D_m=\{d:\mathrm{IC}_{m,d}\text{ is defined}\}$. Its own-date mean is $|D_m|^{-1}\sum_{d\in D_m}\mathrm{IC}_{m,d}$. For a paired comparison with Ridge, let $D_{mR}=D_m\cap D_R$, and restrict both models to $D_{mR}$:
 
@@ -300,7 +300,7 @@ Reading the table:
 
 ## 9. Python Implementation
 
-Script: `code/ch39_regularized_models.py`; shared module: `quant_course.ml_pipeline` (Chapter 38), where `backtest_predictions` connects predictions to the Chapter 29 ledger, `run_backtest` (lagged execution, proportional fees, and $N$ returns corresponding to $N+1$ wealth points). The historical engineering entrypoint can retrain, but retraining cannot be used to fabricate the missing 3904 historical row-level predictions; the working script may also overwrite the original figures. The accepted I3 default Notebook only replays the frozen summary and display figures; it does not run the historical training. This batch did not run the CLI/Notebook/API; the English Notebook language layer is deferred to BIL23.
+Script: `code/ch39_regularized_models.py`; shared module: `quant_course.ml_pipeline` (Chapter 38), where `backtest_predictions` connects predictions to the Chapter 29 ledger, `run_backtest` (lagged execution, proportional fees, and $N$ returns corresponding to $N+1$ wealth points). The historical engineering entrypoint can retrain, but retraining cannot be used to fabricate the missing 3904 historical row-level predictions; the working script may also overwrite the original figures. The packaged default Notebook only displays the saved summary and figures; it does not train the historical model. The CLI, Notebook, and course API were not run.
 
 Seeds 3901–3904; outputs: `ch39_results.json` and three figures. Daily frequency; `signal_time` is the close on $D_k$, `trade_time` is the close on $D_{k+1}$, and the label interval is 5 days; missing-value treatment follows Chapter 38. Borrow fees, financing spreads, market impact, and capacity are not modeled. Tests: `tests/test_ch39_regularized.py` (hand-calculated estimators, $\alpha^\ast$, soft thresholding) and `tests/test_ml_pipeline.py`.
 
@@ -505,7 +505,7 @@ for j in range(X.shape[1]):
 Distinguish the three true features from the twelve noise features in the legend, label each horizontal axis with its estimator's convention, and save the maximum/minimum grid endpoints and nonzero tolerance. This gives the method; the historical path was not rerun.
 
 ### 39-P02
-Reference implementation: `panel_case` and `backtest_predictions`. The full procedure below is provided for a future explicitly authorized experiment; this batch does not run a 3904 retraining or seed 3905.
+Reference implementation: `panel_case` and `backtest_predictions`. The full procedure below is provided for a future explicitly authorized experiment; the 3904 retraining and seed 3905 are not run here.
 
 1. Fix every constructed parameter from Section 8.4; run `simulate_return_panel` → `make_forward_labels(horizon=5,execution_lag=1)` → combine `price_features` and characteristics → `stack_features`; verify the 46 columns.
 2. Call `date_walk_forward` on the same label table (504/63 dates), saving each fold's fit_time, train_rows, and test_rows. Assert that each training label is mature, each training signal date precedes the fit date, and no training label interval overlaps any test label interval (overlap among five-day label intervals within the training set or within the test set is allowed).
@@ -549,4 +549,4 @@ $D_R=\{1,2,3\}$, $D_m=\{1,3\}$, and $D_{mR}=\{1,3\}$. Ridge's own-date mean is $
 - `CH08_DOC_17`: Zou, H., and Hastie, T. (2005). “Regularization and variable selection via the elastic net.” JRSS-B 67(2), 301–320. The grouping effect in Theorem 1 was verified in the reconnaissance report.
 - `CH39_FHT2010`: Friedman, J., Hastie, T., and Tibshirani, R. (2010). “Regularization Paths for Generalized Linear Models via Coordinate Descent.” Journal of Statistical Software 33(1), 1–22. The reconnaissance report records reading Sections 1–2.
 - `CH37_GKX2020`: Gu, Kelly, and Xiu (2020), Equation (19), p. 2249, and Table 1, p. 2250, read by the author.
-- Reading record: `course/zh/chapters/ch39/source_notes.md`.
+- References: `course/zh/chapters/ch39/source_notes.md`.

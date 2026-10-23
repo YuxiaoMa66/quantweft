@@ -9,7 +9,7 @@
 
 Write responses and features as a linear model and determine when its normal equations have a unique solution. Calculate \(R^2\) and adjusted \(R^2\) from residual sums of squares; test individual or joint linear restrictions using \(t\) or \(F\) and interpret p-values correctly. Explain the effects of heteroskedasticity, autocorrelation and multicollinearity, choose covariance estimates for the stated error structure, and select preprocessing and penalized regression using only past observations.
 
-Completion means following Section 9 to run `.venv/bin/python run_notebook.py notebooks/ch08_regression.ipynb` from the accepted I3 reader-package root, checking notebook outputs and figures in each new UUID execution directory. Historical course-root CLI and figure paths remain in Section 9. Explain why this contemporaneous simulated sample establishes neither causality, empirical CAPM validity nor tradable returns.
+Completion means following Section 9 to run `.venv/bin/python run_notebook.py notebooks/ch08_regression.ipynb` from the reader-package root, checking notebook outputs and figures in each new UUID execution directory. Historical course-root CLI and figure paths remain in Section 9. Explain why this contemporaneous simulated sample establishes neither causality, empirical CAPM validity nor tradable returns.
 
 ## 2. Why a quant needs regression
 
@@ -280,19 +280,19 @@ The larger fixed-seed construction has 400 UTC calendar-day observations from 20
 
 ### Default entry in the accepted reader package
 
-From the accepted I3 reader-package root, create its isolated environment following the [README](../../../../editions/en/README.md), then run:
+From the reader-package root, create its isolated environment following the [README](../../../../editions/en/README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch08_regression.ipynb
 ```
 
-The notebook calls the packaged shared implementation. Its default route reads no omitted French data and downloads none. Each execution and its figures go to a unique UUID runs directory, whose actual location is printed. Old production tests and the historical commands below belong to the course working project; readers use the package-root notebook and its assertions. Optional historical data follows the reader’s [data contract](../../../../editions/en/OPTIONAL_DATA.md); this batch did not rerun it.
+The notebook calls the packaged shared implementation. Its default route reads no omitted French data and downloads none. Each execution and its figures go to a unique UUID runs directory, whose actual location is printed. Old production tests and the historical commands below belong to the course working project; readers use the package-root notebook and its assertions. Optional historical data follows the reader’s [data contract](../../../../editions/en/OPTIONAL_DATA.md); those optional historical inputs are not run by default.
 
-The I3 package lacks the historical code/ch08_regression.py. Its default notebook and regression_tools implementation are included; do not alter I3 to restore a historical path.
+The reader package does not include the historical `code/ch08_regression.py`; use the included Notebook and `regression_tools` implementation as the default route.
 
 ### Historical course-root route
 
-Implementation resides in [`regression_tools.py`](../../../../src/quant_course/regression_tools.py): time-index and feature validation, `fit_ols_with_robust_covariance`, fixed-seed generator `simulate_capm_like_data` and training-only model selector `select_regularized_models`. Features and response must have exactly aligned, unique, ascending, timezone-aware indexes. Inputs must be finite real numbers; missing values are neither dropped nor filled silently. Full rank is checked after adding the intercept, and HAC’s maximum lag must be below observation count. This batch’s revised shared-implementation candidate additionally computes leverage from rowwise squared left singular vectors. Machine precision times the largest design dimension identifies leverage indistinguishable from one and explicitly rejects the HC3 denominator boundary; computable high-leverage samples are not rejected by a broad default closeness rule. This revision is intended for later bilingual assembly; the frozen accepted I3 module has not been rewritten. Input checks still do not certify valid inference. The teaching wrapper requires equal elapsed timestamp intervals, rejecting missing periods, irregular events and unequal month-length labels compressed into equally spaced rows. It explicitly rejects complex inputs. Empirical monthly, trading-day or event-time tasks need a declared observation clock and an appropriate implementation; do not fabricate zero returns to pass validation.
+Implementation resides in [`regression_tools.py`](../../../../src/quant_course/regression_tools.py): time-index and feature validation, `fit_ols_with_robust_covariance`, fixed-seed generator `simulate_capm_like_data` and training-only model selector `select_regularized_models`. Features and response must have exactly aligned, unique, ascending, timezone-aware indexes. Inputs must be finite real numbers; missing values are neither dropped nor filled silently. Full rank is checked after adding the intercept, and HAC’s maximum lag must be below observation count. For HC3, the correction is undefined when leverage reaches one because its denominator vanishes. High leverage below one is not by itself a failure; input checks still do not certify valid inference. Input checks still do not certify valid inference. The teaching wrapper requires equal elapsed timestamp intervals, rejecting missing periods, irregular events and unequal month-length labels compressed into equally spaced rows. It explicitly rejects complex inputs. Empirical monthly, trading-day or event-time tasks need a declared observation clock and an appropriate implementation; do not fabricate zero returns to pass validation.
 
 From the course-project root, run the full example and plotting route independently:
 

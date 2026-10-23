@@ -14,7 +14,7 @@
 4. 在单期、借贷利率相同的理想条件下推导切点组合（tangency portfolio）和最优资本配置线（Optimal Capital Allocation Line, CAL），并检验归一化分母为正这一存在条件。
 5. 用冻结的 French 10 行业月收益估计两个历史窗口的前沿，读懂结果中的极端权重，并说明它们只能作样本内描述。
 
-通过条件：第 8 节手算与第 9 节代码数值一致；原13道核心题、2道衔接题及本批新增20-B01在第18节都有完整答案；每张图的轴、单位和样本说清楚。
+通过条件：第 8 节手算与第 9 节代码数值一致；13 道核心题、2 道衔接题及题目 20-B01 在第 18 节都有完整答案；每张图的轴、单位和样本说明清楚。
 
 ## 2. 为什么 Quant 需要它
 
@@ -373,13 +373,13 @@ CAL 上波动 10% 的组合：持有 \(0.10/0.15129=66.1\%\) 的切点基金和 
 
 ### 本读者版的默认运行入口
 
-本样章共享I3已接受读者包的实现。从克隆后的仓库根目录（`quantweft/`）建立环境，再运行：
+本样章使用读者包中的共享实现。从克隆后的仓库根目录（`quantweft/`）建立环境，再运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch20_portfolio_theory.ipynb
 ```
 
-默认构造Notebook不读取未随包提供的French数据、不下载数据；新输出写入唯一`runs/`子目录。以下历史CLI、测试和数据路径以课程根为工作目录；其中French路线须自备符合授权与manifest契约的输入，本批未运行。I3可搬移CLI默认写入新UUID的runs目录、拒绝覆盖；已位于读者根时不再执行`cd quantweft`。安装与可选数据说明见[接受读者安装入口](../../../../editions/zh/README.md)和[可选数据契约](../../../../editions/zh/OPTIONAL_DATA.md)。构造检查通过不代表真实市场计算已重新执行。
+默认构造Notebook不读取未随包提供的French数据、不下载数据；新输出写入唯一`runs/`子目录。French 数据分析须由读者提供符合数据契约且获准使用的本地输入。可搬移CLI默认写入新UUID的runs目录、拒绝覆盖；安装与可选数据说明见[读者安装入口](../../../../editions/zh/README.md)和[可选数据契约](../../../../editions/zh/OPTIONAL_DATA.md)。构造数据检查通过不代表真实市场计算已验证。
 
 
 解析计算由 [src/quant_course/portfolio_theory.py](../../../../src/quant_course/portfolio_theory.py) 提供四个函数：
@@ -391,7 +391,7 @@ CAL 上波动 10% 的组合：持有 \(0.10/0.15129=66.1\%\) 的切点基金和 
 
 它们只施加预算约束（允许卖空和杠杆），用线性方程求解代替显式求逆，风险矩计算拒绝非对称、非半正定矩；解析权重函数另外要求数值正定，目标前沿还要求均值不全相同。单纯计算组合矩允许奇异半正定输入。长仓前沿复用第 9 章 [src/quant_course/optimization_tools.py](../../../../src/quant_course/optimization_tools.py) 的 solve_mean_variance。
 
-章节脚本 [code/ch20_portfolio_theory.py](../../../../code/ch20_portfolio_theory.py) 复算第 8 节、绘制三张图，并对冻结 French 数据做描述性估计；它读取本地文件、核对 manifest 中的 SHA-256，不下载数据。I3可搬移CLI默认输出到新UUID的runs目录，已有目标拒绝覆盖；历史课程CLI的输出/覆盖说明属于旧实现，当前优先采用读者契约：
+章节脚本 [code/ch20_portfolio_theory.py](../../../../code/ch20_portfolio_theory.py) 复算第 8 节、绘制三张图，并对冻结 French 数据做描述性估计；它读取本地文件、核对 manifest 中的 SHA-256，不下载数据。可搬移CLI默认输出到新UUID的runs目录，已有目标拒绝覆盖；历史课程CLI的输出/覆盖说明属于旧实现，当前优先采用读者契约：
 
 ```bash
 .venv/bin/python code/ch20_portfolio_theory.py --output-dir /tmp/ch20-out --figure-dir /tmp/ch20-fig
@@ -771,7 +771,7 @@ lag0：1985-01至1989-12；lag1：1984-12至1989-11。两者均1989-12月末虚�
 
 ## 20. References
 
-1. **CH20_MARKOWITZ1952**：Harry Markowitz, “Portfolio Selection,” *Journal of Finance*, 7(1), 77–91, 1952。阅读的[Berkeley 大学镜像 PDF](https://traders.berkeley.edu/papers/Markowitz.pdf)。读取范围与限制见 [来源读取记录](source_notes.md)。
+1. **CH20_MARKOWITZ1952**：Harry Markowitz, “Portfolio Selection,” *Journal of Finance*, 7(1), 77–91, 1952。阅读的[Berkeley 大学镜像 PDF](https://traders.berkeley.edu/papers/Markowitz.pdf)。版本与引用边界见 [source_notes.md](source_notes.md)。
 2. **CH20_MOSEK_COOKBOOK**：MOSEK Portfolio Optimization Cookbook 1.6.0, [Chapter 2 “Markowitz portfolio optimization”](https://docs.mosek.com/portfolio-cookbook/markowitz.html)。
 3. **SHARPE1994**：William F. Sharpe, “The Sharpe Ratio,” *Journal of Portfolio Management*, Fall 1994；[作者网页版](https://web.stanford.edu/~wfsharpe/art/sr/sr.htm)。
 4. **BOYD**：Stephen Boyd and Lieven Vandenberghe, *Convex Optimization*，[作者主页](https://web.stanford.edu/~boyd/cvxbook/)（共享来源库已有键）。

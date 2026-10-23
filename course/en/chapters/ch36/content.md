@@ -549,7 +549,7 @@ This verifies the signed formula's symmetry for buys and sells.
 
 ## 9. Python Implementation
 
-The default I3 reader package uses a self-contained four-cell notebook with a small constructed IS example. It writes JSON and one figure into a unique RUN_DIR; the outer runner run_notebook.py at the package root preserves an execution copy and execution JSON. This is not a complete CLI, a Project 4 historical walk-forward, or a market experiment. The English notebook-language layer and full-package cold-start validation are deferred to BIL23.
+The default reader package uses a self-contained four-cell notebook with a small constructed IS example. It writes JSON and one figure into a unique RUN_DIR; the outer runner run_notebook.py at the package root preserves an execution copy and execution JSON. This is not a complete CLI, a Project 4 historical walk-forward, or a market experiment.
 
 Engineering execution uses the dimensionless-coefficient model described in Chapter 35, Section 5.4. The discrete Almgren–Chriss derivation in Section 6.2 is an analytic teaching model under its stated assumptions; it must not be presented as if the engine had been calibrated with the same diffusion or risk parameters. For the current Project 4 result identity, see Chapter 35, Section 10.3 and the current acceptance entrypoint; old R2R6 material is historical constructed evidence only. This chapter and the experiment share the quant_course.execution_costs module; they do not create a second fee, scheduling, or IS engine. ExecutionSlot keeps ex-ante forecast volume, pre-send observed volume, and current realized volume separate, and records availability in observation_time. execute_order returns fills, terminal remainder, a signed IS decomposition, and a direct-amount check.
 
@@ -632,7 +632,7 @@ Each point is calculated from the discrete inventory recursion, with a fixed 10,
 
 ## 11. Evidence Boundary and TCA Study Design
 
-This batch has no real tick-by-tick fills, order-book data, or institutional execution sample. It therefore reports no real-security case or empirical slippage. This section follows the data boundary recorded in qa/a7/ch35_ch36_batch/SOURCE_DATA_GAP.md and offers a study-design example for future work with appropriately authorized data.
+No real tick-by-tick fills, order-book data, or institutional execution sample are included, so this chapter reports no real-security case or empirical slippage. The section offers a study-design example for future work with appropriately authorized data.
 
 ### 11.1 Available Data and Gaps
 
@@ -1231,5 +1231,5 @@ The core academic and official regulatory sources cited in this chapter correspo
 7. PEROLD_1988:
    - Citation: André F. Perold, “The Implementation Shortfall: Paper vs. Reality,” *The Journal of Portfolio Management*, 14(3), 4–9 (1988). [JPM publisher record](https://jpm.pm-research.com/content/14/3/4).
    - Supports: Bibliographic identity only: author, title, journal, volume, issue, and pages. It does not support specific chapter passages, teaching definitions, or formulas.
-   - Scope: The underlying literature check was performed on 2026-10-09; this BIL17A batch inherits that historical bibliographic review of author/publisher metadata, without reading the full text or performing a fresh external source check. The SEC (2003) traces an early source of implementation shortfall to Treynor (1981), so Perold is not described as its originator.
+   - Scope: The underlying literature check was performed on 2026-10-09; this chapter checked author and publisher metadata only; it did not read the full text. The SEC (2003) traces an early source of implementation shortfall to Treynor (1981), so Perold is not described as its originator.
 

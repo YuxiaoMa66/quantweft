@@ -369,7 +369,7 @@ assert np.isclose(forecast_may, 0.01375)
 
 ### 本读者版的默认运行入口
 
-从接受I3读者包根目录，按其[环境说明](../../../../editions/zh/README.md)建立独立环境后运行：
+从随包读者包根目录，按其[环境说明](../../../../editions/zh/README.md)建立独立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch16_time_series.ipynb
@@ -379,7 +379,7 @@ assert np.isclose(forecast_may, 0.01375)
 
 Notebook显示`fixtures/figures/a4/ch16_stationarity_acf.png`随包既有图；显示不等于本次重新生成。`RUN_FRENCH=False`关闭历史市场分支。虽然创建并打印`runs/ch16_time_series_<uuid>/`，本Notebook不向它写CSV或PNG。运行器另在唯一`runs/execution_*`目录保存执行副本与状态；两个目录用途不同。构造计算不形成市场预测或策略净收益证据；第10–11节的French历史图表与数字保留原有身份。
 
-下方CLI与制作测试属于历史课程工作根流程，不是本包默认路线；未随包提供的制作测试不要求读者补回。I3 CLI第16章仍无条件读取French，CLI第17章历史分支需`--french-data`，均不替代上述默认命令。
+下方CLI与制作测试属于历史课程工作根流程，不是本包默认路线；未随包提供的制作测试不要求读者补回。CLI第16章仍无条件读取French，CLI第17章历史分支需`--french-data`，均不替代上述默认命令。
 
 ### 历史课程工作根与原实现
 
@@ -718,7 +718,7 @@ assert pair.index.freqstr == "M"
 
 ## 20. References
 
-本章正文的定义和 AR(1)/MA(1) 矩公式为独立推导；statsmodels 文档用来核验代码接口与参数含义。完整核验日期、阅读页范围、运行依赖和不能由数据支持的结论见 [`source_notes.md`](source_notes.md)。
+本章正文的定义和 AR(1)/MA(1) 矩公式为独立推导；statsmodels 文档用来核验代码接口与参数含义。补充参考资料、运行依赖和数据支持边界见 [`source_notes.md`](source_notes.md)。
 
 - statsmodels `ARIMA`、`ARIMAResults.get_forecast`、`acf`、`pacf`、`acorr_ljungbox` 与 `ArmaProcess` 官方文档：支持本章实现与 API 说明，不支持模型有效或市场可预测性结论。
 - Kenneth R. French Data Library [10 Industry Portfolios 数据说明](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html)：支持所下载组合文件的来源与字段背景；本章数字从缓存及哈希清单复核。公开下载页面不被解释为课程目录外任意再分发许可。

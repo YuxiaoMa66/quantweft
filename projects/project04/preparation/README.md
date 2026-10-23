@@ -27,7 +27,7 @@
 
 ## 默认离线阅读与输出
 
-运行模式与自备输入契约沿用已接受读者包的 [项目读者说明](../../../editions/zh/NOTEBOOK_GUIDE.md)，两语入口见 [总导读](../READER_GUIDE.md)。默认只运行读者Notebook的构造分支，不调用历史CLI或pytest。Notebook首格创建新的 `runs/p04_signal_layer_<uuid>/`，在其下写 `figures/a5/p04_signal_layer.png`，另由runner保存execution副本与状态；不会写回冻结源。代码/输出/元数据保持I3身份，语言投影只改Markdown。
+运行模式与自备输入契约见[项目读者说明](../../../editions/zh/NOTEBOOK_GUIDE.md)，两语入口见[总导读](../READER_GUIDE.md)。默认Notebook使用构造数据，并将图表写入包根 `runs/p04_signal_layer_<uuid>/`。
 
 这里的“历史独立证据（未捆绑）”是历史来源身份提示，不是可执行路径，也不是当前输出目录。以下历史数字取自A5/A6保留结果，不由默认Notebook重新验证。原独立复算从版本表逐格重做PIT与七字段，并用numpy重做预处理链；本册不重跑它。
 

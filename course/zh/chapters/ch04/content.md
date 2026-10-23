@@ -518,7 +518,7 @@ assert objective(next_weights) < objective(weights)
 
 ## 9. Python Implementation：用解析式校验数值差分
 
-### 默认读者包入口（承接接受I3）
+### 默认读者包入口（承接随包）
 
 从[读者安装说明](../../../../editions/zh/README.md)建立环境，在读者包根运行：
 
@@ -526,7 +526,7 @@ assert objective(next_weights) < objective(weights)
 .venv/bin/python run_notebook.py notebooks/ch04_calculus.ipynb
 ```
 
-默认Notebook调用随包共享实现，不读取未随包提供的French数据、不下载数据；新运行和图写入唯一runs子目录。读者CLI使用UUID目录并拒绝覆盖。未随包提供的旧测试位置只是原制作验收记录；读者使用Notebook内断言。French输入仅按[可选数据契约](../../../../editions/zh/OPTIONAL_DATA.md)提供，本批未重跑。下面保留原课程根脚本路线，与读者包入口分别使用各自环境。
+默认 Notebook 调用随包共享实现，不读取未随包提供的 French 数据，也不下载数据；新运行和图写入唯一 `runs/` 子目录。读者 CLI 使用 UUID 目录并避免覆盖已有结果。Notebook 内的断言用于核对构造示例；French 输入仅按[可选数据契约](../../../../editions/zh/OPTIONAL_DATA.md)提供。
 
 
 完整脚本位于 [ch04_calculus.py](../../../../code/ch04_calculus.py)，可复跑 Notebook 位于 [ch04_calculus.ipynb](../../../../notebooks/ch04_calculus.ipynb)，核心函数位于 **src/quant_course/math_tools.py**。在项目根目录按 [冻结环境说明](../../../../editions/zh/README.md) 安装后运行：
@@ -1153,4 +1153,4 @@ assert objective(weights) < min(objective([1.0, 0.0]), objective([0.0, 1.0]))
 
 ## 20. References
 
-本章来源、URL、核验方法和支持边界见 [source_notes.md](source_notes.md)。数学定义由原创中文解释和逐步推导呈现；MIT OCW 支持课程主题与公式结构，Boyd 支持凸目标的一、二阶最优条件，NumPy 文档支持数组差分 API 行为。债券与二次目标数值是作者构造，外部来源不支持其作为市场事实。
+本章参考资料与引用边界见 [source_notes.md](source_notes.md)。数学定义由原创中文解释和逐步推导呈现；MIT OCW 支持课程主题与公式结构，Boyd 支持凸目标的一、二阶最优条件，NumPy 文档支持数组差分 API 行为。债券与二次目标数值是作者构造，外部来源不支持其作为市场事实。

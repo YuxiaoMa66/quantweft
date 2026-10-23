@@ -275,13 +275,13 @@ $$= C_{t-1} + q_{i, t-1}\left(S_{i,t}D_{i,t} + P_{i, t-1} - S_{i,t}D_{i,t}\right
 
 ## 9. Python Implementation
 
-本章偏差分析的完整课程入口为 `code/ch30_backtest_biases.py`。默认先在已接受I3读者包根运行：
+本章偏差分析的完整课程入口为 `code/ch30_backtest_biases.py`。默认先在已随包读者包根运行：
 
 ```bash
 python run_notebook.py notebooks/ch30_backtest_biases.ipynb
 ```
 
-Notebook默认跳过French分支，只新算构造示例；初始化创建唯一 `runs/ch30_backtest_biases_<uuid>/`，runner另在 `runs/execution_<stem>_<uuid>/` 保存执行副本和 `execution.json`，失败亦保留。章节Notebook英语、全包与冷启动留BIL23。以下完整课程调用用于理解原方法，含522观测构造和完整偏差研究，未在本次修订执行；独立运行前核实际参数与输出路径，不覆盖历史qa。
+Notebook默认跳过French分支，只新算构造示例；初始化创建唯一 `runs/ch30_backtest_biases_<uuid>/`，runner另在 `runs/execution_<stem>_<uuid>/` 保存执行副本和 `execution.json`，失败亦保留。以下完整课程调用用于理解原方法，含522观测构造和完整偏差研究，未在本次修订执行；独立运行前核实际参数与输出路径，不覆盖历史qa。
 
 研究信号使用的日回报由未复权收盘价、拆股比例、现金股息及退市清算价按账本事件计算；订单成交与每日持仓估值仍使用原始未复权价格。一般收盘信号在日期 $d$ 收盘形成，历史特征最多使用到该收盘；`lag=1` 后的持有区间是下一个网格观测日开盘至收盘。回归标签采用该开盘至收盘毛回报，不把成交前的隔夜跳空算给新持仓。若信息在收盘后 16:30 才发布，则它最早用于下一观测日收盘信号，并在其后一个观测日开盘成交。
 
@@ -334,7 +334,7 @@ assert pert["is_wrong_causality_violated"] == 1
 
 ## 10. Visualization
 
-历史 `code/ch30_backtest_biases.py` 的保存结果位于 `qa/a6/codex_resume/ch30/results_v2/`，对应4图位于 `qa/a6/codex_resume/ch30/figures_v2/`。本次修订沿用这些曲线，不重跑或重画。v1 结果与图保留在 `results/`、`figures/`；教材展示图仅在保存 v2 快照后更新。
+`code/ch30_backtest_biases.py` 的保存历史结果生成了本章四幅图；这些曲线未在当前修订中重跑或重画。不同版本的结果和图分别保留，教材图对应后续保存的快照。
 
 ### 10.1 图 1：前视偏差与幸存者偏差净值路径对照
 ![前视偏差与幸存者偏差净值路径对照](../../../../figures/a6/ch30_lookahead_and_survivorship.png)
@@ -379,7 +379,7 @@ assert pert["is_wrong_causality_violated"] == 1
 
 ### 11.1 真实市场数据规格与许可边界
 
-本节保留此前使用 Kenneth R. French 数据的历史方法演示；原始/提取/处理数据未随默认I3包提供，权利/主体/用途仍待解决，A10-A设计与A10-A.1技术协议不替代执行授权，G05/A10-B未授权。本节不重跑历史研究。此前使用的 10 个行业投资组合月度收益率数据，演示选择偏差在真实历史长周期中的表现：
+本节保留此前使用 Kenneth R. French 数据的历史方法演示；原始/提取/处理数据未随默认读者包提供，权利/主体/用途仍待解决，研究设计不等于获得真实数据执行授权。这些数据用于历史方法演示，本节不报告新的研究运行。此前使用的 10 个行业投资组合月度收益率数据，演示选择偏差在真实历史长周期中的表现：
 - **数据源 URL**：<https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/10_Industry_Portfolios_CSV.zip>
 - **行业数据清单校验文件**：`data/manifests/french_industries_2026-10-05.json`（SHA-256: `3b71cd5f781f9790cc380195c22635e03e9c9e27a5f43cd2d0d46fb12efa8271`）
 - **行业原始 ZIP SHA-256**：`ebd937a4b995d821867aeb956a96f09a666386f38fa82516b7d1767ee4a49ae5`（原始压缩包哈希，与下方 JSON 清单文件哈希不同）
@@ -1302,6 +1302,4 @@ $$d_{\mathrm{eff}}=\frac{(\sum_i\lambda_i)^2}{\sum_i\lambda_i^2}
 - `QUANT_COURSE_RESEARCH_PROTOCOL`：Chapter 22 Research Methodology (`src/quant_course/research_protocol.py`).
   - 类与函数：`TrialLedger`, `expected_max_standard_normal`, `expected_max_standard_normal_exact`, `bonferroni_adjust`, `holm_adjust`.
 - `QUANT_COURSE_CH30_CLI`：Chapter 30 Implementation CLI (`code/ch30_backtest_biases.py`).
-  - 当前输出结果：`qa/a6/codex_resume/ch30/results_v2/ch30_results.json`
-
-本章英语Notebook及共享读者包便携路径、装配与冷启动仍待BIL23；正文英语不隐含已完成全书英语软件包。
+  - 当前结果为保存的历史输出，不是本次新运行结果。

@@ -37,4 +37,4 @@ The historical report's paired circular-block bootstrap with 5000 replications a
 
 ## Notebooks in both languages
 
-The Chinese and English project Notebooks are projections of the same accepted reader source; only the Markdown language and default-run instructions differ. Code cells, saved outputs, and metadata remain unchanged. This round does not rerun the Notebook. Final reader-package path assembly and run verification remain for integration; this guide does not describe language-layer checks as new numerical or market validation.
+The Chinese and English project Notebooks use the same code cells and saved outputs, with language-specific Markdown and default-run instructions. Their constructed results are separate from the French historical study and do not constitute new market validation.

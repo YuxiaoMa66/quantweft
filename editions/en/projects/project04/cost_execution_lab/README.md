@@ -1,10 +1,10 @@
-# Project 4 Cost & Execution Lab (A7-B Implementation Suite)
+# Project 4 Cost & Execution Lab
 
 **Course:** Quantitative Portfolio Strategy & Market Microstructure  
 **Teaching scope:** costs, execution, and ledger interfaces  
 **Data status:** Constructed teaching data with fixed random seed `20261210`; not market evidence  
 **Author:** Yuxiao Ma  
-**Interface and data-boundary contracts:** `qa/a7/ch35_ch36_batch/INTERFACE_CONTRACT.md` and `qa/a7/ch35_ch36_batch/SOURCE_DATA_GAP.md` at the repository root
+**Interface and data boundary:** see this directory's data dictionary, research report, and the data-gap notes on this page.
 
 ## 1. Objective and scope
 
@@ -12,9 +12,9 @@ This lab extends frictionless reference-price fills into a fill-level ledger wit
 
 The shared engine and project adapter live at `src/quant_course/execution_costs.py` and `projects/project04/cost_execution_lab/p4_cost_bridge.py`, relative to the full course repository root. The fixed-parent and partial-fill examples are small constructed ledgers; they do not substitute for full strategy results. Project 4 also depends on other signal, configuration, data, and code files, so these documents are not a stand-alone software package.
 
-## 2. Paths and result identities
+## 2. Included files and results
 
-All paths below are relative to the full course repository root. This directory provides four bilingual cost-reading documents alongside two Notebook language projections; code, configuration, and saved summaries retain their versioned repository paths.
+Paths below are relative to the full course repository root. The Notebook and reader documents use the shared execution engine, project adapter, configuration, and public summary fixture listed here.
 
 ```text
 projects/project04/cost_execution_lab/
@@ -26,12 +26,10 @@ projects/project04/cost_execution_lab/
 ├── solutions.md
 └── cost_execution_lab.ipynb
 src/quant_course/execution_costs.py
-build/batches/INTEGRATION-PREP/p04_cost_refresh_20261014/runs/current_signal_01/cli/summary_results.json
 fixtures/projects/project04/summary_results_current_signal_20261014.json
-qa/a7/ch35_ch36_batch/independent_acceptance/rev2/r2r6/candidate/projects/project04/cost_execution_lab/outputs/a7b_rev2r6_20261009/summary_results.json
 ```
 
-Keep three identities separate: A7-B R2R6 on 2026-10-09 is the historical baseline using the old signal layer; the 2026-10-14 current-signal refresh is a separately accepted constructed engineering-consumer summary; and the I3 reader Notebook recomputes only the fixed-parent and liquidity-stress examples while reading the longer-run results from the current saved summary. A shared seed does not mean different signal inputs or runs share an element-by-element historical path.
+The report retains two constructed results: the earlier signal baseline from 2026-10-09 and the current-signal summary from 2026-10-14. They use different signal inputs and must not be merged into one monthly path. The reader Notebook recomputes the fixed-parent and liquidity-stress examples and reads longer-run results from the included current summary.
 
 ## 3. Core interface, clock, and ledger conventions
 
@@ -57,15 +55,15 @@ Portfolio returns are month-end to month-end, with initial NAV as the first inte
 
 Read the [data dictionary](data_dictionary.md), [research report](research_report.md), and [complete answers to all six exercises](solutions.md), then compare them with the interface code, configuration, and versioned result summaries at the repository-root paths above. The constructed volume curve is estimated from 60 samples from a declared U-shaped DGP, not from observed market volume.
 
-The I3 reader candidate Notebook is at `projects/project04/cost_execution_lab/cost_execution_lab.ipynb`. It loads the project configuration, recomputes the frozen volume curve, the 10,000-share fixed-parent buy/sell comparison, and a 5,000-share liquidity-stress example, and checks the small examples against the saved current-signal summary. Its longer-run 96-month walk-forward results, high-friction scenario, sensitivities, ablation, and ledger audits are replayed from the saved current summary; the Notebook does not rerun the full walk-forward study by default. Running it creates a unique `runs/cost_execution_lab_<random-id>/` directory at the repository root and writes images there, so it needs the full repository and its runtime dependencies. This documentation candidate does not include those run files.
+The Notebook in this directory loads the cost and slot configuration, recomputes the frozen volume profile, the 10,000-share fixed-parent comparison, and the 5,000-share liquidity-stress example, and reads the current-signal summary for the longer walk-forward results, high-friction scenario, sensitivities, ablation, and ledger audit. It does not rerun the full walk-forward study by default. Running it creates runs/cost_execution_lab_<random-id>/ at the repository root and writes images, so it needs the complete package and runtime dependencies.
 
 The cost configuration explicitly requests 97 input months starting in 2013-12. The first month is warm-up, producing 96 return months from 2014-01 through 2021-12: 60 training months (2014-01 through 2018-12) and 36 test months (2019-01 through 2021-12). Do not treat a signal function’s 96-month default input as the same sequence as the cost CLI’s 97-month configured input.
 
 ## 5. How to read the results
 
-The old-signal R2R6 test-period CAGR/annualized Sharpe are negative for every track: GROSS −2.09%/−0.34, TWAP −2.72%/−0.44, VWAP −2.71%/−0.44, and POV −6.62%/−1.12. Its high-friction scenario has net CAGR/Sharpe of −8.01%/−1.54. These results describe the accounting and cost changes on that constructed path; they do not show positive gross alpha being erased by costs.
+The earlier signal-baseline test-period CAGR/annualized Sharpe are negative for every track: GROSS −2.09%/−0.34, TWAP −2.72%/−0.44, VWAP −2.71%/−0.44, and POV −6.62%/−1.12. Its high-friction constructed scenario has net CAGR/Sharpe of −8.01%/−1.54. These results describe the accounting and cost changes on that constructed path; they do not show positive gross alpha being erased by costs.
 
-The 2026-10-14 current-signal refresh uses the same cost configuration with 97 input months and 96 return months, but has a different signal-consumer identity. Its 36-month test CAGR/annualized Sharpe are: GROSS −1.9560%/−0.3334, TWAP −2.3459%/−0.4014, VWAP −2.3327%/−0.3994, and POV −6.0717%/−1.0800. The current high-friction scenario has net CAGR/Sharpe of −7.4392%/−1.5050. Its sensitivity grid contains both positive and negative values; no winner was selected from the grid, which is not a strategy-selection or empirical conclusion.
+The 2026-10-14 current-signal refresh uses the same cost configuration with 97 input months and 96 return months, and uses different signal inputs. Its 36-month test CAGR/annualized Sharpe are: GROSS −1.9560%/−0.3334, TWAP −2.3459%/−0.4014, VWAP −2.3327%/−0.3994, and POV −6.0717%/−1.0800. The current high-friction scenario has net CAGR/Sharpe of −7.4392%/−1.5050. Its sensitivity grid contains both positive and negative values; no winner was selected from the grid, which is not a strategy-selection or empirical conclusion.
 
 The [research report](research_report.md) gives the fixed 10,000-share parent-order IS results, liquidity-stress table, full historical negative results, current refresh summary, and path definitions. Do not compare numbers without their result identity and constructed assumptions.
 

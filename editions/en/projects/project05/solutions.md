@@ -1,6 +1,6 @@
 # Project 5 — Complete Solutions
 
-These solutions inherit the limited c5/ALIGN constructed teaching evidence and explain it under the latest whole-share boundary. This batch did not rerun the historical CLI or reference solution. The original numbers were printed by `.venv/bin/python projects/project05/solutions_code.py` on 2026-10-10, with candidate identity `qa/a7/project05_batch/CANDIDATE_MANIFEST_c5.json`. P5-05 through P5-09 use the teaching constructed panel, not market data. Old c1–c4 results under v1 remain in `qa/a7/project05_batch/evidence/`; the results below are c5’s.
+These solutions describe constructed teaching results under the whole-share execution boundary. The values below are from the teaching panel, not market data.
 
 ## P5-01
 

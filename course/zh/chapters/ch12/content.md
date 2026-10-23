@@ -337,13 +337,13 @@ Spire 2025 年 Form 10-K/A（accession 0000950170-25-030856）把同一 FY2023 �
 
 ### 本读者版的默认运行入口
 
-从接受I3读者包根目录，按其[环境说明](../../../../editions/zh/README.md)建立环境后运行：
+从随包读者包根目录，按其[环境说明](../../../../editions/zh/README.md)建立环境后运行：
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch12_statements.ipynb
 ```
 
-Notebook调用随包共享实现。第12章复算固定转录的Apple/Spire报表事实，PIT时钟与市值为构造。默认只展示随包既有两张图，不重绘；运行器把新内核执行记录写入唯一的`runs/execution_*`目录，Notebook另建立唯一UUID的本章方法目录并打印位置。两目录用途不同，不把既有图说成本批新产物。未随包提供的French数据不默认读取，也不下载。下方CLI及旧制作测试按课程工作根解释；读者用上方Notebook内断言，旧制作测试未随包时不要求补回。英文Notebook的Markdown层仍待BIL23装配，本批未执行Notebook或旧数值套件。
+Notebook 调用随包共享实现。第12章复算固定转录的 Apple/Spire 报表事实，PIT 时钟与市值为构造。默认只展示随包既有两张图，不重绘；运行器把新内核执行记录写入唯一的 `runs/execution_*` 目录，Notebook 另建立唯一 UUID 的本章方法目录并打印位置。两目录用途不同，既有图不是本次生成的结果。未随包提供的 French 数据不默认读取，也不下载。读者用上方 Notebook 内断言。
 
 ### 历史课程工作根与原实现
 
@@ -735,7 +735,7 @@ else:
 
 ## 20. References
 
-本章没有修改共享 sources.json 或 references.bib。下列直接链接对应可核验的官方原文；阅读边界、核验日、原始数值和时间局限记录在 [source_notes.md](source_notes.md)。
+本章没有修改共享 sources.json 或 references.bib。下列直接链接对应可核验的官方原文；参考资料与时间局限记录在 [source_notes.md](source_notes.md)。
 
 1. SEC, [How to Read a 10-K](https://www.sec.gov/files/reada10k.pdf) 与 [Beginners’ Guide to Financial Statements](https://www.sec.gov/reportspubs/investor-publications/investorpubsbegfinstmtguide)：三表功能、现金流经营/投资/筹资分类，第 3、5、6 节。
 2. SEC, [EDGAR API Documentation](https://www.sec.gov/edgar/sec-api-documentation)：companyfacts/frames、自然期间与公司财政期间差异，第 6.4、11、13 节。

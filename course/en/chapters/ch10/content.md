@@ -206,13 +206,13 @@ Separate the call example by time and state. Opening premium paid is $4\times100
 
 ### Default entry in the reader edition
 
-From the accepted I3 reader package root, prepare an independent environment following its [environment instructions](../../../../editions/en/README.md), then run:
+From the reader package root, prepare an independent environment following its [environment instructions](../../../../editions/en/README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch10_markets.ipynb
 ```
 
-The Notebook calls the packaged shared implementation using constructed contract cash flows throughout Chapter 10. The runner saves fresh-kernel execution records to a unique runs/execution_* directory; new figures use another UUID directory. The terminal prints actual locations. Omitted French data are not read by default or downloaded. The old production tests and CLI below refer to the working-course root; reader checks use the Notebook assertions above. Optional historical data follow the [data contract](../../../../editions/en/OPTIONAL_DATA.md) and are not rerun in this revision.
+The Notebook calls the packaged shared implementation using constructed contract cash flows throughout Chapter 10. The runner saves fresh-kernel execution records to a unique runs/execution_* directory; new figures use another UUID directory. The terminal prints actual locations. Omitted French data are not read by default or downloaded. The old production tests and CLI below refer to the working-course root; reader checks use the Notebook assertions above. Optional historical data follow the [data contract](../../../../editions/en/OPTIONAL_DATA.md) and are not run by default.
 
 ### Historical working-course root and original implementation
 
@@ -239,7 +239,7 @@ The equity purchase settles at the constructed T+1 node; entitlement and later d
 
 This chapter neither loads/downloads market prices nor treats constructed values as executions. Actual-rule examples concern US securities settlement and CME specifications. The SEC staff FAQ identifies May 28, 2024 as the compliance date. Rule 15c6-1 covers the specified security transactions executed by US-registered brokers/dealers, with listed instrument/arrangement exceptions and some expressly agreed extended settlement at execution. For a covered trade on Tuesday May 28, 2024, business-day T+1 is Wednesday May 29. This is no common calendar for all bonds, FX, futures, repos, cross-border securities or transactions.
 
-DTCC descriptions of NSCC Continuous Net Settlement (CNS) and DTC securities/cash book-entry transfers illustrate US infrastructure rather than defining global clearing. Reviewed CME specifications state MES as USD 5 × S&P 500 index points and ES as USD 50 × points. Only multipliers are used, excluding changing margin quotes and notional valuations. See [source_notes.md](../../../zh/chapters/ch10/source_notes.md) for pages and reading scope.
+DTCC descriptions of NSCC Continuous Net Settlement (CNS) and DTC securities/cash book-entry transfers illustrate US infrastructure rather than defining global clearing. Reviewed CME specifications state MES as USD 5 × S&P 500 index points and ES as USD 50 × points. Only multipliers are used, excluding changing margin quotes and notional valuations. See [source_notes.md](../../../zh/chapters/ch10/source_notes.md) for references.
 
 ## 12. Common Mistakes
 
@@ -546,6 +546,6 @@ FX assertions reject missing/ambiguous direction; futures require matching contr
 
 ## 20. References
 
-See [source_notes.md](../../../zh/chapters/ch10/source_notes.md) for URLs, actual reading scope, boundaries and dates. Main sources are official SEC/Investor.gov, DTCC, CME, OCC, CFTC, ECB, BIS and MIT OCW materials. Original constructed inputs illustrate arithmetic, separate from source quotes or observations. US T+1, CME multipliers and margin statements support only the named rules/contracts and are not generalized to other markets/products.
+See [source_notes.md](../../../zh/chapters/ch10/source_notes.md) for references and boundaries. Main sources are official SEC/Investor.gov, DTCC, CME, OCC, CFTC, ECB, BIS and MIT OCW materials. Original constructed inputs illustrate arithmetic, separate from source quotes or observations. US T+1, CME multipliers and margin statements support only the named rules/contracts and are not generalized to other markets/products.
 
 The C5 sensitivity bridge uses original derivations and constructed cash flows. The October 13, 2026 supplemental source read covered MIT Part IV transcript 17:05–19:32 on local approximations and risk use. See the batch source review for that scope and inherited evidence.

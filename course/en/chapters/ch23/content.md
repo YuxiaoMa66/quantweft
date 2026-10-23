@@ -284,7 +284,7 @@ Only after subtracting costs can we discuss net returns: $R_{\mathrm{net}}=R_{\m
 
 ## 8. Worked numerical examples
 
-All numbers are produced by this chapter's CLI function `hand_examples()` and independently checked with a different implementation in `qa/a5/claude/recompute/ch23_recompute.py`.
+All numbers are produced by this chapter's CLI function `hand_examples()` and independently checked with a separate implementation.
 
 ### 8.1 Ranks and percentiles with ties and missing values
 
@@ -462,7 +462,7 @@ print(signal.iloc[11:13].round(2))
 
 For Code block 5, changing returns from month 30 onward leaves signal rows 0 through 30 unchanged. Row 30 uses months 19 through 29 and skips month 30, so the 12-1 signal excludes that month's return. This verifies that the signal has not been shifted one month too far forward or backward.
 
-**Default offline entrypoint.** From the root of the bundled I3 reader package, run:
+**Default offline entrypoint.** From the root of the bundled reader package, run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch23_cross_sectional_research.ipynb
@@ -583,8 +583,8 @@ print(round(same_month.mean, 3), round(next_month.mean, 4))
 
 | Layer | Current acceptance entrypoint and scope | Use in this chapter |
 |---|---|---|
-| A5 signal preparation | `qa/a5/codex_followup_fixes/acceptance.md`: constructed PIT, same-date processing, signal contract; missing real EV-bridge fields must not default to zero | Reads the feature and date contract; does not accept a complete strategy |
-| A6 ledger interface | `qa/a6/codex_resume/acceptance.md`: constructed prices, listing filters, delisting, and ledger integration | Reads execution constraints; filtering after full-universe neutralization still leaves residual exposure |
+| Signal preparation | Constructed data follows PIT, same-date processing, and the signal contract; missing real EV-bridge fields must not default to zero | The example illustrates feature and date constraints, not a complete strategy |
+| Ledger interface | Constructed prices illustrate listing filters, delisting, and ledger integration | Filtering after full-universe neutralization can still leave residual exposure |
 | A7-B cost experiment | `projects/project04/cost_execution_lab/ACCEPTED_VERSION.md`: limited teaching cost/execution experiment | Cost sensitivity is a constructed experiment, not real alpha or capacity |
 
 A four-asset counterexample shows why filtering is not re-optimization. Industry 1 has weights $(0.3,-0.3)$ on A and B; industry 2 has weights $(0.2,-0.2)$ on C and D. Before filtering, each industry's weights sum to zero, total net exposure is 0, and gross exposure is 1. If B is untradable and set to zero, the resulting weights are $(0.3,0,0.2,-0.2)$. Industry 1 exposure is 0.3, net exposure is 0.3, and gross exposure is 0.7. Even if scaled by $1/0.7$ to restore gross exposure to 1, industry 1 and net exposure remain $3/7$, not zero.
@@ -734,7 +734,7 @@ print(reject(naive), reject(nw), reject(non, stats.t.ppf(0.975, 39)))
 
 ## 20. References
 
-Citation keys and reading scope are listed in [source_notes.md](../../../zh/chapters/ch23/source_notes.md).
+Citation keys and references are listed in [source_notes.md](../../../zh/chapters/ch23/source_notes.md).
 
 - **CH23_PETERSEN2005:** Petersen, M. A. (2005/2006). “Estimating Standard Errors in Finance Panel Data Sets: Comparing Approaches.” NBER Working Paper 11280. Supports the discussion of Fama–MacBeth estimation and standard errors in Sections 5 and 6.6; the 2009 RFS final version has not been read.
 - **CH23_JT1993:** Jegadeesh, N., and Titman, S. (1993). “Returns to Buying Winners and Selling Losers.” *Journal of Finance* 48(1). Supports the discussion of overlapping holding periods.

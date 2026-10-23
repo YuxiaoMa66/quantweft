@@ -15,7 +15,7 @@ The 2010–2024 month labels do not turn constructed inputs into market observat
 
 ## 2. Prepare the environment and run
 
-The accepted I3 reader package declares Python 3.12 or later. Its checked lock file targets macOS arm64/CPython 3.14.7; other platforms have not been verified. If your reader environment is ready, proceed to the execution command below. Otherwise, run these setup commands from the package root:
+The reader package declares Python 3.12 or later. Its checked lock file targets macOS arm64/CPython 3.14.7; other platforms have not been verified. If your reader environment is ready, proceed to the execution command below. Otherwise, run these setup commands from the package root:
 
 ```bash
 python3 -m venv .venv
@@ -80,4 +80,4 @@ All six questions retain their original meanings, values and complete answers. T
 
 The current run can demonstrate how shared metrics process constructed returns, windows and figures. The historical report can describe published portfolio returns for its specified snapshot and windows. Neither establishes future returns, net strategy Alpha or an executable advantage. The snapshot lacks stock-level OHLCV, historical monthly vintages, release and ingestion times, signals, orders, costs and financing ledgers.
 
-G01 rights, subject and use remain unresolved; G05/A10-B is unauthorized. Technical protocol acceptance supplies no data permission. The optional [input contract](../../OPTIONAL_DATA.md) describes future user-supplied data requirements under separate authorization; it does not enable French execution here. See the complete [English project entry](README.md). Both Notebook language projections change Markdown only: the numerical implementation, execution cells and existing outputs are preserved.
+G01 rights, subject and use remain unresolved; G05/A10-B is unauthorized. Technical protocol acceptance supplies no data permission. The optional [input contract](../../OPTIONAL_DATA.md) describes future user-supplied data requirements under separate authorization; it does not enable French execution here. See the complete [English project entry](README.md).

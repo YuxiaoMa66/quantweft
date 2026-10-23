@@ -494,7 +494,7 @@ to describe one-step probabilities between states \(A,B\); each row sums to 1. F
 
 ### Default entry point in the accepted reader package
 
-From the accepted I3 reader package root, create the isolated environment described in its [README](../../../../editions/en/README.md), then run:
+From the reader package root, create the isolated environment described in its [README](../../../../editions/en/README.md), then run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch06_probability.ipynb
@@ -939,7 +939,7 @@ Drawing shared \(A\) once preserves cross-period scale dependence. Redrawing it 
 
 ## 20. References
 
-Sources are official course materials or software documentation. [source_notes.md](../../../zh/chapters/ch06/source_notes.md) records reading scope, retrieval and limits. This chapter has no empirical market source.
+Sources are official course materials or software documentation. [source_notes.md](../../../zh/chapters/ch06/source_notes.md) lists further references and limitations. This chapter has no empirical market source.
 
 - **MIT_6041SC** — MIT OpenCourseWare, [6.041SC Probabilistic Systems Analysis and Applied Probability, Fall 2013](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/). Source notes list links and reading scope for Lectures 1–2, 5–6, 8, 10, 12 and 17.
 - **MIT_6262** — MIT OpenCourseWare, [6.262 Discrete Stochastic Processes, Spring 2011](https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/). Source notes link the consulted Lectures 3–4 and Poisson Processes Chapter 2 §2.1.

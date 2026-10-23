@@ -386,13 +386,13 @@ The three-asset constructed inputs are annualized means 5%/8%/12%, volatilities 
 
 ### Default accepted-reader entry point
 
-From the shared I3 reader root, after README.md setup, run:
+From the shared reader package root, after README.md setup, run:
 
 ```bash
 .venv/bin/python run_notebook.py notebooks/ch20_portfolio_theory.ipynb
 ```
 
-The constructed notebook does not read omitted French inputs or download data. Each run writes a fresh `runs/` directory. Historical CLI/test/data paths below refer to the course root. The French route requires authorized local data and manifests and was skipped in this batch. The portable I3 CLI defaults to a new UUID run and rejects overwriting. Stay at the reader root for its commands. See README.md and OPTIONAL_DATA.md; a constructed notebook check does not rerun historical market calculations.
+The constructed notebook does not read omitted French inputs or download data. Each run writes a fresh `runs/` directory. Historical CLI/test/data paths below refer to the course root. The French route is skipped unless the reader supplies authorized local data and manifests. The portable CLI defaults to a new UUID run and rejects overwriting. Stay at the reader root for its commands. See README.md and OPTIONAL_DATA.md; a constructed notebook check does not rerun historical market calculations.
 
 `src/quant_course/portfolio_theory.py` supplies:
 
@@ -709,7 +709,7 @@ assert vol(gmv) <= vol(qp) <= vol(clipped)
 print(round(100 * vol(clipped), 3), round(100 * vol(qp), 3))  # 2.876 2.751
 ```
 
-QP satisfies equal marginal variance on positive holdings; clipping does not. Unrestricted GMV has the lowest volatility 2.661%, with shorts in Durbl, Manuf, and Enrgy. Historical displayed clipped/QP values are 2.876%/2.751%; this batch did not rerun the French input route.
+QP satisfies equal marginal variance on positive holdings; clipping does not. Unrestricted GMV has the lowest volatility 2.661%, with shorts in Durbl, Manuf, and Enrgy. Historical displayed clipped/QP values are 2.876%/2.751%; these displayed French-input values are historical results, not a new run.
 
 ### 20-P03
 
@@ -787,6 +787,6 @@ Lag 0 trains 1985-01–1989-12; lag 1 trains 1984-12–1989-11. Both decide and 
 3. **SHARPE1994:** William F. Sharpe, “The Sharpe Ratio,” *Journal of Portfolio Management*, Fall 1994. [Author's page](https://web.stanford.edu/~wfsharpe/art/sr/sr.htm). Recorded reading covers differential returns, ex-ante/ex-post definitions, and aggregation without serial correlation, rather than the full fund-comparison discussion.
 4. **BOYD:** Stephen Boyd and Lieven Vandenberghe, *Convex Optimization*. [Author's site](https://web.stanford.edu/~boyd/cvxbook/). Inherited shared source.
 5. **CVXPY:** [Documentation](https://www.cvxpy.org/). The historical chapter used Chapter 9's CLARABEL path and did not add a document reading.
-6. **FRENCH:** [10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html) and [Fama/French Factors](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_factors.html). Historical source/manifest checks remain version-bound; no new download or empirical run occurred in BIL01.
+6. **FRENCH:** [10 Industry Portfolios](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_10_ind_port.html) and [Fama/French Factors](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_factors.html). Historical source/manifest checks remain version-bound; no new download or empirical run is reported here.
 
 Local shared references: [source notes](../../../zh/chapters/ch20/source_notes.md), [accepted reader setup](../../../../editions/en/README.md), [optional data contract](../../../../editions/en/OPTIONAL_DATA.md), [shared script](../../../../code/ch20_portfolio_theory.py), [shared notebook](../../../../editions/en/notebooks/ch20_portfolio_theory.ipynb), Chinese Chapter 5, Chinese Chapter 9, Chinese Chapter 11, Chinese Chapter 14, Chinese Chapter 15.

@@ -21,14 +21,10 @@ The runner prints the location of the fresh-kernel execution record; the Noteboo
 ## Read in this order
 
 - [Reader guide](READER_GUIDE.md): inputs, actions, outputs, formulas, axes and the source material for all six exercises.
-- [Notebook language projection](notebooks/project01_financial_data_analysis.ipynb): the accepted I3 numerical cells, with revised explanatory Markdown only.
+- [Notebook](notebooks/project01_financial_data_analysis.ipynb): runs the constructed-data analysis and exercises.
 - [Data dictionary](data_dictionary.md) and [original data manifest](../../../../projects/project01/data_manifest.json): constructed-column contracts, historical snapshot hashes, portfolio formation dates and the periods supplying classification codes.
 - [Historical report](research_report/report.md), [six exercises](exercises.md) and [complete solutions](solutions.md): report-reading questions use the original snapshot; constructed results do not replace their answers.
-- [Historical configuration](../../../../projects/project01/configs/analysis.json) and [historical QA](../../../../projects/project01/qa/acceptance.md): fixed windows, annualization conventions and the scope of the original checks.
+- [Historical configuration](../../../../projects/project01/configs/analysis.json): fixed windows and annualization conventions.
 - [Project entry](README.md): the complete English guide, dictionary, historical report and exercises.
-
-## Historical course-work route
-
-The original command from the working course root is `.venv/bin/python projects/project01/run_project01.py`. It depends on manifest-bound French ZIP archives, extracted CSVs and processed CSVs; the original production tests are at `tests/test_project01_analysis.py`. These are historical reproduction locations, separate from the current offline Notebook entry. Consult the report and QA for the original output identities. This revision neither runs nor regenerates them.
 
 G01 data rights, subject and use remain unresolved, and G05/A10-B is unauthorized. Technical acceptance of the A10-A.1 protocol supplies neither data permission nor execution authorization. The user-supplied-data contract describes future input requirements; it does not enable a market branch in this reader run.
