@@ -135,11 +135,15 @@ p {
   margin-inline: auto;
 }
 .section {
-  padding-block: 88px;
+  padding-block: 72px;
 }
 .section-intro {
   max-width: 730px;
   margin-bottom: 36px;
+}
+/* Timeline markers sit on the top rule, so the heading needs more room above them. */
+.curriculum .section-intro {
+  margin-bottom: 56px;
 }
 .section-intro p {
   margin-top: 16px;
@@ -364,9 +368,9 @@ p {
 .book h3 {
   font-size: 19px;
 }
-.book p {
-  font-size: 13px;
-  margin-top: 6px;
+.book-action small {
+  color: var(--muted);
+  margin-left: 4px;
 }
 .book-action {
   display: block;
@@ -374,10 +378,6 @@ p {
   margin-top: auto;
   padding-top: 14px;
   color: var(--accent);
-}
-.section-note {
-  font-size: 12px;
-  margin-top: 16px;
 }
 .curriculum {
   background: var(--surface);
@@ -418,10 +418,6 @@ p {
   font-size: 12px;
   letter-spacing: 0.04em;
   color: var(--muted);
-}
-.route-range {
-  font-size: 14px;
-  color: var(--accent);
 }
 .route h3 {
   font-size: 20px;
@@ -495,6 +491,7 @@ p {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
   gap: 64px;
+  align-items: center;
 }
 .setup-grid > div {
   min-width: 0;
@@ -505,10 +502,6 @@ p {
 .setup-grid .text-link {
   display: inline-block;
   margin-top: 20px;
-}
-.environment {
-  font-size: 12px;
-  max-width: 55ch;
 }
 .code-panel {
   border: 1px solid var(--line);
@@ -734,6 +727,9 @@ summary {
   .preview-example {margin-top:0;padding-top:0;border-top:0;}
   .section {
     padding-block: 52px;
+  }
+  .curriculum .section-intro {
+    margin-bottom: 30px;
   }
   .section-intro {
     margin-bottom: 26px;
