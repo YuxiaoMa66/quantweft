@@ -6,6 +6,8 @@
 
 **量化金融与系统化研究双语课程** · 45 章 · 6 个项目 · 1 个 Capstone
 
+[![网页版](https://img.shields.io/badge/%E7%BD%91%E9%A1%B5%E7%89%88-quantweft.yuxiao.win-344d67)](https://quantweft.yuxiao.win/read/zh/) [![License](https://img.shields.io/badge/license-MIT%20%7C%20CC%20BY--NC--SA%204.0-6f8296)](LICENSE.md)
+
 **[打开网页版教材 →](https://quantweft.yuxiao.win/read/zh/)**　全文搜索 · 同章中英切换 · 夜晚模式
 
 ## 下载 PDF
@@ -17,9 +19,22 @@
 
 建议先读正文，独立完成练习册，再运行 Notebook 核对计算与输出。
 
+## 看看里面
+
+<table>
+<tr>
+<td width="50%"><img src="docs/assets/readme/zh-reader.png" alt="网页版第 11 章阅读页"><br><sub>网页版 · 第 11 章</sub></td>
+<td width="50%"><img src="docs/assets/readme/zh-textbook.png" alt="教材 PDF 中的定义与条件框"><br><sub>教材 PDF · 定义与条件</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/assets/readme/zh-pitfall.png" alt="常见误区框与反例代码"><br><sub>常见误区 · 附反例代码</sub></td>
+<td width="50%"><img src="docs/assets/readme/zh-workbook.png" alt="练习册第 11 章页面"><br><sub>练习册 · 定义、例题与练习</sub></td>
+</tr>
+</table>
+
 ## 学习路线
 
-**数学与金融基础 → 统计建模与资产定价 → 策略检验与研究工程**
+![课程路线：第 1–15 章基础与金融，第 16–28 章信号与组合，第 29–45 章验证与实现](docs/assets/readme/zh-timeline.png)
 
 从 Python、数据与时间契约出发，经由回归、优化、时间序列与投资组合，进入样本外验证、风险、交易成本、执行和金融机器学习。
 

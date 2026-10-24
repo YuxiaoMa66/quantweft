@@ -6,6 +6,8 @@
 
 **A Bilingual Course in Quantitative Finance and Systematic Research** · 45 chapters · 6 projects · 1 Capstone
 
+[![Website](https://img.shields.io/badge/website-quantweft.yuxiao.win-344d67)](https://quantweft.yuxiao.win/read/en/) [![License](https://img.shields.io/badge/license-MIT%20%7C%20CC%20BY--NC--SA%204.0-6f8296)](LICENSE.md)
+
 **[Open the web reader →](https://quantweft.yuxiao.win/read/en/)**　Full-text search · Same-chapter language switching · Night mode
 
 ## Download the PDFs
@@ -17,9 +19,22 @@
 
 Read the textbook, attempt the workbook on your own, then run the Notebooks to check calculations and outputs.
 
+## Look inside
+
+<table>
+<tr>
+<td width="50%"><img src="docs/assets/readme/en-reader.png" alt="Web reader, Chapter 11"><br><sub>Web reader · Chapter 11</sub></td>
+<td width="50%"><img src="docs/assets/readme/en-textbook.png" alt="Definition and conditions box in the textbook PDF"><br><sub>Textbook PDF · Definitions and conditions</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/assets/readme/en-pitfall.png" alt="Common pitfall box with a counterexample"><br><sub>Common pitfall · with runnable counterexample</sub></td>
+<td width="50%"><img src="docs/assets/readme/en-workbook.png" alt="Workbook page for Chapter 11"><br><sub>Workbook · definitions, examples and exercises</sub></td>
+</tr>
+</table>
+
 ## Learning route
 
-**Mathematical and financial foundations → Statistical models and asset pricing → Strategy testing and research engineering**
+![Curriculum: Chapters 1–15 foundations and finance, 16–28 signals and portfolios, 29–45 validation and implementation](docs/assets/readme/en-timeline.png)
 
 Begin with Python, data, and timing contracts. Progress through regression, optimization, time series, and portfolios to out-of-sample validation, risk, costs, execution, and financial machine learning.
 
