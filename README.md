@@ -4,36 +4,18 @@
 
 # QuantWeft · 量化经纬
 
-**量化金融与系统化研究双语课程**
+**量化金融与系统化研究双语课程** · 45 章 · 6 个项目 · 1 个 Capstone
 
-## 网页版教材
+**[打开网页版教材 →](https://quantweft.yuxiao.win/read/zh/)**　全文搜索 · 同章中英切换 · 夜晚模式
 
-**[打开网页版教材 →](https://quantweft.yuxiao.win/read/zh/)**
-
-45 章完整阅读 · 全文搜索 · 同章中英切换 · 白天／夜晚模式。网页版现已上线；四册 PDF 可从 GitHub 直接下载。
-
-从数学与金融基础，到可复现的系统化研究。
-
-一套面向希望读懂模型、动手实现并审慎评价研究结果的学习者的双语课程。正文、主动练习与 Notebook 相互配合，把概念、推导和代码连成完整学习路径。
-
-**45 章** / **6 个项目** / **1 个 Capstone** / **中英文完整教材与练习册**
-
-## 从这里开始
-
-| 读教材 | 做练习 | 运行代码 |
-| :--- | :--- | :--- |
-| [中文学习指南](editions/zh/README.md)<br>按先修关系进入 45 章课程 | [中文练习册](editions/zh/workbook/quantweft-workbook-zh.pdf)<br>独立推导，再核对完整答案 | [Notebook 导读](editions/zh/NOTEBOOK_GUIDE.md)<br>从构造数据示例开始 |
-
-[课程大纲](editions/zh/resources/syllabus.md) · [在线教材与网站预览](docs/SITE.md) · [逐章正文](course/README.md) · [仓库导航](docs/README.md)
-
-## 选择你的阅读方式
+## 下载 PDF
 
 | | 中文 | English |
 | :--- | :--- | :--- |
-| **正文**：概念、推导与完整示例 | [阅读中文教材](editions/zh/body/quantweft-textbook-zh.pdf) | [Read the textbook](editions/en/body/quantweft-textbook-en.pdf) |
-| **练习册**：主动回忆、练习与完整答案 | [阅读中文练习册](editions/zh/workbook/quantweft-workbook-zh.pdf) | [Read the workbook](editions/en/workbook/quantweft-workbook-en.pdf) |
+| **正文** | [中文正文](editions/zh/body/quantweft-textbook-zh.pdf) | [Textbook](editions/en/body/quantweft-textbook-en.pdf) |
+| **练习册**（含完整答案） | [中文练习册](editions/zh/workbook/quantweft-workbook-zh.pdf) | [Workbook](editions/en/workbook/quantweft-workbook-en.pdf) |
 
-建议先读正文，独立完成练习册，再运行 Notebook 核对计算与输出。可[构建完整在线教材](site/README.md)，逐章阅读、搜索全文并切换同章语言，也可下载 PDF 离线阅读；仓库不包含原编辑工作区的完整 PDF 排版构建链。
+建议先读正文，独立完成练习册，再运行 Notebook 核对计算与输出。
 
 ## 学习路线
 
@@ -41,7 +23,7 @@
 
 从 Python、数据与时间契约出发，经由回归、优化、时间序列与投资组合，进入样本外验证、风险、交易成本、执行和金融机器学习。
 
-详细先修关系见[学习路线](editions/zh/resources/learning_roadmap.md)和[章节依赖图](editions/zh/resources/dependency_graph.md)。
+[中文学习指南](editions/zh/README.md) · [课程大纲](editions/zh/resources/syllabus.md) · [学习路线](editions/zh/resources/learning_roadmap.md) · [章节依赖图](editions/zh/resources/dependency_graph.md)
 
 ## 用项目连接知识
 
@@ -55,7 +37,7 @@
 
 ## 跑通第一个 Notebook
 
-两种语言共用代码、数据契约、依赖和运行器，Notebook 的代码单元一致，文字说明按语言提供。
+两种语言共用代码、数据契约、依赖和运行器，Notebook 的代码单元一致。
 
 以下命令从**仓库根目录**执行。项目声明 Python ≥ 3.12；此锁文件对应已核验的 **macOS arm64 / CPython 3.14.7** 环境，其他平台尚未验证。
 
@@ -70,14 +52,12 @@ python3 -m venv .venv
 
 ## 继续查阅
 
-[术语表](editions/zh/resources/glossary.md) · [符号与单位](editions/zh/resources/notation.md) · [参考来源](editions/zh/resources/references.md) · [文件导航](editions/zh/FILE_TREE.md)
+[术语表](editions/zh/resources/glossary.md) · [符号与单位](editions/zh/resources/notation.md) · [参考来源](editions/zh/resources/references.md) · [逐章正文](course/README.md) · [文件导航](editions/zh/FILE_TREE.md) · [仓库导航](docs/README.md) · [网站与构建](docs/SITE.md)
 
 <details>
 <summary>版本、验证范围与公开状态</summary>
 
-
-
-默认示例使用构造数据。运行环境与兼容性见[运行说明](editions/zh/LOCAL_VALIDATION.md)，真实数据与项目限制见[数据说明](editions/zh/REMAINING_ITEMS.md)。
+运行环境与兼容性见[运行说明](editions/zh/LOCAL_VALIDATION.md)。
 
 默认路线使用构造数据，不分发 French 市场数据，也未执行真实市场研究。历史结果与未解决的证据缺口按原记录保留，详见[后续事项](editions/zh/REMAINING_ITEMS.md)与[可选数据契约](editions/zh/OPTIONAL_DATA.md)。
 
@@ -91,17 +71,17 @@ python3 -m venv .venv
 
 ## 参与与支持
 
-欢迎[提交学习反馈](https://github.com/YuxiaoMa66/quantweft/issues/new?template=feedback.yml)或查看[贡献指南](.github/CONTRIBUTING.md)。自愿支持用于双语课程维护，学习与按许可复用不要求捐助。
+读到错误或有建议，欢迎[提交学习反馈](https://github.com/YuxiaoMa66/quantweft/issues/new?template=feedback.yml)，或先看[贡献指南](.github/CONTRIBUTING.md)。觉得有用，欢迎点个 Star，或转给需要的同学。
+
+课程免费阅读和使用。如果它帮到了你，校对、分享或赞助都能让我继续维护和更新。可以通过 [GitHub Sponsors](https://github.com/sponsors/YuxiaoMa66)，或展开下方的微信、支付宝收款码，金额随意。详见[支持方式](.github/SUPPORT.md)。
 
 <details>
 <summary>微信 / 支付宝支持 · 查看收款码</summary>
 
-金额随意，请在对应 App 中核对收款人。点击图片可放大原图。仓库不处理支付，实际收款是否可用以平台提示为准。
+请在对应 App 中核对收款人。点击图片可放大原图。仓库不处理支付，实际收款是否可用以平台提示为准。
 
 | 微信支付 | 支付宝 |
 | --- | --- |
 | [![微信支持收款码](docs/assets/support/wechat-pay.jpg)](docs/assets/support/wechat-pay.jpg) | [![支付宝支持收款码](docs/assets/support/alipay.jpg)](docs/assets/support/alipay.jpg) |
 
 </details>
-
-也可以[通过 GitHub Sponsors 支持课程](https://github.com/sponsors/YuxiaoMa66)，选择自定义金额。详见[支持方式](.github/SUPPORT.md)。

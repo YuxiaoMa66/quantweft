@@ -4,36 +4,18 @@
 
 # QuantWeft
 
-**A Bilingual Course in Quantitative Finance and Systematic Research**
+**A Bilingual Course in Quantitative Finance and Systematic Research** · 45 chapters · 6 projects · 1 Capstone
 
-## Web textbook
+**[Open the web reader →](https://quantweft.yuxiao.win/read/en/)**　Full-text search · Same-chapter language switching · Night mode
 
-**[Open the web reader →](https://quantweft.yuxiao.win/read/en/)**
-
-Read 45 chapters with full-text search, same-chapter language switching, and day/night modes. The web edition is live, and all four PDFs download directly from GitHub.
-
-From mathematical and financial foundations to reproducible systematic research.
-
-A bilingual course for learners who want to understand models, implement them, and evaluate research carefully. The textbook, active exercises, and Notebooks connect concepts, derivations, and code.
-
-**45 chapters** / **6 projects** / **1 Capstone** / **Complete textbooks and workbooks in Chinese and English**
-
-## Start here
-
-| Read | Practice | Run code |
-| :--- | :--- | :--- |
-| [English learning guide](editions/en/README.md)<br>Follow the prerequisites through 45 chapters | [English workbook](editions/en/workbook/quantweft-workbook-en.pdf)<br>Work independently, then check complete answers | [Notebook guide](editions/en/NOTEBOOK_GUIDE.md)<br>Start with constructed-data examples |
-
-[Curriculum](editions/en/resources/syllabus.md) · [Online reader and website preview](docs/SITE.md) · [Chapter texts](course/README.md) · [Repository guide](docs/README.md)
-
-## Choose how to read
+## Download the PDFs
 
 | | English | 中文 |
 | :--- | :--- | :--- |
-| **Textbook**: concepts, derivations, and worked examples | [Read the textbook](editions/en/body/quantweft-textbook-en.pdf) | [阅读中文教材](editions/zh/body/quantweft-textbook-zh.pdf) |
-| **Workbook**: active recall, exercises, and complete answers | [Read the workbook](editions/en/workbook/quantweft-workbook-en.pdf) | [阅读中文练习册](editions/zh/workbook/quantweft-workbook-zh.pdf) |
+| **Textbook** | [Textbook](editions/en/body/quantweft-textbook-en.pdf) | [中文正文](editions/zh/body/quantweft-textbook-zh.pdf) |
+| **Workbook** (with full answers) | [Workbook](editions/en/workbook/quantweft-workbook-en.pdf) | [中文练习册](editions/zh/workbook/quantweft-workbook-zh.pdf) |
 
-Read the textbook, attempt the workbook independently, then run the Notebooks to check calculations and outputs. [Build the online reader](site/README.md) for chapter navigation, full-text search, and same-chapter language switching, or download the PDFs for offline reading. This repository does not include the editorial workspace's full PDF layout toolchain.
+Read the textbook, attempt the workbook on your own, then run the Notebooks to check calculations and outputs.
 
 ## Learning route
 
@@ -41,7 +23,7 @@ Read the textbook, attempt the workbook independently, then run the Notebooks to
 
 Begin with Python, data, and timing contracts. Progress through regression, optimization, time series, and portfolios to out-of-sample validation, risk, costs, execution, and financial machine learning.
 
-See the [learning route](editions/en/resources/learning_roadmap.md) and [chapter dependency graph](editions/en/resources/dependency_graph.md) for prerequisites.
+[English learning guide](editions/en/README.md) · [Curriculum](editions/en/resources/syllabus.md) · [Learning route](editions/en/resources/learning_roadmap.md) · [Chapter dependency graph](editions/en/resources/dependency_graph.md)
 
 ## Connect ideas through projects
 
@@ -55,7 +37,7 @@ The [Capstone](editions/en/capstone/README.md) connects the research question, t
 
 ## Run your first Notebook
 
-Both languages share code, data contracts, dependencies, and a runner. Notebook code cells are identical; explanatory Markdown is available in each language.
+Both languages share code, data contracts, dependencies, and a runner. Notebook code cells are identical.
 
 Run these commands from the **repository root**. The project declares Python ≥ 3.12; this lock file targets the checked **macOS arm64 / CPython 3.14.7** environment. Other platforms have not been validated.
 
@@ -70,14 +52,12 @@ This is Chapter 35's constructed execution-ledger example. Dependency installati
 
 ## Keep exploring
 
-[Glossary](editions/en/resources/glossary.md) · [Notation and units](editions/en/resources/notation.md) · [References](editions/en/resources/references.md) · [File navigation](editions/en/FILE_TREE.md)
+[Glossary](editions/en/resources/glossary.md) · [Notation and units](editions/en/resources/notation.md) · [References](editions/en/resources/references.md) · [Chapter texts](course/README.md) · [File navigation](editions/en/FILE_TREE.md) · [Repository guide](docs/README.md) · [Website and build](docs/SITE.md)
 
 <details>
 <summary>Edition, validation scope, and publication status</summary>
 
-
-
-This repository inherits the accepted local formal bilingual edition of October 19, 2026. See [Local validation scope](editions/en/LOCAL_VALIDATION.md) for existing textbook and offline engineering evidence. This homepage redesign does not constitute a new course or research run.
+See [Local validation scope](editions/en/LOCAL_VALIDATION.md) for the runtime environment and compatibility.
 
 The default route uses constructed data. French market data are not distributed, and real-market research has not been run. Historical results and unresolved evidence gaps retain their recorded scope; see [Remaining work](editions/en/REMAINING_ITEMS.md) and [Optional data contracts](editions/en/OPTIONAL_DATA.md).
 
@@ -91,17 +71,17 @@ Parts of the workbook’s exercise design and layout draw on the [loom-notes](ht
 
 ## Contribute and support
 
-Send [learning feedback](https://github.com/YuxiaoMa66/quantweft/issues/new?template=feedback.yml) or read the [contribution guide](.github/CONTRIBUTING.md). Voluntary support helps maintain the bilingual course; learning and licensed reuse do not require payment.
+Spotted a mistake or have an idea? [Send learning feedback](https://github.com/YuxiaoMa66/quantweft/issues/new?template=feedback.yml) or read the [contribution guide](.github/CONTRIBUTING.md). If the course is useful, a Star or a share with someone learning quant helps others find it.
+
+The course is free to read and use. If it has helped you, proofreading, sharing or sponsoring keeps it maintained and updated. Sponsor on [GitHub Sponsors](https://github.com/sponsors/YuxiaoMa66) or use the WeChat Pay and Alipay codes below; any amount helps. See [support details](.github/SUPPORT.md).
 
 <details>
 <summary>Support with WeChat Pay / Alipay · View QR codes</summary>
 
-Choose any amount in the corresponding app and verify the recipient. Open either image for the original size. The repository does not process payments; availability depends on the provider.
+Verify the recipient in the corresponding app. Open either image for the original size. The repository does not process payments; availability depends on the provider.
 
 | WeChat Pay | Alipay |
 | --- | --- |
 | [![WeChat Pay support QR](docs/assets/support/wechat-pay.jpg)](docs/assets/support/wechat-pay.jpg) | [![Alipay support QR](docs/assets/support/alipay.jpg)](docs/assets/support/alipay.jpg) |
 
 </details>
-
-You can also [support the course through GitHub Sponsors](https://github.com/sponsors/YuxiaoMa66) with a custom amount. See [support details](.github/SUPPORT.md).
