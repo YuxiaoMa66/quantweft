@@ -49,8 +49,6 @@ kbd{font:11px/1.5 var(--sans);border:1px solid var(--line);border-radius:3px;pad
 .chapter-nav li:has([aria-current=page]){border-right:2px solid var(--accent)}
 .nav-resources{border-top:1px solid var(--line);margin-top:30px;padding-top:22px;display:grid;gap:13px;font-size:11px}
 main{min-width:0;padding:43px 0 0}
-.reading-context{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-bottom:45px;letter-spacing:.04em}
-.reading-context a{text-decoration:none;color:var(--muted)}
 /* A textbook benefits from a book serif; navigation and code remain in their own families. */
 .prose{font:19px/1.9 var(--book);overflow-wrap:break-word}
 :lang(zh-CN) .prose{font-size:18px;line-height:2}
@@ -91,11 +89,6 @@ footer{display:flex;flex-wrap:wrap;gap:12px 22px;justify-content:space-between;f
 .overview-heading{padding:0 0 32px;margin:0 0 30px;border-bottom:1px solid var(--line)}
 .overview-heading h1{font-size:clamp(38px,4vw,57px);max-width:100%}
 .overview-heading .start-link{display:inline-block;padding:10px 19px;background:var(--accent);color:var(--bg);border-radius:4px;text-decoration:none;font:13px var(--sans)}
-.course-index{display:grid;grid-template-columns:repeat(3,1fr);margin:36px 0 30px;border-block:1px solid var(--line)}
-.course-index a{display:block;text-decoration:none;padding:24px 18px 24px 0;font:12px/1.7 var(--sans);color:var(--muted)}
-.course-index strong{display:block;color:var(--text);font:34px/1.2 var(--book);margin-bottom:10px}
-.course-index a+a{border-left:1px solid var(--line);padding-left:22px}
-.prose .edition-note{font:12px/1.85 var(--sans);color:var(--muted);margin:28px 0}
 .search-dialog{width:min(720px,calc(100% - 32px));max-height:80dvh;position:fixed;top:10dvh;margin:0 auto;padding:30px;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:12px}
 .search-dialog::backdrop{background:rgb(0 0 0/.5)}
 .search-dialog form{display:flex;justify-content:space-between;align-items:center;gap:20px}
@@ -125,12 +118,11 @@ footer{display:flex;flex-wrap:wrap;gap:12px 22px;justify-content:space-between;f
   .chapter-nav{position:static;height:auto;padding:25px 0;border-bottom:1px solid var(--line)}
   .js .chapter-nav{display:none}.js .chapter-nav.open{display:block;position:fixed;inset:68px 0 0;z-index:3;background:var(--bg);height:calc(100dvh - 68px);padding:25px;overflow:auto}
   .chapter-nav .mobile-theme:not([hidden]){display:block;text-align:left;margin-bottom:8px}
-  main{padding-top:29px}.reading-context{margin-bottom:30px}.prose,:lang(zh-CN) .prose{font-size:17px;line-height:1.95}
+  main{padding-top:29px}.prose,:lang(zh-CN) .prose{font-size:17px;line-height:1.95}
   .prose h1{font-size:34px}.prose h2{font-size:26px;margin-top:42px;padding-top:23px}.prose h3{font-size:18px}
   .chapter-heading{margin-bottom:30px;padding-bottom:25px}.prose pre{font-size:12px;padding:18px 14px}.prose blockquote{padding-left:18px;font-size:14px}
   .page-turn{gap:20px;font-size:12px}.search-dialog{top:4dvh;max-height:90dvh;padding:22px}
-  .overview-heading h1{font-size:40px}.prose .lead{font-size:15px}.course-index strong{font-size:28px}
-  .course-index a{font-size:11px;padding-right:8px}.course-index a+a{padding-left:13px}
+  .overview-heading h1{font-size:40px}.prose .lead{font-size:15px}
 }
 @media(max-width:359px){.reader-header{padding:0 16px}.brand-mark{display:none}.reader-layout{padding:0 21px}.header-actions{gap:9px}.brand{font-size:15px}}
 @media print{
